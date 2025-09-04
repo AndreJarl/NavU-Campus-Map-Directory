@@ -1,14 +1,18 @@
+import { Route, Routes } from "react-router-dom"
+import Home from "./routes/Home"
+import Map from "./routes/Map"
+import VirtualTour from "./routes/VirtualTour"
+
 
 
 function App() {
   return (
     <>
-      <div>
-     
-      </div>
-      <p className="text-red-500 text-center mt-10 pt-1">
-        Click on the Vite and React logos to learn more
-      </p>
+    <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/map" element={<Map />} />
+    <Route path="/virtual-tour" element={<VirtualTour />} />
+    </Routes>
     </>
   )
 }
