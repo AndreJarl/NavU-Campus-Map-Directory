@@ -1,0 +1,42 @@
+{
+   "main_gate": {
+    "image": "public/prem.jpg",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 120,
+        "target": "New_Building_Front1"
+      },
+
+       {
+        "pitch": -25.5,
+        "yaw": -110,
+        "target": "laundry",
+        "rotation": 50
+      }
+    ]
+  },
+  "laundry": {
+    "image": "public/IMG_5704.jpg",
+    "hotspots": [
+      {
+        "pitch": -14,
+        "yaw": 22,
+        "target": "four",
+        "arrowType": "forward"
+
+          },
+           {
+        "pitch": -30,
+        "yaw": 22,
+        "target": "main_gate",
+        "arrowType": "backward",
+        "rotation" : 180
+
+          }
+    ]
+}
+
+  
+}
+

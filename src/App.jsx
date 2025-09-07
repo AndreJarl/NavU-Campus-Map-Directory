@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "./routes/Home"
 import Map from "./routes/Map"
-import VirtualTour from "./routes/VirtualTour"
+import VirtualTour from "./components/Panorama"
 
 
 
