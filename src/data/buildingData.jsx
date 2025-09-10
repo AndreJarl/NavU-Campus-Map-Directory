@@ -2,10 +2,11 @@ import React from 'react'
 import COE1stF from '../buildings/coe/COE1stF'
 import COE2ndF from '../buildings/coe/COE2ndF'
 import COE3rdF from '../buildings/coe/COE3rdF';
+import NewAD1stf from '../buildings/new-admin/NewAD1stf';
 
 
 const buildingData = {
-  'College of Engineering Building': {
+  'College of Engineering': {
       totalFloors: 3,
         rooms: {
             1: [
@@ -39,11 +40,9 @@ const buildingData = {
     'College of Technology/ COT Building': 2,
     'Old Admin Building': 2,
     'New Admin Building': {
-      totalFloors: 3, // Updated total floors
+      totalFloors: 1, // Updated total floors
       floorImages: {
-        1: <NewAdminFloor1 />,
-        2: <NewAdminFloor2 />,
-        3: <NewAdminFloor3 />,
+        1: <NewAD1stf />,
       }
     },
     'Student Activity Center': 1,
