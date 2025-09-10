@@ -31,3 +31,19 @@ body{
 }
 
 
+  
+.ripple {
+  transform-origin: center;
+  animation: ripple 1s infinite;
+}
+
+.ripple2 {
+  animation-delay: 1s;
+}
+
+@keyframes ripple {
+  0%   { r: 8.5; opacity: 0.8; }
+  100% { r: 40; opacity: 0; }
+}
+
+

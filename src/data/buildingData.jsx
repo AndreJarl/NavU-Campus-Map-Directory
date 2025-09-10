@@ -1,0 +1,70 @@
+import React from 'react'
+import COE1stF from '../buildings/coe/COE1stF'
+import COE2ndF from '../buildings/coe/COE2ndF'
+import COE3rdF from '../buildings/coe/COE3rdF';
+
+
+const buildingData = {
+  'College of Engineering Building': {
+      totalFloors: 3,
+        rooms: {
+            1: [
+            { code: "EN-LAB1", name: "Engineering Laboratory 1" },
+            { code: "EN-LAB2", name: "Engineering Laboratory 2" },
+            { code: "EN-101", name: "Classroom 101" },
+            { code: "EN-102", name: "Classroom 102" }
+            ],
+            2: [
+            { code: "EN-201", name: "Classroom 201" },
+            { code: "EN-202", name: "Classroom 202" },
+            { code: "EN-203", name: "Physics Lab" }
+            ],
+            3: [
+            { code: "EN-301", name: "Classroom 301" },
+            { code: "EN-302", name: "Electronics Laboratory" }
+            ]
+        },
+      floorImages: {
+        1: <COE1stF />,
+        2: <COE2ndF />,
+        3: <COE3rdF />
+      }
+},
+    'CME/COE Building': 4,
+    'Education Building': 3,
+    'Graduate School Building': 4,
+    'Bistro': 1,
+    'University Canteen': 1,
+    'Stage': 1,
+    'College of Technology/ COT Building': 2,
+    'Old Admin Building': 2,
+    'New Admin Building': {
+      totalFloors: 3, // Updated total floors
+      floorImages: {
+        1: <NewAdminFloor1 />,
+        2: <NewAdminFloor2 />,
+        3: <NewAdminFloor3 />,
+      }
+    },
+    'Student Activity Center': 1,
+    'Fitness Gym': 1,
+    'Sewing Area': 1,
+    'Fablab': 1,
+    'Tennis Court': 1,
+    'Kadasig Gym': 1,
+    'Oval': 1,
+    'Grandstand': 1,
+    'Study Area': 1,
+    'Existing Academic Science Building': 1,
+    'Cultural Center': 1,
+    'Floating Classroom': 1,
+    'CTU Facility Centrum': 2,
+    'HM Laboratory': 1,
+    'Mens Dorm': 1,
+    'Women Dorm': 2,
+    'Furniture Workshop': 1,
+    'Security Office': 1,
+    'ERRC Building': 2,
+};
+
+export default buildingData
