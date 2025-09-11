@@ -6,7 +6,7 @@ import NewAD1stf from '../buildings/new-admin/NewAD1stf';
 
 
 const buildingData = {
-  'College of Engineering': {
+  'College of Engineering Building': {
       totalFloors: 3,
         rooms: {
             1: [

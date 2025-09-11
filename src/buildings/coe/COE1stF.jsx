@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useQuery } from '../../context/QueryContext'
 
 function COE1stF() {
+
+  const {query} = useQuery();
+
+   const room = query?.roomName?.code || "";
+
   return (
      <div className=' mt-11 flex w-screen justify-center items-center'>
 
@@ -157,7 +163,7 @@ function COE1stF() {
 </g>
 <rect x="397" y="275" width="5" height="29" fill="#2D2C2C"/>
 
-<g opacity="1" filter="url(#filter41_d_12_1439)">
+<g className={`${room == "EN-LAB1" ? "opacity-100" : "opacity-0"}`} filter="url(#filter41_d_12_1439)">
 
 <ellipse class="ripple" cx="161.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
 
@@ -179,34 +185,34 @@ function COE1stF() {
 <ellipse  class="ripple" cx="455.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
 <ellipse  class="ripple" cx="476.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
 <ellipse  class="ripple" cx="497.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="518.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="539.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="560.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="581.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="602.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="623.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="644.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="665.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="686.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="707.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="728.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="749.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="770.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="791.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="791.5" cy="263" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="791.5" cy="283" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="791.5" cy="303" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="791.5" cy="323" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="791.5" cy="343" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="791.5" cy="343" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="791.5" cy="363" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="791.5" cy="383" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="792.5" cy="403" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="792.5" cy="423" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="793.5" cy="443" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="794.5" cy="463" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple26" cx="518.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple25" cx="539.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple24" cx="560.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple23" cx="581.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple22" cx="602.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple21" cx="623.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple20" cx="644.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple19" cx="665.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple18" cx="686.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple17" cx="707.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple16" cx="728.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple15" cx="749.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple14" cx="770.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple13" cx="791.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple12" cx="791.5" cy="263" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple11" cx="791.5" cy="283" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple10" cx="791.5" cy="303" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple9" cx="791.5" cy="323" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple8" cx="791.5" cy="343" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple7" cx="791.5" cy="343" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple6" cx="791.5" cy="363" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple5" cx="791.5" cy="383" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple4" cx="792.5" cy="403" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple3" cx="792.5" cy="423" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple2" cx="793.5" cy="443" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple1" cx="794.5" cy="463" rx="8.5" ry="8" fill="#FF0000"/>
 </g>
-<g opacity="0" filter="url(#filter44_d_12_1439)">
+<g className={`${room == "EN-LAB2" ? "opacity-100" : "opacity-0"}`} filter="url(#filter44_d_12_1439)">
 <ellipse class="ripple" cx="455.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
 <ellipse class="ripple" cx="455.5" cy="221" rx="8.5" ry="8" fill="#FF0000"/>
 <ellipse class="ripple" cx="476.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>

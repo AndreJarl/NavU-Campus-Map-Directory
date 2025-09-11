@@ -1,16 +1,10 @@
-import React from 'react'
-import SurveyForm from '../components/SurveyForm'
-import SearchBar from '../components/SearchBar'
+import Map from "../routes/Map";
 
 function Home() {
   return (
     <>
-  
-    <div className=' '>
-      <SurveyForm />
-      <SearchBar />
-    </div>
-      </>
+    <Map />
+    </>
   )
 }
 

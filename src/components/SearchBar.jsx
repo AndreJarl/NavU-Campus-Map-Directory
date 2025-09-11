@@ -11,49 +11,7 @@ import buildingData from "../data/buildingData";
 import { useState } from "react";
 
 
-function SearchBar() {
-
-  const [query, setQuery] = useState("");
-  const [suggestions, setSuggestions] = useState([]);
-
-
- const handleSearch = (e) =>{
-    const value = e.target.value;
-      setQuery(value);
-      console.log(query);
-
-    if(!value){
-        setSuggestions([]);
-        return;
-    }
-
-    const result = [];
-  
-    for(const [buildingName, building] of Object.entries(buildingData)){
-                // 🔹 1. Check building name itself
-            if (buildingName.toLowerCase().includes(value.toLowerCase())) {
-            result.push({
-                building: buildingName,
-                floor: null,
-                room: null,
-            });
-            }
-          if (!building.rooms) continue; // Skip buildings without "rooms"
-        for(const [floor, rooms] of Object.entries(building.rooms)){
-            rooms.forEach((room)=>{
-                 if(room.code.toLowerCase().includes(value.toLowerCase()) || room.name.toLowerCase().includes(value.toLowerCase())){
-                     result.push({
-                         building:buildingName,
-                         floor,
-                         room
-                     });
-                 }
-            });
-        }
-    }
-       setSuggestions(result);
-       console.log(result);
- }
+function SearchBar({query, suggestions, handleSearch, handleSuggestionClicked}) {
 
   return (
      <div className="fixed top-3  group right lg:right-10 2xl:right-36 2xl:top-6 px-2" >
@@ -106,7 +64,7 @@ function SearchBar() {
                  
                  
                     {suggestions.map((suggestion, index)=>(
-                         <div key={index}  className="flex flex-row justify-left  cursor-pointer items-center gap-2 hover:bg-gray-200 w-full py-2 px-4">
+                         <div key={index} onClick={()=>handleSuggestionClicked(suggestion)}  className="flex flex-row justify-left  cursor-pointer items-center gap-2 hover:bg-gray-200 w-full py-2 px-4">
                         <h1><MapPin /></h1>
                         <div className="flex flex-col">
                             {suggestion.room ? (

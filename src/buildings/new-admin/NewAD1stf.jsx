@@ -525,7 +525,7 @@ function NewAD1stf() {
     <ellipse  class="ripple" cx="762.5" cy="197" rx="8.5" ry="8" fill="#FF0000"/>
     </g>
     </g>
-    <g opacity="0.4">
+    <g opacity="1">
     <g filter="url(#filter167_d_105_224)">
     <ellipse  class="ripple ripple11" cx="578.5" cy="226" rx="8.5" ry="8" fill="#FF0000"/>
     </g>
