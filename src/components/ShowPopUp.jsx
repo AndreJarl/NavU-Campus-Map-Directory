@@ -30,28 +30,30 @@ function ShowPopUp({ query, closeSideBar, currentFloor, handleNextFloor, handleP
                     <p className="lg:text-[24px] ml-5 text-gray-800 pt-1 text-xl font-normal">📍{floorText} FLOOR</p>
                   <div onClick={()=>setRoomClicked(true)} className="flex items-center flex-col ">
                     
-                      {buildingData[query.building]?.floorImages?.[currentFloor]}
+                      {buildingData[query?.building]?.floorImages?.[currentFloor]}
+
     
                     
                     
                   </div>
                   <div className="absolute bottom-10 flex justify-center items-center gap-4 sm:gap-6 w-full px-10">
-                      <button 
-                        onClick={handlePreviousFloor} 
-                        className={`bg-blue-500 text-white flex items-center gap-2  lg:p-2 rounded p-1 text-xs lg:text-base
-                          ${buildingData[query]?.totalFloors > 1 && currentFloor > 1 ? '' : 'invisible'}`}
-                      > 
-                        Previous Floor <FaLeftLong />
-                      </button>
-                      
-                      <button 
-                        onClick={handleNextFloor} 
-                        className={`bg-blue-500 text-white flex gap-2 items-center lg:p-2 rounded p-1 text-xs lg:text-base
-                          ${buildingData[query]?.totalFloors > 1 && currentFloor < buildingData[query]?.totalFloors ? '' : 'invisible'}`}
-                      > 
-                        Next Floor <FaRightLong />
-                      </button>
-                  </div>
+                  <button 
+                    onClick={handlePreviousFloor} 
+                    className={`bg-blue-500 text-white flex items-center gap-2 lg:p-2 rounded p-1 text-xs lg:text-base
+                      ${buildingData[query.building]?.totalFloors > 1 && currentFloor > 1 ? '' : 'invisible'}`}
+                  > 
+                    Previous Floor <FaLeftLong />
+                  </button>
+                  
+                  <button 
+                    onClick={handleNextFloor} 
+                    className={`bg-blue-500 text-white flex gap-2 items-center lg:p-2 rounded p-1 text-xs lg:text-base
+                      ${buildingData[query.building]?.totalFloors > 1 && currentFloor < buildingData[query.building]?.totalFloors ? '' : 'invisible'}`}
+                  > 
+                    Next Floor <FaRightLong />
+                  </button>
+                </div>
+
               </div>
         </div>
   )

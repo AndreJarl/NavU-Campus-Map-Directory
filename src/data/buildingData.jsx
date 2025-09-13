@@ -40,7 +40,7 @@ const buildingData = {
     'College of Technology/ COT Building': 2,
     'Old Admin Building': 2,
     'New Admin Building': {
-      totalFloors: 1, // Updated total floors
+      totalFloors: 3, // Updated total floors
       floorImages: {
         1: <NewAD1stf />,
       }

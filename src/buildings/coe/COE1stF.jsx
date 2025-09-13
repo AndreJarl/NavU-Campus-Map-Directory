@@ -165,26 +165,26 @@ function COE1stF() {
 
 <g className={`${room == "EN-LAB1" ? "opacity-100" : "opacity-0"}`} filter="url(#filter41_d_12_1439)">
 
-<ellipse class="ripple" cx="161.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse class="ripple ripple44" cx="161.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
 
-<ellipse  class="ripple" cx="161.5" cy="221" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple43" cx="161.5" cy="221" rx="8.5" ry="8" fill="#FF0000"/>
 
-<ellipse  class="ripple" cx="182.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="203.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="224.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="245.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="266.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="287.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="308.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="329.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="350.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="371.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="392.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="413.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="434.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="455.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="476.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
-<ellipse  class="ripple" cx="497.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple42" cx="182.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple41" cx="203.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple40" cx="224.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple39" cx="245.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple38" cx="266.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple37" cx="287.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple36" cx="308.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple35" cx="329.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple34" cx="350.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple33" cx="371.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple32" cx="392.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple31" cx="413.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple30" cx="434.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple29" cx="455.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple28" cx="476.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
+<ellipse  class="ripple ripple27" cx="497.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
 <ellipse  class="ripple ripple26" cx="518.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
 <ellipse  class="ripple ripple25" cx="539.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
 <ellipse  class="ripple ripple24" cx="560.5" cy="243" rx="8.5" ry="8" fill="#FF0000"/>
