@@ -1447,6 +1447,8 @@ function Map() {
        </>
    )}
 
+   {/* add get directionssssssssssssssssssssssssss room info pop up first, when user click direction map pop ups */}
+
 
  <SearchBar 
    query={query}
