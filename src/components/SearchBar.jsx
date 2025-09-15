@@ -11,7 +11,7 @@ import buildingData from "../data/buildingData";
 import { useState } from "react";
 
 
-function SearchBar({query, suggestions, handleSearch, handleSuggestionClicked}) {
+function SearchBar({searchTerm, suggestions, handleSearch, handleSuggestionClicked}) {
 
   return (
      <div className="fixed top-3  group right lg:right-10 2xl:right-36 2xl:top-6 px-2" >
@@ -53,7 +53,7 @@ function SearchBar({query, suggestions, handleSearch, handleSuggestionClicked}) 
     
 
 
-                 {suggestions.length === 0 && query.length && !(query in buildingData) !== 0 ? (
+                {suggestions.length === 0 && searchTerm && !(searchTerm in buildingData) ?  (
               <div className="bg-white rounded-b-lg shadow-xl shadow-gray-400 max-h-[460px] flex-col  overflow-auto gap-2 pt-5 py-4 items-center justify-center -mt-2 flex"
               >
                   <i className="text-sm text-slate-400">No building/facilities found.</i>

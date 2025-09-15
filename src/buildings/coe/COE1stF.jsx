@@ -5,7 +5,7 @@ function COE1stF() {
 
   const {query} = useQuery();
 
-   const room = query?.roomName?.code || "";
+   const room = query?.room?.code || "";
 
   return (
      <div className=' mt-11 flex w-screen justify-center items-center'>

@@ -20,11 +20,12 @@ function Map() {
       const [showInfoPanel, setShowInfoPanel] = useState(false);
      
       const {query, setQuery} = useQuery();
+      const [searchTerm, setSearchTerm]= useState("");
       const [suggestions, setSuggestions] = useState([]);
       const [showMenu, setShowMenu] = useState(false);
       
       const [roomClicked, setRoomClicked] = useState(false);
-      const [roomSearched, setRooomSearched] = useState([]);
+      const [roomSearched, setRoomSearched] = useState(false);
   
       const [cardData, setCardData] = useState(null);
       const [cardPosition, setCardPosition] = useState({ x: 0, y: 0 });
@@ -126,8 +127,7 @@ function Map() {
 
  const handleSearch = (e) =>{
     const value = e.target.value;
-      setQuery(value);
-      console.log(query);
+      setSearchTerm(value);
 
     if(!value){
         setSuggestions([]);
@@ -159,7 +159,7 @@ function Map() {
         }
     }
        setSuggestions(result);
-       console.log(result);
+       
  }
 
  const handleSuggestionClicked = (suggestions) =>{
@@ -168,17 +168,26 @@ function Map() {
   ...prev,
   building: suggestions.building || prev.building,
   room: {
-    name: suggestions.room?.name || prev.room.name,
-    code: suggestions.room?.code || prev.room.code,
-    image: suggestions.room?.img || prev.room.img,
-    description: suggestions.room?.description || prev.room.description,
+    name: suggestions.room?.name || prev.room?.name,
+    code: suggestions.room?.code || prev.room?.code,
+    image: suggestions.room?.img || prev.room?.img,
+    description: suggestions.room?.description || prev.room?.description,
   }
 }));
-   
+
+    if(!suggestions.room){
+     
+         setShowPopup(true);
+         setRoomSearched(false);
+    }
+    if(suggestions.room){
+     setRoomSearched(true);
+    }
+          setSearchTerm("");  
           setSuggestions([]);
-          setRooomSearched(query);
-          console.log(roomSearched);
-          setShowPopup(true);
+         
+          console.log(suggestions.room);
+       
           
  }
 
@@ -190,7 +199,7 @@ function Map() {
     }));
          setShowInfoPanel(false);
          setShowPopup(true);
-         setRooomSearched(query)
+        
         
       }
  }
@@ -213,7 +222,6 @@ function Map() {
           setCurrentFloor(1);
           setCardData(null);
       }
-
 
   return (
     <div className="flex justify-center items-center  overflow-hidden select-none">
@@ -1444,18 +1452,24 @@ function Map() {
           setRoomClicked = {setRoomClicked}
           roomClicked={roomClicked}
          />
-
-         {!roomClicked && roomSearched && (
-                  <RoomInfo/>
-         )}
        </>
+
+
    )}
 
+   { roomSearched  && (
+                  <RoomInfo
+                     setShowPopup={setShowPopup}
+                     showPopup={showPopup}
+                     roomSearched={roomSearched}
+                     setRoomSearched={setRoomSearched}
+                  />
+         )}
    {/* add get directionssssssssssssssssssssssssss room info pop up first, when user click direction map pop ups */}
 
 
  <SearchBar 
-   query={query}
+   searchTerm={searchTerm}
    handleSearch={handleSearch}
    suggestions={suggestions}
    handleSuggestionClicked = {handleSuggestionClicked}
