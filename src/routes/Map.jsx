@@ -4,6 +4,7 @@ import SearchBar from '../components/SearchBar';
 import buildingData from '../data/buildingData';
 import { useQuery } from '../context/QueryContext';
 import ShowPopUp from '../components/ShowPopUp';
+import RoomInfo from '../components/RoomInfo';
 
 function Map() {
         const [zoomLevel, setZoomLevel] = useState(1); // Zoom level
@@ -23,6 +24,7 @@ function Map() {
       const [showMenu, setShowMenu] = useState(false);
       
       const [roomClicked, setRoomClicked] = useState(false);
+      const [roomSearched, setRooomSearched] = useState([]);
   
       const [cardData, setCardData] = useState(null);
       const [cardPosition, setCardPosition] = useState({ x: 0, y: 0 });
@@ -161,16 +163,21 @@ function Map() {
  }
 
  const handleSuggestionClicked = (suggestions) =>{
-  console.log(suggestions);
-           setQuery(prev => ({
-    ...prev,
-    building: suggestions.building || prev.building,
-    roomName: suggestions.room || prev.room
-  }));
-    
-        
+  
+      setQuery(prev => ({
+  ...prev,
+  building: suggestions.building || prev.building,
+  room: {
+    name: suggestions.room?.name || prev.room.name,
+    code: suggestions.room?.code || prev.room.code,
+    image: suggestions.room?.img || prev.room.img,
+    description: suggestions.room?.description || prev.room.description,
+  }
+}));
+   
           setSuggestions([]);
-          
+          setRooomSearched(query);
+          console.log(roomSearched);
           setShowPopup(true);
           
  }
@@ -183,7 +190,8 @@ function Map() {
     }));
          setShowInfoPanel(false);
          setShowPopup(true);
-         console.log(query);
+         setRooomSearched(query)
+        
       }
  }
  //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1436,14 +1444,10 @@ function Map() {
           setRoomClicked = {setRoomClicked}
           roomClicked={roomClicked}
          />
-         {/* {!roomClicked && (
-                  <BldOverview
-            roomClicked={roomClicked}
-             query ={query}
-             closeSideBar={closeSideBar}
-          setRoomClicked = {setRoomClicked}
-         />
-         )} */}
+
+         {!roomClicked && roomSearched && (
+                  <RoomInfo/>
+         )}
        </>
    )}
 

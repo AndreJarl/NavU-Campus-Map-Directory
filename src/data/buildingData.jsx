@@ -3,34 +3,80 @@ import COE1stF from '../buildings/coe/COE1stF'
 import COE2ndF from '../buildings/coe/COE2ndF'
 import COE3rdF from '../buildings/coe/COE3rdF';
 import NewAD1stf from '../buildings/new-admin/NewAD1stf';
-
+import room from "../assets/ctubgg.png";
 
 const buildingData = {
-  'College of Engineering Building': {
-      totalFloors: 3,
-        rooms: {
-            1: [
-            { code: "EN-LAB1", name: "Engineering Laboratory 1" },
-            { code: "EN-LAB2", name: "Engineering Laboratory 2" },
-            { code: "EN-101", name: "Classroom 101" },
-            { code: "EN-102", name: "Classroom 102" }
-            ],
-            2: [
-            { code: "EN-201", name: "Classroom 201" },
-            { code: "EN-202", name: "Classroom 202" },
-            { code: "EN-203", name: "Physics Lab" }
-            ],
-            3: [
-            { code: "EN-301", name: "Classroom 301" },
-            { code: "EN-302", name: "Electronics Laboratory" }
-            ]
-        },
-      floorImages: {
-        1: <COE1stF />,
-        2: <COE2ndF />,
-        3: <COE3rdF />
+ 'College of Engineering Building': {
+  totalFloors: 3,
+  rooms: {
+    1: [
+      { 
+        code: "EN-LAB1", 
+        name: "Engineering Laboratory 1",
+        description: "Dedicated to basic engineering experiments and hands-on projects.",
+        img: room
+      },
+      { 
+        code: "EN-LAB2", 
+        name: "Engineering Laboratory 2",
+        description: "Advanced engineering lab for specialized equipment and testing.",
+        img: "/images/coe/eng_lab2.jpg"
+      },
+      { 
+        code: "EN-101", 
+        name: "Classroom 101",
+        description: "Standard lecture classroom with multimedia support.",
+        img: "/images/coe/en101.jpg"
+      },
+      { 
+        code: "EN-102", 
+        name: "Classroom 102",
+        description: "Lecture room equipped with projector and air-conditioning.",
+        img: "/images/coe/en102.jpg"
       }
+    ],
+    2: [
+      { 
+        code: "EN-201", 
+        name: "Classroom 201",
+        description: "A medium-sized classroom for engineering courses.",
+        img: "/images/coe/en201.jpg"
+      },
+      { 
+        code: "EN-202", 
+        name: "Classroom 202",
+        description: "Lecture hall suitable for larger classes.",
+        img: "/images/coe/en202.jpg"
+      },
+      { 
+        code: "EN-203", 
+        name: "Physics Lab",
+        description: "Equipped for experiments in mechanics, optics, and electricity.",
+        img: "/images/coe/physics_lab.jpg"
+      }
+    ],
+    3: [
+      { 
+        code: "EN-301", 
+        name: "Classroom 301",
+        description: "Spacious classroom for seminars and group activities.",
+        img: "/images/coe/en301.jpg"
+      },
+      { 
+        code: "EN-302", 
+        name: "Electronics Laboratory",
+        description: "Designed for electronics, circuits, and microprocessor experiments.",
+        img: "/images/coe/electronics_lab.jpg"
+      }
+    ]
+  },
+  floorImages: {
+    1: <COE1stF />,
+    2: <COE2ndF />,
+    3: <COE3rdF />
+  }
 },
+
     'CME/COE Building': 4,
     'Education Building': 3,
     'Graduate School Building': 4,
