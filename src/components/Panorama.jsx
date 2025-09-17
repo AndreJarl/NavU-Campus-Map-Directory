@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import 'pannellum/build/pannellum.css';
-import scenes from '../data/scene.json';
+import scenes from '../data/scene.json'
 import '../index.css';
 import { Plus, Minus, Maximize} from 'lucide-react';
 
@@ -131,10 +131,10 @@ const customArrow = (hotSpotDiv, args = {}) => {
 
 return (
   <>
-    <div className="relative w-full h-screen">
-      <div ref={viewerRef} className="w-full h-full" />
+    <div className="relative w-full h-[135px] rounded-lg">
+      <div ref={viewerRef} className="w-full h-[full]" />
 
-      {/* Controls in lower-left corner */}
+      {/* Controls in lower-left corner
       <div className="absolute bottom-8 left-5 flex flex-row  gap-2 z-50">
         <button
           className="w-10 py-2 font-bold flex justify-center items-center bg-black/80 shadow-2xl shadow-gray-800 rounded-full "
@@ -151,7 +151,7 @@ return (
           <Minus color='white' />
         </button>
   
-      </div>
+      </div> */}
     </div>
   </>
 );

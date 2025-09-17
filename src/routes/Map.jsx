@@ -5,6 +5,7 @@ import buildingData from '../data/buildingData';
 import { useQuery } from '../context/QueryContext';
 import ShowPopUp from '../components/ShowPopUp';
 import RoomInfo from '../components/RoomInfo';
+import PanoramaViewer from '../components/PanoramaViewer';
 
 function Map() {
         const [zoomLevel, setZoomLevel] = useState(1); // Zoom level
@@ -235,11 +236,11 @@ function Map() {
         backgroundRepeat: 'no-repeat',
       }}
           className="relative    overflow-hidden h-screen w-screen flex justify-center items-center cursor-grab active:cursor-grabbing lg:h-screen lg:w-screen"
-            onWheel={handleWheel}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseUp}
+            // onWheel={handleWheel}
+            // onMouseDown={handleMouseDown}
+            // onMouseMove={handleMouseMove}
+            // onMouseUp={handleMouseUp}
+            // onMouseLeave={handleMouseUp}
           id="map-container"
           >
             <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
@@ -1458,12 +1459,15 @@ function Map() {
    )}
 
    { roomSearched  && (
+      <>
                   <RoomInfo
                      setShowPopup={setShowPopup}
                      showPopup={showPopup}
                      roomSearched={roomSearched}
                      setRoomSearched={setRoomSearched}
                   />
+                  
+    </>
          )}
    {/* add get directionssssssssssssssssssssssssss room info pop up first, when user click direction map pop ups */}
 

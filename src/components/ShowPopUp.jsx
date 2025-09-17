@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import buildingData from '../data/buildingData';
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { FaRightLong, FaLeftLong } from "react-icons/fa6";
+import PanoramaViewer from './PanoramaViewer';
 
 function ShowPopUp({ query, closeSideBar, currentFloor, handleNextFloor, handlePreviousFloor, setRoomClicked }) {
   const [isSliding, setIsSliding] = useState(true);
@@ -23,6 +24,7 @@ function ShowPopUp({ query, closeSideBar, currentFloor, handleNextFloor, handleP
 
 
   return (
+    <>
     <div className={`absolute w-full md:w-[90%] lg:w-[80%] h-screen pt-0 md:pt-0 lg:pt-0 lg:h-[100%] 2xl:w-[75%] left-0 top-0 z-40 bg-white/20 transition-transform duration-150 ease-in-out ${isSliding ? '-translate-x-full' : 'translate-x-0'} backdrop-blur-lg backdrop-filter`} >
           <div className="flex flex-col  overflow-hidden h-screen pt-28 md:pt-10  lg:h-[100%]  lg:pt-10 relative px-10 shadow-2xl">
                     <button onClick={handleClose} className="flex gap-2 items-center absolute right-8 top-5 bg-red-600 hover:bg-red-800 text-white px-2 text-base lg:px-4 py-1 rounded-lg"><FaLongArrowAltLeft/> Close</button>
@@ -56,6 +58,8 @@ function ShowPopUp({ query, closeSideBar, currentFloor, handleNextFloor, handleP
 
               </div>
         </div>
+        <PanoramaViewer />
+        </>
   )
 }
 
