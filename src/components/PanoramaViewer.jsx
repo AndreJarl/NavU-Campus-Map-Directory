@@ -56,7 +56,7 @@ function PanoramaViewer() {
       className={`fixed m-3  ${clicked ? "px-0 py-0 pt-0" : "px-1 py-1 pt-2"} bg-white shadow-2xl transform transition-transform ease-in-out duration-700 z-[1000] ${
         clicked
           ? "h-[100vh] w-[100vw] top-0 left-0 m-0"
-          : "left-[81%] bottom-[1%] lg:h-[150px] w-[310px] md:w-[310px] lg:w-[220px]"
+          : "right-[80%] bottom-[1%] lg:h-[150px] w-[310px] md:w-[310px] lg:w-[220px]"
       }`}
     >
       <div className="relative w-full h-full">

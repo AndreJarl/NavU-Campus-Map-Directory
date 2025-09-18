@@ -5,11 +5,13 @@ const QueryContext = createContext();
 export const QueryProvider = ({children}) =>{
     const [query, setQuery] = useState({
     building: "",
+    floor: "",  
     room: {
       name: "",
       code: "",
       img: "",
-      description: ""
+      description: "",
+      floor: ""
     }
   });
 

@@ -160,14 +160,15 @@ function Map() {
         }
     }
        setSuggestions(result);
-       
+      
  }
 
  const handleSuggestionClicked = (suggestions) =>{
-  
+  console.log(suggestions);
       setQuery(prev => ({
   ...prev,
   building: suggestions.building || prev.building,
+  floor: suggestions.floor || prev.floor,  // ✅ store floor at top-level
   room: {
     name: suggestions.room?.name || prev.room?.name,
     code: suggestions.room?.code || prev.room?.code,
@@ -187,7 +188,7 @@ function Map() {
           setSearchTerm("");  
           setSuggestions([]);
          
-          console.log(suggestions.room);
+          console.log(query);
        
           
  }

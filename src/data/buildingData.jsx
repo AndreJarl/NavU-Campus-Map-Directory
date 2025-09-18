@@ -3,8 +3,8 @@ import COE1stF from '../buildings/coe/COE1stF'
 import COE2ndF from '../buildings/coe/COE2ndF'
 import COE3rdF from '../buildings/coe/COE3rdF';
 import NewAD1stf from '../buildings/new-admin/NewAD1stf';
-import room from "../assets/ctubgg.png";
-
+import enlab1 from "../buildings/coe/rooms/CELAB01.jpg"
+import enlab2 from "../buildings/coe/rooms/CELAB02.jpg"
 const buildingData = {
  'College of Engineering Building': {
   totalFloors: 3,
@@ -14,13 +14,13 @@ const buildingData = {
         code: "EN-LAB1", 
         name: "Engineering Laboratory 1",
         description: "Dedicated to basic engineering experiments and hands-on projects.",
-        img: room
+        img: enlab1
       },
       { 
         code: "EN-LAB2", 
         name: "Engineering Laboratory 2",
         description: "Advanced engineering lab for specialized equipment and testing.",
-        img: "/images/coe/eng_lab2.jpg"
+        img: enlab2
       },
       { 
         code: "EN-101", 
