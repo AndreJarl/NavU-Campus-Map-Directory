@@ -3,9 +3,13 @@ import buildingData from '../data/buildingData';
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { FaRightLong, FaLeftLong } from "react-icons/fa6";
 import PanoramaViewer from './PanoramaViewer';
+import { useQuery } from '../context/QueryContext';
 
-function ShowPopUp({ query, closeSideBar, currentFloor, handleNextFloor, handlePreviousFloor, setRoomClicked }) {
+function ShowPopUp({ closeSideBar, currentFloor, handleNextFloor, handlePreviousFloor, setRoomClicked }) {
   const [isSliding, setIsSliding] = useState(true);
+  
+  const {query} = useQuery();
+  const {room} = query;
 
   useEffect(() => {
     setTimeout(() => setIsSliding(false), 150);
@@ -58,7 +62,15 @@ function ShowPopUp({ query, closeSideBar, currentFloor, handleNextFloor, handleP
 
               </div>
         </div>
-        <PanoramaViewer />
+   {room && (
+   
+    <PanoramaViewer />
+  
+)}
+
+
+        
+       
         </>
   )
 }

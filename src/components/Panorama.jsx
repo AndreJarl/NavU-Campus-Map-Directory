@@ -1,13 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import 'pannellum/build/pannellum.css';
 import scenes from '../data/scene.json'
 import '../index.css';
 import { Plus, Minus, Maximize} from 'lucide-react';
 
-function Panorama({ scene, onChangeScene }) {
+function Panorama({ scene, onChangeScene, clicked }) {
   const viewerRef = useRef(null);
   const viewerInstance = useRef(null);
-
+ 
   // Custom arrow hotspot rendering
 const customArrow = (hotSpotDiv, args = {}) => {
   let rotation = args.rotation || 0;
@@ -131,7 +131,7 @@ const customArrow = (hotSpotDiv, args = {}) => {
 
 return (
   <>
-    <div className="relative w-full h-[135px] rounded-lg">
+    <div className={`relative w-full  ${clicked ? "h-screen" : "h-[135px]"}`}>
       <div ref={viewerRef} className="w-full h-[full]" />
 
       {/* Controls in lower-left corner
