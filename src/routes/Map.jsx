@@ -30,7 +30,7 @@ function Map() {
   
       const [cardData, setCardData] = useState(null);
       const [cardPosition, setCardPosition] = useState({ x: 0, y: 0 });
-
+      const [disable, setDisable] = useState(false);
 
 ////////////////////////////////////////////////// for map panning function//////////////////////////////////////////
        const handleFullscreen = () => {
@@ -189,7 +189,7 @@ function Map() {
           setSuggestions([]);
          
           console.log(query);
-       
+         setDisable(true);
           
  }
 
@@ -201,7 +201,7 @@ function Map() {
     }));
          setShowInfoPanel(false);
          setShowPopup(true);
-        
+        setDisable(true);
         
       }
  }
@@ -223,6 +223,7 @@ function Map() {
           setQuery([]);
           setCurrentFloor(1);
           setCardData(null);
+          setDisable(false);
       }
 
   return (
@@ -237,11 +238,11 @@ function Map() {
         backgroundRepeat: 'no-repeat',
       }}
           className="relative    overflow-hidden h-screen w-screen flex justify-center items-center cursor-grab active:cursor-grabbing lg:h-screen lg:w-screen"
-            // onWheel={handleWheel}
-            // onMouseDown={handleMouseDown}
-            // onMouseMove={handleMouseMove}
-            // onMouseUp={handleMouseUp}
-            // onMouseLeave={handleMouseUp}
+              onWheel={disable ? false : handleWheel}
+              onMouseDown={disable ? false : handleMouseDown}
+              onMouseMove={disable ? false : handleMouseMove}
+              onMouseUp={disable ? false : handleMouseUp}
+              onMouseLeave={disable ? false : handleMouseUp}
           id="map-container"
           >
             <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
@@ -1466,6 +1467,8 @@ function Map() {
                      showPopup={showPopup}
                      roomSearched={roomSearched}
                      setRoomSearched={setRoomSearched}
+                     disable={disable}
+                     setDisable={setDisable}
                   />
                   
     </>

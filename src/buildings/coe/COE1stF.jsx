@@ -758,7 +758,7 @@ function COE1stF() {
 </filter>
 </defs>
         </svg> */}
-        <svg width="1000" height="400" viewBox="0 0 1389 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="1120" height="400" viewBox="0 0 1389 453" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_0_1)">
 <rect x="617" y="265" width="206" height="55" fill="#D9D9D9"/>
 </g>
