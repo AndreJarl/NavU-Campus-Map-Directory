@@ -6,6 +6,10 @@ import { useQuery } from '../context/QueryContext';
 import ShowPopUp from '../components/ShowPopUp';
 import RoomInfo from '../components/RoomInfo';
 import PanoramaViewer from '../components/PanoramaViewer';
+import SurveyForm from '../components/SurveyForm';
+import { Plus, Minimize, Minus, RotateCcw, ClipboardPenLine  } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
 
 function Map() {
         const [zoomLevel, setZoomLevel] = useState(1); // Zoom level
@@ -31,7 +35,7 @@ function Map() {
       const [cardData, setCardData] = useState(null);
       const [cardPosition, setCardPosition] = useState({ x: 0, y: 0 });
       const [disable, setDisable] = useState(false);
-
+      const [survey, setSurvey] = useState(false);
 ////////////////////////////////////////////////// for map panning function//////////////////////////////////////////
        const handleFullscreen = () => {
         const elem = document.documentElement;
@@ -94,6 +98,12 @@ function Map() {
         setIsPanning(false);
       };
     
+         const resetView = () => {
+      setZoomLevel(1);
+      setPanX(0);
+      setPanY(0);
+    };
+
         const buildingOnMouseEnter = (e,buildingName,buildingText) => {
         if(buildingName==".ovalFill"){
           document.querySelector(".ovalFill").setAttribute('fill', "#fff");
@@ -160,7 +170,7 @@ function Map() {
         }
     }
        setSuggestions(result);
-      
+       
  }
 
  const handleSuggestionClicked = (suggestions) =>{
@@ -1443,6 +1453,44 @@ function Map() {
           </svg>
 
                      
+
+      {/* Zoom Controls */}
+      <div className="fixed bottom-4 left-4 flex flex-col gap-2 text-base">
+                <button
+                onClick={handleFullscreen}
+                className="w-10 py-2 font-bold flex justify-center items-center opacity-80 hover:opacity-100 bg-gray-700 text-white rounded shadow-sm hover:bg-gray-600  shadow-slate-600"
+                >
+                <Minimize />
+                </button>
+                <button
+                onClick={() => setZoomLevel(Math.min(zoomLevel + 0.3, 5))}
+                className="w-10 py-2 flex justify-center items-center opacity-85 hover:opacity-100 bg-green-500 text-white rounded shadow-sm hover:bg-green-600  shadow-slate-600"
+                >
+               <Plus />
+                </button>
+                <button
+                onClick={() => setZoomLevel(Math.max(zoomLevel - 0.3, 1))}
+                className="w-10 py-2 flex justify-center items-center opacity-85 hover:opacity-100 bg-red-500 text-white rounded shadow-sm shadow-slate-600 hover:bg-red-600"
+                >
+             <Minus />
+                </button>
+                <button
+                onClick={resetView}
+                className=" w-10 py-2 flex justify-center items-center opacity-85 hover:opacity-100 bg-blue-500 text-white rounded shadow-sm shadow-zinc-600 hover:bg-blue-600"
+            >
+             <RotateCcw />
+            </button>     
+         <button onClick={()=>setSurvey(!survey)}
+              
+                className=" w-10 py-2 flex justify-center items-center opacity-85 hover:opacity-100 bg-yellow-500 text-white rounded shadow-sm shadow-zinc-600 hover:bg-yellow-600"
+            >
+            <ClipboardPenLine />
+            </button>  
+      </div>
+    
+
+
+
    {showPopup &&(
        <>
       
@@ -1482,6 +1530,10 @@ function Map() {
    suggestions={suggestions}
    handleSuggestionClicked = {handleSuggestionClicked}
  />
+
+  <SurveyForm  survey={survey}
+     setSurvey={setSurvey}
+  />
 
    </div>
         </div>

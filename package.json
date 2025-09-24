@@ -10,7 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "echarts": "^5.6.0",
+    "echarts-for-react": "^3.0.2",
     "firebase": "^12.2.1",
+    "framer-motion": "^12.23.19",
     "lucide-react": "^0.542.0",
     "pannellum": "^2.5.6",
     "react": "^19.1.1",
