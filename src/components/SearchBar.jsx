@@ -1,5 +1,5 @@
 import { Search } from "lucide-react"
-import { Menu, MapPin   } from 'lucide-react';
+import { Menu, MapPin , Building2  } from 'lucide-react';
 
 import eng from "../assets/logo/eng.jpg"
 import educ from "../assets/logo/educ.jpg"
@@ -64,8 +64,8 @@ function SearchBar({searchTerm, suggestions, handleSearch, handleSuggestionClick
                  
                  
                     {suggestions.map((suggestion, index)=>(
-                         <div key={index} onClick={()=>handleSuggestionClicked(suggestion)}  className="flex flex-row justify-left  cursor-pointer items-center gap-2 hover:bg-gray-200 w-full py-2 px-4">
-                        <h1><MapPin /></h1>
+                         <div key={index} onClick={()=>handleSuggestionClicked(suggestion)}  className="flex flex-row justify-left  cursor-pointer items-center gap-4 hover:bg-gray-200 w-full py-2 px-4">
+                        <h1><Building2 /></h1>
                         <div className="flex flex-col">
                             {suggestion.room ? (
                                 <>
