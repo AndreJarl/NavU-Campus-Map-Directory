@@ -12,13 +12,13 @@ const buildingData = {
     1: [
       { 
         code: "EN-LAB1", 
-        name: "Engineering Laboratory 1",
-        description: "Dedicated to basic engineering experiments and hands-on projects.",
+        name: "Civil Engineering Lab 1",
+        description: "A fully equipped laboratory with soil testing equipment, fluid mechanics apparatus, and material testing instruments, designed for hands-on learning.",
         img: enlab1
       },
       { 
         code: "EN-LAB2", 
-        name: "Engineering Laboratory 2",
+        name: "Civil Engineering Lab 2",
         description: "Advanced engineering lab for specialized equipment and testing.",
         img: enlab2
       },
