@@ -270,7 +270,7 @@ function Map() {
           >
             <div className="absolute inset-0 bg-black bg-opacity-65 z-0"></div>
 
-       <svg  width="120%" height="110%"  viewBox="0 0  1380 832" fill="none" xmlns="http://www.w3.org/2000/svg" 
+       <svg  width="100%" height="125%"  viewBox="0 0  1380 832" fill="none" xmlns="http://www.w3.org/2000/svg" 
           style={{  transform: `translate(${panX}px, ${panY}px) scale(${zoomLevel})`, transformOrigin: "center center",transition: isPanning ? "none" : "transform 0.4s ease-in-out", }} >
 
         <path d="M971.79 112.01V115.76L949.01 142.75V138.99L971.79 112.01Z" fill="#939393"/>

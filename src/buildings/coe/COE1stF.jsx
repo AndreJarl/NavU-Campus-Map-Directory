@@ -8,10 +8,10 @@ function COE1stF() {
    const room = query?.room?.code || "";
 
   return (
-     <div className=' flex mt-10 w-screen justify-center items-center'>
+     <div className=' flex mt-6 w-screen justify-center items-center'>
 
 
-        <svg width="100%" height="95%" viewBox="0 0 1389 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="100%" height="90%" viewBox="0 0 1389 453" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_0_1)">
 <rect x="617" y="265" width="206" height="55" fill="#D9D9D9"/>
 </g>
