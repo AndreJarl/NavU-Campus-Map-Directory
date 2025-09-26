@@ -11,6 +11,7 @@ import { Plus, Minimize, Minus, RotateCcw, ClipboardPenLine  } from 'lucide-reac
 
 import { Link } from 'react-router-dom';
 import BldOverview from '../components/BldOverview';
+import { useFloorQuery } from '../context/FloorContext';
 
 function Map() {
         const [zoomLevel, setZoomLevel] = useState(1); // Zoom level
@@ -22,7 +23,7 @@ function Map() {
 
        
       const [showPopup, setShowPopup] = useState(false);
-      const [currentFloor, setCurrentFloor] = useState(1);
+      const {currentFloor, setCurrentFloor} = useFloorQuery();
       const [showInfoPanel, setShowInfoPanel] = useState(false);
      
       const {query, setQuery} = useQuery();

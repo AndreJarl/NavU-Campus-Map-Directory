@@ -4,13 +4,15 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { QueryProvider } from './context/QueryContext.jsx'
-
+import {FloorProvider} from "./context/FloorContext.jsx"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
     <QueryProvider>
+       <FloorProvider>
       <App />
+      </FloorProvider>
      </QueryProvider>
     </BrowserRouter>
   </StrictMode>,

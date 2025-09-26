@@ -1,22 +1,22 @@
 {
-   "main_gate": {
+   "engpath1.1": {
     "image": "public/360imgs/1stF/1stEng/1stFlrENG0.JPG",
     "hotspots": [
       {
         "pitch": -20.5,
-        "yaw": 20,
-        "target": "New_Building_Front1"
+        "yaw": 120,
+        "target": "engpath1.2"
       },
 
        {
-        "pitch": -100.5,
-        "yaw": -10,
-        "target": "laundry",
-        "rotation": 180
+        "pitch": -25.5,
+        "yaw": -110,
+        "target": "engpath1.1",
+        "rotation": 50
       }
     ]
   },
-  "laundry": {
+  "engpath1.2": {
     "image": "public/IMG_5704.jpg",
     "hotspots": [
       {
@@ -29,7 +29,7 @@
            {
         "pitch": -30,
         "yaw": 22,
-        "target": "main_gate",
+        "target": "engpath1.1",
         "arrowType": "backward",
         "rotation" : 180
 
@@ -39,4 +39,3 @@
 
   
 }
-

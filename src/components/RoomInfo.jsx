@@ -63,6 +63,9 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
             onClick={handleDirections}
           >
             <CornerUpRight /> Get Directions
+            {/* if user clicks on the room the queryroom === rooom clicked , path from room to kiosk is revealed (add button ) 
+               when user click button then they get redirected to the path in the other building (path from other building showss up depends on the roomClicked)
+            */}
           </button>
         </div>
       </div>
