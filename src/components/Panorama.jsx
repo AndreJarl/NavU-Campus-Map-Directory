@@ -1,163 +1,156 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import 'pannellum/build/pannellum.css';
-import scenes from '../data/scene.json'
+import scenes from '../data/scene.json';
 import '../index.css';
-import { Plus, Minus, Maximize} from 'lucide-react';
 
 function Panorama({ scene, onChangeScene, clicked }) {
   const viewerRef = useRef(null);
   const viewerInstance = useRef(null);
- 
-  // Custom arrow hotspot rendering
-const customArrow = (hotSpotDiv, args = {}) => {
-  let rotation = args.rotation || 0;
 
+  const customArrow = (hotSpotDiv, args = {}) => {
+    let rotation = args.rotation || 0;
+    if (args.arrowType) {
+      if (args.arrowType === 'backward') rotation = 180;
+      if (args.arrowType === 'left') rotation = -90;
+      if (args.arrowType === 'right') rotation = 90;
+      if (args.arrowType === 'forward') rotation = 0;
+    }
 
+    hotSpotDiv.style.cursor = 'pointer';
+    hotSpotDiv.innerHTML = `
+      <div style="
+        transform: scale(3.7) translateX(-9px) rotateX(60deg) rotate(${rotation}deg);
+        width: 70px; height: 70px;
+        transform-origin: center center;
+        perspective: 800px;
+      ">
+        <svg width="70" height="70" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="background: transparent">
+          <defs>
+            <filter id="shadow" x="-20%" y="-20%" width="200%" height="200%">
+              <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="gray" flood-opacity="0.6"/>
+            </filter>
+          </defs>
+          <polygon points="100,40 160,160 100,130 40,160" fill="white" filter="url(#shadow)" />
+        </svg>
+      </div>
+      <div style="text-align: center; color: white; margin-top: 4px;">${args.label || ''}</div>
+    `;
 
-  // Optional: Allow using 'arrowType' to determine rotation
-  if (args.arrowType) {
-    if (args.arrowType === "backward") rotation = 180;
-    if (args.arrowType === "left") rotation = -90;
-    if (args.arrowType === "right") rotation = 90;
-    if (args.arrowType === "forward") rotation = 0;
-  }
+    hotSpotDiv.onclick = () => {
+      if (args.sceneId && typeof onChangeScene === 'function') {
+        onChangeScene(args.sceneId);
+      }
+    };
+  };
 
+const customInfo = (hotSpotDiv, args = {}) => {
+  hotSpotDiv.style.cursor = 'default';
+  hotSpotDiv.style.zIndex = 999;
 
-  
   hotSpotDiv.innerHTML = `
-     <div style="
-    transform: scale(3.7) translateX(-9px) rotateX(60deg) rotate(${rotation}deg);
-    width: 70px; height: 70px;
-    transform-origin: center center;
-    perspective: 800px;
-  ">
-      <svg width="70" height="70" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="background: transparent">
-        <defs>
-          <filter id="shadow" x="-20%" y="-20%" width="200%" height="200%">
-            <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="gray" flood-opacity="0.6"/>
-          </filter>
-        </defs>
-        <polygon points="100,40 160,160 100,130 40,160" fill="white" filter="url(#shadow)" />
-      </svg>
+    <div style="
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.6); /* Label background */
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      backdrop-filter: blur(5px); /* subtle glass effect */
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    ">
+      📍${args.label || 'Info'}
     </div>
-    <div style="text-align: center; color: white; margin-top: 4px;">${args.label || ''}</div>
   `;
 
+  // Hover effect
+  hotSpotDiv.onmouseover = () => {
+    hotSpotDiv.firstChild.style.transform = 'scale(1.1)';
+    hotSpotDiv.firstChild.style.boxShadow = '0 6px 20px rgba(0,0,0,0.4)';
+  };
 
-  hotSpotDiv.style.cursor = 'pointer';
-  hotSpotDiv.addEventListener('click', () => {
-    if (typeof onChangeScene === 'function' && args.sceneId) {
-      onChangeScene(args.sceneId);
-    }
-  });
+  hotSpotDiv.onmouseout = () => {
+    hotSpotDiv.firstChild.style.transform = 'scale(1)';
+    hotSpotDiv.firstChild.style.boxShadow = '0 4px 15px rgba(0,0,0,0.3)';
+  };
 };
 
 
 
-  // Initialize viewer once
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js';
+    script.async = true;
 
     script.onload = () => {
       if (viewerRef.current && !viewerInstance.current) {
+        const scenesConfig = {};
+        Object.entries(scenes).forEach(([key, val]) => {
+          scenesConfig[key] = {
+            type: 'equirectangular',
+            panorama: val.image.startsWith('/') ? val.image : '/' + val.image.replace(/^public\//, ''),
+            hfov: 120,
+            hotSpots: val.hotspots.map(h => {
+              if (h.type === 'arrow') {
+                return {
+                  pitch: h.pitch,
+                  yaw: h.yaw,
+                  type: 'custom',
+                  createTooltipFunc: customArrow,
+                              createTooltipArgs: {
+                  sceneId: h.target,  // arrows only
+                  rotation: h.rotation || 0,
+                  arrowType: h.arrowType,
+                  label: h.label
+                }
+                };
+              } else if (h.type === 'info') {
+                return {
+                  pitch: h.pitch,
+                  yaw: h.yaw,
+                  type: 'custom',
+                  createTooltipFunc: customInfo,
+                  createTooltipArgs: {
+                    label: h.label
+                  }
+                };
+              }
+              return null;
+            }).filter(Boolean)
+          };
+        });
+
         viewerInstance.current = window.pannellum.viewer(viewerRef.current, {
           default: {
             firstScene: scene,
             sceneFadeDuration: 1000,
             autoLoad: true,
-            mouseZoom: true,           
-            keyboardZoom: true, 
-             showControls: false,
+            mouseZoom: true,
+            keyboardZoom: true
           },
-          scenes: Object.fromEntries(
-            Object.entries(scenes).map(([key, val]) => [
-              key,
-              {
-                type: 'equirectangular',
-                panorama: val.image,
-                hfov: 150,
-                hotSpots: val.hotspots.map(h => ({
-                pitch: h.pitch,
-                yaw: h.yaw,
-                type: 'custom',
-                createTooltipFunc: customArrow,
-                createTooltipArgs: {
-                    sceneId: h.target,
-                    rotation: h.rotation,
-                    arrowType: h.arrowType
-                }
-                })),
-
-
-              }
-            ])
-          )
+          scenes: scenesConfig
         });
       }
     };
 
     document.body.appendChild(script);
     return () => document.body.removeChild(script);
-  }, []);
+  }, [scene, onChangeScene]);
 
-  // Change scene using API
   useEffect(() => {
     if (viewerInstance.current && viewerInstance.current.getScene() !== scene) {
       viewerInstance.current.loadScene(scene);
     }
   }, [scene]);
 
-      // 🔘 Zoom control functions
-  const zoomIn = () => {
-    if (viewerInstance.current) {
-      const current = viewerInstance.current.getHfov();
-      viewerInstance.current.setHfov(current - 30);
-    }
-  };
-
-  const zoomOut = () => {
-    if (viewerInstance.current) {
-      const current = viewerInstance.current.getHfov();
-      viewerInstance.current.setHfov(current + 30);
-    }
-  };
-
-  const toggleFullscreen = () => {
-    if (viewerInstance.current) {
-      viewerInstance.current.toggleFullscreen();
-    }
-  };
-
-return (
-  <>
-    <div className={`relative w-full  ${clicked ? "h-screen" : "h-[135px]"}`}>
-      <div ref={viewerRef} className="w-full h-[full]" />
-
-      {/* Controls in lower-left corner
-      <div className="absolute bottom-8 left-5 flex flex-row  gap-2 z-50">
-        <button
-          className="w-10 py-2 font-bold flex justify-center items-center bg-black/80 shadow-2xl shadow-gray-800 rounded-full "
-                   
-          onClick={zoomIn}
-        >
-          <Plus color='white'/>
-        </button>
-        <button
-          className="w-10 py-2 font-bold flex justify-center items-center bg-black/80 shadow-2xl
-                    shadow-gray-800 rounded-full "
-          onClick={zoomOut}
-        >
-          <Minus color='white' />
-        </button>
-  
-      </div> */}
+  return (
+    <div className={`relative w-full ${clicked ? 'h-screen' : 'h-[135px]'}`}>
+      <div ref={viewerRef} className="w-full h-full" />
     </div>
-  </>
-);
-
-
-
+  );
 }
-export default Panorama;
 
+export default Panorama;

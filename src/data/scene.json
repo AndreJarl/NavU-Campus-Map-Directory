@@ -1,42 +1,54 @@
 {
-   "main_gate": {
+  "main_gate": {
     "image": "public/360imgs/1stF/1stEng/1stFlrENG0.JPG",
     "hotspots": [
       {
         "pitch": -20.5,
         "yaw": 20,
-        "target": "New_Building_Front1"
-      },
-
-       {
-        "pitch": -100.5,
-        "yaw": -10,
+        "type": "arrow",
         "target": "laundry",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -50.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "laundry",
+        "arrowType": "backward",
         "rotation": 180
+      },
+      {
+        "pitch": 10,
+        "yaw":25,
+        "type": "info",
+        "label": "Civil Engineering Lab"
       }
     ]
   },
   "laundry": {
-    "image": "public/IMG_5704.jpg",
+    "image": "public/360imgs/1stF/1stEng/1stFlrENG1.JPG",
     "hotspots": [
       {
-        "pitch": -14,
-        "yaw": 22,
+        "pitch": -20.5,
+        "yaw": 1,
+        "type": "arrow",
         "target": "four",
         "arrowType": "forward"
-
-          },
-           {
-        "pitch": -30,
-        "yaw": 22,
+      },
+      {
+        "pitch": -50.5,
+        "yaw": 1,
+        "type": "arrow",
         "target": "main_gate",
         "arrowType": "backward",
-        "rotation" : 180
-
-          }
+        "rotation": 180
+      },
+          {
+        "pitch": -190,
+        "yaw":15,
+        "type": "info",
+        "label": "Civil Engineering Lab"
+      }
     ]
+  }
 }
-
-  
-}
-

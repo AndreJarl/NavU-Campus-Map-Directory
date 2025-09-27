@@ -1,18 +1,29 @@
 {
-   "engpath1.1": {
+  "engpath1.1": {
     "image": "public/360imgs/1stF/1stEng/1stFlrENG0.JPG",
     "hotspots": [
       {
         "pitch": -20.5,
         "yaw": 120,
-        "target": "engpath1.2"
+        "type": "arrow",
+        "target": "engpath1.2",
+        "arrowType": "forward"
+      
       },
-
-       {
+      {
         "pitch": -25.5,
         "yaw": -110,
+        "type": "arrow",
         "target": "engpath1.1",
-        "rotation": 50
+        "arrowType": "backward",
+        "rotation": 180
+   
+      },
+      {
+        "pitch": -10,
+        "yaw": 60,
+        "type": "info",
+        "label": "Engineering Hallway Entrance"
       }
     ]
   },
@@ -22,20 +33,26 @@
       {
         "pitch": -14,
         "yaw": 22,
+        "type": "arrow",
         "target": "four",
-        "arrowType": "forward"
-
-          },
-           {
+        "arrowType": "forward",
+        "label": "Proceed to Room Four"
+      },
+      {
         "pitch": -30,
         "yaw": 22,
+        "type": "arrow",
         "target": "engpath1.1",
         "arrowType": "backward",
-        "rotation" : 180
-
-          }
+        "rotation": 180,
+        "label": "Back to Path 1.1"
+      },
+      {
+        "pitch": -8,
+        "yaw": -40,
+        "type": "info",
+        "label": "Stairs to Second Floor"
+      }
     ]
-}
-
-  
+  }
 }
