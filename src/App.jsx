@@ -7,6 +7,7 @@ import COE2ndF from "./buildings/coe/COE2ndF"
 import COE3rdF from "./buildings/coe/COE3rdF"
 import NewAD1stf from "./buildings/new-admin/NewAD1stf"
 import Analytics from "./routes/Analytics"
+import Map3d from "./routes/Map3d"
 
 
 
@@ -22,6 +23,7 @@ function App() {
       <Route path="/coe3rdf" element={<COE3rdF />} />
       <Route path="/new-admin1stf" element={<NewAD1stf />} />
      <Route path="/analytics" element={<Analytics />} />
+          <Route path="/map3d" element={<Map3d />} />
 
     </Routes>
     </>
