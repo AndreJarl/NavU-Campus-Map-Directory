@@ -33,7 +33,18 @@ function Map3d(){
           const [searchTerm, setSearchTerm]= useState("");
           const [suggestions, setSuggestions] = useState([]);
           const [showMenu, setShowMenu] = useState(false);
-          const [category, setCategory] = useState("");
+
+        const [category, setCategory] = useState({
+          Restroom: false,
+          Sports: false,
+          Room: false,
+          Laboratory: false,
+          Food: false
+        });
+
+        const allFalse = Object.values(category).every((val) => !val); // check if all category are false
+
+
           const [roomClicked, setRoomClicked] = useState(false);
           const [roomSearched, setRoomSearched] = useState(false);
           const [bldCliked, setBldClicked] = useState(false);
@@ -468,7 +479,13 @@ function Map3d(){
         <path d="M1064.5 440.74V444.49L1034 443.64V439.89L1064.5 440.74Z" fill="#6E0C0E"/>
         <path d="M1072 444.73H1064.5V448.49H1072V444.73Z" fill="#6F0C0E"/>
         <path d="M1076 412.94H1079V420.44L1075.96 451.34H1072V444.72H1064.5V440.73L1034 439.88V450.46L1010 450V438.98H990V409.39L1058.5 411.18V414.26H1076V412.94ZM1078 420.4V413.82H1077V415.15H1057.5V412.04L991 410.3V438.1H1011V449.15L1033 449.57V438.97L1065.5 439.88V443.85H1073V450.47H1075.04L1078 420.41" fill="#BF1418"/>
-        <path  className="engFill" d="M991 410.3L1057.5 412.04V415.15H1077V413.82H1078V420.4L1075.04 450.46H1073V443.84H1065.5V439.88L1033 438.97V449.57L1011 449.15V438.1H991V410.3Z" fill={ category === "" ? '#DA7F7F': category === "Restroom" ? '#DA7F7F'   : '#B0B0B0' } style={{transition:"0.3s"}}/>
+        <path  className="engFill" d="M991 410.3L1057.5 412.04V415.15H1077V413.82H1078V420.4L1075.04 450.46H1073V443.84H1065.5V439.88L1033 438.97V449.57L1011 449.15V438.1H991V410.3Z" fill={
+  allFalse 
+    ? "#DA7F7F" 
+    : category["Restroom"] 
+      ? "#DA7F7F" 
+      : "#B0B0B0"
+}  style={{transition:"0.3s"}}/>
         <path d="M1034 450.47V454.23L1010 453.77V450.01L1034 450.47Z" fill="#6E0C0E"/>
         <path d="M1075.96 451.34H1072V455.1H1075.96V451.34Z" fill="#6F0C0E"/>
         </g>
@@ -513,7 +530,13 @@ function Map3d(){
         <path d="M1109.52 524.63V528.38L1107.02 581.79V578.04L1109.52 524.63Z" fill="#868661"/>
         <path d="M1107.02 578.04V581.79L1076 580.93V577.18L1107.02 578.04Z" fill="#7B7B59"/>
         <path d="M1109.5 487.12L1138.51 488L1137.99 511.39H1118.97L1117.97 525.51H1110.48L1107.98 578.94L1074.99 578.03L1075.49 529.48H1067.07L1066.57 526.4H1065.51V523.31H1067.02L1067.99 493.29H1066.98L1068.02 467.69H1078.03L1081.03 420.44L1114.02 421.35L1112.5 475.2H1109.51V487.14L1109.5 487.12ZM1137.01 510.51L1137.5 488.86L1108.51 487.98V474.31H1111.52L1113 422.2L1081.99 421.34L1078.99 468.57H1069L1068.04 492.41H1069.03L1068 524.2H1066.52V525.52H1067.46L1067.95 528.61H1076.53L1076.03 577.19L1107.04 578.05L1109.54 524.64H1117.05L1118.06 510.52H1137.03" fill="#C8C01E"/>
-        <path className="newAdminFill" style={{transition:"0.3s"}} d="M1081.97 421.34L1112.98 422.2L1111.51 474.3H1108.5V487.97L1137.49 488.85L1137.01 510.51H1118.03L1117.03 524.63H1109.52L1107.02 578.04L1076 577.18L1076.51 528.6H1067.93L1067.44 525.51H1066.5V524.19H1067.98L1069.01 492.4H1068.02L1068.98 468.56H1078.97L1081.97 421.34Z" fill="#D5D59A"/>
+        <path className="newAdminFill" style={{transition:"0.3s"}} d="M1081.97 421.34L1112.98 422.2L1111.51 474.3H1108.5V487.97L1137.49 488.85L1137.01 510.51H1118.03L1117.03 524.63H1109.52L1107.02 578.04L1076 577.18L1076.51 528.6H1067.93L1067.44 525.51H1066.5V524.19H1067.98L1069.01 492.4H1068.02L1068.98 468.56H1078.97L1081.97 421.34Z" fill={
+  allFalse 
+    ? "#D5D59A" 
+    : category["Sports"] 
+      ? "#D5D59A" 
+      : "#B0B0B0"
+}/>
         <path d="M1110.48 525.51V529.27L1107.98 582.7V578.94L1110.48 525.51Z" fill="#7E7913"/>
         <path d="M1107.98 578.94V582.7L1075 581.79V578.04L1107.98 578.94Z" fill="#746F11"/>
         </g>
