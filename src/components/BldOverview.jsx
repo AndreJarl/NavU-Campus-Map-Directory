@@ -1,9 +1,16 @@
+import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import cardData from "../data/CardData";
-import {Building2} from "lucide-react"
-function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup }) {
-  const buildingData = cardData[query.building];
-  console.log(query.building);
+import { Building2, Signpost } from "lucide-react";
+import buildingData from "../data/buildingData";
+
+function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomSearched }) {
+  const buildingDatas = cardData[query.building];
+  const rooms = buildingData?.[query.building]?.rooms;
+
+  const [selectedFloor, setSelectedFloor] = useState(
+    rooms ? Object.keys(rooms)[0] : null
+  ); // default to first floor
 
   const CloseCard = () => {
     setBldClicked(false);
@@ -14,58 +21,104 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup }) {
     handleOpenPopup(query.building);
   };
 
+    
   return (
     <>
-      {/* Background overlay */}
-      <div
-        className="fixed inset-0 bg-black/30 backdrop-blur-xs z-30"
-        onClick={CloseCard} // click outside to close
-      ></div>
-
       {/* Card */}
       <div
-        className={`fixed z-40 flex flex-col rounded-2xl border border-gray-400 border-opacity-50
-        top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-        w-[360px] lg:w-[580px] 2xl:w-[720px] overflow-hidden shadow-2xl`}
+        className={`${
+          buildingDatas ? "fixed left-4 top-16" : "hidden"
+        } z-40 flex flex-col rounded-2xl border border-white/20 
+        w-[360px] lg:w-[450px] 2xl:w-[560px] h-[85%] 
+        bg-black/80 backdrop-blur-md shadow-2xl 
+        transform transition-transform ease-in-out duration-700`}
       >
-        {/* Image with subtle bottom overlay */}
-        <div className="relative w-full">
+        {/* Image */}
+        <div className="relative w-full h-[40%] flex-shrink-0">
           <img
-            className="w-full h-[400px] object-cover rounded-2xl"
-            src={buildingData?.img}
+            className="w-full h-full object-cover rounded-t-2xl"
+            src={buildingDatas?.img}
             alt={query.building || "Building Image"}
           />
-
-          {/* Subtle bottom overlay */}
-          <div
-            className="absolute bottom-0 left-0 right-0 
-                          bg-gradient-to-t from-black/80 via-black/60 to-transparent
-                          p-5 lg:p-7 rounded-b-2xl flex flex-col items-start"
-          >
-            <p className="block text-2xl lg:text-4xl font-bold uppercase text-white w-full text-left">
-              {query.building}
-            </p>
-            <p className="block font-semibold text-lg mb-1 pl-4 lg:text-xl text-white w-full text-left">
-              Floors: {buildingData?.totalFloors || "No Data Available."}
-            </p>
-
-            {/* View Building button */}
-            <button
-              className="mt-3 bg-green-600 flex gap-3 hover:bg-green-800 text-white font-semibold px-4 py-2 text-base rounded-xl shadow-md transition duration-200"
-              onClick={clickedViewBtn}
-            >
-             <Building2 /> View Building
-            </button>
-          </div>
         </div>
 
         {/* Close button */}
         <button
           onClick={CloseCard}
-          className="flex gap-2 items-center absolute right-5 top-3 bg-red-600 hover:bg-red-800 text-white text-xl px-3 py-3 rounded-full shadow-lg"
+          className="flex gap-2 items-center absolute right-5 top-3 
+                    bg-red-600 hover:bg-red-800 text-white text-xl 
+                    px-3 py-3 rounded-full shadow-lg"
         >
           <AiOutlineClose />
         </button>
+
+        {/* Scrollable Content */}
+        <div className="flex-1 overflow-y-auto">
+          {/* Building Info Section */}
+          <div className="p-5 flex flex-col gap-3 text-white">
+            <p className="text-2xl lg:text-3xl font-bold uppercase">
+              {query.building}
+            </p>
+            <p className="font-semibold text-base lg:text-lg">
+              Floors: {buildingDatas?.totalFloors || "No Data Available."}
+            </p>
+
+            {/* View Building & Directions buttons */}
+            <div className="flex flex-row gap-4">
+              <button
+                className="mt-2 flex gap-3 items-center 
+                           bg-red-600/80 hover:bg-red-600/40 
+                           text-white font-semibold px-4 py-2 text-sm lg:text-base 
+                           rounded-xl shadow-md transition duration-200 w-fit 
+                           backdrop-blur-md border border-white/20"
+                onClick={clickedViewBtn}
+              >
+                <Signpost /> Get Directions
+              </button>
+            </div>
+
+            {/* Floor selection */}
+            {rooms && (
+              <div className="mt-4">
+                <label className="block text-sm mb-2 text-gray-300">
+                  Select Floor:
+                </label>
+                <select
+                  value={selectedFloor}
+                  onChange={(e) => setSelectedFloor(e.target.value)}
+                  className="w-full bg-black border-white/20 rounded-lg p-2 text-white text-sm backdrop-blur-md"
+                >
+                  {Object.keys(rooms).map((floor) => (
+                    <option key={floor} value={floor}>
+                      Floor {floor}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
+          </div>
+
+          {/* Rooms List */}
+          <div className="p-5 space-y-3">
+            {rooms && rooms[selectedFloor] ? (
+              rooms[selectedFloor].map((room, index) => (
+                <div   onClick={() => {
+                
+                      setRoomSearched(true);
+              
+                    }}
+                  key={index}
+                  className="p-4 cursor-pointer bg-white/10 rounded-lg hover:bg-white/20 transition shadow-md"
+                >
+                  <p className="font-bold text-white text-lg">{room.name}</p>
+                  <p className="text-sm text-gray-200">{room.description}</p>
+                </div>
+              ))
+            ) : (
+              <p className="text-gray-400 italic">No rooms available.</p>
+            )}
+          </div>
+        </div>
       </div>
     </>
   );

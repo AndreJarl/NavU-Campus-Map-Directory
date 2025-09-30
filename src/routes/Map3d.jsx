@@ -15,6 +15,7 @@ import BldOverview from '../components/BldOverview';
 import { useFloorQuery } from '../context/FloorContext';
 import Categories from '../components/Categories';
 
+
 function Map3d(){  
 
           const [zoomLevel, setZoomLevel] = useState(1); // Zoom level
@@ -244,6 +245,7 @@ function Map3d(){
      }
     
      const OpenCard = (e, buildingName) =>{
+          setRoomSearched(false);
            if(isDragging == false){
               setQuery(prev => ({
           ...prev,
@@ -286,11 +288,11 @@ function Map3d(){
         backgroundRepeat: 'no-repeat',
       }}
           className="relative    overflow-hidden h-screen w-screen flex justify-center items-center cursor-grab active:cursor-grabbing lg:h-screen lg:w-screen"
-              onWheel={disable ? false : handleWheel}
+                onWheel={disable ? false : handleWheel}
               onMouseDown={disable ? false : handleMouseDown}
-              onMouseMove={disable ? false : handleMouseMove}
-              onMouseUp={disable ? false : handleMouseUp}
-              onMouseLeave={disable ? false : handleMouseUp}
+              onMouseMove={ handleMouseMove}
+              onMouseUp={ handleMouseUp}
+              onMouseLeave={ handleMouseUp}
           id="map-container"
           >
             <div className="absolute inset-0 bg-black bg-opacity-65 z-0"></div>
@@ -1509,9 +1511,43 @@ function Map3d(){
         </g>
           </svg>
 
+  
                      
     <Categories categories={category} setCategory={setCategory} />
+
   
+  <SearchBar searchTerm={searchTerm}
+   suggestions={suggestions}
+   handleSearch={handleSearch}
+  handleSuggestionClicked={handleSuggestionClicked}/>
+
+       { roomSearched  && (
+      <>
+                  <RoomInfo
+                     setShowPopup={setShowPopup}
+                     showPopup={showPopup}
+                     roomSearched={roomSearched}
+                     setRoomSearched={setRoomSearched}
+                     disable={disable}
+                     setDisable={setDisable}
+                  />
+                  
+    </>
+         )}
+
+          {bldCliked &&(
+    <>
+    <BldOverview query={query}
+      setQuery={setQuery}
+      setBldClicked={setBldClicked}
+      handleOpenPopup={handleOpenPopup}
+      setRoomSearched={setRoomSearched}
+    />
+    </>
+  )
+
+  }
+
    </div>
         </div>
         </>

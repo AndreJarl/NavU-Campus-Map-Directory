@@ -48,7 +48,7 @@ const handleClick = (cat) => {
   };
 
   return (
-    <div className="absolute top-4 left-1/2 -translate-x-1/2 flex gap-3 z-50">
+    <div className="absolute top-4 left-1/2 -translate-x-[30%] flex gap-3 z-50">
       {categories.map((cat) => (
          
         <button
