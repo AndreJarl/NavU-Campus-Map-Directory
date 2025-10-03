@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ctubg2 from "../assets/ctubgg.png"
 import SearchBar from '../components/SearchBar';
 import buildingData from '../data/buildingData';
@@ -18,6 +18,8 @@ import Categories from '../components/Categories';
 
 function Map3d(){  
 
+
+
           const [zoomLevel, setZoomLevel] = useState(1); // Zoom level
           const [panX, setPanX] = useState(0); // Horizontal pan
           const [panY, setPanY] = useState(0); // Vertical pan
@@ -25,6 +27,9 @@ function Map3d(){
           const [isDragging, setIsDragging] = useState(false);
           const [startPoint, setStartPoint] = useState({ x: 0, y: 0 });
     
+            useEffect(() => {
+  console.log("PanX:", panX, "PanY:", panY, "Zoom:", zoomLevel);
+}, [panX, panY, zoomLevel]);
            
           const [showPopup, setShowPopup] = useState(false);
           const {currentFloor, setCurrentFloor} = useFloorQuery();
@@ -57,6 +62,21 @@ function Map3d(){
           const [survey, setSurvey] = useState(false);
 
 
+          const zoomPresets = {
+          engineering: { panX: -489 , panY: -69 , zoom: 2.000000000000001 },
+          library: { panX: 27 , panY: 377 , zoom: 2.200000000000001 },
+          cot: { panX: 90, panY: -237 , zoom: 2.4000000000000012 },
+           centrum: { panX: -497 , panY: 531  , zoom: 2.4000000000000012 },
+       };
+
+const zoomToBuilding = (building) => {
+  const preset = zoomPresets[building.toLowerCase()];
+  if (!preset) return;
+
+  setPanX(preset.panX);
+  setPanY(preset.panY);
+  setZoomLevel(preset.zoom);
+};
 
         const getFillColor = (buildingCategory, activeCategory) => {
         if (activeCategory === "") return "#7EC8E2"; // default
@@ -165,6 +185,7 @@ function Map3d(){
     
     
      const handleSearch = (e) =>{
+    
         const value = e.target.value;
           setSearchTerm(value);
     
@@ -288,8 +309,8 @@ function Map3d(){
         backgroundRepeat: 'no-repeat',
       }}
           className="relative    overflow-hidden h-screen w-screen flex justify-center items-center cursor-grab active:cursor-grabbing lg:h-screen lg:w-screen"
-                onWheel={disable ? false : handleWheel}
-              onMouseDown={disable ? false : handleMouseDown}
+                onWheel={ handleWheel}
+              onMouseDown={ handleMouseDown}
               onMouseMove={ handleMouseMove}
               onMouseUp={ handleMouseUp}
               onMouseLeave={ handleMouseUp}
@@ -464,7 +485,9 @@ function Map3d(){
             onMouseEnter={(e)=>buildingOnMouseEnter(e,".engFill",".engText")}
             onMouseLeave={(e)=>buildingOnMouseLeave(e,".engFill",".engText","#DA7F7F")}
             // onClick={(e)=> handleOpenPopup(e,'College of Engineering Building',2)}
-            onClick={(e)=>OpenCard(e,'College of Engineering Building')}
+            onClick={(e)=>{OpenCard(e,'College of Engineering Building')
+                       zoomToBuilding("engineering")
+            }}
                
         >
         <path d="M1057.5 412.04V415.8L991 414.06V410.3L1057.5 412.04Z" fill="#6E0C0E"/>
@@ -498,7 +521,9 @@ function Map3d(){
             onMouseEnter={(e)=>buildingOnMouseEnter(e,".newAdminFill",".newAdminText")}
             onMouseLeave={(e)=>buildingOnMouseLeave(e,".newAdminFill",".newAdminText","#D5D59A")}
     
-             onClick={(e)=>OpenCard(e,'New Admin Building')}
+             onClick={(e)=>{OpenCard(e,'New Admin Building')
+                 zoomToBuilding("library")
+             }}
             >
             
         <path d="M1112.98 422.2V425.95L1081.97 425.09V421.34L1112.98 422.2Z" fill="#746F11"/>
@@ -758,7 +783,9 @@ function Map3d(){
         <g style={{cursor:"pointer", transition:"0.3s"}}
             onMouseEnter={(e)=>buildingOnMouseEnter(e,".cotFill",".cotText")}
             onMouseLeave={(e)=>buildingOnMouseLeave(e,".cotFill",".cotText","#D9D372")}
-              onClick={(e)=>OpenCard(e,'College of Technology/ COT Building')}
+              onClick={(e)=>{OpenCard(e,'College of Technology/ COT Building')
+                   zoomToBuilding("cot")
+              }}
             >
         <path d="M789.5 453.98V457.74L650.48 453.79V450.03L789.5 453.98Z" fill="#6B5B0E"/>
         <path d="M789.5 463.26H787V467.02H789.5V463.26Z" fill="#7E7B42"/>
@@ -1280,7 +1307,8 @@ function Map3d(){
         {/* Centrum */}
         <g style={{cursor:"pointer", transition:"0.3s"}}
             onMouseEnter={(e)=>buildingOnMouseEnter(e,".centrumFill",".centrumText")}
-            onMouseLeave={(e)=>buildingOnMouseLeave(e,".centrumFill",".centrumText","#CEAD6B")}>
+            onMouseLeave={(e)=>buildingOnMouseLeave(e,".centrumFill",".centrumText","#CEAD6B")}
+            onClick={()=>zoomToBuilding(centrum)}>
         <path d="M940.18 188.17V191.93L938.72 191.6V187.85L940.18 188.17Z" fill="#302A22"/>
         <path d="M926.42 184.03V187.79L921.17 192.01V188.25L926.42 184.03Z" fill="#393128"/>
         <path d="M921.17 188.25V192.01L891.35 188.93V185.18L921.17 188.25Z" fill="#312B23"/>

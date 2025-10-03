@@ -54,7 +54,7 @@ const handleClick = (cat) => {
         <button
           key={cat.id}
           onClick={() => handleClick(cat.label)}
-          className={`flex items-center gap-2 px-4 py-1 rounded-full ${activeCategory === cat.label ? "bg-black/90" : "bg-black/40"}
+          className={`flex items-center gap-2 px-4 py-1 rounded-full ${activeCategory === cat.label ? "bg-black/90" : "bg-black/20"}
          backdrop-blur-md border border-white/10
             shadow-lg transition`}
         >
