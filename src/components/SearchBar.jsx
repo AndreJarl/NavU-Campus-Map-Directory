@@ -18,7 +18,7 @@ function SearchBar({searchTerm, suggestions, handleSearch, handleSuggestionClick
   {/* 🔎 Main Search Bar */}
   <div
     className={`z-50 w-[300px] lg:w-[400px] 2xl:w-[600px] px-5 flex flex-row items-center justify-center
-                border border-white/20 bg-black/70 backdrop-blur-md shadow-lg
+                border border-white/20 bg-black/40 backdrop-blur-md shadow-lg
                 ${suggestions.length > 0 || (searchTerm && !(searchTerm in buildingData))
                   ? "rounded-t-2xl rounded-b-none "
                   : "rounded-2xl "}`}
@@ -51,7 +51,7 @@ function SearchBar({searchTerm, suggestions, handleSearch, handleSuggestionClick
     <div
       className={`z-40 -mt-0.5 flex-col gap-1 max-h-[500px] overflow-auto
                   rounded-b-2xl border-x border-b border-white/20
-                  bg-black/80 backdrop-blur-md text-white shadow-md
+                  bg-black/40 backdrop-blur-md text-white shadow-md
                   ${suggestions.length > 0 ? "flex" : "hidden"}`}
     >
       {suggestions.map((suggestion, index) => (

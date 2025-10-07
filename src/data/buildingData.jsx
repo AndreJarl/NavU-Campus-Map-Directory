@@ -68,7 +68,7 @@ const buildingData = {
         description: "Designed for electronics, circuits, and microprocessor experiments.",
         img: "/images/coe/electronics_lab.jpg"
       }
-    ]
+    ],
   },
   floorImages: {
     1: <COE1stF />,

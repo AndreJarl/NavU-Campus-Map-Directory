@@ -231,7 +231,7 @@ const zoomToBuilding = (building) => {
       room: {
         name: suggestions.room?.name || prev.room?.name,
         code: suggestions.room?.code || prev.room?.code,
-        image: suggestions.room?.img || prev.room?.img,
+        img: suggestions.room?.img || prev.room?.img,
         description: suggestions.room?.description || prev.room?.description,
       }
     }));

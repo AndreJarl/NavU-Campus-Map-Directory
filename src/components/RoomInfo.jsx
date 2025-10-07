@@ -13,6 +13,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
     console.log(query);
   };
 
+
   return (
     <>
      
@@ -21,8 +22,12 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
      <div
   className={`${
     roomSearched ? "fixed left-2 top-[10]" : "hidden"
-  } w-[430px] my-4 h-[80%] rounded-2xl border border-white/20 
-  bg-black/70 backdrop-blur-md shadow-2xl p-2 transform transition-transform 
+  } w-[430px] my-4 h-[80%] rounded-2xl   backdrop-blur-lg 
+  bg-black/40 
+  border 
+  border-white/20 
+  
+  shadow-md p-2 transform transition-transform 
   ease-in-out duration-700 z-50 flex flex-col`}
 >
   {/* Close Button */}
@@ -46,7 +51,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
     <h3 className="mb-2 font-medium text-red-400 text-base">
       Floor {floor}
     </h3>
-    <img className="w-[100%] h-[60%] rounded-lg shadow-md" src={room.image} alt="" />
+    <img className="w-[100%] h-[60%] rounded-lg shadow-md" src={room.img} alt="" />
     <h3 className="font-medium text-gray-200 text-xl">
       {room.code}
     </h3>

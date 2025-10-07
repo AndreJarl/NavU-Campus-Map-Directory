@@ -4,6 +4,8 @@ import cardData from "../data/CardData";
 import { Building2, Signpost } from "lucide-react";
 import buildingData from "../data/buildingData";
 
+
+
 function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomSearched }) {
   const buildingDatas = cardData[query.building];
   const rooms = buildingData?.[query.building]?.rooms;
@@ -20,6 +22,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
     setBldClicked(false);
     handleOpenPopup(query.building);
   };
+
 
     
   return (
@@ -59,8 +62,8 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
             <p className="text-2xl lg:text-3xl font-bold uppercase">
               {query.building}
             </p>
-            <p className="font-semibold text-base lg:text-lg">
-              Floors: {buildingDatas?.totalFloors || "No Data Available."}
+            <p className="font-normal text-base lg:text-lg">
+              No. of Floors: {buildingDatas?.totalFloors || "No Data Available."}
             </p>
 
             {/* View Building & Directions buttons */}
@@ -76,37 +79,44 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
                 <Signpost /> Get Directions
               </button>
             </div>
-
+        </div>
             {/* Floor selection */}
             {rooms && (
-              <div className="mt-4">
-                <label className="block text-sm mb-2 text-gray-300">
+              <div className="mt-4  w-full">
+                <label className="block px-6 text-sm mb-2 text-gray-300">
                   Select Floor:
                 </label>
-                <select
-                  value={selectedFloor}
-                  onChange={(e) => setSelectedFloor(e.target.value)}
-                  className="w-full bg-black border-white/20 rounded-lg p-2 text-white text-sm backdrop-blur-md"
-                >
-                  {Object.keys(rooms).map((floor) => (
-                    <option key={floor} value={floor}>
-                      Floor {floor}
-                    </option>
+              <div className="flex flex-wrap items-center">
+                  {Object.keys(rooms).map((floor)=>(
+                     <button key={floor} onClick={()=>setSelectedFloor(floor)} className={` flex-1  rounded-t-xl text-white font-bold transition-all w-full duration-200 
+                       ${selectedFloor === floor ? 'bg-white/20' : ''}
+                     py-2`}>
+                       Floor {floor}
+                     </button>
                   ))}
-                </select>
+              </div>
               </div>
             )}
-          </div>
+         
 
           {/* Rooms List */}
-          <div className="p-5 space-y-3">
+          <div className="pt-10 pb-4 rounded-b-2xl bg-white/20 px-4 space-y-3">
             {rooms && rooms[selectedFloor] ? (
               rooms[selectedFloor].map((room, index) => (
-                <div   onClick={() => {
-                
-                      setRoomSearched(true);
-              
-                    }}
+                <div    onClick={() => {
+                        setQuery((prev) => ({
+                          ...prev,
+                          floor: selectedFloor,
+                          room: {
+                            name: room.name,
+                            code: room.code || "",
+                            img: room.img || "",
+                            description: room.description || "",
+                            floor: selectedFloor,
+                          },
+                        }));
+                        setRoomSearched(true);
+                      }}
                   key={index}
                   className="p-4 cursor-pointer bg-white/10 rounded-lg hover:bg-white/20 transition shadow-md"
                 >
