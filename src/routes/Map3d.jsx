@@ -64,7 +64,7 @@ function Map3d(){
 
           const zoomPresets = {
           engineering: { panX: -489 , panY: -69 , zoom: 2.000000000000001 },
-          library: { panX: 27 , panY: 377 , zoom: 2.200000000000001 },
+          library: { panX: -868  , panY: -275  , zoom: 2.5000000000000013 },
           cot: { panX: 90, panY: -237 , zoom: 2.4000000000000012 },
            centrum: { panX: -497 , panY: 531  , zoom: 2.4000000000000012 },
        };
@@ -1308,7 +1308,7 @@ const zoomToBuilding = (building) => {
         <g style={{cursor:"pointer", transition:"0.3s"}}
             onMouseEnter={(e)=>buildingOnMouseEnter(e,".centrumFill",".centrumText")}
             onMouseLeave={(e)=>buildingOnMouseLeave(e,".centrumFill",".centrumText","#CEAD6B")}
-            onClick={()=>zoomToBuilding(centrum)}>
+            onClick={()=>zoomToBuilding("centrum")}>
         <path d="M940.18 188.17V191.93L938.72 191.6V187.85L940.18 188.17Z" fill="#302A22"/>
         <path d="M926.42 184.03V187.79L921.17 192.01V188.25L926.42 184.03Z" fill="#393128"/>
         <path d="M921.17 188.25V192.01L891.35 188.93V185.18L921.17 188.25Z" fill="#312B23"/>

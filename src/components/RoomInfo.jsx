@@ -22,7 +22,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
   className={`${
     roomSearched ? "fixed left-2 top-[10]" : "hidden"
   } w-[430px] my-4 h-[80%] rounded-2xl border border-white/20 
-  bg-black/80 backdrop-blur-md shadow-2xl p-2 transform transition-transform 
+  bg-black/70 backdrop-blur-md shadow-2xl p-2 transform transition-transform 
   ease-in-out duration-700 z-50 flex flex-col`}
 >
   {/* Close Button */}
