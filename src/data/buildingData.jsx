@@ -77,7 +77,56 @@ const buildingData = {
   }
 },
 
-    'CME/COE Building': 4,
+    'CME/COE Building': {
+       totalFloors: 4,
+       rooms:{
+        1: [
+      { 
+        code: "EN-LAB1", 
+        name: "Civil Engineering Lab 1",
+        description: "A fully equipped laboratory with soil testing equipment, fluid mechanics apparatus, and material testing instruments, designed for hands-on learning.",
+        img: enlab1
+      },
+      { 
+        code: "EN-LAB2", 
+        name: "Civil Engineering Lab 2",
+        description: "Advanced engineering lab for specialized equipment and testing.",
+        img: enlab2
+      },
+      { 
+        code: "EN-101", 
+        name: "Classroom 101",
+        description: "Standard lecture classroom with multimedia support.",
+        img: "/images/coe/en101.jpg"
+      },
+      { 
+        code: "EN-102", 
+        name: "Classroom 102",
+        description: "Lecture room equipped with projector and air-conditioning.",
+        img: "/images/coe/en102.jpg"
+      }
+    ], 2: [
+      { 
+        code: "EN-201", 
+        name: "Classroom 201",
+        description: "A medium-sized classroom for engineering courses.",
+        img: "/images/coe/en201.jpg"
+      },
+      { 
+        code: "EN-202", 
+        name: "Classroom 202",
+        description: "Lecture hall suitable for larger classes.",
+        img: "/images/coe/en202.jpg"
+      },
+      { 
+        code: "EN-203", 
+        name: "Physics Lab",
+        description: "Equipped for experiments in mechanics, optics, and electricity.",
+        img: "/images/coe/physics_lab.jpg"
+      }
+    ],
+       }
+    },
     'Education Building': 3,
     'Graduate School Building': 4,
     'Bistro': 1,

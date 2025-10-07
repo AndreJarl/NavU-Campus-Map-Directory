@@ -21,8 +21,8 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
       {/* Your existing card */}
      <div
   className={`${
-    roomSearched ? "fixed left-2 top-[10]" : "hidden"
-  } w-[430px] my-4 h-[80%] rounded-2xl   backdrop-blur-lg 
+    roomSearched ? "fixed left-4 top-[16]" : "hidden"
+  } w-[450px] my-4 h-[85%] rounded-2xl   backdrop-blur-lg 
   bg-black/40 
   border 
   border-white/20 
