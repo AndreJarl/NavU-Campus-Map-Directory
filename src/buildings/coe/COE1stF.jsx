@@ -1,93 +1,62 @@
-import React, { useRef, useEffect } from 'react';
-import { useQuery } from '../../context/QueryContext';
-import { useFloorQuery } from '../../context/FloorContext';
+import React, { useRef } from "react";
+
 
 function COE1stF() {
-  const { query } = useQuery();
-  const { floor } = useFloorQuery();
-
-  const svgRef = useRef(null);
   const containerRef = useRef(null);
-  const zoomLevel = useRef(1);
+  const svgRef = useRef(null);
+
+  // Pan and zoom refs
   const pan = useRef({ x: 0, y: 0 });
-  const start = useRef({ x: 0, y: 0 });
+  const zoomLevel = useRef(1);
   const isPanning = useRef(false);
-
-  useEffect(() => {
-    const svg = svgRef.current;
-    const container = containerRef.current;
-
-    const applyTransform = () => {
-      svg.style.transform = `translate(${pan.current.x}px, ${pan.current.y}px) scale(${zoomLevel.current})`;
-      svg.style.transformOrigin = 'center center';
-    };
-
-   
-    const handleWheel = (e) => {
-      e.preventDefault();
-      const zoomSpeed = 0.1;
-      const newZoom = zoomLevel.current + (e.deltaY < 0 ? zoomSpeed : -zoomSpeed);
-      zoomLevel.current = Math.min(Math.max(newZoom, 0.5), 10);
-         console.log(`Pan X: ${pan.current.x}, Pan Y: ${pan.current.y}, Zoom Level: ${zoomLevel.current}`);
-
-      applyTransform();
-    };
-
-    const handleMouseDown = (e) => {
-      isPanning.current = true;
-      start.current = {
-        x: e.clientX - pan.current.x,
-        y: e.clientY - pan.current.y,
-      };
-      container.style.cursor = 'grabbing';
-    };
-
-    const handleMouseMove = (e) => {
-      if (!isPanning.current) return;
-      pan.current.x = e.clientX - start.current.x;
-      pan.current.y = e.clientY - start.current.y;
-      requestAnimationFrame(applyTransform);
-    };
-
-    const handleMouseUp = () => {
-      isPanning.current = false;
-      container.style.cursor = 'grab';
-    };
-
-    container.addEventListener('wheel', handleWheel, { passive: false });
-    container.addEventListener('mousedown', handleMouseDown);
-    container.addEventListener('mousemove', handleMouseMove);
-    container.addEventListener('mouseup', handleMouseUp);
-    container.addEventListener('mouseleave', handleMouseUp);
-
-    // Expose for zoomToBuilding
-    window.applyTransform = applyTransform;
-
-    return () => {
-      container.removeEventListener('wheel', handleWheel);
-      container.removeEventListener('mousedown', handleMouseDown);
-      container.removeEventListener('mousemove', handleMouseMove);
-      container.removeEventListener('mouseup', handleMouseUp);
-      container.removeEventListener('mouseleave', handleMouseUp);
-      delete window.applyTransform;
-    };
-  }, []);
+  const startPoint = useRef({ x: 0, y: 0 });
 
   const buildings = [
-    { name: "StudyArea", panx: 939, pany: -1470, zoomLevel: 10 },
-    { name: "COE", panx: 670, pany: -2103, zoomLevel: 10 },
-
+    { name: "StudyArea", panX: 939, panY: -1470, zoom: 10 },
+    { name: "COE", panX: 825, panY: -2732, zoom: 10 },
   ];
 
-  const smoothZoomTo = (targetPanX, targetPanY, targetZoom, duration = 500) => {
+  const applyTransform = () => {
+    if (svgRef.current) {
+      svgRef.current.style.transform = `translate(${pan.current.x}px, ${pan.current.y}px) scale(${zoomLevel.current})`;
+      svgRef.current.style.transformOrigin = "center center";
+      console.log(`PanX: ${pan.current.x}, PanY: ${pan.current.y}, Zoom: ${zoomLevel.current}`);
+    }
+  };
+
+  const handleWheel = (e) => {
+    e.preventDefault();
+    const zoomSpeed = 0.1;
+    zoomLevel.current = Math.min(
+      Math.max(zoomLevel.current + (e.deltaY < 0 ? zoomSpeed : -zoomSpeed), 1),
+      10
+    );
+    applyTransform();
+  };
+
+  const handleMouseDown = (e) => {
+    isPanning.current = true;
+    startPoint.current = { x: e.clientX - pan.current.x, y: e.clientY - pan.current.y };
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isPanning.current) return;
+    pan.current.x = e.clientX - startPoint.current.x;
+    pan.current.y = e.clientY - startPoint.current.y;
+    applyTransform();
+  };
+
+  const handleMouseUp = () => {
+    isPanning.current = false;
+  };
+
+  const smoothZoomTo = (targetPanX, targetPanY, targetZoom, duration = 600) => {
     const startZoom = zoomLevel.current;
     const startPanX = pan.current.x;
     const startPanY = pan.current.y;
-
     const deltaZoom = targetZoom - startZoom;
     const deltaX = targetPanX - startPanX;
     const deltaY = targetPanY - startPanY;
-
     let startTime = null;
 
     const animate = (timestamp) => {
@@ -98,8 +67,7 @@ function COE1stF() {
       zoomLevel.current = startZoom + deltaZoom * ease;
       pan.current.x = startPanX + deltaX * ease;
       pan.current.y = startPanY + deltaY * ease;
-
-      if (window.applyTransform) window.applyTransform();
+      applyTransform();
 
       if (progress < 1) requestAnimationFrame(animate);
     };
@@ -107,33 +75,38 @@ function COE1stF() {
     requestAnimationFrame(animate);
   };
 
-  const zoomToBuilding = (buildingName) => {
-    const target = buildings.find(b => b.name === buildingName);
-    if (!target) return;
-    smoothZoomTo(target.panx, target.pany, target.zoomLevel, 600);
+  const zoomToBuilding = (name) => {
+    const b = buildings.find((b) => b.name === name);
+    if (!b) return;
+    smoothZoomTo(b.panX, b.panY, b.zoom);
   };
 
   const resetView = () => {
-    smoothZoomTo(0, 0, 1, 500);
+    smoothZoomTo(0, 0, 1);
   };
 
   return (
-    <div
-      ref={containerRef}
-      className="fixed inset-0 flex justify-center items-center overflow-hidden select-none cursor-grab bg-white"
-    >
-      <svg
-        ref={svgRef}
-        width="100%"
-        height="100%"
-        viewBox="0 0 645 921"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        style={{
-          transform: 'translate(0px, 0px) scale(1)',
-          transformOrigin: 'center center',
-        }}
+    <div className="flex justify-center items-center overflow-hidden select-none h-screen w-screen">
+      <div
+        ref={containerRef}
+        className="relative overflow-hidden bg-white h-full w-full flex justify-center items-center cursor-grab active:cursor-grabbing"
+        onWheel={handleWheel}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
       >
+    
+
+        <svg
+          ref={svgRef}
+          width="100%"
+          height="100%"
+          viewBox="0 0 645 921"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{ transform: `translate(${pan.current.x}px, ${pan.current.y}px) scale(${zoomLevel.current})`, transformOrigin: "center center" }}
+        >
 <path d="M96.8718 446V476.659M96.8718 899V731.951M33 697.164C37.8265 705.589 45.4059 712.095 54.4644 715.59L96.8718 731.951M96.8718 731.951L96.8718 476.659M96.8718 476.659H283.567M418 476.659H283.567M283.567 610.465V476.659" stroke="#818181" stroke-width="10" stroke-linecap="round"/>
 <path d="M102 614H363" stroke="#818181" stroke-width="8" stroke-linecap="round"/>
 <g filter="url(#filter0_d_11_3463)">
@@ -6558,6 +6531,9 @@ function COE1stF() {
 
   
     </div>
+    
+    </div>
+
   )
 }
 
