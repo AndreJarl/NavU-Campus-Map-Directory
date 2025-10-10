@@ -75,7 +75,7 @@ function COE1stF() {
 
   const buildings = [
     { name: "StudyArea", panx: 939, pany: -1470, zoomLevel: 10 },
-    { name: "COE", panx: 836, pany: -2749, zoomLevel: 10 },
+    { name: "COE", panx: 670, pany: -2103, zoomLevel: 10 },
 
   ];
 
