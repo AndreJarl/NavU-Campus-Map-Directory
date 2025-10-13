@@ -7,9 +7,11 @@ const DraggableZoomableSVG = () => {
   const [viewBox, setViewBox] = useState({ x: 496.4244991553312, y: 605.833617331491, width: 1440, height: 1024 });
   const [scale, setScale] = useState(3);
   const [isDragging, setIsDragging] = useState(false);
-  const [lastMousePos, setLastMousePos] = useState({ x: 0, y: 0 });
-  const [touchStartDistance, setTouchStartDistance] = useState(0);
-  const [touchStartViewBox, setTouchStartViewBox] = useState(null);
+  
+  // Use refs for values that change during drag (won't trigger re-renders)
+  const lastMousePos = useRef({ x: 0, y: 0 });
+  const touchStartDistance = useRef(0);
+  const touchStartViewBox = useRef(null);
 
   // Convert screen coordinates to SVG coordinates
   const screenToSVG = useCallback((screenX, screenY) => {
@@ -75,38 +77,38 @@ const DraggableZoomableSVG = () => {
          }
   }, [buildingCoordinates, zoomToCoordinates])
 
-
-  // Handle mouse down for dragging
+  // OPTIMIZED: Handle mouse down for dragging
   const handleMouseDown = useCallback((e) => {
-    if (e.button !== 0) return; // Only left mouse button
+    if (e.button !== 0) return;
     setIsDragging(true);
-    setLastMousePos({ x: e.clientX, y: e.clientY });
+    lastMousePos.current = { x: e.clientX, y: e.clientY }; // Use ref instead of state
     e.preventDefault();
   }, []);
 
-  // Handle mouse move for dragging
+  // OPTIMIZED: Handle mouse move for dragging - much faster
   const handleMouseMove = useCallback((e) => {
     if (!isDragging) return;
 
-    const deltaX = e.clientX - lastMousePos.x;
-    const deltaY = e.clientY - lastMousePos.y;
+    const deltaX = e.clientX - lastMousePos.current.x;
+    const deltaY = e.clientY - lastMousePos.current.y;
 
-    // Convert pixel delta to SVG coordinate delta
-    const startPoint = screenToSVG(lastMousePos.x, lastMousePos.y);
-    const endPoint = screenToSVG(e.clientX, e.clientY);
+    // Fast calculation using current scale instead of expensive screenToSVG calls
+    const containerRect = containerRef.current.getBoundingClientRect();
+    const scaleX = viewBox.width / containerRect.width;
+    const scaleY = viewBox.height / containerRect.height;
     
-    const svgDeltaX = startPoint.x - endPoint.x;
-    const svgDeltaY = startPoint.y - endPoint.y;
+    const svgDeltaX = deltaX * scaleX;
+    const svgDeltaY = deltaY * scaleY;
 
     setViewBox(prev => ({
       ...prev,
-      x: prev.x + svgDeltaX,
-      y: prev.y + svgDeltaY
+      x: prev.x - svgDeltaX,
+      y: prev.y - svgDeltaY
     }));
 
-    setLastMousePos({ x: e.clientX, y: e.clientY });
+    lastMousePos.current = { x: e.clientX, y: e.clientY };
     e.preventDefault();
-  }, [isDragging, lastMousePos, screenToSVG]);
+  }, [isDragging, viewBox.width, viewBox.height]);
 
   // Handle mouse up for dragging
   const handleMouseUp = useCallback(() => {
@@ -114,7 +116,7 @@ const DraggableZoomableSVG = () => {
     logCoordinates();
   }, [logCoordinates]);
 
-  // Handle wheel for zooming
+  // Handle wheel for zooming (keep original)
   const handleWheel = useCallback((e) => {
     e.preventDefault();
     
@@ -166,50 +168,52 @@ const DraggableZoomableSVG = () => {
     };
   };
 
-  // Handle touch start for mobile
+  // OPTIMIZED: Handle touch start for mobile
   const handleTouchStart = useCallback((e) => {
     if (e.touches.length === 1) {
       // Single touch - start dragging
       setIsDragging(true);
-      setLastMousePos({ x: e.touches[0].clientX, y: e.touches[0].clientY });
+      lastMousePos.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
     } else if (e.touches.length === 2) {
       // Two touches - start pinch to zoom
       setIsDragging(false);
       const distance = getTouchDistance(e.touches[0], e.touches[1]);
-      setTouchStartDistance(distance);
-      setTouchStartViewBox({ ...viewBox, scale });
+      touchStartDistance.current = distance;
+      touchStartViewBox.current = { ...viewBox, scale };
     }
     e.preventDefault();
   }, [viewBox, scale]);
 
-  // Handle touch move for mobile
+  // OPTIMIZED: Handle touch move for mobile
   const handleTouchMove = useCallback((e) => {
     if (e.touches.length === 1 && isDragging) {
-      // Single touch - dragging
+      // Single touch - dragging (optimized)
       const touch = e.touches[0];
-      const deltaX = touch.clientX - lastMousePos.x;
-      const deltaY = touch.clientY - lastMousePos.y;
+      const deltaX = touch.clientX - lastMousePos.current.x;
+      const deltaY = touch.clientY - lastMousePos.current.y;
 
-      const startPoint = screenToSVG(lastMousePos.x, lastMousePos.y);
-      const endPoint = screenToSVG(touch.clientX, touch.clientY);
+      // Fast calculation for touch dragging
+      const containerRect = containerRef.current.getBoundingClientRect();
+      const scaleX = viewBox.width / containerRect.width;
+      const scaleY = viewBox.height / containerRect.height;
       
-      const svgDeltaX = startPoint.x - endPoint.x;
-      const svgDeltaY = startPoint.y - endPoint.y;
+      const svgDeltaX = deltaX * scaleX;
+      const svgDeltaY = deltaY * scaleY;
 
       setViewBox(prev => ({
         ...prev,
-        x: prev.x + svgDeltaX,
-        y: prev.y + svgDeltaY
+        x: prev.x - svgDeltaX,
+        y: prev.y - svgDeltaY
       }));
 
-      setLastMousePos({ x: touch.clientX, y: touch.clientY });
-    } else if (e.touches.length === 2 && touchStartViewBox) {
-      // Two touches - pinch to zoom
+      lastMousePos.current = { x: touch.clientX, y: touch.clientY };
+    } else if (e.touches.length === 2 && touchStartViewBox.current) {
+      // Two touches - pinch to zoom (keep original for accuracy)
       const distance = getTouchDistance(e.touches[0], e.touches[1]);
       const center = getTouchCenter(e.touches[0], e.touches[1]);
       
-      const zoomRatio = distance / touchStartDistance;
-      const newScale = Math.max(0.1, Math.min(10, touchStartViewBox.scale * zoomRatio));
+      const zoomRatio = distance / touchStartDistance.current;
+      const newScale = Math.max(0.1, Math.min(10, touchStartViewBox.current.scale * zoomRatio));
       
       if (newScale !== scale) {
         const rect = containerRef.current.getBoundingClientRect();
@@ -217,13 +221,13 @@ const DraggableZoomableSVG = () => {
         const centerY = center.y - rect.top;
         
         const centerSVG = screenToSVG(centerX, centerY);
-        const zoomRatioScale = newScale / touchStartViewBox.scale;
+        const zoomRatioScale = newScale / touchStartViewBox.current.scale;
         
-        const newWidth = touchStartViewBox.width / zoomRatioScale;
-        const newHeight = touchStartViewBox.height / zoomRatioScale;
+        const newWidth = touchStartViewBox.current.width / zoomRatioScale;
+        const newHeight = touchStartViewBox.current.height / zoomRatioScale;
         
-        const newX = centerSVG.x - (centerSVG.x - touchStartViewBox.x) / zoomRatioScale;
-        const newY = centerSVG.y - (centerSVG.y - touchStartViewBox.y) / zoomRatioScale;
+        const newX = centerSVG.x - (centerSVG.x - touchStartViewBox.current.x) / zoomRatioScale;
+        const newY = centerSVG.y - (centerSVG.y - touchStartViewBox.current.y) / zoomRatioScale;
         
         setScale(newScale);
         setViewBox({
@@ -235,21 +239,21 @@ const DraggableZoomableSVG = () => {
       }
     }
     e.preventDefault();
-  }, [isDragging, lastMousePos, screenToSVG, touchStartDistance, touchStartViewBox, scale]);
+  }, [isDragging, viewBox.width, viewBox.height, scale, screenToSVG]);
 
   // Handle touch end for mobile
   const handleTouchEnd = useCallback((e) => {
     if (e.touches.length === 0) {
       setIsDragging(false);
-      setTouchStartDistance(0);
-      setTouchStartViewBox(null);
+      touchStartDistance.current = 0;
+      touchStartViewBox.current = null;
       logCoordinates();
     } else if (e.touches.length === 1) {
       // Switch from zoom to drag
       setIsDragging(true);
-      setLastMousePos({ x: e.touches[0].clientX, y: e.touches[0].clientY });
-      setTouchStartDistance(0);
-      setTouchStartViewBox(null);
+      lastMousePos.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+      touchStartDistance.current = 0;
+      touchStartViewBox.current = null;
     }
   }, [logCoordinates]);
 
@@ -297,8 +301,6 @@ const DraggableZoomableSVG = () => {
     }));
   }, [scale]);
 
-
-
   return (
     <div 
       ref={containerRef}
@@ -306,9 +308,8 @@ const DraggableZoomableSVG = () => {
       onDoubleClick={handleDoubleClick}
     >
      <Floor1 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} />
+    </div>
+  );
+};
 
-          </div>
-          );
-          };
-
-  export default DraggableZoomableSVG;
+export default DraggableZoomableSVG;
