@@ -2,9 +2,13 @@ import React, { useRef, useState, useCallback, useEffect } from 'react';
 import Floor1 from '../svg/Floor1';
 
 const DraggableZoomableSVG = () => {
+  const floor =1;
   const svgRef = useRef(null);
   const containerRef = useRef(null);
-  const [viewBox, setViewBox] = useState({ x: 496.4244991553312, y: 605.833617331491, width: 1440, height: 1024 });
+  const [viewBox, setViewBox] = useState(
+      floor === 1 ? { x: -9.652425486595943, y:490.26573184397796, width: 1440, height: 1024 } :
+      floor === 2 ? {x: 3, y: 4, width: 1440, height: 1024 } : floor === 3 ? {} :{}
+  );
   const [scale, setScale] = useState(3);
   const [isDragging, setIsDragging] = useState(false);
   
@@ -37,8 +41,9 @@ const DraggableZoomableSVG = () => {
     });
   }, [viewBox, scale]);
 
+  
  const buildingCoordinates =[
-     {COE: {x: 733.452167502955, y: 808.7221821594258, zoom: 10},
+     {COE: {x: 223.71365113209748, y: 687.793026800932, zoom: 10},
       CEAS: {x:607.4988593974863 , y:805.3215473938008 , zoom:10}
     }
  ]

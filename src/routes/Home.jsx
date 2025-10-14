@@ -1,4 +1,4 @@
-import Map from "../routes/Map";
+import Map from "./Map2";
 
 function Home() {
   return (

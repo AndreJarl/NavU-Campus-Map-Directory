@@ -13,6 +13,7 @@ function Categories({ category, setCategory }) {
     { id: "Room", label: "Room", icon: "🏫" },
     { id: "Laboratory", label: "Laboratory", icon: "🔬" },
     { id: "Food", label: "Food", icon: "🍴" },
+    { id: "Faculty", label: "Faculty", icon: "🧑‍🏫" },
   ];
     
 const handleClick = (cat) => {
@@ -48,13 +49,13 @@ const handleClick = (cat) => {
   };
 
   return (
-    <div className="absolute top-4 left-1/2 -translate-x-[30%] flex gap-3 z-50">
+    <div className="absolute top-10 lg:top-4 lg:left-1/2 -translate-x-[30%] flex gap-3 z-50">
       {categories.map((cat) => (
          
         <button
           key={cat.id}
           onClick={() => handleClick(cat.label)}
-          className={`flex items-center gap-2 px-4 py-1 rounded-full ${activeCategory === cat.label ? "bg-red-700/60" : "bg-black/40"}
+          className={`flex items-center gap-2 px-4 py-1 rounded-full ${activeCategory === cat.label ? "bg-red-700/60" : "bg-black/70"}
          backdrop-blur-md border border-white/10
             shadow-lg transition`}
         >

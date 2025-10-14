@@ -1,10 +1,7 @@
 import React from 'react'
-import COE1stF from '../buildings/coe/COE1stF'
-import COE2ndF from '../buildings/coe/COE2ndF'
-import COE3rdF from '../buildings/coe/COE3rdF';
-import NewAD1stf from '../buildings/new-admin/NewAD1stf';
-import enlab1 from "../buildings/coe/rooms/CELAB01.jpg"
-import enlab2 from "../buildings/coe/rooms/CELAB02.jpg"
+import enlab1 from "../assets/rooms/coe/CELAB01.jpg"
+import enlab2 from "../assets/rooms/coe/CELAB02.jpg"
+
 const buildingData = {
  'College of Engineering Building': {
   totalFloors: 3,
@@ -69,11 +66,6 @@ const buildingData = {
         img: "/images/coe/electronics_lab.jpg"
       }
     ],
-  },
-  floorImages: {
-    1: <COE1stF />,
-    2: <COE2ndF />,
-    3: <COE3rdF />
   }
 },
 
@@ -136,9 +128,6 @@ const buildingData = {
     'Old Admin Building': 2,
     'New Admin Building': {
       totalFloors: 3, // Updated total floors
-      floorImages: {
-        1: <NewAD1stf />,
-      }
     },
     'Student Activity Center': 1,
     'Fitness Gym': 1,
