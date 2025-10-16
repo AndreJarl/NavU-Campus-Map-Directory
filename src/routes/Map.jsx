@@ -20,6 +20,15 @@ function Map() {
           const [searchTerm, setSearchTerm]= useState("");
           const [suggestions, setSuggestions] = useState([]);
           const [showMenu, setShowMenu] = useState(false);
+                    const [disable, setDisable] = useState(false);
+
+          const [showPopup, setShowPopup] = useState(false);
+          const {currentFloor, setCurrentFloor} = useFloorQuery();
+
+          const [roomClicked, setRoomClicked] = useState(false);
+          const [roomSearched, setRoomSearched] = useState(false);
+          const [bldCliked, setBldClicked] = useState(false);
+    
 
         const [category, setCategory] = useState({
           Restroom: false,
@@ -29,16 +38,6 @@ function Map() {
           Food: false
         });
 
-
-         const [roomClicked, setRoomClicked] = useState(false);
-          const [roomSearched, setRoomSearched] = useState(false);
-          const [bldCliked, setBldClicked] = useState(false);
-    
-    
-          const [cardData, setCardData] = useState(null);
-          const [cardPosition, setCardPosition] = useState({ x: 0, y: 0 });
-          const [disable, setDisable] = useState(false);
-          const [survey, setSurvey] = useState(false);
 
 
 
@@ -83,35 +82,41 @@ function Map() {
            
      }
     
-     const handleSuggestionClicked = (suggestions) =>{
-      console.log(suggestions);
-          setQuery(prev => ({
-      ...prev,
-      building: suggestions.building || prev.building,
-      floor: suggestions.floor || prev.floor,  // ✅ store floor at top-level
-      room: {
-        name: suggestions.room?.name || prev.room?.name,
-        code: suggestions.room?.code || prev.room?.code,
-        img: suggestions.room?.img || prev.room?.img,
-        description: suggestions.room?.description || prev.room?.description,
-      }
-    }));
-    
-        if(!suggestions.room){
-         
-             setShowPopup(true);
-             setRoomSearched(false);
-        }
-        if(suggestions.room){
+    const handleSuggestionClicked = (suggestion) => {
+  console.log(`suggestion:`);
+   console.log(suggestion);
+  setQuery(prev => ({
+    ...prev,
+    building: suggestion.building || prev.building,
+    floor: suggestion.floor || prev.floor,
+    room: {
+      name: suggestion.room?.name || prev.room?.name,
+      code: suggestion.room?.code || prev.room?.code,
+      img: suggestion.room?.img || prev.room?.img,
+      description: suggestion.room?.description || prev.room?.description,
+    }
+  }));
+
+  // Reset all view states first
+
+
+     if(suggestion.room){
          setRoomSearched(true);
         }
-              setSearchTerm("");  
-              setSuggestions([]);
-             
-              console.log(query);
-             setDisable(true);
-              
-     }
+
+      // Set the appropriate state based on suggestion type
+      if (!suggestion.room) {
+        // Building-level search - show building overview
+        setBldClicked(true);  // This is what controls BldOverview rendering
+      }
+  
+  setSearchTerm("");  
+  setSuggestions([]);
+  setDisable(true);
+  console.log("query");
+   console.log(query);
+
+}
     
      const handleOpenPopup = (buildingName) =>{
           if(isDragging == false){
@@ -126,15 +131,9 @@ function Map() {
           }
      }
     
-     const OpenCard = (e, buildingName) =>{
-          setRoomSearched(false);
-           if(isDragging == false){
-              setQuery(prev => ({
-          ...prev,
-          building: buildingName   // only update building
-        }));
-        setBldClicked(true);
-      }
+     const OpenCard = (buildingName, buildingType) =>{
+              
+      
      }
 
 
@@ -142,12 +141,13 @@ function Map() {
 
     <div>
 
-            <DraggableZoomableSVG/>          
+            <DraggableZoomableSVG OpenCard={OpenCard}/>          
              <Categories categories={category} setCategory={setCategory} />
             
             <PanoramaViewer />
-            
-            <SearchBar searchTerm={searchTerm} suggestions={suggestions}  handleSearch={handleSearch} handleSuggestionClicked={handleSuggestionClicked} />
+
+                        <SearchBar searchTerm={searchTerm} suggestions={suggestions}  handleSearch={handleSearch} handleSuggestionClicked={handleSuggestionClicked} />
+
 
             { roomSearched  && (
             <>
@@ -173,6 +173,8 @@ function Map() {
                 </>
            )
 }
+
+
     </div>
   )
 }

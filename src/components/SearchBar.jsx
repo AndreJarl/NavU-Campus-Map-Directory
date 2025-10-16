@@ -14,7 +14,7 @@ import { useState } from "react";
 function SearchBar({searchTerm, suggestions, handleSearch, handleSuggestionClicked}) {
 
   return (
-  <div className="fixed top-3 right lg:left-4 2xl:left-36 2xl:top-6 px-2 z-50">
+  <div className="fixed top-3 right lg:left-4 2xl:left-36 2xl:top-6 px-2 z-[1000]">
   {/* 🔎 Main Search Bar */}
   <div
     className={`z-50 w-[300px] lg:w-[360px] 2xl:w-[400px] px-5 flex flex-row items-center justify-center

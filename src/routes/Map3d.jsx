@@ -239,7 +239,9 @@ const zoomToBuilding = (building) => {
         if(!suggestions.room){
          
              setShowPopup(true);
+            
              setRoomSearched(false);
+
         }
         if(suggestions.room){
          setRoomSearched(true);

@@ -1,7 +1,7 @@
 import React, { useRef, useState, useCallback, useEffect } from 'react';
 import Floor1 from '../svg/Floor1';
 
-const DraggableZoomableSVG = () => {
+const DraggableZoomableSVG = ({OpenCard}) => {
   const floor =1;
   const svgRef = useRef(null);
   const containerRef = useRef(null);
@@ -43,11 +43,11 @@ const DraggableZoomableSVG = () => {
 
   
  const buildingCoordinates =[
-     {COE: {x: 223.71365113209748, y: 687.793026800932, zoom: 10},
+     {"College of Engineering": {x: 223.71365113209748, y: 687.793026800932, zoom: 10},
       CEAS: {x:607.4988593974863 , y:805.3215473938008 , zoom:10}
     }
  ]
-
+""
   // Programmatic zoom to specific coordinates
   const zoomToCoordinates = useCallback((targetX, targetY, targetScale) => {
     const newScale = Math.max(0.1, Math.min(10, targetScale));
@@ -309,10 +309,10 @@ const DraggableZoomableSVG = () => {
   return (
     <div 
       ref={containerRef}
-      className="w-full h-screen bg-white overflow-hidden cursor-grab active:cursor-grabbing touch-none"
+      className="w-full h-screen bg-white overflow-hidden cursor-grab  active:cursor-grabbing  touch-none"
       onDoubleClick={handleDoubleClick}
     >
-     <Floor1 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} />
+     <Floor1 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
     </div>
   );
 };
