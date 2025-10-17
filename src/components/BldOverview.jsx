@@ -30,7 +30,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
       {/* Card */}
       <div
         className={`${
-          buildingDatas ? "fixed left-4 top-16" : "hidden"
+          buildingDatas ? "fixed left-4 top-20" : "hidden"
         } z-40 flex flex-col rounded-2xl border border-white/20 
         w-[360px] lg:w-[450px] 2xl:w-[560px] h-[85%] 
         bg-black/80 backdrop-blur-md shadow-2xl 

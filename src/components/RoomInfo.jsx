@@ -2,16 +2,22 @@ import { AiOutlineClose } from "react-icons/ai";
 import { useQuery } from "../context/QueryContext";
 import { CornerUpRight } from "lucide-react";
 import buildingData from "../data/buildingData"
+import { usePath } from "../context/PathContext";
 
-function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setDisable, disable }) {
+function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setDisable, disable, }) {
   const { query } = useQuery();
   const { room, floor } = query; 
+  const {path, setPath} = usePath();
 
-  const handleDirections = () => {
-    setRoomSearched(false);
-    setShowPopup(true);
-    console.log(query);
+  const handleDirections = (roomName) => {
+     setPath(roomName);
   };
+
+  const closeBtn = () =>{
+        setRoomSearched(false);
+        setPath("")
+        setDisable(false);
+  }
 
 
   return (
@@ -20,21 +26,18 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
 
       {/* Your existing card */}
      <div
-  className={`${roomSearched ? "absolute left-4 top-16" : "hidden"} w-[450px] my-4 h-[85%] rounded-2xl   backdrop-blur-lg 
+  className={`${roomSearched ? "absolute left-8 top-20 z-50"   : "hidden"} w-[420px] my-4 h-[80%] rounded-2xl   backdrop-blur-lg 
   bg-black/70 
   border 
   border-white/20 
   
   shadow-md p-2 transform transition-transform 
-  ease-in-out duration-700 z-50 flex flex-col`}
+  ease-in-out duration-700  flex flex-col`}
 >
   {/* Close Button */}
   <div className="p-4 pt-3 top-0 absolute right-0 flex justify-between items-center z-50">
     <button
-      onClick={() => {
-        setRoomSearched(false);
-        setDisable(false);
-      }}
+      onClick={closeBtn}
       className="rounded-full bg-red-500 hover:bg-red-700 font-bold text-xl flex gap-2 items-center text-white px-2 py-2"
     >
       <AiOutlineClose />
@@ -60,7 +63,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
   <div className="border-t border-white/20 pt-4 mx-5">
     <button
       className="py-3 px-6 bg-red-500 flex gap-3 text-white rounded-3xl justify-center hover:bg-red-600 transition"
-      onClick={handleDirections}
+      onClick={()=>handleDirections(room.name)}
     >
       <CornerUpRight /> Get Directions
     </button>

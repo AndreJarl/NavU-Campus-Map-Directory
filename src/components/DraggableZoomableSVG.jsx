@@ -43,8 +43,8 @@ const DraggableZoomableSVG = ({OpenCard}) => {
 
   
  const buildingCoordinates =[
-     {"College of Engineering": {x: 223.71365113209748, y: 687.793026800932, zoom: 10},
-      CEAS: {x:607.4988593974863 , y:805.3215473938008 , zoom:10}
+     {"College of Engineering Building": {x: 223.71365113209748, y: 687.793026800932, zoom: 10},
+      "Civil Engineering Lab 1": {x: 235.31365113209748 , y:689.6823256939209 , zoom:10}
     }
  ]
 ""

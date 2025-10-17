@@ -15,7 +15,7 @@ const buildingData = {
       },
       { 
         code: "EN-LAB2", 
-        name: "Civil Engineering Lab 2",
+        name: "Electrical Engineering Laboratory",
         description: "Advanced engineering lab for specialized equipment and testing.",
         img: enlab2
       },

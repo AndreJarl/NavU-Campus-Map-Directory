@@ -5,13 +5,16 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { QueryProvider } from './context/QueryContext.jsx'
 import {FloorProvider} from "./context/FloorContext.jsx"
+import { PathProvider } from './context/PathContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
     <QueryProvider>
        <FloorProvider>
-      <App />
+        <PathProvider>
+                 <App />
+      </PathProvider>
       </FloorProvider>
      </QueryProvider>
     </BrowserRouter>
