@@ -48,7 +48,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
       "Education Building" : {x:98.92186333708202, y:685.2400273912788, zoom: 10}
     }
  ]
-""
+
   // Programmatic zoom to specific coordinates
   const zoomToCoordinates = useCallback((targetX, targetY, targetScale) => {
     const newScale = Math.max(0.1, Math.min(10, targetScale));

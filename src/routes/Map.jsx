@@ -104,6 +104,7 @@ function Map() {
 
      if(suggestion.room){
          setRoomSearched(true);
+         
         }
 
       // Set the appropriate state based on suggestion type
