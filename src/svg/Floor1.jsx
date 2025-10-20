@@ -521,7 +521,7 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard  }, ref) => 
   <path opacity={path === "COE Computer Laboratoy 1" ? "1" : 0 } stroke="red" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="m200.501 727.275-.001-.998c-.001-1.106.895-2.002 2-2.002h41.039c1.105 0 2-.896 2-2v-91.04c0-.806.654-1.46 1.461-1.46"/>
   
   {/* PATH TO CIVIL ENGINEERING LABBBB */}
-  <path id='pulse-path' opacity={path === "Civil Engineering Lab 1" ? "1" : 0 } stroke="red" stroke-linecap="round" stroke-opacity=".5"  stroke-width="1.5" d="m200.503 727.274-.001-.998c-.001-1.105.895-2.002 2-2.002h40.999c1.104 0 2-.895 2-2v-48.003c0-.827.671-1.498 1.499-1.497"/>
+  <path id='grow-path' opacity={path === "Civil Engineering Lab 1" ? "1" : 0 } stroke="red" stroke-linecap="round" stroke-opacity=".5"  stroke-width="1.5" d="m200.503 727.274-.001-.998c-.001-1.105.895-2.002 2-2.002h40.999c1.104 0 2-.895 2-2v-48.003c0-.827.671-1.498 1.499-1.497"/>
   
   {/* EDTECH Lab 1 path */}
   <path opacity={path === "EDTECH Lab 1" ? "1" : 0 } stroke="red" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="m200.503 727.275-.001-.998c-.001-1.105.895-2.002 2-2.002h40.999c1.104 0 2-.895 2-2v-65.002c0-1.105-.896-2-2-2H202.5c-1.105 0-2-.896-2-2v-6.502c0-1.105.895-2 2-2h.5"/>
@@ -536,7 +536,7 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard  }, ref) => 
   <path opacity={path === "Room 12 near BISTRO" ? "1" : 0 } stroke="red" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="m200.503 727.276-.001-.998c-.001-1.106.895-2.002 2-2.002h40.999c1.104 0 2-.896 2-2v-65.003c0-1.104-.896-2-2-2H202.5c-1.105 0-2-.895-2-2v-77.004c0-1.105.895-2 2-2h.5"/>
   
   {/* PATH TO ELECTRICAL ENGINEERING LAB */}
-  <path id='pulse-path' opacity={path === "Electrical Engineering Laboratory" ? "1" : 0 }  stroke="red" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="m200.502 727.273-.001-.998c-.001-1.105.895-2.002 2-2.002H243.5c1.104 0 2-.896 2-2l-.001-31c0-.828.672-1.5 1.5-1.5"/>
+  <path id='grow-path' opacity={path === "Electrical Engineering Laboratory" ? "1" : 0 }  stroke="red" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="m200.502 727.273-.001-.998c-.001-1.105.895-2.002 2-2.002H243.5c1.104 0 2-.896 2-2l-.001-31c0-.828.672-1.5 1.5-1.5"/>
   
   {/* COE CR path */}
   <path opacity={path === "COE CR" ? "1" : 0 } stroke="red" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="m200.504 727.274-.001-.998c-.002-1.105.894-2.002 2-2.002h40.999c1.104 0 1.999-.895 2-2v-6.501c0-1.105.896-2 2-2H249c1.104 0 2-.895 2-2"/>

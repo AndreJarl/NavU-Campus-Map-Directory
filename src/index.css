@@ -90,6 +90,22 @@ body{
   animation: pulse 1.5s ease-in-out infinite;
 }
 
+#grow-path {
+stroke-dasharray: 6 3;
+/* 10px visible dash, 5px gap — repeat pattern */
+  stroke-dashoffset: 0;
+  animation: footsteps 3.5s linear infinite;
+}
+
+@keyframes footsteps {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -30; /* move pattern forward smoothly */
+  }
+}
+
 /* 🔹 Create glowing or fading pulse effect */
 @keyframes pulse {
   0% {
@@ -105,3 +121,12 @@ body{
     stroke-width: 1.5;
   }
 }
+
+  @keyframes grow {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
