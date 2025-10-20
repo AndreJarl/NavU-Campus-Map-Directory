@@ -15,7 +15,7 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard  }, ref) => 
 
   return (
       <>
-        
+        {/* pia flor gwapa */}
     
 <svg
   ref={ref}
@@ -49,6 +49,7 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard  }, ref) => 
   <path fill="#d9d9d9" d="M241.062 646.043h33v18h-33z"/>
   <path fill="#d9d9d9" d="M111.062 646.043h33v18h-33z"/>
   <path fill="#d9d9d9" d="M143.062 672.043h6v18h-6z"/>
+
   <path onClick={()=>bldClicked("College of Engineering Building")} style={{cursor:"pointer"}} fill="#d9d9d9" d="M236.062 672.043h6v18h-6z"/>
   <path fill="#d9d9d9" d="M240.062 614.043h2v14h-2z"/>
   <path fill="#d9d9d9" d="M143.062 614.043h2v14h-2z"/>
