@@ -16,6 +16,7 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard  }, ref) => 
   return (
       <>
         {/* pia flor gwapa 2 */}
+        {/* pia commit 2 */}
     
 <svg
   ref={ref}
