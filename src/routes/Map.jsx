@@ -17,11 +17,13 @@ import PanoramaViewer from '../components/PanoramaViewer';
 function Map() {
 
       const {query, setQuery} = useQuery();
+      
+
 
           const [searchTerm, setSearchTerm]= useState("");
           const [suggestions, setSuggestions] = useState([]);
           const [showMenu, setShowMenu] = useState(false);
-                    const [disable, setDisable] = useState(false);
+          const [disable, setDisable] = useState(false);
 
           const [showPopup, setShowPopup] = useState(false);
           const {currentFloor, setCurrentFloor} = useFloorQuery();
@@ -31,17 +33,13 @@ function Map() {
           const [bldCliked, setBldClicked] = useState(false);
     
 
-        const [category, setCategory] = useState({
-          Restroom: false,
-          Sports: false,
-          Room: false,
-          Laboratory: false,
-          Food: false
-        });
+
+       
+
 
         useEffect(() => {
-  console.log("Query updated:", query);
-}, [query]);
+        console.log("Query updated:", query);
+      }, [query]);
 
 
 
@@ -194,7 +192,7 @@ const OpenCard = (clickedName) => {
     <div>
 
             <DraggableZoomableSVG OpenCard={OpenCard}/>          
-             <Categories categories={category} setCategory={setCategory} />
+             <Categories />
             
             <PanoramaViewer />
 

@@ -100,7 +100,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
          
 
           {/* Rooms List */}
-          <div className="pt-10 pb-4 rounded-b-2xl bg-white/20 px-4 space-y-3">
+          <div className="pt-10 pb-7  bg-white/20 px-4 space-y-3">
             {rooms && rooms[selectedFloor] ? (
               rooms[selectedFloor].map((room, index) => (
                 <div    onClick={() => {

@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { QueryProvider } from './context/QueryContext.jsx'
 import {FloorProvider} from "./context/FloorContext.jsx"
 import { PathProvider } from './context/PathContext.jsx'
+import { CategoryProvider } from './context/CategoryContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -13,7 +14,9 @@ createRoot(document.getElementById('root')).render(
     <QueryProvider>
        <FloorProvider>
         <PathProvider>
-                 <App />
+          <CategoryProvider>
+                  <App />
+           </CategoryProvider>
       </PathProvider>
       </FloorProvider>
      </QueryProvider>

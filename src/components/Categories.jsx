@@ -1,9 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
+import { useCategory } from '../context/CategoryContext';
 
 
-function Categories({ category, setCategory }) {
-
+function Categories() {
+    const {category, setCategory} = useCategory();
+    
     const [activeCategory, setActiveCategory] = useState(""); // stores only one active category
 
 
@@ -19,7 +21,7 @@ function Categories({ category, setCategory }) {
 const handleClick = (cat) => {
   setCategory((prev) => {
     const isCurrentlyActive = prev[cat];
-
+   
     // Reset all categories to false
     const reset = Object.keys(prev).reduce(
       (acc, key) => ({ ...acc, [key]: false }),
@@ -32,9 +34,11 @@ const handleClick = (cat) => {
     } else {
       setActiveCategory(cat);
     }
+     console.log(category);
 
     // Toggle the clicked category
     return { ...reset, [cat]: !isCurrentlyActive };
+   
   });
 };
 

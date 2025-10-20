@@ -10,7 +10,9 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
   const {path, setPath} = usePath();
 
   const handleDirections = (roomName) => {
+   
      setPath(roomName);
+     console.log(roomName);
   };
 
   const closeBtn = () =>{

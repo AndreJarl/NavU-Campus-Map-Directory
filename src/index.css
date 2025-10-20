@@ -4,10 +4,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* For Webkit browsers */
-::-webkit-scrollbar {
-    display: none;
+/* Add to your global CSS */
+svg {
+  transform: translateZ(0); /* Force GPU acceleration */
+  backface-visibility: hidden;
+  perspective: 1000;
 }
+
+html {
+  scrollbar-gutter: stable; /* prevents scrollbar from overlapping content */
+}
+
+/* For WebKit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* slightly thicker for smoother look */
+}
+
+::-webkit-scrollbar-track {
+
+ 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4); /* light thumb for contrast */
+  border-radius: 10px; /* makes the thumb rounded */
+  border: 2px solid transparent; /* space around the thumb for better shape */
+  background-clip: content-box; /* ensures border spacing shows through */
+   height: 20%;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.6); /* lighter on hover */
+}
+
+
 
 body{
    font-family: Inter;

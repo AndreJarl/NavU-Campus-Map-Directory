@@ -44,7 +44,8 @@ const DraggableZoomableSVG = ({OpenCard}) => {
   
  const buildingCoordinates =[
      {"College of Engineering Building": {x: 223.71365113209748, y: 687.793026800932, zoom: 10},
-      "Civil Engineering Lab 1": {x: 235.31365113209748 , y:689.6823256939209 , zoom:10}
+      "Civil Engineering Lab 1": {x: 235.31365113209748 , y:689.6823256939209 , zoom:10},
+      "Education Building" : {x:98.92186333708202, y:685.2400273912788, zoom: 10}
     }
  ]
 ""
@@ -262,12 +263,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
     }
   }, [logCoordinates]);
 
-  // Reset zoom and position
-  const handleDoubleClick = useCallback(() => {
-    setScale(1);
-    setViewBox({ x: 0, y: 0, width: 1440, height: 1024 });
-    console.log('Reset to default view');
-  }, []);
+
 
   // Add event listeners
   useEffect(() => {
@@ -310,7 +306,6 @@ const DraggableZoomableSVG = ({OpenCard}) => {
     <div 
       ref={containerRef}
       className="w-full h-screen bg-white overflow-hidden cursor-grab  active:cursor-grabbing  touch-none"
-      onDoubleClick={handleDoubleClick}
     >
      <Floor1 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
     </div>
