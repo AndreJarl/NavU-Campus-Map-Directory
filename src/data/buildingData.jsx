@@ -197,8 +197,146 @@ const buildingData = {
   }
       
     },
-    'Graduate School Building': 4,
-    'Bistro': 1,
+    'Graduate School Building': {
+      totalFloors: 4,
+      rooms:{
+    1:[
+    {
+     code:"",
+     name:" ",
+     description: " ",
+     img: ""
+     },
+    {
+     code:"",
+     name:" ",
+    description: " ",
+    img: ""
+    },
+    {
+    code:"",
+     name:" ",
+    description: " ",
+    img: ""
+    },
+    {
+    code:"",
+    name:" ",
+    description: " ",
+    img: ""
+    },
+    {
+     code:"",
+     name:" ",
+    description: " ",
+    img: ""
+    }
+    ],
+    2:[
+      {
+      code:"",
+      name:" ",
+      description: " ",
+      img: ""
+
+      },
+      {
+    code:"",
+     name:" ",
+    description: " ",
+    img: ""
+     },
+      {
+     code:"",
+    name:" ",
+    description: " ",
+    img: ""
+    },
+      {
+     code:"",
+     name:" ",
+     description: " ",
+     img: ""
+    }
+    ],
+    3:
+    [
+      {
+        code:"",
+        name:" ",
+        description: " ",
+        img: ""
+ },
+      {
+        code:"",
+        name:" ",
+        description: " ",
+        img: ""
+},
+      {
+code:"",
+name:" ",
+description: " ",
+img: ""
+      },
+      {
+code:"",
+name:" ",
+description: " ",
+img: ""
+      },
+       {
+    code:"",
+    name:" ",
+    description: " ",
+    img: ""
+    }
+    ],
+    4:[
+    {
+     code:"",
+name:" ",
+description: " ",
+img: ""
+},
+    {
+     code:"",
+name:" ",
+description: " ",
+img: ""
+    },
+    {
+     code:"",
+name:" ",
+description: " ",
+img: ""
+    },
+    {
+     code:"",
+name:" ",
+description: " ",
+img: ""
+}
+
+],
+
+
+
+      }
+    },
+    'Bistro': {
+      totalFloors: 1,
+      rooms:{
+        1:[
+          {
+            code:"",
+            name:"Bistro ",
+           description: "A small dining area on campus where students and staff can buy and enjoy meals, snacks, and beverages. ",
+           img: ""
+      }
+        ]
+      }
+    },
     'University Canteen': {
 totalFloors: 1,
 rooms:{
@@ -531,25 +669,345 @@ img:" "
 
     },
     'New Admin Building': {
-      totalFloors: 3, // Updated total floors
+      totalFloors: 3, rooms:{
+   1:[
+{
+code:"",
+name:"Accounting Office ",
+description: "The office responsible for managing the school’s financial transactions, including payments, fees, and other accounting records. ",
+img: ""
+},
+{
+code:"",
+name:"MIS Office ",
+description: "The office that handles the school’s data management, computer systems, and network services. ",
+img: ""
+},
+{
+code:"",
+name:"Registrar ",
+description: "The office that manages student records, enrollment, grades, and official school documents. ",
+img: ""
+}, 
+{
+code:"",
+name:"Cashier ",
+description: "The office where students and staff process payments, fees, and other financial transactions. ",
+img: ""
+},
+{
+code:"",
+name:"BAC Office ",
+description: "The office where procurement processes, bidding, and acquisition of school goods and services are managed. ",
+img: ""
+},
+{
+code:"",
+name:"University Clinic ",
+description: "A healthcare facility on campus where students and staff receive medical attention, consultations, and basic health services. ",
+img: ""
+}, 
+{
+code:"",
+name:"Power House ",
+description: "A facility that supplies and manages electricity for the school, ensuring a stable and continuous power supply for all campus operations. ",
+img: ""
+},
+{
+code:"",
+name:" ",
+description: " ",
+img: ""
+}, 
+{
+code:"",
+name:" ",
+description: " ",
+img: ""
+},
+{
+code:"",
+name:" ",
+description: " ",
+img: ""
+},
+{
+code:"",
+name:" ",
+description: " ",
+img: ""
+},
+
+   ], 
+
+2:[
+  {
+code:"",
+name:" ",
+description: " ",
+img: ""
+},
+{
+code:"",
+name:" ",
+description: " ",
+img: ""
+}, 
+{
+code:"",
+name:" ",
+description: " ",
+img: ""
+}
+],
+3:[
+{
+code:"",
+name:" ",
+description: " ",
+img: ""
+}
+
+
+],
+
+
+      }
     },
-    'Student Activity Center': 1,
-    'Fitness Gym': 1,
-    'Sewing Area': 1,
-    'Fablab': 1,
-    'Tennis Court': 1,
-    'Kadasig Gym': 1,
-    'Oval': 1,
-    'Grandstand': 1,
-    'Study Area': 1,
-    'Existing Academic Science Building': 1,
-    'Cultural Center': 1,
-    'Floating Classroom': 1,
-    'CTU Facility Centrum': 2,
-    'HM Laboratory': 1,
-    'Mens Dorm': 1,
-    'Women Dorm': 2,
-    'Furniture Workshop': 1,
+    'Student Activity Center': {
+      totalFloors: 1,
+      rooms:{
+        1:[
+        {
+          code:"SAC",
+          name:"Student Activity Center ",
+          description: "A space where students gather for events, meetings, recreational activities, and extracurricular programs. ",
+          img: ""
+       }
+
+        ]
+      }
+    },
+    'Fitness Gym': {
+      totalFloors:1,
+      rooms:{
+        1:[
+          {
+      code:"",
+      name:"Fitness Gym ",
+      description: "A facility equipped with exercise machines and workout areas where students and staff can engage in physical fitness and training activities. ",
+       img: ""
+          }
+        ]
+      }
+    },
+    'Sewing Area': {
+      totalFloors:1,rooms:{
+        1:[
+          {
+      code:"",
+      name:"Sewing Area ",
+      description: "A workspace equipped with sewing machines, fabrics, and tools where students practice garment making and textile projects. ",
+       img: ""
+          }
+        ]
+      }
+    },
+    'Fablab': {
+      totalFloors:1,rooms:{
+        1:[
+          {
+      code:"",
+      name:"Fablab ",
+      description: "A fabrication laboratory equipped with tools and machines like 3D printers, laser cutters, and CNC machines where students create prototypes and innovative projects.",
+      img: ""
+          }
+        ]
+      }
+    },
+    'Tennis Court': {
+      totalFloors: 1, rooms:{
+        1:[
+          {
+            code:"",
+      name:"Tennis Court ",
+      description: "An outdoor sports area with marked courts and nets where students and staff can play tennis and practice related skills. ",
+      img: "" 
+          }
+        ]
+      }
+    },
+    'Kadasig Gym': {
+      totalFloors: 1, rooms:{
+        1:[
+          {
+            code:"",
+       name:"Kadasig Gym ",
+       description: "A gymnasium where students participate in sports, physical education classes, and school events, equipped with courts and seating areas. ",
+       img: ""
+          }
+        ]
+      }
+    },
+    'Oval': {
+      totalFloors: 1, rooms:{
+        1:[
+          {
+    code:"", 
+     name:"Oval ",
+     description: "An open field or track area used for sports, physical activities, and outdoor events. ",
+     img: ""
+
+        }
+      ]
+      }
+    },
+    'Grandstand': {
+      totalFloors:1, rooms:{
+        1:[
+          {
+      code:"",
+      name:"Grandstand ",
+      description: "A seating structure near sports fields where students and spectators can watch athletic events and other outdoor activities. ",
+      img: ""
+
+          }
+        ]
+      }
+    },
+    'Study Area': {
+      totalFloors:1, rooms:{
+        1:[
+          {
+      code:"",
+      name:"Study Area ",
+      description: "A quiet space where students can read, research, and complete assignments individually or in small groups. ",
+      img: ""
+          }
+        ]
+      }
+    },
+    'Existing Academic Science Building': {
+      totalFloors:1, rooms:{
+        1:[
+          {
+    code:"",
+     name:"Academic Science Building ",
+     description: "A facility housing classrooms and laboratories where students conduct lessons and experiments in various science subjects. ",
+     img: ""
+          }
+        ]
+      }
+    },
+    'Cultural Center': {
+      totalFloors:1,
+      rooms:{
+     1:[
+      {
+    code:"",
+    name:"Cultural Center ",
+     description: "A venue for promoting arts, traditions, and cultural activities, hosting performances, exhibits, and community events. ",
+     img: ""
+      }
+     ]
+      }
+    },
+    'Floating Classroom': {
+      totalFloors: 1,
+      rooms:{
+        1:[
+          {
+    code:"",
+    name:"Floating Classroom",
+    description: "A unique learning space where students engage in lessons and activities. ",
+    img: ""
+          }
+        ]
+      }
+    },
+    'CTU Facility Centrum': {
+      totalFloors: 2,
+      rooms:{
+        1:[
+          {
+        code:"",
+        name:" ",
+        description: " ",
+        img: ""
+          }
+        ],
+        2:[
+          {
+      code:"",
+      name:" ",
+      description: " ",
+      img: ""
+          }
+        ]
+      }
+    },
+    'HM Laboratory': {
+      totalFloors:1,
+      rooms:{
+        1:[
+          {
+          code:"",
+          name:"HM Laboratory ",
+          description: "A practical room where students learn and practice household management skills such as cooking, cleaning, and basic home organization. ",
+          img: ""
+}
+        ]
+      }
+    },
+    'Mens Dorm': {
+      totalFloors: 1,
+      rooms:{
+        1:[
+          {
+    code:"",
+     name:"Men's Dorm ",
+     description: "A residential building where male students live, providing beds, study areas, and basic amenities for daily living. ",
+     img: ""
+          }
+        ]
+      }
+    },
+    'Womens Dorm': {
+      totalFloors:2,
+      rooms:{
+        1:[
+          {
+     code:"",
+     name:" ",
+     description: " ",
+     img: ""
+          }
+        ],
+        2:[
+         {
+      code:"",
+      name:" ",
+      description: " ",
+      img: ""
+         }
+        ]
+      }
+    },
+    'Furniture Workshop': {
+      totalFloors:1, 
+      rooms:{
+      1:[
+
+{
+code:"",
+name:"Furniture Workshop ",
+description: "A practical workspace equipped with woodworking tools and materials where students design, build, and finish furniture pieces. ",
+img: ""
+}
+
+      ]
+      }
+    },
     'Security Office': {
       totalFloors: 1, 
       rooms:{
