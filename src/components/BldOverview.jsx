@@ -3,12 +3,15 @@ import { AiOutlineClose } from "react-icons/ai";
 import cardData from "../data/CardData";
 import { Building2, Signpost } from "lucide-react";
 import buildingData from "../data/buildingData";
+import { usePath } from "../context/PathContext";
 
 
 
 function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomSearched }) {
   const buildingDatas = cardData[query.building];
   const rooms = buildingData?.[query.building]?.rooms;
+  const {setPath} = usePath();
+ 
 
   const [selectedFloor, setSelectedFloor] = useState(
     rooms ? Object.keys(rooms)[0] : null
@@ -16,12 +19,9 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
 
   const CloseCard = () => {
     setBldClicked(false);
+    setPath("");
   };
 
-  const clickedViewBtn = () => {
-    setBldClicked(false);
-    handleOpenPopup(query.building);
-  };
 
 
     
@@ -32,7 +32,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
         className={`${
           buildingDatas ? "fixed left-4 top-20" : "hidden"
         } z-40 flex flex-col rounded-2xl border border-white/20 
-        w-[360px] lg:w-[450px] 2xl:w-[560px] h-[85%] 
+        w-[360px] lg:w-[450px] 2xl:w-[450px] h-[85%] 
         bg-black/80 backdrop-blur-md shadow-2xl 
         transform transition-transform ease-in-out duration-700`}
       >
@@ -74,7 +74,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
                            text-white font-semibold px-4 py-2 text-sm lg:text-base 
                            rounded-xl shadow-md transition duration-200 w-fit 
                            backdrop-blur-md border border-white/20"
-                onClick={clickedViewBtn}
+                onClick={()=>setPath(query.building)}
               >
                 <Signpost /> Get Directions
               </button>
@@ -116,6 +116,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
                           },
                         }));
                         setRoomSearched(true);
+                        setBldClicked(false)
                       }}
                   key={index}
                   className="p-4 cursor-pointer bg-white/10 rounded-lg hover:bg-white/20 transition shadow-md"

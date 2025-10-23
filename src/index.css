@@ -130,3 +130,24 @@ stroke-dasharray: 6 3;
       width: 100%;
     }
   }
+
+.floating-element {
+  animation: floatJump 2s ease-in-out infinite;
+  transform-box: fill-box; /* This helps with consistent animation */
+  transform-origin: center;
+}
+
+@keyframes floatJump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+  75% {
+    transform: translateY(-2px);
+  }
+}

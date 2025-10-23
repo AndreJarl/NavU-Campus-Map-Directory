@@ -4,10 +4,11 @@ import { CornerUpRight } from "lucide-react";
 import buildingData from "../data/buildingData"
 import { usePath } from "../context/PathContext";
 
-function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setDisable, disable, }) {
+function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setDisable, disable, setBldClicked }) {
   const { query } = useQuery();
-  const { room, floor } = query; 
+  const { room, floor, building } = query; 
   const {path, setPath} = usePath();
+
 
   const handleDirections = (roomName) => {
    
@@ -16,9 +17,12 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
   };
 
   const closeBtn = () =>{
+        setBldClicked(true);
         setRoomSearched(false);
         setPath("")
         setDisable(false);
+      
+        
   }
 
 

@@ -6,7 +6,7 @@ export const CategoryProvider = ({children}) =>{
   const [category, setCategory] = useState({
           Restroom: false,
           Sports: false,
-          Room: false,
+          Admin: false,
           Laboratory: false,
           Food: false
         });

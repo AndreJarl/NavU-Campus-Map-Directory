@@ -11,13 +11,13 @@ const buildingData = {
         code: "", 
         name: "Electrical Engineering Laboratory",
         description: "A specialized room equipped with electrical tools, testing instruments, and training panels where students conduct experiments and practical activities related to circuits, wiring, and power systems.",
-        img:""
+        img:enlab1
       },
       { 
         code: " ", 
         name: "Engineering Laboratory",
         description: "A workspace designed for hands-on experiments and projects across different engineering fields, equipped with tools, machines, and equipment for practical learning and testing.",
-        img: ""
+        img: enlab2
       },
       { 
         code: " ", 

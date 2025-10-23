@@ -12,7 +12,7 @@ function Categories() {
   const categories = [
     { id: "Restroom", label: "Restroom", icon: "🚻" },
     { id: "Sports", label: "Sports", icon: "🏀" },
-    { id: "Room", label: "Room", icon: "🏫" },
+    { id: "Admin", label: "Admin", icon: "👨🏻‍💻" },
     { id: "Laboratory", label: "Laboratory", icon: "🔬" },
     { id: "Food", label: "Food", icon: "🍴" },
     { id: "Faculty", label: "Faculty", icon: "🧑‍🏫" },

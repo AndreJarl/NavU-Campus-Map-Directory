@@ -6,10 +6,10 @@ const DraggableZoomableSVG = ({OpenCard}) => {
   const svgRef = useRef(null);
   const containerRef = useRef(null);
   const [viewBox, setViewBox] = useState(
-      floor === 1 ? { x: -9.652425486595943, y:490.26573184397796, width: 1440, height: 1024 } :
+      floor === 1 ? { x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } :
       floor === 2 ? {x: 3, y: 4, width: 1440, height: 1024 } : floor === 3 ? {} :{}
   );
-  const [scale, setScale] = useState(3);
+  const [scale, setScale] = useState(4.3);
   const [isDragging, setIsDragging] = useState(false);
   
   // Use refs for values that change during drag (won't trigger re-renders)
@@ -44,7 +44,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
   
  const buildingCoordinates =[
      {"College of Engineering Building": {x: 223.71365113209748, y: 687.793026800932, zoom: 10},
-      "Civil Engineering Lab 1": {x: 235.31365113209748 , y:689.6823256939209 , zoom:10},
+      "Engineering Laboratory": {x: 235.31365113209748 , y:689.6823256939209 , zoom:10},
       "Education Building" : {x:98.92186333708202, y:685.2400273912788, zoom: 10}
     }
  ]

@@ -104,6 +104,7 @@ function Map() {
 
      if(suggestion.room){
          setRoomSearched(true);
+          setBldClicked(false);  
          
         }
 
@@ -111,6 +112,7 @@ function Map() {
       if (!suggestion.room) {
         // Building-level search - show building overview
         setBldClicked(true);  // This is what controls BldOverview rendering
+        setRoomSearched(false);
       }
   
   setSearchTerm("");  
@@ -179,9 +181,11 @@ const OpenCard = (clickedName) => {
    
   if(selected.room){
       setRoomSearched(true);
+      setBldClicked(false);
   }
   if(!selected.room){
       setBldClicked(true);
+       setRoomSearched(false);
   }
   console.log(query);
 };
@@ -210,6 +214,7 @@ const OpenCard = (clickedName) => {
                     disable={disable}
                     setDisable={setDisable}
                     bldCliked={bldCliked}
+                    setBldClicked={setBldClicked}
                 /> 
             </>
                 )}
