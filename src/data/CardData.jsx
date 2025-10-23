@@ -22,7 +22,7 @@ const cardData = {
     'Bistro': 1,
     'University Canteen': 1,
     'Stage': 1,
-    'College of Technology/ COT Building': {
+    'College of Technology/COT Building': {
         totalFloors:3,
         img:cotfront
     },

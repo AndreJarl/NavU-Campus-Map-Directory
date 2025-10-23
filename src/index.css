@@ -132,7 +132,7 @@ stroke-dasharray: 6 3;
   }
 
 .floating-element {
-  animation: floatJump 2s ease-in-out infinite;
+  animation: floatJump 3.5s ease-in-out infinite;
   transform-box: fill-box; /* This helps with consistent animation */
   transform-origin: center;
 }

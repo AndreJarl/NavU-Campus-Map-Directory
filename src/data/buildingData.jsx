@@ -353,177 +353,178 @@ img:" "
 
     },
     'Stage': 1,
-    'College of Technology/ COT Building': {
-totalFloors: 2,
-  rooms: {
-    1: [
-      { 
-        code: "Room 26", 
-        name: "Classroom",
-        description: "A learning area where students attend lectures, participate in discussions, and work on academic activities guided by their teachers.",
-        img:""
-      },
-      { 
-        code: "Room 27", 
-        name: "Automation Laboratory",
-        description: "A specialized room equipped with controllers, sensors, and training kits where students learn and practice automation and control system applications. ",
-        img: ""
-      },
-      { 
-        code: "Room 34", 
-        name: "Classroom",
-        description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-        img:" "
-      },
-      { 
-        code: "Room 35", 
-        name: "Classroom",
-        description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-        img: " "
-      },
-      { 
-        
-        code: "Room 36", 
-        name: "Classroom",
-        description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-        img: " "
+
+    'College of Technology/COT Building': {
+      totalFloors: 2,
+        rooms: {
+          1: [
+            { 
+              code: "Room 26", 
+              name: "Classroom",
+              description: "A learning area where students attend lectures, participate in discussions, and work on academic activities guided by their teachers.",
+              img:""
+            },
+            { 
+              code: "Room 27", 
+              name: "Automation Laboratory",
+              description: "A specialized room equipped with controllers, sensors, and training kits where students learn and practice automation and control system applications. ",
+              img: ""
+            },
+            { 
+              code: "Room 34", 
+              name: "Classroom",
+              description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
+              img:" "
+            },
+            { 
+              code: "Room 35", 
+              name: "Classroom",
+              description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
+              img: " "
+            },
+            { 
+              
+              code: "Room 36", 
+              name: "Classroom",
+              description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
+              img: " "
 
 
-      },
-      {        
-        code: "Room 37", 
-        name: "Classroom",
-        description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-        img: " "
+            },
+            {        
+              code: "Room 37", 
+              name: "Classroom",
+              description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
+              img: " "
 
 
-      },
-      {
-        code: " ", 
-        name: "Sanitation Staff Office",
-        description: "A workspace for the sanitation personnel where cleaning materials are stored and daily maintenance tasks are organized.",
-        img: " "
-         },
-         {
-         code:"Room 38",
-          name: "Industrial Motor Control / Electrical Laboratory",
-        description: "A training lab equipped with motors, control panels, and electrical tools where students learn about motor operations, wiring systems, and industrial control applications.",
-        img: " "
+            },
+            {
+              code: " ", 
+              name: "Sanitation Staff Office",
+              description: "A workspace for the sanitation personnel where cleaning materials are stored and daily maintenance tasks are organized.",
+              img: " "
+              },
+              {
+              code:"Room 38",
+                name: "Industrial Motor Control / Electrical Laboratory",
+              description: "A training lab equipped with motors, control panels, and electrical tools where students learn about motor operations, wiring systems, and industrial control applications.",
+              img: " "
 
-         }, 
-         {
-          code:"Room 39",
-          name: "Automation Laboratory 3 / Electronic Laboratory ",
-        description: "A lab equipped with electronic components, circuit boards, and automation kits where students conduct experiments and projects related to electronics and control systems.",
-        img: " "
-
-
-         },
-         {
-          code:"Room 40",
-          name: "Drafting Laboratory",
-          description: "A classroom equipped with drawing tables, computers, and design tools where students create technical drawings and design plans for engineering and architectural projects.",
-           img: " "
-
-         },
-         {
-         code:"Room 41",
-         name: "Motor Control / Electrical & Instrumentation Laboratory ",
-        description: "A specialized lab with equipment for studying motor control systems, electrical wiring, and instrumentation used in monitoring and automation processes.",
-        img: " "
+              }, 
+              {
+                code:"Room 39",
+                name: "Automation Laboratory 3 / Electronic Laboratory ",
+              description: "A lab equipped with electronic components, circuit boards, and automation kits where students conduct experiments and projects related to electronics and control systems.",
+              img: " "
 
 
-         },
-         {
-        
-        code: " ",
-        name: "Computer Laboratory",
-        description: " room equipped with computers and internet access where students learn programming, digital applications, and other computer-related skills. ",
-        img: " "
-        }, 
-        {
-          code:"Room 46",
-          name: " ",
-        description: " ",
-        img: " "
-         },
-         {
-         code:"",
-         name: "Storage Room",
-        description: "A designated area used to store school equipment, tools, and other materials in an organized and secure manner.",
-        img: " "
-                     
-         },
-         {
-        code:"",
-        name: "GAD Office",
-        description: "The Office where programs and activities promoting equality, inclusivity, and student welfare are planned and managed.",
-        img: " "
+              },
+              {
+                code:"Room 40",
+                name: "Drafting Laboratory",
+                description: "A classroom equipped with drawing tables, computers, and design tools where students create technical drawings and design plans for engineering and architectural projects.",
+                img: " "
+
+              },
+              {
+              code:"Room 41",
+              name: "Motor Control / Electrical & Instrumentation Laboratory ",
+              description: "A specialized lab with equipment for studying motor control systems, electrical wiring, and instrumentation used in monitoring and automation processes.",
+              img: " "
 
 
-         },
-         {
-         code: "",
-         name: "NSTP Office",
-        description: "The National Service Training Program Office where activities and records related to NSTP components, such as CWTS and ROTC, are managed and coordinated. ",
-        img: " "
- }
- 
-    ],
-    2: [
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      },
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      },
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      },
-      {       
-         code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-       }, 
-       {
-       code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
+              },
+              {
+              
+              code: " ",
+              name: "Computer Laboratory",
+              description: " room equipped with computers and internet access where students learn programming, digital applications, and other computer-related skills. ",
+              img: " "
+              }, 
+              {
+                code:"Room 46",
+                name: " ",
+              description: " ",
+              img: " "
+              },
+              {
+              code:"",
+              name: "Storage Room",
+              description: "A designated area used to store school equipment, tools, and other materials in an organized and secure manner.",
+              img: " "
+                          
+              },
+              {
+              code:"",
+              name: "GAD Office",
+              description: "The Office where programs and activities promoting equality, inclusivity, and student welfare are planned and managed.",
+              img: " "
 
-       }, 
-       {
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-        },
-        {
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
 
-        },
-        {
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
+              },
+              {
+              code: "",
+              name: "NSTP Office",
+              description: "The National Service Training Program Office where activities and records related to NSTP components, such as CWTS and ROTC, are managed and coordinated. ",
+              img: " "
+      }
+      
+          ],
+          2: [
+            { 
+              code: " ", 
+              name: " ",
+              description: " ",
+              img: " "
+            },
+            { 
+              code: " ", 
+              name: " ",
+              description: " ",
+              img: " "
+            },
+            { 
+              code: " ", 
+              name: " ",
+              description: " ",
+              img: " "
+            },
+            {       
+              code: " ", 
+              name: " ",
+              description: " ",
+              img: " "
+            }, 
+            {
+            code: " ", 
+              name: " ",
+              description: " ",
+              img: " "
+
+            }, 
+            {
+              code: " ", 
+              name: " ",
+              description: " ",
+              img: " "
+              },
+              {
+              code: " ", 
+              name: " ",
+              description: " ",
+              img: " "
+
+              },
+              {
+              code: " ", 
+              name: " ",
+              description: " ",
+              img: " "
+              }
+
+          ]
         }
-
-    ]
-  }
 
     },
     'Old Admin Building': {
@@ -850,17 +851,7 @@ img: ""
       }
     },
     'Oval': {
-      totalFloors: 1, rooms:{
-        1:[
-          {
-    code:"", 
-     name:"Oval ",
-     description: "An open field or track area used for sports, physical activities, and outdoor events. ",
-     img: ""
-
-        }
-      ]
-      }
+       totalFloors:  1
     },
     'Grandstand': {
       totalFloors:1, rooms:{
