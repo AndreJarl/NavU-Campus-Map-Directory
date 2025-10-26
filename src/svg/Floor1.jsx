@@ -239,6 +239,8 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill="#535353" d="M123.792 540.201v-11.4004h-.8v11.4004z" />
          {/* girl cr near cme */}
         <path fill={allFalse ? '#ff69eb'  : category["Restroom"] ? "#ff69eb" : "#B0B0B0" } stroke={allFalse ? '#D74DC9'  : category["Restroom"] ? "#D74DC9" : "#B0B0B0" }  stroke-width={0.4} d="M272 528v15h-9v-15z" />
+        <text x="267.5" y="535" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">WOMEN'S</text>
+        <text x="267.5" y="537" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CR</text>
 
         {/* COE Room 2 bldg */}
         <path fill="#ff3030" stroke="#C32525" stroke-width={0.4} d="M249 544h21v17h-21z" />
@@ -280,7 +282,8 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
 
         {/* New CEAS CR bldg */}
         <path fill={allFalse ? '#ff69eb'  : category["Restroom"] ? "#ff69eb" : "#B0B0B0" } stroke={allFalse ? '#D74DC9'  : category["Restroom"] ? "#D74DC9" : "#B0B0B0" } stroke-width={0.4} d="M113 528v15h9v-15z" />
-
+        <text x="117.5" y="535" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">WOMEN'S</text>
+        <text x="117.5" y="537" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CR</text>
         {/* New CEAS Room 5 bldg */}
         <path fill="#00c3ff" stroke="#4391A9" stroke-width={0.4} d="M115 544h21v17h-21z" />
         <text x="125.5" y="553.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 5</text>
@@ -424,9 +427,11 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text onClick={()=>bldClicked("BAC Office")} style={{cursor: "pointer"}} x="235.5" y="741.41" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
         <path fill={allFalse ? '#ce4b46'  : category["Admin"] ? "#ce4b46" : "#B0B0B0" }  stroke={allFalse ? '#B84336'  : category["Admin"] ? "#B84336" : "#B0B0B0" }  stroke-width={0.4} d="M228 749.021h15V751h-15z" />
 
+       {/* BISTRO */}
         <path fill="#ff4c85" d="M152 542h9v-5h13.596v5.372h22.198v14.709H152z" />
+        <text x="174" y="551" textAnchor="middle" font-family="Inter, sans-serif" font-size="3" fill="black" font-weight="600" >BISTRO </text>
         <path fill="#d94272" d="M152 556.953h44.794V559H152z" />
-
+         
         {/* Clinic bldg */}
         <path onClick={()=>bldClicked("University Clinic")} style={{cursor: "pointer"}} fill={allFalse ? '#ff6453'  : category["Admin"] ? "#ff6453" : "#B0B0B0" }  stroke={allFalse ? '#B84336'  : category["Admin"] ? "#B84336" : "#B0B0B0" } stroke-width={0.4} d="M244 728h8v-5h8v26.066h-16z" />
         <text onClick={()=>bldClicked("University Clinic")} style={{cursor: "pointer"}} x="252" y="739.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CLINIC</text>
@@ -456,7 +461,10 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill="#fc0" d="M178 459v17h-23v-17z" />
         <path fill="#fc0" d="M155 477h23v25.034h-23z" />
         <path fill="#d6b018" d="M155 502.034h23V504h-23z" />
+        {/* STUDY AREA */}
         <path fill="#7bff00" d="M213 525h19v9.875h-19z" />
+        <path fill="#7bff00" d="M213 525h19v9.875h-19z" />
+         <text x="222.5" y="531" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">STUDY AREA</text>
         <path fill="#64cf00" d="M213 534.75h19V536h-19z" />
 
         {/* Stage bldg */}
@@ -577,15 +585,29 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill="#00ffae" stroke="#01CC8C" stroke-width={0.4} d="M287 333v16.01h-20V333z" />
         <path fill="#01db96" stroke="#01CC8C" stroke-width={0.4} d="M267 349h20v2h-20z" />
 
-        {/*  */}
-        <path fill="#8649ff" d="M36 748h18v5.906H36z" />
-        <path fill="#6f3dd2" d="M36 753.687h18V755H36z" />
-        <path fill="#8649ff" d="M36 701h18v5.906H36z" />
-        <path fill="#6f3dd2" d="M36 706.687h18V708H36z" />
-        <path fill="#8649ff" d="M12 742h23v10.969H12z" />
-        <path fill="#6f3dd2" d="M12 752.969h23V755H12z" />
-        <path fill="#8649ff" d="M35 701v26H12v-26z" />
-        <path fill="#8649ff" d="M35 728v13H12v-13z" />
+        {/* STORAGE */}
+        <path fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" } d="M36 748h18v5.906H36z" />
+          <text x="45" y="752" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">STORAGE</text>
+        <path fill={allFalse ? '#6f3dd2'  : category[""] ? "#6f3dd2" : "#B0B0B0" } d="M36 753.687h18V755H36z" />
+
+        {/* CONFERENCE ROOM */}
+        <path fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" } d="M36 701h18v5.906H36z" />
+        <text x="45" y="704" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.6" fill="black">CONFERENCE</text>
+         <text x="45" y="706" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.6" fill="black">ROOM</text>
+        <path fill={allFalse ? '#6f3dd2'  : category[""] ? "#6f3dd2" : "#B0B0B0" }  d="M36 706.687h18V708H36z" />
+        {/* CLASSROOM 1 */}
+        <path fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" } d="M12 742h23v10.969H12z" />
+        <text x="23.5" y="749" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">CLASSROOM 1</text>
+        <path fill={allFalse ? '#6f3dd2'  : category[""] ? "#6f3dd2" : "#B0B0B0" }  d="M12 752.969h23V755H12z" />
+
+        {/* OFFICE */}
+        <path fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" }   d="M35 701v26H12v-26z" />
+        <text x="23.5" y="716" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">OFFICE</text>
+       {/* CLASSROOM 2 */}
+        <path fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" } d="M35 728v13H12v-13z" />
+          <text x="23.5" y="736" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">CLASSROOM 2</text>
+        
+        
         <circle cx="64" cy="728" r="7" fill="#5aeeff" />
         <ellipse cx="427" cy="701" fill="#19e0ff" rx="19" ry="10" />
         <path stroke="#818181" stroke-linecap="round" stroke-width="13" d="M295.184 799v-86.139c0-24.08 2.113-48.115 6.314-71.827l9.899-55.872c2.393-13.502 7.283-26.439 14.421-38.149 5.909-7.282 13.312-13.215 21.708-17.398l35.874-17.871M233 87.0965l13.957-11.7382c7.466-6.2791 17.748-11.5375 27.055-14.4658 6.093-1.9168 12.443-2.8921 18.831-2.8921 7.946 0 21.308 3.6937 28.691 6.6323 6.04 2.4042 11.813 5.4314 17.225 9.0325 5.776 3.8439 17.025 12.0285 22.078 16.7823 11.332 10.6605 20.555 23.3575 27.188 37.4275 3.65 7.742 8.575 19.93 10.834 28.186l6.358 23.228 9.753 40.996c6.135 28.427 9.229 57.426 9.229 86.507v33.997l-3.862 31.32M383.4 511.744l-20.534 56.192m20.534-56.192c1.13-1.152 2.622-3.287 4.297-5.995 12.836-20.746 20.724-44.373 22.807-68.68l4.466-38.087 5.367-26.873m-57.471 195.827-9.229 29.423-12.568 32.104c-8.379 20.817-11.476 43.383-9.016 65.687l5.089 46.121m25.724-173.335c10.265-1.461 26.584-6.992 34.168-14.058 1.253-1.356 3.725-3.784 6.436-6.23 5.85-5.276 13.444-9.789 21.321-9.789 4.408 0 8.198 3.121 9.039 7.445.533 2.734-.203 5.562-1.999 7.691l-12.054 13.908c-3.195 3.511-5.997 7.361-8.356 11.48-3.844 6.712-6.461 14.055-7.73 21.684l-4.889 29.396-2.029 34.981-3.547 35.656c-.921 9.267-5.138 17.896-11.884 24.319-2.358 2.246-8.139 5.95-10.981 7.541-7.29 4.079-24.947 8.141-33.219 9.311m-39.34.784 39.34-.784m83.195-369.162-69.812-33.885c-7.422-3.993-28.743-19.037-31.537-26.985-1.087-3.093-8.257-13.767-10.185-16.42l-9.852-11.957" />
@@ -880,20 +902,39 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <circle  className="floating-element" cx="234.5" cy="568.875" r="1.375" fill="#fff" stroke="#087c00" stroke-width=".5" />
         <path  stroke="#087c00" stroke-linecap="round" stroke-width=".5" d="M238.722 573.479c.428.247.653.527.653.812 0 .286-.225.566-.653.813s-1.043.452-1.784.595c-.742.142-1.582.217-2.438.217s-1.696-.075-2.437-.217c-.742-.143-1.357-.348-1.785-.595s-.653-.527-.653-.813c0-.285.225-.565.653-.812" />
         <path className="floating-element" fill="#087c00" d="M232.994 562.609h-.532c-.007-.055-.022-.104-.044-.148s-.051-.082-.087-.113-.079-.055-.129-.071c-.049-.017-.104-.026-.163-.026-.106 0-.197.026-.274.078-.076.052-.135.127-.176.225-.04.098-.06.216-.06.355 0 .145.02.267.061.365.042.097.101.171.176.22.076.049.166.074.27.074.058 0 .111-.008.158-.023.049-.014.091-.036.127-.065.037-.029.067-.064.091-.105.024-.042.041-.089.05-.142l.532.004q-.0135.144-.084.285c-.046.094-.109.179-.19.257-.081.076-.18.138-.297.183-.115.045-.248.068-.398.068-.197 0-.374-.043-.531-.13-.155-.087-.278-.214-.368-.381s-.135-.37-.135-.61.045-.443.137-.61.216-.294.372-.38c.156-.087.331-.13.525-.13.132 0 .254.018.366.055.113.036.211.09.297.16.085.07.154.155.207.257q.081.1515.099.348m.302-.79h.653l.554 1.35h.026l.554-1.35h.653V564h-.514v-1.34h-.018l-.524 1.327h-.328l-.524-1.334h-.018V564h-.514zm2.769 2.181v-2.181h1.521v.428h-.994v.447h.916v.43h-.916v.448h.994V564z" />
-        <path fill="#8649ff" d="M6 701h5v3.66265H6z" />
-        <path fill="#6f3dd2" d="M6 704.6h5v1H6z" />
-        <path fill="#8649ff" d="M6 715h5v3.66265H6z" />
-        <path fill="#6f3dd2" d="M6 718.6h5v1H6z" />
-        <path fill="#8649ff" d="M6 728h5v3.66265H6z" />
-        <path fill="#6f3dd2" d="M6 731.6h5v1H6z" />
-        <path fill="#8649ff" d="M6 742h5v3.66265H6z" />
-        <path fill="#6f3dd2" d="M6 745.6h5v1H6z" />
-        <path fill="#8cd200" d="M109 802h27v11h-27z" />
-        <path fill="#6eaa00" d="M109 813h27v2h-27z" />
-        <path fill="#8cd200" d="M272 800h12v11h-12z" />
-        <path fill="#6eaa00" d="M272 811h12v2h-12z" />
-        <path fill="#8cd200" d="m58 800.625 4.8546-22.813 1.2137-7.062h7.6013v22.5h-4.5991v7.375H87V813H58z" />
-        <path fill="#6eaa00" d="M58 812.875h29v1.875H58z" />
+        {/* CR */}
+        <path  fill={allFalse ? '#8649ff'  : category["Restroom"] ? "#8649ff" : "#B0B0B0" }  d="M6 701h5v3.66265H6z" />
+        <text x="8.5" y="704" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">CR </text>
+        <path fill={allFalse ? '#6f3dd2'  : category["Restroom"] ? "#6f3dd2" : "#B0B0B0" }   d="M6 704.6h5v1H6z" />
+        {/* CR */}
+        <path fill={allFalse ? '#8649ff'  : category["Restroom"] ? "#8649ff" : "#B0B0B0" }   d="M6 715h5v3.66265H6z" />
+        <text x="8.5" y="718" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">CR</text>
+        <path fill={allFalse ? '#6f3dd2'  : category["Restroom"] ? "#6f3dd2" : "#B0B0B0" }   d="M6 718.6h5v1H6z" />
+        {/* CR */}
+        <path fill={allFalse ? '#8649ff'  : category["Restroom"] ? "#8649ff" : "#B0B0B0" } d="M6 728h5v3.66265H6z" />
+        <text x="8.5" y="731" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">CR</text>
+        <path fill={allFalse ? '#6f3dd2'  : category["Restroom"] ? "#6f3dd2" : "#B0B0B0" } d="M6 731.6h5v1H6z" />
+        {/* CR */}
+        <path fill={allFalse ? '#8649ff'  : category["Restroom"] ? "#8649ff" : "#B0B0B0" } d="M6 742h5v3.66265H6z" />
+        <text x="8.5" y="745" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">CR</text>
+        <path fill={allFalse ? '#6f3dd2'  : category["Restroom"] ? "#6f3dd2" : "#B0B0B0" } d="M6 745.6h5v1H6z" />
+
+        {/* SECURITY OFFICE */}
+        <path fill={allFalse ? '#8cd200'  : category[""] ? "#8cd200" : "#B0B0B0" }  d="M109 802h27v11h-27z" />
+        <text x="122.5" y="809" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">SECURITY OFFICE</text>
+        <path fill={allFalse ? '#6eaa00'  : category[""] ? "#6eaa00" : "#B0B0B0" }  d="M109 813h27v2h-27z" />
+
+        {/* GUARD HOUSE */}
+        <path fill={allFalse ? '#8cd200'  : category[""] ? "#8cd200" : "#B0B0B0" }  d="M272 800h12v11h-12z" />
+        <text x="278" y="805" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">GUARD</text>
+ =      <text x="278" y="808" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">HOUSE</text>
+        <path fill={allFalse ? '#6eaa00'  : category[""] ? "#6eaa00" : "#B0B0B0" } d="M272 811h12v2h-12z" />
+        
+        {/* BUSINESS HUB BLDG */}
+        <path fill={allFalse ? '#8cd200'  : category[""] ? "#8cd200" : "#B0B0B0" }  d="m58 800.625 4.8546-22.813 1.2137-7.062h7.6013v22.5h-4.5991v7.375H87V813H58z" />
+          <text x="72.5" y="808" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">BUSINESS HUB BLDG</text>
+        <path fill={allFalse ? '#6eaa00'  : category[""] ? "#6eaa00" : "#B0B0B0" }   d="M58 812.875h29v1.875H58z" />
+
         <path stroke="#777" stroke-linecap="round" stroke-width=".9" d="M182.554 753.238h-24.137c-.552 0-1 .448-1 1v6.479c0 .553.448 1 1 1h19.515" />
         <path stroke="#777" stroke-linecap="round" stroke-width=".9" d="M182.554 756.991h-20.661c-.28 0-.507.228-.507.508 0 .281.227.508.507.508h16.13" />
         <path stroke="#535353" d="m174.395 751.011 8.592-.021" />
@@ -999,8 +1040,11 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
           <text onClick={()=>zooomBuildingbyName("KIOSK")} style={{cursor: "pointer"}}  className='floating-element' x="194" y="737" fontSize="3"fill="#000" fontWeight="bold" >YOU ARE </text>
           <text onClick={()=>zooomBuildingbyName("KIOSK")} style={{cursor: "pointer"}} className='floating-element' x="197"   y="741" fontSize="3" fill="#000"fontWeight="bold"> HERE</text>
 
-        <path fill="#8cd200" d="M351 759h109v27.4194H351z" />
-        <path fill="#6eaa00" d="M351 786.419h109V789H351z" />
+       {/* PAGLAUM FARM */}
+        <path fill={allFalse ? '#8cd200'  : category[""] ? "#8cd200" : "#B0B0B0" }  d="M351 759h109v27.4194H351z" />
+          <text x="405.5" y="774" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="4" fill="black">PAGLAUM FARM</text>
+        <path fill={allFalse ? '#6eaa00'  : category[""] ? "#6eaa00" : "#B0B0B0" }  d="M351 786.419h109V789H351z" />
+
         <path fill="#bf71ff" d="M80 404h7v13h-7z" />
         <path fill="#9e5ed3" d="M80 417h7v2h-7z" />
       </svg>

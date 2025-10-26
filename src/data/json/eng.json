@@ -1,12 +1,12 @@
 {
-  "engpath1.1": {
+  "Electrical Engineering Laboratory": {
     "image": "public/360imgs/1stF/1stEng/1stFlrENG0.JPG",
     "hotspots": [
       {
         "pitch": -20.5,
         "yaw": 120,
         "type": "arrow",
-        "target": "engpath1.2",
+        "target": "Engineering Laboratory",
         "arrowType": "forward"
       
       },
@@ -14,7 +14,7 @@
         "pitch": -25.5,
         "yaw": -110,
         "type": "arrow",
-        "target": "engpath1.1",
+        "target": "Electrical Engineering Laboratory",
         "arrowType": "backward",
         "rotation": 180
    
@@ -27,7 +27,7 @@
       }
     ]
   },
-  "engpath1.2": {
+  "Engineering Laboratory": {
     "image": "public/IMG_5704.jpg",
     "hotspots": [
       {
