@@ -11,13 +11,14 @@ import { useQuery } from '../context/QueryContext';
 import DraggableZoomableSVG from '../components/DraggableZoomableSVG';
 import Panorama from '../components/Panorama';
 import PanoramaViewer from '../components/PanoramaViewer';
+import { useCategory } from '../context/CategoryContext';
 
 
 
 function Map() {
 
       const {query, setQuery} = useQuery();
-      
+      const {setCategory} = useCategory();
 
 
           const [searchTerm, setSearchTerm]= useState("");
@@ -138,6 +139,7 @@ function Map() {
     
     // Example: When user clicks a building or room card
 const OpenCard = (clickedName) => {
+  setCategory("");
   let selected = null;
 
   // Loop through buildings

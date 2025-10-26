@@ -136,7 +136,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
     const mouseSVG = screenToSVG(mouseX, mouseY);
     
     const zoomFactor = e.deltaY > 0 ? 0.9 : 1.1;
-    const newScale = Math.max(3, Math.min(10, scale * zoomFactor));
+    const newScale = Math.max(4, Math.min(10, scale * zoomFactor));
     
     if (newScale !== scale) {
       // Calculate new viewBox based on zoom
