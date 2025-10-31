@@ -2,12 +2,10 @@ import React from 'react';
 import { useState } from 'react';
 import { useCategory } from '../context/CategoryContext';
 
-
 function Categories() {
     const {category, setCategory} = useCategory();
     
     const [activeCategory, setActiveCategory] = useState(""); // stores only one active category
-
 
   const categories = [
     { id: "Restroom", label: "Restroom", icon: "🚻" },
@@ -52,28 +50,28 @@ const handleClick = (cat) => {
     });
   };
 
+ 
   return (
-    <div className="absolute top-10 lg:top-4 lg:left-1/2 -translate-x-[30%] flex gap-3 z-50">
+  <div className="absolute top-16 left-1/2 -translate-x-1/2 lg:top-2 lg:left-1/2 lg:-translate-x-[22%] w-full max-w-[95vw] lg:w-auto px-2 z-[9999] pointer-events-auto">
+    <div className="flex gap-3 lg:gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide py-2 pointer-events-auto">
       {categories.map((cat) => (
-         
         <button
           key={cat.id}
           onClick={() => handleClick(cat.label)}
-          className={`flex items-center gap-2 px-4 py-1 rounded-full ${category && activeCategory  === cat.label ? "bg-red-700/60" : "bg-black/70"}
-         backdrop-blur-md border border-white/10
-            shadow-lg transition`}
+          className={`flex items-center gap-2 px-4 py-1 rounded-full flex-shrink-0 cursor-pointer pointer-events-auto ${
+            category && activeCategory === cat.label ? "bg-red-700/60" : "bg-black/70"
+          } backdrop-blur-md border border-white/10 shadow-lg transition select-none`}
         >
-          <span className="text-lg">{cat.icon}</span>
-          <span className="text-sm font-medium text-white drop-shadow">
+          <span className="text-lg pointer-events-none">{cat.icon}</span>
+          <span className="text-sm font-medium text-white drop-shadow pointer-events-none">
             {cat.label}
           </span>
         </button>
       ))}
-
-      
-
     </div>
-  );
+  </div>
+);
+
 }
 
 export default Categories;

@@ -51,12 +51,13 @@ function PanoramaViewer() {
 
 
   return (
+    
     <div
       ref={containerRef}
-      className={`fixed m-3  ${clicked ? "px-0 py-0 pt-0" : "px-1 py-1 pt-2"} bg-black/70 backdrop-blur-2xl shadow-xl transform transition-transform ease-in-out duration-700 z-[1000] ${
+      className={`fixed m-3  ${clicked ? "px-0 py-0 pt-0" : "px-1 py-1 pt-2"} bg-black/70 backdrop-blur-2xl shadow-xl transform transition-transform ease-in-out duration-700 z-[50] ${
         clicked
           ? "h-[100vh] w-[100vw] top-0 left-0 m-0"
-          : "left-[79%] bottom-[1%] lg:h-[150px] w-[310px] md:w-[310px] lg:w-[250px]"
+          : "lg:left-[79%] bottom-[1%] lg:h-[150px] w-[310px] md:w-[310px] lg:w-[250px]"
       }`}
     >
       <div className="relative w-full h-full">

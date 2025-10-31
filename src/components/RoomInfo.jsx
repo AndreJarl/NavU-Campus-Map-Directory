@@ -34,7 +34,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
      
 
       {/* Your existing card */}
-     <div className={`${roomSearched ? "absolute left-8 top-20 z-50"   : "hidden"} w-[420px] my-4 h-[80%] rounded-2xl   backdrop-blur-lg 
+   <div className={`${roomSearched ? "fixed lg:absolute lg:left-8 top-32 lg:top-20 z-50"   : "hidden"} mx-2 lg:mx-0 w-[53%] h-[50%] lg:w-[420px] my-4 lg:h-[80%] rounded-2xl   backdrop-blur-lg 
       bg-black/70 
       border 
       border-white/20 
@@ -54,29 +54,29 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
 
   {/* Scrollable content */}
   <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 px-5 mt-2 text-white">
-    <h2 className="text-2xl lg:text-3xl font-semibold drop-shadow-lg">
+    <h2 className="text-base lg:text-3xl font-semibold drop-shadow-lg">
       {room?.name}
     </h2>
-    <h3 className="mb-2 font-medium text-red-400 text-base">
+    <h3 className="mb-2 font-medium text-red-400 text-sm lg:text-base">
       Floor {floor}
     </h3>
-    <img className="w-[100%] h-[60%] rounded-lg shadow-md" src={room.img} alt="" />
-    <h3 className="font-medium text-gray-200 text-xl">
+    <img className="lg:w-[100%] w-[200px]  lg:h-[60%] rounded-lg shadow-md" src={room.img} alt="" />
+    <h3 className="font-medium text-gray-200 lg:text-xl">
       {room.code}
     </h3>
-    <p className="mb-2 text-gray-300">{room.description}</p>
+    <p className="mb-2 text-gray-300 text-sm lg:text-base">{room.description}</p>
   </div>
 
   {/* Fixed Button at bottom */}
-  <div className="border-t flex text-center mb-2 justify-center border-white/20 pt-4 text-base gap-4">
+  <div className="border-t flex flex-col lg:flex-row text-center mb-2 justify-center border-white/20 pt-4  lg:text-base text-xs gap-4">
     <button
-      className="py-3 px-5 bg-red-500 flex gap-3 text-center text-white rounded-3xl justify-center hover:bg-red-600 transition"
+      className="lg:py-3 lg:px-5 py-1 px-3 bg-red-500 flex gap-3 items-center text-center text-white rounded-3xl justify-center hover:bg-red-600 transition"
       onClick={()=>handleDirections(room.name)}
     >
       <CornerUpRight size={20}/> Get Directions
     </button>
       <button
-      className="py-3 px-5 bg-white/20  flex gap-3 text-center text-white rounded-3xl justify-center hover:bg-white/10 transition"
+      className="lg:py-3 lg:px-5 py-1 px-3 bg-white/20  flex gap-3 text-center  items-center text-white rounded-3xl justify-center hover:bg-white/10 transition"
       onClick={()=>setShowQRPopup(true)}
     >
       <ScanQrCode size={20} /> Generate QR
@@ -85,7 +85,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
    
       {showQRPopup && (
         <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-[9999]">
-          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 text-center text-white shadow-lg w-[90%] max-w-md relative">
+          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 text-center text-white shadow-lg w-[90%]  max-w-md relative">
             {/* Close button */}
             <button
               onClick={() => setShowQRPopup(false)}
@@ -94,14 +94,14 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
               <AiOutlineClose />
             </button>
 
-            <h2 className="text-2xl font-semibold mb-4">Room QR Code</h2>
+            <h2 className="lg:text-2xl font-semibold mb-4">Room QR Code</h2>
             <div className="flex justify-center">
               {/* Example QR placeholder — replace with your QR generation component */}
-              <div className="w-48 h-48 bg-white rounded-lg flex items-center justify-center text-black">
-                <img className="w-48 h-48" src={qr} alt="" srcset="" />
+              <div className="lg:w-48 lg:h-48 w-32 h-32 bg-white rounded-lg flex items-center justify-center text-black">
+                <img className="lg:w-48 lg:h-48 w-32 h-32" src={qr} alt="" srcset="" />
                </div>
             </div>
-            <p className="mt-4 text-gray-300 text-sm">
+            <p className="mt-4 text-gray-300 text-xs lg:text-sm">
               Scan this code to view more info about <b>{room?.name}</b>
             </p>
           </div>
