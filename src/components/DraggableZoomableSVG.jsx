@@ -307,7 +307,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
   return (
     <div 
       ref={containerRef}
-      className="w-full h-screen bg-white overflow-hidden cursor-grab  active:cursor-grabbing "
+      className="w-full h-screen bg-white overflow-hidden   active:cursor-grabbing "
     >
      <Floor1 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
     </div>
