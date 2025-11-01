@@ -239,8 +239,8 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill="#535353" d="M123.792 540.201v-11.4004h-.8v11.4004z" />
          {/* girl cr near cme */}
         <path fill={allFalse ? '#ff69eb'  : category["Restroom"] ? "#ff69eb" : "#B0B0B0" } stroke={allFalse ? '#D74DC9'  : category["Restroom"] ? "#D74DC9" : "#B0B0B0" }  stroke-width={0.4} d="M272 528v15h-9v-15z" />
-        <text x="267.5" y="535" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">WOMEN'S</text>
-        <text x="267.5" y="537" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CR</text>
+        <text x="267.5" y="535.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">WOMEN'S</text>
+        <text x="267.5" y="537.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CR</text>
 
         {/* COE Room 2 bldg */}
         <path fill="#ff3030" stroke="#C32525" stroke-width={0.4} d="M249 544h21v17h-21z" />
@@ -282,8 +282,9 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
 
         {/* New CEAS CR bldg */}
         <path fill={allFalse ? '#ff69eb'  : category["Restroom"] ? "#ff69eb" : "#B0B0B0" } stroke={allFalse ? '#D74DC9'  : category["Restroom"] ? "#D74DC9" : "#B0B0B0" } stroke-width={0.4} d="M113 528v15h9v-15z" />
-        <text x="117.5" y="535" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">WOMEN'S</text>
-        <text x="117.5" y="537" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CR</text>
+        <text x="117.5" y="535.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">WOMEN'S</text>
+        <text x="117.5" y="537.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CR</text>
+        
         {/* New CEAS Room 5 bldg */}
         <path fill="#00c3ff" stroke="#4391A9" stroke-width={0.4} d="M115 544h21v17h-21z" />
         <text x="125.5" y="553.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 5</text>
@@ -312,24 +313,43 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
 
         {/* Production Area Stock Room 2 bldg */}
         <path fill="#ff8000" stroke="#D76C00" stroke-width={0.4} d="M62.457 486.005V494h-11l5.8236-7.995z" />
+        <text x="58.65" y="489.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">STOCK</text>
+        <text x="58.65" y="491.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">ROOM</text>
+
 
         {/* Production Area bldg */}
         <path fill="#ff8000" stroke="#D76C00" stroke-width={0.4} d="M78 495v14H47v-7.881l2.4404-3.846L50.8946 495z" />
+        <text x="62.5" y="501.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">PRODUCTION</text>
+        <text x="62.5" y="504.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">AREA</text>
+
 
         {/* Production Office bldg */}
         <path fill="#ff8000" stroke="#D76C00" stroke-width={0.4} d="M78 510v11H62v-11z" />
+        <text x="70" y="515" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">PRODUCTION</text>
+        <text x="70" y="517.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
+
 
         {/* Production Area Stock Room 1 bldg */}
         <path fill="#ff8000" stroke="#D76C00" stroke-width={0.4} d="M61 510v11H47v-11z" />
+        <text x="54.1" y="515" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">STOCK</text>
+        <text x="54.1" y="517.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM</text>
+
 
         {/* Extension & Production Office bldg */}
         <path fill="#ff8000" stroke="#D76C00" stroke-width={0.4} d="M78 522v7H47v-7z" />
+        <text x="62.5" y="525.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">EXTENSION &</text>
+        <text x="62.5" y="527.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">PRODUCTION OFFICE</text>
 
         {/* Supply Office bldg */}
         <path fill="#ff8000" stroke="#D76C00" stroke-width={0.4} d="M78 530v12H62v-12z" />
+        <text x="70" y="535.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">SUPPLY</text>
+        <text x="70" y="538" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
 
         {/* Old Admin Storage Room bldg */}
         <path fill="#ff8000" stroke="#D76C00" stroke-width={0.4} d="M78 543v13H47v-26h13.9843v13z" />
+        <text x="62.5" y="549.1" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">STORAGE</text>
+        <text x="62.5" y="551.55" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM</text>
+
 
         <path fill="#fc0" d="M59 557v10H47v-10z" />
         <path fill="#fc0" d="M59 568v7H47v-7z" />
@@ -360,6 +380,9 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
 
         {/* Sewing Lab bldg */}
         <path fill="#ff8000" stroke="#D76C00" stroke-width={0.4} d="m41.3387 567.29-.7631 20.919-17.389-.635.7631-20.919z" />
+        <text x="32.263" y="576.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" transform="rotate(2.09, 32.263, 576.132)">SEWING</text>
+        <text x="32.263" y="579.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" transform="rotate(2.09, 32.263, 578.732)">LABORATORY</text>
+
         <path fill="#ce6700" stroke="#D76C00" stroke-width={0.4} d="m23.22 586.659 17.3889.634-.0715 1.962-17.389-.635z" />
 
         {/* New CEAS Room 1 bldg */}
@@ -427,21 +450,22 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text onClick={()=>bldClicked("BAC Office")} style={{cursor: "pointer",   pointerEvents: 'all'}} x="235.5" y="741.41" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
         <path fill={allFalse ? '#ce4b46'  : category["Admin"] ? "#ce4b46" : "#B0B0B0" }  stroke={allFalse ? '#B84336'  : category["Admin"] ? "#B84336" : "#B0B0B0" }  stroke-width={0.4} d="M228 749.021h15V751h-15z" />
 
-       {/* BISTRO */}
-        <path fill="#ff4c85" d="M152 542h9v-5h13.596v5.372h22.198v14.709H152z" />
-        <text x="174" y="551" textAnchor="middle" font-family="Inter, sans-serif" font-size="3" fill="black" font-weight="600" >BISTRO </text>
-        <path fill="#d94272" d="M152 556.953h44.794V559H152z" />
+       {/* BISTRO bldg */}
+        <path fill="#ff4c85" stroke="#DD4B83" stroke-width={0.4}  d="M152 542h9v-5h13.596v5.372h22.198v14.709H152z" />
+        <text x="173.9" y="550.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">BISTRO</text>
+        <path fill="#d94272" stroke="#DD4B83" stroke-width={0.4}  d="M152 556.953h44.794V559H152z" />
          
         {/* Clinic bldg */}
         <path onClick={()=>bldClicked("University Clinic")} style={{cursor: "pointer",   pointerEvents: 'all'}} fill={allFalse ? '#ff6453'  : category["Admin"] ? "#ff6453" : "#B0B0B0" }  stroke={allFalse ? '#B84336'  : category["Admin"] ? "#B84336" : "#B0B0B0" } stroke-width={0.4} d="M244 728h8v-5h8v26.066h-16z" />
         <text onClick={()=>bldClicked("University Clinic")} style={{cursor: "pointer",   pointerEvents: 'all'}} x="252" y="739.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CLINIC</text>
         <path  fill={allFalse ? '#ce4b46'  : category["Admin"] ? "#ce4b46" : "#B0B0B0" }  stroke={allFalse ? '#B84336'  : category["Admin"] ? "#B84336" : "#B0B0B0" }  stroke-width={0.4} d="M244 749.066h16V751h-16z" />
 
-        <path fill="#ff4c85" d="M108 421h39v46h-39z" />
+        {/* University Canteen bldg */}
+        <path fill="#ff4c85" stroke="#DD4B83" stroke-width={0.4}  d="M108 421h39v46h-39z" />
 
         {/* Canteen Stock Room bldg */}
-        <path fill="#ff4c85" d="M132 468h14.956v7.283H132z" />
-        <path fill="#d94272" d="M132 475.283h14.956v1.69H132z" />
+        <path stroke="#DD4B83" stroke-width={0.4}  fill="#ff4c85" d="M132 468h14.956v7.283H132z" />
+        <path stroke="#DD4B83" stroke-width={0.4}  fill="#d94272" d="M132 475.283h14.956v1.69H132z" />
 
         <path fill="#fc0" d="M131 468v17h-23v-17z" />
         <path fill="#fc0" d="M108 486h24v16h-24z" />
@@ -461,11 +485,12 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill="#fc0" d="M178 459v17h-23v-17z" />
         <path fill="#fc0" d="M155 477h23v25.034h-23z" />
         <path fill="#d6b018" d="M155 502.034h23V504h-23z" />
-        {/* STUDY AREA */}
-        <path fill="#7bff00" d="M213 525h19v9.875h-19z" />
-        <path fill="#7bff00" d="M213 525h19v9.875h-19z" />
-         <text x="222.5" y="531" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">STUDY AREA</text>
-        <path fill="#64cf00" d="M213 534.75h19V536h-19z" />
+
+        {/* Study Area bldg */}
+        <path fill="#7bff00" stroke="#60C700" stroke-width={0.4}  d="M213 525h19v9.875h-19z" />
+        <text x="222.5" y="529.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">STUDY</text>
+        <text x="222.5" y="531.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">AREA</text>
+        <path fill="#64cf00" stroke="#60C700" stroke-width={0.4}  d="M213 534.75h19V536h-19z" />
 
         {/* Stage bldg */}
         <path fill="#00ffae" stroke="#01CC8C" stroke-width={0.4} d="M156 562h19v20.648h-19z" />
@@ -507,6 +532,8 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
 
         {/* Kitchen Lab bldg */}
         <path fill="#ff8000" stroke="#D76C00" stroke-width={0.4} d="m355.997 475 .003 32.451h-22.997L333 475z" />
+        <text x="344.5" y="491.8" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">KITCHEN</text>
+        <text x="344.5" y="494.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY</text>
         <path fill="#ce6700" stroke="#D76C00" stroke-width={0.4} d="M333.003 507.451H356V510h-22.997z" />
 
         {/* Carpentry shop bldg */}
@@ -566,12 +593,20 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
 
         {/* Woodcarving Area bldg */}
         <path fill="#ff8000" stroke="#D76C00" stroke-width={0.4} d="M245 471v15h-14v-15z" />
+        <text x="238" y="478.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">WOODCARVING</text>
+        <text x="238" y="480.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">AREA</text>
+
 
         {/* Fablab Office bldg */}
         <path fill="#ff8000" stroke="#D76C00" stroke-width={0.4} d="M274 478v17h-16v-17z" />
+        <text x="266" y="486.1" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FABLAB</text>
+        <text x="266" y="488.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
+
 
         {/* Fablab Production Area */}
         <path fill="#ff8000" stroke="#D76C00" stroke-width={0.4} d="M231 487h15v-16h28v6h-17v19h17v12.082h-43z" />
+        <text x="252.5" y="501.341" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FABLAB PRODUCTION</text>
+        <text x="252.5" y="504" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">AREA</text>
         <path fill="#ce6700" stroke="#D76C00" stroke-width={0.4} d="M231 508.082h43V510h-43z" />
 
         <path fill="#f55456" d="m266.337 81.0004 26.655 25.4656L110.655 274.62 84 249.155z" />
@@ -585,27 +620,29 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill="#00ffae" stroke="#01CC8C" stroke-width={0.4} d="M287 333v16.01h-20V333z" />
         <path fill="#01db96" stroke="#01CC8C" stroke-width={0.4} d="M267 349h20v2h-20z" />
 
-        {/* STORAGE */}
-        <path fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" } d="M36 748h18v5.906H36z" />
-          <text x="45" y="752" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">STORAGE</text>
-        <path fill={allFalse ? '#6f3dd2'  : category[""] ? "#6f3dd2" : "#B0B0B0" } d="M36 753.687h18V755H36z" />
+        {/* ERRC Storage bldg  */}
+        <path stroke="#693AC6" stroke-width={0.4} fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" } d="M36 748h18v5.906H36z" />
+        <text x="45" y="751.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">STORAGE</text>
+        <path stroke="#693AC6" stroke-width={0.4} fill={allFalse ? '#6f3dd2'  : category[""] ? "#6f3dd2" : "#B0B0B0" } d="M36 753.687h18V755H36z" />
 
-        {/* CONFERENCE ROOM */}
-        <path fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" } d="M36 701h18v5.906H36z" />
-        <text x="45" y="704" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.6" fill="black">CONFERENCE</text>
-         <text x="45" y="706" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.6" fill="black">ROOM</text>
-        <path fill={allFalse ? '#6f3dd2'  : category[""] ? "#6f3dd2" : "#B0B0B0" }  d="M36 706.687h18V708H36z" />
-        {/* CLASSROOM 1 */}
-        <path fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" } d="M12 742h23v10.969H12z" />
-        <text x="23.5" y="749" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">CLASSROOM 1</text>
-        <path fill={allFalse ? '#6f3dd2'  : category[""] ? "#6f3dd2" : "#B0B0B0" }  d="M12 752.969h23V755H12z" />
+        {/* ERRC Conference Room bldg  */}
+        <path stroke="#693AC6" stroke-width={0.4} fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" } d="M36 701h18v5.906H36z" />
+        <text x="45" y="703.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CONFERENCE</text>
+        <text x="45" y="705.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">ROOM</text>
+        <path stroke="#693AC6" stroke-width={0.4} fill={allFalse ? '#6f3dd2'  : category[""] ? "#6f3dd2" : "#B0B0B0" }  d="M36 706.687h18V708H36z" />
 
-        {/* OFFICE */}
-        <path fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" }   d="M35 701v26H12v-26z" />
-        <text x="23.5" y="716" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">OFFICE</text>
-       {/* CLASSROOM 2 */}
-        <path fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" } d="M35 728v13H12v-13z" />
-          <text x="23.5" y="736" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">CLASSROOM 2</text>
+        {/* ERRC Room 1 bldg  */}
+        <path stroke="#693AC6" stroke-width={0.4} fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" } d="M12 742h23v10.969H12z" />
+        <text x="23.5" y="748.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 1</text>
+        <path stroke="#693AC6" stroke-width={0.4} fill={allFalse ? '#6f3dd2'  : category[""] ? "#6f3dd2" : "#B0B0B0" }  d="M12 752.969h23V755H12z" />
+
+        {/* ERRC Office bldg  */}
+        <path stroke="#693AC6" stroke-width={0.4} fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" }   d="M35 701v26H12v-26z" />
+        <text x="23.5" y="715.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
+
+       {/* ERRC Room 2 bldg  */}
+        <path stroke="#693AC6" stroke-width={0.4} fill={allFalse ? '#8649ff'  : category[""] ? "#8649ff" : "#B0B0B0" } d="M35 728v13H12v-13z" />
+        <text x="23.5" y="735.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 2</text>
         
         
         <circle cx="64" cy="728" r="7" fill="#5aeeff" />
@@ -902,39 +939,43 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <circle  className="floating-element" cx="234.5" cy="568.875" r="1.375" fill="#fff" stroke="#087c00" stroke-width=".5" />
         <path  stroke="#087c00" stroke-linecap="round" stroke-width=".5" d="M238.722 573.479c.428.247.653.527.653.812 0 .286-.225.566-.653.813s-1.043.452-1.784.595c-.742.142-1.582.217-2.438.217s-1.696-.075-2.437-.217c-.742-.143-1.357-.348-1.785-.595s-.653-.527-.653-.813c0-.285.225-.565.653-.812" />
         <path className="floating-element" fill="#087c00" d="M232.994 562.609h-.532c-.007-.055-.022-.104-.044-.148s-.051-.082-.087-.113-.079-.055-.129-.071c-.049-.017-.104-.026-.163-.026-.106 0-.197.026-.274.078-.076.052-.135.127-.176.225-.04.098-.06.216-.06.355 0 .145.02.267.061.365.042.097.101.171.176.22.076.049.166.074.27.074.058 0 .111-.008.158-.023.049-.014.091-.036.127-.065.037-.029.067-.064.091-.105.024-.042.041-.089.05-.142l.532.004q-.0135.144-.084.285c-.046.094-.109.179-.19.257-.081.076-.18.138-.297.183-.115.045-.248.068-.398.068-.197 0-.374-.043-.531-.13-.155-.087-.278-.214-.368-.381s-.135-.37-.135-.61.045-.443.137-.61.216-.294.372-.38c.156-.087.331-.13.525-.13.132 0 .254.018.366.055.113.036.211.09.297.16.085.07.154.155.207.257q.081.1515.099.348m.302-.79h.653l.554 1.35h.026l.554-1.35h.653V564h-.514v-1.34h-.018l-.524 1.327h-.328l-.524-1.334h-.018V564h-.514zm2.769 2.181v-2.181h1.521v.428h-.994v.447h.916v.43h-.916v.448h.994V564z" />
-        {/* CR */}
-        <path  fill={allFalse ? '#8649ff'  : category["Restroom"] ? "#8649ff" : "#B0B0B0" }  d="M6 701h5v3.66265H6z" />
-        <text x="8.5" y="704" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">CR </text>
-        <path fill={allFalse ? '#6f3dd2'  : category["Restroom"] ? "#6f3dd2" : "#B0B0B0" }   d="M6 704.6h5v1H6z" />
-        {/* CR */}
-        <path fill={allFalse ? '#8649ff'  : category["Restroom"] ? "#8649ff" : "#B0B0B0" }   d="M6 715h5v3.66265H6z" />
-        <text x="8.5" y="718" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">CR</text>
-        <path fill={allFalse ? '#6f3dd2'  : category["Restroom"] ? "#6f3dd2" : "#B0B0B0" }   d="M6 718.6h5v1H6z" />
-        {/* CR */}
-        <path fill={allFalse ? '#8649ff'  : category["Restroom"] ? "#8649ff" : "#B0B0B0" } d="M6 728h5v3.66265H6z" />
-        <text x="8.5" y="731" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">CR</text>
-        <path fill={allFalse ? '#6f3dd2'  : category["Restroom"] ? "#6f3dd2" : "#B0B0B0" } d="M6 731.6h5v1H6z" />
-        {/* CR */}
-        <path fill={allFalse ? '#8649ff'  : category["Restroom"] ? "#8649ff" : "#B0B0B0" } d="M6 742h5v3.66265H6z" />
-        <text x="8.5" y="745" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">CR</text>
-        <path fill={allFalse ? '#6f3dd2'  : category["Restroom"] ? "#6f3dd2" : "#B0B0B0" } d="M6 745.6h5v1H6z" />
+        
+        {/* ERRC CR 4 bldg  */}
+        <path stroke="#693AC6" stroke-width={0.4}  fill={allFalse ? '#8649ff'  : category["Restroom"] ? "#8649ff" : "#B0B0B0" }  d="M6 701h5v3.66265H6z" />
+        <text x="8.5" y="703.38" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CR</text>
+        <path stroke="#693AC6" stroke-width={0.4}  fill={allFalse ? '#6f3dd2'  : category["Restroom"] ? "#6f3dd2" : "#B0B0B0" }   d="M6 704.6h5v1H6z" />
 
-        {/* SECURITY OFFICE */}
-        <path fill={allFalse ? '#8cd200'  : category[""] ? "#8cd200" : "#B0B0B0" }  d="M109 802h27v11h-27z" />
+        {/* ERRC CR 3 bldg  */}
+        <path stroke="#693AC6" stroke-width={0.4}  fill={allFalse ? '#8649ff'  : category["Restroom"] ? "#8649ff" : "#B0B0B0" }   d="M6 715h5v3.66265H6z" />
+        <text x="8.5" y="717.39" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CR</text>
+        <path stroke="#693AC6" stroke-width={0.4}  fill={allFalse ? '#6f3dd2'  : category["Restroom"] ? "#6f3dd2" : "#B0B0B0" }   d="M6 718.6h5v1H6z" />
+        
+        {/* ERRC CR 2 bldg  */}
+        <path stroke="#693AC6" stroke-width={0.4}  fill={allFalse ? '#8649ff'  : category["Restroom"] ? "#8649ff" : "#B0B0B0" } d="M6 728h5v3.66265H6z" />
+        <text x="8.5" y="730.35" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CR</text>
+        <path stroke="#693AC6" stroke-width={0.4}  fill={allFalse ? '#6f3dd2'  : category["Restroom"] ? "#6f3dd2" : "#B0B0B0" } d="M6 731.6h5v1H6z" />
+
+        {/* ERRC CR 1 bldg  */}
+        <path stroke="#693AC6" stroke-width={0.4}  fill={allFalse ? '#8649ff'  : category["Restroom"] ? "#8649ff" : "#B0B0B0" } d="M6 742h5v3.66265H6z" />
+        <text x="8.5" y="744.35" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CR</text>
+        <path stroke="#693AC6" stroke-width={0.4}  fill={allFalse ? '#6f3dd2'  : category["Restroom"] ? "#6f3dd2" : "#B0B0B0" } d="M6 745.6h5v1H6z" />
+
+        {/* SECURITY OFFICE bldg */}
+        <path stroke="#609400" stroke-width={0.4} fill={allFalse ? '#8cd200'  : category[""] ? "#8cd200" : "#B0B0B0" }  d="M109 802h27v11h-27z" />
         <text x="122.5" y="809" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">SECURITY OFFICE</text>
-        <path fill={allFalse ? '#6eaa00'  : category[""] ? "#6eaa00" : "#B0B0B0" }  d="M109 813h27v2h-27z" />
+        <path stroke="#609400" stroke-width={0.4} fill={allFalse ? '#6eaa00'  : category[""] ? "#6eaa00" : "#B0B0B0" }  d="M109 813h27v2h-27z" />
 
         {/* GUARD HOUSE */}
-        <path fill={allFalse ? '#8cd200'  : category[""] ? "#8cd200" : "#B0B0B0" }  d="M272 800h12v11h-12z" />
+        <path stroke="#609400" stroke-width={0.4} fill={allFalse ? '#8cd200'  : category[""] ? "#8cd200" : "#B0B0B0" }  d="M272 800h12v11h-12z" />
         <text x="278" y="804.8" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">GUARD</text>
         <text x="278" y="807.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">HOUSE</text>
-
-        <path fill={allFalse ? '#6eaa00'  : category[""] ? "#6eaa00" : "#B0B0B0" } d="M272 811h12v2h-12z" />
+        <path stroke="#609400" stroke-width={0.4} fill={allFalse ? '#6eaa00'  : category[""] ? "#6eaa00" : "#B0B0B0" } d="M272 811h12v2h-12z" />
         
         {/* BUSINESS HUB BLDG */}
-        <path fill={allFalse ? '#8cd200'  : category[""] ? "#8cd200" : "#B0B0B0" }  d="m58 800.625 4.8546-22.813 1.2137-7.062h7.6013v22.5h-4.5991v7.375H87V813H58z" />
-          <text x="72.5" y="808" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">BUSINESS HUB BLDG</text>
-        <path fill={allFalse ? '#6eaa00'  : category[""] ? "#6eaa00" : "#B0B0B0" }   d="M58 812.875h29v1.875H58z" />
+        <path stroke="#609400" stroke-width={0.4} fill={allFalse ? '#8cd200'  : category[""] ? "#8cd200" : "#B0B0B0"} d="m58 800.625 4.8546-22.813 1.2137-7.062h7.6013v22.5h-4.5991v7.375H87V813H58z" />
+        <text x="72.5" y="806.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">BUSINESS HUB</text>
+        <text x="72.5" y="809.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">BUILDING</text>
+        <path stroke="#609400" stroke-width={0.4} fill={allFalse ? '#6eaa00'  : category[""] ? "#6eaa00" : "#B0B0B0"} d="M58 812.875h29v1.875H58z" />
 
         <path stroke="#777" stroke-linecap="round" stroke-width=".9" d="M182.554 753.238h-24.137c-.552 0-1 .448-1 1v6.479c0 .553.448 1 1 1h19.515" />
         <path stroke="#777" stroke-linecap="round" stroke-width=".9" d="M182.554 756.991h-20.661c-.28 0-.507.228-.507.508 0 .281.227.508.507.508h16.13" />
