@@ -68,7 +68,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
   </div>
 
   {/* Fixed Button at bottom */}
-  <div className="border-t flex  lg:flex-row text-center mb-4 lg:mb-2 justify-center border-white/20 pt-4  lg:text-base text-xs gap-4">
+  <div className="border-t flex  lg:flex-row text-center pb-4 lg:mb-2 justify-center border-white/20 pt-4  lg:text-base text-xs gap-4">
     <button
       className="lg:py-3 lg:px-5 py-2 px-4 bg-red-500 flex gap-3 items-center text-center text-white rounded-3xl justify-center hover:bg-red-600 transition"
       onClick={()=>handleDirections(room.name)}
@@ -98,7 +98,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
             <div className="flex justify-center">
               {/* Example QR placeholder — replace with your QR generation component */}
               <div className="lg:w-48 lg:h-48 w-32 h-32 bg-white rounded-lg flex items-center justify-center text-black">
-                <img className="lg:w-48 lg:h-48 w-32 h-32" src={qr} alt="" srcset="" />
+                <img className="lg:w-48 lg:h-48 w-[100%] h-32" src={qr} alt="" srcset="" />
                </div>
             </div>
             <p className="mt-4 text-gray-300 text-xs lg:text-sm">
