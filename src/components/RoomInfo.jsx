@@ -1,6 +1,6 @@
 import { AiOutlineClose } from "react-icons/ai";
 import { useQuery } from "../context/QueryContext";
-import { CornerUpRight , ScanQrCode, Minus } from "lucide-react";
+import { CornerUpRight , ScanQrCode, ChevronUp, ChevronDown, Minus, Ellipsis } from "lucide-react";
 import { usePath } from "../context/PathContext";
 import { useState, useRef } from "react";
 import qr from "../assets/qr.png";
@@ -10,24 +10,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
   const { room, floor } = query; 
   const { setPath } = usePath();
   const [showQRPopup, setShowQRPopup] = useState(false);
-  
-
-  // height state for bottom sheet (start at 45%)
-  const [sheetHeight, setSheetHeight] = useState(45);
-  const startY = useRef(0);
-
-  const handleTouchStart = (e) => {
-    startY.current = e.touches[0].clientY;
-  };
-
-  const handleTouchMove = (e) => {
-    const diff = startY.current - e.touches[0].clientY;
-    const newHeight = sheetHeight + (diff / window.innerHeight) * 100;
-
-    if (newHeight >= 20 && newHeight <= 90) {
-      setSheetHeight(newHeight);
-    }
-  };
+const [chevron, setChevron] = useState(false);
 
   const handleDirections = (roomName) => {
     setPath(roomName);
@@ -44,21 +27,17 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
     <>
       <div
        
-        className={`${roomSearched ? "fixed inset-x-0 bottom-0 m-1 lg:m-0 lg:absolute lg:left-8 lg:top-20 z-[50]" : "hidden"}
-        w-aut lg:w-[420px] my-4 rounded-3xl backdrop-blur-lg bg-black/70 border border-white/20 shadow-md p-2
+        className={`${roomSearched ? "fixed inset-x-0 bottom-0 m-2 lg:m-0 lg:absolute lg:left-8 lg:top-20 z-[50]" : "hidden"}
+        w-aut ${!chevron ? ' h-[50%]' : 'h-[75%]'} lg:w-[420px] my-4 rounded-3xl backdrop-blur-lg bg-black/70 border border-white/20 shadow-md p-2
         transform transition-transform pointer-events-auto ease-in-out duration-200 flex flex-col`}
-        style={{
-            height: window.innerWidth < 1024 ? `${sheetHeight}%` :"85%"
-          }}
       >
-        <div   
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-         className="absolute top-0 inset-x-0 flex justify-center lg:hidden">
-          <Minus color="white" size={40} />
-        </div>
+          <div   
+               onClick={()=>setChevron(!chevron)}
+                 className="absolute top-0 inset-x-0 flex justify-center lg:hidden z-[200] opacity-60">
+                  {!chevron ? <Minus color="white" size={40} /> : <Ellipsis color="white" size={40} />} 
+                </div>
 
-        <div className="p-4 pt-3 top-0 absolute right-0 flex justify-between items-center z-50">
+        <div className="p-4 pt-3 top-0 absolute right-0 flex justify-between items-center z-[300]">
           <button
             onClick={closeBtn}
             className="rounded-full bg-red-500 hover:bg-red-700 font-bold text-xl flex gap-2 items-center text-white px-2 py-2"
