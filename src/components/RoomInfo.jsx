@@ -34,7 +34,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
      
 
       {/* Your existing card */}
-   <div className={`${roomSearched ? "fixed lg:absolute lg:left-8 top-32 lg:top-20 z-50"   : "hidden"} mx-2 lg:mx-0 w-[53%] h-[50%] lg:w-[420px] my-4 lg:h-[80%] rounded-2xl   backdrop-blur-lg 
+   <div className={`${roomSearched ? "fixed lg:absolute lg:left-8 top-[55%] lg:top-20 z-50"   : "hidden"}  lg:mx-0 w-[100%] h-[45%] lg:w-[420px] my-4 lg:h-[80%] rounded-2xl   backdrop-blur-lg 
       bg-black/70 
       border 
       border-white/20 
@@ -54,13 +54,13 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
 
   {/* Scrollable content */}
   <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 px-5 mt-2 text-white">
-    <h2 className="text-base md:text-lg lg:text-3xl font-semibold drop-shadow-lg">
+    <h2 className="text-xl md:text-lg lg:text-3xl font-semibold drop-shadow-lg">
       {room?.name}
     </h2>
-    <h3 className="mb-2 font-medium text-red-400 text-sm lg:text-base">
+    <h3 className="mb-2 font-medium text-red-400 text-base lg:text-base">
       Floor {floor}
     </h3>
-    <img className="lg:w-[100%] w-[200px] md:w-[100%]  lg:h-[60%] rounded-lg shadow-md" src={room.img} alt="" />
+    <img className="lg:w-[100%] w-[100%] md:w-[100%]  lg:h-[60%] rounded-lg shadow-md" src={room.img} alt="" />
     <h3 className="font-medium text-gray-200 lg:text-xl">
       {room.code}
     </h3>
@@ -68,15 +68,15 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
   </div>
 
   {/* Fixed Button at bottom */}
-  <div className="border-t flex flex-col lg:flex-row text-center mb-2 justify-center border-white/20 pt-4  lg:text-base text-xs gap-4">
+  <div className="border-t flex  lg:flex-row text-center mb-4 lg:mb-2 justify-center border-white/20 pt-4  lg:text-base text-xs gap-4">
     <button
-      className="lg:py-3 lg:px-5 py-1 px-3 bg-red-500 flex gap-3 items-center text-center text-white rounded-3xl justify-center hover:bg-red-600 transition"
+      className="lg:py-3 lg:px-5 py-2 px-4 bg-red-500 flex gap-3 items-center text-center text-white rounded-3xl justify-center hover:bg-red-600 transition"
       onClick={()=>handleDirections(room.name)}
     >
       <CornerUpRight size={20}/> Get Directions
     </button>
       <button
-      className="lg:py-3 lg:px-5 py-1 px-3 bg-white/20  flex gap-3 text-center  items-center text-white rounded-3xl justify-center hover:bg-white/10 transition"
+      className="lg:py-3 lg:px-5 py-2 px-4 bg-white/20  flex gap-3 text-center  items-center text-white rounded-3xl justify-center hover:bg-white/10 transition"
       onClick={()=>setShowQRPopup(true)}
     >
       <ScanQrCode size={20} /> Generate QR
