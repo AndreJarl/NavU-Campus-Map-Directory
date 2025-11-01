@@ -196,7 +196,7 @@ const OpenCard = (clickedName) => {
 
   return (
 
-    <div>
+    <div className='h-[100%]'>
 
             <DraggableZoomableSVG OpenCard={OpenCard}/>          
              <Categories />
