@@ -52,7 +52,7 @@ const handleClick = (cat) => {
 
  
   return (
-  <div className="absolute top-16 left-1/2 -translate-x-1/2 lg:top-2 lg:left-1/2 lg:-translate-x-[22%] w-full max-w-[95vw] lg:w-auto px-2 z-[9999] pointer-events-auto">
+  <div className="absolute top-16 left-1/2 -translate-x-1/2 lg:top-2 lg:left-1/2 lg:-translate-x-[22%] w-full max-w-[95vw] lg:w-auto px-2 z-[300] pointer-events-auto">
     <div className="flex gap-3 lg:gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide py-2 pointer-events-auto">
       {categories.map((cat) => (
         <button

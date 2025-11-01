@@ -33,17 +33,17 @@ function SearchBar({ searchTerm, suggestions, handleSearch, handleSuggestionClic
         <div
           className="z-30 -mt-0.5 flex flex-col items-center justify-center gap-2
                      max-h-[300px] lg:max-h-[460px] overflow-auto rounded-b-lg border-x border-b border-white/20
-                     bg-black/80 backdrop-blur-md text-white shadow-xl w-full lg:w-[400px] 2xl:w-[450px]"
+                     bg-black/80 backdrop-blur-md text-white shadow-xl w-full lg:w-[430px] 2xl:w-[450px]"
         >
           <i className="py-4 text-sm text-gray-300 px-4 text-center">No building/facilities found.</i>
         </div>
       ) : (
         /* ✅ Suggestions List */
         <div
-          className={`z-40 -mt-0.5 flex-col gap-1 max-h-[300px] lg:max-h-[500px] overflow-auto
+          className={`z-[900] -mt-0.5 flex-col gap-1 max-h-[300px] lg:max-h-[500px] overflow-auto
                       rounded-b-2xl border-x border-b border-white/20
                       bg-black/70 backdrop-blur-md text-white shadow-md
-                      w-full lg:w-[450px] 2xl:w-[450px]
+                      w-full lg:w-[430px] 2xl:w-[450px]
                       ${suggestions.length > 0 ? "flex" : "hidden"}`}
         >
           {suggestions.map((suggestion, index) => (
