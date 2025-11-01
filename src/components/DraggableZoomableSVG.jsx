@@ -9,6 +9,11 @@ const DraggableZoomableSVG = ({OpenCard}) => {
       floor === 1 ? { x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } :
       floor === 2 ? {x: 3, y: 4, width: 1440, height: 1024 } : floor === 3 ? {} :{}
   );
+  
+  // Set your desired zoom limits
+  const MIN_SCALE = 3.0;  // Increased minimum zoom (less zoom out)
+  const MAX_SCALE = 15.0; // Increased maximum zoom (more zoom in)
+  
   const [scale, setScale] = useState(4.3);
   const [isDragging, setIsDragging] = useState(false);
   
@@ -56,7 +61,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
 
   // Programmatic zoom to specific coordinates
   const zoomToCoordinates = useCallback((targetX, targetY, targetScale) => {
-    const newScale = Math.max(0.1, Math.min(10, targetScale));
+    const newScale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, targetScale));
     const baseWidth = 1440;
     const baseHeight = 1024;
     
@@ -76,7 +81,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
     });
     
     console.log(`Zooming to: X=${targetX}, Y=${targetY}, Scale=${newScale}`);
-  }, []);
+  }, [MIN_SCALE, MAX_SCALE]);
 
   const zooomBuildingbyName = useCallback((buildingName) =>{
          const building = buildingCoordinates.find(b=>b[buildingName]);
@@ -127,7 +132,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
     logCoordinates();
   }, [logCoordinates]);
 
-  // Handle wheel for zooming (keep original)
+  // Handle wheel for zooming with new limits
   const handleWheel = useCallback((e) => {
     e.preventDefault();
     
@@ -139,7 +144,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
     const mouseSVG = screenToSVG(mouseX, mouseY);
     
     const zoomFactor = e.deltaY > 0 ? 0.9 : 1.1;
-    const newScale = Math.max(4, Math.min(10, scale * zoomFactor));
+    const newScale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, scale * zoomFactor));
     
     if (newScale !== scale) {
       // Calculate new viewBox based on zoom
@@ -162,7 +167,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
       
       logCoordinates();
     }
-  }, [scale, viewBox, screenToSVG, logCoordinates]);
+  }, [scale, viewBox, screenToSVG, logCoordinates, MIN_SCALE, MAX_SCALE]);
 
   // Calculate distance between two touch points
   const getTouchDistance = (touch1, touch2) => {
@@ -202,7 +207,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
     // Don't prevent default for single touch yet - let clicks work if it's a tap
   }, [viewBox, scale]);
 
-  // OPTIMIZED: Handle touch move for mobile
+  // OPTIMIZED: Handle touch move for mobile - UPDATED ZOOM LIMITS
   const handleTouchMove = useCallback((e) => {
     if (e.touches.length === 1) {
       const touch = e.touches[0];
@@ -242,12 +247,14 @@ const DraggableZoomableSVG = ({OpenCard}) => {
         e.preventDefault();
       }
     } else if (e.touches.length === 2 && touchStartViewBox.current) {
-      // Two touches - pinch to zoom (keep original for accuracy)
+      // Two touches - pinch to zoom with updated limits
       const distance = getTouchDistance(e.touches[0], e.touches[1]);
       const center = getTouchCenter(e.touches[0], e.touches[1]);
       
       const zoomRatio = distance / touchStartDistance.current;
-      const newScale = Math.max(0.1, Math.min(10, touchStartViewBox.current.scale * zoomRatio));
+      
+      // Apply the new zoom limits
+      const newScale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, touchStartViewBox.current.scale * zoomRatio));
       
       if (newScale !== scale) {
         const rect = containerRef.current.getBoundingClientRect();
@@ -275,7 +282,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
     }
     // Only prevent default if we're actively dragging or pinching
     // Don't prevent for simple taps (handled in touchend)
-  }, [isDragging, viewBox.width, viewBox.height, scale, screenToSVG]);
+  }, [isDragging, viewBox.width, viewBox.height, scale, screenToSVG, MIN_SCALE, MAX_SCALE]);
 
   // Handle touch end for mobile
   const handleTouchEnd = useCallback((e) => {
@@ -376,7 +383,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
   return (
     <div 
       ref={containerRef}
-      className="w-full h-screen bg-white overflow-hidden   active:cursor-grabbing "
+      className="w-full h-screen bg-white overflow-hidden active:cursor-grabbing"
     >
      <Floor1 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
     </div>
