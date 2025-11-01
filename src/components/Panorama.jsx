@@ -147,10 +147,10 @@ const customInfo = (hotSpotDiv, args = {}) => {
   }, [scene]);
 
   return (
-   <div className={`relative w-full ${clicked ? 'h-screen' : 'h-[135px]'}`}>
+   <div className={`relative w-[240px] ${clicked ? 'h-screen' : 'h-[135px]'}`}>
       <div 
         ref={viewerRef} 
-        className="w-full h-full"
+        className="w-[full] h-full"
         style={{ 
           pointerEvents: clicked ? 'auto' : 'none' 
         }}

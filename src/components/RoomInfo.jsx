@@ -54,13 +54,13 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
 
   {/* Scrollable content */}
   <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 px-5 mt-2 text-white">
-    <h2 className="text-base lg:text-3xl font-semibold drop-shadow-lg">
+    <h2 className="text-base md:text-lg lg:text-3xl font-semibold drop-shadow-lg">
       {room?.name}
     </h2>
     <h3 className="mb-2 font-medium text-red-400 text-sm lg:text-base">
       Floor {floor}
     </h3>
-    <img className="lg:w-[100%] w-[200px]  lg:h-[60%] rounded-lg shadow-md" src={room.img} alt="" />
+    <img className="lg:w-[100%] w-[200px] md:w-[100%]  lg:h-[60%] rounded-lg shadow-md" src={room.img} alt="" />
     <h3 className="font-medium text-gray-200 lg:text-xl">
       {room.code}
     </h3>
