@@ -32,7 +32,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
         className={`${
           buildingDatas ? "fixed inset-x-0 bottom-0 m-2 lg:m-0 lg:absolute lg:left-8 lg:top-20 z-[50]" : "hidden"
         } z-[99] flex flex-col rounded-2xl border border-white/20 
-        lg:w-[450px] 2xl:w-[450px] w-auto ${!chevron ? ' h-[50%]' : 'h-[75%]'} lg:h-[85%]
+        lg:w-[450px] 2xl:w-[450px] w-auto ${!chevron ? ' h-[40%]' : 'h-[75%]'} lg:h-[85%]
         bg-black/80 backdrop-blur-md shadow-2xl pointer-events-auto
         transform transition-transform ease-in-out duration-700`}
       >
