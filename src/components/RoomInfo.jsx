@@ -34,12 +34,12 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
      
 
       {/* Your existing card */}
-   <div className={`${roomSearched ? "fixed lg:absolute lg:left-8 top-[55%] lg:top-20 z-50"   : "hidden"}  lg:mx-0 w-[100%] h-[45%] lg:w-[420px] my-4 lg:h-[80%] rounded-2xl   backdrop-blur-lg 
+   <div className={`${roomSearched ? "fixed lg:absolute lg:left-8 top-[55%] lg:top-20 z-[50]"   : "hidden"}  lg:mx-0 w-[100%] h-[45%] lg:w-[420px] my-4 lg:h-[80%] rounded-2xl   backdrop-blur-lg 
       bg-black/70 
       border 
       border-white/20 
       
-      shadow-md p-2 transform transition-transform 
+      shadow-md p-2 transform transition-transform pointer-events-auto
       ease-in-out duration-700  flex flex-col`}
     >
   {/* Close Button */}

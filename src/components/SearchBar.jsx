@@ -5,11 +5,11 @@ import { useState } from "react";
 
 function SearchBar({ searchTerm, suggestions, handleSearch, handleSuggestionClicked }) {
   return (
-    <div className="fixed top-3 left-1/2 -translate-x-1/2 lg:left-4 lg:translate-x-0 px-2 z-[1000] w-full max-w-[95vw] lg:max-w-none">
+    <div className="fixed bottom-20 lg:top-3 left-1/2 -translate-x-1/2 lg:left-4 lg:translate-x-0 px-2 z-[50] w-full max-w-[95vw] lg:max-w-none pointer-events-none">
       {/* 🔎 Main Search Bar */}
       <div
         className={`z-50 w-full lg:w-[430px] 2xl:w-[450px] px-4 lg:px-5 flex flex-row items-center justify-between
-                    border border-white/20 bg-black/70 backdrop-blur-md shadow-lg
+                    border border-white/20 bg-black/70 backdrop-blur-md shadow-lg pointer-events-auto
                     ${suggestions.length > 0 || (searchTerm && !(searchTerm in buildingData))
                       ? "rounded-t-2xl rounded-b-none"
                       : "rounded-2xl"}`}
@@ -33,7 +33,7 @@ function SearchBar({ searchTerm, suggestions, handleSearch, handleSuggestionClic
         <div
           className="z-30 -mt-0.5 flex flex-col items-center justify-center gap-2
                      max-h-[300px] lg:max-h-[460px] overflow-auto rounded-b-lg border-x border-b border-white/20
-                     bg-black/80 backdrop-blur-md text-white shadow-xl w-full lg:w-[430px] 2xl:w-[450px]"
+                     bg-black/80 backdrop-blur-md text-white shadow-xl w-full lg:w-[430px] 2xl:w-[450px] pointer-events-auto"
         >
           <i className="py-4 text-sm text-gray-300 px-4 text-center">No building/facilities found.</i>
         </div>
@@ -43,7 +43,7 @@ function SearchBar({ searchTerm, suggestions, handleSearch, handleSuggestionClic
           className={`z-[900] -mt-0.5 flex-col gap-1 max-h-[300px] lg:max-h-[500px] overflow-auto
                       rounded-b-2xl border-x border-b border-white/20
                       bg-black/70 backdrop-blur-md text-white shadow-md
-                      w-full lg:w-[430px] 2xl:w-[450px]
+                      w-full lg:w-[430px] 2xl:w-[450px] pointer-events-auto
                       ${suggestions.length > 0 ? "flex" : "hidden"}`}
         >
           {suggestions.map((suggestion, index) => (

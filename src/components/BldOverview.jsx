@@ -30,10 +30,10 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
       {/* Card */}
       <div
         className={`${
-          buildingDatas ? "fixed lg:absolute  lg:left-8 top-[55%] lg:top-20 z-50" : "hidden"
+          buildingDatas ? "fixed lg:absolute  lg:left-8 top-[55%] lg:top-20 z-[50]" : "hidden"
         } z-[99] flex flex-col rounded-2xl border border-white/20 
         lg:w-[450px] 2xl:w-[450px] w-[100%] h-[50%] lg:h-[85%]
-        bg-black/80 backdrop-blur-md shadow-2xl 
+        bg-black/80 backdrop-blur-md shadow-2xl pointer-events-auto
         transform transition-transform ease-in-out duration-700`}
       >
         {/* Image */}
