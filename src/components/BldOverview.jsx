@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import cardData from "../data/CardData";
-import { Building2, Signpost, Minus } from "lucide-react";
+import { Building2, Signpost, ChevronUp, ChevronDown,  Minus, Ellipsis } from "lucide-react";
 import buildingData from "../data/buildingData";
 import { usePath } from "../context/PathContext";
 
@@ -11,29 +11,11 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
   const buildingDatas = cardData[query.building];
   const rooms = buildingData?.[query.building]?.rooms;
   const {setPath} = usePath();
- 
+  const [chevron, setChevron] = useState(false);
 
   const [selectedFloor, setSelectedFloor] = useState(
     rooms ? Object.keys(rooms)[0] : null
   ); // default to first floor
-
-  // height state for bottom sheet (start at 45%)
-  const [sheetHeight, setSheetHeight] = useState(45);
-  const startY = useRef(0);
-
-  const handleTouchStart = (e) => {
-    startY.current = e.touches[0].clientY;
-  };
-
-  const handleTouchMove = (e) => {
-    const diff = startY.current - e.touches[0].clientY;
-    const newHeight = sheetHeight + (diff / window.innerHeight) * 100;
-
-    if (newHeight >= 20 && newHeight <= 90) {
-      setSheetHeight(newHeight);
-    }
-  };
-
 
   const CloseCard = () => {
     setBldClicked(false);
@@ -46,16 +28,13 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
   return (
     <>
       {/* Card */}
-      <div
+      <div 
         className={`${
-          buildingDatas ? "fixed inset-x-0 bottom-0 m-1 lg:m-0 lg:absolute lg:left-8 lg:top-20 z-[50]" : "hidden"
+          buildingDatas ? "fixed inset-x-0 bottom-0 m-2 lg:m-0 lg:absolute lg:left-8 lg:top-20 z-[50]" : "hidden"
         } z-[99] flex flex-col rounded-2xl border border-white/20 
-        lg:w-[450px] 2xl:w-[450px] w-auto h-[50%] lg:h-[85%]
+        lg:w-[450px] 2xl:w-[450px] w-auto ${!chevron ? ' h-[50%]' : 'h-[75%]'} lg:h-[85%]
         bg-black/80 backdrop-blur-md shadow-2xl pointer-events-auto
         transform transition-transform ease-in-out duration-700`}
-         style={{
-            height: window.innerWidth < 1024 ? `${sheetHeight}%` :"85%"
-          }}
       >
 
 
@@ -69,10 +48,9 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
         </div>
 
           <div   
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
+               onClick={()=>setChevron(!chevron)}
                  className="absolute top-0 inset-x-0 flex justify-center lg:hidden z-[200]">
-                  <Minus color="white" size={40} />
+                  {!chevron ? <Minus color="white" size={40} /> : <Ellipsis color="white" size={40} />} 
                 </div>
         {/* Close button */}
         <button
