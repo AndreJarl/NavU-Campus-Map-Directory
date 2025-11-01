@@ -201,7 +201,7 @@ const OpenCard = (clickedName) => {
             <DraggableZoomableSVG OpenCard={OpenCard}/>          
              <Categories />
             
-            <PanoramaViewer />
+            {/* <PanoramaViewer /> */}
 
                         <SearchBar searchTerm={searchTerm} suggestions={suggestions}  handleSearch={handleSearch} handleSuggestionClicked={handleSuggestionClicked} />
 
