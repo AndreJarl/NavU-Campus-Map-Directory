@@ -9,6 +9,11 @@ const DraggableZoomableSVG = ({OpenCard}) => {
       floor === 1 ? { x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } :
       floor === 2 ? {x: 3, y: 4, width: 1440, height: 1024 } : floor === 3 ? {} :{}
   );
+  
+  // Set your desired zoom limits
+  const MIN_SCALE = 3.0;  // Increased minimum zoom (less zoom out)
+  const MAX_SCALE = 15.0; // Increased maximum zoom (more zoom in)
+  
   const [scale, setScale] = useState(4.3);
   const [isDragging, setIsDragging] = useState(false);
   
@@ -16,6 +21,9 @@ const DraggableZoomableSVG = ({OpenCard}) => {
   const lastMousePos = useRef({ x: 0, y: 0 });
   const touchStartDistance = useRef(0);
   const touchStartViewBox = useRef(null);
+  const touchStartPos = useRef({ x: 0, y: 0 });
+  const touchStartTime = useRef(0);
+  const hasMoved = useRef(false);
 
   // Convert screen coordinates to SVG coordinates
   const screenToSVG = useCallback((screenX, screenY) => {
@@ -53,7 +61,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
 
   // Programmatic zoom to specific coordinates
   const zoomToCoordinates = useCallback((targetX, targetY, targetScale) => {
-    const newScale = Math.max(0.1, Math.min(10, targetScale));
+    const newScale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, targetScale));
     const baseWidth = 1440;
     const baseHeight = 1024;
     
@@ -73,7 +81,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
     });
     
     console.log(`Zooming to: X=${targetX}, Y=${targetY}, Scale=${newScale}`);
-  }, []);
+  }, [MIN_SCALE, MAX_SCALE]);
 
   const zooomBuildingbyName = useCallback((buildingName) =>{
          const building = buildingCoordinates.find(b=>b[buildingName]);
@@ -124,7 +132,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
     logCoordinates();
   }, [logCoordinates]);
 
-  // Handle wheel for zooming (keep original)
+  // Handle wheel for zooming with new limits
   const handleWheel = useCallback((e) => {
     e.preventDefault();
     
@@ -136,7 +144,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
     const mouseSVG = screenToSVG(mouseX, mouseY);
     
     const zoomFactor = e.deltaY > 0 ? 0.9 : 1.1;
-    const newScale = Math.max(4, Math.min(10, scale * zoomFactor));
+    const newScale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, scale * zoomFactor));
     
     if (newScale !== scale) {
       // Calculate new viewBox based on zoom
@@ -159,7 +167,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
       
       logCoordinates();
     }
-  }, [scale, viewBox, screenToSVG, logCoordinates]);
+  }, [scale, viewBox, screenToSVG, logCoordinates, MIN_SCALE, MAX_SCALE]);
 
   // Calculate distance between two touch points
   const getTouchDistance = (touch1, touch2) => {
@@ -179,49 +187,74 @@ const DraggableZoomableSVG = ({OpenCard}) => {
   // OPTIMIZED: Handle touch start for mobile
   const handleTouchStart = useCallback((e) => {
     if (e.touches.length === 1) {
-      // Single touch - start dragging
-      setIsDragging(true);
-      lastMousePos.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+      // Single touch - record position but don't start dragging yet
+      const touch = e.touches[0];
+      const x = touch.clientX;
+      const y = touch.clientY;
+      touchStartPos.current = { x, y };
+      touchStartTime.current = Date.now();
+      lastMousePos.current = { x, y };
+      hasMoved.current = false;
+      setIsDragging(false); // Don't assume it's a drag yet
     } else if (e.touches.length === 2) {
       // Two touches - start pinch to zoom
       setIsDragging(false);
       const distance = getTouchDistance(e.touches[0], e.touches[1]);
       touchStartDistance.current = distance;
       touchStartViewBox.current = { ...viewBox, scale };
+      e.preventDefault(); // Prevent default for pinch zoom
     }
-    e.preventDefault();
+    // Don't prevent default for single touch yet - let clicks work if it's a tap
   }, [viewBox, scale]);
 
-  // OPTIMIZED: Handle touch move for mobile
+  // OPTIMIZED: Handle touch move for mobile - UPDATED ZOOM LIMITS
   const handleTouchMove = useCallback((e) => {
-    if (e.touches.length === 1 && isDragging) {
-      // Single touch - dragging (optimized)
+    if (e.touches.length === 1) {
       const touch = e.touches[0];
       const deltaX = touch.clientX - lastMousePos.current.x;
       const deltaY = touch.clientY - lastMousePos.current.y;
 
-      // Fast calculation for touch dragging
-      const containerRect = containerRef.current.getBoundingClientRect();
-      const scaleX = viewBox.width / containerRect.width;
-      const scaleY = viewBox.height / containerRect.height;
-      
-      const svgDeltaX = deltaX * scaleX;
-      const svgDeltaY = deltaY * scaleY;
+      // Check if movement exceeds threshold to start dragging
+      const totalMoveX = touch.clientX - touchStartPos.current.x;
+      const totalMoveY = touch.clientY - touchStartPos.current.y;
+      const moveDistance = Math.sqrt(totalMoveX * totalMoveX + totalMoveY * totalMoveY);
+      const DRAG_THRESHOLD = 10; // pixels
 
-      setViewBox(prev => ({
-        ...prev,
-        x: prev.x - svgDeltaX,
-        y: prev.y - svgDeltaY
-      }));
+      if (moveDistance > DRAG_THRESHOLD && !isDragging) {
+        // Start dragging
+        setIsDragging(true);
+        hasMoved.current = true;
+        e.preventDefault(); // Prevent default once we're dragging
+      }
 
-      lastMousePos.current = { x: touch.clientX, y: touch.clientY };
+      if (isDragging && hasMoved.current) {
+        // Single touch - dragging (optimized)
+        // Fast calculation for touch dragging
+        const containerRect = containerRef.current.getBoundingClientRect();
+        const scaleX = viewBox.width / containerRect.width;
+        const scaleY = viewBox.height / containerRect.height;
+        
+        const svgDeltaX = deltaX * scaleX;
+        const svgDeltaY = deltaY * scaleY;
+
+        setViewBox(prev => ({
+          ...prev,
+          x: prev.x - svgDeltaX,
+          y: prev.y - svgDeltaY
+        }));
+
+        lastMousePos.current = { x: touch.clientX, y: touch.clientY };
+        e.preventDefault();
+      }
     } else if (e.touches.length === 2 && touchStartViewBox.current) {
-      // Two touches - pinch to zoom (keep original for accuracy)
+      // Two touches - pinch to zoom with updated limits
       const distance = getTouchDistance(e.touches[0], e.touches[1]);
       const center = getTouchCenter(e.touches[0], e.touches[1]);
       
       const zoomRatio = distance / touchStartDistance.current;
-      const newScale = Math.max(0.1, Math.min(10, touchStartViewBox.current.scale * zoomRatio));
+      
+      // Apply the new zoom limits
+      const newScale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, touchStartViewBox.current.scale * zoomRatio));
       
       if (newScale !== scale) {
         const rect = containerRef.current.getBoundingClientRect();
@@ -245,25 +278,68 @@ const DraggableZoomableSVG = ({OpenCard}) => {
           height: newHeight
         });
       }
+      e.preventDefault(); // Prevent default for pinch zoom
     }
-    e.preventDefault();
-  }, [isDragging, viewBox.width, viewBox.height, scale, screenToSVG]);
+    // Only prevent default if we're actively dragging or pinching
+    // Don't prevent for simple taps (handled in touchend)
+  }, [isDragging, viewBox.width, viewBox.height, scale, screenToSVG, MIN_SCALE, MAX_SCALE]);
 
   // Handle touch end for mobile
   const handleTouchEnd = useCallback((e) => {
     if (e.touches.length === 0) {
+      // Check if this was a tap (not a drag)
+      const wasTap = !hasMoved.current && !isDragging;
+      const tapDuration = Date.now() - touchStartTime.current;
+      
+      // If it was a tap (no movement, quick touch), synthesize a click
+      if (wasTap && tapDuration < 300 && e.changedTouches && e.changedTouches.length > 0) {
+        const touch = e.changedTouches[0];
+        // Find element at touch point and trigger click
+        // Use getElementsAtPoint for better element detection
+        let element = null;
+        if (document.elementsFromPoint) {
+          // Get all elements at the point (more reliable)
+          const elements = document.elementsFromPoint(touch.clientX, touch.clientY);
+          // Find the first SVG path or text element (clickable building elements)
+          element = elements.find(el => 
+            el.tagName === 'path' || 
+            el.tagName === 'text' || 
+            (el.tagName === 'svg' && el.closest('svg'))
+          ) || elements[0];
+        } else {
+          element = document.elementFromPoint(touch.clientX, touch.clientY);
+        }
+        
+        if (element) {
+          // Create and dispatch a click event
+          const clickEvent = new MouseEvent('click', {
+            bubbles: true,
+            cancelable: true,
+            view: window,
+            clientX: touch.clientX,
+            clientY: touch.clientY
+          });
+          element.dispatchEvent(clickEvent);
+        }
+      }
+      
       setIsDragging(false);
       touchStartDistance.current = 0;
       touchStartViewBox.current = null;
+      hasMoved.current = false;
       logCoordinates();
     } else if (e.touches.length === 1) {
-      // Switch from zoom to drag
-      setIsDragging(true);
-      lastMousePos.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+      // Switch from zoom to potential drag
+      setIsDragging(false);
+      hasMoved.current = false;
+      const touch = e.touches[0];
+      lastMousePos.current = { x: touch.clientX, y: touch.clientY };
+      touchStartPos.current = { x: touch.clientX, y: touch.clientY };
+      touchStartTime.current = Date.now();
       touchStartDistance.current = 0;
       touchStartViewBox.current = null;
     }
-  }, [logCoordinates]);
+  }, [logCoordinates, isDragging]);
 
 
 
@@ -307,7 +383,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
   return (
     <div 
       ref={containerRef}
-      className="w-full h-screen bg-white overflow-hidden   active:cursor-grabbing "
+      className="w-full h-screen bg-white overflow-hidden active:cursor-grabbing"
     >
      <Floor1 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
     </div>
