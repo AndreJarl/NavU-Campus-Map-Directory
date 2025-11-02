@@ -2,6 +2,15 @@ import React from 'react'
 import enlab1 from "../assets/rooms/coe/CELAB01.jpg"
 import enlab2 from "../assets/rooms/coe/CELAB02.jpg"
 
+// COT IMAGES
+import artMastersClub from "../assets/rooms/COT-GrndFlr/ArtsMastersClub.jpg"
+import COTFemaleCr from "../assets/rooms/COT-GrndFlr/COTFemaleCr.jpg"
+import COTMaleCr from "../assets/rooms/COT-GrndFlr/COTMaleCr.jpg"
+import GadOffice from "../assets/rooms/COT-GrndFlr/GadOffice.jpg"
+import NSTPOffice from "../assets/rooms/COT-GrndFlr/NSTPOffice.jpg"
+
+
+
 const buildingData = {
  'College of Engineering Building': {
   totalFloors: 3,
