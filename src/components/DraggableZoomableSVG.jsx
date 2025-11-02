@@ -10,13 +10,22 @@ const DraggableZoomableSVG = ({OpenCard}) => {
       floor === 2 ? {x: 3, y: 4, width: 1440, height: 1024 } : floor === 3 ? {} :{}
   );
   
+  const initialViewBox = floor === 1 
+  ? { x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 }
+  : floor === 2 
+  ? {x: 3, y: 4, width: 1440, height: 1024 } 
+  : floor === 3 ? {} : {};
+
+
   // Set your desired zoom limits
   const MIN_SCALE = 3.0;  // Increased minimum zoom (less zoom out)
   const MAX_SCALE = 15.0; // Increased maximum zoom (more zoom in)
-  
-  const [scale, setScale] = useState(4.3);
+  const initialScale = 4.3;
+
+  const [scale, setScale] = useState(initialScale);
   const [isDragging, setIsDragging] = useState(false);
-  
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
   // Use refs for values that change during drag (won't trigger re-renders)
   const lastMousePos = useRef({ x: 0, y: 0 });
   const touchStartDistance = useRef(0);
@@ -367,6 +376,108 @@ const DraggableZoomableSVG = ({OpenCard}) => {
     };
   }, [handleWheel, handleMouseDown, handleMouseMove, handleMouseUp, handleTouchStart, handleTouchMove, handleTouchEnd]);
 
+
+
+  // Zoom in function
+const handleZoomIn = useCallback(() => {
+  const newScale = Math.min(MAX_SCALE, scale * 1.2);
+  if (newScale !== scale) {
+    const baseWidth = 1440;
+    const baseHeight = 1024;
+    
+    const newWidth = baseWidth / newScale;
+    const newHeight = baseHeight / newScale;
+    
+    // Keep the center point the same
+    const centerX = viewBox.x + viewBox.width / 2;
+    const centerY = viewBox.y + viewBox.height / 2;
+    
+    const newX = centerX - newWidth / 2;
+    const newY = centerY - newHeight / 2;
+    
+    setScale(newScale);
+    setViewBox({
+      x: newX,
+      y: newY,
+      width: newWidth,
+      height: newHeight
+    });
+    
+    logCoordinates();
+  }
+}, [scale, viewBox, MAX_SCALE, logCoordinates]);
+
+// Zoom out function
+const handleZoomOut = useCallback(() => {
+  const newScale = Math.max(MIN_SCALE, scale / 1.2);
+  if (newScale !== scale) {
+    const baseWidth = 1440;
+    const baseHeight = 1024;
+    
+    const newWidth = baseWidth / newScale;
+    const newHeight = baseHeight / newScale;
+    
+    // Keep the center point the same
+    const centerX = viewBox.x + viewBox.width / 2;
+    const centerY = viewBox.y + viewBox.height / 2;
+    
+    const newX = centerX - newWidth / 2;
+    const newY = centerY - newHeight / 2;
+    
+    setScale(newScale);
+    setViewBox({
+      x: newX,
+      y: newY,
+      width: newWidth,
+      height: newHeight
+    });
+    
+    logCoordinates();
+  }
+}, [scale, viewBox, MIN_SCALE, logCoordinates]);
+
+const handleReset = useCallback(() => {
+  const baseWidth = 1440;
+  const baseHeight = 1024;
+  
+  setScale(initialScale);
+  setViewBox({
+    x: initialViewBox.x,
+    y: initialViewBox.y,
+    width: baseWidth / initialScale,
+    height: baseHeight / initialScale
+  });
+  console.log('View reset to initial state');
+}, [initialScale, initialViewBox]);
+
+
+// Fullscreen function
+
+    const handleFullscreen = () => {
+      const elem = document.documentElement;
+    
+      if (!document.fullscreenElement &&    // Standard
+          !document.webkitFullscreenElement && // Safari
+          !document.msFullscreenElement) {     // IE11
+        // Enter fullscreen
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          elem.msRequestFullscreen();
+        }
+      } else {
+        // Exit fullscreen
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      }
+    };
   // Update viewBox when scale changes to maintain consistency
   useEffect(() => {
     const baseWidth = 1440;
@@ -381,12 +492,44 @@ const DraggableZoomableSVG = ({OpenCard}) => {
   }, [scale]);
 
   return (
-    <div 
-      ref={containerRef}
-      className="w-full h-screen bg-white overflow-hidden active:cursor-grabbing"
+<div 
+  ref={containerRef}
+  className="w-full h-screen bg-white overflow-hidden active:cursor-grabbing"
+>
+
+  <div className="absolute top-4 right-4 lg:top-auto items-center justify-center lg:bottom-4 lg:right-5 z-10 flex flex-col lg:flex-col gap-2">  
+    <button
+      onClick={handleZoomIn}
+      className="w-9 h-9 lg:w-11 lg:h-11 bg-black/70 border border-gray-300 rounded-md shadow-md flex items-center justify-center hover:bg-black/80 active:bg-black/90 transition-colors"
+      title="Zoom In"
     >
-     <Floor1 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
-    </div>
+      <span className="text-lg lg:text-2xl font-semibold text-white">+</span>
+    </button>
+    <button
+      onClick={handleZoomOut}
+      className="w-9 h-9 lg:w-11 lg:h-11 bg-black/70 border border-gray-300 rounded-md shadow-md flex items-center justify-center hover:bg-black/80 active:bg-black/90 transition-colors"
+      title="Zoom Out"
+    >
+      <span className="text-lg lg:text-2xl font-semibold text-white">−</span>
+    </button>
+    <button
+      onClick={handleReset}
+      className="w-9 h-9 lg:w-11 lg:h-11 bg-black/70 border border-gray-300 rounded-md shadow-md flex items-center justify-center hover:bg-black/80 active:bg-black/90 transition-colors"
+      title="Reset View"
+    >
+      <span className="text-base lg:text-xl text-white">⟲</span>
+    </button>
+    <button
+      onClick={handleFullscreen}
+      className="w-9 h-9 lg:w-11 lg:h-11 bg-black/70 border border-gray-300 rounded-md shadow-md flex items-center justify-center hover:bg-black/80 active:bg-black/90 transition-colors"
+      title={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
+    >
+      <span className="text-lg lg:text-2xl text-white">{isFullscreen ? "⛷" : "⛶"}</span>
+    </button>
+  </div>
+
+  <Floor1 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
+</div>
   );
 };
 

@@ -35,9 +35,7 @@ function Map() {
     
 
 
-       
-
-
+          
         useEffect(() => {
         console.log("Query updated:", query);
       }, [query]);
@@ -137,60 +135,60 @@ function Map() {
           }
      }
     
-    // Example: When user clicks a building or room card
-const OpenCard = (clickedName) => {
-  setCategory("");
-  let selected = null;
+          // Example: When user clicks a building or room card
+      const OpenCard = (clickedName) => {
+        setCategory("");
+        let selected = null;
 
-  // Loop through buildings
-  for (const [buildingName, building] of Object.entries(buildingData)) {
-    // 🏢 If user clicked a building name
-    if (buildingName === clickedName) {
-      selected = { building: buildingName, floor: null, room: null };
-      break;
-    }
+        // Loop through buildings
+        for (const [buildingName, building] of Object.entries(buildingData)) {
+          // 🏢 If user clicked a building name
+          if (buildingName === clickedName) {
+            selected = { building: buildingName, floor: null, room: null };
+            break;
+          }
 
-    // Skip buildings without rooms
-    if (!building.rooms) continue;
+          // Skip buildings without rooms
+          if (!building.rooms) continue;
 
-    // 🏬 Search rooms for a match
-    for (const [floor, rooms] of Object.entries(building.rooms)) {
-      for (const room of rooms) {
-        if (room.name === clickedName || room.code === clickedName) {
-          selected = { building: buildingName, floor, room };
-          break;
+          // 🏬 Search rooms for a match
+          for (const [floor, rooms] of Object.entries(building.rooms)) {
+            for (const room of rooms) {
+              if (room.name === clickedName || room.code === clickedName) {
+                selected = { building: buildingName, floor, room };
+                break;
+              }
+            }
+            if (selected) break;
+          }
+          if (selected) break;
         }
-      }
-      if (selected) break;
-    }
-    if (selected) break;
-  }
 
-  // If a building or room was found, update query
-  if (selected) {
-    setQuery((prev) => ({
-      ...prev,
-      building: selected.building || prev.building,
-      floor: selected.floor || prev.floor,
-      room: {
-        name: selected.room?.name || prev.room?.name,
-        code: selected.room?.code || prev.room?.code,
-        img: selected.room?.img || prev.room?.img,
-        description: selected.room?.description || prev.room?.description,
-      },
-    }));
-  }
-   
-  if(selected.room){
-      setRoomSearched(true);
-      setBldClicked(false);
-  }
-  if(!selected.room){
-      setBldClicked(true);
-       setRoomSearched(false);
-  }
-  console.log(query);
-};
+        // If a building or room was found, update query
+        if (selected) {
+          setQuery((prev) => ({
+            ...prev,
+            building: selected.building || prev.building,
+            floor: selected.floor || prev.floor,
+            room: {
+              name: selected.room?.name || prev.room?.name,
+              code: selected.room?.code || prev.room?.code,
+              img: selected.room?.img || prev.room?.img,
+              description: selected.room?.description || prev.room?.description,
+            },
+          }));
+        }
+        
+        if(selected.room){
+            setRoomSearched(true);
+            setBldClicked(false);
+        }
+        if(!selected.room){
+            setBldClicked(true);
+            setRoomSearched(false);
+        }
+        console.log(query);
+      };
 
 
 
