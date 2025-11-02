@@ -517,7 +517,7 @@ const handleReset = useCallback(() => {
       className="w-9 h-9 lg:w-11 lg:h-11 bg-black/70 border border-gray-300 rounded-md shadow-md flex items-center justify-center hover:bg-black/80 active:bg-black/90 transition-colors"
       title="Reset View"
     >
-      <span className="text-base lg:text-xl text-white">⟲</span>
+      <span className="text-lg lg:text-xl text-white">⟲</span>
     </button>
     <button
       onClick={handleFullscreen}
