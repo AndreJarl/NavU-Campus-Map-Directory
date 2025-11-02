@@ -13,6 +13,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
 const [chevron, setChevron] = useState(false);
 
   const handleDirections = (roomName) => {
+    setChevron(false);
     setPath(roomName);
   };
 
