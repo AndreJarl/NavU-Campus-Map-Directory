@@ -7,6 +7,7 @@ import { QueryProvider } from './context/QueryContext.jsx'
 import {FloorProvider} from "./context/FloorContext.jsx"
 import { PathProvider } from './context/PathContext.jsx'
 import { CategoryProvider } from './context/CategoryContext.jsx'
+import {SceneProvider} from './context/SceneContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,7 +16,9 @@ createRoot(document.getElementById('root')).render(
        <FloorProvider>
         <PathProvider>
           <CategoryProvider>
+               <SceneProvider>
                   <App />
+                </SceneProvider>
            </CategoryProvider>
       </PathProvider>
       </FloorProvider>

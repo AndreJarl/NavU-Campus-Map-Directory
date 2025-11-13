@@ -4,6 +4,7 @@ import cardData from "../data/CardData";
 import { Building2, Signpost, ChevronUp, ChevronDown,  Minus, Ellipsis } from "lucide-react";
 import buildingData from "../data/buildingData";
 import { usePath } from "../context/PathContext";
+import { useScene } from "../context/SceneContext";
 
 
 
@@ -11,6 +12,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
   const buildingDatas = cardData[query.building];
   const rooms = buildingData?.[query.building]?.rooms;
   const {setPath} = usePath();
+  const {setCurrentScene} = useScene();
   const [chevron, setChevron] = useState(false);
 
   const [selectedFloor, setSelectedFloor] = useState(
@@ -20,6 +22,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
   const CloseCard = () => {
     setBldClicked(false);
     setPath("");
+    setCurrentScene("Main Gate")
   };
 
 

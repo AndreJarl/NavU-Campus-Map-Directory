@@ -12,6 +12,7 @@ import DraggableZoomableSVG from '../components/DraggableZoomableSVG';
 import Panorama from '../components/Panorama';
 import PanoramaViewer from '../components/PanoramaViewer';
 import { useCategory } from '../context/CategoryContext';
+import { useScene } from '../context/SceneContext';
 
 
 
@@ -19,7 +20,7 @@ function Map() {
 
       const {query, setQuery} = useQuery();
       const {setCategory} = useCategory();
-
+      const {setCurrentScene} = useScene();
 
           const [searchTerm, setSearchTerm]= useState("");
           const [suggestions, setSuggestions] = useState([]);
@@ -100,18 +101,20 @@ function Map() {
 
   // Reset all view states first
 
-
+ 
      if(suggestion.room){
          setRoomSearched(true);
           setBldClicked(false);  
-         
+           setCurrentScene(suggestion.room);
         }
 
       // Set the appropriate state based on suggestion type
       if (!suggestion.room) {
         // Building-level search - show building overview
+         setCurrentScene(suggestion.building);
         setBldClicked(true);  // This is what controls BldOverview rendering
         setRoomSearched(false);
+         
       }
   
   setSearchTerm("");  
@@ -198,9 +201,8 @@ function Map() {
 
             <DraggableZoomableSVG OpenCard={OpenCard}/>          
              <Categories />
-            
-            <PanoramaViewer />
-
+           
+           
                         <SearchBar searchTerm={searchTerm} suggestions={suggestions}  handleSearch={handleSearch} handleSuggestionClicked={handleSuggestionClicked} />
 
 

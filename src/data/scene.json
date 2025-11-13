@@ -1,12 +1,12 @@
 {
-  "main_gate": {
+  "Main Gate": {
     "image": "public/360imgs/CTU360/CTUFront.JPG",
     "hotspots": [
       {
         "pitch": -20.5,
         "yaw": 20,
         "type": "arrow",
-        "target": "main_gate2",
+        "target": "Security Office",
         "arrowType": "forward"
       },
     
@@ -18,7 +18,7 @@
       }
     ]
   },
-  "main_gate2": {
+  "Security Office": {
     "image": "public/360imgs/CTU360/CTUFront2.JPG",
     "hotspots": [
       {
@@ -32,7 +32,7 @@
         "pitch": -50.5,
         "yaw": 50,
         "type": "arrow",
-        "target": "main_gate",
+        "target": "Main Gate",
         "arrowType": "backward",
         "rotation": 180
       },
@@ -58,15 +58,27 @@
         "pitch": -50.5,
         "yaw": 30,
         "type": "arrow",
-        "target": "main_gate2",
+        "target": "Security Office",
         "arrowType": "backward",
         "rotation": 180
       },
           {
         "pitch": 10,
-        "yaw":120,
+        "yaw":150,
         "type": "info",
         "label": "Security Office"
+      },
+       {
+        "pitch": 10,
+        "yaw": 300,
+        "type": "info",
+        "label": "Water Refilling Station"
+      },
+          {
+        "pitch": 10,
+        "yaw": 320,
+        "type": "info",
+        "label": "Laudry Station"
       }
     ]
   }
