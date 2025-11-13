@@ -6,7 +6,7 @@ import enlab2 from "../assets/rooms/coe/CELAB02.jpg"
 import artMastersClub from "../assets/rooms/COT-GrndFlr/ArtsMastersClub.jpg"
 import COTFemaleCr from "../assets/rooms/COT-GrndFlr/COTFemaleCR.jpg"
 import COTMaleCr from "../assets/rooms/COT-GrndFlr/COTMaleCr.jpg"
-import GadOffice from "../assets/rooms/COT-GrndFlr/GadOffice.jpg"
+import GadOffice from "../assets/rooms/COT-GrndFlr/GADOffice.jpg"
 import NSTPOffice from "../assets/rooms/COT-GrndFlr/NSTPOffice.jpg"
 
 
