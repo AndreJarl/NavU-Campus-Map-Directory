@@ -1,19 +1,21 @@
 import React, { forwardRef } from 'react';
 import { usePath } from '../context/PathContext';
 import { useCategory } from '../context/CategoryContext';
+import { useScene } from '../context/SceneContext';
 
 
 const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
 
   const { path, setPath } = usePath();
   const { category } = useCategory();
-
+  const {setCurrentScene} = useScene();
   const allFalse = Object.values(category).every((val) => !val); // check if all category are false
 
   const bldClicked = (buildingName) => {
     console.log("Clicked:", buildingName); // Test if this logs first
     OpenCard(buildingName);
     setPath("");
+    setCurrentScene(buildingName)
     zooomBuildingbyName(buildingName);
   }
 
@@ -1111,7 +1113,7 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill={allFalse ? '#6f3dd2' : category["Restroom"] ? "#6f3dd2" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category["Restroom"] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M6 745.6h5v1H6z" />
 
         {/* SECURITY OFFICE bldg */}
-        <path fill={allFalse ? '#8cd200' : category[""] ? "#8cd200" : "#B0B0B0"} stroke={allFalse ? '#609400' : category[""] ? "#609400" : "#B0B0B0"} stroke-width={0.4} d="M109 802h27v11h-27z" />
+        <path onClick={() => bldClicked("Security Office")} style={{ cursor: "pointer", pointerEvents: 'all' }} fill={allFalse ? '#8cd200' : category[""] ? "#8cd200" : "#B0B0B0"} stroke={allFalse ? '#609400' : category[""] ? "#609400" : "#B0B0B0"} stroke-width={0.4} d="M109 802h27v11h-27z" />
         <text x="122.5" y="809" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">SECURITY OFFICE</text>
         <path fill={allFalse ? '#6eaa00' : category[""] ? "#6eaa00" : "#B0B0B0"} stroke={allFalse ? '#609400' : category[""] ? "#609400" : "#B0B0B0"} stroke-width={0.4} d="M109 813h27v2h-27z" />
 

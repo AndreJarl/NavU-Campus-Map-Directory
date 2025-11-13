@@ -1,53 +1,84 @@
 {
-  "main_gate": {
-    "image": "public/360imgs/1stF/1stEng/1stFlrENG0.JPG",
+  "Main Gate": {
+    "image": "public/360imgs/CTU360/CTUFront.JPG",
     "hotspots": [
       {
         "pitch": -20.5,
         "yaw": 20,
         "type": "arrow",
-        "target": "laundry",
+        "target": "Security Office",
         "arrowType": "forward"
       },
-      {
-        "pitch": -50.5,
-        "yaw": 20,
-        "type": "arrow",
-        "target": "laundry",
-        "arrowType": "backward",
-        "rotation": 180
-      },
+    
       {
         "pitch": 10,
         "yaw":25,
         "type": "info",
-        "label": "Civil Engineering Lab"
+        "label": "CTU Entrance"
       }
     ]
   },
-  "laundry": {
-    "image": "public/360imgs/1stF/1stEng/1stFlrENG1.JPG",
+  "Security Office": {
+    "image": "public/360imgs/CTU360/CTUFront2.JPG",
     "hotspots": [
       {
         "pitch": -20.5,
-        "yaw": 1,
+        "yaw": 50,
+        "type": "arrow",
+        "target": "main_gate3",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -50.5,
+        "yaw": 50,
+        "type": "arrow",
+        "target": "Main Gate",
+        "arrowType": "backward",
+        "rotation": 180
+      },
+          {
+        "pitch": 10,
+        "yaw":120,
+        "type": "info",
+        "label": "Security Office"
+      }
+    ]
+  },
+    "main_gate3": {
+    "image": "public/360imgs/360PATH-Oval/Oval_Path.JPG",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 30,
         "type": "arrow",
         "target": "four",
         "arrowType": "forward"
       },
       {
         "pitch": -50.5,
-        "yaw": 1,
+        "yaw": 30,
         "type": "arrow",
-        "target": "main_gate",
+        "target": "Security Office",
         "arrowType": "backward",
         "rotation": 180
       },
           {
-        "pitch": -190,
-        "yaw":15,
+        "pitch": 10,
+        "yaw":150,
         "type": "info",
-        "label": "Civil Engineering Lab"
+        "label": "Security Office"
+      },
+       {
+        "pitch": 10,
+        "yaw": 300,
+        "type": "info",
+        "label": "Water Refilling Station"
+      },
+          {
+        "pitch": 10,
+        "yaw": 320,
+        "type": "info",
+        "label": "Laudry Station"
       }
     ]
   }

@@ -4,11 +4,13 @@ import { CornerUpRight , ScanQrCode, ChevronUp, ChevronDown, Minus, Ellipsis } f
 import { usePath } from "../context/PathContext";
 import { useState, useRef } from "react";
 import qr from "../assets/qr.png";
+import { useScene } from "../context/SceneContext";
 
 function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setDisable, disable, setBldClicked }) {
   const { query } = useQuery();
   const { room, floor } = query; 
   const { setPath } = usePath();
+  const {setCurrentScene} = useScene();
   const [showQRPopup, setShowQRPopup] = useState(false);
 const [chevron, setChevron] = useState(false);
 
@@ -22,6 +24,7 @@ const [chevron, setChevron] = useState(false);
     setRoomSearched(false);
     setPath("");
     setDisable(false);
+    setCurrentScene("Main Gate")
   };
 
   return (

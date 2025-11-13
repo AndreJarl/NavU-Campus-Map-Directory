@@ -52,17 +52,17 @@ const handleClick = (cat) => {
 
  
   return (
-  <div className="fixed bottom-1 left-1/2 -translate-x-1/2 lg:top-2 lg:left-1/2 lg:-translate-x-[22%] w-full max-w-[95vw] lg:w-auto px-2 z-[50] pointer-events-none">
-    <div className="flex gap-3 lg:gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide py-2 pointer-events-auto">
+  <div className="fixed bottom-1 left-1/2 -translate-x-1/2 lg:top-3 lg:left-1/2 lg:-translate-x-[25%] w-full max-w-[95vw] lg:w-auto px-2 z-[50] pointer-events-none">
+    <div className="flex gap-3 lg:gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide py-2 pointer-events-auto">
       {categories.map((cat) => (
         <button
           key={cat.id}
           onClick={() => handleClick(cat.label)}
-          className={`flex items-center gap-2 px-4 py-1 rounded-full flex-shrink-0 cursor-pointer pointer-events-auto ${
+          className={`flex items-center gap-1 px-4 py-1 rounded-full flex-shrink-0 cursor-pointer pointer-events-auto ${
             category && activeCategory === cat.label ? "bg-red-700/60" : "bg-black/70"
           } backdrop-blur-md border border-white/10 shadow-lg transition select-none`}
         >
-          <span className="text-lg pointer-events-none">{cat.icon}</span>
+          <span className="text-sm pointer-events-none">{cat.icon}</span>
           <span className="text-sm font-medium text-white drop-shadow pointer-events-none">
             {cat.label}
           </span>
