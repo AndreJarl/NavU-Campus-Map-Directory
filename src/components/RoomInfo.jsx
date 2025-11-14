@@ -18,10 +18,14 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
   const [isDragging, setIsDragging] = useState(false);
   const [startY, setStartY] = useState(0);
   const [startHeight, setStartHeight] = useState(0);
+  
+  // Image loading states
+  const [imageLoading, setImageLoading] = useState(true);
+  const [imageError, setImageError] = useState(false);
 
   // Height limits
   const MIN_HEIGHT = 20;
-  const MAX_HEIGHT = 70;
+  const MAX_HEIGHT = 85;
   const SCROLL_DISABLE_THRESHOLD = 50; // Disable scroll when card is 50% or more
 
   const handleDirections = (roomName) => {
@@ -36,6 +40,24 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
     setDisable(false);
     setCurrentScene("Main Gate");
   };
+
+  // Handle image load
+  const handleImageLoad = () => {
+    setImageLoading(false);
+    setImageError(false);
+  };
+
+  // Handle image error
+  const handleImageError = () => {
+    setImageLoading(false);
+    setImageError(true);
+  };
+
+  // Reset image state when room changes
+  useEffect(() => {
+    setImageLoading(true);
+    setImageError(false);
+  }, [room?.img]);
 
   // Handle touch/mouse events for dragging - MOBILE ONLY
   const handleDragStart = (e) => {
@@ -172,7 +194,46 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
               <h3 className="mb-2 font-medium text-red-400 text-base lg:text-base">
                 Floor {floor}
               </h3>
-              <img className="lg:w-[100%] w-[100%] md:w-[100%] lg:h-[60%] rounded-lg shadow-md" src={room.img} alt="" />
+              
+              <div className="relative">
+                {/* Loading Skeleton */}
+                {imageLoading && (
+                  <div className="w-full h-48 bg-black/60  rounded-lg flex items-center justify-center">
+                    <div className="flex flex-col items-center gap-2">
+                      <div className="w-8 h-8 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      <p className="text-white/70 text-sm">Loading image...</p>
+                    </div>
+                  </div>
+                )}
+                
+                {/* Error State */}
+                {imageError && (
+                  <div className="w-full h-48 bg-black/60 rounded-lg flex items-center justify-center">
+                    <div className="flex flex-col items-center gap-2 text-white/70">
+                      <ScanQrCode size={32} />
+                      <p className="text-sm">Failed to load image</p>
+                      <button 
+                        onClick={() => {
+                          setImageLoading(true);
+                          setImageError(false);
+                        }}
+                        className="text-xs bg-white/20 px-3 py-1 rounded-lg hover:bg-white/30 transition"
+                      >
+                        Retry
+                      </button>
+                    </div>
+                  </div>
+                )}
+                
+                {/* Actual Image */}
+                <img 
+                  className={`lg:w-[100%] w-[100%] md:w-[100%] lg:h-[60%] rounded-lg shadow-md ${imageLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+                  src={room.img} 
+                  alt="" 
+                  onLoad={handleImageLoad}
+                  onError={handleImageError}
+                />
+              </div>
             </>
           )}
 
