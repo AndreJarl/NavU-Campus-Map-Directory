@@ -1,8 +1,8 @@
 import { AiOutlineClose } from "react-icons/ai";
 import { useQuery } from "../context/QueryContext";
-import { CornerUpRight , ScanQrCode, ChevronUp, ChevronDown, Minus, Ellipsis } from "lucide-react";
+import { CornerUpRight, ScanQrCode, ChevronUp, ChevronDown, Minus, Ellipsis } from "lucide-react";
 import { usePath } from "../context/PathContext";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import qr from "../assets/qr.png";
 import { useScene } from "../context/SceneContext";
 
@@ -10,12 +10,21 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
   const { query } = useQuery();
   const { room, floor } = query; 
   const { setPath } = usePath();
-  const {setCurrentScene} = useScene();
+  const { setCurrentScene } = useScene();
   const [showQRPopup, setShowQRPopup] = useState(false);
-const [chevron, setChevron] = useState(false);
+  
+  // Drag state
+  const [cardHeight, setCardHeight] = useState(40); // percentage of screen height
+  const [isDragging, setIsDragging] = useState(false);
+  const [startY, setStartY] = useState(0);
+  const [startHeight, setStartHeight] = useState(0);
+
+  // Height limits
+  const MIN_HEIGHT = 20;
+  const MAX_HEIGHT = 85;
 
   const handleDirections = (roomName) => {
-    setChevron(false);
+    setCardHeight(40); // Reset to default height
     setPath(roomName);
   };
 
@@ -24,60 +33,159 @@ const [chevron, setChevron] = useState(false);
     setRoomSearched(false);
     setPath("");
     setDisable(false);
-    setCurrentScene("Main Gate")
+    setCurrentScene("Main Gate");
   };
+
+  // Handle touch/mouse events for dragging - MOBILE ONLY
+  const handleDragStart = (e) => {
+    // Only allow dragging on mobile (when lg breakpoint is not active)
+    if (window.innerWidth >= 1024) return;
+    
+    setIsDragging(true);
+    const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+    setStartY(clientY);
+    setStartHeight(cardHeight);
+    
+    // Prevent default to avoid text selection
+    e.preventDefault();
+  };
+
+  const handleDragMove = (e) => {
+    // Only allow dragging on mobile
+    if (window.innerWidth >= 1024) return;
+    if (!isDragging) return;
+
+    const clientY = e.type.includes('touch') ? 
+      (e.touches ? e.touches[0].clientY : e.changedTouches[0].clientY) : 
+      e.clientY;
+    
+    const deltaY = startY - clientY;
+    const newHeight = Math.min(Math.max(startHeight + (deltaY / window.innerHeight) * 100, MIN_HEIGHT), MAX_HEIGHT);
+    
+    setCardHeight(newHeight);
+  };
+
+  const handleDragEnd = () => {
+    // Only allow dragging on mobile
+    if (window.innerWidth >= 1024) return;
+    if (!isDragging) return;
+    setIsDragging(false);
+  };
+
+  // Add event listeners for dragging - MOBILE ONLY
+  useEffect(() => {
+    // Only set up drag events on mobile
+    if (window.innerWidth >= 1024) return;
+    
+    if (isDragging) {
+      document.addEventListener('mousemove', handleDragMove);
+      document.addEventListener('mouseup', handleDragEnd);
+      document.addEventListener('touchmove', handleDragMove);
+      document.addEventListener('touchend', handleDragEnd);
+      
+      return () => {
+        document.removeEventListener('mousemove', handleDragMove);
+        document.removeEventListener('mouseup', handleDragEnd);
+        document.removeEventListener('touchmove', handleDragMove);
+        document.removeEventListener('touchend', handleDragEnd);
+      };
+    }
+  }, [isDragging]);
 
   return (
     <>
+      {/* Backdrop overlay for expanded state - MOBILE ONLY */}
+      {cardHeight > 40 && window.innerWidth < 1024 && (
+        <div 
+          className="fixed inset-0 bg-black/20 z-40 lg:hidden"
+          onClick={() => setCardHeight(40)}
+        />
+      )}
+
       <div
-       
         className={`${roomSearched ? "fixed inset-x-0 bottom-0 m-2 lg:h-[85%] lg:m-0 lg:absolute lg:left-8 lg:top-20 z-[50]" : "hidden"}
-        w-auto ${!chevron ? ' h-[40%]' : 'h-[75%]'}  lg:w-[420px] my-4 rounded-3xl backdrop-blur-lg bg-black/70 border border-white/20 shadow-md p-2
-        transform transition-transform pointer-events-auto ease-in-out duration-200 flex flex-col`}
+        w-auto lg:w-[420px] my-4 rounded-3xl backdrop-blur-lg bg-black/70 border border-white/20 shadow-md p-2
+        transform transition-all duration-300 ease-out pointer-events-auto flex flex-col`}
+        style={{
+          // On desktop (lg and above), use fixed height, on mobile use dynamic height
+          height: window.innerWidth >= 1024 ? '85%' : `${cardHeight}vh`,
+          transition: isDragging ? 'none' : 'all 0.3s ease-out'
+        }}
       >
-          <div   
-               onClick={()=>setChevron(!chevron)}
-                 className="absolute top-0 inset-x-0 flex justify-center lg:hidden z-[200] opacity-60">
-                  {!chevron ? <Minus color="white" size={40} /> : <Ellipsis color="white" size={40} />} 
-                </div>
+        {/* Drag Handle - MOBILE ONLY */}
+        {window.innerWidth < 1024 && (
+          <div 
+            className="absolute top-0 inset-x-0 flex justify-center items-center py-2 z-[200] cursor-grab active:cursor-grabbing"
+            onMouseDown={handleDragStart}
+            onTouchStart={handleDragStart}
+          >
+            <div className="w-12 h-1.5 bg-white/40 rounded-full"></div>
+          </div>
+        )}
 
         <div className="p-4 pt-3 top-0 absolute right-0 flex justify-between items-center z-[300]">
           <button
             onClick={closeBtn}
-            className="rounded-full bg-red-500 hover:bg-red-700 font-bold text-xl flex gap-2 items-center text-white px-2 py-2"
+            className="rounded-full bg-red-500 hover:bg-red-700 font-bold lg:text-xl text-lg flex gap-2 items-center text-white lg:px-2 lg:py-2 px-1 py-1"
           >
             <AiOutlineClose />
           </button>
         </div>
 
         <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 px-5 mt-2 text-white">
-          <h2 className="text-xl md:text-lg lg:text-3xl font-semibold drop-shadow-lg">
-            {room?.name}
-          </h2>
-          <h3 className="mb-2 font-medium text-red-400 text-base lg:text-base">
-            Floor {floor}
-          </h3>
-          <img className="lg:w-[100%] w-[100%] md:w-[100%] lg:h-[60%] rounded-lg shadow-md" src={room.img} alt="" />
-          <h3 className="font-medium text-gray-200 lg:text-xl">
-            {room.code}
-          </h3>
-          <p className="mb-2 text-gray-300 text-sm lg:text-base">{room.description}</p>
+          {/* Room Image - Only show when not minimized on MOBILE, always show on DESKTOP */}
+          {(window.innerWidth >= 1024 || cardHeight > MIN_HEIGHT) && (
+            <>
+              <h2 className="text-xl md:text-lg lg:text-3xl font-semibold drop-shadow-lg">
+                {room?.name}
+              </h2>
+              <h3 className="mb-2 font-medium text-red-400 text-base lg:text-base">
+                Floor {floor}
+              </h3>
+              <img className="lg:w-[100%] w-[100%] md:w-[100%] lg:h-[60%] rounded-lg shadow-md" src={room.img} alt="" />
+            </>
+          )}
+
+          {/* Room details - Always show on DESKTOP, conditional on MOBILE */}
+          {(window.innerWidth >= 1024 || cardHeight > 30) && (
+            <>
+              <h3 className="font-medium text-gray-200 lg:text-xl">
+                {room.code}
+              </h3>
+              <p className="mb-2 text-gray-300 text-sm lg:text-base">{room.description}</p>
+            </>
+          )}
+
+          {/* Minimized State Content - MOBILE ONLY */}
+          {window.innerWidth < 1024 && cardHeight <= MIN_HEIGHT && (
+            <div className="text-white">
+              <p className="text-lg font-bold uppercase truncate">
+                {room?.name}
+              </p>
+              <p className="text-sm text-gray-300 truncate">
+                Floor {floor} • {room.code}
+              </p>
+            </div>
+          )}
         </div>
 
-        <div className="border-t flex lg:flex-row text-center pb-4 lg:mb-0 justify-center border-white/20 pt-4  lg:text-base text-xs gap-4">
-          <button
-            className="lg:py-3 lg:px-5 py-2 px-4 bg-red-500 flex gap-3 items-center text-center text-white rounded-3xl justify-center hover:bg-red-600 transition"
-            onClick={() => handleDirections(room.name)}
-          >
-            <CornerUpRight size={20}/> Get Directions
-          </button>
-          <button
-            className="lg:py-3 lg:px-5 py-2 px-4 bg-white/20  flex gap-3 text-center  items-center text-white rounded-3xl justify-center hover:bg-white/10 transition"
-            onClick={() => setShowQRPopup(true)}
-          >
-            <ScanQrCode size={20} /> Generate QR
-          </button>
-        </div>
+        {/* Action Buttons - Always show on DESKTOP, conditional on MOBILE */}
+        {(window.innerWidth >= 1024 || cardHeight > 25) && (
+          <div className="border-t flex lg:flex-row text-center pb-4 lg:mb-0 justify-center border-white/20 pt-4 lg:text-base text-xs gap-4">
+            <button
+              className="lg:py-3 lg:px-5 py-2 px-4 bg-red-500 flex text-[11px] gap-3 items-center text-center text-white rounded-3xl justify-center hover:bg-red-600 transition"
+              onClick={() => handleDirections(room.name)}
+            >
+              <CornerUpRight size={20}/> Get Directions
+            </button>
+            <button
+              className="lg:py-3 lg:px-5 py-2 px-4 bg-white/20 text-[11px] flex gap-3 text-center items-center text-white rounded-3xl justify-center hover:bg-white/10 transition"
+              onClick={() => setShowQRPopup(true)}
+            >
+              <ScanQrCode size={20} /> Generate QR
+            </button>
+          </div>
+        )}
 
         {showQRPopup && (
           <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-[9999]">
@@ -101,7 +209,6 @@ const [chevron, setChevron] = useState(false);
             </div>
           </div>
         )}
-
       </div>
     </>
   );

@@ -4,6 +4,8 @@ import ceasfront1 from "../assets/bldFronts/CEASFront.jpg"
 import cemfront1 from "../assets/bldFronts/CMEFront.jpg"
 import adminfront from"../assets/bldFronts/AdminFront.jpg"
 import cotfront from "../assets/bldFronts/COTFront.jpg"
+import womendorm from "../assets/rooms/Dormitories/Women'sDormitory.jpg"
+import canteen from "../assets/rooms/bistro&canteen/Canteen.jpg"
 
 const cardData = {
     'College of Engineering Building': {
@@ -20,7 +22,10 @@ const cardData = {
     },
     'Graduate School Building': 4,
     'Bistro': 1,
-    'University Canteen': 1,
+    'University Canteen': {
+         totalFloors: 1,
+        img: canteen
+    },
     'Stage': 1,
     'College of Technology/COT Building': {
         totalFloors:3,
@@ -46,7 +51,10 @@ const cardData = {
     'CTU Facility Centrum': 2,
     'HM Laboratory': 1,
     'Mens Dorm': 1,
-    'Women Dorm': 2,
+    'Women Dorm': {
+         totalFloors: 2,
+        img: womendorm
+    },
     'Furniture Workshop': 1,
     'Security Office': 1,
     'ERRC Building': 2,
