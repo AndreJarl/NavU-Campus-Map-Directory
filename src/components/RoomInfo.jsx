@@ -198,7 +198,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
               <div className="relative">
                 {/* Loading Skeleton */}
                 {imageLoading && (
-                  <div className="w-full h-48 bg-black/60  rounded-lg flex items-center justify-center">
+                  <div className="w-full lg:h-64 h-48 bg-black/60  rounded-lg flex items-center justify-center">
                     <div className="flex flex-col items-center gap-2">
                       <div className="w-8 h-8 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
                       <p className="text-white/70 text-sm">Loading image...</p>
@@ -208,7 +208,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
                 
                 {/* Error State */}
                 {imageError && (
-                  <div className="w-full h-48 bg-black/60 rounded-lg flex items-center justify-center">
+                  <div className="w-full lg:h-64 h-48 bg-black/60 rounded-lg flex items-center justify-center">
                     <div className="flex flex-col items-center gap-2 text-white/70">
                       <ScanQrCode size={32} />
                       <p className="text-sm">Failed to load image</p>
@@ -227,7 +227,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
                 
                 {/* Actual Image */}
                 <img 
-                  className={`lg:w-[100%] w-[100%] md:w-[100%] lg:h-[60%] rounded-lg shadow-md ${imageLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+                  className={`lg:w-[100%] w-[100%] md:w-[100%] lg:h-[100%] rounded-lg shadow-md ${imageLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
                   src={room.img} 
                   alt="" 
                   onLoad={handleImageLoad}
