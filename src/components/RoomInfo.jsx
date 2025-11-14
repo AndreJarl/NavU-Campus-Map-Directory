@@ -21,7 +21,8 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
 
   // Height limits
   const MIN_HEIGHT = 20;
-  const MAX_HEIGHT = 85;
+  const MAX_HEIGHT = 70;
+  const SCROLL_DISABLE_THRESHOLD = 50; // Disable scroll when card is 50% or more
 
   const handleDirections = (roomName) => {
     setCardHeight(40); // Reset to default height
@@ -72,6 +73,32 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
     setIsDragging(false);
   };
 
+  // Disable scroll ONLY when actively dragging AND card height is 50% or more - MOBILE ONLY
+  useEffect(() => {
+    if (window.innerWidth >= 1024) return;
+
+    const shouldDisableScroll = isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD;
+
+    if (shouldDisableScroll) {
+      // Disable scroll only during active drag above threshold
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+      document.body.style.userSelect = 'none';
+    } else {
+      // Always enable scroll when not dragging or below threshold
+      document.body.style.overflow = 'unset';
+      document.body.style.touchAction = 'unset';
+      document.body.style.userSelect = 'unset';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+      document.body.style.touchAction = 'unset';
+      document.body.style.userSelect = 'unset';
+    };
+  }, [isDragging, cardHeight]);
+
   // Add event listeners for dragging - MOBILE ONLY
   useEffect(() => {
     // Only set up drag events on mobile
@@ -105,7 +132,8 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
       <div
         className={`${roomSearched ? "fixed inset-x-0 bottom-0 m-2 lg:h-[85%] lg:m-0 lg:absolute lg:left-8 lg:top-20 z-[50]" : "hidden"}
         w-auto lg:w-[420px] my-4 rounded-3xl backdrop-blur-lg bg-black/70 border border-white/20 shadow-md p-2
-        transform transition-all duration-300 ease-out pointer-events-auto flex flex-col`}
+        transform transition-all duration-300 ease-out pointer-events-auto flex flex-col
+        ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'select-none' : ''}`} // Disable text selection during drag only when above threshold
         style={{
           // On desktop (lg and above), use fixed height, on mobile use dynamic height
           height: window.innerWidth >= 1024 ? '85%' : `${cardHeight}vh`,
@@ -115,7 +143,8 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
         {/* Drag Handle - MOBILE ONLY */}
         {window.innerWidth < 1024 && (
           <div 
-            className="absolute top-0 inset-x-0 flex justify-center items-center py-2 z-[200] cursor-grab active:cursor-grabbing"
+            className={`absolute top-0 inset-x-0 flex justify-center items-center py-2 z-[200] cursor-grab active:cursor-grabbing
+                      ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'select-none' : ''}`}
             onMouseDown={handleDragStart}
             onTouchStart={handleDragStart}
           >
@@ -132,7 +161,8 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 px-5 mt-2 text-white">
+        {/* Scrollable Content - Only disable interactions during active drag above threshold */}
+        <div className={`flex-1 overflow-y-auto p-4 flex flex-col gap-3 px-5 mt-2 text-white ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'pointer-events-none' : ''}`}>
           {/* Room Image - Only show when not minimized on MOBILE, always show on DESKTOP */}
           {(window.innerWidth >= 1024 || cardHeight > MIN_HEIGHT) && (
             <>
@@ -169,18 +199,24 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
           )}
         </div>
 
-        {/* Action Buttons - Always show on DESKTOP, conditional on MOBILE */}
+        {/* Action Buttons - Always show on DESKTOP, conditional on MOBILE - Only disable interactions during active drag above threshold */}
         {(window.innerWidth >= 1024 || cardHeight > 25) && (
-          <div className="border-t flex lg:flex-row text-center pb-4 lg:mb-0 justify-center border-white/20 pt-4 lg:text- text-xs gap-4">
+          <div className={`border-t flex lg:flex-row text-center pb-4 lg:mb-0 justify-center border-white/20 pt-4 lg:text-base text-xs gap-4 ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'pointer-events-none' : ''}`}>
             <button
               className="lg:py-3 lg:px-5 py-2 px-4 bg-red-500 flex text-[11px] lg:text-base gap-3 items-center text-center text-white rounded-3xl justify-center hover:bg-red-600 transition"
-              onClick={() => handleDirections(room.name)}
+              onClick={() => {
+                if (isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD) return; // Prevent click during drag only when above threshold
+                handleDirections(room.name);
+              }}
             >
               <CornerUpRight size={20}/> Get Directions
             </button>
             <button
               className="lg:py-3 lg:px-5 py-2 px-4 bg-white/20 text-[11px] lg:text-base flex gap-3 text-center items-center text-white rounded-3xl justify-center hover:bg-white/10 transition"
-              onClick={() => setShowQRPopup(true)}
+              onClick={() => {
+                if (isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD) return; // Prevent click during drag only when above threshold
+                setShowQRPopup(true);
+              }}
             >
               <ScanQrCode size={20} /> Generate QR
             </button>
