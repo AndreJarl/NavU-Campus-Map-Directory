@@ -25,6 +25,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
   // Height limits
   const MIN_HEIGHT = 20;
   const MAX_HEIGHT = 85;
+  const SCROLL_DISABLE_THRESHOLD = 50; // Disable scroll when card is 50% or more
 
   const CloseCard = () => {
     setBldClicked(false);
@@ -68,6 +69,32 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
     setIsDragging(false);
   };
 
+  // Disable scroll ONLY when actively dragging AND card height is 50% or more - MOBILE ONLY
+  useEffect(() => {
+    if (window.innerWidth >= 1024) return;
+
+    const shouldDisableScroll = isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD;
+
+    if (shouldDisableScroll) {
+      // Disable scroll only during active drag above threshold
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+      document.body.style.userSelect = 'none';
+    } else {
+      // Always enable scroll when not dragging or below threshold
+      document.body.style.overflow = 'unset';
+      document.body.style.touchAction = 'unset';
+      document.body.style.userSelect = 'unset';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+      document.body.style.touchAction = 'unset';
+      document.body.style.userSelect = 'unset';
+    };
+  }, [isDragging, cardHeight]); // Add cardHeight as dependency
+
   // Add event listeners for dragging - MOBILE ONLY
   useEffect(() => {
     // Only set up drag events on mobile
@@ -106,7 +133,8 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
         } z-[99] flex flex-col rounded-2xl border border-white/20 
         lg:w-[450px] 2xl:w-[450px] w-auto
         bg-black/80 backdrop-blur-md shadow-2xl pointer-events-auto
-        transform transition-all duration-300 ease-out`}
+        transform transition-all duration-300 ease-out
+        ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'select-none' : ''}`} // Disable text selection during drag only when above threshold
         style={{
           // On desktop (lg and above), use fixed height, on mobile use dynamic height
           height: window.innerWidth >= 1024 ? '85%' : `${cardHeight}vh`,
@@ -116,7 +144,8 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
         {/* Drag Handle - MOBILE ONLY */}
         {window.innerWidth < 1024 && (
           <div 
-            className="absolute top-0 inset-x-0 flex justify-center items-center py-2 z-[200] cursor-grab active:cursor-grabbing"
+            className={`absolute top-0 inset-x-0 flex justify-center items-center py-2 z-[200] cursor-grab active:cursor-grabbing
+                      ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'select-none' : ''}`}
             onMouseDown={handleDragStart}
             onTouchStart={handleDragStart}
           >
@@ -145,8 +174,8 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
           </div>
         )}
 
-        {/* Scrollable Content */}
-        <div className="flex-1 overflow-y-auto">
+        {/* Scrollable Content - Only disable interactions during active drag above threshold */}
+        <div className={`flex-1 overflow-y-auto ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'pointer-events-none' : ''}`}>
           {/* Building Info Section - Always show on DESKTOP, conditional on MOBILE */}
           {(window.innerWidth >= 1024 || cardHeight > MIN_HEIGHT) && (
             <div className="p-5 flex flex-col gap-3 text-white">
@@ -202,6 +231,8 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
                 rooms[selectedFloor].map((room, index) => (
                   <div 
                     onClick={() => {
+                      // Only prevent clicks during active drag above threshold
+                      if (isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD) return;
                       setQuery((prev) => ({
                         ...prev,
                         floor: selectedFloor,
@@ -217,7 +248,8 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
                       setBldClicked(false);
                     }}
                     key={index}
-                    className="p-4 cursor-pointer bg-white/10 rounded-lg hover:bg-white/20 transition shadow-md"
+                    className={`p-4 cursor-pointer bg-white/10 rounded-lg hover:bg-white/20 transition shadow-md
+                              ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'pointer-events-none' : ''}`}
                   >
                     <p className="font-bold text-white text-sm lg:text-lg">{room.name}</p>
                     <p className="lg:text-sm text-xs text-gray-200">{room.description}</p>
