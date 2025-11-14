@@ -5,7 +5,7 @@ import { useState } from "react";
 
 function SearchBar({ searchTerm, suggestions, handleSearch, handleSuggestionClicked }) {
   return (
-    <div className="fixed bottom-20 lg:top-3 left-1/2 -translate-x-1/2 lg:left-4 lg:translate-x-0 px-2 z-[50] w-full max-w-[95vw] lg:max-w-none pointer-events-none">
+    <div className="fixed bottom-16 lg:top-3 left-1/2 -translate-x-1/2 lg:left-4 lg:translate-x-0 px-2 z-[50] w-full max-w-[95vw] lg:max-w-none pointer-events-none">
       {/* 🔎 Main Search Bar */}
       <div
         className={`z-50 w-full lg:w-[30%] 2xl:w-[450px] px-4 lg:px-5 flex flex-row items-center justify-between
