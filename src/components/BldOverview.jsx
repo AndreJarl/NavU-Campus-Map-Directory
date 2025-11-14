@@ -16,6 +16,8 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
   const [isDragging, setIsDragging] = useState(false);
   const [startY, setStartY] = useState(0);
   const [startHeight, setStartHeight] = useState(0);
+  const [imageLoading, setImageLoading] = useState(true);
+  const [imageError, setImageError] = useState(false);
   const cardRef = useRef(null);
 
   const [selectedFloor, setSelectedFloor] = useState(
@@ -32,6 +34,24 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
     setPath("");
     setCurrentScene("Main Gate");
   };
+
+  // Handle image load
+  const handleImageLoad = () => {
+    setImageLoading(false);
+    setImageError(false);
+  };
+
+  // Handle image error
+  const handleImageError = () => {
+    setImageLoading(false);
+    setImageError(true);
+  };
+
+  // Reset image state when building changes
+  useEffect(() => {
+    setImageLoading(true);
+    setImageError(false);
+  }, [query.building]);
 
   // Handle touch/mouse events for dragging - MOBILE ONLY
   const handleDragStart = (e) => {
@@ -166,15 +186,47 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
         {/* Image - Only show when not minimized on MOBILE, always show on DESKTOP */}
         {(window.innerWidth >= 1024 || cardHeight > MIN_HEIGHT) && (
           <div className="relative w-full h-[40%] flex-shrink-0">
+            {/* Loading Skeleton */}
+            {imageLoading && (
+              <div className="absolute inset-0 flex items-center justify-center  bg-black/50 rounded-t-2xl">
+                <div className="flex flex-col items-center gap-2">
+                  <div className="w-8 h-8 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
+                  <p className="text-white/70 text-sm">Loading image...</p>
+                </div>
+              </div>
+            )}
+            
+            {/* Error State */}
+            {imageError && (
+              <div className="absolute inset-0 flex items-center justify-center bg-gray-800 rounded-t-2xl">
+                <div className="flex flex-col items-center gap-2 text-white/70">
+                  <Building2 size={32} />
+                  <p className="text-sm">Failed to load image</p>
+                  <button 
+                    onClick={() => {
+                      setImageLoading(true);
+                      setImageError(false);
+                    }}
+                    className="text-xs bg-white/20 px-3 py-1 rounded-lg hover:bg-white/30 transition"
+                  >
+                    Retry
+                  </button>
+                </div>
+              </div>
+            )}
+            
+            {/* Actual Image */}
             <img
-              className="w-full h-full object-cover rounded-t-2xl"
+              className={`w-full h-full object-cover rounded-t-2xl ${imageLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
               src={buildingDatas?.img}
               alt={query.building || "Building Image"}
+              onLoad={handleImageLoad}
+              onError={handleImageError}
             />
           </div>
         )}
 
-        {/* Scrollable Content - Only disable interactions during active drag above threshold */}
+        {/* Scrollable Content */}
         <div className={`flex-1 overflow-y-auto ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'pointer-events-none' : ''}`}>
           {/* Building Info Section - Always show on DESKTOP, conditional on MOBILE */}
           {(window.innerWidth >= 1024 || cardHeight > MIN_HEIGHT) && (
@@ -231,8 +283,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
                 rooms[selectedFloor].map((room, index) => (
                   <div 
                     onClick={() => {
-                      // Only prevent clicks during active drag above threshold
-                      if (isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD) return;
+                      if (isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD) return; // Prevent click during drag only when above threshold
                       setQuery((prev) => ({
                         ...prev,
                         floor: selectedFloor,
