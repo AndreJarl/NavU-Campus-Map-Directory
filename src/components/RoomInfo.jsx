@@ -171,15 +171,15 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
 
         {/* Action Buttons - Always show on DESKTOP, conditional on MOBILE */}
         {(window.innerWidth >= 1024 || cardHeight > 25) && (
-          <div className="border-t flex lg:flex-row text-center pb-4 lg:mb-0 justify-center border-white/20 pt-4 lg:text-base text-xs gap-4">
+          <div className="border-t flex lg:flex-row text-center pb-4 lg:mb-0 justify-center border-white/20 pt-4 lg:text- text-xs gap-4">
             <button
-              className="lg:py-3 lg:px-5 py-2 px-4 bg-red-500 flex text-[11px] gap-3 items-center text-center text-white rounded-3xl justify-center hover:bg-red-600 transition"
+              className="lg:py-3 lg:px-5 py-2 px-4 bg-red-500 flex text-[11px] lg:text-base gap-3 items-center text-center text-white rounded-3xl justify-center hover:bg-red-600 transition"
               onClick={() => handleDirections(room.name)}
             >
               <CornerUpRight size={20}/> Get Directions
             </button>
             <button
-              className="lg:py-3 lg:px-5 py-2 px-4 bg-white/20 text-[11px] flex gap-3 text-center items-center text-white rounded-3xl justify-center hover:bg-white/10 transition"
+              className="lg:py-3 lg:px-5 py-2 px-4 bg-white/20 text-[11px] lg:text-base flex gap-3 text-center items-center text-white rounded-3xl justify-center hover:bg-white/10 transition"
               onClick={() => setShowQRPopup(true)}
             >
               <ScanQrCode size={20} /> Generate QR
