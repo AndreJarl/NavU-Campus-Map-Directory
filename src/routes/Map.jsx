@@ -13,7 +13,7 @@ import Panorama from '../components/Panorama';
 import PanoramaViewer from '../components/PanoramaViewer';
 import { useCategory } from '../context/CategoryContext';
 import { useScene } from '../context/SceneContext';
-
+import person from "../assets/person.png"
 
 
 function Map() {
@@ -34,7 +34,7 @@ function Map() {
           const [roomSearched, setRoomSearched] = useState(false);
           const [bldCliked, setBldClicked] = useState(false);
     
-
+          const [clicked, setClicked] = useState(false);
 
           
         useEffect(() => {
@@ -199,7 +199,18 @@ function Map() {
 
     <div className='h-[100%]'>
 
-            <DraggableZoomableSVG OpenCard={OpenCard}/>          
+            <DraggableZoomableSVG OpenCard={OpenCard}/>   
+
+      
+      
+          <button  onClick={() => setClicked(!clicked)}
+           className="absolute rounded-full  bg-black/90 top-4 right-6 lg:top-auto items-center justify-center lg:bottom-4 lg:right-2 z-10 flex flex-col lg:flex-col gap-2">  
+                <img  className="w-7 h-7 lg:w-[100%] lg:h-11 px-2 border border-gray-300 rounded-full shadow-md flex items-center justify-center hover:bg-black/80  transition-colors" src={person} alt="" srcset="" />
+              </button>       
+              
+                  <PanoramaViewer clicked={clicked} setClicked={setClicked} />
+        
+             
              <Categories />
            
            
