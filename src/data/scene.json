@@ -25,11 +25,11 @@
         "pitch": -20.5,
         "yaw": 50,
         "type": "arrow",
-        "target": "main_gate3",
+        "target": "Water Refill/Laundry Shop",
         "arrowType": "forward"
       },
       {
-        "pitch": -50.5,
+        "pitch": -60.5,
         "yaw": 50,
         "type": "arrow",
         "target": "Main Gate",
@@ -44,7 +44,7 @@
       }
     ]
   },
-    "main_gate3": {
+    "Water Refill/Laundry Shop": {
     "image": "public/360imgs/360PATH-Oval/Oval_Path.JPG",
     "hotspots": [
       {
@@ -55,7 +55,7 @@
         "arrowType": "forward"
       },
       {
-        "pitch": -50.5,
+        "pitch": -60.5,
         "yaw": 30,
         "type": "arrow",
         "target": "Security Office",

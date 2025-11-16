@@ -129,7 +129,8 @@ const customInfo = (hotSpotDiv, args = {}) => {
             sceneFadeDuration: 1000,
             autoLoad: true,
             mouseZoom: true,
-            keyboardZoom: true
+            keyboardZoom: true,
+            showControls: false,
           },
           scenes: scenesConfig
         });
@@ -146,14 +147,15 @@ const customInfo = (hotSpotDiv, args = {}) => {
     }
   }, [scene]);
 
+  if (!clicked) {
+    return null;
+  }
+
   return (
-   <div className={`relative w-full ${clicked ? 'h-screen' : 'h-[135px]'}`}>
+    <div className="relative w-full h-full">
       <div 
         ref={viewerRef} 
-        className="w-[full] h-full"
-        style={{ 
-          pointerEvents: clicked ? 'auto' : 'none' 
-        }}
+        className="w-full h-full"
       />
     </div>
   );
