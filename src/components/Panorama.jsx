@@ -23,6 +23,7 @@ function Panorama({ scene, onChangeScene, clicked }) {
         width: 70px; height: 70px;
         transform-origin: center center;
         perspective: 800px;
+            opacity: 0.7;
       ">
         <svg width="70" height="70" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="background: transparent">
           <defs>
