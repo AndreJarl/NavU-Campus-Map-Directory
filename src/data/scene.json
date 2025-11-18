@@ -51,7 +51,7 @@
         "pitch": -20.5,
         "yaw": 30,
         "type": "arrow",
-        "target": "four",
+        "target": "Path ERRC",
         "arrowType": "forward"
       },
       {
@@ -81,5 +81,52 @@
         "label": "Laudry Station"
       }
     ]
+  }, 
+   "Path ERRC": {
+    "image": "public/360imgs/360PATH-Oval/PATH2_Oval.JPG",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "ERRC Building",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -60.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "Water Refill/Laundry Shop",
+        "arrowType": "backward",
+        "rotation": 180
+      }
+    ]
+  },
+   "ERRC Building": {
+    "image": "public/360imgs/360PATH-Oval/PATH1_Oval.JPG",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "Path ERRC",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -60.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "Path ERRC",
+        "arrowType": "backward",
+        "rotation": 180
+      },
+        {
+        "pitch": 10,
+        "yaw": 300,
+        "type": "info",
+        "label": "ERRC Building"
+      }
+    ]
   }
+   
 }

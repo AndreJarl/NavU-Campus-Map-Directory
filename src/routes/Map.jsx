@@ -204,8 +204,8 @@ function Map() {
       
       
           <button  onClick={() => setClicked(!clicked)}
-           className="absolute rounded-full bg-transparent lg:bg-black/90 top-32 right-3 lg:top-auto items-center justify-center lg:bottom-4 lg:right-2 z-10 flex flex-col lg:flex-col gap-2">  
-                <img  className="w-[100%] h-9 lg:w-[100%] lg:h-11 px-2 lg:border lg:border-gray-300 rounded-full shadow-md flex items-center justify-center hover:bg-black/80  transition-colors" src={person} alt="" srcset="" />
+           className="absolute rounded-full bg-transparent lg:bg-black/70 top-32 right-3 lg:top-auto items-center justify-center lg:bottom-4 lg:right-1 z-10 flex flex-col lg:flex-col gap-2">  
+                <img  className="w-[100%] h-8 lg:w-[100%] lg:h-11 px-2 lg:px-3 py-1 lg:border  border-white/20 bg-black/70 backdrop-blur-md shadow-lg rounded-2xl flex items-center justify-center hover:bg-black/80  transition-colors" src={person} alt="" srcset="" />
               </button>       
               
                   <PanoramaViewer clicked={clicked} setClicked={setClicked} />
