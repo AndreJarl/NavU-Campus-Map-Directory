@@ -153,7 +153,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
 
       <div
         className={`${roomSearched ? "fixed inset-x-0 bottom-0 m-2 lg:h-[85%] lg:m-0 lg:absolute lg:left-8 lg:top-20 z-[50]" : "hidden"}
-        w-auto lg:w-[420px] my-4 rounded-3xl backdrop-blur-lg bg-black/70 border border-white/20 shadow-md p-2
+        w-auto lg:w-[420px] my-4 rounded-3xl backdrop-blur-lg bg-black/70  border border-white/20 shadow-md p-2
         transform transition-all duration-300 ease-out pointer-events-auto flex flex-col
         ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'select-none' : ''}`} // Disable text selection during drag only when above threshold
         style={{
