@@ -6,6 +6,11 @@ import adminfront from"../assets/bldFronts/AdminFront.jpg"
 import cotfront from "../assets/bldFronts/COTFront.jpg"
 import womendorm from "../assets/rooms/Dormitories/Women'sDormitory.jpg"
 import canteen from "../assets/rooms/bistro&canteen/Canteen.jpg"
+import bistro from  "../assets/rooms/bistro&canteen/bistro.jpg"
+import stage from "../assets/rooms/Bldgs/OldStage.jpg"
+import sac from "../assets/rooms/Bldgs/SAC.jpg"
+import fitness from "../assets/rooms/Bldgs/FitnessGym.jpg"
+
 
 const cardData = {
     'College of Engineering Building': {
@@ -21,12 +26,18 @@ const cardData = {
        img: ceasfront1,
     },
     'Graduate School Building': 4,
-    'Bistro': 1,
+    'Bistro': {
+          totalFloors: 1,
+        img: bistro
+    },
     'University Canteen': {
          totalFloors: 1,
         img: canteen
     },
-    'Stage': 1,
+    'Stage': {
+          totalFloors:1,
+        img: stage
+    },
     'College of Technology/COT Building': {
         totalFloors:3,
         img:cotfront
@@ -36,8 +47,14 @@ const cardData = {
         totalFloors: 3,
         img: adminfront
     },
-    'Student Activity Center': 1,
-    'Fitness Gym': 1,
+    'Student Activity Center': {
+            totalFloors: 1,
+        img: sac
+    },
+    'Fitness Gym': {
+          totalFloors: 1,
+        img: fitness
+    },
     'Sewing Area': 1,
     'Fablab': 1,
     'Tennis Court': 1,

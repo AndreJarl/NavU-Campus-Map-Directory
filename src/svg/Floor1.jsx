@@ -263,24 +263,24 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text onClick={() => bldClicked("Computer Laboratory 2")} style={{ cursor: "pointer" }} x="259.5" y="607.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY 2</text>
 
         {/* Room 12 near BISTRO bldg */}
-        <path fill="#00c3ff" stroke="#4391A9" stroke-width={0.4} d="M227 562v21h-22v-21z" />
-        <text x="216" y="573.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 12</text>
+        <path onClick={() => bldClicked("Room 12")}  style={{ cursor: "pointer" }} fill="#00c3ff" stroke="#4391A9" stroke-width={0.4} d="M227 562v21h-22v-21z" />
+        <text  onClick={() => bldClicked("Room 12")}  style={{ cursor: "pointer" }} x="216" y="573.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 12</text>
 
         {/* Ergonomic Lab bldg */}
-        <path fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M205 540h22v21h-22z" />
-        <text x="216" y="550.1" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ERGONOMIC</text>
-        <text x="216" y="552.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY</text>
+        <path  onClick={() => bldClicked("Ergonomic Laboratory")}  style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M205 540h22v21h-22z" />
+        <text  onClick={() => bldClicked("Ergonomic Laboratory")}  style={{ cursor: "pointer" }} x="216" y="550.1" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ERGONOMIC</text>
+        <text  onClick={() => bldClicked("Ergonomic Laboratory")}  style={{ cursor: "pointer" }} x="216" y="552.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY</text>
 
         {/* General Chemistry Lab bldg */}
-        <path fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M227 584v21h-22v-21z" />
-        <text x="216" y="592.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">GENERAL</text>
-        <text x="216" y="595.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CHEMISTRY</text>
-        <text x="216" y="598.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY</text>
+        <path  onClick={() => bldClicked("General Chemistry Laboratory")}  style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M227 584v21h-22v-21z" />
+        <text onClick={() => bldClicked("General Chemistry Laboratory")}  style={{ cursor: "pointer" }} x="216" y="592.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">GENERAL</text>
+        <text onClick={() => bldClicked("General Chemistry Laboratory")}  style={{ cursor: "pointer" }} x="216" y="595.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CHEMISTRY</text>
+        <text onClick={() => bldClicked("General Chemistry Laboratory")}  style={{ cursor: "pointer" }} x="216" y="598.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY</text>
 
         {/* EDTECH Lab 2 bldg */}
-        <path fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M227 606v21h-22v-21z" />
-        <text x="216" y="615.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">EDTECH</text>
-        <text x="216" y="618.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY 2</text>
+        <path  onClick={() => bldClicked("Edtech Laboratory 2")}  style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M227 606v21h-22v-21z" />
+        <text  onClick={() => bldClicked("Edtech Laboratory 2")}  style={{ cursor: "pointer" }} x="216" y="615.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">EDTECH</text>
+        <text  onClick={() => bldClicked("Edtech Laboratory 2")}  style={{ cursor: "pointer" }} x="216" y="618.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY 2</text>
 
         {/* New CEAS CR bldg */}
         <path fill={allFalse ? '#ff69eb' : category["Restroom"] ? "#ff69eb" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M113 528v15h9v-15z" />
@@ -399,10 +399,10 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill="#01db96" stroke="#01CC8C" stroke-width={0.4} d="m415.727 679.814 34.236 3.099-.431 4.756-34.235-3.1z" />
 
         {/* EDTECH Lab 1 bldg */}
-        <path fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M227 628v19.975h-22V628z" />
-        <text x="216" y="637.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">EDTECH</text>
-        <text x="216" y="640.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY 1</text>
-        <path fill={allFalse ? '#ce6700' : category["Laboratory"] ? "#ce6700" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M205 647.84h22V650h-22z" />
+        <path onClick={() => bldClicked("Edtech Laboratory 1")} style={{ cursor: "pointer" }}  fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M227 628v19.975h-22V628z" />
+        <text onClick={() => bldClicked("Edtech Laboratory 1")} style={{ cursor: "pointer" }}   x="216" y="637.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">EDTECH</text>
+        <text onClick={() => bldClicked("Edtech Laboratory 1")} style={{ cursor: "pointer" }}   x="216" y="640.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY 1</text>
+        <path onClick={() => bldClicked("Edtech Laboratory 1")} style={{ cursor: "pointer" }}   fill={allFalse ? '#ce6700' : category["Laboratory"] ? "#ce6700" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M205 647.84h22V650h-22z" />
 
         {/* COT Record bldg */}
         <path fill="#fc0" stroke="#CCA817" stroke-width={0.4} d="M78 598v6.452H47V598z" />
@@ -433,14 +433,14 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text onClick={() => bldClicked("Electrical Engineering Laboratory")} style={{ cursor: "pointer" }} x="259.5" y="693.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY</text>
 
         {/* CEAS Lab 2 bldg */}
-        <path fill={allFalse ? '#00c3ff' : category["Laboratory"] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category["Laboratory"] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M136 664v17h-21v-17z" />
-        <text x="125.5" y="672.1" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">EDUCATION</text>
-        <text x="125.5" y="674.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY 2</text>
+        <path onClick={() => bldClicked("Education Laboratory 2")} style={{ cursor: "pointer" }}  fill={allFalse ? '#00c3ff' : category["Laboratory"] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category["Laboratory"] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M136 664v17h-21v-17z" />
+        <text onClick={() => bldClicked("Education Laboratory 2")} style={{ cursor: "pointer" }}  x="125.5" y="672.1" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">EDUCATION</text>
+        <text onClick={() => bldClicked("Education Laboratory 2")} style={{ cursor: "pointer" }}  x="125.5" y="674.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY 2</text>
 
         {/* CEAS Lab 1 bldg */}
-        <path fill={allFalse ? '#00c3ff' : category["Laboratory"] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category["Laboratory"] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M136 682v16h-21v-16z" />
-        <text x="125.5" y="689" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">EDUCATION</text>
-        <text x="125.5" y="692" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY 1</text>
+        <path onClick={() => bldClicked("Education Laboratory 1")} style={{ cursor: "pointer" }} fill={allFalse ? '#00c3ff' : category["Laboratory"] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category["Laboratory"] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M136 682v16h-21v-16z" />
+        <text onClick={() => bldClicked("Education Laboratory 1")} style={{ cursor: "pointer" }}  x="125.5" y="689" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">EDUCATION</text>
+        <text onClick={() => bldClicked("Education Laboratory 1")} style={{ cursor: "pointer" }}  x="125.5" y="692" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY 1</text>
 
         {/* woman cr near clinic */}
         <path fill={allFalse ? '#ff69eb' : category["Restroom"] ? "#ff69eb" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M249 699h24v8.938h-24z" />
@@ -471,7 +471,7 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill={allFalse ? '#ce4b46' : category["Admin"] ? "#ce4b46" : "#B0B0B0"} stroke={allFalse ? '#B84336' : category["Admin"] ? "#B84336" : "#B0B0B0"} stroke-width={0.4} d="M261 748.279h15V750h-15z" />
 
         {/* Cashier bldg */}
-        <path onClick={() => bldClicked("Registrar")} style={{ cursor: "pointer", pointerEvents: 'all' }} fill={allFalse ? '#ff6453' : category["Admin"] ? "#ff6453" : "#B0B0B0"} stroke={allFalse ? '#B84336' : category["Admin"] ? "#B84336" : "#B0B0B0"} stroke-width={0.4} d="M211 728h16v21.021h-16z" />
+        <path onClick={() => bldClicked("Cashier")} style={{ cursor: "pointer", pointerEvents: 'all' }} fill={allFalse ? '#ff6453' : category["Admin"] ? "#ff6453" : "#B0B0B0"} stroke={allFalse ? '#B84336' : category["Admin"] ? "#B84336" : "#B0B0B0"} stroke-width={0.4} d="M211 728h16v21.021h-16z" />
         <text onClick={() => bldClicked("Cashier")} style={{ cursor: "pointer", pointerEvents: 'all' }} x="219" y="739.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CASHIER</text>
         <path fill={allFalse ? '#ce4b46' : category["Admin"] ? "#ce4b46" : "#B0B0B0"} stroke={allFalse ? '#B84336' : category["Admin"] ? "#B84336" : "#B0B0B0"} stroke-width={0.4} d="M211 749.021h16V751h-16z" />
 
@@ -482,9 +482,9 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill={allFalse ? '#ce4b46' : category["Admin"] ? "#ce4b46" : "#B0B0B0"} stroke={allFalse ? '#B84336' : category["Admin"] ? "#B84336" : "#B0B0B0"} stroke-width={0.4} d="M228 749.021h15V751h-15z" />
 
         {/* BISTRO bldg */}
-        <path fill="#ff4c85" stroke="#DD4B83" stroke-width={0.4} d="M152 542h9v-5h13.596v5.372h22.198v14.709H152z" />
-        <text x="173.9" y="550.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">BISTRO</text>
-        <path fill="#d94272" stroke="#DD4B83" stroke-width={0.4} d="M152 556.953h44.794V559H152z" />
+        <path  onClick={() => bldClicked("Bistro")}  style={{ cursor: "pointer" }} fill="#ff4c85" stroke="#DD4B83" stroke-width={0.4} d="M152 542h9v-5h13.596v5.372h22.198v14.709H152z" />
+        <text onClick={() => bldClicked("Bistro")}  style={{ cursor: "pointer" }} x="173.9" y="550.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">BISTRO</text>
+        <path onClick={() => bldClicked("Bistro")}  style={{ cursor: "pointer" }} fill="#d94272" stroke="#DD4B83" stroke-width={0.4} d="M152 556.953h44.794V559H152z" />
 
         {/* Clinic bldg */}
         <path onClick={() => bldClicked("University Clinic")} style={{ cursor: "pointer", pointerEvents: 'all' }} fill={allFalse ? '#ff6453' : category["Admin"] ? "#ff6453" : "#B0B0B0"} stroke={allFalse ? '#B84336' : category["Admin"] ? "#B84336" : "#B0B0B0"} stroke-width={0.4} d="M244 728h8v-5h8v26.066h-16z" />
@@ -492,9 +492,9 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill={allFalse ? '#ce4b46' : category["Admin"] ? "#ce4b46" : "#B0B0B0"} stroke={allFalse ? '#B84336' : category["Admin"] ? "#B84336" : "#B0B0B0"} stroke-width={0.4} d="M244 749.066h16V751h-16z" />
 
         {/* University Canteen bldg */}
-        <path fill="#ff4c85" stroke="#DD4B83" stroke-width={0.4} d="M108 421h39v46h-39z" />
-        <text x="127.5" y="444.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">UNIVERSITY</text>
-        <text x="127.5" y="447.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">CANTEEN</text>
+        <path onClick={() => bldClicked("University Canteen")}  style={{ cursor: "pointer" }} fill="#ff4c85" stroke="#DD4B83" stroke-width={0.4} d="M108 421h39v46h-39z" />
+        <text onClick={() => bldClicked("University Canteen")}  style={{ cursor: "pointer" }} x="127.5" y="444.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">UNIVERSITY</text>
+        <text onClick={() => bldClicked("University Canteen")}  style={{ cursor: "pointer" }} x="127.5" y="447.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">CANTEEN</text>
 
         {/* Canteen Stock Room bldg */}
         <path stroke="#DD4B83" stroke-width={0.4} fill="#ff4c85" d="M132 468h14.956v7.283H132z" />
@@ -567,15 +567,15 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill="#d6b018" stroke="#CCA817" stroke-width={0.4} d="M155 502.034h23V504h-23z" />
 
         {/* Study Area bldg */}
-        <path fill="#7bff00" stroke="#60C700" stroke-width={0.4} d="M213 525h19v9.875h-19z" />
-        <text x="222.5" y="529.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">STUDY</text>
-        <text x="222.5" y="531.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">AREA</text>
-        <path fill="#64cf00" stroke="#60C700" stroke-width={0.4} d="M213 534.75h19V536h-19z" />
+        <path onClick={() => bldClicked("Study Area")}  style={{ cursor: "pointer" }} fill="#7bff00" stroke="#60C700" stroke-width={0.4} d="M213 525h19v9.875h-19z" />
+        <text  onClick={() => bldClicked("Study Area")}  style={{ cursor: "pointer" }} x="222.5" y="529.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">STUDY</text>
+        <text  onClick={() => bldClicked("Study Area")}  style={{ cursor: "pointer" }} x="222.5" y="531.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">AREA</text>
+        <path  onClick={() => bldClicked("Study Area")}  style={{ cursor: "pointer" }} fill="#64cf00" stroke="#60C700" stroke-width={0.4} d="M213 534.75h19V536h-19z" />
 
         {/* Stage bldg */}
-        <path fill="#00ffae" stroke="#01CC8C" stroke-width={0.4} d="M156 562h19v20.648h-19z" />
-        <text x="165.5" y="573.324" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">STAGE</text>
-        <path fill="#01db96" stroke="#01CC8C" stroke-width={0.4} d="M156 582.386h19V585h-19z" />
+        <path onClick={() => bldClicked("Stage")}  style={{ cursor: "pointer" }} fill="#00ffae" stroke="#01CC8C" stroke-width={0.4} d="M156 562h19v20.648h-19z" />
+        <text onClick={() => bldClicked("Stage")}  style={{ cursor: "pointer" }} x="165.5" y="573.324" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">STAGE</text>
+        <path onClick={() => bldClicked("Stage")}  style={{ cursor: "pointer" }} fill="#01db96" stroke="#01CC8C" stroke-width={0.4} d="M156 582.386h19V585h-19z" />
 
         {/* NSTP Office bldg */}
         <path fill="#fc0" stroke="#CCA817" stroke-width={0.4} d="M133 486h10v16h-10z" />
@@ -709,8 +709,8 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill="#D1D851" stroke="#CBD14E" stroke-width={0.4} d="M357 458.282h13v1.792h-13z" />
 
         {/* Fitness gym bldg */}
-        <path fill="#00ffae" stroke="#01CC8C" stroke-width={0.4} d="M274 397v24h-43v-24z" />
-        <text x="252.5" y="410" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FITNESS GYM</text>
+        <path  onClick={() => bldClicked("Fitness Gym")} style={{ cursor: "pointer"}}  fill="#00ffae" stroke="#01CC8C" stroke-width={0.4} d="M274 397v24h-43v-24z" />
+        <text onClick={() => bldClicked("Fitness Gym")} style={{ cursor: "pointer"}}  x="252.5" y="410" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FITNESS GYM</text>
 
         {/* Electrical Shop bldg */}
         <path fill="#f7ff5f" stroke="#CBD14E" stroke-width={0.4} d="M400 425v21.432h-24V425z" />
