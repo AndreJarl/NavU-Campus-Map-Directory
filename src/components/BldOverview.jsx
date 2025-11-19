@@ -151,7 +151,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
         className={`${
           buildingDatas ? "fixed inset-x-0 bottom-0 m-2 lg:m-0 lg:absolute lg:left-8 lg:top-20 z-[50]" : "hidden"
         } z-[99] flex flex-col rounded-2xl border border-white/20 
-        lg:w-[450px] 2xl:w-[450px] w-auto
+        lg:w-[400px] 2xl:w-[450px] w-auto
         bg-black/80 backdrop-blur-md shadow-2xl pointer-events-auto
         transform transition-all duration-300 ease-out
         ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'select-none' : ''}`} // Disable text selection during drag only when above threshold

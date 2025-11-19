@@ -9,7 +9,7 @@ import COTMaleCr from "../assets/rooms/COT-GrndFlr/COTMaleCR.jpg"
 import GadOffice from "../assets/rooms/COT-GrndFlr/GADOffice.jpg"
 import NSTPOffice from "../assets/rooms/COT-GrndFlr/NSTPOffice.jpg"
 
-
+import fitness from "../assets/rooms/Bldgs/FitnessGym.jpg"
 
 const buildingData = {
  'College of Engineering Building': {
@@ -157,13 +157,13 @@ const buildingData = {
     1: [
       { 
         code: " ", 
-        name: "Education Laboratory ",
+        name: "Education Laboratory 1",
         description: "A learning space designed for education students to practice teaching methods, classroom management, and lesson demonstrations.",
         img: " "
       },
       { 
         code: " ", 
-        name: "Education Laboratory ",
+        name: "Education Laboratory 2",
         description: "A learning space designed for education students to practice teaching methods, classroom management, and lesson demonstrations.",
         img: " "
       }
@@ -341,7 +341,7 @@ img: ""
             code:"",
             name:"Bistro ",
            description: "A small dining area on campus where students and staff can buy and enjoy meals, snacks, and beverages. ",
-           img: ""
+           img: bistro
       }
         ]
       }
@@ -806,7 +806,7 @@ img: ""
       code:"",
       name:"Fitness Gym ",
       description: "A facility equipped with exercise machines and workout areas where students and staff can engage in physical fitness and training activities. ",
-       img: ""
+       img: fitness
           }
         ]
       }
