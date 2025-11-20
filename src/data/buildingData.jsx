@@ -2,14 +2,37 @@ import React from 'react'
 import enlab1 from "../assets/rooms/coe/CELAB01.jpg"
 import enlab2 from "../assets/rooms/coe/CELAB02.jpg"
 
-// COT IMAGES
-import artMastersClub from "../assets/rooms/COT-GrndFlr/ArtsMastersClub.jpg"
+// COT grndflr IMAGES
+import artMastersClub from "../assets/rooms/COT-GrndFlr/ArtMastersClub.jpg"
 import COTFemaleCr from "../assets/rooms/COT-GrndFlr/COTFemaleCR.jpg"
 import COTMaleCr from "../assets/rooms/COT-GrndFlr/COTMaleCR.jpg"
-import GadOffice from "../assets/rooms/COT-GrndFlr/GADOffice.jpg"
-import NSTPOffice from "../assets/rooms/COT-GrndFlr/NSTPOffice.jpg"
+import room26 from "../assets/rooms/COT-GrndFlr/Room26.jpg"
+import room27 from "../assets/rooms/COT-GrndFlr/Room27.jpg"
+import room34 from "../assets/rooms/COT-GrndFlr/Room34.jpg"
+import room35 from "../assets/rooms/COT-GrndFlr/Room35.jpg"
+import room36 from "../assets/rooms/COT-GrndFlr/Room36.jpg"
+import room37 from "../assets/rooms/COT-GrndFlr/Room37.jpg"
+import room38 from "../assets/rooms/COT-GrndFlr/Room38.jpg"
+import room39 from "../assets/rooms/COT-GrndFlr/Room39.jpg"
+import room40 from "../assets/rooms/COT-GrndFlr/Room40.jpg"
+import room41 from "../assets/rooms/COT-GrndFlr/Room41.jpg"
+import GADoffice from "../assets/rooms/COT-GrndFlr/GADOffice.jpg"
+import NSTPoffice from "../assets/rooms/COT-GrndFlr/NSTPOffice.jpg"
+import COTCompLab from "../assets/rooms/COT-GrndFlr/COTComlab.jpg"
+
+
+
+
+
+
+
+
+
 
 import fitness from "../assets/rooms/Bldgs/FitnessGym.jpg"
+import bistro from "../assets/rooms/bistro&canteen/Bistro.jpg"
+import Canteen from "../assets/rooms/bistro&canteen/Canteen.jpg"
+// EDUC IMAGES
 
 const buildingData = {
  'College of Engineering Building': {
@@ -339,7 +362,7 @@ img: ""
         1:[
           {
             code:"",
-            name:"Bistro ",
+            name:"Bistro",
            description: "A small dining area on campus where students and staff can buy and enjoy meals, snacks, and beverages. ",
            img: bistro
       }
@@ -352,9 +375,9 @@ rooms:{
   1:[
 {
 code:"",
-name:"",
-description: " ",
-img:" "
+name:"Canteen",
+description: "A spacious dining area offering a variety of affordable meals and snacks. Includes seating for students and staff, clean food counters, hand-washing stations, and proper ventilation. Suitable for meals, breaks, and informal gatherings. ",
+img: Canteen
 }
 
   ]
@@ -371,32 +394,32 @@ img:" "
               code: "Room 26", 
               name: "Classroom",
               description: "A learning area where students attend lectures, participate in discussions, and work on academic activities guided by their teachers.",
-              img:""
+              img: room26
             },
             { 
               code: "Room 27", 
               name: "Automation Laboratory",
               description: "A specialized room equipped with controllers, sensors, and training kits where students learn and practice automation and control system applications. ",
-              img: ""
+              img: room27
             },
             { 
               code: "Room 34", 
               name: "Classroom",
               description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-              img:" "
+              img: room34
             },
             { 
               code: "Room 35", 
               name: "Classroom",
               description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-              img: " "
+              img: room35
             },
             { 
               
               code: "Room 36", 
               name: "Classroom",
               description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-              img: " "
+              img: room36
 
 
             },
@@ -404,7 +427,7 @@ img:" "
               code: "Room 37", 
               name: "Classroom",
               description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-              img: " "
+              img: room37
 
 
             },
@@ -412,20 +435,20 @@ img:" "
               code: " ", 
               name: "Sanitation Staff Office",
               description: "A workspace for the sanitation personnel where cleaning materials are stored and daily maintenance tasks are organized.",
-              img: " "
+              img:""
               },
               {
               code:"Room 38",
                 name: "Industrial Motor Control / Electrical Laboratory",
               description: "A training lab equipped with motors, control panels, and electrical tools where students learn about motor operations, wiring systems, and industrial control applications.",
-              img: " "
+              img: room38
 
               }, 
               {
                 code:"Room 39",
                 name: "Automation Laboratory 3 / Electronic Laboratory ",
               description: "A lab equipped with electronic components, circuit boards, and automation kits where students conduct experiments and projects related to electronics and control systems.",
-              img: " "
+              img: room39
 
 
               },
@@ -433,14 +456,14 @@ img:" "
                 code:"Room 40",
                 name: "Drafting Laboratory",
                 description: "A classroom equipped with drawing tables, computers, and design tools where students create technical drawings and design plans for engineering and architectural projects.",
-                img: " "
+                img: room40
 
               },
               {
               code:"Room 41",
               name: "Motor Control / Electrical & Instrumentation Laboratory ",
               description: "A specialized lab with equipment for studying motor control systems, electrical wiring, and instrumentation used in monitoring and automation processes.",
-              img: " "
+              img: room41
 
 
               },
@@ -449,34 +472,53 @@ img:" "
               code: " ",
               name: "COT Computer Laboratory",
               description: " room equipped with computers and internet access where students learn programming, digital applications, and other computer-related skills. ",
-              img: " "
+              img: COTCompLab
+              }, 
+              {
+              
+              code: " ",
+              name: "ArtmasterClub",
+              description: "A creative space designed for art-related activities and workshops. Equipped with tables, chairs, basic art materials, and display areas. Suitable for drawing, painting, group projects, and club meetings.",
+              img: artMastersClub
               }, 
               {
                 code:"Room 46",
                 name: " ",
-              description: " ",
-              img: " "
+              description: "A specialized workspace equipped with tools, materials, and equipment for hands-on Technical-Livelihood Education activities. ",
+              img: ""
               },
               {
               code:"",
               name: "Storage Room",
               description: "A designated area used to store school equipment, tools, and other materials in an organized and secure manner.",
-              img: " "
+              img: ""
                           
               },
               {
               code:"",
               name: "GAD Office",
               description: "The Office where programs and activities promoting equality, inclusivity, and student welfare are planned and managed.",
-              img: " "
+              img: GADoffice
 
 
+              },
+            {
+              code:"",
+              name: "COTMaleCR",
+              description: "A clean and accessible male comfort room located in the College of Technology area. Equipped with urinals, toilet cubicles, sinks, and proper ventilation. ",
+              img: COTMaleCr
+              },
+              {
+              code:"",
+              name: "COTFemaleCR",
+              description: "A clean and accessible female comfort room located in the College of Technology area. Equipped with urinals, toilet cubicles, sinks, and proper ventilation. ",
+              img: COTFemaleCr
               },
               {
               code: "",
               name: "NSTP Office",
               description: "The National Service Training Program Office where activities and records related to NSTP components, such as CWTS and ROTC, are managed and coordinated. ",
-              img: " "
+              img: NSTPoffice
       }
       
           ],
