@@ -18,7 +18,8 @@ import room40 from "../assets/rooms/COT-GrndFlr/Room40.jpg"
 import room41 from "../assets/rooms/COT-GrndFlr/Room41.jpg"
 import GADoffice from "../assets/rooms/COT-GrndFlr/GADOffice.jpg"
 import NSTPoffice from "../assets/rooms/COT-GrndFlr/NSTPOffice.jpg"
-import COTCompLab from "../assets/rooms/COT-GrndFlr/COTCompLab.jpg"
+import COTCompLab from "../assets/rooms/COT-GrndFlr/COTComlab.jpg"
+
 
 
 
