@@ -90,7 +90,7 @@
       }
     ]
   }, 
-   "Path ERRC": {
+   "ERRC Path": {
     "image": "public/360imgs/360PATH-Oval/PATH2_Oval.JPG",
     "hotspots": [
       {
@@ -124,7 +124,7 @@
         "pitch": -60.5,
         "yaw": 20,
         "type": "arrow",
-        "target": "Path ERRC",
+        "target": "ERRC Path",
         "arrowType": "backward",
         "rotation": 180
       },
@@ -136,6 +136,9 @@
       }
     ]
   },
+  
+
+  
    "Electrical Engineering Laboratory": {
     "image": "public/360imgs/1stF/1stEng/1stFlrENG0.JPG",
     "hotspots": [
@@ -155,7 +158,7 @@
         "rotation": 180
       },
         {
-        "pitch": 30,
+        "pitch": 15,
         "yaw": 30,
         "type": "info",
         "label": "Electrical Engineering Laboratory"
@@ -181,13 +184,142 @@
         "rotation": 180
       },
         {
-        "pitch": 20,
-        "yaw": -60,
+        "pitch": 30,
+        "yaw": -190,
         "type": "info",
-        "label": "Electrical Engineering Laboratory"
+        "label": "Engineering Laboratory"
+      }
+    ]
+  },
+ "Room 34": {
+    "image": "public/360imgs/COT-360Rooms/Room34.JPG",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "Room 35",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -60.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "Electrical Engineering Laboratory",
+        "arrowType": "backward",
+        "rotation": 180
+      },
+        {
+        "pitch": 30,
+        "yaw": 50,
+        "type": "info",
+        "label": "Room 34"
+      },
+       {
+        "pitch": 10,
+        "yaw":  210,
+        "type": "info",
+        "label": "COT Female CR"
+      }
+    ]
+  },
+   "Room 35": {
+    "image": "public/360imgs/COT-360Rooms/Room35.JPG",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "Room 36",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -60.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "Room 34",
+        "arrowType": "backward",
+        "rotation": 180
+      },
+        {
+        "pitch": 20,
+        "yaw": 60,
+        "type": "info",
+        "label": "Room 35"
+      },
+       {
+        "pitch": 10,
+        "yaw":  170,
+        "type": "info",
+        "label": "Room 34"
+      }
+    ]
+  },
+  "Room 36": {
+    "image": "public/360imgs/COT-360Rooms/Room36.JPG",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "Room 37",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -60.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "Room 36",
+        "arrowType": "backward",
+        "rotation": 180
+      },
+        {
+        "pitch": 30,
+        "yaw": 120,
+        "type": "info",
+        "label": "Room 36"
+      },
+       {
+        "pitch": 10,
+        "yaw":  190,
+        "type": "info",
+        "label": "Room 35"
+      }
+    ]
+  },
+  "Room 37": {
+    "image": "public/360imgs/COT-360Rooms/Room37.JPG",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 50,
+        "type": "arrow",
+        "target": "Room 36",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -60.5,
+        "yaw": 50,
+        "type": "arrow",
+        "target": "Room 36",
+        "arrowType": "backward",
+        "rotation": 180
+      },
+        {
+        "pitch": 30,
+        "yaw": 190,
+        "type": "info",
+        "label": "Room 37"
+      },
+       {
+        "pitch": 10,
+        "yaw":  210,
+        "type": "info",
+        "label": "Room 36"
       }
     ]
   }
+
 
    
 }

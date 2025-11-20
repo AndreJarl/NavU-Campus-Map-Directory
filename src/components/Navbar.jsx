@@ -87,7 +87,7 @@ const clicked = () => {
             <div className='overflow-x-auto h-[60vh] pt-8'>
               {suggestion.map((suggestions, index)=>(
                 <div className=' flex flex-col gap-4 ' key={index}>
-                    <ul onClick={()=>handleSuggestionClicked(suggestions)} className='text-base text-white py-2 hover:bg-black p-2 pl-3'>{suggestions}</ul>
+                    <ul onClick={()=>handleSuggestionClicked(suggestions)} className='text-base cursor-pointer text-white py-2 hover:bg-black p-2 pl-3'>{suggestions}</ul>
                 </div>
               ))}
             </div>
@@ -135,7 +135,7 @@ const clicked = () => {
                       </span>
                     </div>
                   </div>
-                <div onClick={()=>setCurrentScene("errc_blg")} className="relative inline-block cursor-pointer">
+                <div onClick={()=>setCurrentScene("ERRC Building")} className="relative inline-block cursor-pointer">
                     {/* Image */}
                     <img 
                       className="w-[300px] h-[140px] p-2 rounded-md bg-white" 
