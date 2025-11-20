@@ -584,7 +584,7 @@ img: Canteen
 1:[
 {
 code:"",
-name:"Records",
+name:"Records ",
 description: "The office where student files, academic documents, and other important school records are securely kept and managed. ",
 img:" "
 },
