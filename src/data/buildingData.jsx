@@ -3,7 +3,7 @@ import enlab1 from "../assets/rooms/coe/CELAB01.jpg"
 import enlab2 from "../assets/rooms/coe/CELAB02.jpg"
 
 // COT grndflr IMAGES
-import artMastersClub from "../assets/rooms/COT-GrndFlr/ArtsMastersClub.jpg"
+import artMastersClub from "../assets/rooms/COT-GrndFlr/ArtMastersClub.jpg"
 import COTFemaleCr from "../assets/rooms/COT-GrndFlr/COTFemaleCR.jpg"
 import COTMaleCr from "../assets/rooms/COT-GrndFlr/COTMaleCR.jpg"
 import room26 from "../assets/rooms/COT-GrndFlr/Room26.jpg"
