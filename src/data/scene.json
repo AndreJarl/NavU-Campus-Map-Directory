@@ -54,6 +54,14 @@
         "target": "Path ERRC",
         "arrowType": "forward"
       },
+        {
+        "pitch": -20.5,
+        "yaw": 130,
+        "type": "arrow",
+        "target": "Electrical Engineering Laboratory",
+        "arrowType": "forward",
+        "rotation" : 190
+      },
       {
         "pitch": -60.5,
         "yaw": 30,
@@ -78,7 +86,7 @@
         "pitch": 10,
         "yaw": 320,
         "type": "info",
-        "label": "Laudry Station"
+        "label": "Laundry Station"
       }
     ]
   }, 
@@ -127,6 +135,59 @@
         "label": "ERRC Building"
       }
     ]
+  },
+   "Electrical Engineering Laboratory": {
+    "image": "public/360imgs/1stF/1stEng/1stFlrENG0.JPG",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "Engineering Laboratory",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -60.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "Water Refill/Laundry Shop",
+        "arrowType": "backward",
+        "rotation": 180
+      },
+        {
+        "pitch": 30,
+        "yaw": 30,
+        "type": "info",
+        "label": "Electrical Engineering Laboratory"
+      }
+    ]
+  },
+     "Engineering Laboratory": {
+    "image": "public/360imgs/1stF/1stEng/1stFlrENG1.JPG",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": -20,
+        "type": "arrow",
+        "target": "Path ERRC",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -60.5,
+        "yaw": -20,
+        "type": "arrow",
+        "target": "Electrical Engineering Laboratory",
+        "arrowType": "backward",
+        "rotation": 180
+      },
+        {
+        "pitch": 20,
+        "yaw": -60,
+        "type": "info",
+        "label": "Electrical Engineering Laboratory"
+      }
+    ]
   }
+
    
 }
