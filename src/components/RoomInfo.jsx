@@ -5,6 +5,7 @@ import { usePath } from "../context/PathContext";
 import { useState, useRef, useEffect } from "react";
 import qr from "../assets/qr.png";
 import { useScene } from "../context/SceneContext";
+import GenerateQR from "./GenerateQR";
 
 function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setDisable, disable, setBldClicked }) {
   const { query } = useQuery();
@@ -39,6 +40,10 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
     setPath("");
     setDisable(false);
     setCurrentScene("Main Gate");
+      // remove param from URL so it doesn't auto-open on reload
+      const url = new URL(window.location);
+      url.searchParams.delete("name");
+      window.history.replaceState({}, "", url);
   };
 
   // Handle image load
@@ -297,7 +302,8 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
               <h2 className="lg:text-2xl font-semibold mb-4">Room QR Code</h2>
               <div className="flex justify-center">
                 <div className="lg:w-48 lg:h-48 w-32 h-32 bg-white rounded-lg flex items-center justify-center text-black">
-                  <img className="lg:w-48 lg:h-48 w-[100%] h-32" src={qr} alt="" />
+                  <GenerateQR text={`https://nav-u-campus-map-directory.vercel.app/?name=${room?.name}`} />
+
                 </div>
               </div>
               <p className="mt-4 text-gray-300 text-xs lg:text-sm">
