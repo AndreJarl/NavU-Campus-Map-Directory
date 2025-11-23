@@ -24,15 +24,26 @@ import COTCompLab from "../assets/rooms/COT-GrndFlr/COTComlab.jpg"
 
 
 
-
-
-
-
-
+import sac from "../assets/rooms/Bldgs/SAC.jpg"
+import studyarea from "../assets//rooms/Bldgs/BlueTables.jpg"
+import laundryshop from "../assets/rooms/Bldgs/Laundry.jpg"
+import floatingarea from "../assets/rooms/Bldgs/FloatingArea.jpg"
+import HMLab from "../assets/rooms/Bldgs/HMKitchenLaboratory.jpg"
+import PEhall from "../assets/rooms/Bldgs/PEHall.jpg"
+import womensdorm from "../assets/rooms/Dormitories/Women'sDormitory.jpg"
+import mensdorm from "../assets/rooms/Dormitories/MensDormitory.jpg"
+import Fablab from "../assets/rooms/FABLAB/FABLAB.jpg"
 import fitness from "../assets/rooms/Bldgs/FitnessGym.jpg"
 import bistro from "../assets/rooms/bistro&canteen/Bistro.jpg"
 import Canteen from "../assets/rooms/bistro&canteen/Canteen.jpg"
 // EDUC IMAGES
+
+import Edtechlab1 from "../assets/rooms/EducationLabs/EdTechLab1.jpg"
+import Edtechlab2 from "../assets/rooms/EducationLabs/EdTechLab2.jpg"
+import chemlab from "../assets/rooms/EducationLabs/ChemistryLab.jpg"
+import room12 from "../assets/rooms/Educrooms/Room12.jpg" 
+
+
 
 const buildingData = {
  'College of Engineering Building': {
@@ -124,227 +135,254 @@ const buildingData = {
   }
 },
 
-    'CME/COE Building': {
-       totalFloors: 4,
-       rooms:{
-        1: [
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      },
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      },
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      },
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      }
-    ], 2: [
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      },
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      },
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      }
-    ],
-  }
-    },
-    'Education Building': {
-      totalFloors: 3,
-  rooms: {
-    1: [
-      { 
-        code: " ", 
-        name: "Education Laboratory 1",
-        description: "A learning space designed for education students to practice teaching methods, classroom management, and lesson demonstrations.",
-        img: " "
-      },
-      { 
-        code: " ", 
-        name: "Education Laboratory 2",
-        description: "A learning space designed for education students to practice teaching methods, classroom management, and lesson demonstrations.",
-        img: " "
-      }
-    
-    ],
-    2: [
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      },
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      },
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      }
-    ],
-    3: [
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      },
-      { 
-        code: " ", 
-        name: " ",
-        description: " ",
-        img: " "
-      }
-    ],
-  }
-      
-    },
-    'Graduate School Building': {
+  'CME/COE Building': {
       totalFloors: 4,
       rooms:{
-    1:[
-    {
-     code:"",
-     name:" ",
-     description: " ",
-     img: ""
-     },
-    {
-     code:"",
-     name:" ",
-    description: " ",
-    img: ""
+      1: [
+    { 
+      code: " ", 
+      name: " ",
+      description: " ",
+      img: " "
     },
-    {
-    code:"",
-     name:" ",
-    description: " ",
-    img: ""
+    { 
+      code: " ", 
+      name: " ",
+      description: " ",
+      img: " "
     },
-    {
+    { 
+      code: " ", 
+      name: " ",
+      description: " ",
+      img: " "
+    },
+    { 
+      code: " ", 
+      name: " ",
+      description: " ",
+      img: " "
+    }
+  ], 2: [
+    { 
+      code: " ", 
+      name: " ",
+      description: " ",
+      img: " "
+    },
+    { 
+      code: " ", 
+      name: " ",
+      description: " ",
+      img: " "
+    },
+    { 
+      code: " ", 
+      name: " ",
+      description: " ",
+      img: " "
+    }
+  ],
+}
+  },
+  'Education Building': {
+    totalFloors: 3,
+rooms: {
+  1: [
+    { 
+      code: " ", 
+      name: "Education Laboratory 1",
+      description: "A learning space designed for education students to practice teaching methods, classroom management, and lesson demonstrations.",
+      img: " "
+    },
+    { 
+      code: " ", 
+      name: "Education Laboratory 2",
+      description: "A learning space designed for education students to practice teaching methods, classroom management, and lesson demonstrations.",
+      img: " "
+    },
+    { 
+      code: " ", 
+      name: "EDTECH Laboratory 1",
+      description: "A simple learning space equipped with basic instructional tools such as a smart tv and standard tables. Designed for small classes, presentations, and educational activities that require minimal technology. Suitable for group work and general academic use. ",
+      img: Edtechlab1
+    },
+    { 
+      code: " ", 
+      name: "EDTECH Laboratory 2",
+      description: "A learning space with tables, chairs, and a smart tv for instructional use. Suitable for group discussions, presentations, and watching educational videos. Simple and functional, not heavily technology-focused. ",
+      img: Edtechlab2
+    },
+    { 
+      code: " ", 
+      name: "General Chemistry Laboratory",
+      description: "A laboratory designed for conducting chemistry experiments and practical lessons. Equipped with lab benches, sinks, basic glassware, and safety equipment. Suitable for hands-on learning in chemical concepts and experiments. ",
+      img: chemlab
+    },
+    { 
+      code: " ", 
+      name: "Room 12 ",
+      description: "A standard classroom with desks, chairs, and a whiteboard. Suitable for lectures, discussions, and small group activities. Simple, functional, and well-lit for academic use. ",
+      img: room12
+    },
+  
+  
+  ],
+  2: [
+    { 
+      code: " ", 
+      name: " ",
+      description: " ",
+      img: ""
+    },
+    { 
+      code: " ", 
+      name: " ",
+      description: " ",
+      img: " "
+    },
+    { 
+      code: " ", 
+      name: " ",
+      description: " ",
+      img: " "
+    }
+  ],
+  3: [
+    { 
+      code: " ", 
+      name: " ",
+      description: " ",
+      img: " "
+    },
+    { 
+      code: " ", 
+      name: " ",
+      description: " ",
+      img: " "
+    }
+  ],
+}
+    
+  },
+  
+  
+  'Graduate School Building': {
+    totalFloors: 4,
+    rooms:{
+  1:[
+  {
     code:"",
     name:" ",
     description: " ",
     img: ""
     },
+  {
+    code:"",
+    name:" ",
+  description: " ",
+  img: ""
+  },
+  {
+  code:"",
+    name:" ",
+  description: " ",
+  img: ""
+  },
+  {
+  code:"",
+  name:" ",
+  description: " ",
+  img: ""
+  },
+  {
+    code:"",
+    name:" ",
+  description: " ",
+  img: ""
+  }
+  ],
+  2:[
     {
-     code:"",
-     name:" ",
+    code:"",
+    name:" ",
     description: " ",
     img: ""
-    }
-    ],
-    2:[
-      {
+
+    },
+    {
+  code:"",
+    name:" ",
+  description: " ",
+  img: ""
+    },
+    {
+    code:"",
+  name:" ",
+  description: " ",
+  img: ""
+  },
+    {
+    code:"",
+    name:" ",
+    description: " ",
+    img: ""
+  }
+  ],
+  3:
+  [
+    {
       code:"",
       name:" ",
       description: " ",
       img: ""
-
-      },
-      {
-    code:"",
-     name:" ",
-    description: " ",
-    img: ""
-     },
-      {
-     code:"",
-    name:" ",
-    description: " ",
-    img: ""
-    },
-      {
-     code:"",
-     name:" ",
-     description: " ",
-     img: ""
-    }
-    ],
-    3:
-    [
-      {
-        code:"",
-        name:" ",
-        description: " ",
-        img: ""
- },
-      {
-        code:"",
-        name:" ",
-        description: " ",
-        img: ""
 },
-      {
+    {
+      code:"",
+      name:" ",
+      description: " ",
+      img: ""
+},
+    {
 code:"",
 name:" ",
 description: " ",
 img: ""
-      },
-      {
+    },
+    {
 code:"",
 name:" ",
 description: " ",
 img: ""
-      },
-       {
+    },
+      {
+  code:"",
+  name:" ",
+  description: " ",
+  img: ""
+  }
+  ],
+  4:[
+  {
     code:"",
-    name:" ",
-    description: " ",
-    img: ""
-    }
-    ],
-    4:[
-    {
-     code:"",
 name:" ",
 description: " ",
 img: ""
 },
-    {
-     code:"",
+  {
+    code:"",
 name:" ",
 description: " ",
 img: ""
-    },
-    {
-     code:"",
+  },
+  {
+    code:"",
 name:" ",
 description: " ",
 img: ""
-    },
-    {
-     code:"",
+  },
+  {
+    code:"",
 name:" ",
 description: " ",
 img: ""
@@ -354,25 +392,25 @@ img: ""
 
 
 
-      }
-    },
-    'Bistro': {
-      totalFloors: 1,
-      rooms:{
-        1:[
-          {
-            code:"",
-            name:"Bistro",
-           description: "A small dining area on campus where students and staff can buy and enjoy meals, snacks, and beverages. ",
-           img: bistro
-      }
-        ]
-      }
-    },
-    'University Canteen': {
+    }
+  },
+  'Bistro': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+          code:"",
+          name:"Bistro",
+          description: "A small dining area on campus where students and staff can buy and enjoy meals, snacks, and beverages. ",
+          img: bistro
+    }
+      ]
+    }
+  },
+  'University Canteen': {
 totalFloors: 1,
 rooms:{
-  1:[
+1:[
 {
 code:"",
 name:"Canteen",
@@ -380,207 +418,207 @@ description: "A spacious dining area offering a variety of affordable meals and 
 img: Canteen
 }
 
-  ]
+]
 }
 
-    },
-    'Stage': 1,
+  },
+  'Stage': 1,
 
-    'College of Technology/COT Building': {
-      totalFloors: 2,
-        rooms: {
-          1: [
-            { 
-              code: "Room 26", 
-              name: "Classroom",
-              description: "A learning area where students attend lectures, participate in discussions, and work on academic activities guided by their teachers.",
-              img: room26
-            },
-            { 
-              code: "Room 27", 
-              name: "Automation Laboratory",
-              description: "A specialized room equipped with controllers, sensors, and training kits where students learn and practice automation and control system applications. ",
-              img: room27
-            },
-            { 
-              code: "Room 34", 
-              name: "Classroom",
-              description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-              img: room34
-            },
-            { 
-              code: "Room 35", 
-              name: "Classroom",
-              description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-              img: room35
-            },
-            { 
-              
-              code: "Room 36", 
-              name: "Classroom",
-              description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-              img: room36
-
-
-            },
-            {        
-              code: "Room 37", 
-              name: "Classroom",
-              description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-              img: room37
+  'College of Technology/COT Building': {
+    totalFloors: 2,
+      rooms: {
+        1: [
+          { 
+            code: "Room 26", 
+            name: "Room 26",
+            description: "A learning area where students attend lectures, participate in discussions, and work on academic activities guided by their teachers.",
+            img: room26
+          },
+          { 
+            code: "Room 27", 
+            name: "Automation Laboratory",
+            description: "A specialized room equipped with controllers, sensors, and training kits where students learn and practice automation and control system applications. ",
+            img: room27
+          },
+          { 
+            code: "Room 34", 
+            name: "Room 34",
+            description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
+            img: room34
+          },
+          { 
+            code: "Room 35", 
+            name: "Room 35",
+            description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
+            img: room35
+          },
+          { 
+            
+            code: "Room 36", 
+            name: "Room 36",
+            description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
+            img: room36
 
 
+          },
+          {        
+            code: "Room 37", 
+            name: "Room 37",
+            description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
+            img: room37
+
+
+          },
+          {
+            code: " ", 
+            name: "Sanitation Staff Office",
+            description: "A workspace for the sanitation personnel where cleaning materials are stored and daily maintenance tasks are organized.",
+            img:""
             },
             {
-              code: " ", 
-              name: "Sanitation Staff Office",
-              description: "A workspace for the sanitation personnel where cleaning materials are stored and daily maintenance tasks are organized.",
-              img:""
-              },
-              {
-              code:"Room 38",
-                name: "Industrial Motor Control / Electrical Laboratory",
-              description: "A training lab equipped with motors, control panels, and electrical tools where students learn about motor operations, wiring systems, and industrial control applications.",
-              img: room38
+            code:"Room 38",
+              name: "Industrial Motor Control / Electrical Laboratory",
+            description: "A training lab equipped with motors, control panels, and electrical tools where students learn about motor operations, wiring systems, and industrial control applications.",
+            img: room38
 
-              }, 
-              {
-                code:"Room 39",
-                name: "Automation Laboratory 3 / Electronic Laboratory ",
-              description: "A lab equipped with electronic components, circuit boards, and automation kits where students conduct experiments and projects related to electronics and control systems.",
-              img: room39
-
-
-              },
-              {
-                code:"Room 40",
-                name: "Drafting Laboratory",
-                description: "A classroom equipped with drawing tables, computers, and design tools where students create technical drawings and design plans for engineering and architectural projects.",
-                img: room40
-
-              },
-              {
-              code:"Room 41",
-              name: "Motor Control / Electrical & Instrumentation Laboratory ",
-              description: "A specialized lab with equipment for studying motor control systems, electrical wiring, and instrumentation used in monitoring and automation processes.",
-              img: room41
-
-
-              },
-              {
-              
-              code: " ",
-              name: "COT Computer Laboratory",
-              description: " room equipped with computers and internet access where students learn programming, digital applications, and other computer-related skills. ",
-              img: COTCompLab
-              }, 
-              {
-              
-              code: " ",
-              name: "ArtmasterClub",
-              description: "A creative space designed for art-related activities and workshops. Equipped with tables, chairs, basic art materials, and display areas. Suitable for drawing, painting, group projects, and club meetings.",
-              img: artMastersClub
-              }, 
-              {
-                code:"Room 46",
-                name: " ",
-              description: "A specialized workspace equipped with tools, materials, and equipment for hands-on Technical-Livelihood Education activities. ",
-              img: ""
-              },
-              {
-              code:"",
-              name: "Storage Room",
-              description: "A designated area used to store school equipment, tools, and other materials in an organized and secure manner.",
-              img: ""
-                          
-              },
-              {
-              code:"",
-              name: "GAD Office",
-              description: "The Office where programs and activities promoting equality, inclusivity, and student welfare are planned and managed.",
-              img: GADoffice
-
-
-              },
-            {
-              code:"",
-              name: "COTMaleCR",
-              description: "A clean and accessible male comfort room located in the College of Technology area. Equipped with urinals, toilet cubicles, sinks, and proper ventilation. ",
-              img: COTMaleCr
-              },
-              {
-              code:"",
-              name: "COTFemaleCR",
-              description: "A clean and accessible female comfort room located in the College of Technology area. Equipped with urinals, toilet cubicles, sinks, and proper ventilation. ",
-              img: COTFemaleCr
-              },
-              {
-              code: "",
-              name: "NSTP Office",
-              description: "The National Service Training Program Office where activities and records related to NSTP components, such as CWTS and ROTC, are managed and coordinated. ",
-              img: NSTPoffice
-      }
-      
-          ],
-          2: [
-            { 
-              code: " ", 
-              name: " ",
-              description: " ",
-              img: " "
-            },
-            { 
-              code: " ", 
-              name: " ",
-              description: " ",
-              img: " "
-            },
-            { 
-              code: " ", 
-              name: " ",
-              description: " ",
-              img: " "
-            },
-            {       
-              code: " ", 
-              name: " ",
-              description: " ",
-              img: " "
             }, 
+            {
+              code:"Room 39",
+              name: "Automation Laboratory 3 / Electronic Laboratory ",
+            description: "A lab equipped with electronic components, circuit boards, and automation kits where students conduct experiments and projects related to electronics and control systems.",
+            img: room39
+
+
+            },
+            {
+              code:"Room 40",
+              name: "Drafting Laboratory",
+              description: "A classroom equipped with drawing tables, computers, and design tools where students create technical drawings and design plans for engineering and architectural projects.",
+              img: room40
+
+            },
+            {
+            code:"Room 41",
+            name: "Motor Control / Electrical & Instrumentation Laboratory ",
+            description: "A specialized lab with equipment for studying motor control systems, electrical wiring, and instrumentation used in monitoring and automation processes.",
+            img: room41
+
+
+            },
+            {
+            
+            code: " ",
+            name: "COT Computer Laboratory",
+            description: " room equipped with computers and internet access where students learn programming, digital applications, and other computer-related skills. ",
+            img: COTCompLab
+            }, 
+            {
+            
+            code: " ",
+            name: "ArtmasterClub",
+            description: "A creative space designed for art-related activities and workshops. Equipped with tables, chairs, basic art materials, and display areas. Suitable for drawing, painting, group projects, and club meetings.",
+            img: artMastersClub
+            }, 
+            {
+              code:"Room 46",
+              name: "Room 46",
+            description: "A specialized workspace equipped with tools, materials, and equipment for hands-on Technical-Livelihood Education activities. ",
+            img: ""
+            },
+            {
+            code:"",
+            name: "Storage Room",
+            description: "A designated area used to store school equipment, tools, and other materials in an organized and secure manner.",
+            img: ""
+                        
+            },
+            {
+            code:"",
+            name: "GAD Office",
+            description: "The Office where programs and activities promoting equality, inclusivity, and student welfare are planned and managed.",
+            img: GADoffice
+
+
+            },
+          {
+            code:"",
+            name: "COTMaleCR",
+            description: "A clean and accessible male comfort room located in the College of Technology area. Equipped with urinals, toilet cubicles, sinks, and proper ventilation. ",
+            img: COTMaleCr
+            },
+            {
+            code:"",
+            name: "COTFemaleCR",
+            description: "A clean and accessible female comfort room located in the College of Technology area. Equipped with urinals, toilet cubicles, sinks, and proper ventilation. ",
+            img: COTFemaleCr
+            },
+            {
+            code: "",
+            name: "NSTP Office",
+            description: "The National Service Training Program Office where activities and records related to NSTP components, such as CWTS and ROTC, are managed and coordinated. ",
+            img: NSTPoffice
+    }
+    
+        ],
+        2: [
+          { 
+            code: " ", 
+            name: " ",
+            description: " ",
+            img: " "
+          },
+          { 
+            code: " ", 
+            name: " ",
+            description: " ",
+            img: " "
+          },
+          { 
+            code: " ", 
+            name: " ",
+            description: " ",
+            img: " "
+          },
+          {       
+            code: " ", 
+            name: " ",
+            description: " ",
+            img: " "
+          }, 
+          {
+          code: " ", 
+            name: " ",
+            description: " ",
+            img: " "
+
+          }, 
+          {
+            code: " ", 
+            name: " ",
+            description: " ",
+            img: " "
+            },
             {
             code: " ", 
-              name: " ",
-              description: " ",
-              img: " "
+            name: " ",
+            description: " ",
+            img: " "
 
-            }, 
+            },
             {
-              code: " ", 
-              name: " ",
-              description: " ",
-              img: " "
-              },
-              {
-              code: " ", 
-              name: " ",
-              description: " ",
-              img: " "
+            code: " ", 
+            name: " ",
+            description: " ",
+            img: " "
+            }
 
-              },
-              {
-              code: " ", 
-              name: " ",
-              description: " ",
-              img: " "
-              }
+        ]
+      }
 
-          ]
-        }
-
-    },
-    'Old Admin Building': {
-     totalFloors: 2,
-     rooms:{
+  },
+  'Old Admin Building': {
+    totalFloors: 2,
+    rooms:{
 1:[
 {
 code:"",
@@ -717,12 +755,12 @@ img:" "
 ]
 
 
-     }
+    }
 
-    },
-    'New Admin Building': {
-      totalFloors: 3, rooms:{
-   1:[
+  },
+  'New Admin Building': {
+    totalFloors: 3, rooms:{
+  1:[
 {
 code:"",
 name:"Accounting Office",
@@ -790,10 +828,10 @@ description: " ",
 img: ""
 },
 
-   ], 
+  ], 
 
 2:[
-  {
+{
 code:"",
 name:" ",
 description: " ",
@@ -824,221 +862,221 @@ img: ""
 ],
 
 
-      }
-    },
-    'Student Activity Center': {
-      totalFloors: 1,
-      rooms:{
-        1:[
-        {
-          code:"SAC",
-          name:"Student Activity Center ",
-          description: "A space where students gather for events, meetings, recreational activities, and extracurricular programs. ",
-          img: ""
-       }
-
-        ]
-      }
-    },
-    'Fitness Gym': {
-      totalFloors:1,
-      rooms:{
-        1:[
-          {
-      code:"",
-      name:"Fitness Gym ",
-      description: "A facility equipped with exercise machines and workout areas where students and staff can engage in physical fitness and training activities. ",
-       img: fitness
-          }
-        ]
-      }
-    },
-    'Sewing Area': {
-      totalFloors:1,rooms:{
-        1:[
-          {
-      code:"",
-      name:"Sewing Area ",
-      description: "A workspace equipped with sewing machines, fabrics, and tools where students practice garment making and textile projects. ",
-       img: ""
-          }
-        ]
-      }
-    },
-    'Fablab': {
-      totalFloors:1,rooms:{
-        1:[
-          {
-      code:"",
-      name:"Fablab ",
-      description: "A fabrication laboratory equipped with tools and machines like 3D printers, laser cutters, and CNC machines where students create prototypes and innovative projects.",
-      img: ""
-          }
-        ]
-      }
-    },
-    'Tennis Court': {
-      totalFloors: 1, rooms:{
-        1:[
-          {
-            code:"",
-      name:"Tennis Court ",
-      description: "An outdoor sports area with marked courts and nets where students and staff can play tennis and practice related skills. ",
-      img: "" 
-          }
-        ]
-      }
-    },
-    'Kadasig Gym': {
-      totalFloors: 1, rooms:{
-        1:[
-          {
-            code:"",
-       name:"Kadasig Gym ",
-       description: "A gymnasium where students participate in sports, physical education classes, and school events, equipped with courts and seating areas. ",
-       img: ""
-          }
-        ]
-      }
-    },
-    'Oval': {
-       totalFloors:  1
-    },
-    'Grandstand': {
-      totalFloors:1, rooms:{
-        1:[
-          {
-      code:"",
-      name:"Grandstand ",
-      description: "A seating structure near sports fields where students and spectators can watch athletic events and other outdoor activities. ",
-      img: ""
-
-          }
-        ]
-      }
-    },
-    'Study Area': {
-      totalFloors:1, rooms:{
-        1:[
-          {
-      code:"",
-      name:"Study Area ",
-      description: "A quiet space where students can read, research, and complete assignments individually or in small groups. ",
-      img: ""
-          }
-        ]
-      }
-    },
-    'Existing Academic Science Building': {
-      totalFloors:1, rooms:{
-        1:[
-          {
-    code:"",
-     name:"Academic Science Building ",
-     description: "A facility housing classrooms and laboratories where students conduct lessons and experiments in various science subjects. ",
-     img: ""
-          }
-        ]
-      }
-    },
-    'Cultural Center': {
-      totalFloors:1,
-      rooms:{
-     1:[
-      {
-    code:"",
-    name:"Cultural Center ",
-     description: "A venue for promoting arts, traditions, and cultural activities, hosting performances, exhibits, and community events. ",
-     img: ""
-      }
-     ]
-      }
-    },
-    'Floating Classroom': {
-      totalFloors: 1,
-      rooms:{
-        1:[
-          {
-    code:"",
-    name:"Floating Classroom",
-    description: "A unique learning space where students engage in lessons and activities. ",
-    img: ""
-          }
-        ]
-      }
-    },
-    'CTU Facility Centrum': {
-      totalFloors: 2,
-      rooms:{
-        1:[
-          {
-        code:"",
-        name:" ",
-        description: " ",
-        img: ""
-          }
-        ],
-        2:[
-          {
-      code:"",
-      name:" ",
-      description: " ",
-      img: ""
-          }
-        ]
-      }
-    },
-    'HM Laboratory': {
-      totalFloors:1,
-      rooms:{
-        1:[
-          {
-          code:"",
-          name:"HM Laboratory ",
-          description: "A practical room where students learn and practice household management skills such as cooking, cleaning, and basic home organization. ",
-          img: ""
-}
-        ]
-      }
-    },
-    'Mens Dorm': {
-      totalFloors: 1,
-      rooms:{
-        1:[
-          {
-    code:"",
-     name:"Men's Dorm ",
-     description: "A residential building where male students live, providing beds, study areas, and basic amenities for daily living. ",
-     img: ""
-          }
-        ]
-      }
-    },
-    'Womens Dorm': {
-      totalFloors:2,
-      rooms:{
-        1:[
-          {
-     code:"",
-     name:" ",
-     description: " ",
-     img: ""
-          }
-        ],
-        2:[
-         {
-      code:"",
-      name:" ",
-      description: " ",
-      img: ""
-         }
-        ]
-      }
-    },
-    'Furniture Workshop': {
-      totalFloors:1, 
-      rooms:{
+    }
+  },
+  'Student Activity Center': {
+    totalFloors: 1,
+    rooms:{
       1:[
+      {
+        code:"SAC",
+        name:"Student Activity Center ",
+        description: "A space where students gather for events, meetings, recreational activities, and extracurricular programs. ",
+        img: sac
+      }
+
+      ]
+    }
+  },
+  'Fitness Gym': {
+    totalFloors:1,
+    rooms:{
+      1:[
+        {
+    code:"",
+    name:"Fitness Gym ",
+    description: "A facility equipped with exercise machines and workout areas where students and staff can engage in physical fitness and training activities. ",
+      img: fitness
+        }
+      ]
+    }
+  },
+  'Sewing Area': {
+    totalFloors:1,rooms:{
+      1:[
+        {
+    code:"",
+    name:"Sewing Area ",
+    description: "A workspace equipped with sewing machines, fabrics, and tools where students practice garment making and textile projects. ",
+      img: ""
+        }
+      ]
+    }
+  },
+  'Fablab': {
+    totalFloors:1,rooms:{
+      1:[
+        {
+    code:"",
+    name:"Fablab ",
+    description: "A fabrication laboratory equipped with tools and machines like 3D printers, laser cutters, and CNC machines where students create prototypes and innovative projects.",
+    img: Fablab
+        }
+      ]
+    }
+  },
+  'Tennis Court': {
+    totalFloors: 1, rooms:{
+      1:[
+        {
+          code:"",
+    name:"Tennis Court ",
+    description: "An outdoor sports area with marked courts and nets where students and staff can play tennis and practice related skills. ",
+    img: "" 
+        }
+      ]
+    }
+  },
+  'Kadasig Gym': {
+    totalFloors: 1, rooms:{
+      1:[
+        {
+          code:"",
+      name:"Kadasig Gym ",
+      description: "A gymnasium where students participate in sports, physical education classes, and school events, equipped with courts and seating areas. ",
+      img: ""
+        }
+      ]
+    }
+  },
+  'Oval': {
+      totalFloors:  1
+  },
+  'Grandstand': {
+    totalFloors:1, rooms:{
+      1:[
+        {
+    code:"",
+    name:"Grandstand ",
+    description: "A seating structure near sports fields where students and spectators can watch athletic events and other outdoor activities. ",
+    img: ""
+
+        }
+      ]
+    }
+  },
+  'Study Area': {
+    totalFloors:1, rooms:{
+      1:[
+        {
+    code:"",
+    name:"Study Area ",
+    description: "A quiet space where students can read, research, and complete assignments individually or in small groups. ",
+    img: ""
+        }
+      ]
+    }
+  },
+  'Existing Academic Science Building': {
+    totalFloors:1, rooms:{
+      1:[
+        {
+  code:"",
+    name:"Academic Science Building ",
+    description: "A facility housing classrooms and laboratories where students conduct lessons and experiments in various science subjects. ",
+    img: ""
+        }
+      ]
+    }
+  },
+  'Cultural Center': {
+    totalFloors:1,
+    rooms:{
+    1:[
+    {
+  code:"",
+  name:"Cultural Center ",
+    description: "A venue for promoting arts, traditions, and cultural activities, hosting performances, exhibits, and community events. ",
+    img: ""
+    }
+    ]
+    }
+  },
+  'Floating Classroom': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+  name:"Floating Classroom",
+  description: "A unique learning space where students engage in lessons and activities. ",
+  img: floatingarea
+        }
+      ]
+    }
+  },
+  'CTU Facility Centrum': {
+    totalFloors: 2,
+    rooms:{
+      1:[
+        {
+      code:"",
+      name:" ",
+      description: " ",
+      img: ""
+        }
+      ],
+      2:[
+        {
+    code:"",
+    name:" ",
+    description: " ",
+    img: ""
+        }
+      ]
+    }
+  },
+  'HM Laboratory': {
+    totalFloors:1,
+    rooms:{
+      1:[
+        {
+        code:"",
+        name:"HM Laboratory ",
+        description: "A practical room where students learn and practice household management skills such as cooking, cleaning, and basic home organization. ",
+        img: HMLab
+}
+      ]
+    }
+  },
+  'Mens Dorm': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:"Men's Dorm ",
+    description: "A residential building where male students live, providing beds, study areas, and basic amenities for daily living. ",
+    img: mensdorm
+        }
+      ]
+    }
+  },
+  'Womens Dorm': {
+    totalFloors:2,
+    rooms:{
+      1:[
+        {
+    code:"",
+    name:"Women's Dormitory",
+    description: "A secure and comfortable residential facility for female students. Includes shared bedrooms, restrooms, common areas, and basic amenities. Provides a safe and supportive environment for study, rest, and daily living. ",
+    img: womensdorm
+        }
+      ],
+      2:[
+        {
+    code:"",
+    name:" ",
+    description: " ",
+    img: ""
+        }
+      ]
+    }
+  },
+  'Furniture Workshop': {
+    totalFloors:1, 
+    rooms:{
+    1:[
 
 {
 code:"",
@@ -1047,71 +1085,110 @@ description: "A practical workspace equipped with woodworking tools and material
 img: ""
 }
 
-      ]
-      }
-    },
-    'Security Office': {
-      totalFloors: 1, 
-      rooms:{
-        1: [
-          {
-           code:"",
-           name:"Security Office",
-           description:"The area where campus security personnel monitor safety, assist students, and ensure the school’s rules and regulations are followed.",
-           img: " "
+    ]
+    }
+  },
+  'Security Office': {
+    totalFloors: 1, 
+    rooms:{
+      1: [
+        {
+          code:"",
+          name:"Security Office",
+          description:"The area where campus security personnel monitor safety, assist students, and ensure the school’s rules and regulations are followed.",
+          img: " "
 
-        }
+      }
 
 ]
 
-      }
+    }
+  },
+  'ERRC Building':{  
+    totalFloors:1,
+    rooms: {
+  1: [
+    { 
+      code: " ", 
+      name: "Storage Room ",
+      description: "A space used to keep school equipment, supplies, and materials organized and safely stored.",
+      img: " "
     },
-    'ERRC Building':{  
-      totalFloors:1,
-      rooms: {
-    1: [
+    { 
+      code: " ", 
+      name: "",
+      description: " ",
+      img: " "
+    }, 
+          { 
+      code: " ", 
+      name: "Classrom 1",
+      description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
+      img: " "
+    }, 
+    { 
+      code: " ", 
+      name: "Classroom 2",
+      description: "A learning area where students attend lectures, participate in discussions, and work on academic activities guided by their teachers.",
+      img: " "
+    }, 
+    { 
+      code: " ", 
+      name: "Office",
+      description: "A workspace where school staff and administrators handle records, documents, and other administrative tasks.",
+      img: " "
+    }, 
       { 
-        code: " ", 
-        name: "Storage Room ",
-        description: "A space used to keep school equipment, supplies, and materials organized and safely stored.",
-        img: " "
-      },
-      { 
-        code: " ", 
-        name: "",
-        description: " ",
-        img: " "
-      }, 
-           { 
-        code: " ", 
-        name: "Classrom 1",
-        description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-        img: " "
-      }, 
-      { 
-        code: " ", 
-        name: "Classroom 2",
-        description: "A learning area where students attend lectures, participate in discussions, and work on academic activities guided by their teachers.",
-        img: " "
-      }, 
-      { 
-        code: " ", 
-        name: "Office",
-        description: "A workspace where school staff and administrators handle records, documents, and other administrative tasks.",
-        img: " "
-      }, 
-       { 
-        code: " ", 
-        name: "Conference Room",
-        description: "A meeting area equipped with tables and chairs where staff, faculty, and students hold discussions, presentations, and meetings.",
-        img: " "
-      }, 
+      code: " ", 
+      name: "Conference Room",
+      description: "A meeting area equipped with tables and chairs where staff, faculty, and students hold discussions, presentations, and meetings.",
+      img: " "
+    }, 
 
 
-    
-    ]
-  }
- }
+  
+  ]
+}
+}, 
+ 'PE hall': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:"PE Hall",
+    description: "A large indoor space for physical education activities and sports. Equipped with open flooring, basic sports equipment, and seating for spectators. Suitable for exercise, training, and indoor sports events. ",
+    img: PEhall
+        }
+      ]
+    }
+  },
+ 'Study Area': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"Blue Tables",
+    name:"Study Area",
+    description: "A quiet space designed for individual or group studying. Equipped with tables, chairs, and good lighting. Ideal for reading, research, and focused academic work.  ",
+    img: studyarea
+        }
+      ]
+    }
+  },
+  'Laundry Shop': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:"Laundry Shop",
+    description: "A facility for washing and drying clothes. Equipped with washing machines, drying racks, and workstations. Provides convenient laundry services for students and staff.  ",
+    img: laundryshop
+        }
+      ]
+    }
+  },
 };
 
 export default buildingData
