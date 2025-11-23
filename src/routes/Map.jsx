@@ -14,7 +14,7 @@ import PanoramaViewer from '../components/PanoramaViewer';
 import { useCategory } from '../context/CategoryContext';
 import { useScene } from '../context/SceneContext';
 import person from "../assets/person.png"
-
+import { useLocation } from "react-router-dom";
 
 function Map() {
 
@@ -36,10 +36,17 @@ function Map() {
     
           const [clicked, setClicked] = useState(false);
 
+            const location = useLocation();
           
         useEffect(() => {
-        console.log("Query updated:", query);
-      }, [query]);
+          const params = new URLSearchParams(location.search);
+          const name = params.get("name");
+           // Only open if nothing is currently open
+            if (name && !query.room?.name && !query.building) {
+              OpenCard(name);
+            }
+          console.log("Query updated:", query);
+      }, [query, location]);
 
 
 
