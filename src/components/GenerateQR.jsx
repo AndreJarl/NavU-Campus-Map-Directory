@@ -21,7 +21,7 @@ const GenerateQR = ({ text }) => {
       <img
         src={qrUrl}
         alt="QR Code"
-        className={`w-48 h-48 lg:w-52 lg:h-52 ${loading ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
+        className={`lg:w-48 lg:h-48 w-32 h-32 ${loading ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
         onLoad={() => setLoading(false)}
         onError={() => {
           setLoading(false);
