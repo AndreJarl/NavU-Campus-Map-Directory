@@ -422,7 +422,7 @@ img: Canteen
 }
 
   },
-  'Stage': 1,
+  
 
   'College of Technology/COT Building': {
     totalFloors: 2,
@@ -640,25 +640,25 @@ img:" "
 },
 {
 code:"",
-name:"Stock Room",
+name:"COT Stock Room 1",
 description: "A room used for storing tools, materials, and equipment needed for classes, projects, or laboratory activities. ",
 img:" "
 },
 {
 code:"",
-name:"Storage Room",
+name:"Old Admin Storage Room ",
 description: "A space designated for keeping school supplies, tools, and equipment organized and safely stored. ",
 img:" "
 },
 {
 code:"",
-name:"Office",
+name:" COT Office 1",
 description: "A workspace where staff and faculty handle administrative duties, paperwork, and student-related concerns. ",
 img:" "
 }, 
 {
 code:"",
-name:"Office",
+name:"COT Office 2",
 description: "A workspace where staff and faculty handle administrative duties, paperwork, and student-related concerns. ",
 img: ""
 },
@@ -670,7 +670,7 @@ img: ""
 },
 {
 code:"",
-name:"Stock Room ",
+name:"COT Stock Room 2",
 description: "A room used for storing tools, materials, and equipment needed for classes, projects, or laboratory activities. ",
 img: ""
 },
@@ -688,7 +688,7 @@ img: ""
 },
 {
 code:"",
-name:"Stock Room ",
+name:"COT Stock Room 3 ",
 description: "A room used for storing tools, materials, and equipment needed for classes, projects, or laboratory activities. ",
 img: ""
 },
@@ -706,7 +706,7 @@ img: ""
 },
 {
 code:"",
-name:"Stock Room",
+name:"Stock Room 3",
 description: "A room used for storing tools, materials, and equipment needed for classes, projects, or laboratory activities. ",
 img: ""
 }
@@ -940,8 +940,19 @@ img: ""
     }
   },
   'Oval': {
-      totalFloors:  1
+    totalFloors:1, rooms:{
+      1:[
+        {
+    code:"",
+    name:"Oval ",
+    description: "A large outdoor field within the CTU campus used for athletics, physical education classes, training, and university events. It commonly features a running track and a spacious central area for sports and recreational activities. ",
+    img: ""
+
+        }
+      ]
+    }
   },
+  
   'Grandstand': {
     totalFloors:1, rooms:{
       1:[
@@ -1011,8 +1022,8 @@ img: ""
       1:[
         {
       code:"",
-      name:" ",
-      description: " ",
+      name:"Centrum",
+      description: "A central hub within the campus that houses various university facilities and services, designed to support student activities, academic functions, and administrative needs. ",
       img: ""
         }
       ],
@@ -1185,6 +1196,162 @@ img: ""
     name:"Laundry Shop",
     description: "A facility for washing and drying clothes. Equipped with washing machines, drying racks, and workstations. Provides convenient laundry services for students and staff.  ",
     img: laundryshop
+        }
+      ]
+    }
+  },
+   'Carpentry Shop': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:"Carpentry Shop",
+    description: "A designated workshop where students develop woodworking skills and complete hands-on projects using tools, equipment, and carpentry techniques. ",
+    img:""
+        }
+      ]
+    }
+  },
+  'Sports & Athletics Office ': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:"Sports & Athletics Office ",
+    description: "The office responsible for managing the school’s sports programs, athletic events, team coordination, and student-athlete support services. ",
+    img:""
+        }
+      ]
+    }
+  },
+ ' Socio-Cultural Office ': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:"Socio-Cultural Office ",
+    description: "The office that plans and manages cultural, social, and community-building activities on campus, supporting student organizations and promoting cultural awareness and engagement. ",
+    img:""
+        }
+      ]
+    }
+  },
+' Mechanical Engineering Lab 1': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:" Mechanical Engineering Lab 1 ",
+    description: "A laboratory equipped for foundational mechanical engineering experiments and hands-on activities, where students explore basic principles in mechanics, materials, and machine operations. ",
+    img:""
+        }
+      ]
+    }
+  },
+' Mechanical Engineering Lab 2': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:" Mechanical Engineering Lab 2 ",
+    description: "An advanced laboratory for mechanical engineering students, equipped for experiments and practical work in areas such as thermodynamics, fluid mechanics, and machine design. ",
+    img:""
+        }
+      ]
+    }
+  },
+  'Maintenance Office ': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:"The office responsible for managing and coordinating the upkeep, repair, and maintenance of campus buildings, facilities, and equipment. ",
+    description: " ",
+    img:""
+        }
+      ]
+    }
+  },
+   'Faculty CR near Tennis Court ': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:"Faculty CR",
+    description: "A designated comfort room reserved for faculty members, providing private and convenient restroom facilities within the campus. ",
+    img:""
+        }
+      ]
+    }
+  },
+'Electrical Shop ': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:"Electrical Shop ",
+    description: "A workshop where students learn and practice electrical wiring, circuits, and related hands-on skills, using tools and equipment for training in electrical systems and maintenance.",
+    img:""
+        }
+      ]
+    }
+  },
+'Sanitation Staff Office ': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:"Sanitation Staff Office ",
+    description: "The office where the sanitation team coordinates cleaning, waste management, and hygiene maintenance across the campus to ensure a safe and clean environment.",
+    img:""
+        }
+      ]
+    }
+  },
+'Canteen Mens CR ': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:"Canteen Mens CR ",
+    description: "A restroom facility designated for male users located near or within the school canteen, providing convenient access for students and staff. ",
+    img:""
+        }
+      ]
+    }
+  },
+  'Canteen Womens CR ': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:"Canteen Womens CR ",
+    description: "A restroom facility designated for female users located near or within the school canteen, offering convenient access for students and staff. ",
+    img:""
+        }
+      ]
+    }
+  },
+ ' ': {
+    totalFloors: 1,
+    rooms:{
+      1:[
+        {
+  code:"",
+    name:" ",
+    description: " ",
+    img:""
         }
       ]
     }

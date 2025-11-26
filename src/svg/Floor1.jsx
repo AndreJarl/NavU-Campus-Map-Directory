@@ -291,7 +291,7 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M115 544h21v17h-21z" />
         <text x="125.5" y="553.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 5</text>
 
-        {/* Dorm near Sewing Lab bldg */}
+        {/* Womens Dormitory bldg */}
         <path fill={allFalse ? '#0080ff' : category[""] ? "#0080ff" : "#B0B0B0"} stroke={allFalse ? '#0065CE' : category[""] ? "#0065CE" : "#B0B0B0"} stroke-width={0.4} d="m25.5078 522.63 17.3889326.63436844-1.55969218 42.75335977-17.3889326-.63436844z" />
         <text x="32.85" y="546" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" transform="rotate(2.09, 33.422, 557.324)">DORM</text>
 
@@ -648,7 +648,7 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text x="344.5" y="464.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ELECTRICAL</text>
         <text x="344.5" y="466.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">MAINTENANCE</text>
 
-        {/* Kitchen Lab bldg */}
+        {/* HM Laboratory bldg */}
         <path fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="m355.997 475 .003 32.451h-22.997L333 475z" />
         <text x="344.5" y="491.8" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">KITCHEN</text>
         <text x="344.5" y="494.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY</text>
