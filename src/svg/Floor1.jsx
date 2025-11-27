@@ -239,18 +239,18 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill="#535353" d="M132.992 540.2h-10v.8h10z" />
         <path fill="#535353" d="M132.991 528h-10v.8h10z" />
         <path fill="#535353" d="M123.792 540.201v-11.4004h-.8v11.4004z" />
-        {/* girl cr near cme */}
-        <path fill={allFalse ? '#ff69eb' : category["Restroom"] ? "#ff69eb" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M272 528v15h-9v-15z" />
-        <text x="267.5" y="535.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">WOMEN'S</text>
-        <text x="267.5" y="537.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CR</text>
+        {/* CME Women CR bldg */}
+        <path onClick={() => bldClicked("CME Women CR")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff69eb' : category["Restroom"] ? "#ff69eb" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M272 528v15h-9v-15z" />
+        <text onClick={() => bldClicked("CME Women CR")} style={{ cursor: "pointer" }} x="267.5" y="535.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">WOMEN'S</text>
+        <text onClick={() => bldClicked("CME Women CR")} style={{ cursor: "pointer" }} x="267.5" y="537.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CR</text>
 
         {/* COE Room 2 bldg */}
-        <path fill={allFalse ? '#ff3030' : category[""] ? "#ff3030" : "#B0B0B0"} stroke={allFalse ? '#C32525' : category[""] ? "#C32525" : "#B0B0B0"} stroke-width={0.4} d="M249 544h21v17h-21z" />
-        <text x="259.5" y="553.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 2</text>
+        <path onClick={() => bldClicked("COE Room 2")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff3030' : category[""] ? "#ff3030" : "#B0B0B0"} stroke={allFalse ? '#C32525' : category[""] ? "#C32525" : "#B0B0B0"} stroke-width={0.4} d="M249 544h21v17h-21z" />
+        <text onClick={() => bldClicked("COE Room 2")} style={{ cursor: "pointer" }} x="259.5" y="553.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 2</text>
 
         {/* COE Room 1 bldg */}
-        <path fill={allFalse ? '#ff3030' : category[""] ? "#ff3030" : "#B0B0B0"} stroke={allFalse ? '#C32525' : category[""] ? "#C32525" : "#B0B0B0"} stroke-width={0.4} d="M270 562v16h-21v-16z" />
-        <text x="259.5" y="571" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 1</text>
+        <path onClick={() => bldClicked("COE Room 1")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff3030' : category[""] ? "#ff3030" : "#B0B0B0"} stroke={allFalse ? '#C32525' : category[""] ? "#C32525" : "#B0B0B0"} stroke-width={0.4} d="M270 562v16h-21v-16z" />
+        <text onClick={() => bldClicked("COE Room 1")} style={{ cursor: "pointer" }} x="259.5" y="571" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 1</text>
 
         {/* Electrical Laboratory / EL bldg */}
         <path onClick={() => bldClicked("Electronic Laboratory")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff3030' : category["Laboratory"] ? "#ff3030" : "#B0B0B0"} stroke={allFalse ? '#C32525' : category["Laboratory"] ? "#C32525" : "#B0B0B0"} stroke-width={0.4} d="M270 579v17h-21v-17z" />
@@ -264,7 +264,7 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
 
         {/* Room 12 near BISTRO bldg */}
         <path onClick={() => bldClicked("Room 12")}  style={{ cursor: "pointer" }} fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M227 562v21h-22v-21z" />
-        <text  onClick={() => bldClicked("Room 12")}  style={{ cursor: "pointer" }} x="216" y="573.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 12</text>
+        <text onClick={() => bldClicked("Room 12")}  style={{ cursor: "pointer" }} x="216" y="573.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 12</text>
 
         {/* Ergonomic Lab bldg */}
         <path  onClick={() => bldClicked("Ergonomic Laboratory")}  style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M205 540h22v21h-22z" />
@@ -272,7 +272,7 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text  onClick={() => bldClicked("Ergonomic Laboratory")}  style={{ cursor: "pointer" }} x="216" y="552.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY</text>
 
         {/* General Chemistry Lab bldg */}
-        <path  onClick={() => bldClicked("General Chemistry Laboratory")}  style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M227 584v21h-22v-21z" />
+        <path onClick={() => bldClicked("General Chemistry Laboratory")}  style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M227 584v21h-22v-21z" />
         <text onClick={() => bldClicked("General Chemistry Laboratory")}  style={{ cursor: "pointer" }} x="216" y="592.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">GENERAL</text>
         <text onClick={() => bldClicked("General Chemistry Laboratory")}  style={{ cursor: "pointer" }} x="216" y="595.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CHEMISTRY</text>
         <text onClick={() => bldClicked("General Chemistry Laboratory")}  style={{ cursor: "pointer" }} x="216" y="598.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY</text>
@@ -283,120 +283,120 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text  onClick={() => bldClicked("Edtech Laboratory 2")}  style={{ cursor: "pointer" }} x="216" y="618.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY 2</text>
 
         {/* New CEAS CR bldg */}
-        <path fill={allFalse ? '#ff69eb' : category["Restroom"] ? "#ff69eb" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M113 528v15h9v-15z" />
-        <text x="117.5" y="535.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">WOMEN'S</text>
-        <text x="117.5" y="537.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CR</text>
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff69eb' : category["Restroom"] ? "#ff69eb" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M113 528v15h9v-15z" />
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="117.5" y="535.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">WOMEN'S</text>
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="117.5" y="537.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CR</text>
 
         {/* New CEAS Room 5 bldg */}
-        <path fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M115 544h21v17h-21z" />
-        <text x="125.5" y="553.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 5</text>
+        <path onClick={() => bldClicked("CEAS Room 5")} style={{ cursor: "pointer" }} fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M115 544h21v17h-21z" />
+        <text onClick={() => bldClicked("CEAS Room 5")} style={{ cursor: "pointer" }} x="125.5" y="553.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 5</text>
 
         {/* Dorm near Sewing Lab bldg */}
-        <path fill={allFalse ? '#0080ff' : category[""] ? "#0080ff" : "#B0B0B0"} stroke={allFalse ? '#0065CE' : category[""] ? "#0065CE" : "#B0B0B0"} stroke-width={0.4} d="m25.5078 522.63 17.3889326.63436844-1.55969218 42.75335977-17.3889326-.63436844z" />
-        <text x="32.85" y="546" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" transform="rotate(2.09, 33.422, 557.324)">DORM</text>
+        <path onClick={() => bldClicked("Dorm")} style={{ cursor: "pointer" }} fill={allFalse ? '#0080ff' : category[""] ? "#0080ff" : "#B0B0B0"} stroke={allFalse ? '#0065CE' : category[""] ? "#0065CE" : "#B0B0B0"} stroke-width={0.4} d="m25.5078 522.63 17.3889326.63436844-1.55969218 42.75335977-17.3889326-.63436844z" />
+        <text onClick={() => bldClicked("Dorm")} style={{ cursor: "pointer" }} x="32.85" y="546" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" transform="rotate(2.09, 33.422, 557.324)">DORM</text>
 
         {/* New CEAS Room 3 bldg */}
-        <path fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M136 579v17h-21v-17z" />
-        <text x="125.5" y="588.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 3</text>
+        <path onClick={() => bldClicked("CEAS Room 3")} style={{ cursor: "pointer" }} fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M136 579v17h-21v-17z" />
+        <text onClick={() => bldClicked("CEAS Room 3")} style={{ cursor: "pointer" }} x="125.5" y="588.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 3</text>
 
         {/* Quadrangle bldg */}
-        <path fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M195 589v51.391h-40V589z" />
-        <text x="175" y="616.696" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">QUADRANGLE</text>
-        <path fill={allFalse ? '#01db96' : category["Sports"] ? "#01db96" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M155 640.261h40V643h-40z" />
+        <path onClick={() => bldClicked("Quadrangle")} style={{ cursor: "pointer" }} fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M195 589v51.391h-40V589z" />
+        <text onClick={() => bldClicked("Quadrangle")} style={{ cursor: "pointer" }} x="175" y="616.696" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">QUADRANGLE</text>
+        <path onClick={() => bldClicked("Quadrangle")} style={{ cursor: "pointer" }} fill={allFalse ? '#01db96' : category["Sports"] ? "#01db96" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M155 640.261h40V643h-40z" />
 
         {/* Flag pole bldg */}
-        <path fill={allFalse ? '#00ffae' : category[""] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category[""] ? "#01CC8C" : "#B0B0B0"}
+        <path onClick={() => bldClicked("Flag Pole")} style={{ cursor: "pointer" }} fill={allFalse ? '#00ffae' : category[""] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category[""] ? "#01CC8C" : "#B0B0B0"}
           stroke-width={0.4} d="M202 700v10.468h-18V700z" />
-        <text x="193" y="705.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FLAG POLE</text>
-        <path fill={allFalse ? '#01CC8C' : category[""] ? "#01CC8C" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category[""] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M184 709.721h18V711h-18z" />
+        <text onClick={() => bldClicked("Flag Pole")} style={{ cursor: "pointer" }} x="193" y="705.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FLAG POLE</text>
+        <path onClick={() => bldClicked("Flag Pole")} style={{ cursor: "pointer" }} fill={allFalse ? '#01CC8C' : category[""] ? "#01CC8C" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category[""] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M184 709.721h18V711h-18z" />
 
         {/* New CEAS Room 2 bldg */}
-        <path fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M136 597v16h-21v-16z" />
-        <text x="125.5" y="605.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 2</text>
+        <path onClick={() => bldClicked("CEAS Room 2")} style={{ cursor: "pointer" }} fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M136 597v16h-21v-16z" />
+        <text onClick={() => bldClicked("CEAS Room 2")} style={{ cursor: "pointer" }} x="125.5" y="605.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 2</text>
 
         {/* Production Area Stock Room 2 bldg */}
-        <path fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M62.457 486.005V494h-11l5.8236-7.995z" />
-        <text x="58.65" y="489.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">STOCK</text>
-        <text x="58.65" y="491.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">ROOM</text>
+        <path onClick={() => bldClicked("Production Area Stock Room 2")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M62.457 486.005V494h-11l5.8236-7.995z" />
+        <text onClick={() => bldClicked("Production Area Stock Room 2")} style={{ cursor: "pointer" }} x="58.65" y="489.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">STOCK</text>
+        <text onClick={() => bldClicked("Production Area Stock Room 2")} style={{ cursor: "pointer" }} x="58.65" y="491.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">ROOM</text>
 
 
         {/* Production Area bldg */}
-        <path fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M78 495v14H47v-7.881l2.4404-3.846L50.8946 495z" />
-        <text x="62.5" y="501.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">PRODUCTION</text>
-        <text x="62.5" y="504.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">AREA</text>
+        <path onClick={() => bldClicked("Production Area")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M78 495v14H47v-7.881l2.4404-3.846L50.8946 495z" />
+        <text onClick={() => bldClicked("Production Area")} style={{ cursor: "pointer" }} x="62.5" y="501.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">PRODUCTION</text>
+        <text onClick={() => bldClicked("Production Area")} style={{ cursor: "pointer" }} x="62.5" y="504.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">AREA</text>
 
 
         {/* Production Office bldg */}
-        <path fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M78 510v11H62v-11z" />
-        <text x="70" y="515" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">PRODUCTION</text>
-        <text x="70" y="517.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
+        <path onClick={() => bldClicked("Production Office")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M78 510v11H62v-11z" />
+        <text onClick={() => bldClicked("Production Office")} style={{ cursor: "pointer" }} x="70" y="515" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">PRODUCTION</text>
+        <text onClick={() => bldClicked("Production Office")} style={{ cursor: "pointer" }} x="70" y="517.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
 
 
         {/* Production Area Stock Room 1 bldg */}
-        <path fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M61 510v11H47v-11z" />
-        <text x="54.1" y="515" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">STOCK</text>
-        <text x="54.1" y="517.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM</text>
+        <path onClick={() => bldClicked("Production Area Stock Room 1")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M61 510v11H47v-11z" />
+        <text onClick={() => bldClicked("Production Area Stock Room 1")} style={{ cursor: "pointer" }} x="54.1" y="515" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">STOCK</text>
+        <text onClick={() => bldClicked("Production Area Stock Room 1")} style={{ cursor: "pointer" }} x="54.1" y="517.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM</text>
 
 
         {/* Extension & Production Office bldg */}
-        <path fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M78 522v7H47v-7z" />
-        <text x="62.5" y="525.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">EXTENSION &</text>
-        <text x="62.5" y="527.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">PRODUCTION OFFICE</text>
+        <path onClick={() => bldClicked("Extension & Production Office")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M78 522v7H47v-7z" />
+        <text onClick={() => bldClicked("Extension & Production Office")} style={{ cursor: "pointer" }}  x="62.5" y="525.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">EXTENSION &</text>
+        <text onClick={() => bldClicked("Extension & Production Office")} style={{ cursor: "pointer" }}  x="62.5" y="527.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">PRODUCTION OFFICE</text>
 
         {/* Supply Office bldg */}
-        <path fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M78 530v12H62v-12z" />
-        <text x="70" y="535.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">SUPPLY</text>
-        <text x="70" y="538" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
+        <path onClick={() => bldClicked("Supply Office")} style={{ cursor: "pointer" }}  fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M78 530v12H62v-12z" />
+        <text onClick={() => bldClicked("Supply Office")} style={{ cursor: "pointer" }} x="70" y="535.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">SUPPLY</text>
+        <text onClick={() => bldClicked("Supply Office")} style={{ cursor: "pointer" }} x="70" y="538" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
 
         {/* Old Admin Storage Room bldg */}
-        <path fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M78 543v13H47v-26h13.9843v13z" />
-        <text x="62.5" y="549.1" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">STORAGE</text>
-        <text x="62.5" y="551.55" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM</text>
+        <path onClick={() => bldClicked("Old Admin Storage Room")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M78 543v13H47v-26h13.9843v13z" />
+        <text onClick={() => bldClicked("Old Admin Storage Room")} style={{ cursor: "pointer" }} x="62.5" y="549.1" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">STORAGE</text>
+        <text onClick={() => bldClicked("Old Admin Storage Room")} style={{ cursor: "pointer" }} x="62.5" y="551.55" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM</text>
 
         {/* COT Stock Room 1 bldg */}
-        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category[""] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M59 557v10H47v-10z" />
-        <text x="53" y="561.65" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">STOCK</text>
-        <text x="53" y="563.8" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">ROOM</text>
+        <path onClick={() => bldClicked("COT Stock Room 1")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category[""] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M59 557v10H47v-10z" />
+        <text onClick={() => bldClicked("COT Stock Room 1")} style={{ cursor: "pointer" }} x="53" y="561.65" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">STOCK</text>
+        <text onClick={() => bldClicked("COT Stock Room 1")} style={{ cursor: "pointer" }} x="53" y="563.8" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">ROOM</text>
 
         {/* COT Dean's office bldg */}
-        <path fill={allFalse ? '#fc0' : category["Faculty"] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Faculty"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M59 568v7H47v-7z" />
-        <text x="53" y="571.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">COT DEAN'S</text>
-        <text x="53" y="573" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">OFFICE</text>
+        <path onClick={() => bldClicked("COT Dean's office")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category["Faculty"] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Faculty"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M59 568v7H47v-7z" />
+        <text onClick={() => bldClicked("COT Dean's office")} style={{ cursor: "pointer" }} x="53" y="571.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">COT DEAN'S</text>
+        <text onClick={() => bldClicked("COT Dean's office")} style={{ cursor: "pointer" }} x="53" y="573" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">OFFICE</text>
 
         {/* COT Office 1 bldg */}
-        <path fill={allFalse ? '#fc0' : category["Faculty"] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Faculty"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M59 576v6H47v-6z" />
-        <text x="53" y="579.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">OFFICE</text>
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category["Faculty"] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Faculty"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M59 576v6H47v-6z" />
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="53" y="579.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">OFFICE</text>
 
         {/* COT Office 2 bldg */}
-        <path fill={allFalse ? '#fc0' : category["Faculty"] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Faculty"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M59 583v6H47v-6z" />
-        <text x="53" y="586.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">OFFICE</text>
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category["Faculty"] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Faculty"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M59 583v6H47v-6z" />
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="53" y="586.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">OFFICE</text>
 
         {/* COT Stock Room 2 bldg */}
-        <path fill={allFalse ? '#fc0' : category[""] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M59 590v7H47v-7z" />
-        <text x="53" y="593.1" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.6" fill="black">STOCK</text>
-        <text x="53" y="595" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.6" fill="black">ROOM</text>
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category[""] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M59 590v7H47v-7z" />
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="53" y="593.1" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.6" fill="black">STOCK</text>
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="53" y="595" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.6" fill="black">ROOM</text>
 
         {/* COT Office Main bldg */}
-        <path fill={allFalse ? '#fc0' : category["Faculty"] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Faculty"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M78 568v17H60v-17z" />
-        <text x="69" y="576.25" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">COT</text>
-        <text x="69" y="578.75" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category["Faculty"] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Faculty"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M78 568v17H60v-17z" />
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="69" y="576.25" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">COT</text>
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="69" y="578.75" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
 
         {/* COT Faculty office bldg */}
-        <path fill={allFalse ? '#fc0' : category["Faculty"] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Faculty"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M78 586v11H60v-11z" />
-        <text x="69" y="590.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">COT</text>
-        <text x="69" y="593.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FACULTY</text>
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category["Faculty"] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Faculty"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M78 586v11H60v-11z" />
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="69" y="590.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">COT</text>
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="69" y="593.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FACULTY</text>
 
         {/* COE Computer Laboratory 1 bldg */}
         <path onClick={() => bldClicked("Computer Laboratory 1")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff3030' : category["Laboratory"] ? "#ff3030" : "#B0B0B0"} stroke={allFalse ? '#C32525' : category["Laboratory"] ? "#C32525" : "#B0B0B0"} stroke-width={0.4} d="M270.002 614v30.514h-20.994V614z" />
         <text onClick={() => bldClicked("Computer Laboratory 1")} style={{ cursor: "pointer" }} x="259.505" y="628.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">COMPUTER</text>
         <text onClick={() => bldClicked("Computer Laboratory 1")} style={{ cursor: "pointer" }} x="259.505" y="631.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY 1</text>
-        <path fill={allFalse ? '#CD2727' : category["Laboratory"] ? "#CD2727" : "#B0B0B0"} stroke={allFalse ? '#C32525' : category["Laboratory"] ? "#C32525" : "#B0B0B0"} stroke-width={0.4} d="M249.008 643.367h20.994v2.638h-20.994z" />
+        <path onClick={() => bldClicked("Computer Laboratory 1")} style={{ cursor: "pointer" }} fill={allFalse ? '#CD2727' : category["Laboratory"] ? "#CD2727" : "#B0B0B0"} stroke={allFalse ? '#C32525' : category["Laboratory"] ? "#C32525" : "#B0B0B0"} stroke-width={0.4} d="M249.008 643.367h20.994v2.638h-20.994z" />
 
         {/* Centrum bldg */}
-        <path fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="m458.775 585.587-8.812 97.326-34.236-3.099 8.812-97.326z" />
-        <text x="437.251" y="632" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black" transform="rotate(5.17, 437.251, 631.451)">CTU FACILITY</text>
-        <text x="437.251" y="634.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black" transform="rotate(5.17, 437.251, 633.951)">CENTRUM</text>
-        <path fill={allFalse ? '#01db96' : category["Sports"] ? "#01db96" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="m415.727 679.814 34.236 3.099-.431 4.756-34.235-3.1z" />
+        <path onClick={() => bldClicked("Centrum")} style={{ cursor: "pointer" }} fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="m458.775 585.587-8.812 97.326-34.236-3.099 8.812-97.326z" />
+        <text onClick={() => bldClicked("Centrum")} style={{ cursor: "pointer" }} x="437.251" y="632" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black" transform="rotate(5.17, 437.251, 631.451)">CTU FACILITY</text>
+        <text onClick={() => bldClicked("Centrum")} style={{ cursor: "pointer" }} x="437.251" y="634.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black" transform="rotate(5.17, 437.251, 633.951)">CENTRUM</text>
+        <path onClick={() => bldClicked("Centrum")} style={{ cursor: "pointer" }} fill={allFalse ? '#01db96' : category["Sports"] ? "#01db96" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="m415.727 679.814 34.236 3.099-.431 4.756-34.235-3.1z" />
 
         {/* EDTECH Lab 1 bldg */}
         <path onClick={() => bldClicked("Edtech Laboratory 1")} style={{ cursor: "pointer" }}  fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M227 628v19.975h-22V628z" />
@@ -405,20 +405,20 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path onClick={() => bldClicked("Edtech Laboratory 1")} style={{ cursor: "pointer" }}   fill={allFalse ? '#ce6700' : category["Laboratory"] ? "#ce6700" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M205 647.84h22V650h-22z" />
 
         {/* COT Record bldg */}
-        <path fill={allFalse ? '#fc0' : category[""] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M78 598v6.452H47V598z" />
-        <text x="62.5" y="601.85" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">RECORDS</text>
-        <path fill={allFalse ? '#d6b018' : category[""] ? "#d6b018" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M47 604.452h31V606H47z" />
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category[""] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M78 598v6.452H47V598z" />
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="62.5" y="601.85" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">RECORDS</text>
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#d6b018' : category[""] ? "#d6b018" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M47 604.452h31V606H47z" />
 
-        {/* Sewing Lab bldg */}
-        <path fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="m41.3387 567.29-.7631 20.919-17.389-.635.7631-20.919z" />
-        <text x="32.263" y="576.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" transform="rotate(2.09, 32.263, 576.132)">SEWING</text>
-        <text x="32.263" y="579.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" transform="rotate(2.09, 32.263, 578.732)">LABORATORY</text>
-        <path fill={allFalse ? '#ce6700' : category["Laboratory"] ? "#ce6700" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="m23.22 586.659 17.3889.634-.0715 1.962-17.389-.635z" />
+        {/* Sewing Laboratory bldg */}
+        <path onClick={() => bldClicked("Sewing Laboratory")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="m41.3387 567.29-.7631 20.919-17.389-.635.7631-20.919z" />
+        <text onClick={() => bldClicked("Sewing Laboratory")} style={{ cursor: "pointer" }} x="32.263" y="576.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" transform="rotate(2.09, 32.263, 576.132)">SEWING</text>
+        <text onClick={() => bldClicked("Sewing Laboratory")} style={{ cursor: "pointer" }} x="32.263" y="579.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" transform="rotate(2.09, 32.263, 578.732)">LABORATORY</text>
+        <path onClick={() => bldClicked("Sewing Laboratory")} style={{ cursor: "pointer" }} fill={allFalse ? '#ce6700' : category["Laboratory"] ? "#ce6700" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="m23.22 586.659 17.3889.634-.0715 1.962-17.389-.635z" />
 
         {/* New CEAS Room 1 bldg */}
-        <path fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M136 614v30.564h-21V614z" />
-        <text x="125.5" y="629.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 1</text>
-        <path fill={allFalse ? '#0094cf' : category[""] ? "#0094cf" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M115 643.357h21V646h-21z" />
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M136 614v30.564h-21V614z" />
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="125.5" y="629.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 1</text>
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#0094cf' : category[""] ? "#0094cf" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M115 643.357h21V646h-21z" />
 
         {/* CIVIL ENGINEERING LABBBBBBBBB */}
         <path onClick={() => bldClicked("Engineering Laboratory")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff3030' : category["Laboratory"] ? "#ff3030" : "#B0B0B0"} stroke={allFalse ? '#C32525' : category["Laboratory"] ? "#C32525" : "#B0B0B0"} stroke-width={0.4} d="M270 664v17h-21v-17z" />
@@ -442,15 +442,14 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text onClick={() => bldClicked("Education Laboratory 1")} style={{ cursor: "pointer" }}  x="125.5" y="692" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY 1</text>
 
         {/* woman cr near clinic */}
-        <path fill={allFalse ? '#ff69eb' : category["Restroom"] ? "#ff69eb" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M249 699h24v8.938h-24z" />
-        <text x="261" y="704.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">WOMEN'S CR</text>
-        <path fill={allFalse ? '#cf56bf' : category["Restroom"] ? "#cf56bf" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M249 707.938h24V710h-24z" />
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff69eb' : category["Restroom"] ? "#ff69eb" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M249 699h24v8.938h-24z" />
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="261" y="704.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">WOMEN'S CR</text>
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#cf56bf' : category["Restroom"] ? "#cf56bf" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M249 707.938h24V710h-24z" />
 
         {/* woman cr near accounting */}
-
-        <path fill={allFalse ? '#ff69eb' : category["Restroom"] ? "#ff69eb" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M112 699h24v8.937h-24z" />
-        <text x="124" y="704.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">WOMEN'S CR</text>
-        <path fill={allFalse ? '#cf56bf' : category["Restroom"] ? "#cf56bf" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M112 707.937h24V710h-24z" />
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff69eb' : category["Restroom"] ? "#ff69eb" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M112 699h24v8.937h-24z" />
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="124" y="704.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">WOMEN'S CR</text>
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#cf56bf' : category["Restroom"] ? "#cf56bf" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M112 707.937h24V710h-24z" />
 
         {/* MIS Office bldg */}
         <path fill={allFalse ? '#ff6453' : category["Admin"] ? "#ff6453" : "#B0B0B0"} stroke={allFalse ? '#B84336' : category["Admin"] ? "#B84336" : "#B0B0B0"} onClick={() => bldClicked("MIS Office")} style={{ cursor: "pointer", pointerEvents: 'all' }} stroke-width={0.4} d="M143 728h15v21.021h-15z" />
@@ -496,9 +495,9 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text onClick={() => bldClicked("University Canteen")}  style={{ cursor: "pointer" }} x="127.5" y="447.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">CANTEEN</text>
 
         {/* Canteen Stock Room bldg */}
-        <path fill={allFalse ? '#ff4c85' : category[""] ? "#ff4c85" : "#B0B0B0"} stroke={allFalse ? '#DD4B83' : category[""] ? "#DD4B83" : "#B0B0B0"} stroke-width={0.4} d="M132 468h14.956v7.283H132z" />
-        <text x="139.478" y="471.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">STOCK</text>
-        <text x="139.478" y="473.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">ROOM</text>
+        <path onClick={() => bldClicked("Canteen Stock Room")}  style={{ cursor: "pointer" }} fill={allFalse ? '#ff4c85' : category[""] ? "#ff4c85" : "#B0B0B0"} stroke={allFalse ? '#DD4B83' : category[""] ? "#DD4B83" : "#B0B0B0"} stroke-width={0.4} d="M132 468h14.956v7.283H132z" />
+        <text onClick={() => bldClicked("Canteen Stock Room")}  style={{ cursor: "pointer" }} x="139.478" y="471.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">STOCK</text>
+        <text onClick={() => bldClicked("Canteen Stock Room")}  style={{ cursor: "pointer" }} x="139.478" y="473.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">ROOM</text>
         <path fill={allFalse ? '#d94272' : category[""] ? "#d94272" : "#B0B0B0"} stroke={allFalse ? '#DD4B83' : category[""] ? "#DD4B83" : "#B0B0B0"} stroke-width={0.4} d="M132 475.283h14.956v1.69H132z" />
 
         {/* COT Room 46 bldg */}
@@ -506,26 +505,26 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text onClick={() => bldClicked("Room 46")} style={{ cursor: "pointer" }} x="119.5" y="477.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 46</text>
 
         {/* COT Computer Laboratory bldg */}
-        <path fill={allFalse ? '#fc0' : category["Laboratory"] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Laboratory"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M108 486h24v16h-24z" />
-        <text x="120" y="493.8" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">COMPUTER</text>
-        <text x="120" y="496.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY</text>
+        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category["Laboratory"] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Laboratory"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M108 486h24v16h-24z" />
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="120" y="493.8" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">COMPUTER</text>
+        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="120" y="496.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY</text>
         <path fill={allFalse ? '#d6b018' : category["Laboratory"] ? "#d6b018" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Laboratory"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M108 502h24v2h-24z" />
 
         {/* Men's Dorm bldg */}
-        <path fill={allFalse ? '#0080ff' : category[""] ? "#0080ff" : "#B0B0B0"} stroke={allFalse ? '#0065CE' : category[""] ? "#0065CE" : "#B0B0B0"} stroke-width={0.4} d="M359 462.486h19v33.189h-19z" />
-        <text x="368.5" y="478.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">MEN'S</text>
-        <text x="368.5" y="481.25" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">DORM</text>
+        <path onClick={() => bldClicked("Men's Dorm")} style={{ cursor: "pointer" }} fill={allFalse ? '#0080ff' : category[""] ? "#0080ff" : "#B0B0B0"} stroke={allFalse ? '#0065CE' : category[""] ? "#0065CE" : "#B0B0B0"} stroke-width={0.4} d="M359 462.486h19v33.189h-19z" />
+        <text onClick={() => bldClicked("Men's Dorm")} style={{ cursor: "pointer" }} x="368.5" y="478.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">MEN'S</text>
+        <text onClick={() => bldClicked("Men's Dorm")} style={{ cursor: "pointer" }} x="368.5" y="481.25" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">DORM</text>
         <path fill={allFalse ? '#006cd7' : category[""] ? "#006cd7" : "#B0B0B0"} stroke={allFalse ? '#0065CE' : category[""] ? "#0065CE" : "#B0B0B0"} stroke-width={0.4} d="M359 495.409h19v2.655h-19z" />
 
         {/* Floating Classroom bldg */}
-        <path fill={allFalse ? '#fc0' : category[""] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M167 353h68v16h-68z" />
-        <text x="201" y="360.75" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">FLOATING</text>
-        <text x="201" y="363.25" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">CLASSROOM</text>
+        <path onClick={() => bldClicked("Floating Classroom")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category[""] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M167 353h68v16h-68z" />
+        <text onClick={() => bldClicked("Floating Classroom")} style={{ cursor: "pointer" }} x="201" y="360.75" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">FLOATING</text>
+        <text onClick={() => bldClicked("Floating Classroom")} style={{ cursor: "pointer" }} x="201" y="363.25" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">CLASSROOM</text>
         <path fill={allFalse ? '#d6b018' : category[""] ? "#d6b018" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M167 369h68v2h-68z" />
 
         {/* Grandstand bldg */}
-        <path fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="m91.6124 179.949 2.7928-2.568 5.3134 5.778 5.3934-4.959-5.3137-5.779 2.8887-2.656 5.314 5.778 5.393-4.959-5.314-5.778 2.89-2.657 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657 5.313 5.779 5.394-4.96-5.314-5.778 2.889-2.657 5.314 5.779 5.393-4.959-5.314-5.779 2.889-2.656 5.314 5.778 5.393-4.959-5.313-5.779 2.889-2.656 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657L182.54 107l5.393-4.959-5.313-5.7781 2.889-2.6567 5.314 5.7782 5.393-4.9591-5.314-5.7783 2.889-2.6567 22.41 24.3707-102.179 93.958z" />
-        <text x="148.281" y="153.475" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="5" fill="black" transform="rotate(-43, 148.281, 143.475)">GRANDSTAND</text>
+        <path onClick={() => bldClicked("Grandstand")} style={{ cursor: "pointer" }} fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="m91.6124 179.949 2.7928-2.568 5.3134 5.778 5.3934-4.959-5.3137-5.779 2.8887-2.656 5.314 5.778 5.393-4.959-5.314-5.778 2.89-2.657 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657 5.313 5.779 5.394-4.96-5.314-5.778 2.889-2.657 5.314 5.779 5.393-4.959-5.314-5.779 2.889-2.656 5.314 5.778 5.393-4.959-5.313-5.779 2.889-2.656 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657L182.54 107l5.393-4.959-5.313-5.7781 2.889-2.6567 5.314 5.7782 5.393-4.9591-5.314-5.7783 2.889-2.6567 22.41 24.3707-102.179 93.958z" />
+        <text onClick={() => bldClicked("Grandstand")} style={{ cursor: "pointer" }} x="148.281" y="153.475" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="5" fill="black" transform="rotate(-43, 148.281, 143.475)">GRANDSTAND</text>
         <path fill={allFalse ? '#0094cf' : category[""] ? "#0094cf" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="m114.017 204.314 102.179-93.959 2.125 2.312-102.178 93.958z" />
 
         {/* COT Room 38 / Industrial Motor Control /Electrical Laboratory bldg */}
@@ -577,16 +576,16 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path onClick={() => bldClicked("Stage")}  style={{ cursor: "pointer" }} fill={allFalse ? '#01db96' : category["Sports"] ? "#01db96" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M156 582.386h19V585h-19z" />
 
         {/* NSTP Office bldg */}
-        <path fill={allFalse ? '#fc0' : category[""] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M133 486h10v16h-10z" />
-        <text x="138" y="494" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">NSTP</text>
-        <text x="138" y="496" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">OFFICE</text>
+        <path onClick={() => bldClicked("NSTP Office")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category[""] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M133 486h10v16h-10z" />
+        <text onClick={() => bldClicked("NSTP Office")} style={{ cursor: "pointer" }} x="138" y="494" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">NSTP</text>
+        <text onClick={() => bldClicked("NSTP Office")} style={{ cursor: "pointer" }} x="138" y="496" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">OFFICE</text>
         <path fill={allFalse ? '#d6b018' : category[""] ? "#d6b018" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M133 502h10v2h-10z" />
 
         {/* GAD Office bldg */}
-        <path fill={allFalse ? '#fc0' : category[""] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M144 486h9.955v16H144z" />
-        <text x="148.978" y="494" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">GAD</text>
-        <text x="148.978" y="496" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">OFFICE</text>
-        <path fill={allFalse ? '#d6b018' : category[""] ? "#d6b018" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M144 502h9.955v2H144z" />
+        <path onClick={() => bldClicked("GAD Office")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category[""] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M144 486h9.955v16H144z" />
+        <text onClick={() => bldClicked("GAD Office")} style={{ cursor: "pointer" }} x="148.978" y="494" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">GAD</text>
+        <text onClick={() => bldClicked("GAD Office")} style={{ cursor: "pointer" }} x="148.978" y="496" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">OFFICE</text>
+        <path onClick={() => bldClicked("GAD Office")} style={{ cursor: "pointer" }} fill={allFalse ? '#d6b018' : category[""] ? "#d6b018" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M144 502h9.955v2H144z" />
 
         {/* COT Room 37 bldg */}
         <path onClick={() => bldClicked("Room 37")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category[""] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category[""] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M203 397h23v25h-23z" />
@@ -632,10 +631,10 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text x="316" y="425.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.9" fill="black">CR</text>
 
         {/* SAC bldg */}
-        <path fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M294 430h29v77.135h-29z" />
-        <text x="308.5" y="466.768" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">STUDENT</text>
-        <text x="308.5" y="469.568" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">ACTIVITY</text>
-        <text x="308.5" y="472.368" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">CENTER</text>
+        <path onClick={() => bldClicked("SAC")} style={{ cursor: "pointer" }} fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M294 430h29v77.135h-29z" />
+        <text onClick={() => bldClicked("SAC")} style={{ cursor: "pointer" }} x="308.5" y="466.768" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">STUDENT</text>
+        <text onClick={() => bldClicked("SAC")} style={{ cursor: "pointer" }} x="308.5" y="469.568" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">ACTIVITY</text>
+        <text onClick={() => bldClicked("SAC")} style={{ cursor: "pointer" }} x="308.5" y="472.368" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">CENTER</text>
         <path fill={allFalse ? '#01db96' : category["Sports"] ? "#01db96" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M294 506.926h29V510h-29z" />
 
         {/* ???? bldg */}
@@ -643,27 +642,27 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text x="344.5" y="442.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">????</text>
 
         {/* Office of the Electrical Maintenance bldg */}
-        <path fill={allFalse ? '#f7ff5f' : category[""] ? "#f7ff5f" : "#B0B0B0"} stroke={allFalse ? '#CBD14E' : category[""] ? "#CBD14E" : "#B0B0B0"} stroke-width={0.4} d="M356 453v21h-23v-21z" />
-        <text x="344.5" y="462.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE OF THE</text>
-        <text x="344.5" y="464.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ELECTRICAL</text>
-        <text x="344.5" y="466.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">MAINTENANCE</text>
+        <path onClick={() => bldClicked("Office of the Electrical Maintenance")} style={{ cursor: "pointer" }} fill={allFalse ? '#f7ff5f' : category[""] ? "#f7ff5f" : "#B0B0B0"} stroke={allFalse ? '#CBD14E' : category[""] ? "#CBD14E" : "#B0B0B0"} stroke-width={0.4} d="M356 453v21h-23v-21z" />
+        <text onClick={() => bldClicked("Office of the Electrical Maintenance")} style={{ cursor: "pointer" }} x="344.5" y="462.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE OF THE</text>
+        <text onClick={() => bldClicked("Office of the Electrical Maintenance")} style={{ cursor: "pointer" }} x="344.5" y="464.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ELECTRICAL</text>
+        <text onClick={() => bldClicked("Office of the Electrical Maintenance")} style={{ cursor: "pointer" }} x="344.5" y="466.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">MAINTENANCE</text>
 
-        {/* Kitchen Lab bldg */}
-        <path fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="m355.997 475 .003 32.451h-22.997L333 475z" />
-        <text x="344.5" y="491.8" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">KITCHEN</text>
-        <text x="344.5" y="494.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY</text>
+        {/* Kitchen Laboratory bldg */}
+        <path onClick={() => bldClicked("Kitchen Laboratory")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="m355.997 475 .003 32.451h-22.997L333 475z" />
+        <text onClick={() => bldClicked("Kitchen Laboratory")} style={{ cursor: "pointer" }} x="344.5" y="491.8" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">KITCHEN</text>
+        <text onClick={() => bldClicked("Kitchen Laboratory")} style={{ cursor: "pointer" }} x="344.5" y="494.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY</text>
         <path fill={allFalse ? '#ce6700' : category["Laboratory"] ? "#ce6700" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M333.003 507.451H356V510h-22.997z" />
 
-        {/* Carpentry shop bldg */}
-        <path fill={allFalse ? '#f7ff5f' : category[""] ? "#f7ff5f" : "#B0B0B0"} stroke={allFalse ? '#CBD14E' : category[""] ? "#CBD14E" : "#B0B0B0"} stroke-width={0.4} d="m445.004 467.866-10.419 30.553-21.67-7.389 10.419-30.554z" />
-        <text x="429.55" y="479.448" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" transform="rotate(18.83, 428.96, 478.448)">CARPENTRY</text>
-        <text x="428.65" y="481.8" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" transform="rotate(18.83, 428.96, 480.448)">SHOP</text>
+        {/* Carpentry Shop bldg */}
+        <path onClick={() => bldClicked("Carpentry Shop")} style={{ cursor: "pointer" }} fill={allFalse ? '#f7ff5f' : category[""] ? "#f7ff5f" : "#B0B0B0"} stroke={allFalse ? '#CBD14E' : category[""] ? "#CBD14E" : "#B0B0B0"} stroke-width={0.4} d="m445.004 467.866-10.419 30.553-21.67-7.389 10.419-30.554z" />
+        <text onClick={() => bldClicked("Carpentry Shop")} style={{ cursor: "pointer" }} x="429.55" y="479.448" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" transform="rotate(18.83, 428.96, 478.448)">CARPENTRY</text>
+        <text onClick={() => bldClicked("Carpentry Shop")} style={{ cursor: "pointer" }} x="428.65" y="481.8" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" transform="rotate(18.83, 428.96, 480.448)">SHOP</text>
         <path fill={allFalse ? '#D1D851' : category[""] ? "#D1D851" : "#B0B0B0"} stroke={allFalse ? '#CBD14E' : category[""] ? "#CBD14E" : "#B0B0B0"} stroke-width={0.4} d="m413.079 490.558 21.67 7.39-.805 2.362-21.671-7.389z" />
 
         {/* Tennis Court bldg */}
-        <path  fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M326.039 387.31h70.959v32.582h-70.959z" />
-        <text x="361.519" y="404.601" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">TENNIS COURT</text>
-        <path  fill={allFalse ? '#01db96' : category["Sports"] ? "#01db96" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M326.039 419.799h70.959V422h-70.959z" />
+        <path onClick={() => bldClicked("Tennis Court")} style={{ cursor: "pointer" }} fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M326.039 387.31h70.959v32.582h-70.959z" />
+        <text onClick={() => bldClicked("Tennis Court")} style={{ cursor: "pointer" }} x="361.519" y="404.601" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">TENNIS COURT</text>
+        <path fill={allFalse ? '#01db96' : category["Sports"] ? "#01db96" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M326.039 419.799h70.959V422h-70.959z" />
 
         {/* Electrical Shop Womens CR / Tennis Court Womens CR bldg */}
         <path fill={allFalse ? '#ff69eb' : category["Restroom"] ? "#ff69eb" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M360 431h7v9.977h-7z" />
@@ -671,15 +670,15 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text x="363.5" y="437.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1" fill="black">CR</text>
         <path fill={allFalse ? '#cf56bf' : category["Restroom"] ? "#cf56bf" : "#B0B0B0"} stroke={allFalse ? '#D74DC9' : category["Restroom"] ? "#D74DC9" : "#B0B0B0"} stroke-width={0.4} d="M360 440.721h7V442h-7z" />
 
-        {/*  Electrical Shop Womens CR / Tennis Court Men's CR bldg */}
+        {/*  Electrical Shop Mens CR / Tennis Court Men's CR bldg */}
         <path fill={allFalse ? '#73daff' : category["Restroom"] ? "#73daff" : "#B0B0B0"} stroke={allFalse ? '#57A9C7' : category["Restroom"] ? "#57A9C7" : "#B0B0B0"} stroke-width={0.4} d="M368 431h7v9.977h-7z" />
         <text x="371.5" y="435.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1" fill="black">MEN'S</text>
         <text x="371.5" y="437.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1" fill="black">CR</text>
         <path fill={allFalse ? '#3bb2de' : category["Restroom"] ? "#3bb2de" : "#B0B0B0"} stroke={allFalse ? '#57A9C7' : category["Restroom"] ? "#57A9C7" : "#B0B0B0"} stroke-width={0.4} d="M368 440.721h7V442h-7z" />
 
         {/* Kadasig Gym bldg */}
-        <path fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="m345.381 276.557 61.438 22.362-11.264 30.946-61.438-22.362z" />
-        <text x="370.468" y="304.211" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black" transform="rotate(19, 370.468, 303.211)">KADASIG GYM</text>
+        <path onClick={() => bldClicked("Kadasig Gym")} style={{ cursor: "pointer" }} fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="m345.381 276.557 61.438 22.362-11.264 30.946-61.438-22.362z" />
+        <text onClick={() => bldClicked("Kadasig Gym")} style={{ cursor: "pointer" }} x="370.468" y="304.211" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black" transform="rotate(19, 370.468, 303.211)">KADASIG GYM</text>
         <path fill={allFalse ? '#01db96' : category["Sports"] ? "#01db96" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="m334.104 307.538 61.439 22.362-.761 2.09-61.438-22.362z" />
 
         {/* Canteen Womens CR bldg */}
@@ -694,11 +693,11 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text x="126.5" y="411.45" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1" fill="black">CR</text>
         <path fill={allFalse ? '#3bb2de' : category["Restroom"] ? "#3bb2de" : "#B0B0B0"} stroke={allFalse ? '#57A9C7' : category["Restroom"] ? "#57A9C7" : "#B0B0B0"} stroke-width={0.4} d="M123 413.646h7V415h-7z" />
 
-        {/* Sanitation Staff office bldg */}
-        <path fill={allFalse ? '#f7ff5f' : category[""] ? "#f7ff5f" : "#B0B0B0"} stroke={allFalse ? '#CBD14E' : category[""] ? "#CBD14E" : "#B0B0B0"} stroke-width={0.4} d="M185 397h11v12.019h-11z" />
-        <text x="190.5" y="402.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.35" fill="black">SANITATION</text>
-        <text x="190.5" y="403.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.35" fill="black">STAFF</text>
-        <text x="190.5" y="405.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.35" fill="black">OFFICE</text>
+        {/* Sanitation Staff Office bldg */}
+        <path onClick={() => bldClicked("Sanitation Staff Office")} style={{ cursor: "pointer" }} fill={allFalse ? '#f7ff5f' : category[""] ? "#f7ff5f" : "#B0B0B0"} stroke={allFalse ? '#CBD14E' : category[""] ? "#CBD14E" : "#B0B0B0"} stroke-width={0.4} d="M185 397h11v12.019h-11z" />
+        <text onClick={() => bldClicked("Sanitation Staff Office")} style={{ cursor: "pointer" }} x="190.5" y="402.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.35" fill="black">SANITATION</text>
+        <text onClick={() => bldClicked("Sanitation Staff Office")} style={{ cursor: "pointer" }} x="190.5" y="403.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.35" fill="black">STAFF</text>
+        <text onClick={() => bldClicked("Sanitation Staff Office")} style={{ cursor: "pointer" }} x="190.5" y="405.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.35" fill="black">OFFICE</text>
         <path fill={allFalse ? '#D1D851' : category[""] ? "#D1D851" : "#B0B0B0"} stroke={allFalse ? '#CBD14E' : category[""] ? "#CBD14E" : "#B0B0B0"} stroke-width={0.4} d="M185 409.019h11V411h-11z" />
 
         {/* Faculty CR near Tennis Court bldg */}
@@ -708,25 +707,25 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <path fill={allFalse ? '#D1D851' : category[""] ? "#D1D851" : "#B0B0B0"} stroke={allFalse ? '#CBD14E' : category[""] ? "#CBD14E" : "#B0B0B0"} stroke-width={0.4} d="M357 458.282h13v1.792h-13z" />
 
         {/* Fitness gym bldg */}
-        <path  onClick={() => bldClicked("Fitness Gym")} style={{ cursor: "pointer"}}  fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M274 397v24h-43v-24z" />
+        <path onClick={() => bldClicked("Fitness Gym")} style={{ cursor: "pointer"}}  fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M274 397v24h-43v-24z" />
         <text onClick={() => bldClicked("Fitness Gym")} style={{ cursor: "pointer"}}  x="252.5" y="410" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FITNESS GYM</text>
 
         {/* Electrical Shop bldg */}
-        <path fill={allFalse ? '#f7ff5f' : category[""] ? "#f7ff5f" : "#B0B0B0"} stroke={allFalse ? '#CBD14E' : category[""] ? "#CBD14E" : "#B0B0B0"} stroke-width={0.4} d="M400 425v21.432h-24V425z" />
-        <text x="388" y="435.666" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ELECTRICAL</text>
-        <text x="388" y="437.866" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">SHOP</text>
+        <path onClick={() => bldClicked("Electrical Shop")} style={{ cursor: "pointer" }} fill={allFalse ? '#f7ff5f' : category[""] ? "#f7ff5f" : "#B0B0B0"} stroke={allFalse ? '#CBD14E' : category[""] ? "#CBD14E" : "#B0B0B0"} stroke-width={0.4} d="M400 425v21.432h-24V425z" />
+        <text onClick={() => bldClicked("Electrical Shop")} style={{ cursor: "pointer" }} x="388" y="435.666" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ELECTRICAL</text>
+        <text onClick={() => bldClicked("Electrical Shop")} style={{ cursor: "pointer" }} x="388" y="437.866" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">SHOP</text>
         <path fill={allFalse ? '#D1D851' : category[""] ? "#D1D851" : "#B0B0B0"} stroke={allFalse ? '#CBD14E' : category[""] ? "#CBD14E" : "#B0B0B0"} stroke-width={0.4} d="M376 446.432h24V448h-24z" />
 
-        {/* Mechanical Engineering Lab 1 bldg */}
+        {/* Mechanical Engineering Laboratory 1 bldg */}
         <path fill={allFalse ? '#ff3030' : category["Laboratory"] ? "#ff3030" : "#B0B0B0"} stroke={allFalse ? '#C32525' : category["Laboratory"] ? "#C32525" : "#B0B0B0"} stroke-width={0.4} d="M274 422v25h-43v-25z" />
         <text x="252.5" y="432.7" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">MECHANICAL</text>
         <text x="252.5" y="435.6" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">ENGINEERING</text>
         <text x="252.5" y="438.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">LABORATORY 1</text>
 
         {/* Maintenance Office bldg */}
-        <path fill={allFalse ? '#f7ff5f' : category[""] ? "#f7ff5f" : "#B0B0B0"} stroke={allFalse ? '#CBD14E' : category[""] ? "#CBD14E" : "#B0B0B0"} stroke-width={0.4} d="M239 448v22h-8v-22z" />
-        <text x="234.2" y="458.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black" transform="rotate(-90, 235, 458.5)">MAINTENANCE</text>
-        <text x="235" y="460.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black" transform="rotate(-90, 235, 459.5)">OFFICE</text>
+        <path onClick={() => bldClicked("Maintenance Office")} style={{ cursor: "pointer" }} fill={allFalse ? '#f7ff5f' : category[""] ? "#f7ff5f" : "#B0B0B0"} stroke={allFalse ? '#CBD14E' : category[""] ? "#CBD14E" : "#B0B0B0"} stroke-width={0.4} d="M239 448v22h-8v-22z" />
+        <text onClick={() => bldClicked("Maintenance Office")} style={{ cursor: "pointer" }} x="234.2" y="458.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black" transform="rotate(-90, 235, 458.5)">MAINTENANCE</text>
+        <text onClick={() => bldClicked("Maintenance Office")} style={{ cursor: "pointer" }} x="235" y="460.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black" transform="rotate(-90, 235, 459.5)">OFFICE</text>
 
         {/* Mechanical Engineering Lab 2 bldg */}
         <path fill={allFalse ? '#ff3030' : category["Laboratory"] ? "#ff3030" : "#B0B0B0"} stroke={allFalse ? '#C32525' : category["Laboratory"] ? "#C32525" : "#B0B0B0"} stroke-width={0.4} d="M274 448v22h-34v-22z" />
@@ -735,65 +734,65 @@ const Floor1 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
         <text x="257" y="463.1" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">LABORATORY 2</text>
 
         {/* Woodcarving Area bldg */}
-        <path fill={allFalse ? '#ff8000' : category[""] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category[""] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M245 471v15h-14v-15z" />
-        <text x="238" y="478.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">WOODCARVING</text>
-        <text x="238" y="480.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">AREA</text>
+        <path onClick={() => bldClicked("Woodcarving Area")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category[""] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category[""] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M245 471v15h-14v-15z" />
+        <text onClick={() => bldClicked("Woodcarving Area")} style={{ cursor: "pointer" }} x="238" y="478.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">WOODCARVING</text>
+        <text onClick={() => bldClicked("Woodcarving Area")} style={{ cursor: "pointer" }} x="238" y="480.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">AREA</text>
 
 
         {/* Fablab Office bldg */}
-        <path fill={allFalse ? '#ff8000' : category[""] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category[""] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M274 478v17h-16v-17z" />
-        <text x="266" y="486.1" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FABLAB</text>
-        <text x="266" y="488.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
+        <path onClick={() => bldClicked("Fablab Office")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category[""] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category[""] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M274 478v17h-16v-17z" />
+        <text onClick={() => bldClicked("Fablab Office")} style={{ cursor: "pointer" }} x="266" y="486.1" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FABLAB</text>
+        <text onClick={() => bldClicked("Fablab Office")} style={{ cursor: "pointer" }} x="266" y="488.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
 
 
         {/* Fablab Production Area */}
-        <path fill={allFalse ? '#ff8000' : category[""] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category[""] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M231 487h15v-16h28v6h-17v19h17v12.082h-43z" />
-        <text x="252.5" y="501.341" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FABLAB PRODUCTION</text>
-        <text x="252.5" y="504" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">AREA</text>
+        <path onClick={() => bldClicked("Fablab Production Area")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category[""] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category[""] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M231 487h15v-16h28v6h-17v19h17v12.082h-43z" />
+        <text onClick={() => bldClicked("Fablab Production Area")} style={{ cursor: "pointer" }} x="252.5" y="501.341" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FABLAB PRODUCTION</text>
+        <text onClick={() => bldClicked("Fablab Production Area")} style={{ cursor: "pointer" }} x="252.5" y="504" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">AREA</text>
         <path fill={allFalse ? '#ff8000' : category[""] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category[""] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M231 508.082h43V510h-43z" />
 
-        {/* OVAL bldg */}
-        <path fill={allFalse ? '#f55456' : category["Sports"] ? "#f55456" : "#B0B0B0"} stroke={allFalse ? '#DD4D50' : category[""] ? "#DD4D50" : "#B0B0B0"} stroke-width={0.4} d="m266.337 81.0004 26.655 25.4656L110.655 274.62 84 249.155z" />
-        <path fill={allFalse ? '#f55456' : category["Sports"] ? "#f55456" : "#B0B0B0"} d="M112.914 326.486c-29.7551-28.367-29.4148-73.996.76-101.916l112.718-104.295c30.175-27.9191 78.758-27.5566 108.513.81 29.754 28.367 29.414 73.996-.76 101.916L221.426 327.296c-30.175 27.919-78.757 27.557-108.512-.81" />
-        <path fill={allFalse ? '#51ff7d' : category["Sports"] ? "#51ff7d" : "#B0B0B0"} d="M125.471 315.626c-22.941-21.872-22.679-57.053.586-78.579l112.5-104.093c23.266-21.526 60.724-21.247 83.665.625 22.942 21.871 22.68 57.052-.586 78.579l-112.5 104.092c-23.265 21.527-60.723 21.247-83.665-.624" />
-        <text x="258.554" y="244" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="5" fill="black" transform="rotate(-43, 223.554, 276.337)">OVAL</text>
+        {/* Oval bldg */}
+        <path onClick={() => bldClicked("Oval")} style={{ cursor: "pointer" }} fill={allFalse ? '#f55456' : category["Sports"] ? "#f55456" : "#B0B0B0"} stroke={allFalse ? '#DD4D50' : category[""] ? "#DD4D50" : "#B0B0B0"} stroke-width={0.4} d="m266.337 81.0004 26.655 25.4656L110.655 274.62 84 249.155z" />
+        <path onClick={() => bldClicked("Oval")} style={{ cursor: "pointer" }} fill={allFalse ? '#f55456' : category["Sports"] ? "#f55456" : "#B0B0B0"} d="M112.914 326.486c-29.7551-28.367-29.4148-73.996.76-101.916l112.718-104.295c30.175-27.9191 78.758-27.5566 108.513.81 29.754 28.367 29.414 73.996-.76 101.916L221.426 327.296c-30.175 27.919-78.757 27.557-108.512-.81" />
+        <path onClick={() => bldClicked("Oval")} style={{ cursor: "pointer" }} fill={allFalse ? '#51ff7d' : category["Sports"] ? "#51ff7d" : "#B0B0B0"} d="M125.471 315.626c-22.941-21.872-22.679-57.053.586-78.579l112.5-104.093c23.266-21.526 60.724-21.247 83.665.625 22.942 21.871 22.68 57.052-.586 78.579l-112.5 104.092c-23.265 21.527-60.723 21.247-83.665-.624" />
+        <text onClick={() => bldClicked("Oval")} style={{ cursor: "pointer" }} x="258.554" y="244" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="5" fill="black" transform="rotate(-43, 223.554, 276.337)">OVAL</text>
 
         {/* Sports & Athletics Office bldg */}
-        <path fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M287 315v17h-20v-17z" />
-        <text x="277" y="322" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">SPORTS &</text>
-        <text x="277" y="324.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ATHLETICS</text>
-        <text x="277" y="327" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
+        <path onClick={() => bldClicked("Sports & Athletics Office")} style={{ cursor: "pointer" }} fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M287 315v17h-20v-17z" />
+        <text onClick={() => bldClicked("Sports & Athletics Office")} style={{ cursor: "pointer" }} x="277" y="322" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">SPORTS &</text>
+        <text onClick={() => bldClicked("Sports & Athletics Office")} style={{ cursor: "pointer" }} x="277" y="324.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ATHLETICS</text>
+        <text onClick={() => bldClicked("Sports & Athletics Office")} style={{ cursor: "pointer" }} x="277" y="327" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
 
         {/* Socio-Cultural Office bldg */}
-        <path fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M287 333v16.01h-20V333z" />
-        <text x="277" y="339.305" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">SOCIO-</text>
-        <text x="277" y="341.705" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CULTURAL</text>
-        <text x="277" y="344.205" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
+        <path onClick={() => bldClicked("Socio-Cultural Office")} style={{ cursor: "pointer" }} fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M287 333v16.01h-20V333z" />
+        <text onClick={() => bldClicked("Socio-Cultural Office")} style={{ cursor: "pointer" }} x="277" y="339.305" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">SOCIO-</text>
+        <text onClick={() => bldClicked("Socio-Cultural Office")} style={{ cursor: "pointer" }} x="277" y="341.705" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CULTURAL</text>
+        <text onClick={() => bldClicked("Socio-Cultural Office")} style={{ cursor: "pointer" }} x="277" y="344.205" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
         <path fill={allFalse ? '#01db96' : category["Sports"] ? "#01db96" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M267 349h20v2h-20z" />
 
         {/* ERRC Storage bldg  */}
-        <path fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M36 748h18v5.906H36z" />
-        <text x="45" y="751.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">STORAGE</text>
+        <path onClick={() => bldClicked("ERRC Storage")} style={{ cursor: "pointer" }} fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M36 748h18v5.906H36z" />
+        <text onClick={() => bldClicked("ERRC Storage")} style={{ cursor: "pointer" }} x="45" y="751.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">STORAGE</text>
         <path fill={allFalse ? '#6f3dd2' : category[""] ? "#6f3dd2" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M36 753.687h18V755H36z" />
 
         {/* ERRC Conference Room bldg  */}
-        <path fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M36 701h18v5.906H36z" />
-        <text x="45" y="703.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CONFERENCE</text>
-        <text x="45" y="705.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">ROOM</text>
+        <path onClick={() => bldClicked("ERRC Conference Room")} style={{ cursor: "pointer" }} fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M36 701h18v5.906H36z" />
+        <text onClick={() => bldClicked("ERRC Conference Room")} style={{ cursor: "pointer" }} x="45" y="703.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">CONFERENCE</text>
+        <text onClick={() => bldClicked("ERRC Conference Room")} style={{ cursor: "pointer" }} x="45" y="705.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.5" fill="black">ROOM</text>
         <path fill={allFalse ? '#6f3dd2' : category[""] ? "#6f3dd2" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M36 706.687h18V708H36z" />
 
         {/* ERRC Room 1 bldg  */}
-        <path fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M12 742h23v10.969H12z" />
-        <text x="23.5" y="748.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 1</text>
+        <path onClick={() => bldClicked("ERRC Room 1")} style={{ cursor: "pointer" }} fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M12 742h23v10.969H12z" />
+        <text onClick={() => bldClicked("ERRC Room 1")} style={{ cursor: "pointer" }} x="23.5" y="748.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 1</text>
         <path fill={allFalse ? '#6f3dd2' : category[""] ? "#6f3dd2" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M12 752.969h23V755H12z" />
 
         {/* ERRC Office bldg  */}
-        <path fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M35 701v26H12v-26z" />
-        <text x="23.5" y="715.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
+        <path onClick={() => bldClicked("ERRC Office")} style={{ cursor: "pointer" }} fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M35 701v26H12v-26z" />
+        <text onClick={() => bldClicked("ERRC Office")} style={{ cursor: "pointer" }} x="23.5" y="715.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
 
         {/* ERRC Room 2 bldg  */}
-        <path fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M35 728v13H12v-13z" />
-        <text x="23.5" y="735.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 2</text>
+        <path onClick={() => bldClicked("ERRC Room 2")} style={{ cursor: "pointer" }} fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M35 728v13H12v-13z" />
+        <text onClick={() => bldClicked("ERRC Room 2")} style={{ cursor: "pointer" }} x="23.5" y="735.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 2</text>
 
 
         {/* ERRC Fountain */}
