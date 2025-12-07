@@ -49,7 +49,7 @@ const cardData = {
     },
     'Student Activity Center': {
             totalFloors: 1,
-        img: sac
+            img: sac
     },
     'Fitness Gym': {
           totalFloors: 1,

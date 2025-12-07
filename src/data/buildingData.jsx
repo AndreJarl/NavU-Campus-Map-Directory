@@ -1,24 +1,26 @@
 import React from 'react'
+
+
 import enlab1 from "../assets/rooms/coe/CELAB01.jpg"
 import enlab2 from "../assets/rooms/coe/CELAB02.jpg"
 
 // COT grndflr IMAGES
-import artMastersClub from "../assets/rooms/COT-GrndFlr/ArtMastersClub.jpg"
-import COTFemaleCr from "../assets/rooms/COT-GrndFlr/COTFemaleCR.jpg"
-import COTMaleCr from "../assets/rooms/COT-GrndFlr/COTMaleCR.jpg"
-import room26 from "../assets/rooms/COT-GrndFlr/Room26.jpg"
-import room27 from "../assets/rooms/COT-GrndFlr/Room27.jpg"
-import room34 from "../assets/rooms/COT-GrndFlr/Room34.jpg"
-import room35 from "../assets/rooms/COT-GrndFlr/Room35.jpg"
-import room36 from "../assets/rooms/COT-GrndFlr/Room36.jpg"
-import room37 from "../assets/rooms/COT-GrndFlr/Room37.jpg"
-import room38 from "../assets/rooms/COT-GrndFlr/Room38.jpg"
-import room39 from "../assets/rooms/COT-GrndFlr/Room39.jpg"
-import room40 from "../assets/rooms/COT-GrndFlr/Room40.jpg"
-import room41 from "../assets/rooms/COT-GrndFlr/Room41.jpg"
-import GADoffice from "../assets/rooms/COT-GrndFlr/GADOffice.jpg"
-import NSTPoffice from "../assets/rooms/COT-GrndFlr/NSTPOffice.jpg"
-import COTCompLab from "../assets/rooms/COT-GrndFlr/COTComlab.jpg"
+import artMastersClub from "../assets/rooms/COT-GrndFlr/ArtMastersClub.webp"
+import COTFemaleCr from "../assets/rooms/COT-GrndFlr/COTFemaleCR.webp"
+import COTMaleCr from "../assets/rooms/COT-GrndFlr/COTMaleCR.webp"
+import room26 from "../assets/rooms/COT-GrndFlr/Room26.webp"
+import room27 from "../assets/rooms/COT-GrndFlr/Room27.webp"
+import room34 from "../assets/rooms/COT-GrndFlr/Room34.webp"
+import room35 from "../assets/rooms/COT-GrndFlr/Room35.webp"
+import room36 from "../assets/rooms/COT-GrndFlr/Room36.webp"
+import room37 from "../assets/rooms/COT-GrndFlr/Room37.webp"
+import room38 from "../assets/rooms/COT-GrndFlr/Room38.webp"
+import room39 from "../assets/rooms/COT-GrndFlr/Room39.webp"
+import room40 from "../assets/rooms/COT-GrndFlr/Room40.webp"
+import room41 from "../assets/rooms/COT-GrndFlr/Room41.webp"
+import GADoffice from "../assets/rooms/COT-GrndFlr/GADOffice.webp"
+import NSTPoffice from "../assets/rooms/COT-GrndFlr/NSTPOffice.webp"
+import COTCompLab from "../assets/rooms/COT-GrndFlr/COTComlab.webp"
 
 
 
@@ -36,6 +38,7 @@ import Fablab from "../assets/rooms/FABLAB/FABLAB.jpg"
 import fitness from "../assets/rooms/Bldgs/FitnessGym.jpg"
 import bistro from "../assets/rooms/bistro&canteen/Bistro.jpg"
 import Canteen from "../assets/rooms/bistro&canteen/Canteen.jpg"
+
 // EDUC IMAGES
 
 import Edtechlab1 from "../assets/rooms/EducationLabs/EdTechLab1.jpg"
@@ -966,18 +969,18 @@ img: ""
       ]
     }
   },
-  'Study Area': {
-    totalFloors:1, rooms:{
-      1:[
-        {
-    code:"",
-    name:"Study Area ",
-    description: "A quiet space where students can read, research, and complete assignments individually or in small groups. ",
-    img: ""
-        }
-      ]
-    }
-  },
+    'Study Area': {
+      totalFloors:1, rooms:{
+        1:[
+          {
+      code:"",
+      name:"Study Area ",
+      description: "A quiet space where students can read, research, and complete assignments individually or in small groups. ",
+      img: ""
+          }
+        ]
+      }
+    },
   'Existing Academic Science Building': {
     totalFloors:1, rooms:{
       1:[
@@ -1174,19 +1177,19 @@ img: ""
       ]
     }
   },
- 'Study Area': {
-    totalFloors: 1,
-    rooms:{
-      1:[
-        {
-  code:"Blue Tables",
-    name:"Study Area",
-    description: "A quiet space designed for individual or group studying. Equipped with tables, chairs, and good lighting. Ideal for reading, research, and focused academic work.  ",
-    img: studyarea
-        }
-      ]
-    }
-  },
+//  'Study Area': {
+//     totalFloors: 1,
+//     rooms:{
+//       1:[
+//         {
+//      code:"Blue Tables",
+//     name:"Study Area",
+//     description: "A quiet space designed for individual or group studying. Equipped with tables, chairs, and good lighting. Ideal for reading, research, and focused academic work.  ",
+//     img: studyarea
+//         }
+//       ]
+//     }
+//   },
   'Laundry Shop': {
     totalFloors: 1,
     rooms:{
