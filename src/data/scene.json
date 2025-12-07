@@ -1,6 +1,6 @@
 {
   "Main Gate": {
-    "image": "public/360imgs/CTU360/CTUFront.JPG",
+    "image": "public/360imgs/CTU360/CTUFront.webp",
     "hotspots": [
       {
         "pitch": -20.5,
@@ -19,7 +19,7 @@
     ]
   },
   "Security Office": {
-    "image": "public/360imgs/CTU360/CTUFront2.JPG",
+    "image": "public/360imgs/CTU360/CTUFront2.webp",
     "hotspots": [
       {
         "pitch": -20.5,
@@ -45,13 +45,13 @@
     ]
   },
     "Water Refill/Laundry Shop": {
-    "image": "public/360imgs/360PATH-Oval/Oval_Path.JPG",
+    "image": "public/360imgs/360PATH-Oval/Oval_Path.webp",
     "hotspots": [
       {
         "pitch": -20.5,
         "yaw": 30,
         "type": "arrow",
-        "target": "Path ERRC",
+        "target": "ERRC Path",
         "arrowType": "forward"
       },
         {
@@ -91,7 +91,7 @@
     ]
   }, 
    "ERRC Path": {
-    "image": "public/360imgs/360PATH-Oval/PATH2_Oval.JPG",
+    "image": "public/360imgs/360PATH-Oval/PATH2_Oval.webp",
     "hotspots": [
       {
         "pitch": -20.5,
@@ -111,13 +111,13 @@
     ]
   },
    "ERRC Building": {
-    "image": "public/360imgs/360PATH-Oval/PATH1_Oval.JPG",
+    "image": "public/360imgs/360PATH-Oval/PATH1_Oval.webp",
     "hotspots": [
       {
         "pitch": -20.5,
         "yaw": 20,
         "type": "arrow",
-        "target": "Path ERRC",
+        "target": "ERRC Path",
         "arrowType": "forward"
       },
       {
@@ -140,7 +140,7 @@
 
   
    "Electrical Engineering Laboratory": {
-    "image": "public/360imgs/1stF/1stEng/1stFlrENG0.JPG",
+    "image": "public/360imgs/1stF/1stEng/1stFlrENG0.webp",
     "hotspots": [
       {
         "pitch": -20.5,
@@ -166,7 +166,7 @@
     ]
   },
      "Engineering Laboratory": {
-    "image": "public/360imgs/1stF/1stEng/1stFlrENG1.JPG",
+    "image": "public/360imgs/1stF/1stEng/1stFlrENG1.webp",
     "hotspots": [
       {
         "pitch": -20.5,

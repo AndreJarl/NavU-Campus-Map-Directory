@@ -1,13 +1,16 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import 'pannellum/build/pannellum.css';
 import scenes from '../data/scene.json';
 import '../index.css';
 
-function Panorama({ scene, onChangeScene, clicked }) {
+function Panorama({ scene, onChangeScene, clicked, reloadTrigger }) {
   const viewerRef = useRef(null);
   const viewerInstance = useRef(null);
+  const scriptLoaded = useRef(false);
+  const hasInitialized = useRef(false); // Track if we've initialized before
 
-  const customArrow = (hotSpotDiv, args = {}) => {
+  // Custom hotspot functions
+  const customArrow = useCallback((hotSpotDiv, args = {}) => {
     let rotation = args.rotation || 0;
     if (args.arrowType) {
       if (args.arrowType === 'backward') rotation = 180;
@@ -23,7 +26,7 @@ function Panorama({ scene, onChangeScene, clicked }) {
         width: 70px; height: 70px;
         transform-origin: center center;
         perspective: 800px;
-            opacity: 0.7;
+        opacity: 0.7;
       ">
         <svg width="70" height="70" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="background: transparent">
           <defs>
@@ -42,112 +45,162 @@ function Panorama({ scene, onChangeScene, clicked }) {
         onChangeScene(args.sceneId);
       }
     };
-  };
+  }, [onChangeScene]);
 
-const customInfo = (hotSpotDiv, args = {}) => {
-  hotSpotDiv.style.cursor = 'default';
-  hotSpotDiv.style.zIndex = 999;
+  const customInfo = useCallback((hotSpotDiv, args = {}) => {
+    hotSpotDiv.style.cursor = 'default';
+    hotSpotDiv.style.zIndex = 999;
 
-  hotSpotDiv.innerHTML = `
-    <div style="
-      display: inline-block;
-      padding: 6px 12px;
-      border-radius: 10px;
-      background: rgba(0,0,0,0.6); /* Label background */
-      color: #fff;
-      font-size: 14px;
-      font-weight: 500;
-      white-space: nowrap;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      backdrop-filter: blur(5px); /* subtle glass effect */
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    ">
-      📍${args.label || 'Info'}
-    </div>
-  `;
+    hotSpotDiv.innerHTML = `
+      <div style="
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 10px;
+        background: rgba(0,0,0,0.6);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        backdrop-filter: blur(5px);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      ">
+        📍${args.label || 'Info'}
+      </div>
+    `;
 
-  // Hover effect
-  hotSpotDiv.onmouseover = () => {
-    hotSpotDiv.firstChild.style.transform = 'scale(1.1)';
-    hotSpotDiv.firstChild.style.boxShadow = '0 6px 20px rgba(0,0,0,0.4)';
-  };
+    hotSpotDiv.onmouseover = () => {
+      hotSpotDiv.firstChild.style.transform = 'scale(1.1)';
+      hotSpotDiv.firstChild.style.boxShadow = '0 6px 20px rgba(0,0,0,0.4)';
+    };
 
-  hotSpotDiv.onmouseout = () => {
-    hotSpotDiv.firstChild.style.transform = 'scale(1)';
-    hotSpotDiv.firstChild.style.boxShadow = '0 4px 15px rgba(0,0,0,0.3)';
-  };
-};
+    hotSpotDiv.onmouseout = () => {
+      hotSpotDiv.firstChild.style.transform = 'scale(1)';
+      hotSpotDiv.firstChild.style.boxShadow = '0 4px 15px rgba(0,0,0,0.3)';
+    };
+  }, []);
 
+  // Initialize or reload viewer
+  const initializeViewer = useCallback(() => {
+    if (!viewerRef.current || !window.pannellum) return;
 
+    // Clean up existing viewer
+    if (viewerInstance.current) {
+      try {
+        viewerInstance.current.destroy();
+      } catch (error) {
+        console.error('Error destroying viewer:', error);
+      }
+      viewerInstance.current = null;
+    }
 
+    const scenesConfig = {};
+    Object.entries(scenes).forEach(([key, val]) => {
+      scenesConfig[key] = {
+        type: 'equirectangular',
+        panorama: val.image.startsWith('/') ? val.image : '/' + val.image.replace(/^public\//, ''),
+        hfov: 100,
+        hotSpots: val.hotspots.map(h => {
+          if (h.type === 'arrow') {
+            return {
+              pitch: h.pitch,
+              yaw: h.yaw,
+              type: 'custom',
+              createTooltipFunc: customArrow,
+              createTooltipArgs: {
+                sceneId: h.target,
+                rotation: h.rotation || 0,
+                arrowType: h.arrowType,
+                label: h.label
+              }
+            };
+          } else if (h.type === 'info') {
+            return {
+              pitch: h.pitch,
+              yaw: h.yaw,
+              type: 'custom',
+              createTooltipFunc: customInfo,
+              createTooltipArgs: {
+                label: h.label
+              }
+            };
+          }
+          return null;
+        }).filter(Boolean)
+      };
+    });
+
+    viewerInstance.current = window.pannellum.viewer(viewerRef.current, {
+      default: {
+        firstScene: scene,
+        sceneFadeDuration: 1000,
+        autoLoad: true,
+        mouseZoom: true,
+        keyboardZoom: true,
+        showControls: false,
+      },
+      scenes: scenesConfig
+    });
+    
+    hasInitialized.current = true;
+  }, [scene, customArrow, customInfo]);
+
+  // **KEY EFFECT: Reload once when clicked/reloadTrigger becomes true**
   useEffect(() => {
+    // Only reload if reloadTrigger is true AND we have the script loaded
+    if (reloadTrigger && scriptLoaded.current && viewerRef.current) {
+      console.log('Auto-reloading Pannellum on click...');
+      initializeViewer();
+    }
+  }, [reloadTrigger, initializeViewer]);
+
+  // Load Pannellum script once
+  useEffect(() => {
+    if (scriptLoaded.current) {
+      // If script already loaded, initialize viewer
+      if (viewerRef.current && !viewerInstance.current) {
+        initializeViewer();
+      }
+      return;
+    }
+
+    // Load Pannellum script only once
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js';
     script.async = true;
 
     script.onload = () => {
-      if (viewerRef.current && !viewerInstance.current) {
-        const scenesConfig = {};
-        Object.entries(scenes).forEach(([key, val]) => {
-          scenesConfig[key] = {
-            type: 'equirectangular',
-            panorama: val.image.startsWith('/') ? val.image : '/' + val.image.replace(/^public\//, ''),
-            hfov: 120,
-            hotSpots: val.hotspots.map(h => {
-              if (h.type === 'arrow') {
-                return {
-                  pitch: h.pitch,
-                  yaw: h.yaw,
-                  type: 'custom',
-                  createTooltipFunc: customArrow,
-                              createTooltipArgs: {
-                  sceneId: h.target,  // arrows only
-                  rotation: h.rotation || 0,
-                  arrowType: h.arrowType,
-                  label: h.label
-                }
-                };
-              } else if (h.type === 'info') {
-                return {
-                  pitch: h.pitch,
-                  yaw: h.yaw,
-                  type: 'custom',
-                  createTooltipFunc: customInfo,
-                  createTooltipArgs: {
-                    label: h.label
-                  }
-                };
-              }
-              return null;
-            }).filter(Boolean)
-          };
-        });
-
-        viewerInstance.current = window.pannellum.viewer(viewerRef.current, {
-          default: {
-            firstScene: scene,
-            sceneFadeDuration: 1000,
-            autoLoad: true,
-            mouseZoom: true,
-            keyboardZoom: true,
-            showControls: false,
-          },
-          scenes: scenesConfig
-        });
+      scriptLoaded.current = true;
+      if (viewerRef.current) {
+        initializeViewer();
       }
     };
 
     document.body.appendChild(script);
-    return () => document.body.removeChild(script);
-  }, [scene, onChangeScene]);
 
+    // Cleanup
+    return () => {
+      if (viewerInstance.current) {
+        try {
+          viewerInstance.current.destroy();
+        } catch (error) {
+          console.error('Error during cleanup:', error);
+        }
+        viewerInstance.current = null;
+      }
+      hasInitialized.current = false;
+    };
+  }, [initializeViewer]);
+
+  // Handle scene changes
   useEffect(() => {
     if (viewerInstance.current && viewerInstance.current.getScene() !== scene) {
       viewerInstance.current.loadScene(scene);
     }
   }, [scene]);
 
+  // Don't render if not clicked
   if (!clicked) {
     return null;
   }
