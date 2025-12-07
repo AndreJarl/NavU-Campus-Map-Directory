@@ -1,8 +1,8 @@
 import React from 'react'
 
 
-import enlab1 from "../assets/rooms/coe/CELAB01.jpg"
-import enlab2 from "../assets/rooms/coe/CELAB02.jpg"
+import enlab1 from "../assets/rooms/coe/CELAB01.webp"
+import enlab2 from "../assets/rooms/coe/CELAB02.webp"
 
 // COT grndflr IMAGES
 import artMastersClub from "../assets/rooms/COT-GrndFlr/ArtMastersClub.webp"

@@ -13,7 +13,7 @@ import Panorama from '../components/Panorama';
 import PanoramaViewer from '../components/PanoramaViewer';
 import { useCategory } from '../context/CategoryContext';
 import { useScene } from '../context/SceneContext';
-import person from "../assets/person.png"
+import person from "../assets/person.webp"
 import { useLocation } from "react-router-dom";
 
 function Map() {
