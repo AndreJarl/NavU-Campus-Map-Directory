@@ -25,7 +25,6 @@ import COTCompLab from "../assets/rooms/COT-GrndFlr/COTComlab.webp"
 
 
 
-
 import sac from "../assets/rooms/Bldgs/SAC.jpg"
 import studyarea from "../assets//rooms/Bldgs/BlueTables.jpg"
 import laundryshop from "../assets/rooms/Bldgs/Laundry.jpg"

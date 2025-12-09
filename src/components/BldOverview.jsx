@@ -222,6 +222,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
               alt={query.building || "Building Image"}
               onLoad={handleImageLoad}
               onError={handleImageError}
+              loading="lazy"
             />
           </div>
         )}
