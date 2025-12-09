@@ -237,6 +237,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
                   alt="" 
                   onLoad={handleImageLoad}
                   onError={handleImageError}
+                  loading="lazy"
                 />
               </div>
             </>
