@@ -17,13 +17,14 @@ function Navbar() {
     const {currentScene, setCurrentScene} = useScene();
 
     // Function to format scene ID for display
-    const formatSceneId = (sceneId) => {
-        if (!sceneId) return "Search...";
-        
-        return sceneId
-            .replace(/_/g, ' ') // Replace underscores with spaces
-            .replace(/\b\w/g, char => char.toUpperCase()); // Capitalize first letter of each word
-    };
+const formatSceneId = (sceneId = "") => {
+    if (!sceneId) return "Search...";
+
+    return sceneId
+        .toString()
+        .replace(/_/g, " ")
+        .replace(/\b\w/g, char => char.toUpperCase());
+};
 
     const handleInput = (e) => {
         const value = e.target.value;
