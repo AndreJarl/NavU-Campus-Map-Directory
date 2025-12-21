@@ -26,7 +26,7 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
 
   // Height limits
   const MIN_HEIGHT = 20;
-  const MAX_HEIGHT = 85;
+  const MAX_HEIGHT = 40;
   const SCROLL_DISABLE_THRESHOLD = 50; // Disable scroll when card is 50% or more
 
   const handleDirections = (roomName) => {
