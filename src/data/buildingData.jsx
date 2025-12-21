@@ -187,8 +187,8 @@ const buildingData = {
   ],
 }
   },
-  'Education Building': {
-    totalFloors: 3,
+'Education Building': {
+  totalFloors: 3,
 rooms: {
   1: [
     { 
@@ -223,10 +223,44 @@ rooms: {
     },
     { 
       code: " ", 
-      name: "Room 12 ",
+      name: "CEAS Room 12",
       description: "A standard classroom with desks, chairs, and a whiteboard. Suitable for lectures, discussions, and small group activities. Simple, functional, and well-lit for academic use. ",
       img: room12
     },
+     { 
+      code: " ", 
+      name: "CEAS Room 1",
+      description: "A standard classroom with desks, chairs, and a whiteboard. Suitable for lectures, discussions, and small group activities. Simple, functional, and well-lit for academic use. ",
+      img: ""
+    },
+         { 
+      code: " ", 
+      name: "CEAS Room 2",
+      description: "A standard classroom with desks, chairs, and a whiteboard. Suitable for lectures, discussions, and small group activities. Simple, functional, and well-lit for academic use. ",
+      img: " "
+    },
+  
+     { 
+      code: " ", 
+      name: "CEAS Room 3",
+      description: "A standard classroom with desks, chairs, and a whiteboard. Suitable for lectures, discussions, and small group activities. Simple, functional, and well-lit for academic use. ",
+      img: " "
+    },
+        { 
+      code: " ", 
+      name: "CEAS Room 4",
+      description: "A standard classroom with desks, chairs, and a whiteboard. Suitable for lectures, discussions, and small group activities. Simple, functional, and well-lit for academic use. ",
+      img: ""
+    },
+  
+        { 
+      code: " ", 
+      name: "CEAS Room 5",
+      description: "A standard classroom with desks, chairs, and a whiteboard. Suitable for lectures, discussions, and small group activities. Simple, functional, and well-lit for academic use. ",
+      img: ""
+    },
+  
+  
   
   
   ],

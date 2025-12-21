@@ -101,8 +101,8 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <rect width="5" height="9" x="157.062" y="753.043" fill="#d9d9d9" rx="2.5" />
 
         {/* New CEAS Room 4 bldg */}
-        <rect xmlns="http://www.w3.org/2000/svg" x="136" y="562" width="16" height="21" transform="rotate(90 136 562)" fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} />
-        <text x="125.5" y="570.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 4</text>
+        <rect onClick={() => bldClicked("CEAS Room 4")} cursor={"pointer"}  xmlns="http://www.w3.org/2000/svg" x="136" y="562" width="16" height="21" transform="rotate(90 136 562)" fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} />
+        <text onClick={() => bldClicked("CEAS Room 4")} cursor={"pointer"} x="125.5" y="570.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 4</text>
 
         <path fill="#d9d9d9" d="M267.666 522.974h3.64453v3H267.666z" />
         <path fill="#d9d9d9" d="M114.062 522.543h3.64453v3H114.062z" />
@@ -264,8 +264,8 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <text onClick={() => bldClicked("Computer Laboratory 2")} style={{ cursor: "pointer" }} x="259.5" y="607.4" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">LABORATORY 2</text>
 
         {/* Room 12 near BISTRO bldg */}
-        <path onClick={() => bldClicked("Room 12")}  style={{ cursor: "pointer" }} fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M227 562v21h-22v-21z" />
-        <text onClick={() => bldClicked("Room 12")}  style={{ cursor: "pointer" }} x="216" y="573.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 12</text>
+        <path onClick={() => bldClicked("CEAS Room 12")}  style={{ cursor: "pointer" }} fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M227 562v21h-22v-21z" />
+        <text onClick={() => bldClicked("CEAS Room 12")}  style={{ cursor: "pointer" }} x="216" y="573.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 12</text>
 
         {/* Ergonomic Lab bldg */}
         <path  onClick={() => bldClicked("Ergonomic Laboratory")}  style={{ cursor: "pointer" }} fill={allFalse ? '#ff8000' : category["Laboratory"] ? "#ff8000" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="M205 540h22v21h-22z" />
@@ -417,9 +417,9 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path onClick={() => bldClicked("Sewing Laboratory")} style={{ cursor: "pointer" }} fill={allFalse ? '#ce6700' : category["Laboratory"] ? "#ce6700" : "#B0B0B0"} stroke={allFalse ? '#D76C00' : category["Laboratory"] ? "#D76C00" : "#B0B0B0"} stroke-width={0.4} d="m23.22 586.659 17.3889.634-.0715 1.962-17.389-.635z" />
 
         {/* New CEAS Room 1 bldg */}
-        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M136 614v30.564h-21V614z" />
-        <text onClick={() => bldClicked("")} style={{ cursor: "pointer" }} x="125.5" y="629.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 1</text>
-        <path onClick={() => bldClicked("")} style={{ cursor: "pointer" }} fill={allFalse ? '#0094cf' : category[""] ? "#0094cf" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M115 643.357h21V646h-21z" />
+        <path onClick={() => bldClicked("CEAS Room 1")} style={{ cursor: "pointer" }} fill={allFalse ? '#00c3ff' : category[""] ? "#00c3ff" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M136 614v30.564h-21V614z" />
+        <text onClick={() => bldClicked("CEAS Room 1")} style={{ cursor: "pointer" }} x="125.5" y="629.9" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.2" fill="black">ROOM 1</text>
+        <path onClick={() => bldClicked("CEAS Room 1")} style={{ cursor: "pointer" }} fill={allFalse ? '#0094cf' : category[""] ? "#0094cf" : "#B0B0B0"} stroke={allFalse ? '#4391A9' : category[""] ? "#4391A9" : "#B0B0B0"} stroke-width={0.4} d="M115 643.357h21V646h-21z" />
 
         {/* CIVIL ENGINEERING LABBBBBBBBB */}
         <path onClick={() => bldClicked("Engineering Laboratory")} style={{ cursor: "pointer" }} fill={allFalse ? '#ff3030' : category["Laboratory"] ? "#ff3030" : "#B0B0B0"} stroke={allFalse ? '#C32525' : category["Laboratory"] ? "#C32525" : "#B0B0B0"} stroke-width={0.4} d="M270 664v17h-21v-17z" />
