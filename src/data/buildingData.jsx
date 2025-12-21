@@ -87,7 +87,7 @@ const buildingData = {
       },
       {        
         code: " ", 
-        name: "CLassroom",
+        name: "COE Room 1",
         description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
         img: " "
 
@@ -95,7 +95,7 @@ const buildingData = {
       },
       {
         code: " ", 
-        name: "CLassroom",
+        name: "COE Room 2",
         description: "A learning area where students attend lectures, participate in discussions, and work on academic activities guided by their teachers. ",
         img: " "
          }
@@ -760,105 +760,107 @@ img:" "
     }
 
   },
-  'New Admin Building': {
-    totalFloors: 3, rooms:{
-  1:[
-{
-code:"",
-name:"Accounting Office",
-description: "The office responsible for managing the school’s financial transactions, including payments, fees, and other accounting records. ",
-img: ""
-},
-{
-code:"",
-name:"MIS Office",
-description: "The office that handles the school’s data management, computer systems, and network services. ",
-img: ""
-},
-{
-code:"",
-name:"Registrar",
-description: "The office that manages student records, enrollment, grades, and official school documents. ",
-img: ""
-}, 
-{
-code:"",
-name:"Cashier",
-description: "The office where students and staff process payments, fees, and other financial transactions. ",
-img: ""
-},
-{
-code:"",
-name:"BAC Office",
-description: "The office where procurement processes, bidding, and acquisition of school goods and services are managed. ",
-img: ""
-},
-{
-code:"",
-name:"University Clinic",
-description: "A healthcare facility on campus where students and staff receive medical attention, consultations, and basic health services. ",
-img: ""
-}, 
-{
-code:"",
-name:"Power House",
-description: "A facility that supplies and manages electricity for the school, ensuring a stable and continuous power supply for all campus operations. ",
-img: ""
-},
-{
-code:"",
-name:" ",
-description: " ",
-img: ""
-}, 
-{
-code:"",
-name:" ",
-description: " ",
-img: ""
-},
-{
-code:"",
-name:" ",
-description: " ",
-img: ""
-},
-{
-code:"",
-name:" ",
-description: " ",
-img: ""
-},
+  
+'New Admin Building': {
+  totalFloors: 3, 
+  rooms:{
+  1:[ 
+      {
+        code:"",
+        name:"Accounting Office",
+        description: "The office responsible for managing the school’s financial transactions, including payments, fees, and other accounting records. ",
+        img: ""
+      },
+      {
+        code:"",
+        name:"MIS Office",
+        description: "The office that handles the school’s data management, computer systems, and network services. ",
+        img: ""
+      },
+      {
+        code:"",
+        name:"Registrar",
+        description: "The office that manages student records, enrollment, grades, and official school documents. ",
+        img: ""
+      }, 
+      {
+        code:"",
+        name:"Cashier",
+        description: "The office where students and staff process payments, fees, and other financial transactions. ",
+        img: ""
+      },
+      {
+        code:"",
+        name:"BAC Office",
+        description: "The office where procurement processes, bidding, and acquisition of school goods and services are managed. ",
+        img: ""
+      },
+      {
+        code:"",
+        name:"University Clinic",
+        description: "A healthcare facility on campus where students and staff receive medical attention, consultations, and basic health services. ",
+        img: ""
+      }, 
+      {
+        code:"",
+        name:"Power House",
+        description: "A facility that supplies and manages electricity for the school, ensuring a stable and continuous power supply for all campus operations. ",
+        img: ""
+      },
+      {
+        code:"",
+        name:" ",
+        description: " ",
+        img: ""
+      }, 
+      {
+        code:"",
+        name:" ",
+        description: " ",
+        img: ""
+      },
+      {
+        code:"",
+        name:" ",
+        description: " ",
+        img: ""
+      },
+      {
+        code:"",
+        name:" ",
+        description: " ",
+        img: ""
+      },
 
-  ], 
+    ], 
 
-2:[
-{
-code:"",
-name:" ",
-description: " ",
-img: ""
-},
-{
-code:"",
-name:" ",
-description: " ",
-img: ""
-}, 
-{
-code:"",
-name:" ",
-description: " ",
-img: ""
-}
-],
-3:[
-{
-code:"",
-name:" ",
-description: " ",
-img: ""
-}
+    2:[
+    {
+    code:"",
+    name:" ",
+    description: " ",
+    img: ""
+    },
+    {
+    code:"",
+    name:" ",
+    description: " ",
+    img: ""
+    }, 
+    {
+    code:"",
+    name:" ",
+    description: " ",
+    img: ""
+    }
+    ],
+    3:[
+    {
+    code:"",
+    name:" ",
+    description: " ",
+    img: ""
+    }
 
 
 ],
