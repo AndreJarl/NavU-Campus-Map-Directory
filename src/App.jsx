@@ -6,7 +6,7 @@ import COE1stF from  "./components/DraggableZoomableSVG"
 import Analytics from "./routes/Analytics"
 import Map3d from "./routes/Map3d"
 import PanoramaViewer from "./components/PanoramaViewer"
-
+import Map2 from './routes/Map2'
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/map" element={<Map />} />
+       <Route path="/map2" element={<Map2 />} />
       <Route path="/virtual-tour" element={<VirtualTour />} />
       <Route path="/coe1stf" element={<COE1stF />} />
       <Route path="/analytics" element={<Analytics />} />
