@@ -1,6 +1,6 @@
 {
   "Main Gate": {
-    "image": "public/360imgs/CTU360/CTUFront.webp",
+    "image": "https://res.cloudinary.com/dkicidfrq/image/upload/v1766461640/CTUFront_vuwnqf.jpg",
     "hotspots": [
       {
         "pitch": -20.5,
@@ -19,7 +19,7 @@
     ]
   },
   "Security Office": {
-    "image": "public/360imgs/CTU360/CTUFront2.webp",
+    "image": "https://res.cloudinary.com/dkicidfrq/image/upload/v1766461632/CTUFront2_u4oiqb.jpg  ",
     "hotspots": [
       {
         "pitch": -20.5,
@@ -45,7 +45,7 @@
     ]
   },
     "Water Refill/Laundry Shop": {
-    "image": "public/360imgs/360PATH-Oval/Oval_Path.webp",
+    "image": "https://res.cloudinary.com/dkicidfrq/image/upload/v1766461733/Oval_Path_g7f7rd.jpg",
     "hotspots": [
       {
         "pitch": -20.5,
@@ -91,7 +91,7 @@
     ]
   }, 
    "ERRC Path": {
-    "image": "public/360imgs/360PATH-Oval/PATH2_Oval.webp",
+    "image": "https://res.cloudinary.com/dkicidfrq/image/upload/v1766461734/PATH2_Oval_sdofgk.jpg",
     "hotspots": [
       {
         "pitch": -20.5,
@@ -111,7 +111,7 @@
     ]
   },
    "ERRC Building": {
-    "image": "public/360imgs/360PATH-Oval/PATH1_Oval.webp",
+    "image": "https://res.cloudinary.com/dkicidfrq/image/upload/v1766461735/PATH1_Oval_og0kzp.jpg",
     "hotspots": [
       {
         "pitch": -20.5,
@@ -140,7 +140,7 @@
 
   
    "Electrical Engineering Laboratory": {
-    "image": "public/360imgs/1stF/1stEng/1stFlrENG0.webp",
+    "image": "https://res.cloudinary.com/dkicidfrq/image/upload/v1766460860/1stFlrENG0_iaoz9g.jpg",
     "hotspots": [
       {
         "pitch": -20.5,
@@ -166,7 +166,7 @@
     ]
   },
      "Engineering Laboratory": {
-    "image": "public/360imgs/1stF/1stEng/1stFlrENG1.webp",
+    "image": "https://res.cloudinary.com/dkicidfrq/image/upload/v1766460833/1stFlrENG1_gilrbf.jpg",
     "hotspots": [
       {
         "pitch": -20.5,
@@ -190,136 +190,7 @@
         "label": "Engineering Laboratory"
       }
     ]
-  },
- "Room 34": {
-    "image": "public/360imgs/COT-360Rooms/Room34.JPG",
-    "hotspots": [
-      {
-        "pitch": -20.5,
-        "yaw": 20,
-        "type": "arrow",
-        "target": "Room 35",
-        "arrowType": "forward"
-      },
-      {
-        "pitch": -60.5,
-        "yaw": 20,
-        "type": "arrow",
-        "target": "Electrical Engineering Laboratory",
-        "arrowType": "backward",
-        "rotation": 180
-      },
-        {
-        "pitch": 30,
-        "yaw": 50,
-        "type": "info",
-        "label": "Room 34"
-      },
-       {
-        "pitch": 10,
-        "yaw":  210,
-        "type": "info",
-        "label": "COT Female CR"
-      }
-    ]
-  },
-   "Room 35": {
-    "image": "public/360imgs/COT-360Rooms/Room35.JPG",
-    "hotspots": [
-      {
-        "pitch": -20.5,
-        "yaw": 20,
-        "type": "arrow",
-        "target": "Room 36",
-        "arrowType": "forward"
-      },
-      {
-        "pitch": -60.5,
-        "yaw": 20,
-        "type": "arrow",
-        "target": "Room 34",
-        "arrowType": "backward",
-        "rotation": 180
-      },
-        {
-        "pitch": 20,
-        "yaw": 60,
-        "type": "info",
-        "label": "Room 35"
-      },
-       {
-        "pitch": 10,
-        "yaw":  170,
-        "type": "info",
-        "label": "Room 34"
-      }
-    ]
-  },
-  "Room 36": {
-    "image": "public/360imgs/COT-360Rooms/Room36.JPG",
-    "hotspots": [
-      {
-        "pitch": -20.5,
-        "yaw": 20,
-        "type": "arrow",
-        "target": "Room 37",
-        "arrowType": "forward"
-      },
-      {
-        "pitch": -60.5,
-        "yaw": 20,
-        "type": "arrow",
-        "target": "Room 36",
-        "arrowType": "backward",
-        "rotation": 180
-      },
-        {
-        "pitch": 30,
-        "yaw": 120,
-        "type": "info",
-        "label": "Room 36"
-      },
-       {
-        "pitch": 10,
-        "yaw":  190,
-        "type": "info",
-        "label": "Room 35"
-      }
-    ]
-  },
-  "Room 37": {
-    "image": "public/360imgs/COT-360Rooms/Room37.JPG",
-    "hotspots": [
-      {
-        "pitch": -20.5,
-        "yaw": 50,
-        "type": "arrow",
-        "target": "Room 36",
-        "arrowType": "forward"
-      },
-      {
-        "pitch": -60.5,
-        "yaw": 50,
-        "type": "arrow",
-        "target": "Room 36",
-        "arrowType": "backward",
-        "rotation": 180
-      },
-        {
-        "pitch": 30,
-        "yaw": 190,
-        "type": "info",
-        "label": "Room 37"
-      },
-       {
-        "pitch": 10,
-        "yaw":  210,
-        "type": "info",
-        "label": "Room 36"
-      }
-    ]
   }
-
 
    
 }
