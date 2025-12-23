@@ -15,15 +15,15 @@ import fitness from "../assets/rooms/Bldgs/FitnessGym.jpg"
 const cardData = {
     'College of Engineering Building': {
         totalFloors: 3,
-        img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766457867/COEFront_nan1bo.jpg"
+        img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459296/COEFront_nzuohd.jpg"
     },
      'CME/COE Building': {
        totalFloors: 4,
-       img:"https://res.cloudinary.com/dkicidfrq/image/upload/v1766457840/CMEFront_de1dkg.jpg",
+       img:"https://res.cloudinary.com/dkicidfrq/image/upload/v1766459287/CMEFront_k1pxqu.jpg",
     },
     'Education Building': {
        totalFloors: 3,
-       img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766457842/CEASFront_wbnspi.jpg",
+       img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459301/CEASFront_phuvug.jpg",
     },
     'Graduate School Building': 4,
     'Bistro': {
@@ -40,12 +40,12 @@ const cardData = {
     },
     'College of Technology/COT Building': {
         totalFloors:3,
-        img:"https://res.cloudinary.com/dkicidfrq/image/upload/v1766457841/COTFront_dddunb.jpg"
+        img:"https://res.cloudinary.com/dkicidfrq/image/upload/v1766459307/COTFront_atpdzw.jpg"
     },
     'Old Admin Building': 2,
     'New Admin Building': {
         totalFloors: 3,
-        img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766457878/AdminFront_ysovvb.jpg"
+        img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459288/AdminFront_lt10vg.jpg"
     },
     'Student Activity Center': {
             totalFloors: 1,
