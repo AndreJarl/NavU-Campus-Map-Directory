@@ -99,7 +99,7 @@ function Panorama({ scene, onChangeScene, clicked, reloadTrigger }) {
     Object.entries(scenes).forEach(([key, val]) => {
       scenesConfig[key] = {
         type: 'equirectangular',
-        panorama: val.image.startsWith('/') ? val.image : '/' + val.image.replace(/^public\//, ''),
+        panorama: val.image,
         hfov: 100,
         hotSpots: val.hotspots.map(h => {
           if (h.type === 'arrow') {
