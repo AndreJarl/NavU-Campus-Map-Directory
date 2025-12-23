@@ -1,8 +1,8 @@
 import React from 'react'
 
 
-import enlab1 from "../assets/rooms/coe/CELAB01.webp"
-import enlab2 from "../assets/rooms/coe/CELAB02.webp"
+// import enlab1 from "../assets/rooms/coe/CELAB01.webp"
+// import enlab2 from "../assets/rooms/coe/CELAB02.webp"
 
 // COT grndflr IMAGES
 import artMastersClub from "../assets/rooms/COT-GrndFlr/ArtMastersClub.webp"
@@ -31,12 +31,12 @@ import laundryshop from "../assets/rooms/Bldgs/Laundry.jpg"
 import floatingarea from "../assets/rooms/Bldgs/FloatingArea.jpg"
 import HMLab from "../assets/rooms/Bldgs/HMKitchenLaboratory.jpg"
 import PEhall from "../assets/rooms/Bldgs/PEHall.jpg"
-import womensdorm from "../assets/rooms/Dormitories/Women'sDormitory.jpg"
-import mensdorm from "../assets/rooms/Dormitories/MensDormitory.jpg"
+// import womensdorm from "../assets/rooms/Dormitories/Women'sDormitory.jpg"
+// import mensdorm from "../assets/rooms/Dormitories/MensDormitory.jpg"
 import Fablab from "../assets/rooms/FABLAB/FABLAB.jpg"
 import fitness from "../assets/rooms/Bldgs/FitnessGym.jpg"
-import bistro from "../assets/rooms/bistro&canteen/Bistro.jpg"
-import Canteen from "../assets/rooms/bistro&canteen/Canteen.jpg"
+// import bistro from "../assets/rooms/bistro&canteen/Bistro.jpg"
+// import Canteen from "../assets/rooms/bistro&canteen/Canteen.jpg"
 
 // EDUC IMAGES
 
@@ -56,13 +56,13 @@ const buildingData = {
         code: "", 
         name: "Electrical Engineering Laboratory",
         description: "A specialized room equipped with electrical tools, testing instruments, and training panels where students conduct experiments and practical activities related to circuits, wiring, and power systems.",
-        img:enlab1
+        img:"https://res.cloudinary.com/dkicidfrq/image/upload/v1766459347/CELAB01_lqvy4s.webp"
       },
       { 
         code: " ", 
         name: "Engineering Laboratory",
         description: "A workspace designed for hands-on experiments and projects across different engineering fields, equipped with tools, machines, and equipment for practical learning and testing.",
-        img: enlab2
+        img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459346/CELAB02_fetvlj.webp"
       },
       { 
         code: " ", 
@@ -438,7 +438,7 @@ img: ""
           code:"",
           name:"Bistro",
           description: "A small dining area on campus where students and staff can buy and enjoy meals, snacks, and beverages. ",
-          img: bistro
+          img: 'https://res.cloudinary.com/dkicidfrq/image/upload/v1766459529/Bistro_ah4jbo.jpg'
     }
       ]
     }
@@ -451,7 +451,7 @@ rooms:{
 code:"",
 name:"Canteen",
 description: "A spacious dining area offering a variety of affordable meals and snacks. Includes seating for students and staff, clean food counters, hand-washing stations, and proper ventilation. Suitable for meals, breaks, and informal gatherings. ",
-img: Canteen
+img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459532/Canteen_rh8ncu.jpg"
 }
 
 ]
@@ -1096,7 +1096,7 @@ img:" "
   code:"",
     name:"Men's Dorm ",
     description: "A residential building where male students live, providing beds, study areas, and basic amenities for daily living. ",
-    img: mensdorm
+    img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459767/MensDormitory_rti8ld.jpg"
         }
       ]
     }
@@ -1109,7 +1109,7 @@ img:" "
     code:"",
     name:"Women's Dormitory",
     description: "A secure and comfortable residential facility for female students. Includes shared bedrooms, restrooms, common areas, and basic amenities. Provides a safe and supportive environment for study, rest, and daily living. ",
-    img: womensdorm
+    img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459769/Women_sDormitory_gudsea.jpg"
         }
       ],
       2:[
