@@ -29,7 +29,7 @@ export const buildingCoordinates ={
       "CEAS Room 5" : {x:115.19755096931256, y:554.3711959657264, zoom: 15},
       "CEAS Room 12" : {x:211.06347275702203, y:572.0046523002898, zoom: 15},
 
-      "KIOSK" : {x:195.55873484546186, y: 718.7435944269491, zoom: 10 },
+      "KIOSK" : {x:193.34364570600303, y: 760.1523181003366, zoom: 10 },
       "College of Technology/COT Building": {x: 133.27215374026395, y:457.4405872181686, zoom: 6.795}
     },
     2:{

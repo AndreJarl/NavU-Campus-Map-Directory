@@ -1,7 +1,9 @@
 import React, { useRef, useState, useCallback, useEffect } from 'react';
 import Floor1 from '../svg/Floor1';
-import { buildingCoordinates } from '../lib/BuildingCoordinates';
+import { buildingCoordinates } from '../hooks/BuildingCoordinates';
 import { useFloorQuery } from '../context/FloorContext';
+import { useZoomBuilding } from '../hooks/ZoomBuildingbyName';
+import {useZoomController} from "../hooks/ZoomToCoordinates"
 
 const DraggableZoomableSVG = ({OpenCard}) => {
  const {currentFloor} = useFloorQuery();
@@ -9,7 +11,7 @@ const DraggableZoomableSVG = ({OpenCard}) => {
   const containerRef = useRef(null);
   const [viewBox, setViewBox] = useState(
       currentFloor === 1 ? { x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } :
-      currentFloor === 2 ? {x: 3, y: 4, width: 1440, height: 1024 } : floor === 3 ? {} :{}
+      currentFloor === 2 ? {x: 3, y: 4, width: 1440, height: 1024 } : currentFloor === 3 ? {} :{}
   );
   
  const currentFloorCoordinates = buildingCoordinates[currentFloor];
@@ -64,41 +66,23 @@ const DraggableZoomableSVG = ({OpenCard}) => {
 
   
 
-  const zoomToCoordinates = useCallback((targetX, targetY, targetScale) => {
-    const newScale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, targetScale));
-    const baseWidth = 1440;
-    const baseHeight = 1024;
-    
-    const newWidth = baseWidth / newScale;
-    const newHeight = baseHeight / newScale;
-    
-    // Center the view on the target coordinates
-    const newX = targetX - newWidth / 2;
-    const newY = targetY - newHeight / 2;
-    
-    setScale(newScale);
-    setViewBox({
-      x: newX,
-      y: newY,
-      width: newWidth,
-      height: newHeight
-    });
-    
-    console.log(`Zooming to: X=${targetX}, Y=${targetY}, Scale=${newScale}`);
-  }, [MIN_SCALE, MAX_SCALE]);
+const { zoomToCoordinates } = useZoomController({
+  setScale,
+  setViewBox,
+  MIN_SCALE,
+  MAX_SCALE,
+});
 
-  const zooomBuildingbyName = useCallback((buildingName) => {
-      if (!currentFloorCoordinates) return;
 
-      const coords = currentFloorCoordinates[buildingName];
 
-      if (coords) {
-        zoomToCoordinates(coords.x, coords.y, coords.zoom);
-      } else {
-        console.error("Building not found:", buildingName);
-      }
-  }, [currentFloorCoordinates, zoomToCoordinates]);
+  const zooomBuildingbyName  = useZoomBuilding({
+      currentFloorCoordinates,
+      zoomToCoordinates
+  });
 
+    const zoomToKiosk = () => {
+    zoomToCoordinates(193.34364570600303, 760.1523181003366, 10);
+  };
   
   // OPTIMIZED: Handle mouse down for dragging
   const handleMouseDown = useCallback((e) => {
@@ -525,8 +509,9 @@ const handleReset = useCallback(() => {
       <span className="text-base lg:text-2xl text-white">{isFullscreen ? "⛷" : "⛶"}</span>
     </button> */}
   </div>
-
+   
   <Floor1 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
+
 </div>
   );
 };
