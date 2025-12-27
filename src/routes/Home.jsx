@@ -3,6 +3,7 @@ import Map from "./Map";
 function Home() {
   return (
     <>
+    
     <Map />
     </>
   )
