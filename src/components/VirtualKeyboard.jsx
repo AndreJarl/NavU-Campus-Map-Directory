@@ -26,7 +26,7 @@ export default function VirtualKeyboard() {
   };
 
   return (
-    <div className="absolute -bottom-12 absolute left-1/2 -translate-x-1/2  flex items-center justify-center z-[500]  p-4 pt-5 ">
+    <div className="hidden lg:absolute -bottom-12 absolute left-1/2 -translate-x-1/2  flex items-center justify-center z-[500]  p-4 pt-5 ">
       <div className="bg-black/70 rounded-2xl shadow-lg p-4 w-full max-w-2xl">
 
         <div className="space-y-2">
