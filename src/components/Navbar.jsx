@@ -9,12 +9,14 @@ import eng from "../assets/IMG_5856.jpg"
 import fountain from "../assets/IMG_5707.jpg"
 import park from "../assets/IMG_5708.jpg"
 import { useScene } from '../context/SceneContext';
+import VirtualKeyboard from './VirtualKeyboard';
 
 function Navbar() {
     const [query, setQuery] = useState([]);
     const [suggestion, setSuggestion] = useState([]);
     const [arrowClicked, setArrowClicked] = useState(false);
     const {currentScene, setCurrentScene} = useScene();
+    const [keyboardVisible, setKeyboardVisible] = useState(false);
 
     // Function to format scene ID for display
 const formatSceneId = (sceneId = "") => {
@@ -73,6 +75,7 @@ const formatSceneId = (sceneId = "") => {
                 <div className='flex items-center gap-2 bg-transparent'> 
                     <Search color='white' onClick={clicked}/>
                     <input 
+                       onFocus={() => setKeyboardVisible(true)}
                         onChange={handleInput} 
                         className='bg-transparent text-white w-[250px] outline-none' 
                         placeholder={formatSceneId(currentScene)} // This will show formatted scene ID
@@ -196,6 +199,7 @@ const formatSceneId = (sceneId = "") => {
                     </div>
                 </div>
             </div>
+            {keyboardVisible && (<VirtualKeyboard />)}
         </>
     )
 }

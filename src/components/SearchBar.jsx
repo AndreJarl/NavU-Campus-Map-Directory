@@ -80,7 +80,18 @@ function SearchBar({ searchTerm, suggestions, handleSearch, handleSuggestionClic
         </div>
       )}
 
-      {keyboardVisible && <VirtualKeyboard />}
+      {keyboardVisible && (
+  <div
+    className="fixed top-0 left-0 w-full h-full z-[1000]"
+    onClick={(e) => e.stopPropagation()}
+    onPointerDown={(e) => e.stopPropagation()}
+    style={{ pointerEvents: "auto", touchAction: "none" }}
+  >
+    <VirtualKeyboard 
+    />
+  </div>
+)}
+
     </div>
   )
 }
