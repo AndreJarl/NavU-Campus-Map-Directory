@@ -21,8 +21,9 @@ function SearchBar({ searchTerm, suggestions, handleSearch, handleSuggestionClic
         <input
           onChange={handleSearch}
           value={searchTerm}
-          
-           onTouchStart={() => setShowKeyboard(true)}
+          readOnly
+           onTouchStart={() => setKeyboardVisible(true)}
+          //  onClick={() => setKeyboardVisible(true)} // fallback
           className="w-full lg:w-auto flex-1 px-2 py-3 lg:py-3 
                      bg-transparent text-sm text-white placeholder-white/70
                      border-none outline-none"
