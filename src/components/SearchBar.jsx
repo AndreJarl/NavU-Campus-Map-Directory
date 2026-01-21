@@ -9,7 +9,7 @@ function SearchBar({ searchTerm, suggestions, handleSearch, handleSuggestionClic
 
 
   return (
-    <div onTouchStart={(e) => e.stopPropagation()} className="fixed bottom-16 lg:top-3 left-1/2 -translate-x-1/2 lg:left-4 lg:translate-x-0 px-2 z-[50] w-full max-w-[95vw] lg:max-w-none pointer-events-none">
+    <div  className="fixed bottom-16 lg:top-3 left-1/2 -translate-x-1/2 lg:left-4 lg:translate-x-0 px-2 z-[50] w-full max-w-[95vw] lg:max-w-none pointer-events-none">
       {/* 🔎 Main Search Bar */}
       <div
         className={`z-50 w-full lg:w-[30%] 2xl:w-[450px] px-4 lg:px-5 flex flex-row items-center justify-between
@@ -21,8 +21,7 @@ function SearchBar({ searchTerm, suggestions, handleSearch, handleSuggestionClic
         <input
           onChange={handleSearch}
           value={searchTerm}
-           onTouchStart={() => setKeyboardVisible(true)}
-          //  onClick={() => setKeyboardVisible(true)} // fallback
+           onClick={() => setKeyboardVisible(true)} 
           className="w-full lg:w-auto flex-1 px-2 py-3 lg:py-3 
                      bg-transparent text-sm text-white placeholder-white/70
                      border-none outline-none"
