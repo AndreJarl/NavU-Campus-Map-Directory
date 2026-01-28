@@ -520,7 +520,7 @@ img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459532/Canteen_rh8n
             }, 
             {
               code:"Room 39",
-              name: "Automation Laboratory 3 / Electronic Laboratory ",
+              name: "Automation Laboratory 3 / Electronic Laboratory",
             description: "A lab equipped with electronic components, circuit boards, and automation kits where students conduct experiments and projects related to electronics and control systems.",
             img: room39
 
@@ -535,7 +535,7 @@ img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459532/Canteen_rh8n
             },
             {
             code:"Room 41",
-            name: "Motor Control / Electrical & Instrumentation Laboratory ",
+            name: "Motor Control / Electrical & Instrumentation Laboratory",
             description: "A specialized lab with equipment for studying motor control systems, electrical wiring, and instrumentation used in monitoring and automation processes.",
             img: room41
 
