@@ -2,11 +2,11 @@ import { Search } from "lucide-react"
 import { Building2 } from 'lucide-react';
 import buildingData from "../data/buildingData";
 import { useState } from "react";
-import VirtualKeyboard from "./VirtualKeyboard";
-function SearchBar({ searchTerm, suggestions, handleSearch, handleSuggestionClicked }) {
-   
-  const [keyboardVisible, setKeyboardVisible] = useState(false);
+import Keyboard from './Keyboard';
 
+function SearchBar({ searchTerm, suggestions, keyboardClicked,      // Receive from parent
+  setKeyboardClicked, handleSearch, handleSuggestionClicked }) {
+  
 
   return (
     <div  className="fixed bottom-16 lg:top-3 left-1/2 -translate-x-1/2 lg:left-4 lg:translate-x-0 px-2 z-[50] w-full max-w-[95vw] lg:max-w-none pointer-events-none">
@@ -21,7 +21,7 @@ function SearchBar({ searchTerm, suggestions, handleSearch, handleSuggestionClic
         <input
           onChange={handleSearch}
           value={searchTerm}
-           onClick={() => setKeyboardVisible(true)} 
+          onClick={()=>setKeyboardClicked(true)}
           className="w-full lg:w-auto flex-1 px-2 py-3 lg:py-3 
                      bg-transparent text-sm text-white placeholder-white/70
                      border-none outline-none"
@@ -54,7 +54,9 @@ function SearchBar({ searchTerm, suggestions, handleSearch, handleSuggestionClic
           {suggestions.map((suggestion, index) => (
             <div
               key={index}
-              onClick={() => handleSuggestionClicked(suggestion)}
+              onClick={() => {handleSuggestionClicked(suggestion);
+                setKeyboardClicked(false);
+              }}
               className="flex flex-row items-center gap-3 lg:gap-4 w-full py-2 px-3 lg:px-4
                          cursor-pointer transition hover:bg-white/10"
             >
@@ -80,18 +82,12 @@ function SearchBar({ searchTerm, suggestions, handleSearch, handleSuggestionClic
         </div>
       )}
 
-      {keyboardVisible && (
-  <div
-    className="fixed top-0 left-0 w-full h-full z-[1000]"
-    onClick={(e) => e.stopPropagation()}
-    onPointerDown={(e) => e.stopPropagation()}
-    style={{ pointerEvents: "auto", touchAction: "none" }}
-  >
-    <VirtualKeyboard 
-    />
+   {/* ✅ Add pointer-events-auto here */}
+{keyboardClicked && (
+  <div className="pointer-events-auto">
+    <Keyboard query={searchTerm} setQuery={handleSearch} />
   </div>
 )}
-
     </div>
   )
 }

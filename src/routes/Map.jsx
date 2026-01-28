@@ -15,6 +15,7 @@ import { useCategory } from '../context/CategoryContext';
 import { useScene } from '../context/SceneContext';
 import person from "../assets/person.webp"
 import { useLocation } from "react-router-dom";
+import Keyboard from '../components/Keyboard';
 
 function Map() {
 
@@ -35,7 +36,7 @@ function Map() {
           const [bldCliked, setBldClicked] = useState(false);
     
           const [clicked, setClicked] = useState(false);
-
+          const [keyboardClicked, setKeyboardClicked] = useState(false); // Move state here
             const location = useLocation();
           
         useEffect(() => {
@@ -55,7 +56,7 @@ function Map() {
     
      const handleSearch = (e) =>{
     
-        const value = e.target.value;
+       const value = (e && e.target) ? e.target.value : e;
           setSearchTerm(value);
     
         if(!value){
@@ -206,7 +207,9 @@ function Map() {
 
     <div className='h-[100%]'>
 
-            <DraggableZoomableSVG OpenCard={OpenCard}/>   
+            <DraggableZoomableSVG OpenCard={OpenCard}
+            onDragStart={() => setKeyboardClicked(false)}
+            />   
 
       
       
@@ -221,7 +224,10 @@ function Map() {
              <Categories />
            
            
-                        <SearchBar searchTerm={searchTerm} suggestions={suggestions}  handleSearch={handleSearch} handleSuggestionClicked={handleSuggestionClicked} />
+                        <SearchBar searchTerm={searchTerm} suggestions={suggestions} handleSearch={handleSearch} 
+                        keyboardClicked={keyboardClicked}
+                        setKeyboardClicked={setKeyboardClicked}
+                        handleSuggestionClicked={handleSuggestionClicked} />
 
 
             { roomSearched  && (
@@ -252,6 +258,7 @@ function Map() {
            )
 }
 
+  
 
     </div>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Search, ChevronDown , ChevronUp } from 'lucide-react';
 import scenee from "../data/scene.json";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, AlignJustify } from 'lucide-react';
 import { FaCaretLeft } from "react-icons/fa";
 import oval from "../assets/IMG_5738.jpg"
@@ -9,15 +9,27 @@ import eng from "../assets/IMG_5856.jpg"
 import fountain from "../assets/IMG_5707.jpg"
 import park from "../assets/IMG_5708.jpg"
 import { useScene } from '../context/SceneContext';
-import VirtualKeyboard from './VirtualKeyboard';
-
-function Navbar() {
+import Keyboard from './Keyboard';
+function Navbar({keyboardClicked,setKeyboardClicked}) {
     const [query, setQuery] = useState([]);
     const [suggestion, setSuggestion] = useState([]);
     const [arrowClicked, setArrowClicked] = useState(false);
     const {currentScene, setCurrentScene} = useScene();
-    const [keyboardVisible, setKeyboardVisible] = useState(false);
+    
 
+// Move filtering logic here so it reacts to 'query' changes from ANY source
+    useEffect(() => {
+        if (typeof query === "string" && query.trim() !== "") {
+            const filteredSuggestion = Object.keys(scenee).filter((item) =>
+                item.toLowerCase().includes(query.toLowerCase())
+            );
+            setSuggestion(filteredSuggestion);
+        } else {
+            setSuggestion([]);
+        }
+    }, [query]); // Runs whenever 'query' updates   
+    
+    
     // Function to format scene ID for display
 const formatSceneId = (sceneId = "") => {
     if (!sceneId) return "Search...";
@@ -31,13 +43,13 @@ const formatSceneId = (sceneId = "") => {
     const handleInput = (e) => {
         const value = e.target.value;
         console.log(value);
+       setQuery(value); // Just update the state
         if (value) {
             const filteredSuggestion = Object.keys(scenee).filter((item) => 
                 item.toLowerCase().includes(value.toLowerCase())
             );
             setSuggestion(filteredSuggestion);
             console.log(filteredSuggestion);
-            filteredSuggestion.length === 0 ? setQuery(value) : setQuery(filteredSuggestion);
         } else {
             setSuggestion([]);
             setQuery([]);
@@ -75,8 +87,9 @@ const formatSceneId = (sceneId = "") => {
                 <div className='flex items-center gap-2 bg-transparent'> 
                     <Search color='white' onClick={clicked}/>
                     <input 
-                       onFocus={() => setKeyboardVisible(true)}
                         onChange={handleInput} 
+                        onClick={()=>setKeyboardClicked(true)}
+                        value={query}
                         className='bg-transparent text-white w-[250px] outline-none' 
                         placeholder={formatSceneId(currentScene)} // This will show formatted scene ID
                         type="search" 
@@ -99,7 +112,9 @@ const formatSceneId = (sceneId = "") => {
                     {suggestion.map((suggestions, index) => (
                         <div className='flex flex-col gap-4' key={index}>
                             <ul 
-                                onClick={() => handleSuggestionClicked(suggestions)} 
+                                onClick={() => {handleSuggestionClicked(suggestions);
+                                           setKeyboardClicked(false);
+                                }} 
                                 className='text-base cursor-pointer text-white py-2 hover:bg-black p-2 pl-3'
                             >
                                 {formatSceneId(suggestions)} {/* Show formatted name in suggestions */}
@@ -199,7 +214,8 @@ const formatSceneId = (sceneId = "") => {
                     </div>
                 </div>
             </div>
-            {keyboardVisible && (<VirtualKeyboard />)}
+           
+            { keyboardClicked && <Keyboard query={query} setQuery={setQuery} />}
         </>
     )
 }

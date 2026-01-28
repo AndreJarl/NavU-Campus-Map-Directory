@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 function PanoramaViewer({clicked, setClicked}) {
   const {currentScene, setCurrentScene} = useScene();
   const containerRef = useRef(null);
-  
+  const [keyboardClicked, setKeyboardClicked] = useState(false);
   // No reloadKey state needed anymore
 
   return (
@@ -14,8 +14,8 @@ function PanoramaViewer({clicked, setClicked}) {
       ref={containerRef}
       className={`${clicked ? 'fixed' : 'hidden'} top-0 left-0 w-full h-full bg-black z-[9999]`}
     >
-      <Navbar/>
-      <div className="relative w-full h-full">
+      <Navbar setKeyboardClicked={setKeyboardClicked} keyboardClicked={keyboardClicked} />
+      <div onClick={()=>setKeyboardClicked(false)} className="relative w-full h-full">
         {/* Pass clicked as reloadTrigger - it will reload when clicked becomes true */}
         <Panorama
           clicked={clicked}

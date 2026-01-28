@@ -5,7 +5,7 @@ import { useFloorQuery } from '../context/FloorContext';
 import { useZoomBuilding } from '../hooks/ZoomBuildingbyName';
 import {useZoomController} from "../hooks/ZoomToCoordinates"
 
-const DraggableZoomableSVG = ({OpenCard}) => {
+const DraggableZoomableSVG = ({onDragStart, OpenCard}) => {
  const {currentFloor} = useFloorQuery();
   const svgRef = useRef(null);
   const containerRef = useRef(null);
@@ -87,6 +87,7 @@ const { zoomToCoordinates } = useZoomController({
   // OPTIMIZED: Handle mouse down for dragging
   const handleMouseDown = useCallback((e) => {
     if (e.button !== 0) return;
+    if (onDragStart) onDragStart();
     setIsDragging(true);
     lastMousePos.current = { x: e.clientX, y: e.clientY }; // Use ref instead of state
     e.preventDefault();

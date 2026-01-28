@@ -860,7 +860,7 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path opacity={path === "COT Room 38" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.104.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.104-.895-2-2-2h-41c-1.105 0-2-.895-2-2v-5.017c0-1.104-.895-2-2-2l-6 .001c-1.105 0-2-.896-2-2v-91.493c0-.276-.224-.5-.5-.5" />
 
         {/* COT Room 34 path */}
-        <path opacity={path === "COT Room 34" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105-.895-2-2-2l-17-.001c-1.105 0-2-.895-2-2v-5.006c0-1.105-.895-2-2-2H203c-1.105 0-2-.896-2-2v-34.005c0-.276.224-.5.5-.5" />
+        <path opacity={path === "Room 34" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105-.895-2-2-2l-17-.001c-1.105 0-2-.895-2-2v-5.006c0-1.105-.895-2-2-2H203c-1.105 0-2-.896-2-2v-34.005c0-.276.224-.5.5-.5" />
 
         {/* COT Room 35 path */}
         <path opacity={path === "COT Room 35" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.104.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105-.895-2-2-2h-17c-1.105-.001-2-.896-2-2v-5.007c0-1.105-.895-2-2-2H203c-1.105 0-2-.895-2-2v-54.508c0-.276.224-.5.5-.5" />
