@@ -16,6 +16,8 @@ import { useScene } from '../context/SceneContext';
 import person from "../assets/person.webp"
 import { useLocation } from "react-router-dom";
 import Keyboard from '../components/Keyboard';
+import Floors from '../components/Floors';
+import SurveyForm from '../components/SurveyForm'
 
 function Map() {
 
@@ -49,8 +51,23 @@ function Map() {
           console.log("Query updated:", query);
       }, [query, location]);
 
+      const [survey, setSurvey] = useState(false);
+      const [isNavigating, setNavigating] = useState(false);
 
+            useEffect(() => {
+          let timer;
+          // ONLY start timer if survey is closed AND user started navigating
+          if (!survey && isNavigating) {
+            timer = setTimeout(() => {
+              setSurvey(true);
+              setNavigating(false); // <--- Crucial: Stop the "navigation" state once survey triggers
+            }, 60000);
+          }
 
+          return () => clearTimeout(timer);
+        }, [survey, isNavigating]);
+
+      
               /////////////////////////////////////// for search bar functions /////////////////////////////////////////////////////
     
     
@@ -205,10 +222,12 @@ function Map() {
 
   return (
 
-    <div className='h-[100%]'>
+    <div  className='h-[100%]'>
 
             <DraggableZoomableSVG OpenCard={OpenCard}
-            onDragStart={() => setKeyboardClicked(false)}
+            onDragStart={() =>setKeyboardClicked(false)}
+            setNavigating={setNavigating}
+            isNavigating={isNavigating}
             />   
 
       
@@ -258,7 +277,11 @@ function Map() {
            )
 }
 
+
+
+      <Floors/>
   
+      <SurveyForm survey={survey} setSurvey={setSurvey}/>
 
     </div>
   )

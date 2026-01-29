@@ -5,7 +5,7 @@ import { useFloorQuery } from '../context/FloorContext';
 import { useZoomBuilding } from '../hooks/ZoomBuildingbyName';
 import {useZoomController} from "../hooks/ZoomToCoordinates"
 
-const DraggableZoomableSVG = ({onDragStart, OpenCard}) => {
+const DraggableZoomableSVG = ({onDragStart, OpenCard, setNavigating, isNavigating}) => {
  const {currentFloor} = useFloorQuery();
   const svgRef = useRef(null);
   const containerRef = useRef(null);
@@ -96,7 +96,7 @@ const { zoomToCoordinates } = useZoomController({
   // OPTIMIZED: Handle mouse move for dragging - much faster
   const handleMouseMove = useCallback((e) => {
     if (!isDragging) return;
-
+    if (!isNavigating) setNavigating(true);
     const deltaX = e.clientX - lastMousePos.current.x;
     const deltaY = e.clientY - lastMousePos.current.y;
 
@@ -159,7 +159,7 @@ const { zoomToCoordinates } = useZoomController({
       
       logCoordinates();
     }
-  }, [scale, viewBox, screenToSVG, logCoordinates, MIN_SCALE, MAX_SCALE]);
+  }, [scale, isNavigating, setNavigating, viewBox, screenToSVG, logCoordinates, MIN_SCALE, MAX_SCALE]);
 
   // Calculate distance between two touch points
   const getTouchDistance = (touch1, touch2) => {
@@ -216,6 +216,7 @@ const { zoomToCoordinates } = useZoomController({
         // Start dragging
         setIsDragging(true);
         hasMoved.current = true;
+        if (!isNavigating) setNavigating(true);
         e.preventDefault(); // Prevent default once we're dragging
       }
 
@@ -274,7 +275,7 @@ const { zoomToCoordinates } = useZoomController({
     }
     // Only prevent default if we're actively dragging or pinching
     // Don't prevent for simple taps (handled in touchend)
-  }, [isDragging, viewBox.width, viewBox.height, scale, screenToSVG, MIN_SCALE, MAX_SCALE]);
+  }, [isDragging, setNavigating, isNavigating, viewBox.width, viewBox.height, scale, screenToSVG, MIN_SCALE, MAX_SCALE]);
 
   // Handle touch end for mobile
   const handleTouchEnd = useCallback((e) => {
