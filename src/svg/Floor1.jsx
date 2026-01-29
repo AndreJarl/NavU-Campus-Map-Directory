@@ -559,11 +559,11 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <text onClick={() => bldClicked("Motor Control / Electrical & Instrumentation Laboratory")} style={{ cursor: "pointer" }} x="166.5" y="472.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">LABORATORY</text>
 
         {/* COT Room 27 / Automation Laboratory bldg */}
-        <path onClick={() => bldClicked("Room 27")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category["Laboratory"] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Laboratory"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M155 477h23v25.034h-23z" />
-        <text onClick={() => bldClicked("Room 27")} style={{ cursor: "pointer" }} x="166.5" y="488.517" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">ROOM 27</text>
-        <text onClick={() => bldClicked("Room 27")} style={{ cursor: "pointer" }} x="166.5" y="490.517" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">AUTOMATION</text>
-        <text onClick={() => bldClicked("Room 27")} style={{ cursor: "pointer" }} x="166.5" y="492.517" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">LABORATORY</text>
-        <path onClick={() => bldClicked("Room 27")} style={{ cursor: "pointer" }} fill={allFalse ? '#d6b018' : category["Laboratory"] ? "#d6b018" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Laboratory"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M155 502.034h23V504h-23z" />
+        <path onClick={() => bldClicked("Automation Laboratory")} style={{ cursor: "pointer" }} fill={allFalse ? '#fc0' : category["Laboratory"] ? "#fc0" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Laboratory"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M155 477h23v25.034h-23z" />
+        <text onClick={() => bldClicked("Automation Laboratory")} style={{ cursor: "pointer" }} x="166.5" y="488.517" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">ROOM 27</text>
+        <text onClick={() => bldClicked("Automation Laboratory")} style={{ cursor: "pointer" }} x="166.5" y="490.517" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">AUTOMATION</text>
+        <text onClick={() => bldClicked("Automation Laboratory")} style={{ cursor: "pointer" }} x="166.5" y="492.517" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.8" fill="black">LABORATORY</text>
+        <path onClick={() => bldClicked("Automation Laboratory")} style={{ cursor: "pointer" }} fill={allFalse ? '#d6b018' : category["Laboratory"] ? "#d6b018" : "#B0B0B0"} stroke={allFalse ? '#CCA817' : category["Laboratory"] ? "#CCA817" : "#B0B0B0"} stroke-width={0.4} d="M155 502.034h23V504h-23z" />
 
         {/* Study Area bldg */}
         <path onClick={() => bldClicked("Study Area")}  style={{ cursor: "pointer" }} fill={allFalse ? '#7bff00' : category[""] ? "#7bff00" : "#B0B0B0"} stroke={allFalse ? '#60C700' : category[""] ? "#60C700" : "#B0B0B0"} stroke-width={0.4} d="M213 525h19v9.875h-19z" />

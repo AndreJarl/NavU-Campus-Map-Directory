@@ -4,12 +4,12 @@ import { ChevronUp } from 'lucide-react'; // Changed to Up icon
 function Floors() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedFloor, setSelectedFloor] = useState('Floor 1');
-
+ 
   const floors = ['Floor 1', 'Floor 2', 'Floor 3', 'Floor 4'];
 
   return (
     /* Changed to bottom-4 right-4 */
-    <div className="absolute bottom-32 lg:bottom-5 left-6 z-[60] w-40">
+    <div className="absolute bottom-32 lg:bottom-5 left-6 z-[40] w-40">
       
       {/* 🥂 Glass Dropdown Menu (Positioned ABOVE the button) */}
       {isOpen && (

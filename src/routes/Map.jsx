@@ -281,7 +281,7 @@ function Map() {
 
       <Floors/>
   
-      <SurveyForm survey={survey} setSurvey={setSurvey}/>
+      {/* <SurveyForm survey={survey} setSurvey={setSurvey}/> */}
 
     </div>
   )

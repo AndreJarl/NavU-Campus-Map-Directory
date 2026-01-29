@@ -28,7 +28,29 @@ export const buildingCoordinates ={
       "CEAS Room 4" : {x:116.87352862294378, y:572.3405276590428, zoom: 15},
       "CEAS Room 5" : {x:115.19755096931256, y:554.3711959657264, zoom: 15},
       "CEAS Room 12" : {x:211.06347275702203, y:572.0046523002898, zoom: 15},
+      "EDTECH Laboratory 1" : {x:202.02153681784844, y:645.4502098555665, zoom: 15},
+      "EDTECH Laboratory 2" : {x:204.70310106365844, y:624.4314948922201, zoom: 15},
+      "General Chemistry Laboratory": {x:204.83717927594896, y:603.4127799288741, zoom: 15},
+
+
+      //COT BUILDING
+      "Automation Laboratory": {x:153.59882955343988, y:492.7390435482114, zoom: 15},
+      "GAD Office": {x:134.96195804506, y:499.362588179518, zoom: 15},
+      "NSTP Office": {x:124.83905301712704, y:498.39113496692636, zoom: 15},
+      "COT Computer Laboratory": {x:103.72173458137286, y:499.71584389318747, zoom: 15},
+      "Room 46": {x:108.21335469310469, y:486.8220103442439, zoom: 15},
+      "Motor Control / Electrical & Instrumentation Laboratory": {x:155.34184631321642, y:471.8086425132822, zoom: 15},
+      "Drafting Laboratory": {x:148.50385748640082, y:453.08608968878906, zoom: 15},      
+      "Automation Laboratory 3 / Electronic Laboratory": {x:147.36419268193157, y:434.3635368642958, zoom: 15},
+      "Industrial Motor Control / Electrical Laboratory": {x:150.64910888304883, y:415.90592582505434, zoom: 15},
+
+
+
       
+
+
+
+      "Canteen": {x:113.24128765399855, y:445.66771970172505, zoom: 15},
       "Study Area" : {x: 203.98463673865257, y: 535.6956008404186, zoom:15},
       "KIOSK" : {x:193.34364570600303, y: 760.1523181003366, zoom: 10 },
       "College of Technology/COT Building": {x: 133.27215374026395, y:457.4405872181686, zoom: 6.795}
