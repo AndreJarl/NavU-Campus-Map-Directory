@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import cardData from "../data/CardData";
-import { Building2, Signpost, ChevronUp, ChevronDown, Minus, Ellipsis } from "lucide-react";
+import { Building2, ChevronUp, Search, X } from "lucide-react";
 import buildingData from "../data/buildingData";
 import { usePath } from "../context/PathContext";
 import { useScene } from "../context/SceneContext";
@@ -12,22 +12,31 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
   const { setPath } = usePath();
   const { setCurrentScene } = useScene();
   
-  const [cardHeight, setCardHeight] = useState(40); // percentage of screen height
+  const [cardHeight, setCardHeight] = useState(40);
   const [isDragging, setIsDragging] = useState(false);
   const [startY, setStartY] = useState(0);
   const [startHeight, setStartHeight] = useState(0);
   const [imageLoading, setImageLoading] = useState(true);
   const [imageError, setImageError] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const cardRef = useRef(null);
 
   const [selectedFloor, setSelectedFloor] = useState(
     rooms ? Object.keys(rooms)[0] : null
   );
 
-  // Height limits
   const MIN_HEIGHT = 20;
   const MAX_HEIGHT = 85;
-  const SCROLL_DISABLE_THRESHOLD = 50; // Disable scroll when card is 50% or more
+  const SCROLL_DISABLE_THRESHOLD = 50;
+
+  const filteredRooms = useMemo(() => {
+    if (!rooms || !rooms[selectedFloor]) return [];
+    if (!searchQuery.trim()) return rooms[selectedFloor];
+    return rooms[selectedFloor].filter(room => 
+      room.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      room.description?.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [rooms, selectedFloor, searchQuery]);
 
   const CloseCard = () => {
     setBldClicked(false);
@@ -35,240 +44,113 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
     setCurrentScene("Main Gate");
   };
 
-  // Handle image load
-  const handleImageLoad = () => {
-    setImageLoading(false);
-    setImageError(false);
-  };
-
-  // Handle image error
-  const handleImageError = () => {
-    setImageLoading(false);
-    setImageError(true);
-  };
-
-  // Reset image state when building changes
-  useEffect(() => {
-    setImageLoading(true);
-    setImageError(false);
-  }, [query.building]);
-
-  // Handle touch/mouse events for dragging - MOBILE ONLY
   const handleDragStart = (e) => {
-    // Only allow dragging on mobile (when lg breakpoint is not active)
     if (window.innerWidth >= 1024) return;
-    
     setIsDragging(true);
     const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
     setStartY(clientY);
     setStartHeight(cardHeight);
-    
-    // Prevent default to avoid text selection
-    e.preventDefault();
   };
 
   const handleDragMove = (e) => {
-    // Only allow dragging on mobile
-    if (window.innerWidth >= 1024) return;
-    if (!isDragging) return;
-
-    const clientY = e.type.includes('touch') ? 
-      (e.touches ? e.touches[0].clientY : e.changedTouches[0].clientY) : 
-      e.clientY;
-    
+    if (window.innerWidth >= 1024 || !isDragging) return;
+    const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
     const deltaY = startY - clientY;
     const newHeight = Math.min(Math.max(startHeight + (deltaY / window.innerHeight) * 100, MIN_HEIGHT), MAX_HEIGHT);
-    
     setCardHeight(newHeight);
   };
 
-  const handleDragEnd = () => {
-    // Only allow dragging on mobile
-    if (window.innerWidth >= 1024) return;
-    if (!isDragging) return;
-    setIsDragging(false);
-  };
-
-  // Disable scroll ONLY when actively dragging AND card height is 50% or more - MOBILE ONLY
   useEffect(() => {
-    if (window.innerWidth >= 1024) return;
-
-    const shouldDisableScroll = isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD;
-
-    if (shouldDisableScroll) {
-      // Disable scroll only during active drag above threshold
-      document.body.style.overflow = 'hidden';
-      document.body.style.touchAction = 'none';
-      document.body.style.userSelect = 'none';
-    } else {
-      // Always enable scroll when not dragging or below threshold
-      document.body.style.overflow = 'unset';
-      document.body.style.touchAction = 'unset';
-      document.body.style.userSelect = 'unset';
-    }
-
-    // Cleanup on unmount
-    return () => {
-      document.body.style.overflow = 'unset';
-      document.body.style.touchAction = 'unset';
-      document.body.style.userSelect = 'unset';
-    };
-  }, [isDragging, cardHeight]); // Add cardHeight as dependency
-
-  // Add event listeners for dragging - MOBILE ONLY
-  useEffect(() => {
-    // Only set up drag events on mobile
-    if (window.innerWidth >= 1024) return;
-    
+    const handleDragEnd = () => setIsDragging(false);
     if (isDragging) {
-      document.addEventListener('mousemove', handleDragMove);
-      document.addEventListener('mouseup', handleDragEnd);
-      document.addEventListener('touchmove', handleDragMove);
-      document.addEventListener('touchend', handleDragEnd);
-      
-      return () => {
-        document.removeEventListener('mousemove', handleDragMove);
-        document.removeEventListener('mouseup', handleDragEnd);
-        document.removeEventListener('touchmove', handleDragMove);
-        document.removeEventListener('touchend', handleDragEnd);
-      };
+      window.addEventListener('mousemove', handleDragMove);
+      window.addEventListener('mouseup', handleDragEnd);
+      window.addEventListener('touchmove', handleDragMove);
+      window.addEventListener('touchend', handleDragEnd);
     }
+    return () => {
+      window.removeEventListener('mousemove', handleDragMove);
+      window.removeEventListener('mouseup', handleDragEnd);
+      window.removeEventListener('touchmove', handleDragMove);
+      window.removeEventListener('touchend', handleDragEnd);
+    };
   }, [isDragging]);
 
   return (
     <>
-      {/* Backdrop overlay for expanded state - MOBILE ONLY */}
-      {cardHeight > 40 && window.innerWidth < 1024 && (
-        <div 
-          className="fixed inset-0 bg-black/20 z-40 lg:hidden"
-          onClick={() => setCardHeight(40)}
-        />
-      )}
-
-      {/* Card */}
       <div 
         ref={cardRef}
-        className={`${
-          buildingDatas ? "fixed inset-x-0 bottom-0 m-2 lg:m-0 lg:absolute lg:left-8 lg:top-20 z-[50]" : "hidden"
-        } z-[99] flex flex-col rounded-2xl border border-white/20 
-        lg:w-[400px] 2xl:w-[450px] w-auto
-        bg-black/80 backdrop-blur-md shadow-2xl pointer-events-auto
-        transform transition-all duration-300 ease-out
-        ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'select-none' : ''}`} // Disable text selection during drag only when above threshold
+        className={`${buildingDatas ? "fixed inset-x-0 bottom-0 m-0 lg:absolute lg:left-8 lg:top-20" : "hidden"} 
+        z-[50] flex flex-col rounded-t-[2.5rem] lg:rounded-[2.5rem] border border-white/10 
+        lg:w-[410px] 2xl:w-[450px] w-auto bg-[#0f0f10] shadow-2xl overflow-hidden
+        transform transition-all duration-300 ease-out pointer-events-auto`}
         style={{
-          // On desktop (lg and above), use fixed height, on mobile use dynamic height
-          height: window.innerWidth >= 1024 ? '85%' : `${cardHeight}vh`,
-          transition: isDragging ? 'none' : 'all 0.3s ease-out'
+          height: window.innerWidth >= 1024 ? '86%' : `${cardHeight}vh`,
+          transition: isDragging ? 'none' : 'height 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)'
         }}
       >
-        {/* Drag Handle - MOBILE ONLY */}
-        {window.innerWidth < 1024 && (
-          <div 
-            className={`absolute top-0 inset-x-0 flex justify-center items-center py-2 z-[200] cursor-grab active:cursor-grabbing
-                      ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'select-none' : ''}`}
-            onMouseDown={handleDragStart}
-            onTouchStart={handleDragStart}
-          >
-            <div className="w-12 h-1.5 bg-white/40 rounded-full"></div>
-          </div>
-        )}
-
-        {/* Close button */}
-        <button
-          onClick={CloseCard}
-          className="flex gap-2 items-center absolute right-5 top-3 
-                    bg-red-600 hover:bg-red-800 text-white lg:text-xl text-lg px-1 py-1
-                    lg:px-3 lg:py-3 rounded-full shadow-lg z-[300]"
-        >
-          <AiOutlineClose />
-        </button>
-
-        {/* Image - Only show when not minimized on MOBILE, always show on DESKTOP */}
-        {(window.innerWidth >= 1024 || cardHeight > MIN_HEIGHT) && (
-          <div className="relative w-full h-[40%] flex-shrink-0">
-            {/* Loading Skeleton */}
-            {imageLoading && (
-              <div className="absolute inset-0 flex items-center justify-center  bg-black/50 rounded-t-2xl">
-                <div className="flex flex-col items-center gap-2">
-                  <div className="w-8 h-8 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
-                  <p className="text-white/70 text-sm">Loading image...</p>
-                </div>
-              </div>
-            )}
-            
-            {/* Error State */}
-            {imageError && (
-              <div className="absolute inset-0 flex items-center justify-center bg-gray-800 rounded-t-2xl">
-                <div className="flex flex-col items-center gap-2 text-white/70">
-                  <Building2 size={32} />
-                  <p className="text-sm">Failed to load image</p>
-                  <button 
-                    onClick={() => {
-                      setImageLoading(true);
-                      setImageError(false);
-                    }}
-                    className="text-xs bg-white/20 px-3 py-1 rounded-lg hover:bg-white/30 transition"
-                  >
-                    Retry
-                  </button>
-                </div>
-              </div>
-            )}
-            
-            {/* Actual Image */}
-            <img
-              className={`w-full h-full object-cover rounded-t-2xl ${imageLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
-              src={buildingDatas?.img}
-              alt={query.building || "Building Image"}
-              onLoad={handleImageLoad}
-              onError={handleImageError}
-              loading="lazy"
-            />
-          </div>
-        )}
-
-        {/* Scrollable Content */}
-        <div className={`flex-1 overflow-y-auto ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'pointer-events-none' : ''}`}>
-          {/* Building Info Section - Always show on DESKTOP, conditional on MOBILE */}
-          {(window.innerWidth >= 1024 || cardHeight > MIN_HEIGHT) && (
-            <div className="p-5 flex flex-col gap-3 text-white">
-              <p className="text-2xl lg:text-3xl font-bold uppercase">
-                {query.building}
-              </p>
-              <p className="font-normal text-sm lg:text-lg">
-                No. of Floors: {buildingDatas?.totalFloors || "No Data Available."}
-              </p>
-
-              {/* View Building & Directions buttons */}
-              <div className="flex flex-row gap-4">
-                <button
-                  className="mt-2 flex gap-3 items-center 
-                             bg-red-600/80 hover:bg-red-600/40 
-                             text-white font-semibold px-4 py-1 lg:px-4 lg:py-2 text-xs lg:text-base 
-                             rounded-xl shadow-md transition duration-200 w-fit 
-                             backdrop-blur-md border border-white/20"
-                  onClick={() => setPath(query.building)}
-                >
-                  <Signpost /> Get Directions
-                </button>
-              </div>
+        {/* Header/Image Section */}
+        <div className="relative w-full h-[52%] flex-shrink-0 bg-black">
+          {window.innerWidth < 1024 && (
+            <div 
+              className="absolute top-0 inset-x-0 flex justify-center py-3 z-[301] cursor-grab active:cursor-grabbing"
+              onMouseDown={handleDragStart}
+              onTouchStart={handleDragStart}
+            >
+              <div className="w-10 h-1 bg-white/10 backdrop-blur-md rounded-full"></div>
             </div>
           )}
 
-          {/* Floor selection - Always show on DESKTOP, conditional on MOBILE */}
+          <button
+            onClick={CloseCard}
+            className="absolute right-4 top-4 z-[301] p-2 bg-white/5 hover:bg-red-500 text-white rounded-full backdrop-blur-xl border border-white/10 transition-all"
+          >
+            <AiOutlineClose size={18} />
+          </button>
+
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f10] via-transparent to-black/30 z-10" />
+
+          <div className="absolute bottom-6 left-6 z-20 text-white pr-4">
+            <h2 className="text-2xl lg:text-3xl font-bold tracking-tight drop-shadow-md">
+              {query.building}
+            </h2>
+            <div className="flex items-center gap-2 mt-2">
+              <span className="bg-red-500/20 text-red-400 text-[10px] font-bold px-3 py-1 rounded-full border border-red-500/30 uppercase tracking-widest backdrop-blur-md">
+                {buildingDatas?.totalFloors || "0"} Floors
+              </span>
+            </div>
+          </div>
+
+          <img
+            className={`w-full h-full object-cover transition-opacity duration-700 ${imageLoading ? 'opacity-0' : 'opacity-100'}`}
+            src={buildingDatas?.img}
+            alt={query.building}
+            onLoad={() => setImageLoading(false)}
+            onError={() => setImageError(true)}
+          />
+        </div>
+
+        {/* Scrollable Content */}
+        <div className={`flex-1 overflow-y-auto ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'pointer-events-none' : ''} custom-scrollbar flex flex-col`}>
+          
+          {/* Floor Selection - Color Matched Tabs */}
           {rooms && (window.innerWidth >= 1024 || cardHeight > 50) && (
             <div className="mt-4 w-full">
-              <label className="block px-6 lg:text-sm text-xs mb-2 text-gray-300">
+              <label className="block px-6 lg:text-sm text-xs mb-2 text-white/30 uppercase tracking-widest font-bold">
                 Select Floor:
               </label>
               <div className="flex flex-wrap items-center">
                 {Object.keys(rooms).map((floor) => (
                   <button 
                     key={floor} 
-                    onClick={() => setSelectedFloor(floor)} 
+                    onClick={() => {
+                        setSelectedFloor(floor);
+                        setSearchQuery("");
+                    }} 
+                    // Matches the room list bg (bg-white/[0.04]) when selected
                     className={`flex-1 text-xs lg:text-base rounded-t-xl text-white font-bold transition-all w-full duration-200 
-                      ${selectedFloor === floor ? 'bg-white/20' : ''}
-                      py-2`}
+                      ${selectedFloor === floor ? 'bg-white/15 ' : 'text-white/40 hover:text-white hover:bg-white/[0.02]'}
+                      py-3`}
                   >
                     Floor {floor}
                   </button>
@@ -277,51 +159,64 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
             </div>
           )}
 
-          {/* Rooms List - Always show on DESKTOP, conditional on MOBILE */}
-          {(window.innerWidth >= 1024 || cardHeight > 60) && (
-            <div className="pt-10 pb-7 bg-white/20 px-4 space-y-3">
-              {rooms && rooms[selectedFloor] ? (
-                rooms[selectedFloor].map((room, index) => (
-                  <div 
-                    onClick={() => {
-                      if (isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD) return; // Prevent click during drag only when above threshold
-                      setQuery((prev) => ({
-                        ...prev,
-                        floor: selectedFloor,
-                        room: {
-                          name: room.name,
-                          code: room.code || "",
-                          img: room.img || "",
-                          description: room.description || "",
-                          floor: selectedFloor,
-                        },
-                      }));
-                      setRoomSearched(true);
-                      setBldClicked(false);
-                    }}
-                    key={index}
-                    className={`p-4 cursor-pointer bg-white/10 rounded-lg hover:bg-white/20 transition shadow-md
-                              ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'pointer-events-none' : ''}`}
-                  >
-                    <p className="font-bold text-white text-sm lg:text-lg">{room.name}</p>
-                    <p className="lg:text-sm text-xs text-gray-200">{room.description}</p>
-                  </div>
-                ))
-              ) : (
-                <p className="text-gray-400 italic">No rooms available.</p>
-              )}
-            </div>
-          )}
+          {/* Wrapper for List & Search with matching background */}
+          <div className="flex-1 bg-white/15 flex flex-col border-t border-white/[0.05]">
+            {/* Search Bar */}
 
-          {/* Minimized State Content - MOBILE ONLY */}
+            {/* Rooms List */}
+            {(window.innerWidth >= 1024 || cardHeight > 60) && (
+                <div className="px-6 py-6 space-y-3">
+                <h3 className="text-[10px] font-bold text-white/30 uppercase tracking-[0.25em] mb-4">
+                    Rooms & Units
+                </h3>
+                {filteredRooms.length > 0 ? (
+                    filteredRooms.map((room, index) => (
+                    <div 
+                        key={index}
+                        onClick={() => {
+                        if (isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD) return;
+                        setQuery((prev) => ({
+                            ...prev,
+                            floor: selectedFloor,
+                            room: { ...room, floor: selectedFloor },
+                        }));
+                        setRoomSearched(true);
+                        setBldClicked(false);
+                        }}
+                        className="group flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.10] hover:bg-white/[0.08] hover:border-white/20 transition-all cursor-pointer active:scale-[0.98]"
+                    >
+                        <div className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/40 group-hover:text-white transition-colors">
+                        <Building2 size={18} />
+                        </div>
+                        <div className="flex-1">
+                        <p className="font-semibold text-white text-sm tracking-wide">{room.name}</p>
+                        <p className="text-[11px] text-white/70 line-clamp-1 font-light italic">"{room.description}"</p>
+                        </div>
+                    </div>
+                    ))
+                ) : (
+                    <div className="text-center py-10">
+                        <p className="text-white/20 italic text-sm">No rooms found matching "{searchQuery}"</p>
+                    </div>
+                )}
+                </div>
+            )}
+          </div>
+
+          {/* Minimized State */}
           {window.innerWidth < 1024 && cardHeight <= MIN_HEIGHT && (
-            <div className="p-4 text-white">
-              <p className="text-lg font-bold uppercase truncate">
-                {query.building}
-              </p>
-              <p className="text-sm text-gray-300 truncate">
-                {buildingDatas?.totalFloors ? `${buildingDatas.totalFloors} floors` : 'No data'}
-              </p>
+            <div className="px-6 py-5 flex justify-between items-center text-white bg-[#0f0f10]">
+              <div>
+                <p className="text-lg font-bold tracking-tight uppercase">
+                  {query.building}
+                </p>
+                <p className="text-[10px] text-white/40 font-bold tracking-widest uppercase">
+                  {buildingDatas?.totalFloors || "0"} FLOORS • INFO
+                </p>
+              </div>
+              <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+                 <ChevronUp size={20} className="text-white/40" />
+              </div>
             </div>
           )}
         </div>

@@ -13,7 +13,7 @@ function SearchBar({ searchTerm, suggestions, keyboardClicked,      // Receive f
       {/* 🔎 Main Search Bar */}
       <div
         className={`z-50 w-full lg:w-[30%] 2xl:w-[450px] px-4 lg:px-5 flex flex-row items-center justify-between
-                    border border-white/20 bg-black/70 backdrop-blur-md shadow-lg pointer-events-auto
+                    border border-white/20 bg-black/80 backdrop-blur-md shadow-lg pointer-events-auto
                     ${suggestions.length > 0 || (searchTerm && !(searchTerm in buildingData))
                       ? "rounded-t-2xl rounded-b-none"
                       : "rounded-full"}`}

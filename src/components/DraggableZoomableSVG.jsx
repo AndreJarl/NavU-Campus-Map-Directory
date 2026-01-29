@@ -4,6 +4,7 @@ import { buildingCoordinates } from '../hooks/BuildingCoordinates';
 import { useFloorQuery } from '../context/FloorContext';
 import { useZoomBuilding } from '../hooks/ZoomBuildingbyName';
 import {useZoomController} from "../hooks/ZoomToCoordinates"
+import { Target, Accessibility } from 'lucide-react';
 
 const DraggableZoomableSVG = ({onDragStart, OpenCard, setNavigating, isNavigating}) => {
  const {currentFloor} = useFloorQuery();
@@ -481,36 +482,38 @@ const handleReset = useCallback(() => {
   className="w-full h-screen bg-white overflow-hidden active:cursor-grabbing"
 >
 
-  <div className="absolute top-4 right-4 lg:top-auto items-center justify-center lg:bottom-16 lg:right-2 z-10 flex flex-col lg:flex-col gap-2">  
+<div className="absolute bottom-20 right-6 z-10 flex flex-col gap-3">
+  {/* Zoom Group - Combined Pill Shape */}
+  <div className="flex flex-col bg-[#2D2D31] rounded-2xl shadow-xl border border-white/5 overflow-hidden">
     <button
       onClick={handleZoomIn}
-      className="w-7 h-7 lg:w-11 lg:h-11  border-white/20 bg-black/70 backdrop-blur-md shadow-lg rounded-2xl flex items-center justify-center hover:bg-black/80 active:bg-black/90 transition-colors"
+      className="w-12 h-12 flex items-center justify-center hover:bg-white/10 active:bg-white/5 transition-colors"
       title="Zoom In"
     >
-      <span className="text-base lg:text-2xl font-semibold text-white">+</span>
+      <span className="text-2xl font-light text-white/90">+</span>
     </button>
+    
+    {/* Subtle divider line */}
+    <div className="h-[1px] bg-white/10 mx-3" />
+
     <button
       onClick={handleZoomOut}
-      className="w-7 h-7 lg:w-11 lg:h-11  border-white/20 bg-black/70 backdrop-blur-md shadow-lg rounded-2xl flex items-center justify-center hover:bg-black/80 active:bg-black/90 transition-colors"
+      className="w-12 h-12 flex items-center justify-center hover:bg-white/10 active:bg-white/5 transition-colors"
       title="Zoom Out"
     >
-      <span className="text-base lg:text-2xl font-semibold text-white">−</span>
+      <span className="text-2xl font-light text-white/90">−</span>
     </button>
-    <button
-      onClick={handleReset}
-      className="w-7 h-7 lg:w-11 lg:h-11  border-white/20 bg-black/70 backdrop-blur-md shadow-lg rounded-2xl flex items-center justify-center hover:bg-black/80 active:bg-black/90 transition-colors"
-      title="Reset View"
-    >
-      <span className="text-base lg:text-xl text-white">⟲</span>
-    </button>
-    {/* <button
-      onClick={handleFullscreen}
-      className="w-7 h-7 lg:w-11 lg:h-11 bg-black/70 border border-gray-300 rounded-full shadow-md flex items-center justify-center hover:bg-black/80 active:bg-black/90 transition-colors"
-      title={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
-    >
-      <span className="text-base lg:text-2xl text-white">{isFullscreen ? "⛷" : "⛶"}</span>
-    </button> */}
   </div>
+
+  {/* Reset / Center View Button */}
+  <button
+    onClick={handleReset}
+    className="w-12 h-12 bg-[#2D2D31] border border-white/5 rounded-2xl shadow-xl flex items-center justify-center hover:bg-black/60 transition-colors"
+    title="Reset View"
+  >
+    <Target size={20} className="text-white/70" strokeWidth={2.5} />
+  </button>
+</div>
    
   <Floor1 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
 

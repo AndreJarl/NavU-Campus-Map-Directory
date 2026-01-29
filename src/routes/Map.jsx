@@ -18,6 +18,8 @@ import { useLocation } from "react-router-dom";
 import Keyboard from '../components/Keyboard';
 import Floors from '../components/Floors';
 import SurveyForm from '../components/SurveyForm'
+import { Navigation } from 'lucide-react';
+
 
 function Map() {
 
@@ -232,10 +234,23 @@ function Map() {
 
       
       
-          <button  onClick={() => setClicked(!clicked)}
-           className="absolute rounded-full bg-transparent lg:bg-black/70 top-32 right-3 lg:top-auto items-center justify-center lg:bottom-4 lg:right-1 z-10 flex flex-col lg:flex-col gap-2">  
-                <img loading='lazy'  className="w-[100%] h-8 lg:w-[100%] lg:h-11 px-2 lg:px-3 py-1 lg:border  border-white/20 bg-black/70 backdrop-blur-md shadow-lg rounded-2xl flex items-center justify-center hover:bg-black/80  transition-colors" src={person} alt="" srcset="" />
-              </button>       
+    <button
+  onClick={() => setClicked(!clicked)}
+  className="absolute bottom-4 right-6 z-10 w-12 h-12 lg:w-14 lg:h-14 
+             bg-red-600 rounded-2xl flex items-center justify-center 
+             border-2 border-red-400/40 shadow-[0_0_20px_#dc2626]
+             hover:bg-red-500 hover:shadow-[0_0_35px_#ef4444] 
+             hover:scale-110 transition-all duration-300 active:scale-95 group"
+  title="Street View"
+>
+  <Navigation 
+    size={28} 
+    className="text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]
+               transition-all duration-700 ease-in-out
+               group-hover:rotate-[360deg] group-hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)]" 
+    strokeWidth={2.5}
+  />
+</button>
               
                   <PanoramaViewer clicked={clicked} setClicked={setClicked} />
         

@@ -1,36 +1,33 @@
 import { AiOutlineClose } from "react-icons/ai";
 import { useQuery } from "../context/QueryContext";
-import { CornerUpRight, ScanQrCode, ChevronUp, ChevronDown, Minus, Ellipsis } from "lucide-react";
+import { CornerUpRight, ScanQrCode, MapPin } from "lucide-react";
 import { usePath } from "../context/PathContext";
 import { useState, useRef, useEffect } from "react";
-import qr from "../assets/qr.png";
 import { useScene } from "../context/SceneContext";
 import GenerateQR from "./GenerateQR";
 
-function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setDisable, disable, setBldClicked }) {
+function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) {
   const { query } = useQuery();
-  const { room, floor } = query; 
+  const { room, floor } = query;
   const { setPath } = usePath();
   const { setCurrentScene } = useScene();
   const [showQRPopup, setShowQRPopup] = useState(false);
-  
+
   // Drag state
-  const [cardHeight, setCardHeight] = useState(40); // percentage of screen height
+  const [cardHeight, setCardHeight] = useState(40);
   const [isDragging, setIsDragging] = useState(false);
   const [startY, setStartY] = useState(0);
   const [startHeight, setStartHeight] = useState(0);
-  
+
   // Image loading states
   const [imageLoading, setImageLoading] = useState(true);
   const [imageError, setImageError] = useState(false);
 
-  // Height limits
-  const MIN_HEIGHT = 20;
-  const MAX_HEIGHT = 40;
-  const SCROLL_DISABLE_THRESHOLD = 50; // Disable scroll when card is 50% or more
+  const MIN_HEIGHT = 22;
+  const MAX_HEIGHT = 85;
+  const SCROLL_DISABLE_THRESHOLD = 50;
 
   const handleDirections = (roomName) => {
-    setCardHeight(40); // Reset to default height
     setPath(roomName);
   };
 
@@ -40,276 +37,160 @@ function RoomInfo({ setShowPopup, showPopup, roomSearched, setRoomSearched, setD
     setPath("");
     setDisable(false);
     setCurrentScene("Main Gate");
-      // remove param from URL so it doesn't auto-open on reload
-      const url = new URL(window.location);
-      url.searchParams.delete("name");
-      window.history.replaceState({}, "", url);
+    const url = new URL(window.location);
+    url.searchParams.delete("name");
+    window.history.replaceState({}, "", url);
   };
 
-  // Handle image load
-  const handleImageLoad = () => {
-    setImageLoading(false);
-    setImageError(false);
-  };
-
-  // Handle image error
-  const handleImageError = () => {
-    setImageLoading(false);
-    setImageError(true);
-  };
-
-  // Reset image state when room changes
-  useEffect(() => {
-    setImageLoading(true);
-    setImageError(false);
-  }, [room?.img]);
-
-  // Handle touch/mouse events for dragging - MOBILE ONLY
   const handleDragStart = (e) => {
-    // Only allow dragging on mobile (when lg breakpoint is not active)
     if (window.innerWidth >= 1024) return;
-    
     setIsDragging(true);
     const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
     setStartY(clientY);
     setStartHeight(cardHeight);
-    
-    // Prevent default to avoid text selection
-    e.preventDefault();
   };
 
   const handleDragMove = (e) => {
-    // Only allow dragging on mobile
-    if (window.innerWidth >= 1024) return;
-    if (!isDragging) return;
-
-    const clientY = e.type.includes('touch') ? 
-      (e.touches ? e.touches[0].clientY : e.changedTouches[0].clientY) : 
-      e.clientY;
-    
+    if (window.innerWidth >= 1024 || !isDragging) return;
+    const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
     const deltaY = startY - clientY;
     const newHeight = Math.min(Math.max(startHeight + (deltaY / window.innerHeight) * 100, MIN_HEIGHT), MAX_HEIGHT);
-    
     setCardHeight(newHeight);
   };
 
-  const handleDragEnd = () => {
-    // Only allow dragging on mobile
-    if (window.innerWidth >= 1024) return;
-    if (!isDragging) return;
-    setIsDragging(false);
-  };
-
-  // Disable scroll ONLY when actively dragging AND card height is 50% or more - MOBILE ONLY
   useEffect(() => {
-    if (window.innerWidth >= 1024) return;
-
-    const shouldDisableScroll = isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD;
-
-    if (shouldDisableScroll) {
-      // Disable scroll only during active drag above threshold
-      document.body.style.overflow = 'hidden';
-      document.body.style.touchAction = 'none';
-      document.body.style.userSelect = 'none';
-    } else {
-      // Always enable scroll when not dragging or below threshold
-      document.body.style.overflow = 'unset';
-      document.body.style.touchAction = 'unset';
-      document.body.style.userSelect = 'unset';
-    }
-
-    // Cleanup on unmount
-    return () => {
-      document.body.style.overflow = 'unset';
-      document.body.style.touchAction = 'unset';
-      document.body.style.userSelect = 'unset';
-    };
-  }, [isDragging, cardHeight]);
-
-  // Add event listeners for dragging - MOBILE ONLY
-  useEffect(() => {
-    // Only set up drag events on mobile
-    if (window.innerWidth >= 1024) return;
-    
+    const handleDragEnd = () => setIsDragging(false);
     if (isDragging) {
-      document.addEventListener('mousemove', handleDragMove);
-      document.addEventListener('mouseup', handleDragEnd);
-      document.addEventListener('touchmove', handleDragMove);
-      document.addEventListener('touchend', handleDragEnd);
-      
-      return () => {
-        document.removeEventListener('mousemove', handleDragMove);
-        document.removeEventListener('mouseup', handleDragEnd);
-        document.removeEventListener('touchmove', handleDragMove);
-        document.removeEventListener('touchend', handleDragEnd);
-      };
+      window.addEventListener('mousemove', handleDragMove);
+      window.addEventListener('mouseup', handleDragEnd);
+      window.addEventListener('touchmove', handleDragMove);
+      window.addEventListener('touchend', handleDragEnd);
     }
+    return () => {
+      window.removeEventListener('mousemove', handleDragMove);
+      window.removeEventListener('mouseup', handleDragEnd);
+      window.removeEventListener('touchmove', handleDragMove);
+      window.removeEventListener('touchend', handleDragEnd);
+    };
   }, [isDragging]);
 
   return (
     <>
-      {/* Backdrop overlay for expanded state - MOBILE ONLY */}
-      {cardHeight > 40 && window.innerWidth < 1024 && (
-        <div 
-          className="fixed inset-0 bg-black/20 z-40 lg:hidden"
-          onClick={() => setCardHeight(40)}
-        />
-      )}
-
       <div
-        className={`${roomSearched ? "fixed inset-x-0 bottom-0 m-2 lg:h-[85%] lg:m-0 lg:absolute lg:left-8 lg:top-20 z-[50]" : "hidden"}
-        w-auto lg:w-[420px] my-4 rounded-3xl backdrop-blur-lg bg-black/70  border border-white/20 shadow-md p-2
-        transform transition-all duration-300 ease-out pointer-events-auto flex flex-col
-        ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'select-none' : ''}`} // Disable text selection during drag only when above threshold
+        className={`${roomSearched ? "fixed inset-x-0 bottom-0 m-0 lg:absolute lg:left-8 lg:top-20 z-[50]" : "hidden"}
+        w-auto lg:w-[400px] rounded-t-[2.5rem] lg:rounded-[1.5rem] bg-black shadow-2xl overflow-hidden
+        transform transition-all duration-300 ease-out flex flex-col`}
         style={{
-          // On desktop (lg and above), use fixed height, on mobile use dynamic height
           height: window.innerWidth >= 1024 ? '85%' : `${cardHeight}vh`,
-          transition: isDragging ? 'none' : 'all 0.3s ease-out'
+          transition: isDragging ? 'none' : 'height 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)'
         }}
       >
-        {/* Drag Handle - MOBILE ONLY */}
-        {window.innerWidth < 1024 && (
-          <div 
-            className={`absolute top-0 inset-x-0 flex justify-center items-center py-2 z-[200] cursor-grab active:cursor-grabbing
-                      ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'select-none' : ''}`}
-            onMouseDown={handleDragStart}
-            onTouchStart={handleDragStart}
-          >
-            <div className="w-12 h-1.5 bg-white/40 rounded-full"></div>
-          </div>
-        )}
+        {/* Header/Image Section - HEIGHT INCREASED TO 45% */}
+        <div className="relative w-full h-[50%] flex-shrink-0 bg-black/20">
+          {/* Drag Handle - Mobile */}
+          {window.innerWidth < 1024 && (
+            <div 
+              className="absolute top-0 inset-x-0 flex justify-center py-3 z-[301] cursor-grab active:cursor-grabbing"
+              onMouseDown={handleDragStart}
+              onTouchStart={handleDragStart}
+            >
+              <div className="w-10 h-1 bg-white/20 rounded-full"></div>
+            </div>
+          )}
 
-        <div className="p-4 pt-3 top-0 absolute right-0 flex justify-between items-center z-[300]">
+          {/* Close Button */}
           <button
             onClick={closeBtn}
-            className="rounded-full bg-red-500 hover:bg-red-700 font-bold lg:text-xl text-lg flex gap-2 items-center text-white lg:px-2 lg:py-2 px-1 py-1"
+            className="absolute right-4 top-4 z-[301] p-2 bg-black/40 hover:bg-red-500 text-white rounded-full backdrop-blur-md transition-all active:scale-90"
           >
-            <AiOutlineClose />
+            <AiOutlineClose size={18} />
           </button>
-        </div>
 
-        {/* Scrollable Content - Only disable interactions during active drag above threshold */}
-        <div className={`flex-1 overflow-y-auto p-4 flex flex-col gap-3 px-5 mt-2 text-white ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'pointer-events-none' : ''}`}>
-          {/* Room Image - Only show when not minimized on MOBILE, always show on DESKTOP */}
-          {(window.innerWidth >= 1024 || cardHeight > MIN_HEIGHT) && (
-            <>
-              <h2 className="text-xl md:text-lg lg:text-3xl font-semibold drop-shadow-lg">
-                {room?.name}
-              </h2>
-              <h3 className="mb-2 font-medium text-red-400 text-base lg:text-base">
+          {/* Scrim Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-black/10 z-10" />
+
+          {/* Text Over Image */}
+          <div className="absolute bottom-6 left-6 z-20 text-white pr-4">
+            <h2 className="text-2xl lg:text-3xl font-bold tracking-tight leading-tight">
+              {room?.name}
+            </h2>
+            <div className="flex items-center gap-3 mt-2">
+              <span className="bg-red-900/40 text-red-400 text-[10px] font-bold px-3 py-1 rounded-full border border-red-500/30 uppercase tracking-widest">
                 Floor {floor}
-              </h3>
-              
-              <div className="relative">
-                {/* Loading Skeleton */}
-                {imageLoading && (
-                  <div className="w-full lg:h-64 h-48 bg-black/60  rounded-lg flex items-center justify-center">
-                    <div className="flex flex-col items-center gap-2">
-                      <div className="w-8 h-8 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
-                      <p className="text-white/70 text-sm">Loading image...</p>
-                    </div>
-                  </div>
-                )}
-                
-                {/* Error State */}
-                {imageError && (
-                  <div className="w-full lg:h-64 h-48 bg-black/60 rounded-lg flex items-center justify-center">
-                    <div className="flex flex-col items-center gap-2 text-white/70">
-                      <ScanQrCode size={32} />
-                      <p className="text-sm">Failed to load image</p>
-                      <button 
-                        onClick={() => {
-                          setImageLoading(true);
-                          setImageError(false);
-                        }}
-                        className="text-xs bg-white/20 px-3 py-1 rounded-lg hover:bg-white/30 transition"
-                      >
-                        Retry
-                      </button>
-                    </div>
-                  </div>
-                )}
-                
-                {/* Actual Image */}
-                <img 
-                  className={`lg:w-[100%] w-[100%] md:w-[100%] lg:h-[100%] rounded-lg shadow-md ${imageLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
-                  src={room.img} 
-                  alt="" 
-                  onLoad={handleImageLoad}
-                  onError={handleImageError}
-                  loading="lazy"
-                />
-              </div>
-            </>
-          )}
+              </span>
+              <span className="text-white/60 text-xs flex items-center gap-1 font-medium">
+                <div className="w-1 h-1 bg-white/30 rounded-full" />
+                {room?.code}
+              </span>
+            </div>
+          </div>
 
-          {/* Room details - Always show on DESKTOP, conditional on MOBILE */}
-          {(window.innerWidth >= 1024 || cardHeight > 30) && (
-            <>
-              <h3 className="font-medium text-gray-200 lg:text-xl">
-                {room.code}
-              </h3>
-              <p className="mb-2 text-gray-300 text-sm lg:text-base">{room.description}</p>
-            </>
-          )}
+          {/* Image Component */}
+          <img 
+            className={`w-full h-full object-cover transition-opacity duration-500 ${imageLoading ? 'opacity-0' : 'opacity-100'}`}
+            src={room?.img} 
+            alt={room?.name}
+            onLoad={() => setImageLoading(false)}
+            onError={() => setImageError(true)}
+          />
 
-          {/* Minimized State Content - MOBILE ONLY */}
-          {window.innerWidth < 1024 && cardHeight <= MIN_HEIGHT && (
-            <div className="text-white">
-              <p className="text-lg font-bold uppercase truncate">
-                {room?.name}
-              </p>
-              <p className="text-sm text-gray-300 truncate">
-                Floor {floor} • {room.code}
-              </p>
+          {imageLoading && (
+            <div className="absolute inset-0 flex items-center justify-center bg-[#1B2533]">
+              <div className="w-6 h-6 border-2 border-white/20 border-t-white rounded-full animate-spin" />
             </div>
           )}
         </div>
 
-        {/* Action Buttons - Always show on DESKTOP, conditional on MOBILE - Only disable interactions during active drag above threshold */}
-        {(window.innerWidth >= 1024 || cardHeight > 25) && (
-          <div className={`border-t flex lg:flex-row text-center pb-4 lg:mb-0 justify-center border-white/20 pt-4 lg:text-base text-xs gap-4 ${isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD ? 'pointer-events-none' : ''}`}>
+        {/* Scrollable Body */}
+        <div className="flex-1 overflow-y-auto px-6 mt-7  custom-scrollbar">
+          {/* About Section */}
+          <div className="mb-8">
+            <h3 className="text-[12px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">
+              Description
+            </h3>
+            <p className="text-gray-300 leading-relaxed text-[13px] font-light italic">
+              "{room?.description || "No description available for this room."}"
+            </p>
+          </div>
+
+          {/* Action Buttons - COLORS REVERTED */}
+          <div className="flex flex-col gap-3 pt-5 pb-5">
             <button
-              className="lg:py-3 lg:px-5 py-2 px-4 bg-red-500 flex text-[11px] lg:text-base gap-3 items-center text-center text-white rounded-3xl justify-center hover:bg-red-600 transition"
-              onClick={() => {
-                if (isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD) return; // Prevent click during drag only when above threshold
-                handleDirections(room.name);
-              }}
+              className="w-full flex items-center justify-center gap-3 bg-red-600 hover:bg-red-600 text-white font-bold py-3 rounded-2xl transition-all active:scale-[0.98] shadow-lg shadow-red-500/20"
+              onClick={() => handleDirections(room?.name)}
             >
               <CornerUpRight size={20}/> Get Directions
             </button>
             <button
-              className="lg:py-3 lg:px-5 py-2 px-4 bg-white/20 text-[11px] lg:text-base flex gap-3 text-center items-center text-white rounded-3xl justify-center hover:bg-white/10 transition"
-              onClick={() => {
-                if (isDragging && cardHeight >= SCROLL_DISABLE_THRESHOLD) return; // Prevent click during drag only when above threshold
-                setShowQRPopup(true);
-              }}
+              className="w-full flex items-center justify-center gap-3 bg-white/10 text-white border border-white/10 font-bold py-3 rounded-2xl hover:bg-white/20 transition-all active:scale-[0.98]"
+              onClick={() => setShowQRPopup(true)}
             >
               <ScanQrCode size={20} /> Generate QR
             </button>
           </div>
-        )}
+        </div>
 
+        {/* QR Popup Modal */}
         {showQRPopup && (
-          <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-[9999]">
-            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 text-center text-white shadow-lg w-[90%] max-w-md relative">
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-[9999] p-4">
+            <div className="bg-[#1B2533] border border-white/10 rounded-[2rem] p-8 text-center text-white shadow-2xl max-w-sm w-full relative">
               <button
                 onClick={() => setShowQRPopup(false)}
-                className="absolute top-3 right-3 bg-red-500 hover:bg-red-700 text-white rounded-full p-2"
+                className="absolute top-4 right-4 p-2 bg-white/5 hover:bg-red-500 rounded-full transition-colors"
               >
-                <AiOutlineClose />
+                <AiOutlineClose size={18} />
               </button>
 
-              <h2 className="lg:text-2xl font-semibold mb-4">Room QR Code</h2>
-              <div className="flex justify-center">
-                <div className="lg:w-48 lg:h-48 w-32 h-32 bg-white rounded-lg flex items-center justify-center text-black">
-                  <GenerateQR text={`https://nav-u-campus-map-directory.vercel.app/?name=${room?.name}`} />
-
-                </div>
+              <h2 className="text-xl font-bold mb-2">Location QR</h2>
+              <p className="text-gray-400 text-xs mb-6">Scan to share this location</p>
+              
+              <div className="bg-white p-4 rounded-3xl inline-block shadow-inner">
+                <GenerateQR text={`https://nav-u-campus-map-directory.vercel.app/?name=${encodeURIComponent(room?.name)}`} />
               </div>
-              <p className="mt-4 text-gray-300 text-xs lg:text-sm">
-                Scan this code to view more info about <b>{room?.name}</b>
-              </p>
+
+              <div className="mt-8 text-sm font-semibold text-white/80 bg-white/5 py-3 px-4 rounded-xl border border-white/5">
+                {room?.name}
+              </div>
             </div>
           </div>
         )}

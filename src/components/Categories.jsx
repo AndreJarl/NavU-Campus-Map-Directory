@@ -13,7 +13,7 @@ function Categories() {
     { id: "Admin", label: "Admin", icon: "👨🏻‍💻" },
     { id: "Laboratory", label: "Laboratory", icon: "🔬" },
     { id: "Food", label: "Food", icon: "🍴" },
-    { id: "Faculty", label: "Faculty", icon: "🧑‍🏫" },
+    { id: "Faculty", label: "Faculty", icon: "🧑" },
   ];
     
 const handleClick = (cat) => {
@@ -59,7 +59,7 @@ const handleClick = (cat) => {
           key={cat.id}
           onClick={() => handleClick(cat.label)}
           className={`flex items-center gap-1 px-4 py-1 rounded-full flex-shrink-0 cursor-pointer pointer-events-auto ${
-            category && activeCategory === cat.label ? "bg-red-700/60" : "bg-black/70"
+            category && activeCategory === cat.label ? "bg-red-700/60" : "bg-black/80"
           } backdrop-blur-md border border-white/10 shadow-lg transition select-none`}
         >
           <span className="text-sm pointer-events-none">{cat.icon}</span>

@@ -25,12 +25,19 @@ function PanoramaViewer({clicked, setClicked}) {
         />
 
         {/* Exit Fullscreen Button */}
-        <button 
-          onClick={() => setClicked(false)}
-          className="absolute bottom-2 left-2 bg-black/70 text-white text-xs lg:text-sm px-3 py-1 rounded-md shadow hover:bg-black/90 transition-colors pointer-events-auto z-50"
-        >
-          Exit Street View
-        </button>
+     <button 
+  onClick={() => setClicked(false)}
+  className="absolute bottom-6 left-6 flex items-center gap-2 px-5 py-2.5 
+             bg-zinc-900/80 backdrop-blur-lg border border-white/10 
+             text-zinc-100 text-sm font-semibold rounded-xl
+             shadow-[0_8px_30px_rgb(0,0,0,0.5)] 
+             hover:bg-zinc-800 hover:border-white/20 hover:-translate-y-0.5
+             active:scale-95 transition-all duration-300 
+             pointer-events-auto z-50"
+>
+  <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+  Exit Street View
+</button>
       </div>
     </div>
   );

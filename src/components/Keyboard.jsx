@@ -38,7 +38,7 @@ const Keyboard = ({ query, setQuery }) => {
       className="hidden lg:flex fixed bottom-10 left-1/2 -translate-x-1/2 z-50 p-4 touch-none select-none flex-col items-center"
     >
       {/* Dark Keyboard Body */}
-      <div className="p-3 backdrop-blur-xl bg-black/70 rounded-[2rem] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+      <div className="p-3 backdrop-blur-xl bg-black/85 rounded-[2rem] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
         
         {/* Centered Drag Handle */}
         <div className='bg-white/40 w-16 h-1.5 rounded-full mb-4 mx-auto'></div>
