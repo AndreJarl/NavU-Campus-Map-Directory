@@ -482,7 +482,7 @@ const handleReset = useCallback(() => {
   className="w-full h-screen bg-white overflow-hidden active:cursor-grabbing"
 >
 
-<div className="absolute lg:bottom-20 top-5 right-6 z-10 flex flex-col gap-3">
+<div className="absolute lg:bottom-20  right-6 z-10 flex flex-col gap-3">
   {/* Zoom Group - Combined Pill Shape */}
   <div className="flex flex-col bg-[#2D2D31] rounded-2xl shadow-xl border border-white/5 overflow-hidden">
     <button

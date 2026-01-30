@@ -235,7 +235,7 @@ function Map() {
       
       
               <button
-            onClick={() => setClicked(!clicked)} className="absolute lg:bottom-4 top-48 right-6 z-10 w-12 h-12 lg:w-14 lg:h-14 
+            onClick={() => setClicked(!clicked)} className="absolute lg:bottom-4  right-6 z-10 w-12 h-12 lg:w-14 lg:h-14 
                       bg-red-600 rounded-2xl flex items-center justify-center 
                       border-2 border-red-400/40 shadow-[0_0_20px_#dc2626]
                       hover:bg-red-500 hover:shadow-[0_0_35px_#ef4444] 
