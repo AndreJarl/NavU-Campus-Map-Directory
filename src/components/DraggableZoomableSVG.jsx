@@ -5,6 +5,9 @@ import { useFloorQuery } from '../context/FloorContext';
 import { useZoomBuilding } from '../hooks/ZoomBuildingbyName';
 import {useZoomController} from "../hooks/ZoomToCoordinates"
 import { Target, Accessibility } from 'lucide-react';
+import Floor2 from '../svg/Floor2'
+import Floor3 from '../svg/Floor3';
+import Floor4 from '../svg/Floor4';
 
 const DraggableZoomableSVG = ({onDragStart, OpenCard, setNavigating, isNavigating}) => {
  const {currentFloor} = useFloorQuery();
@@ -515,8 +518,15 @@ const handleReset = useCallback(() => {
   </button>
 </div>
    
+{currentFloor === 1 ? (
   <Floor1 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
-
+) :  currentFloor === 2 ? (
+  <Floor2 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
+): currentFloor === 3 ? (
+  <Floor3 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
+) : currentFloor === 4 ? (
+  <Floor4 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
+) : null}
 </div>
   );
 };

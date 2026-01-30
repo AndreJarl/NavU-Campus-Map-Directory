@@ -269,7 +269,7 @@ rooms: {
   2: [
     { 
       code: " ", 
-      name: " ",
+      name: "FFF",
       description: " ",
       img: ""
     },
@@ -1024,19 +1024,19 @@ img: ""
                   },
                   {
                     code:"",
-                    name:"Kadasig Gym ",
+                    name:"Kadasig Gym",
                     description: "A gymnasium where students participate in sports, physical education classes, and school events, equipped with courts and seating areas. ",
                     img: ""
                   },
                   {
                     code:"",
-                    name:"Oval ",
+                    name:"Oval",
                     description: "A large outdoor field within the CTU campus used for athletics, physical education classes, training, and university events. It commonly features a running track and a spacious central area for sports and recreational activities. ",
                     img: ""
                   },
                   {
                     code:"",
-                    name:"Grandstand ",
+                    name:"Grandstand",
                     description: "A seating structure near sports fields where students and spectators can watch athletic events and other outdoor activities. ",
                     img: ""
 

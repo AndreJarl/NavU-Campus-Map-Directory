@@ -114,6 +114,10 @@ function Map() {
     const handleSuggestionClicked = (suggestion) => {
   console.log(`suggestion:`);
    console.log(suggestion);
+   
+if (suggestion.floor) {
+    setCurrentFloor(Number(suggestion.floor));
+  }
   setQuery(prev => ({
     ...prev,
     building: suggestion.building || prev.building,
@@ -124,6 +128,7 @@ function Map() {
       img: suggestion.room?.img || prev.room?.img,
       description: suggestion.room?.description || prev.room?.description,
     }
+
   }));
 
   // Reset all view states first

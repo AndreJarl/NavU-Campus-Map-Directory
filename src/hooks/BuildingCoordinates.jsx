@@ -10,6 +10,8 @@ export const buildingCoordinates ={
       "Electronic Laboratory": {x: 248.40435283418944 , y:589.143918065549 , zoom:15},
       "COE Room 1": {x: 246.3931796498319 , y:570.3326588062895 , zoom:15},
       "COE Room 2": {x: 242.84010702413372 , y:556.6457379370809 , zoom:15},
+
+
       //NEW ADMIN BUILDING
       "Accounting Office": {x: 119.16262500507557 , y:742.2964448297037 , zoom:15}, 
       "MIS Office": {x: 135.58720601066207 , y:739.609441959675 , zoom:15}, 
@@ -17,7 +19,9 @@ export const buildingCoordinates ={
       "Cashier": {x: 204.39776177235717 , y:742.4150212450296 , zoom:15},
       "BAC Office": {x: 222.96759417459168 , y:741.2394574893921 , zoom:15},
       "University Clinic": {x: 247.36982881146307 , y:741.1554886497037 , zoom:15}, 
-      "Power House": {x: 267.2134042304574 , y:742.498990084718 , zoom:15},     
+      "Power House": {x: 267.2134042304574 , y:742.498990084718 , zoom:15},  
+      
+      
       //EDUCATION BUILDING
       "Education Building" : {x:98.92186333708202, y:685.2400273912788, zoom: 10},
       "Education Laboratory 1" : {x:120.22143722740127, y:695.2911086343413, zoom: 15},
@@ -34,6 +38,7 @@ export const buildingCoordinates ={
 
 
       //COT BUILDING
+      "College of Technology/COT Building": {x: 133.27215374026395, y:457.4405872181686, zoom: 6.795},
       "Automation Laboratory": {x:153.59882955343988, y:492.7390435482114, zoom: 15},
       "GAD Office": {x:134.96195804506, y:499.362588179518, zoom: 15},
       "NSTP Office": {x:124.83905301712704, y:498.39113496692636, zoom: 15},
@@ -43,17 +48,22 @@ export const buildingCoordinates ={
       "Drafting Laboratory": {x:148.50385748640082, y:453.08608968878906, zoom: 15},      
       "Automation Laboratory 3 / Electronic Laboratory": {x:147.36419268193157, y:434.3635368642958, zoom: 15},
       "Industrial Motor Control / Electrical Laboratory": {x:150.64910888304883, y:415.90592582505434, zoom: 15},
+      "Room 37" : {x:212.62842733391054, y:413.5415632404507, zoom: 15},
+      "Room 36" : {x:211.6744524385131, y:438.18346600365464, zoom: 15},
+      "Room 35" : {x:211.42340641340846, y:454.51588992810366, zoom: 15},
+      "Room 34" : {x:211.17236038830387, y:474.21508545101386, zoom: 15},
+      "Room 26" : {x:210.21838549290638, y:493.77101409739373, zoom: 15},
 
-
-
-      
-
-
-
+       //FACILITIES
       "Canteen": {x:113.24128765399855, y:445.66771970172505, zoom: 15},
       "Study Area" : {x: 203.98463673865257, y: 535.6956008404186, zoom:15},
       "KIOSK" : {x:193.34364570600303, y: 760.1523181003366, zoom: 10 },
-      "College of Technology/COT Building": {x: 133.27215374026395, y:457.4405872181686, zoom: 6.795}
+      "Bistro" : {x:166.96314047837492, y: 547.7311419803924, zoom: 15 },
+      "Security Office" : {x:120.74654085431179, y: 808.2581637466272, zoom: 15 },
+      "Oval" : {x:200.59820406536696, y: 225.20844635281367, zoom: 3 },
+      "Grandstand" : {x:131.29600736205774, y: 145.0790754008529, zoom: 5.6 },
+      "Kadasig Gym" : {x:361.2710154311804, y: 304.6651365892013, zoom: 15 },
+
     },
     2:{
 
