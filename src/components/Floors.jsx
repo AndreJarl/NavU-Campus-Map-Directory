@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import { ChevronUp } from 'lucide-react'; // Changed to Up icon
+import { ChevronUp } from 'lucide-react';
 
 function Floors() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedFloor, setSelectedFloor] = useState('Floor 1');
- 
+  
   const floors = ['Floor 1', 'Floor 2', 'Floor 3', 'Floor 4'];
 
   return (
-    /* Changed to bottom-4 right-4 */
-    <div className="absolute bottom-32 lg:bottom-5 left-6 z-[40] w-40">
+    /* Increased width from w-40 to w-48 */
+    <div className="absolute bottom-32 lg:bottom-5 left-6 z-[40] w-48">
       
-      {/* 🥂 Glass Dropdown Menu (Positioned ABOVE the button) */}
+      {/* 🥂 Glass Dropdown Menu */}
       {isOpen && (
-        <div className="absolute bottom-full mb-2 w-full overflow-hidden
-                        bg-red-100/40 backdrop-blur-xl border border-white/40 
-                        rounded-2xl shadow-2xl">
+        <div className="absolute bottom-full mb-3 w-full overflow-hidden
+                        bg-zinc-900/90 backdrop-blur-xl border border-white/10 
+                        rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.5)]">
           <div className="flex flex-col py-1">
             {floors.map((floor) => (
               <button
@@ -24,10 +24,10 @@ function Floors() {
                   setSelectedFloor(floor);
                   setIsOpen(false);
                 }}
-                className={`w-full text-left px-4 py-2 text-sm transition-colors
+                className={`w-full text-left px-5 py-3 text-sm transition-colors
                   ${selectedFloor === floor 
-                    ? 'bg-red-500/30 text-red-900 font-bold' 
-                    : 'text-red-800 hover:bg-red-500/10'}
+                    ? 'bg-red-600 text-white font-bold' 
+                    : 'text-zinc-300 hover:bg-white/10'}
                 `}
               >
                 {floor}
@@ -37,18 +37,19 @@ function Floors() {
         </div>
       )}
 
-      {/* 🍷 Dropdown Trigger */}
+      {/* 🍷 Dropdown Trigger (Navigation Style) */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between px-4 py-2 
-                   bg-red-400/50 backdrop-blur-md border border-white/30 
-                   rounded-xl text-red-900 font-medium shadow-lg 
-                   hover:bg-red-400/30 transition-all active:scale-95"
+        className="w-full flex items-center justify-between px-5 py-3.5 
+                   bg-red-700 border-2 border-red-700/40 
+                   rounded-2xl text-white font-bold shadow-[0_0_20px_#dc2626]
+                   hover:bg-red-500 hover:shadow-[0_0_35px_#ef4444] 
+                   hover:scale-105 transition-all duration-300 active:scale-95"
       >
-        <span className="text-sm">{selectedFloor}</span>
+        <span className="text-base tracking-wide">{selectedFloor}</span>
         <ChevronUp 
-          size={18} 
-          className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 
+          size={22} 
+          className={`transition-transform duration-500 ease-in-out ${isOpen ? 'rotate-180' : ''}`} 
         />
       </button>
     </div>
