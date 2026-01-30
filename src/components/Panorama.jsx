@@ -100,7 +100,7 @@ function Panorama({ scene, onChangeScene, clicked, reloadTrigger }) {
       scenesConfig[key] = {
         type: 'equirectangular',
         panorama: val.image,
-        hfov: 100,
+        hfov: 120,
         hotSpots: val.hotspots.map(h => {
           if (h.type === 'arrow') {
             return {
@@ -139,6 +139,7 @@ function Panorama({ scene, onChangeScene, clicked, reloadTrigger }) {
         mouseZoom: true,
         keyboardZoom: true,
         showControls: false,
+        loadingNotice: false
       },
       scenes: scenesConfig
     });

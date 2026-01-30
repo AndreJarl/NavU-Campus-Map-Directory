@@ -81,9 +81,9 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
       <div 
         ref={cardRef}
         className={`${buildingDatas ? "fixed inset-x-0 bottom-0 m-0 lg:absolute lg:left-8 lg:top-20" : "hidden"} 
-        z-[50] flex flex-col rounded-t-[2.5rem] lg:rounded-[2.5rem] border border-white/10 
+        z-[50] flex flex-col rounded-t-[2.5rem] lg:rounded-[1.5rem]   
         lg:w-[410px] 2xl:w-[450px] w-auto bg-[#0f0f10] shadow-2xl overflow-hidden
-        transform transition-all duration-300 ease-out pointer-events-auto`}
+         pointer-events-auto`}
         style={{
           height: window.innerWidth >= 1024 ? '86%' : `${cardHeight}vh`,
           transition: isDragging ? 'none' : 'height 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)'

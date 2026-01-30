@@ -41,7 +41,7 @@ function Map() {
     
           const [clicked, setClicked] = useState(false);
           const [keyboardClicked, setKeyboardClicked] = useState(false); // Move state here
-            const location = useLocation();
+          const location = useLocation();
           
         useEffect(() => {
           const params = new URLSearchParams(location.search);
@@ -234,23 +234,22 @@ function Map() {
 
       
       
-    <button
-  onClick={() => setClicked(!clicked)}
-  className="absolute bottom-4 right-6 z-10 w-12 h-12 lg:w-14 lg:h-14 
-             bg-red-600 rounded-2xl flex items-center justify-center 
-             border-2 border-red-400/40 shadow-[0_0_20px_#dc2626]
-             hover:bg-red-500 hover:shadow-[0_0_35px_#ef4444] 
-             hover:scale-110 transition-all duration-300 active:scale-95 group"
-  title="Street View"
->
-  <Navigation 
-    size={28} 
-    className="text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]
-               transition-all duration-700 ease-in-out
-               group-hover:rotate-[360deg] group-hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)]" 
-    strokeWidth={2.5}
-  />
-</button>
+              <button
+            onClick={() => setClicked(!clicked)} className="absolute bottom-4 right-6 z-10 w-12 h-12 lg:w-14 lg:h-14 
+                      bg-red-600 rounded-2xl flex items-center justify-center 
+                      border-2 border-red-400/40 shadow-[0_0_20px_#dc2626]
+                      hover:bg-red-500 hover:shadow-[0_0_35px_#ef4444] 
+                      hover:scale-110 transition-all duration-300 active:scale-95 group"
+            title="Street View"
+          >
+            <Navigation 
+              size={28} 
+              className="text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]
+                        transition-all duration-700 ease-in-out
+                        group-hover:rotate-[360deg] group-hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)]" 
+              strokeWidth={2.5}
+            />
+          </button>
               
                   <PanoramaViewer clicked={clicked} setClicked={setClicked} />
         
