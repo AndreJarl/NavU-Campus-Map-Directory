@@ -987,8 +987,8 @@ img: ""
                     img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459532/Canteen_rh8ncu.jpg"
                   },
                   {
-                    code:"SAC",
-                    name:"Student Activity Center ",
+                    code:"",
+                    name:"Student Activity Center",
                     description: "A space where students gather for events, meetings, recreational activities, and extracurricular programs. ",
                     img: sac
                   }, 
@@ -1174,7 +1174,49 @@ img: ""
                     name:"Woodcarving Area",
                     description: "An area for woodcarving.",
                     img:""
-                  }
+                  },
+                  {
+                    code:"",
+                    name:"Office of the Electrical Maintenance",
+                    description: "Electrical Maintenance Office.",
+                    img:""
+                  },
+                    {
+                    code:"",
+                    name:"Kitchen Laboratory",
+                    description: "Kitchen Laboratory",
+                    img:""
+                  },
+                    {
+                    code:"",
+                    name:"Men's Dorm",
+                    description: "Mens Dorm",
+                    img:""
+                  },
+                   {
+                    code:"",
+                    name:"Electrical Shop",
+                    description: "Electrical Shop",
+                    img:""
+                  },
+                    {
+                    code:"",
+                    name:"Tennis Court",
+                    description: "Tennis Court",
+                    img:""
+                  },
+                    {
+                    code:"",
+                    name:"Sports & Athletics Office",
+                    description: "Sports & Athletics Office",
+                    img:""
+                  },
+                  {
+                    code:"",
+                    name:"Socio-Cultural Office",
+                    description: "Socio-cultural Office",
+                    img:""
+                  },
                 ]
               }
     },

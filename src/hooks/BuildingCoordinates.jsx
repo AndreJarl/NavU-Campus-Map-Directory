@@ -63,6 +63,30 @@ export const buildingCoordinates ={
       "Oval" : {x:200.59820406536696, y: 225.20844635281367, zoom: 3 },
       "Grandstand" : {x:131.29600736205774, y: 145.0790754008529, zoom: 5.6 },
       "Kadasig Gym" : {x:361.2710154311804, y: 304.6651365892013, zoom: 15 },
+      "Fablab Production Area" : {x:244.1107026806351, y: 504.058030007944, zoom: 15 },
+      "Woodcarving Area" : {x:232.44589821136148, y: 484.4523378992762, zoom: 15 },
+      "Fablab Office" : {x:259.6637753063335, y: 495.49157895145396, zoom: 15 },
+      "Mechanical Engineering Laboratory 2" : {x:245.51852390968554, y: 462.99205329384296, zoom: 15 },
+      "Mechanical Engineering Laboratory 1" : {x:244.04366357449004, y: 438.44078119379975, zoom: 15 },
+      "Maintenance Office" : {x:226.47941776443415, y: 464.5817040053565, zoom: 15 },
+      "Fitness Gym" : {x:243.7755071499091, y: 413.0063698095823, zoom: 15 },
+      "Student Activity Center" : {x:296.30068086147674, y: 477.850915722159, zoom: 15 },
+      "Office of the Electrical Maintenance" : {x:331.83140711846016, y: 467.1649303836511, zoom: 15 },
+      "Kitchen Laboratory" : {x:335.51855795644906, y: 498.9579446139227, zoom: 15 },
+      "Men's Dorm" : {x:361.5967702469519, y: 480.5003335746814, zoom: 15 },
+      "Electrical Shop" : {x:367.02693784471734, y: 441.200635428929, zoom: 15 },
+      "Carpentry Shop" : {x:426.89285963242696, y: 482.3549260714473, zoom: 15 },
+      "Tennis Court" : {x:351.1258427389374, y: 407.3909930508266, zoom: 12.028500000000001},
+      "Sports & Athletics Office" : {x:272.31012157643187, y: 331.6891986849323, zoom: 15},
+      "Socio-Cultural Office" : {x:272.31012157643187, y: 331.6891986849323, zoom: 15},
+
+
+
+
+
+
+      
+
 
     },
     2:{

@@ -632,10 +632,10 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <text x="316" y="425.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="1.9" fill="black">CR</text>
 
         {/* SAC bldg */}
-        <path onClick={() => bldClicked("SAC")} style={{ cursor: "pointer" }} fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M294 430h29v77.135h-29z" />
-        <text onClick={() => bldClicked("SAC")} style={{ cursor: "pointer" }} x="308.5" y="466.768" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">STUDENT</text>
-        <text onClick={() => bldClicked("SAC")} style={{ cursor: "pointer" }} x="308.5" y="469.568" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">ACTIVITY</text>
-        <text onClick={() => bldClicked("SAC")} style={{ cursor: "pointer" }} x="308.5" y="472.368" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">CENTER</text>
+        <path onClick={() => bldClicked("Student Activity Center")} style={{ cursor: "pointer" }} fill={allFalse ? '#00ffae' : category["Sports"] ? "#00ffae" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M294 430h29v77.135h-29z" />
+        <text onClick={() => bldClicked("Student Activity Center")} style={{ cursor: "pointer" }} x="308.5" y="466.768" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">STUDENT</text>
+        <text onClick={() => bldClicked("Student Activity Center")} style={{ cursor: "pointer" }} x="308.5" y="469.568" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">ACTIVITY</text>
+        <text onClick={() => bldClicked("Student Activity Center")} style={{ cursor: "pointer" }} x="308.5" y="472.368" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">CENTER</text>
         <path fill={allFalse ? '#01db96' : category["Sports"] ? "#01db96" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M294 506.926h29V510h-29z" />
 
         {/* ???? bldg */}
