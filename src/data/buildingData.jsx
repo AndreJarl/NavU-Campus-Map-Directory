@@ -658,7 +658,7 @@ img: ""
         },
         {
         code:"",
-        name:"Old Admin Storage Room ",
+        name:"Old Admin Storage Room",
         description: "A space designated for keeping school supplies, tools, and equipment organized and safely stored. ",
         img:" "
         },
@@ -676,7 +676,7 @@ img: ""
         },
         {
         code:"",
-        name:"COT Dean's Office ",
+        name:"COT Dean's Office",
         description: "The main office of the College of Technology Dean where administrative decisions, faculty coordination, and student consultations are conducted. ",
         img: ""
         },
@@ -694,7 +694,7 @@ img: ""
         },
         {
         code:"",
-        name:"Extension and Production Office",
+        name:"Extension & Production Office",
         description: "An office that manages community extension projects and school production activities, supporting both student learning and community development. ",
         img: ""
         },
@@ -706,7 +706,7 @@ img: ""
         },
         {
         code:"",
-        name:"Production Office ",
+        name:"Production Office",
         description: "A workspace where school production activities are planned, organized, and managed to support academic and institutional projects. ",
         img: ""
         },
@@ -897,27 +897,7 @@ img: ""
     }
   },
 
-  'Womens Dorm': {
-    totalFloors:2,
-    rooms:{
-      1:[
-        {
-    code:"",
-    name:"Women's Dormitory",
-    description: "A secure and comfortable residential facility for female students. Includes shared bedrooms, restrooms, common areas, and basic amenities. Provides a safe and supportive environment for study, rest, and daily living. ",
-    img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459769/Women_sDormitory_gudsea.jpg"
-        }
-      ],
-      2:[
-        {
-    code:"",
-    name:" ",
-    description: " ",
-    img: ""
-        }
-      ]
-    }
-  },
+
 
    'ERRC Building':{  
     totalFloors:1,
@@ -1000,7 +980,7 @@ img: ""
                   },
                   {
                     code:"",
-                    name:"Sewing Area",
+                    name:"Sewing Laboratory",
                     description: "A workspace equipped with sewing machines, fabrics, and tools where students practice garment making and textile projects. ",
                     img: ""
                   },
@@ -1217,6 +1197,12 @@ img: ""
                     description: "Socio-cultural Office",
                     img:""
                   },
+                    {
+                    code:"",
+                    name:"Women's Dorm",
+                    description: "A secure and comfortable residential facility for female students. Includes shared bedrooms, restrooms, common areas, and basic amenities. Provides a safe and supportive environment for study, rest, and daily living. ",
+                    img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459769/Women_sDormitory_gudsea.jpg"
+                  }
                 ]
               }
     },

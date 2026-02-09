@@ -54,6 +54,18 @@ export const buildingCoordinates ={
       "Room 34" : {x:211.17236038830387, y:474.21508545101386, zoom: 15},
       "Room 26" : {x:210.21838549290638, y:493.77101409739373, zoom: 15},
 
+      "Records" : {x:54.34036961727004, y:605.7314858412084, zoom: 15},
+      "COT Faculty" : {x:54.27333051112479, y:595.0455005027005, zoom: 15},
+      "COT Office" : {x:53.06662660051027, y:581.79841124008735, zoom: 15},
+      "COT Dean's Office" :{x:49.11131933794044, y:579.7671908864867, zoom: 15},
+      "Sewing Laboratory" :{x:23.368302578163895, y:585.5959101620363, zoom: 15},
+      "Women's Dorm" :{x:26.3850623547002, y:548.2391184414671, zoom: 15},
+      "Old Admin Storage Room" :{x:49.37947576252142, y:551.771675578164, zoom: 15},
+      "Supply Office" :{x:57.759364030677844, y:539.5843534565598, zoom: 15},
+      "Extension & Production Office" :{x:51.99400090218622, y:534.1088898946797, zoom: 15},
+      "Production Office" :{x:56.82081654464433, y:517.2409295669522, zoom: 15},
+      "Production Area" :{x:56.75377743849908, y:503.8172124475041, zoom: 15},
+
        //FACILITIES
       "Canteen": {x:113.24128765399855, y:445.66771970172505, zoom: 15},
       "Study Area" : {x: 203.98463673865257, y: 535.6956008404186, zoom:15},
@@ -80,6 +92,9 @@ export const buildingCoordinates ={
       "Sports & Athletics Office" : {x:272.31012157643187, y: 331.6891986849323, zoom: 15},
       "Socio-Cultural Office" : {x:272.31012157643187, y: 331.6891986849323, zoom: 15},
 
+      //CME BUILDING
+      
+      "CME/COE Building" : {x: 237.58058690850154,y:586.9811526690145, zoom: 7.474500000000001}
 
 
 
