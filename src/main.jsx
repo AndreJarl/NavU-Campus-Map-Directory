@@ -8,7 +8,7 @@ import {FloorProvider} from "./context/FloorContext.jsx"
 import { PathProvider } from './context/PathContext.jsx'
 import { CategoryProvider } from './context/CategoryContext.jsx'
 import {SceneProvider} from './context/SceneContext.jsx'
-
+import { ZoomProvider } from './context/ZoomContext.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
@@ -17,7 +17,9 @@ createRoot(document.getElementById('root')).render(
         <PathProvider>
           <CategoryProvider>
                <SceneProvider>
-                  <App />
+                 <ZoomProvider>
+                            <App />
+                  </ZoomProvider>
                 </SceneProvider>
            </CategoryProvider>
       </PathProvider>

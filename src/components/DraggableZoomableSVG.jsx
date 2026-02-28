@@ -8,6 +8,7 @@ import { Target, Accessibility } from 'lucide-react';
 import Floor2 from '../svg/Floor2'
 import Floor3 from '../svg/Floor3';
 import Floor4 from '../svg/Floor4';
+import { useZoomContext } from '../context/ZoomContext';
 
 const DraggableZoomableSVG = ({onDragStart, OpenCard, setNavigating, isNavigating}) => {
  const {currentFloor} = useFloorQuery();
@@ -19,6 +20,7 @@ const DraggableZoomableSVG = ({onDragStart, OpenCard, setNavigating, isNavigatin
   );
   
  const currentFloorCoordinates = buildingCoordinates[currentFloor];
+const { registerZoom } = useZoomContext();
 
   const initialViewBox = currentFloor === 1 
   ? { x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 }
@@ -83,6 +85,7 @@ const { zoomToCoordinates } = useZoomController({
       currentFloorCoordinates,
       zoomToCoordinates
   });
+
 
     const zoomToKiosk = () => {
     zoomToCoordinates(193.34364570600303, 760.1523181003366, 10);
@@ -343,6 +346,7 @@ const { zoomToCoordinates } = useZoomController({
   // Add event listeners
   useEffect(() => {
     const container = containerRef.current;
+    registerZoom(zooomBuildingbyName); // ✅ stores it in context
     if (!container) return;
 
     container.addEventListener('wheel', handleWheel, { passive: false });
@@ -362,7 +366,7 @@ const { zoomToCoordinates } = useZoomController({
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleMouseUp);
     };
-  }, [handleWheel, handleMouseDown, handleMouseMove, handleMouseUp, handleTouchStart, handleTouchMove, handleTouchEnd]);
+  }, [handleWheel, handleMouseDown, handleMouseMove, handleMouseUp, handleTouchStart, handleTouchMove, handleTouchEnd, zooomBuildingbyName]);
 
 
 

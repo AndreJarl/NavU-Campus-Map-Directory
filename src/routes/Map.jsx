@@ -19,7 +19,7 @@ import Keyboard from '../components/Keyboard';
 import Floors from '../components/Floors';
 import SurveyForm from '../components/SurveyForm'
 import { Navigation } from 'lucide-react';
-
+import { useZoomContext } from "../context/ZoomContext";
 
 function Map() {
 
@@ -42,7 +42,8 @@ function Map() {
           const [clicked, setClicked] = useState(false);
           const [keyboardClicked, setKeyboardClicked] = useState(false); // Move state here
           const location = useLocation();
-          
+           const { zoomToBuilding } = useZoomContext(); // ✅
+
         useEffect(() => {
           const params = new URLSearchParams(location.search);
           const name = params.get("name");
@@ -265,7 +266,9 @@ if (suggestion.floor) {
                         <SearchBar searchTerm={searchTerm} suggestions={suggestions} handleSearch={handleSearch} 
                         keyboardClicked={keyboardClicked}
                         setKeyboardClicked={setKeyboardClicked}
-                        handleSuggestionClicked={handleSuggestionClicked} />
+                        handleSuggestionClicked={handleSuggestionClicked} 
+                         zoomToBuilding={zoomToBuilding}
+                        />
 
 
             { roomSearched  && (

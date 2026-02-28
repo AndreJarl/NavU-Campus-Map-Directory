@@ -5,7 +5,7 @@ import { useState } from "react";
 import Keyboard from './Keyboard';
 
 function SearchBar({ searchTerm, suggestions, keyboardClicked,      // Receive from parent
-  setKeyboardClicked, handleSearch, handleSuggestionClicked }) {
+  setKeyboardClicked, handleSearch, handleSuggestionClicked,zoomToBuilding   }) {
   
 
   return (
@@ -56,6 +56,8 @@ function SearchBar({ searchTerm, suggestions, keyboardClicked,      // Receive f
               key={index}
               onClick={() => {handleSuggestionClicked(suggestion);
                 setKeyboardClicked(false);
+                zoomToBuilding(suggestion.room ? suggestion.room.name : suggestion.building); // ✅
+
               }}
               className="flex flex-row items-center gap-3 lg:gap-4 w-full py-2 px-3 lg:px-4
                          cursor-pointer transition hover:bg-white/10"

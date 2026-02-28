@@ -7,19 +7,22 @@ import { usePath } from "../context/PathContext";
 import { useScene } from "../context/SceneContext";
 import GenerateQR from "./GenerateQR";
 import PanoramaViewer from '../components/PanoramaViewer';
+import { useZoomContext } from "../context/ZoomContext";
 
 function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) {
   const { query } = useQuery();
   const { room, floor } = query;
   const { setPath } = usePath();
   const { setCurrentScene } = useScene();
-
+  const { zoomToBuilding } = useZoomContext();
   // Component States
   const [showQRPopup, setShowQRPopup] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
   const [imageError, setImageError] = useState(false); // New state for error handling
+
+
 
   // Reset error state when the room changes
   useEffect(() => {
@@ -48,7 +51,9 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
     };
   }, [isDragging, showOverlay, clicked]);
 
-  const handleDirections = (roomName) => setPath(roomName);
+  const handleDirections = (roomName) => {setPath(roomName);
+        zoomToBuilding("KIOSK");
+  }
 
   const closeBtn = () => {
     setBldClicked(true);
@@ -122,7 +127,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
 
           <div onClick={() => setShowOverlay(true)} className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/10 z-10 cursor-pointer" />
 
-          <div className="absolute -bottom-10 left-6 z-20 text-white pr-4">
+          <div className="absolute -bottom-20 left-6 z-20 text-white pr-4">
             <h2 className="text-2xl lg:text-3xl font-bold tracking-tight">{room?.name}</h2>
             <div className="flex items-center gap-3 mt-2">
               <span className="bg-red-900/40 text-red-400 text-[10px] font-bold px-3 py-1 rounded-full border border-red-500/30 uppercase">Floor {floor}</span>
@@ -153,8 +158,8 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
           )}
         </div>
 
-        <div className="flex-1 overflow-y-auto px-6 mt-14 custom-scrollbar pb-6">
-          <div className="mb-6">
+        <div className="flex-1 overflow-y-auto px-6 mt-20 custom-scrollbar pb-6">
+          <div className="mb-6 mt-3">
             <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Description</h3>
             <p className="text-gray-300 leading-relaxed text-xs font-light italic">"{room?.description || "No description available."}"</p>
           </div>

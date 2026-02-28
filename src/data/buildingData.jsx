@@ -54,7 +54,7 @@ const buildingData = {
   rooms: {
     1: [
       { 
-        code: "", 
+        code: "EN-102A", 
         name: "Electrical Engineering Laboratory",
         description: "A specialized room equipped with electrical tools, testing instruments, and training panels where students conduct experiments and practical activities related to circuits, wiring, and power systems.",
         img:"https://res.cloudinary.com/dkicidfrq/image/upload/v1766459347/CELAB01_lqvy4s.webp"

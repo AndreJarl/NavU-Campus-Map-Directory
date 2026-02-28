@@ -35,7 +35,7 @@ const Keyboard = ({ query, setQuery }) => {
       drag
       dragMomentum={false}
       /* Added 'hidden' for mobile and 'lg:flex' for desktop */
-      className="hidden lg:flex fixed bottom-10 left-1/2 -translate-x-1/2 z-50 p-4 touch-none select-none flex-col items-center"
+      className="hidden lg:flex fixed bottom-10 left-0 right-0 mx-auto w-fit z-[50000] p-4 touch-none select-none flex-col items-center"
     >
       {/* Dark Keyboard Body */}
       <div className="p-3 backdrop-blur-xl bg-black/85 rounded-[2rem] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
@@ -59,8 +59,8 @@ const Keyboard = ({ query, setQuery }) => {
                     active:scale-95 duration-75 border border-white/5
                     
                     /* Increased widths */
-                    ${key === "Space" ? "w-[450px] bg-slate-100/10" : ""}
-                    ${!isSpecial ? "w-16 bg-slate-100/5" : ""}
+                    ${key === "Space" ? "w-[400px] bg-slate-100/10" : ""}
+                    ${!isSpecial ? "w-12 bg-slate-100/5" : ""}
                     ${isSpecial && key !== "Space" ? "w-24 bg-slate-100/20 text-[10px] uppercase tracking-wider" : ""}
                     
                     /* Style States */
