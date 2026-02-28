@@ -125,7 +125,11 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
             <AiOutlineClose size={18} />
           </button>
 
-          <div onClick={() => setShowOverlay(true)} className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/10 z-10 cursor-pointer" />
+     <div onClick={() => setShowOverlay(true)} className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/10 z-10 cursor-pointer flex items-end justify-center pb-4">
+        <span className="text-white/40 text-[12px] font-medium tracking-widest uppercase">
+          Click to zoom image
+        </span>
+      </div>
 
           <div className="absolute -bottom-20 left-6 z-20 text-white pr-4">
             <h2 className="text-2xl lg:text-3xl font-bold tracking-tight">{room?.name}</h2>

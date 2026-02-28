@@ -21,9 +21,12 @@ import room41 from "../assets/rooms/COT-GrndFlr/Room41.webp"
 import GADoffice from "../assets/rooms/COT-GrndFlr/GADOffice.webp"
 import NSTPoffice from "../assets/rooms/COT-GrndFlr/NSTPOffice.webp"
 import COTCompLab from "../assets/rooms/COT-GrndFlr/COTComlab.webp"
-
-
-
+import cashier from "../assets/rooms/Adminbldg/1stFloor/cashier.webp"
+import bac from "../assets/rooms/Adminbldg/1stFloor/bac.webp"
+import complab1 from "../assets/rooms/COE/complab1.webp"
+import complab2 from "../assets/rooms/COE/complab2.webp"
+import electroniclab from "../assets/rooms/COE/electroniclab.webp"
+import registrar from "../assets/rooms/Adminbldg/1stFloor/registrar.webp"
 
 import sac from "../assets/rooms/Bldgs/SAC.jpg"
 import studyarea from "../assets//rooms/Bldgs/BlueTables.jpg"
@@ -69,20 +72,20 @@ const buildingData = {
         code: " ", 
         name: "Computer Laboratory 1",
         description: "A room equipped with desktop computers and internet access where students practice programming, research, and other computer-related activities.",
-        img:" "
+        img:complab1
       },
       { 
         code: " ", 
         name: "Computer Laboratory 2",
         description: " A well-equipped room with computers and internet access used for programming, research, and computer-based lessons.",
-        img: " "
+        img: complab2
       },
       { 
         
         code: " ", 
         name: "Electronic Laboratory",
         description: " A well-equipped room with computers and internet access used for programming, research, and computer-based lessons.",
-        img: " "
+        img: electroniclab
 
 
       },
@@ -787,19 +790,19 @@ img: ""
           code:"",
           name:"Registrar",
           description: "The office that manages student records, enrollment, grades, and official school documents. ",
-          img: ""
+          img: registrar
         }, 
         {
           code:"",
           name:"Cashier",
           description: "The office where students and staff process payments, fees, and other financial transactions. ",
-          img: ""
+          img: cashier
         },
         {
           code:"",
           name:"BAC Office",
           description: "The office where procurement processes, bidding, and acquisition of school goods and services are managed. ",
-          img: ""
+          img: bac
         },
         {
           code:"",
