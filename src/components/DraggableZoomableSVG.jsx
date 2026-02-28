@@ -522,7 +522,7 @@ const handleReset = useCallback(() => {
   </button>
 </div>
    
-{currentFloor === 1 ? (
+{/* {currentFloor === 1 ? (
   <Floor1 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
 ) :  currentFloor === 2 ? (
   <Floor2 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
@@ -530,7 +530,22 @@ const handleReset = useCallback(() => {
   <Floor3 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
 ) : currentFloor === 4 ? (
   <Floor4 zooomBuildingbyName={zooomBuildingbyName} ref={svgRef} viewBox={viewBox} OpenCard={OpenCard}/>
-) : null}
+) : null} */}
+
+<div className="relative w-full h-full">
+  <div className={`absolute inset-0 transition-opacity duration-300 ${currentFloor === 1 ? 'opacity-100 pointer-events-auto' : 'opacity-20 pointer-events-none'}`}>
+    <Floor1 zooomBuildingbyName={zooomBuildingbyName} ref={currentFloor === 1 ? svgRef : null} viewBox={viewBox} OpenCard={OpenCard}/>
+  </div>
+  <div className={`absolute inset-0 transition-opacity duration-300 ${currentFloor === 2 ? 'opacity-100 pointer-events-auto' : 'opacity-20 pointer-events-none'}`}>
+    <Floor2 zooomBuildingbyName={zooomBuildingbyName} ref={currentFloor === 2 ? svgRef : null} viewBox={viewBox} OpenCard={OpenCard}/>
+  </div>
+  <div className={`absolute inset-0 transition-opacity duration-300 ${currentFloor === 3 ? 'opacity-100 pointer-events-auto' : 'opacity-20 pointer-events-none'}`}>
+    <Floor3 zooomBuildingbyName={zooomBuildingbyName} ref={currentFloor === 3 ? svgRef : null} viewBox={viewBox} OpenCard={OpenCard}/>
+  </div>
+  <div className={`absolute inset-0 transition-opacity duration-300 ${currentFloor === 4 ? 'opacity-100 pointer-events-auto' : 'opacity-20 pointer-events-none'}`}>
+    <Floor4 zooomBuildingbyName={zooomBuildingbyName} ref={currentFloor === 4 ? svgRef : null} viewBox={viewBox} OpenCard={OpenCard}/>
+  </div>
+</div>
 </div>
   );
 };

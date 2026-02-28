@@ -32,7 +32,7 @@ const Floor2 = forwardRef(({ viewBox, zooomBuildingbyName, OpenCard  }, ref) => 
   xmlns="http://www.w3.org/2000/svg"
   xmlnsXlink="http://www.w3.org/1999/xlink"
   preserveAspectRatio="xMidYMid meet"
-
+ 
   >
   <path fill="#fff" d="M0 0h503v815H0z"/>
   <path stroke="#818181" stroke-linecap="round" stroke-width="10" d="M96.8718 349v30.659m0 422.341V634.951M33 600.164c4.8265 8.425 12.4059 14.932 21.4644 18.426l42.4074 16.361m0 0V379.659m0 0H283.567m134.433 0H283.567m0 133.806V379.659"/>
