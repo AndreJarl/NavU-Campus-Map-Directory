@@ -60,6 +60,8 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
         <path onClick={() => bldClicked("College of Engineering Building")} style={{ cursor: "pointer" }} fill="#d9d9d9" d="M236.062 672.043h6v18h-6z" />
 
+
+
         <path fill="#d9d9d9" d="M240.062 614.043h2v14h-2z" />
         <path fill="#d9d9d9" d="M143.062 614.043h2v14h-2z" />
         <path fill="#d9d9d9" d="M143.062 636.562h3.50781v9.12451H143.062z" />
@@ -772,8 +774,8 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path fill={allFalse ? '#01db96' : category["Sports"] ? "#01db96" : "#B0B0B0"} stroke={allFalse ? '#01CC8C' : category["Sports"] ? "#01CC8C" : "#B0B0B0"} stroke-width={0.4} d="M267 349h20v2h-20z" />
 
         {/* ERRC Storage bldg  */}
-        <path onClick={() => bldClicked("ERRC Storage")} style={{ cursor: "pointer" }} fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M36 748h18v5.906H36z" />
-        <text onClick={() => bldClicked("ERRC Storage")} style={{ cursor: "pointer" }} x="45" y="751.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">STORAGE</text>
+        <path onClick={() => bldClicked("ERRC Storage Room")} style={{ cursor: "pointer" }} fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M36 748h18v5.906H36z" />
+        <text onClick={() => bldClicked("ERRC Storage Room")} style={{ cursor: "pointer" }} x="45" y="751.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">STORAGE</text>
         <path fill={allFalse ? '#6f3dd2' : category[""] ? "#6f3dd2" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M36 753.687h18V755H36z" />
 
         {/* ERRC Conference Room bldg  */}
@@ -783,8 +785,8 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path fill={allFalse ? '#6f3dd2' : category[""] ? "#6f3dd2" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M36 706.687h18V708H36z" />
 
         {/* ERRC Room 1 bldg  */}
-        <path onClick={() => bldClicked("ERRC Room 1")} style={{ cursor: "pointer" }} fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M12 742h23v10.969H12z" />
-        <text onClick={() => bldClicked("ERRC Room 1")} style={{ cursor: "pointer" }} x="23.5" y="748.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 1</text>
+        <path onClick={() => bldClicked("ERRC Classroom 1")} style={{ cursor: "pointer" }} fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M12 742h23v10.969H12z" />
+        <text onClick={() => bldClicked("ERRC Classroom 1")} style={{ cursor: "pointer" }} x="23.5" y="748.3" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 1</text>
         <path fill={allFalse ? '#6f3dd2' : category[""] ? "#6f3dd2" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M12 752.969h23V755H12z" />
 
         {/* ERRC Office bldg  */}
@@ -792,8 +794,8 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <text onClick={() => bldClicked("ERRC Office")} style={{ cursor: "pointer" }} x="23.5" y="715.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
 
         {/* ERRC Room 2 bldg  */}
-        <path onClick={() => bldClicked("ERRC Room 2")} style={{ cursor: "pointer" }} fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M35 728v13H12v-13z" />
-        <text onClick={() => bldClicked("ERRC Room 2")} style={{ cursor: "pointer" }} x="23.5" y="735.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 2</text>
+        <path onClick={() => bldClicked("ERRC Classroom 2")} style={{ cursor: "pointer" }} fill={allFalse ? '#8649ff' : category[""] ? "#8649ff" : "#B0B0B0"} stroke={allFalse ? '#693AC6' : category[""] ? "#693AC6" : "#B0B0B0"} stroke-width={0.4} d="M35 728v13H12v-13z" />
+        <text onClick={() => bldClicked("ERRC Classroom 2")} style={{ cursor: "pointer" }} x="23.5" y="735.2" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ROOM 2</text>
 
 
         {/* ERRC Fountain */}
@@ -824,17 +826,25 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path opacity={path === "Study area" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.104.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H232.5c-.828 0-1.5-.672-1.5-1.5" />
 
         {/* FABLAB Production Area path */}
-        <path opacity={path === "FABLAB Production Area" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105.895-2 2-2H258c1.105 0 2-.896 2-2v-2" />
+        <path opacity={path === "Fablab Production Area" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105.895-2 2-2H258c1.105 0 2-.896 2-2v-2" />
 
         {/* Woodcarving Area path */}
         <path opacity={path === "Woodcarving Area" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105-.895-2-2-2h-3c-1.105 0-2-.895-2-2v-32.233c0-.276.224-.5.5-.5" />
 
         {/* Maintenance Office path */}
         <path opacity={path === "Maintenance Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.104.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.104 0-2-.896-2-2v-19.502c0-1.104-.895-2-2-2h-3c-1.104 0-2-.895-2-2v-49.485c0-.276.224-.5.5-.5" />
+         
 
+         {/* second floor paths */}
+
+        <path opacity={path === "ff" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164V726.351C200.568 725.246 201.464 724.351 202.568 724.351H243.539C244.643 724.351 245.539 723.456 245.539 722.351V541.278C245.539 540.173 244.643 539.278 243.539 539.278H237.5C236.395 539.278 235.5 538.382 235.5 537.278V517.776C235.5 516.671 234.605 515.776 233.5 515.776H194.59C194.038 515.776 193.59 515.328 193.59 514.776V496.75C193.59 496.197 193.143 495.75 192.59 495.75H188.461C187.908 495.75 187.461 496.197 187.461 496.75V498.517" />
+        <path opacity={path === "ff" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.502 727.273L200.501 726.271C200.5 725.167 199.605 724.273 198.501 724.273H141.5C140.395 724.273 139.5 723.377 139.5 722.273V657.759C139.5 656.654 138.605 655.759 137.5 655.759H95C93.8955 655.759 93 654.863 93 653.759V625.335C93 624.962 92.8956 624.597 92.6986 624.28L81.8014 606.749C81.6044 606.432 81.5 606.067 81.5 605.694V560.527C81.5 559.975 81.0523 559.527 80.5 559.527L63.4109 559.527C62.8587 559.527 62.411 559.975 62.411 560.527V563.372C62.411 563.924 62.8587 564.372 63.411 564.372H67.1088"/>
+        <path opacity={path === "ff" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.504 727.276L200.503 726.278C200.502 725.173 201.398 724.276 202.503 724.276H243.5C244.605 724.276 245.5 723.381 245.5 722.276V714.791C245.5 713.686 246.395 712.791 247.5 712.791H259.5"><path d="M200.502 727.273L200.501 726.271C200.5 725.167 199.605 724.273 198.501 724.273H141.5C140.395 724.273 139.5 723.377 139.5 722.273V657.759C139.5 656.654 138.605 655.759 137.5 655.759H95C93.8955 655.759 93 654.863 93 653.759V625.335C93 624.962 92.8956 624.597 92.6986 624.28L81.8014 606.749C81.6044 606.432 81.5 606.067 81.5 605.694V560.527C81.5 559.975 81.0523 559.527 80.5 559.527L63.4109 559.527C62.8587 559.527 62.411 559.975 62.411 560.527V563.372C62.411 563.924 62.8587 564.372 63.411 564.372H67.1088"/></path>
+        <path opacity={path === "" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.502 727.275L200.501 726.273C200.5 725.169 199.605 724.275 198.501 724.275H140C138.895 724.275 138 723.38 138 722.275V714.791C138 713.686 137.105 712.791 136 712.791H126"/>
+       
+       
         {/* COT Room 26 path */}
         <path opacity={path === "Room 26" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105-.895-2-2-2l-17-.001c-1.105 0-2-.895-2-2v-8.006" />
-
         {/* Automation Laboratory path */}
         <path opacity={path === "Automation Laboratory" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105-.895-2-2-2h-70c-1.105 0-2-.896-2-2v-8.017" />
 
@@ -875,19 +885,19 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path opacity={path === "Sanitation Staff Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.104.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.104-.895-2-2-2h-17c-1.105 0-2-.896-2-2v-5.007c0-1.105-.895-2-2-2H203c-1.105 0-2-.895-2-2v-96.978c0-1.105-.895-2-2-2h-1" />
 
         {/* Floating Room path */}
-        <path opacity={path === "Floating Room" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.104.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.104 0-2-.896-2-2v-19.502c0-1.104-.895-2-2-2h-17c-1.105 0-2-.896-2-2v-5.007c0-1.105-.895-2-2-2H203c-1.104 0-2-.895-2-2V372.791" />
+        <path opacity={path === "Floating Classroom" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.104.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.104 0-2-.896-2-2v-19.502c0-1.104-.895-2-2-2h-17c-1.105 0-2-.896-2-2v-5.007c0-1.105-.895-2-2-2H203c-1.104 0-2-.895-2-2V372.791" />
 
         {/* SAC path */}
-        <path opacity={path === "Floating Room" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105.895-2 2-2H307c1.105 0 2-.895 2-2v-2.003" />
+        <path opacity={path === "Student Activity Center" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105.895-2 2-2H307c1.105 0 2-.895 2-2v-2.003" />
 
         {/* Carpentry Shop path */}
         <path opacity={path === "Carpentry Shop" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105.895-2 2-2h131.281c.465 0 .915-.162 1.273-.458l38.892-32.09c.358-.296.808-.457 1.273-.457h3.281" />
 
         {/* Kitchen Lab path */}
-        <path opacity={path === "Kitchen Lab" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105.895-2 2-2H318c1.105 0 2-.898 2-2.002 0-1.105.895-2.002 2-2.002h2c1.105 0 2-.895 2-2v-4c0-1.105.895-2 2-2h3" />
+        <path opacity={path === "Kitchen Laboratory" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105.895-2 2-2H318c1.105 0 2-.898 2-2.002 0-1.105.895-2.002 2-2.002h2c1.105 0 2-.895 2-2v-4c0-1.105.895-2 2-2h3" />
 
         {/* Electrical Maintenance Office path */}
-        <path opacity={path === "Electrical Maintenance Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105.895-2 2-2H318c1.105 0 2-.898 2-2.002 0-1.105.895-2.002 2-2.002h2c1.105 0 2-.896 2-2v-38c0-1.105.895-2 2-2h3" />
+        <path opacity={path === "Office of the Electrical Maintenance" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105.895-2 2-2H318c1.105 0 2-.898 2-2.002 0-1.105.895-2.002 2-2.002h2c1.105 0 2-.896 2-2v-38c0-1.105.895-2 2-2h3" />
 
         {/* ????? path */}
         <path opacity={path === "?????" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105.895-2 2-2H318c1.105 0 2-.898 2-2.002 0-1.105.895-2.002 2-2.002h2c1.105 0 2-.895 2-2v-60.999c0-1.105.895-2 1.999-2l3.001-.001" />
@@ -899,10 +909,10 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path opacity={path === "Men's Dorm" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105.895-2 2-2H318c1.105 0 2-.897 2-2.002s.895-2.002 2-2.002h2c1.105 0 2-.895 2-2v-81.501c0-1.105.895-2 2-2h28c1.105 0 2 .895 2 2v14.52c0 1.104.895 2 2 2h11c1.105 0 2 .895 2 2v14" />
 
         {/* ME Lab 2 path */}
-        <path opacity={path === "ME Lab 2" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.814c0-1.104.896-1.999 2-1.999h40.971c1.104 0 2-.896 2-2V541.277c0-1.104-.896-2-2-2H237.5c-1.105 0-2-.895-2-2v-19.501c0-1.105.895-2 2-2H275c1.105 0 2-.896 2-2v-53c0-.552-.448-1-1-1" />
+        <path opacity={path === "Mechanical Engineering Laboratory 2" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.814c0-1.104.896-1.999 2-1.999h40.971c1.104 0 2-.896 2-2V541.277c0-1.104-.896-2-2-2H237.5c-1.105 0-2-.895-2-2v-19.501c0-1.105.895-2 2-2H275c1.105 0 2-.896 2-2v-53c0-.552-.448-1-1-1" />
 
         {/* ME Lab 1 path */}
-        <path opacity={path === "ME Lab 1" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105.895-2 2-2H275c1.105 0 2-.895 2-2v-76.999c0-.553-.448-1-1-1" />
+        <path opacity={path === "Mechanical Engineering Laboratory 1" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.105.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.896-2-2v-19.502c0-1.105.895-2 2-2H275c1.105 0 2-.895 2-2v-76.999c0-.553-.448-1-1-1" />
 
         {/* Fitness Gym path */}
         <path opacity={path === "Fitness Gym" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.568 727.164v-.813c0-1.104.896-2 2-2h40.971c1.104 0 2-.895 2-2V541.278c0-1.105-.896-2-2-2H237.5c-1.105 0-2-.895-2-2v-19.502c0-1.104.895-2 2-2H275c1.105 0 2-.895 2-2V406.777c0-.553-.448-1-1-1" />
@@ -956,13 +966,13 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path opacity={path === "Registrar" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="m200.502 727.276-.001-1.002c-.001-1.104-.896-1.998-2-1.998h-30.503c-.827 0-1.498.67-1.498 1.498" />
 
         {/* ERRC Storage path */}
-        <path opacity={path === "ERRC Storage" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.5 735.291v1.207c0 1.105-.895 2-2 2H196c-1.104 0-2 .896-2 2v25.793c0 1.104-.895 2-2 2h-86c-1.105 0-2-.896-2-2v-19.5c0-1.105-.895-2-2-2H39.0002c-.5524 0-1.0002.448-1.0002 1" />
+        <path opacity={path === "ERRC Storage Room" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.5 735.291v1.207c0 1.105-.895 2-2 2H196c-1.104 0-2 .896-2 2v25.793c0 1.104-.895 2-2 2h-86c-1.105 0-2-.896-2-2v-19.5c0-1.105-.895-2-2-2H39.0002c-.5524 0-1.0002.448-1.0002 1" />
 
         {/* ERRC Room 1 path */}
-        <path opacity={path === "ERRC Room 1" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.5 735.291v1.207c0 1.105-.895 2-2 2H196c-1.104 0-2 .896-2 2v25.793c0 1.104-.895 2-2 2h-86c-1.105 0-2-.896-2-2v-19.5c0-1.105-.895-2-2-2H37" />
+        <path opacity={path === "ERRC Classroom 1" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.5 735.291v1.207c0 1.105-.895 2-2 2H196c-1.104 0-2 .896-2 2v25.793c0 1.104-.895 2-2 2h-86c-1.105 0-2-.896-2-2v-19.5c0-1.105-.895-2-2-2H37" />
 
         {/* ERRC Room 2 path */}
-        <path opacity={path === "ERRC Room 2" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.5 735.29v1.208c0 1.105-.895 2-2 2H196c-1.104 0-2 .895-2 2v25.792c0 1.105-.895 2-2 2h-86c-1.105 0-2-.895-2-2v-26.499c0-1.105-.895-2-2-2H37" />
+        <path opacity={path === "ERRC Classroom 2" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.5 735.29v1.208c0 1.105-.895 2-2 2H196c-1.104 0-2 .895-2 2v25.792c0 1.105-.895 2-2 2h-86c-1.105 0-2-.895-2-2v-26.499c0-1.105-.895-2-2-2H37" />
 
         {/* ERRC Office path */}
         <path opacity={path === "ERRC Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.5 735.29v1.208c0 1.104-.895 2-2 2H196c-1.104 0-2 .895-2 2v25.792c0 1.105-.895 2-2 2h-86c-1.105 0-2-.895-2-2v-47.999c0-1.105-.895-2-2-2l-65-.001" />
@@ -989,7 +999,7 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path opacity={path === "Education Laboratory 2" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="m200.502 727.274-.001-1.002c-.001-1.104-.896-1.998-2-1.998H141.5c-1.105 0-2-.895-2-2v-48.5c0-.829-.672-1.5-1.5-1.5" />
 
         {/* Centrum path */}
-        <path opacity={0} d="M200.084 726.911L200.083 725.912C200.082 724.807 200.977 723.91 202.083 723.91L243.082 723.91C244.186 723.91 245.082 723.015 245.082 721.91L245.082 656.934C245.082 655.83 245.977 654.934 247.082 654.934L291.54 654.934C292.448 654.934 293.242 655.546 293.474 656.424L301.17 685.578C301.41 686.488 302.251 687.107 303.19 687.066L323.515 686.182C324.181 686.153 324.789 685.795 325.136 685.226L336.557 666.496C336.886 665.955 337.453 665.602 338.083 665.545L347.606 664.679C347.918 664.651 348.219 664.55 348.485 664.383L359.684 657.384C359.945 657.221 360.24 657.12 360.546 657.09L415.581 651.636" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" />
+        <path opacity={path === "Centrum" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"  d="M200.084 726.911L200.083 725.912C200.082 724.807 200.977 723.91 202.083 723.91L243.082 723.91C244.186 723.91 245.082 723.015 245.082 721.91L245.082 656.934C245.082 655.83 245.977 654.934 247.082 654.934L291.54 654.934C292.448 654.934 293.242 655.546 293.474 656.424L301.17 685.578C301.41 686.488 302.251 687.107 303.19 687.066L323.515 686.182C324.181 686.153 324.789 685.795 325.136 685.226L336.557 666.496C336.886 665.955 337.453 665.602 338.083 665.545L347.606 664.679C347.918 664.651 348.219 664.55 348.485 664.383L359.684 657.384C359.945 657.221 360.24 657.12 360.546 657.09L415.581 651.636"  />
 
         {/* path to COT Bldg 2nd Floor */}
         <path opacity={path === "to COT Bldg 2nd Floor" ? "1" : 0} d="M200.149 726.8L200.149 725.987C200.149 724.882 201.045 723.987 202.149 723.987L243.12 723.987C244.224 723.987 245.12 723.092 245.12 721.987L245.12 540.914C245.12 539.809 244.224 538.914 243.12 538.914L237.081 538.914C235.976 538.914 235.081 538.018 235.081 536.914L235.081 517.412C235.081 516.307 234.185 515.412 233.081 515.412L195.081 515.412C193.976 515.412 193.081 514.517 193.081 513.412L193.081 504.136" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" />

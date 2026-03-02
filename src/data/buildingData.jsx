@@ -908,7 +908,7 @@ img: ""
   1: [
     { 
       code: " ", 
-      name: "Storage Room ",
+      name: "ERRC Storage Room",
       description: "A space used to keep school equipment, supplies, and materials organized and safely stored.",
       img: " "
     },
@@ -920,25 +920,25 @@ img: ""
     }, 
           { 
       code: " ", 
-      name: "Classrom 1",
+      name: "ERRC Classroom 1",
       description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
       img: " "
     }, 
     { 
       code: " ", 
-      name: "Classroom 2",
+      name: "ERRC Classroom 2",
       description: "A learning area where students attend lectures, participate in discussions, and work on academic activities guided by their teachers.",
       img: " "
     }, 
     { 
       code: " ", 
-      name: "Office",
+      name: "ERRC Office",
       description: "A workspace where school staff and administrators handle records, documents, and other administrative tasks.",
       img: " "
     }, 
       { 
       code: " ", 
-      name: "Conference Room",
+      name: "ERRC Conference Room",
       description: "A meeting area equipped with tables and chairs where staff, faculty, and students hold discussions, presentations, and meetings.",
       img: " "
     }, 
