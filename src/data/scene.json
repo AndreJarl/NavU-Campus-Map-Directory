@@ -138,56 +138,854 @@
   },
   
 
+
+
   
-   "Electrical Engineering Laboratory": {
-    "image": "https://res.cloudinary.com/dkicidfrq/image/upload/v1766460860/1stFlrENG0_iaoz9g.jpg",
+
+
+  "Electrical Engineering Laboratory": {
+    "image": "/public/360/eng/en102b.jpg",
+    "yaw": 0,
     "hotspots": [
       {
         "pitch": -20.5,
-        "yaw": 20,
+        "yaw": 10,
         "type": "arrow",
         "target": "Engineering Laboratory",
         "arrowType": "forward"
       },
       {
-        "pitch": -60.5,
-        "yaw": 20,
+        "pitch": -160.5,
+        "yaw": 10,
         "type": "arrow",
         "target": "Water Refill/Laundry Shop",
-        "arrowType": "backward",
-        "rotation": 180
+        "arrowType": "backward"
       },
         {
-        "pitch": 15,
+        "pitch": 25,
         "yaw": 30,
         "type": "info",
         "label": "Electrical Engineering Laboratory"
       }
     ]
   },
-     "Engineering Laboratory": {
-    "image": "https://res.cloudinary.com/dkicidfrq/image/upload/v1766460833/1stFlrENG1_gilrbf.jpg",
+  "Engineering Laboratory": {
+    "image": "/public/360/eng/en102a.jpg",
+    "yaw": 180,
     "hotspots": [
       {
         "pitch": -20.5,
-        "yaw": -20,
+        "yaw": 10,
         "type": "arrow",
-        "target": "Path ERRC",
+        "target": "Electrical Engineering Laboratory",
         "arrowType": "forward"
       },
       {
-        "pitch": -60.5,
-        "yaw": -20,
+        "pitch": -160.5,
+        "yaw": 10,
         "type": "arrow",
-        "target": "Electrical Engineering Laboratory",
+        "target": "CME/COE",
         "arrowType": "backward",
         "rotation": 180
       },
         {
-        "pitch": 30,
-        "yaw": -190,
+        "pitch": -160.5,
+        "yaw": -130,
+        "type": "arrow",
+        "target": "COE360",
+        "rotation": 50
+      },
+        {
+        "pitch": 10,
+        "yaw": 200,
         "type": "info",
         "label": "Engineering Laboratory"
+      },
+       {
+        "pitch": 10,
+        "yaw": 350,
+        "type": "info",
+        "label": "Electrical Engineering Laboratory"
+      }
+    ]
+  },
+  "COE360": {
+    "image": "/public/360/eng/eng360.jpg",
+    "yaw": 0,
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 10,
+        "type": "arrow",
+        "target": "Electrical Engineering Laboratory",
+        "arrowType": "forward"
+      },  
+    
+       {
+        "pitch": 40,
+        "yaw": 360,
+        "type": "info",
+        "label": "College of Engineering Building"
+      }
+    ]
+  },
+  "CME/COE": {
+    "image": "/public/360/eng/coecme.jpg",
+    "yaw": 180,
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 10,
+        "type": "arrow",
+        "target": "Engineering Laboratory",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -160.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "Computer Laboratory 1",
+        "arrowType": "backward",
+        "rotation": 180
+      },
+        {
+        "pitch": 10,
+        "yaw": 190,
+        "type": "info",
+        "label": "Computer Lab 1"
+      },
+       {
+        "pitch": 20,
+        "yaw": 350,
+        "type": "info",
+        "label": "Engineering Laboratory"
+      }
+    ]
+  },
+  "Computer Laboratory 1": {
+    "image": "/public/360/eng/encomlab1.jpg",
+    "yaw": 180,
+    "hotspots": [
+      {
+        "pitch": -15.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "CME/COE",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -160.5,
+        "yaw": 10,
+        "type": "arrow",
+        "target": "Computer Laboratory 2",
+        "arrowType": "backward",
+        "rotation": 180
+      },
+        {
+        "pitch": 35,
+        "yaw": 300,
+        "type": "info",
+        "label": "Computer Lab 1"
+      }
+    ]
+  },
+  "Computer Laboratory 2": {
+    "image": "/public/360/eng/encomlab2.jpg",
+    "yaw": 180,
+    "hotspots": [
+      {
+        "pitch": -15.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Engineering Laboratory",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -160.5,
+        "yaw": 10,
+        "type": "arrow",
+        "target": "Electronic Laboratory",
+        "arrowType": "backward",
+        "rotation": 180
+      },
+        {
+        "pitch": 28,
+        "yaw": 300,
+        "type": "info",
+        "label": "Computer Lab 2"
+      },
+        {
+        "pitch": 10,
+        "yaw": 195,
+        "type": "info",
+        "label": "Electronics Lab "
+      },
+       {
+        "pitch": 10,
+        "yaw": 350,
+        "type": "info",
+        "label": "Computer Lab 1"
+      }
+    ]
+  },
+  "Electronic Laboratory": {
+    "image": "/public/360/eng/electronicslab.jpg",
+    "yaw": 180,
+    "hotspots": [
+      {
+        "pitch": -15.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Computer Laboratory 2",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -160.5,
+        "yaw": 10,
+        "type": "arrow",
+        "target": "COE102",
+        "arrowType": "backward",
+        "rotation": 180
+      },
+        {
+        "pitch": 28,
+        "yaw": 300,
+        "type": "info",
+        "label": "Electronics Lab"
+      },
+        {
+        "pitch": 10,
+        "yaw": 190,
+        "type": "info",
+        "label": "COE102"
+      }
+    ]
+  },
+  "COE102": {
+    "image": "/public/360/eng/coe102.jpg",
+    "yaw": 180,
+    "hotspots": [
+      {
+        "pitch": -15.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Electronic Laboratory",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -160.5,
+        "yaw": 10,
+        "type": "arrow",
+        "target": "COE101",
+        "arrowType": "backward",
+        "rotation": 180
+      },
+        {
+        "pitch": 28,
+        "yaw": 300,
+        "type": "info",
+        "label": "C0E102"
+      },
+        {
+        "pitch": 15,
+        "yaw": 195,
+        "type": "info",
+        "label": "C0E101"
+      }
+    
+      
+    ]
+  },
+  "COE101": {
+    "image": "/public/360/eng/coe101.jpg",
+    "yaw": 180,
+    "hotspots": [
+      {
+        "pitch": -15.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Electronic Laboratory",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -155.5,
+        "yaw": -70,
+        "type": "arrow",
+        "target": "COE101",
+        "rotation": 0
+      },
+           {
+        "pitch": -160.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "COE101",
+        "rotation": 70
+      },
+        {
+        "pitch": 28,
+        "yaw": 330,
+        "type": "info",
+        "label": "C0E102"
+      },
+        {
+        "pitch": 5,
+        "yaw": -240,
+        "type": "info",
+        "label": "Study Area"
+      }
+
+    
+      
+    ]
+  },
+
+
+
+
+  "EducCr": {
+    "image": "/public/360/educ/educcr1.jpg",
+    "yaw": 0,
+    "hotspots": [
+      {
+        "pitch": -15.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Education Laboratory 1",
+        "arrowType": "forward"
+      },
+
+           {
+        "pitch": -160.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "Education Laboratory"
+      },
+        {
+        "pitch": 20,
+        "yaw": 310,
+        "type": "info",
+        "label": "Female CR"
+      }
+    ]
+  },
+  "Education Laboratory 1": {
+    "image": "/public/360/educ/ed-102b.jpg",
+    "yaw": 0,
+    "hotspots": [
+      {
+        "pitch": -15.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Education Laboratory 2",
+        "arrowType": "forward"
+      },
+
+           {
+        "pitch": -160.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "EducCr"
+      },
+        {
+        "pitch": 30,
+        "yaw": 310,
+        "type": "info",
+        "label": "Education Laboratory 1"
+      }
+    ]
+  },
+  "Education Laboratory 2": {
+    "image": "/public/360/educ/educphysics.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": 20,
+        "type": "arrow",
+        "target": "Education Laboratory 1"
+      },
+               {
+        "pitch": -160.5,
+        "yaw": -60,
+        "type": "arrow",
+        "target": "Educ360"
+      },
+        {
+        "pitch": 30,
+        "yaw": 280,
+        "type": "info",
+        "label": "Education Laboratory 2"
+      }
+    ]
+  },
+  "Educ360": {
+    "image": "/public/360/educ/educ360.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -190,
+        "type": "arrow",
+        "target": "Education Laboratory 2"
+      },
+        {
+        "pitch": 35,
+        "yaw": 340,
+        "type": "info",
+        "label": "College of Education and Science Building"
+      }
+    ]
+  },
+
+
+
+  "Edtech Laboratory 1": {
+    "image": "/public/360/educ/edtechlab1.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "Edtech Laboratory 2"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 10,
+        "type": "arrow",
+        "target": "EducCr"
+      },
+        {
+        "pitch": 20,
+        "yaw": 430,
+        "type": "info",
+        "label": "Edtech Laboratory 1"
+      }
+    ]
+  },
+
+  "Edtech Laboratory 2": {
+    "image": "/public/360/educ/edtechlab2.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "General Chemistry Laboratory"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 10,
+        "type": "arrow",
+        "target": "Edtech Laboratory 1"
+      },
+        {
+        "pitch": 30,
+        "yaw": 430,
+        "type": "info",
+        "label": "Edtech Laboratory 2"
+      }
+    ]
+  },
+
+  "General Chemistry Laboratory": {
+    "image": "/public/360/educ/chemlab.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "General Chemistry Laboratory"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Edtech Laboratory 2"
+      },
+        {
+        "pitch": 30,
+        "yaw": 430,
+        "type": "info",
+        "label": "General Chemistry Laboratory"
+      }
+    ]
+  },
+
+
+  "Ergonomic Laboratory": {
+    "image": "/public/360/educ/ergolab.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "Chicos"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Edtech Laboratory 2"
+      },
+        {
+        "pitch": 30,
+        "yaw": 430,
+        "type": "info",
+        "label": "Ergonomic Laboratory"
+      }
+    ]
+  },
+
+  "Chicos": {
+    "image": "/public/360/chicos.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "Room26Path"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Ergonomic Laboratory"
+      },
+        {
+        "pitch": 10,
+        "yaw": 370,
+        "type": "info",
+        "label": "Room26"
+      }
+    ]
+  },
+
+
+  
+
+  "Room26Path": {
+    "image": "/public/360/room26path.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "Room34Path"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Ergonomic Laboratory"
+      },
+           {
+        "pitch": -160.5,
+        "yaw": 100,
+        "type": "arrow",
+        "target": "Chicos"
+      },
+        {
+        "pitch": 20,
+        "yaw": 470,
+        "type": "info",
+        "label": "Room26"
+      }
+    ]
+  },
+  "Room34Path": {
+    "image": "/public/360/room34path.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "Room34"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": ""
+      },
+           {
+        "pitch": -160.5,
+        "yaw": 100,
+        "type": "arrow",
+        "target": "Chicos"
+      },
+        {
+        "pitch": 20,
+        "yaw": 470,
+        "type": "info",
+        "label": "Room26"
+      }
+    ]
+  },
+
+
+
+  "Room34": {
+    "image": "/public/360/room34.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "Room35"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Room34Path"
+      },
+        {
+        "pitch": 20,
+        "yaw": 450,
+        "type": "info",
+        "label": "Room34"
+      }
+    ]
+  },
+  "Room35": {
+    "image": "/public/360/room35.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "Room36"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Room34"
+      },
+        {
+        "pitch": 20,
+        "yaw": 450,
+        "type": "info",
+        "label": "Room35"
+      }
+    ]
+  },
+   "Room36": {
+    "image": "/public/360/room36.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "Room37"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Room34"
+      },
+        {
+        "pitch": 20,
+        "yaw": 420,
+        "type": "info",
+        "label": "Room36"
+      }
+    ]
+  },
+   "Room37": {
+    "image": "/public/360/room37.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "Floating Classroom"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Room36"
+      },
+        {
+        "pitch": 20,
+        "yaw": 420,
+        "type": "info",
+        "label": "Room37"
+      }
+    ]
+  },
+
+
+
+
+
+  "Floating Classroom": {
+    "image": "/public/360/floating.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "Fitness Gym"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": ""
+      },
+           {
+        "pitch": -160.5,
+        "yaw": -80,
+        "type": "arrow",
+        "target": "Room37"
+      },
+        {
+        "pitch": 20,
+        "yaw": 270,
+        "type": "info",
+        "label": "Floating Classroom"
+      }
+    ]
+  },
+  "Fitness Gym": {
+    "image": "/public/360/FitnessGym.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "Socio-Cultural Office"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Floating Classroom"
+      },
+        {
+        "pitch": 20,
+        "yaw": -270,
+        "type": "info",
+        "label": "Fitness Gym"
+      }
+    ]
+  },
+  "Socio-Cultural Office": {
+    "image": "/public/360/Cultural.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "Tennis Court"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Fitness Gym"
+      },
+        {
+        "pitch": 20,
+        "yaw": 270,
+        "type": "info",
+        "label": "Cultural Center"
+      }
+    ]
+  },
+   "Tennis Court": {
+    "image": "/public/360/tennis.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "Tennis Court"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 100,
+        "type": "arrow",
+        "target": "Kadasig Gym"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Socio-Cultural Office"
+      },
+        {
+        "pitch": 5,
+        "yaw": 200,
+        "type": "info",
+        "label": "Cultural Center"
+      },
+         {
+        "pitch": 15,
+        "yaw": 390,
+        "type": "info",
+        "label": "Tennis Court"
+      },
+          {
+        "pitch": 15,
+        "yaw": 290,
+        "type": "info",
+        "label": "Kadasig Gym"
+      }
+    ]
+  },
+
+    "Kadasig Gym": {
+    "image": "/public/360/kadasig.jpg",
+    "yaw": 0,
+    "hotspots": [
+            {
+        "pitch": -160.5,
+        "yaw": -170,
+        "type": "arrow",
+        "target": "Tennis Court"
+      },
+            {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Tennis Court"
+      },
+        {
+        "pitch": 5,
+        "yaw": 200,
+        "type": "info",
+        "label": "Cultural Center"
+      },
+         {
+        "pitch": 15,
+        "yaw": 390,
+        "type": "info",
+        "label": "Kadasig Gym"
+      },
+          {
+        "pitch": 15,
+        "yaw": 290,
+        "type": "info",
+        "label": "Socio-Cultural Office"
       }
     ]
   }

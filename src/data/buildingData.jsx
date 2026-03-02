@@ -48,7 +48,7 @@ import Edtechlab2 from "../assets/rooms/EducationLabs/EdTechLab2.jpg"
 import chemlab from "../assets/rooms/EducationLabs/ChemistryLab.jpg"
 import room12 from "../assets/rooms/Educrooms/Room12.jpg" 
 
-
+import clinic from "../assets/rooms/Adminbldg/1stFloor/Clinic.webp"
 
 const buildingData = {
 
@@ -808,7 +808,7 @@ img: ""
           code:"",
           name:"University Clinic",
           description: "A healthcare facility on campus where students and staff receive medical attention, consultations, and basic health services. ",
-          img: ""
+          img: clinic
         }, 
         {
           code:"",

@@ -26,7 +26,7 @@ function PanoramaViewer({clicked, setClicked}) {
       className={`
         ${clicked ? 'fixed' : 'hidden'} 
         top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-        w-full max-w-5xl h-[90vh] 
+        w-full max-w-7xl h-[90vh] 
         rounded-[2rem] bg-black z-[9999] overflow-hidden
         shadow-2xl 
       `}

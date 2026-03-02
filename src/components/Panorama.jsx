@@ -13,7 +13,7 @@ function Panorama({ scene, onChangeScene, clicked, reloadTrigger }) {
   const customArrow = useCallback((hotSpotDiv, args = {}) => {
     let rotation = args.rotation || 0;
     if (args.arrowType) {
-      if (args.arrowType === 'backward') rotation = 180;
+      if (args.arrowType === 'backward') rotation = 0;
       if (args.arrowType === 'left') rotation = -90;
       if (args.arrowType === 'right') rotation = 90;
       if (args.arrowType === 'forward') rotation = 0;
@@ -101,6 +101,8 @@ function Panorama({ scene, onChangeScene, clicked, reloadTrigger }) {
         type: 'equirectangular',
         panorama: val.image,
         hfov: 120,
+        yaw: val.yaw || 0,   
+        pitch: val.pitch || 0,
         hotSpots: val.hotspots.map(h => {
           if (h.type === 'arrow') {
             return {
@@ -139,7 +141,10 @@ function Panorama({ scene, onChangeScene, clicked, reloadTrigger }) {
         mouseZoom: true,
         keyboardZoom: true,
         showControls: false,
-        loadingNotice: false
+        loadingNotice: false,
+        // minPitch: 10, // Restricts looking down (adjust as needed)
+        // maxPitch: 10,  // Restricts looking up (adjust as needed)
+
       },
       scenes: scenesConfig
     });
