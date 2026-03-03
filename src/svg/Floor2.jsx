@@ -28,7 +28,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
   return (
     <>
-  <svg
+   <svg
       ref={ref}
       width="100%"
       height="100%"
@@ -37,7 +37,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
       preserveAspectRatio="xMidYMid meet"
     >
      
-{/* <path d="M503 0H0V815H503V0Z" fill="white"/> */}
+<path d="M503 0H0V815H503V0Z"/>
 <path d="M96.8718 349V379.659M96.8718 379.659V634.951M96.8718 379.659H283.567M96.8718 802V634.951M96.8718 634.951L54.4644 618.59C45.4059 615.096 37.8265 608.589 33 600.164M283.567 379.659H418M283.567 379.659V513.465" stroke="#818181" stroke-width="10" stroke-linecap="round"/>
 <path d="M102 517H363" stroke="#818181" stroke-width="6" stroke-linecap="round"/>
 <path d="M85 485.603H78V606H85V485.603Z" fill="#D9D9D9"/>
@@ -277,32 +277,126 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <rect x="136" y="544" width="17" height="21" transform="rotate(90 136 544)" fill="#00C3FF"/>
 <rect x="136" y="682" width="16" height="21" transform="rotate(90 136 682)" fill="#00C3FF"/>
 <rect width="15" height="9" transform="matrix(0 1 1 0 113 528)" fill="#73DAFF"/>
-<rect x="249" y="544" width="21" height="13" fill="#FF3030"/>
-<rect x="270" y="558" width="13" height="21" transform="rotate(90 270 558)" fill="#FF3030"/>
-<rect x="270" y="572" width="13" height="21" transform="rotate(90 270 572)" fill="#FF3030"/>
-<rect x="270" y="586" width="13" height="21" transform="rotate(90 270 586)" fill="#FF3030"/>
-<rect x="270" y="600" width="13" height="21" transform="rotate(90 270 600)" fill="#FF3030"/>
-<rect x="270" y="634" width="11" height="21" transform="rotate(90 270 634)" fill="#FF3030"/>
-<rect x="270" y="646" width="17" height="21" transform="rotate(90 270 646)" fill="#FF3030"/>
-<rect x="270" y="664" width="17" height="21" transform="rotate(90 270 664)" fill="#FF3030"/>
-<rect x="270" y="682" width="16" height="21" transform="rotate(90 270 682)" fill="#FF3030"/>
-<rect x="270" y="614" width="19" height="21" transform="rotate(90 270 614)" fill="#FF3030"/>
-<path d="M249 699H273V707.938H249V699Z" fill="#73DAFF"/>
-<path d="M249 707.938H273V710H249V707.938Z" fill="#3BB2DE"/>
-<path d="M203 728H245V749.022H203V728Z" fill="#FF6453"/>
-<path d="M203 749.022H245V751H203V749.022Z" fill="#CE4B46"/>
-<path d="M246 728L252 728V723H260V749.066H246V728Z" fill="#FF6453"/>
-<path d="M246 749.066H260V751H246V749.066Z" fill="#CE4B46"/>
-<path d="M126 723H134V728H142V749.085H126V723Z" fill="#FF6453"/>
-<path d="M126 749.085H142V751H126V749.085Z" fill="#CE4B46"/>
-<path d="M155 728H169V749.022H155V728Z" fill="#FF6453"/>
-<path d="M155 749.022H169V751H155V749.022Z" fill="#CE4B46"/>
-<path d="M143 728H154V749.022H143V728Z" fill="#FF6453"/>
-<path d="M143 749.022H154V751H143V749.022Z" fill="#CE4B46"/>
-<path d="M170 728H184V749.022H170V728Z" fill="#FF6453"/>
-<path d="M170 749.022H184V751H170V749.022Z" fill="#CE4B46"/>
-<path d="M185 728H202V749.022H185V728Z" fill="#FF6453"/>
-<path d="M185 749.022H202V751H185V749.022Z" fill="#CE4B46"/>
+<rect x="249" y="544" width="21" height="13" fill="#AAFF00"/>
+<rect x="270" y="558" width="13" height="21" transform="rotate(90 270 558)" fill="#AAFF00"/>
+<rect x="270" y="572" width="13" height="21" transform="rotate(90 270 572)" fill="#AAFF00"/>
+
+
+
+<g onClick={() => bldClicked("TM-LAB-1A")} style={{ cursor: "pointer" }}>
+  <rect x="270" y="586" width="13" height="21" transform="rotate(90 270 586)" fill="#AAFF00"/>
+  <text x="259.5" y="593.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black"> TM-LAB-1A </text>
+</g>
+
+
+<g onClick={() => bldClicked("TM-LAB-2A")} style={{ cursor: "pointer" }}>
+  <rect  x="270"  y="600"  width="13"  height="21"  transform="rotate(90 270 600)"  fill="#AAFF00"/>
+  <text x="259.5" y="607.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">TM-LAB-2A</text>
+</g>
+
+
+<g onClick={() => bldClicked("Graduate School")} style={{ cursor: "pointer" }}>
+  <rect x="270"  y="634" width="11" height="21" transform="rotate(90 270 634)" fill="#FF3030"/>
+  <text  x="259.5"  y="638.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" > GRADUATE</text>
+  <text  x="259.5"  y="641.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" > SCHOOL</text>
+</g>
+
+
+<g onClick={() => bldClicked("Engineering Faculty Office")} style={{ cursor: "pointer" }}>
+  <rect x="270" y="646" width="17" height="21" transform="rotate(90 270 646)" fill="#FF3030"/>
+  <text x="259.5" y="652.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ENGINEERING</text>
+  <text x="259.5" y="655.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FACULTY</text>
+  <text x="259.5" y="658.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
+</g>
+
+<g onClick={() => bldClicked("Engineering Faculty (Chairman's Office)")} style={{ cursor: "pointer" }}>
+  <rect x="270" y="664" width="17" height="21" transform="rotate(90 270 664)" fill="#FF3030"/>
+  <text x="259.5" y="670.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" >ENGINEERING</text>
+  <text x="259.5" y="673.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" >FACULTY</text>
+  <text x="259.5" y="676.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" >CHAIRMAN OFFICE</text>
+</g>
+{/* deans and conference bld */}
+<g onClick={() => bldClicked("Dean's and Conference")} style={{ cursor: "pointer" }}>
+  <rect x="270" y="682" width="16" height="21" transform="rotate(90 270 682)" fill="#FF3030"/>
+  <text  x="259.5" y="689" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">DEANS</text>
+  <text  x="259.5" y="692" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">& CONFERENCE</text>
+</g>
+
+
+{/* CME Research Center BLD */}
+<g onClick={() => bldClicked("CME Research Center")} style={{ cursor: "pointer" }}>
+  <rect x="270" y="614" width="19"  height="21"  transform="rotate(90 270 614)"  fill="#AAFF00"/>
+  <text   x="259.5"  y="620.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black"> CME</text>
+  <text  x="259.5" y="623.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">RESEARCH</text>
+  <text x="259.5" y="626.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CENTER</text>
+</g>
+
+
+<g style={{ cursor: "default" }}>
+  <path d="M249 699H273V707.938H249V699Z" fill="#73DAFF"/>
+  <path d="M249 707.938H273V710H249V707.938Z" fill="#3BB2DE"/>
+  <text x="261" y="704.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">MALE CR</text>
+</g>
+
+{/* ADMIN OFFICE */}
+<g onClick={() => bldClicked("Admin Staff Office")} style={{ cursor: "pointer" }}>
+  <path d="M203 728H245V749.022H203V728Z" fill="#FF6453"/>
+  <path d="M203 749.022H245V751H203V749.022Z" fill="#CE4B46"/>
+  <text x="224" y="739.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ADMIN OFFICE</text>
+</g>
+
+{/* Campus Director Office BLD */}
+<g onClick={() => bldClicked("Campus Director Office")} style={{ cursor: "pointer" }}>
+  <path d="M246 728L252 728V723H260V749.066H246V728Z" fill="#FF6453"/>
+  <path d="M246 749.066H260V751H246V749.066Z" fill="#CE4B46"/>
+  <text x="253" y="737" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CAMPUS</text>
+  <text x="253" y="740" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">DIRECTOR</text>
+  <text x="253" y="743" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
+</g>
+
+{/* SAO OFFICE BLD */}
+<g onClick={() => bldClicked("SAO Office")} style={{ cursor: "pointer" }}>
+  <path d="M126 723H134V728H142V749.085H126V723Z" fill="#FF6453"/>
+  <path d="M126 749.085H142V751H126V749.085Z" fill="#CE4B46"/>
+  <text x="134" y="739" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">SAO</text>
+  <text  x="134" y="742" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
+</g>
+
+{/* RECORDS BLD */}
+<g onClick={() => bldClicked("New Admin Records")} style={{ cursor: "pointer" }}>
+  <path d="M155 728H169V749.022H155V728Z" fill="#FF6453"/>
+  <path d="M155 749.022H169V751H155V749.022Z" fill="#CE4B46"/>
+  <text x="162" y="739.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">RECORDS</text>
+</g>
+
+{/* GUIDANCE OFFICE BLD */}
+<g onClick={() => bldClicked("Guidance Office")} style={{ cursor: "pointer" }}>
+  <path d="M143 728H154V749.022H143V728Z" fill="#FF6453"/>
+  <path d="M143 749.022H154V751H143V749.022Z" fill="#CE4B46"/>
+  <text x="148.5"  y="738.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">GUIDANCE</text>
+  <text x="148.5"  y="741.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
+</g>
+
+
+{/* HR OFFICE BLD */}
+<g onClick={() => bldClicked("HR Office")} style={{ cursor: "pointer" }}>
+  <path d="M170 728H184V749.022H170V728Z" fill="#FF6453"/>
+  <path d="M170 749.022H184V751H170V749.022Z" fill="#CE4B46"/>
+  <text x="177" y="738.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" >HR  </text>
+  <text x="177" y="741.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black"> OFFICE</text>
+</g>
+
+
+
+{/* GRADUATE SCHOOL */}
+<g onClick={() => bldClicked("Graduate School")} style={{ cursor: "pointer" }}>
+  <path d="M185 728H202V749.022H185V728Z" fill="#FF6453"/>
+  <path d="M185 749.022H202V751H185V749.022Z" fill="#CE4B46"/>
+  <text x="193.5" y="738.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">GRADUATE</text>
+  <text x="193.5" y="741.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">SCHOOL</text>
+</g>
+
+
 <rect x="272" y="528" width="15" height="9" transform="rotate(90 272 528)" fill="#73DAFF"/>
 <path d="M155 484.161L178 484.161V501.796H155V484.161Z" fill="#FFCC00"/>
 <path d="M155 501.796H178V504H155V501.796Z" fill="#D6B018"/>
@@ -336,6 +430,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M220.487 505.57V506.043C220.487 506.595 220.039 507.043 219.487 507.043L188.46 507.043C187.908 507.043 187.46 506.595 187.46 506.043V505" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
 
 </svg>
+
 
 
     </>

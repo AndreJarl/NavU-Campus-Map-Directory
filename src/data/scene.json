@@ -144,7 +144,7 @@
 
 
   "Electrical Engineering Laboratory": {
-    "image": "/public/360/eng/en102b.jpg",
+    "image": "/public/360/eng/en102b.webp",
     "yaw": 0,
     "hotspots": [
       {
@@ -170,7 +170,7 @@
     ]
   },
   "Engineering Laboratory": {
-    "image": "/public/360/eng/en102a.jpg",
+    "image": "/public/360/eng/en102a.webp",
     "yaw": 180,
     "hotspots": [
       {
@@ -210,7 +210,7 @@
     ]
   },
   "COE360": {
-    "image": "/public/360/eng/eng360.jpg",
+    "image": "/public/360/eng/eng360.webp",
     "yaw": 0,
     "hotspots": [
       {
@@ -230,7 +230,7 @@
     ]
   },
   "CME/COE": {
-    "image": "/public/360/eng/coecme.jpg",
+    "image": "/public/360/eng/coecme.webp",
     "yaw": 180,
     "hotspots": [
       {
@@ -263,7 +263,7 @@
     ]
   },
   "Computer Laboratory 1": {
-    "image": "/public/360/eng/encomlab1.jpg",
+    "image": "/public/360/eng/encomlab1.webp",
     "yaw": 180,
     "hotspots": [
       {
@@ -290,7 +290,7 @@
     ]
   },
   "Computer Laboratory 2": {
-    "image": "/public/360/eng/encomlab2.jpg",
+    "image": "/public/360/eng/encomlab2.webp",
     "yaw": 180,
     "hotspots": [
       {
@@ -329,7 +329,7 @@
     ]
   },
   "Electronic Laboratory": {
-    "image": "/public/360/eng/electronicslab.jpg",
+    "image": "/public/360/eng/electronicslab.webp",
     "yaw": 180,
     "hotspots": [
       {
@@ -362,7 +362,7 @@
     ]
   },
   "COE102": {
-    "image": "/public/360/eng/coe102.jpg",
+    "image": "/public/360/eng/coe102.webp",
     "yaw": 180,
     "hotspots": [
       {
@@ -397,7 +397,7 @@
     ]
   },
   "COE101": {
-    "image": "/public/360/eng/coe101.jpg",
+    "image": "/public/360/eng/coe101.webp",
     "yaw": 180,
     "hotspots": [
       {

@@ -16,7 +16,7 @@ const DraggableZoomableSVG = ({onDragStart, OpenCard, setNavigating, isNavigatin
   const containerRef = useRef(null);
   const [viewBox, setViewBox] = useState(
       currentFloor === 1 ? { x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } :
-      currentFloor === 2 ? {x: 3, y: 4, width: 1440, height: 1024 } : currentFloor === 3 ? {} :{}
+      currentFloor === 2 ? {x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } : currentFloor === 3 ? {x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } :{}
   );
   
  const currentFloorCoordinates = buildingCoordinates[currentFloor];
@@ -25,8 +25,8 @@ const { registerZoom } = useZoomContext();
   const initialViewBox = currentFloor === 1 
   ? { x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 }
   : currentFloor === 2 
-  ? {x: 3, y: 4, width: 1440, height: 1024 } 
-  : currentFloor === 3 ? {} : {};
+  ? {x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } 
+  : currentFloor === 3 ? {x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } : {};
 
 
   // Set your desired zoom limits

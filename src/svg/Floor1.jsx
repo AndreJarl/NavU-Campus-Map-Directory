@@ -2,13 +2,14 @@ import React, { forwardRef, useMemo, memo, useCallback  } from 'react';
 import { usePath } from '../context/PathContext';
 import { useCategory } from '../context/CategoryContext';
 import { useScene } from '../context/SceneContext';
+import { useFloorQuery } from '../context/FloorContext';
 
 
 const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
   const { setPath, path } = usePath();
   const { category } = useCategory();
   const { setCurrentScene } = useScene();
-
+  const {setCurrentFloor} = useFloorQuery();
   const allFalse = useMemo(
     () => Object.values(category).every(val => !val),
     [category]
@@ -52,7 +53,10 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path fill="#d9d9d9" d="M183.062 715.235h20v44.8081h-20z" />
         <path fill="#d9d9d9" d="M214.908 712.483h5.88086v7.56152H214.908z" />
         <path fill="#d9d9d9" d="M164.062 712.262h5.88086v7.56152H164.062z" />
-        <path fill="#d9d9d9" d="M114.062 710.043h22v12h-22z" />
+
+        {/* educ to second floor */}
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#d9d9d9" d="M114.062 710.043h22v12h-22z" />
+
         <path fill="#d9d9d9" d="M249.062 710.043h22v12h-22z" />
         <path fill="#d9d9d9" d="M241.062 646.043h33v18h-33z" />
         <path fill="#d9d9d9" d="M111.062 646.043h33v18h-33z" />
@@ -165,23 +169,31 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path fill="#535353" d="M258.001 716.634h9v-.739971h-9z" />
         <path fill="#535353" d="M258 722.043h13v-.739971h-13z" />
         <path fill="#535353" d="M270.2 710.344v10.9585h.8V710.344z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M123.994 710.35h-.99v5.53978h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M122.994 710.35h-.99v5.53978h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M121.994 710.35h-.99v5.53978h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M120.994 710.35h-.99v5.53978h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M119.994 710.35h-.99v5.53978h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M118.994 710.35h-.99v5.53978h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M117.994 710.349h-3.99v11.6883h3.99z" />
+
+         {/*educ to secondfloor */}
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M123.994 710.35h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M122.994 710.35h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M121.994 710.35h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M120.994 710.35h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M119.994 710.35h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M118.994 710.35h-.99v5.53978h.99z" />
+
+       
+        <path  cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M117.994 710.349h-3.99v11.6883h3.99z" />
+
         <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M118.994 716.498h-.99v5.53978h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M119.994 716.498h-.99v5.53978h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M120.994 716.498h-.99v5.53978h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M121.994 716.498h-.99v5.53978h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M122.994 716.498h-.99v5.53978h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M123.994 716.498h-.99v5.53978h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M124.994 710.349h-.99v6.16332h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M125.994 710.349h-.99v6.16332h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M126.994 710.349h-.99v6.16332h.99z" />
-        <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="m124.003 716.498-1.996 5.54h4.987v-5.54z" />
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M119.994 716.498h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M120.994 716.498h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M121.994 716.498h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M122.994 716.498h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M123.994 716.498h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M124.994 710.349h-.99v6.16332h.99z" />
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M125.994 710.349h-.99v6.16332h.99z" />
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M126.994 710.349h-.99v6.16332h.99z" />
+        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="m124.003 716.498-1.996 5.54h4.987v-5.54z" /> 
+
+
+          
         <path fill="#535353" d="M126.999 716.634h-9v-.739971h9z" />
         <path fill="#535353" d="M127 722.043h-13v-.739971h13z" />
         <path fill="#535353" d="M114.8 710.344v10.9585h-.8V710.344z" />

@@ -107,19 +107,25 @@ const buildingData = {
     2: [
       { 
         code: " ", 
-        name: " ",
+        name: "Dean's and Conference",
         description: " ",
         img: " "
       },
       { 
         code: " ", 
-        name: " ",
+        name: "Engineering Faculty (Chairman's Office)",
         description: " ",
         img: " "
       },
       { 
         code: " ", 
-        name: " ",
+        name: "Engineering Faculty",
+        description: " ",
+        img: " "
+      },
+         { 
+        code: " ", 
+        name: "Graduate School",
         description: " ",
         img: " "
       }
@@ -172,19 +178,37 @@ const buildingData = {
   ], 2: [
     { 
       code: " ", 
-      name: " ",
+      name: "CME Research Center",
+      description: " ",
+      img: " "
+    },
+    { 
+      code: "", 
+      name: "TM-LAB-2A",
       description: " ",
       img: " "
     },
     { 
       code: " ", 
-      name: " ",
+      name: "TM-LAB-1A",
+      description: " ",
+      img: " "
+    },
+     { 
+      code: " ", 
+      name: "EN-CME 201",
+      description: " ",
+      img: " "
+    },
+     { 
+      code: "CME Complab 2", 
+      name: "CME Computer Laboratory 2",
       description: " ",
       img: " "
     },
     { 
-      code: " ", 
-      name: " ",
+      code: "CME Complab 1", 
+      name: "CME Computer Laboratory 1",
       description: " ",
       img: " "
     }
@@ -846,27 +870,51 @@ img: ""
       2:[
       {
       code:"",
-      name:" ",
+      name:"Campus Director Office",
       description: " ",
       img: ""
       },
       {
       code:"",
-      name:" ",
+      name:"Admin Staff Office",
       description: " ",
       img: ""
       }, 
       {
       code:"",
-      name:" ",
+      name:"Graduate School",
       description: " ",
       img: ""
-      }
+      },
+        {
+      code:"",
+      name:"HR Office",
+      description: " ",
+      img: ""
+      },
+          {
+      code:"",
+      name:"New Admin Records",
+      description: " ",
+      img: ""
+      },
+            {
+      code:"",
+      name:"Guidance Office",
+      description: " ",
+      img: ""
+      },
+          {
+      code:"",
+      name:"SAO Office",
+      description: " ",
+      img: ""
+      },
       ],
       3:[
       {
       code:"",
-      name:" ",
+      name:"",
       description: " ",
       img: ""
       }
