@@ -18,6 +18,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
   const { zoomToBuilding } = useZoomContext();
   const {setCurrentFloor} =  useFloorQuery();
   // Component States
+  
   const [showQRPopup, setShowQRPopup] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
   const [clicked, setClicked] = useState(false);
@@ -56,7 +57,10 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
   const handleDirections = (roomName) => {setPath(roomName);
       zoomToBuilding("KIOSK");
       setCurrentFloor(1);
-       zoomToBuilding("KIOSK");
+    // 2. Wait for the DOM to update before zooming
+  setTimeout(() => {
+    zoomToBuilding("KIOSK");
+  }, 200);
 
   }
 

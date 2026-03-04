@@ -22,6 +22,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
   );
 
   const bldClicked = useCallback((buildingName) => {
+
     OpenCard(buildingName);
     setPath("");
     setCurrentScene(buildingName);
@@ -94,6 +95,8 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M190.1 497.4V504H190.9V497.4H190.1Z" fill="#535353"/>
 <path d="M196.199 493.001V504.001H196.999V493.001H196.199Z" fill="#535353"/>
 <path d="M184 493V504H184.8V493H184Z" fill="#535353"/>
+
+<g onClick={()=>setCurrentFloor(3)} cursor={"pointer"}>
 <path d="M184.57 493.881H196.43V493.001H184.57V493.881Z" fill="#535353"/>
 <path d="M261.996 710.35H261.006V715.89H261.996V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M262.996 710.35H262.006V715.89H262.996V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
@@ -101,6 +104,8 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M264.996 710.35H264.006V715.89H264.996V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M265.996 710.35H265.006V715.89H265.996V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M266.996 710.35H266.006V715.89H266.996V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+</g>
+
 <path d="M270.996 710.349H267.006V722.037H270.996V710.349Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M266.996 716.498H266.006V722.038H266.996V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M265.996 716.498H265.006V722.038H265.996V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
@@ -119,23 +124,33 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M267.001 716.634H258.001V715.894H267.001V716.634Z" fill="#535353"/>
 <path d="M271 722.043H258V721.303H271V722.043Z" fill="#535353"/>
 <path d="M270.2 721.302V710.344H271V721.302H270.2Z" fill="#535353"/>
+
+<g onClick={()=>setCurrentFloor(3)} cursor={"pointer"}>
 <path d="M123.004 710.35H123.994V715.89H123.004V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M122.004 710.35H122.994V715.89H122.004V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M121.004 710.35H121.994V715.89H121.004V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M120.004 710.35H120.994V715.89H120.004V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M119.004 710.35H119.994V715.89H119.004V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M118.004 710.35H118.994V715.89H118.004V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+</g>
 <path d="M114.004 710.349H117.994V722.037H114.004V710.349Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M118.004 716.498H118.994V722.038H118.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
-<path d="M119.004 716.498H119.994V722.038H119.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
-<path d="M120.004 716.498H120.994V722.038H120.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
-<path d="M121.004 716.498H121.994V722.038H121.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
-<path d="M122.004 716.498H122.994V722.038H122.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+
+<path onClick={()=>setCurrentFloor(1)} cursor={"pointer"} d="M119.004 716.498H119.994V722.038H119.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+
+<path onClick={()=>setCurrentFloor(1)} cursor={"pointer"} d="M120.004 716.498H120.994V722.038H120.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+
+<path onClick={()=>setCurrentFloor(1)} cursor={"pointer"} d="M121.004 716.498H121.994V722.038H121.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+<path onClick={()=>setCurrentFloor(1)} cursor={"pointer"} d="M122.004 716.498H122.994V722.038H122.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+
+<g onClick={()=>setCurrentFloor(3)} cursor={"pointer"}>
 <path d="M123.004 716.498H123.994V722.038H123.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M124.004 710.349H124.994V716.512H124.004V710.349Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M125.004 710.349H125.994V716.512H125.004V710.349Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M126.004 710.349H126.994V716.512H126.004V710.349Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
-<path d="M124.003 716.498L122.007 722.038H126.994V716.498H124.003Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+</g>
+<path onClick={()=>setCurrentFloor(1)} cursor={"pointer"}  d="M124.003 716.498L122.007 722.038H126.994V716.498H124.003Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+
 <path d="M117.999 716.634H126.999V715.894H117.999V716.634Z" fill="#535353"/>
 <path d="M114 722.043H127V721.303H114V722.043Z" fill="#535353"/>
 <path d="M114.8 721.302V710.344H114V721.302H114.8Z" fill="#535353"/>

@@ -1273,6 +1273,8 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path stroke="#535353" d="M198 510h11" />
         <path stroke="#535353" d="M220 510h6" />
         {/* KIOSK */}
+        
+        <g onClick={() => zooomBuildingbyName("KIOSK")} style={{ cursor: "pointer", pointerEvents: 'all' }} className='floating-element'>
         <path onClick={() => zooomBuildingbyName("KIOSK")} style={{ cursor: "pointer", pointerEvents: 'all' }} className='floating-element' fill="#fffec6" stroke="#ea8228" stroke-width=".5" d="M198.742 729.458c0-.095 0-.142.029-.171.03-.029.077-.029.171-.029h3.284c.094 0 .141 0 .17.029.03.029.03.076.03.171v4.085c0 .095 0 .142-.03.171-.029.029-.076.029-.17.029h-3.284c-.094 0-.141 0-.171-.029-.029-.029-.029-.076-.029-.171z" />
         <path onClick={() => zooomBuildingbyName("KIOSK")} style={{ cursor: "pointer", pointerEvents: 'all' }} className='floating-element' stroke="#f55456" stroke-linecap="round" stroke-width=".6" d="M200.584 732.648v.024" />
         <rect onClick={() => zooomBuildingbyName("KIOSK")} style={{ cursor: "pointer", pointerEvents: 'all' }} className='floating-element' width=".68" height=".683594" x="199.643" y="730.193" fill="#65a468" rx=".1" />
@@ -1281,7 +1283,7 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <rect onClick={() => zooomBuildingbyName("KIOSK")} style={{ cursor: "pointer", pointerEvents: 'all' }} className='floating-element' width=".68" height=".683594" x="200.844" y="731.247" fill="#a46566" rx=".1" />
         <text onClick={() => zooomBuildingbyName("KIOSK")} style={{ cursor: "pointer", pointerEvents: 'all' }} className='floating-element' x="194" y="737" fontSize="3" fill="#000" fontWeight="bold" >YOU ARE </text>
         <text onClick={() => zooomBuildingbyName("KIOSK")} style={{ cursor: "pointer", pointerEvents: 'all' }} className='floating-element' x="197" y="741" fontSize="3" fill="#000" fontWeight="bold"> HERE</text>
-
+        </g>
         {/* PAGLAUM FARM */}
         <path fill={allFalse ? '#8cd200' : category[""] ? "#8cd200" : "#B0B0B0"} stroke={allFalse ? '#609400' : category[""] ? "#609400" : "#B0B0B0"} stroke-width={0.4} d="M351 759h109v27.4194H351z" />
         <text x="405.5" y="773.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2.5" fill="black">PAGLAUM FARM</text>
