@@ -8,6 +8,7 @@ import { useScene } from "../context/SceneContext";
 import GenerateQR from "./GenerateQR";
 import PanoramaViewer from '../components/PanoramaViewer';
 import { useZoomContext } from "../context/ZoomContext";
+import { useFloorQuery } from "../context/FloorContext";
 
 function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) {
   const { query } = useQuery();
@@ -15,6 +16,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
   const { setPath } = usePath();
   const { setCurrentScene } = useScene();
   const { zoomToBuilding } = useZoomContext();
+  const {setCurrentFloor} =  useFloorQuery();
   // Component States
   const [showQRPopup, setShowQRPopup] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
@@ -52,7 +54,10 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
   }, [isDragging, showOverlay, clicked]);
 
   const handleDirections = (roomName) => {setPath(roomName);
-        zoomToBuilding("KIOSK");
+      zoomToBuilding("KIOSK");
+      setCurrentFloor(1);
+       zoomToBuilding("KIOSK");
+
   }
 
   const closeBtn = () => {

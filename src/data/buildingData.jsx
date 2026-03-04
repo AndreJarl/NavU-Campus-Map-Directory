@@ -211,7 +211,8 @@ const buildingData = {
       name: "CME Computer Laboratory 1",
       description: " ",
       img: " "
-    }
+    },
+    
   ],
 }
   },
@@ -296,19 +297,19 @@ rooms: {
   2: [
     { 
       code: " ", 
-      name: "FFF",
+      name: "Dean's Education Office",
       description: " ",
       img: ""
     },
     { 
-      code: " ", 
-      name: " ",
+      code: "", 
+      name: "ED-202",
       description: " ",
       img: " "
     },
     { 
-      code: " ", 
-      name: " ",
+      code: "", 
+      name: "ED-201",
       description: " ",
       img: " "
     }
@@ -601,44 +602,44 @@ img: ""
         2: [
           { 
             code: " ", 
-            name: " ",
+            name: "College of Technology Office",
             description: " ",
             img: " "
           },
           { 
             code: " ", 
-            name: " ",
+            name: "Tesda Office",
             description: " ",
             img: " "
           },
           { 
             code: " ", 
-            name: " ",
+            name: "Office",
             description: " ",
             img: " "
           },
           {       
             code: " ", 
-            name: " ",
+            name: "COT Comp Lab 204",
             description: " ",
             img: " "
           }, 
           {
           code: " ", 
-            name: " ",
+            name: "COT Comp Lab 203",
             description: " ",
             img: " "
 
           }, 
           {
             code: " ", 
-            name: " ",
+            name: "COT Comp Lab 202",
             description: " ",
             img: " "
             },
             {
             code: " ", 
-            name: " ",
+            name: "COT Stock Room",
             description: " ",
             img: " "
 
