@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { ChevronUp } from 'lucide-react';
 import { useFloorQuery } from '../context/FloorContext';
+import { useTransition } from '../context/TransitionContext';
 
 function Floors() {
   const [isOpen, setIsOpen] = useState(false);
   const { currentFloor, setCurrentFloor } = useFloorQuery();
-  
+  const {trigger} = useTransition();
+
   const floors = ['Floor 1', 'Floor 2', 'Floor 3', 'Floor 4'];
 
   return (
@@ -24,7 +26,9 @@ function Floors() {
                   key={floorName}
                   onClick={() => {
                     setCurrentFloor(floorNumber);
+                    trigger();
                     setIsOpen(false);
+
                   }}
                   className={`w-full text-left px-4 py-2.5 text-sm transition-colors
                     ${currentFloor === floorNumber 

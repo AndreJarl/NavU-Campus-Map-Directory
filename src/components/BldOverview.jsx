@@ -1,17 +1,20 @@
-import { useState, useRef, useEffect, useMemo } from "react";
+import { useState, useRef, useEffect, useMemo, useTransition } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import cardData from "../data/CardData";
 import { Building2, ChevronUp, Search, X } from "lucide-react";
 import buildingData from "../data/buildingData";
 import { usePath } from "../context/PathContext";
 import { useScene } from "../context/SceneContext";
+import { useFloorQuery } from "../context/FloorContext";
 
 function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomSearched }) {
   const buildingDatas = cardData[query.building];
   const rooms = buildingData?.[query.building]?.rooms;
   const { setPath } = usePath();
   const { setCurrentScene } = useScene();
-  
+  const {setCurrentFloor} = useFloorQuery();
+  const {trigger} = useTransition();
+
   const [cardHeight, setCardHeight] = useState(40);
   const [isDragging, setIsDragging] = useState(false);
   const [startY, setStartY] = useState(0);
@@ -181,6 +184,8 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
                             room: { ...room, floor: selectedFloor },
                         }));
                         setRoomSearched(true);
+                        setCurrentFloor(Number(selectedFloor));
+                        trigger();
                         setBldClicked(false);
                         }}
                         className="group flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.10] hover:bg-white/[0.08] hover:border-white/20 transition-all cursor-pointer active:scale-[0.98]"

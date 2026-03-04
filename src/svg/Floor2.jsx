@@ -3,14 +3,15 @@ import { usePath } from '../context/PathContext';
 import { useCategory } from '../context/CategoryContext';
 import { useScene } from '../context/SceneContext';
 import { useFloorQuery } from '../context/FloorContext';
-
+import { useTransition } from '../context/TransitionContext';
 
 const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
   const { setPath, path } = usePath();
   const { category } = useCategory();
   const { setCurrentScene } = useScene();
   const {setCurrentFloor} = useFloorQuery();
-
+  const {trigger} = useTransition();
+ 
   const allFalse = useMemo(
     () => Object.values(category).every(val => !val),
     [category]
@@ -29,6 +30,11 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     zooomBuildingbyName(buildingName);
   }, [OpenCard, setPath, setCurrentScene, zooomBuildingbyName]);
 
+    const handleFloor = useCallback((num) => {
+           setCurrentFloor(num);
+           trigger();
+    },[trigger]);
+  
   return (
     <>
    <svg
@@ -96,7 +102,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M196.199 493.001V504.001H196.999V493.001H196.199Z" fill="#535353"/>
 <path d="M184 493V504H184.8V493H184Z" fill="#535353"/>
 
-<g onClick={()=>setCurrentFloor(3)} cursor={"pointer"}>
+<g onClick={()=>handleFloor(3)} cursor={"pointer"}>
 <path d="M184.57 493.881H196.43V493.001H184.57V493.881Z" fill="#535353"/>
 <path d="M261.996 710.35H261.006V715.89H261.996V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M262.996 710.35H262.006V715.89H262.996V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
@@ -109,9 +115,9 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M270.996 710.349H267.006V722.037H270.996V710.349Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M266.996 716.498H266.006V722.038H266.996V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M265.996 716.498H265.006V722.038H265.996V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
-<path onClick={()=>setCurrentFloor(1)} cursor={"pointer"} d="M264.996 716.498H264.006V722.038H264.996V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+<path onClick={()=>handleFloor(1)} cursor={"pointer"} d="M264.996 716.498H264.006V722.038H264.996V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 
-<path onClick={()=>setCurrentFloor(1)} cursor={"pointer"} d="M263.996 716.498H263.006V722.038H263.996V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+<path onClick={()=>handleFloor(1)} cursor={"pointer"} d="M263.996 716.498H263.006V722.038H263.996V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 
 <path d="M262.996 716.498H262.006V722.038H262.996V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M261.996 716.498H261.006V722.038H261.996V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
@@ -119,13 +125,13 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M259.996 710.349H259.006V716.512H259.996V710.349Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M258.996 710.349H258.006V716.512H258.996V710.349Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 
-<path onClick={()=>setCurrentFloor(1)} cursor={"pointer"} d="M260.997 716.498L262.993 722.038H258.006V716.498H260.997Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+<path onClick={()=>handleFloor(1)} cursor={"pointer"} d="M260.997 716.498L262.993 722.038H258.006V716.498H260.997Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 
 <path d="M267.001 716.634H258.001V715.894H267.001V716.634Z" fill="#535353"/>
 <path d="M271 722.043H258V721.303H271V722.043Z" fill="#535353"/>
 <path d="M270.2 721.302V710.344H271V721.302H270.2Z" fill="#535353"/>
 
-<g onClick={()=>setCurrentFloor(3)} cursor={"pointer"}>
+<g onClick={()=>handleFloor(3)} cursor={"pointer"}>
 <path d="M123.004 710.35H123.994V715.89H123.004V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M122.004 710.35H122.994V715.89H122.004V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M121.004 710.35H121.994V715.89H121.004V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
@@ -136,20 +142,20 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M114.004 710.349H117.994V722.037H114.004V710.349Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M118.004 716.498H118.994V722.038H118.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 
-<path onClick={()=>setCurrentFloor(1)} cursor={"pointer"} d="M119.004 716.498H119.994V722.038H119.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+<path onClick={()=>handleFloor(1)} cursor={"pointer"} d="M119.004 716.498H119.994V722.038H119.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 
-<path onClick={()=>setCurrentFloor(1)} cursor={"pointer"} d="M120.004 716.498H120.994V722.038H120.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+<path onClick={()=>handleFloor(1)} cursor={"pointer"} d="M120.004 716.498H120.994V722.038H120.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 
-<path onClick={()=>setCurrentFloor(1)} cursor={"pointer"} d="M121.004 716.498H121.994V722.038H121.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
-<path onClick={()=>setCurrentFloor(1)} cursor={"pointer"} d="M122.004 716.498H122.994V722.038H122.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+<path onClick={()=>handleFloor(1)} cursor={"pointer"} d="M121.004 716.498H121.994V722.038H121.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+<path onClick={()=>handleFloor(1)} cursor={"pointer"} d="M122.004 716.498H122.994V722.038H122.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 
-<g onClick={()=>setCurrentFloor(3)} cursor={"pointer"}>
+<g onClick={()=>handleFloor(3)} cursor={"pointer"}>
 <path d="M123.004 716.498H123.994V722.038H123.004V716.498Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M124.004 710.349H124.994V716.512H124.004V710.349Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M125.004 710.349H125.994V716.512H125.004V710.349Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M126.004 710.349H126.994V716.512H126.004V710.349Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 </g>
-<path onClick={()=>setCurrentFloor(1)} cursor={"pointer"}  d="M124.003 716.498L122.007 722.038H126.994V716.498H124.003Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+<path onClick={()=>handleFloor(1)} cursor={"pointer"}  d="M124.003 716.498L122.007 722.038H126.994V716.498H124.003Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 
 <path d="M117.999 716.634H126.999V715.894H117.999V716.634Z" fill="#535353"/>
 <path d="M114 722.043H127V721.303H114V722.043Z" fill="#535353"/>
@@ -268,7 +274,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path opacity={path === "TM-LAB-2A" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.354 606.987H247.243C246.691 606.987 246.243 607.435 246.243 607.987V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 
-<path opacity={path === "CME Research Center" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.354 592.942H247.243C246.691 592.942 246.243 593.389 246.243 593.942L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "TM-LAB-1A" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.354 592.942H247.243C246.691 592.942 246.243 593.389 246.243 593.942L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 
 <path opacity={path === "CME Computer Laboratory 2" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.638 578.84H247.243C246.691 578.84 246.243 579.287 246.243 579.84L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>

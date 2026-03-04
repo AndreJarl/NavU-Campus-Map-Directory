@@ -9,6 +9,8 @@ import { PathProvider } from './context/PathContext.jsx'
 import { CategoryProvider } from './context/CategoryContext.jsx'
 import {SceneProvider} from './context/SceneContext.jsx'
 import { ZoomProvider } from './context/ZoomContext.jsx'
+import { TransitionProvider } from './context/TransitionContext.jsx'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
@@ -18,7 +20,9 @@ createRoot(document.getElementById('root')).render(
           <CategoryProvider>
                <SceneProvider>
                  <ZoomProvider>
+                          <TransitionProvider>
                             <App />
+                            </TransitionProvider>
                   </ZoomProvider>
                 </SceneProvider>
            </CategoryProvider>

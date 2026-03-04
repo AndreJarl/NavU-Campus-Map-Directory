@@ -9,6 +9,7 @@ import GenerateQR from "./GenerateQR";
 import PanoramaViewer from '../components/PanoramaViewer';
 import { useZoomContext } from "../context/ZoomContext";
 import { useFloorQuery } from "../context/FloorContext";
+import { useTransition } from "../context/TransitionContext";
 
 function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) {
   const { query } = useQuery();
@@ -17,6 +18,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
   const { setCurrentScene } = useScene();
   const { zoomToBuilding } = useZoomContext();
   const {setCurrentFloor} =  useFloorQuery();
+  const {trigger} = useTransition();
   // Component States
   
   const [showQRPopup, setShowQRPopup] = useState(false);
@@ -55,8 +57,9 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
   }, [isDragging, showOverlay, clicked]);
 
   const handleDirections = (roomName) => {setPath(roomName);
-      zoomToBuilding("KIOSK");
       setCurrentFloor(1);
+      trigger();
+      
     // 2. Wait for the DOM to update before zooming
   setTimeout(() => {
     zoomToBuilding("KIOSK");
@@ -140,7 +143,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
         </span>
       </div>
 
-          <div className="absolute -bottom-20 left-6 z-20 text-white pr-4">
+          <div className="absolute -bottom-24 left-6 z-20 text-white pr-4">
             <h2 className="text-2xl lg:text-3xl font-bold tracking-tight">{room?.name}</h2>
             <div className="flex items-center gap-3 mt-2">
               <span className="bg-red-900/40 text-red-400 text-[10px] font-bold px-3 py-1 rounded-full border border-red-500/30 uppercase">Floor {floor}</span>
@@ -171,7 +174,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
           )}
         </div>
 
-        <div className="flex-1 overflow-y-auto px-6 mt-20 custom-scrollbar pb-6">
+        <div className="flex-1 overflow-y-auto px-6 mt-24 custom-scrollbar pb-6">
           <div className="mb-6 mt-3">
             <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Description</h3>
             <p className="text-gray-300 leading-relaxed text-xs font-light italic">"{room?.description || "No description available."}"</p>

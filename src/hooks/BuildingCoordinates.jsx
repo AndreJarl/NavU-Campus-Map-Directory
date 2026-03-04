@@ -105,11 +105,28 @@ export const buildingCoordinates ={
 
     },
     2:{
-      ////ENGINEERING
+      ////CME ENGINEERING
       "College of Engineering Building": {x: 223.71365113209748, y: 687.793026800932, zoom: 8},
       "Dean's and Conference": {x:246.0069552718857 , y:694.4697406752874 , zoom:7},
       "Engineering Faculty (Chairman's Office)": {x: 244.73321225505086 , y:678.6167036382503 , zoom:8},
       "Engineering Faculty Office": {x: 244.12209547706624 , y:635.294880875634 , zoom:8},
+       "Graduate School": {x: 244.12209547706624 , y:635.294880875634 , zoom:8},
+       "CME Research Center":  {x: 247.86803998502742 , y:605.3003625099935 , zoom:8},
+       "TM-LAB-2A":  {x: 247.86803998502742 , y:605.3003625099935 , zoom:8},
+       "TM-LAB-1A":  {x: 247.86803998502742 , y:605.3003625099935 , zoom:8},
+       "EN-CME 201": {x: 246.3931796498319 , y:570.3326588062895 , zoom:8},
+       "CME Computer Laboratory 2": {x: 246.3931796498319 , y:570.3326588062895 , zoom:8},
+      "CME Computer Laboratory 1": {x: 246.3931796498319 , y:570.3326588062895 , zoom:8},
+
+      //EDUC
+      "Dean's Education Office" : {x:120.22143722740127, y:695.291886343413, zoom: 8},
+      "ED-201" : {x:120.22143722740127, y:695.291886343413, zoom: 8},
+      "ED-202" : {x:118.41138136147954, y:679.924889713648, zoom: 8},
+
+
+
+
+
     },
     3:{
 

@@ -3,9 +3,23 @@ import { Building2 } from 'lucide-react';
 import buildingData from "../data/buildingData";
 import { useState } from "react";
 import Keyboard from './Keyboard';
+import { useTransition } from "../context/TransitionContext";
 
 function SearchBar({ searchTerm, suggestions, keyboardClicked,      // Receive from parent
   setKeyboardClicked, handleSearch, handleSuggestionClicked,zoomToBuilding   }) {
+  const {trigger} = useTransition();
+
+   const handleClick = (suggestion) => {
+      handleSuggestionClicked(suggestion);
+        setKeyboardClicked(false);
+        trigger();
+        zoomToBuilding(suggestion.room ? suggestion.room.name : suggestion.building); 
+        setTimeout(() => {
+         zoomToBuilding(suggestion.room ? suggestion.room.name : suggestion.building); 
+
+     }, 200);
+
+     }
   
 
   return (
@@ -54,9 +68,7 @@ function SearchBar({ searchTerm, suggestions, keyboardClicked,      // Receive f
           {suggestions.map((suggestion, index) => (
             <div
               key={index}
-              onClick={() => {handleSuggestionClicked(suggestion);
-                setKeyboardClicked(false);
-                zoomToBuilding(suggestion.room ? suggestion.room.name : suggestion.building); // ✅
+              onClick={() => {handleClick(suggestion)
 
               }}
               className="flex flex-row items-center gap-3 lg:gap-4 w-full py-2 px-3 lg:px-4

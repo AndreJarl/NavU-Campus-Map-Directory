@@ -3,6 +3,7 @@ import { usePath } from '../context/PathContext';
 import { useCategory } from '../context/CategoryContext';
 import { useScene } from '../context/SceneContext';
 import { useFloorQuery } from '../context/FloorContext';
+import { useTransition } from '../context/TransitionContext';
 
 
 const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
@@ -10,6 +11,8 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
   const { category } = useCategory();
   const { setCurrentScene } = useScene();
   const {setCurrentFloor} = useFloorQuery();
+  const {trigger} = useTransition();
+
   const allFalse = useMemo(
     () => Object.values(category).every(val => !val),
     [category]
@@ -26,6 +29,11 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     setCurrentScene(buildingName);
     zooomBuildingbyName(buildingName);
   }, [OpenCard, setPath, setCurrentScene, zooomBuildingbyName]);
+
+  const handleFloor = useCallback((num) => {
+         setCurrentFloor(num);
+         trigger();
+  },[trigger]);
 
   return (
     <>
@@ -55,7 +63,7 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path fill="#d9d9d9" d="M164.062 712.262h5.88086v7.56152H164.062z" />
 
         {/* educ to second floor */}
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#d9d9d9" d="M114.062 710.043h22v12h-22z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#d9d9d9" d="M114.062 710.043h22v12h-22z" />
 
         <path fill="#d9d9d9" d="M249.062 710.043h22v12h-22z" />
         <path fill="#d9d9d9" d="M241.062 646.043h33v18h-33z" />
@@ -165,7 +173,7 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M262.006 716.498h.99v5.53978h-.99z" />
         <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M261.006 716.498h.99v5.53978h-.99z" />
 
-        <g cursor={"pointer"} onClick={()=>setCurrentFloor(2)}>
+        <g cursor={"pointer"} onClick={()=>handleFloor(2)}>
         <path  fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M260.006 710.349h.99v6.16332h-.99z" />
         <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M261.006 710.35h.99v5.53978h-.99z" />
         <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M264.006 710.35h.99v5.53978h-.99z" />
@@ -182,26 +190,26 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
         <path fill="#535353" d="M270.2 710.344v10.9585h.8V710.344z" />
 
          {/*educ to secondfloor */}
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M123.994 710.35h-.99v5.53978h.99z" />
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M122.994 710.35h-.99v5.53978h.99z" />
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M121.994 710.35h-.99v5.53978h.99z" />
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M120.994 710.35h-.99v5.53978h.99z" />
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M119.994 710.35h-.99v5.53978h.99z" />
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M118.994 710.35h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M123.994 710.35h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M122.994 710.35h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M121.994 710.35h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M120.994 710.35h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M119.994 710.35h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M118.994 710.35h-.99v5.53978h.99z" />
 
        
-        <path  cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M117.994 710.349h-3.99v11.6883h3.99z" />
+        <path  cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M117.994 710.349h-3.99v11.6883h3.99z" />
 
         <path fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M118.994 716.498h-.99v5.53978h.99z" />
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M119.994 716.498h-.99v5.53978h.99z" />
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M120.994 716.498h-.99v5.53978h.99z" />
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M121.994 716.498h-.99v5.53978h.99z" />
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M122.994 716.498h-.99v5.53978h.99z" />
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M123.994 716.498h-.99v5.53978h.99z" />
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M124.994 710.349h-.99v6.16332h.99z" />
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M125.994 710.349h-.99v6.16332h.99z" />
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M126.994 710.349h-.99v6.16332h.99z" />
-        <path cursor={"pointer"} onClick={()=>setCurrentFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="m124.003 716.498-1.996 5.54h4.987v-5.54z" /> 
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M119.994 716.498h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M120.994 716.498h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M121.994 716.498h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M122.994 716.498h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M123.994 716.498h-.99v5.53978h.99z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M124.994 710.349h-.99v6.16332h.99z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M125.994 710.349h-.99v6.16332h.99z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="M126.994 710.349h-.99v6.16332h.99z" />
+        <path cursor={"pointer"} onClick={()=>handleFloor(2)} fill="#e6e6e6" stroke="#000" stroke-width=".01" d="m124.003 716.498-1.996 5.54h4.987v-5.54z" /> 
 
 
           
@@ -870,7 +878,7 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
             path === "Campus Director Office" || 
             path === "Dean's and Conference" || 
             path === "Engineering Faculty (Chairman's Office)"  ||
-            path === "Admin Staff Office" || path === "Graduate School" || path === "Engineering Faculty Office" || path === "CME Research Center" || path === "TM-LAB-2A" || path === "CME Computer Laboratory 2" || path === "CME Computer Laboratory 1"
+            path === "Admin Staff Office" || path === "Graduate School" || path === "Engineering Faculty Office" || path === "CME Research Center" || path === "TM-LAB-2A" || path === "CME Computer Laboratory 2" || path === "CME Computer Laboratory 1" || path === "TM-LAB-1A" || path === "EN-CME 201"
             ? "1" : "0"
           }stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.504 727.276L200.503 726.278C200.502 725.173 201.398 724.276 202.503 724.276H243.5C244.605 724.276 245.5 723.381 245.5 722.276V714.791C245.5 713.686 246.395 712.791 247.5 712.791H259.5"><path d="M200.502 727.273L200.501 726.271C200.5 725.167 199.605 724.273 198.501 724.273H141.5C140.395 724.273 139.5 723.377 139.5 722.273V657.759C139.5 656.654 138.605 655.759 137.5 655.759H95C93.8955 655.759 93 654.863 93 653.759V625.335C93 624.962 92.8956 624.597 92.6986 624.28L81.8014 606.749C81.6044 606.432 81.5 606.067 81.5 605.694V560.527C81.5 559.975 81.0523 559.527 80.5 559.527L63.4109 559.527C62.8587 559.527 62.411 559.975 62.411 560.527V563.372C62.411 563.924 62.8587 564.372 63.411 564.372H67.1088"/></path>
         
