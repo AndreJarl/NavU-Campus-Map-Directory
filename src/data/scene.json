@@ -144,7 +144,7 @@
 
 
   "Electrical Engineering Laboratory": {
-    "image": "/public/360/eng/en102b.webp",
+    "image": "/360/eng/en102b.webp",
     "yaw": 0,
     "hotspots": [
       {
@@ -170,7 +170,7 @@
     ]
   },
   "Engineering Laboratory": {
-    "image": "/public/360/eng/en102a.webp",
+    "image": "/360/eng/en102a.webp",
     "yaw": 180,
     "hotspots": [
       {
@@ -210,7 +210,7 @@
     ]
   },
   "COE360": {
-    "image": "/public/360/eng/eng360.webp",
+    "image": "/360/eng/eng360.webp",
     "yaw": 0,
     "hotspots": [
       {
@@ -230,7 +230,7 @@
     ]
   },
   "CME/COE": {
-    "image": "/public/360/eng/coecme.webp",
+    "image": "/360/eng/coecme.webp",
     "yaw": 180,
     "hotspots": [
       {
@@ -263,7 +263,7 @@
     ]
   },
   "Computer Laboratory 1": {
-    "image": "/public/360/eng/encomlab1.webp",
+    "image": "/360/eng/encomlab1.webp",
     "yaw": 180,
     "hotspots": [
       {
@@ -290,7 +290,7 @@
     ]
   },
   "Computer Laboratory 2": {
-    "image": "/public/360/eng/encomlab2.webp",
+    "image": "/360/eng/encomlab2.webp",
     "yaw": 180,
     "hotspots": [
       {
@@ -329,7 +329,7 @@
     ]
   },
   "Electronic Laboratory": {
-    "image": "/public/360/eng/electronicslab.webp",
+    "image": "/360/eng/electronicslab.webp",
     "yaw": 180,
     "hotspots": [
       {
@@ -362,7 +362,7 @@
     ]
   },
   "COE102": {
-    "image": "/public/360/eng/coe102.webp",
+    "image": "/360/eng/coe102.webp",
     "yaw": 180,
     "hotspots": [
       {
@@ -397,7 +397,7 @@
     ]
   },
   "COE101": {
-    "image": "/public/360/eng/coe101.webp",
+    "image": "/360/eng/coe101.webp",
     "yaw": 180,
     "hotspots": [
       {
@@ -443,7 +443,7 @@
 
 
   "EducCr": {
-    "image": "/public/360/educ/educcr1.jpg",
+    "image": "/360/educ/educcr1.jpg",
     "yaw": 0,
     "hotspots": [
       {
@@ -469,7 +469,7 @@
     ]
   },
   "Education Laboratory 1": {
-    "image": "/public/360/educ/ed-102b.jpg",
+    "image": "/360/educ/ed-102b.jpg",
     "yaw": 0,
     "hotspots": [
       {
@@ -495,7 +495,7 @@
     ]
   },
   "Education Laboratory 2": {
-    "image": "/public/360/educ/educphysics.jpg",
+    "image": "/360/educ/educphysics.jpg",
     "yaw": 0,
     "hotspots": [
             {
@@ -519,7 +519,7 @@
     ]
   },
   "Educ360": {
-    "image": "/public/360/educ/educ360.jpg",
+    "image": "/360/educ/educ360.jpg",
     "yaw": 0,
     "hotspots": [
             {
@@ -540,7 +540,7 @@
 
 
   "Edtech Laboratory 1": {
-    "image": "/public/360/educ/edtechlab1.jpg",
+    "image": "/360/educ/edtechlab1.jpg",
     "yaw": 0,
     "hotspots": [
             {
@@ -565,7 +565,7 @@
   },
 
   "Edtech Laboratory 2": {
-    "image": "/public/360/educ/edtechlab2.jpg",
+    "image": "/360/educ/edtechlab2.jpg",
     "yaw": 0,
     "hotspots": [
             {
@@ -590,7 +590,7 @@
   },
 
   "General Chemistry Laboratory": {
-    "image": "/public/360/educ/chemlab.jpg",
+    "image": "/360/educ/chemlab.jpg",
     "yaw": 0,
     "hotspots": [
             {
@@ -616,7 +616,7 @@
 
 
   "Ergonomic Laboratory": {
-    "image": "/public/360/educ/ergolab.jpg",
+    "image": "/360/educ/ergolab.jpg",
     "yaw": 0,
     "hotspots": [
             {
@@ -641,7 +641,7 @@
   },
 
   "Chicos": {
-    "image": "/public/360/chicos.jpg",
+    "image": "/360/chicos.jpg",
     "yaw": 0,
     "hotspots": [
             {
@@ -669,7 +669,7 @@
   
 
   "Room26Path": {
-    "image": "/public/360/room26path.jpg",
+    "image": "/360/room26path.jpg",
     "yaw": 0,
     "hotspots": [
             {
@@ -699,7 +699,7 @@
     ]
   },
   "Room34Path": {
-    "image": "/public/360/room34path.jpg",
+    "image": "/360/room34path.jpg",
     "yaw": 0,
     "hotspots": [
             {
@@ -719,27 +719,21 @@
         "yaw": 100,
         "type": "arrow",
         "target": "Chicos"
-      },
-        {
-        "pitch": 20,
-        "yaw": 470,
-        "type": "info",
-        "label": "Room26"
       }
     ]
   },
 
 
 
-  "Room34": {
-    "image": "/public/360/room34.jpg",
+  "Room 34": {
+    "image": "/360/room34.jpg",
     "yaw": 0,
     "hotspots": [
             {
         "pitch": -160.5,
         "yaw": -170,
         "type": "arrow",
-        "target": "Room35"
+        "target": "Room 35"
       },
             {
         "pitch": -160.5,
@@ -751,60 +745,60 @@
         "pitch": 20,
         "yaw": 450,
         "type": "info",
-        "label": "Room34"
+        "label": "Room 34"
       }
     ]
   },
-  "Room35": {
-    "image": "/public/360/room35.jpg",
+  "Room 35": {
+    "image": "/360/room35.jpg",
     "yaw": 0,
     "hotspots": [
             {
         "pitch": -160.5,
         "yaw": -170,
         "type": "arrow",
-        "target": "Room36"
+        "target": "Room 36"
       },
             {
         "pitch": -160.5,
         "yaw": 5,
         "type": "arrow",
-        "target": "Room34"
+        "target": "Room 34"
       },
         {
         "pitch": 20,
         "yaw": 450,
         "type": "info",
-        "label": "Room35"
+        "label": "Room 35"
       }
     ]
   },
-   "Room36": {
-    "image": "/public/360/room36.jpg",
+   "Room 36": {
+    "image": "/360/room36.jpg",
     "yaw": 0,
     "hotspots": [
             {
         "pitch": -160.5,
         "yaw": -170,
         "type": "arrow",
-        "target": "Room37"
+        "target": "Room 37"
       },
             {
         "pitch": -160.5,
         "yaw": 5,
         "type": "arrow",
-        "target": "Room34"
+        "target": "Room 34"
       },
         {
         "pitch": 20,
         "yaw": 420,
         "type": "info",
-        "label": "Room36"
+        "label": "Room 36"
       }
     ]
   },
-   "Room37": {
-    "image": "/public/360/room37.jpg",
+   "Room 37": {
+    "image": "/360/room37.jpg",
     "yaw": 0,
     "hotspots": [
             {
@@ -817,13 +811,13 @@
         "pitch": -160.5,
         "yaw": 5,
         "type": "arrow",
-        "target": "Room36"
+        "target": "Room 36"
       },
         {
         "pitch": 20,
         "yaw": 420,
         "type": "info",
-        "label": "Room37"
+        "label": "Room 37"
       }
     ]
   },
@@ -833,7 +827,7 @@
 
 
   "Floating Classroom": {
-    "image": "/public/360/floating.jpg",
+    "image": "/360/floating.jpg",
     "yaw": 0,
     "hotspots": [
             {
@@ -852,7 +846,7 @@
         "pitch": -160.5,
         "yaw": -80,
         "type": "arrow",
-        "target": "Room37"
+        "target": "Room 37"
       },
         {
         "pitch": 20,
@@ -863,7 +857,7 @@
     ]
   },
   "Fitness Gym": {
-    "image": "/public/360/FitnessGym.jpg",
+    "image": "/360/FitnessGym.jpg",
     "yaw": 0,
     "hotspots": [
             {
@@ -887,7 +881,7 @@
     ]
   },
   "Socio-Cultural Office": {
-    "image": "/public/360/Cultural.jpg",
+    "image": "/360/Cultural.jpg",
     "yaw": 0,
     "hotspots": [
             {
@@ -911,7 +905,7 @@
     ]
   },
    "Tennis Court": {
-    "image": "/public/360/tennis.jpg",
+    "image": "/360/tennis.jpg",
     "yaw": 0,
     "hotspots": [
             {
@@ -954,7 +948,7 @@
   },
 
     "Kadasig Gym": {
-    "image": "/public/360/kadasig.jpg",
+    "image": "/360/kadasig.jpg",
     "yaw": 0,
     "hotspots": [
             {
