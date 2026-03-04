@@ -234,56 +234,56 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M191 490.841H197V492.202H191V490.841Z" fill="#CF56BF"/>
 
 {/* ADMIN OFFICE PATH */}
-<path opacity={path === "Admin Staff Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M210.721 726.434V726.338C210.721 725.786 210.273 725.338 209.721 725.338H193.287C192.734 725.338 192.287 724.89 192.287 724.338V719.107C192.287 718.554 191.839 718.107 191.287 718.107H185.067"/>
+<path opacity={path === "Admin Staff Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M210.721 726.434V726.338C210.721 725.786 210.273 725.338 209.721 725.338H193.287C192.734 725.338 192.287 724.89 192.287 724.338V719.107C192.287 718.554 191.839 718.107 191.287 718.107H185.067"/>
 
 
-<path opacity={path === "Admin Graduate School" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M192.274 726.435V719.085C192.274 718.533 191.826 718.085 191.274 718.085H185.058"/>
+<path opacity={path === "Admin Graduate School" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M192.274 726.435V719.085C192.274 718.533 191.826 718.085 191.274 718.085H185.058"/>
 
-<path opacity={path === "HR Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M177 726.434V725.828C177 725.275 176.552 724.828 176 724.828H139.932C139.38 724.828 138.932 724.38 138.932 723.828V719.92C138.932 719.368 138.484 718.92 137.932 718.92H128.544"/>
-
-
-<path opacity={path === "New Admin Records" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M162.095 726.398L162.095 725.828C162.095 725.275 161.647 724.828 161.095 724.828H139.899C139.347 724.828 138.899 724.38 138.899 723.828V719.92C138.899 719.368 138.451 718.92 137.899 718.92H128.544"/>
+<path opacity={path === "HR Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M177 726.434V725.828C177 725.275 176.552 724.828 176 724.828H139.932C139.38 724.828 138.932 724.38 138.932 723.828V719.92C138.932 719.368 138.484 718.92 137.932 718.92H128.544"/>
 
 
-<path opacity={path === "Guidance Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M149.044 726.429L149.044 725.828C149.044 725.275 148.596 724.828 148.044 724.828H139.916C139.363 724.828 138.916 724.38 138.916 723.828V719.92C138.916 719.368 138.468 718.92 137.916 718.92L128.544 718.92"/>
+<path opacity={path === "New Admin Records" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M162.095 726.398L162.095 725.828C162.095 725.275 161.647 724.828 161.095 724.828H139.899C139.347 724.828 138.899 724.38 138.899 723.828V719.92C138.899 719.368 138.451 718.92 137.899 718.92H128.544"/>
 
 
-<path opacity={path === "SAO Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M135 725.408H138.058C138.61 725.408 139.058 724.96 139.058 724.408V719.92C139.058 719.368 138.61 718.92 138.058 718.92H128.544"/>
-
-<path opacity={path === "Dean's Education Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M137.932 690.635L138.058 690.635C138.61 690.635 139.058 691.083 139.058 691.635V717.92C139.058 718.472 138.61 718.92 138.058 718.92H128.544"/>
+<path opacity={path === "Guidance Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M149.044 726.429L149.044 725.828C149.044 725.275 148.596 724.828 148.044 724.828H139.916C139.363 724.828 138.916 724.38 138.916 723.828V719.92C138.916 719.368 138.468 718.92 137.916 718.92L128.544 718.92"/>
 
 
-<path  opacity={path === "ED-201" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M137.984 673.318H138.058C138.61 673.318 139.058 673.766 139.058 674.318V717.92C139.058 718.472 138.61 718.92 138.058 718.92H128.544"/>
+<path opacity={path === "SAO Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M135 725.408H138.058C138.61 725.408 139.058 724.96 139.058 724.408V719.92C139.058 719.368 138.61 718.92 138.058 718.92H128.544"/>
+
+<path opacity={path === "Dean's Education Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M137.932 690.635L138.058 690.635C138.61 690.635 139.058 691.083 139.058 691.635V717.92C139.058 718.472 138.61 718.92 138.058 718.92H128.544"/>
+
+
+<path  opacity={path === "ED-201" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M137.984 673.318H138.058C138.61 673.318 139.058 673.766 139.058 674.318V717.92C139.058 718.472 138.61 718.92 138.058 718.92H128.544"/>
 
 {/* Engineering Faculty (Chairman's Office) path */}
-<path opacity={path === "Engineering Faculty (Chairman's Office)" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.316 673.318H247.243C246.691 673.318 246.243 673.766 246.243 674.318V717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "Engineering Faculty (Chairman's Office)" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.316 673.318H247.243C246.691 673.318 246.243 673.766 246.243 674.318V717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
 
 
-<path opacity={path === "ED-202" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M138.028 654.894H138.058C138.61 654.894 139.058 655.342 139.058 655.894L139.058 717.92C139.058 718.473 138.61 718.92 138.058 718.92H128.544"/>
+<path opacity={path === "ED-202" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M138.028 654.894H138.058C138.61 654.894 139.058 655.342 139.058 655.894L139.058 717.92C139.058 718.473 138.61 718.92 138.058 718.92H128.544"/>
 <path d="M133.67 711.512L133.67 717.92C133.67 718.473 133.222 718.92 132.67 718.92H128.544" stroke="#FF0000" stroke-opacity="0.5" stroke-width="0" stroke-linecap="round"/>
 
 
-<path opacity={path === "Engineering Faculty Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.273 654.894H247.243C246.691 654.894 246.243 655.342 246.243 655.894L246.243 717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "Engineering Faculty Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.273 654.894H247.243C246.691 654.894 246.243 655.342 246.243 655.894L246.243 717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
 
 
-<path opacity={path === "Graduate School" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.434 640.196H247.243C246.691 640.196 246.243 640.644 246.243 641.196L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "Graduate School" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.434 640.196H247.243C246.691 640.196 246.243 640.644 246.243 641.196L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 
-<path  opacity={path === "CME Research Center" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.467 625.24H247.243C246.691 625.24 246.243 625.688 246.243 626.24L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path  opacity={path === "CME Research Center" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.467 625.24H247.243C246.691 625.24 246.243 625.688 246.243 626.24L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
-<path opacity={path === "TM-LAB-2A" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.354 606.987H247.243C246.691 606.987 246.243 607.435 246.243 607.987V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
-
-
-<path opacity={path === "TM-LAB-1A" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.354 592.942H247.243C246.691 592.942 246.243 593.389 246.243 593.942L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "TM-LAB-2A" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.354 606.987H247.243C246.691 606.987 246.243 607.435 246.243 607.987V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 
-<path opacity={path === "CME Computer Laboratory 2" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.638 578.84H247.243C246.691 578.84 246.243 579.287 246.243 579.84L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "TM-LAB-1A" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.354 592.942H247.243C246.691 592.942 246.243 593.389 246.243 593.942L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 
-<path opacity={path === "CME Computer Laboratory 2" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.411 564.794H247.243C246.691 564.794 246.243 565.242 246.243 565.794L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "CME Computer Laboratory 2" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.638 578.84H247.243C246.691 578.84 246.243 579.287 246.243 579.84L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 
-<path opacity={path === "CME Computer Laboratory 1" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.411 550.977H247.243C246.691 550.977 246.243 551.424 246.243 551.977L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "CME Computer Laboratory 2" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.411 564.794H247.243C246.691 564.794 246.243 565.242 246.243 565.794L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+
+
+<path opacity={path === "CME Computer Laboratory 1" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.411 550.977H247.243C246.691 550.977 246.243 551.424 246.243 551.977L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 <g className="floating-element" onClick={() => bldClicked("College of Technology/COT Building")} style={{ cursor: "pointer" }}>
 
@@ -846,49 +846,49 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 </g>
 
 {/* DEANS AND CONFERENCE PATH */}
-<path opacity={path === "Dean's and Conference" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.369 690.635L247.243 690.635C246.691 690.635 246.243 691.083 246.243 691.635V717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757" />
+<path opacity={path === "Dean's and Conference" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.369 690.635L247.243 690.635C246.691 690.635 246.243 691.083 246.243 691.635V717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757" />
 
 <path d="M252.211 711.597L252.211 717.92C252.211 718.473 252.659 718.92 253.211 718.92L256.757 718.92" stroke="#FF0000" stroke-opacity="0" stroke-width="1.5" stroke-linecap="round"/>
 
 
-<path opacity={path === "GAD Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M79.5 575H80C80.5523 575 81 574.552 81 574V565.825C81 565.273 80.5523 564.825 80 564.825H75.6426" />
+<path opacity={path === "GAD Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M79.5 575H80C80.5523 575 81 574.552 81 574V565.825C81 565.273 80.5523 564.825 80 564.825H75.6426" />
 
 
-<path opacity={path === "Research and Development Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M79.5 551H80C80.5523 551 81 551.448 81 552V563.825C81 564.378 80.5523 564.825 80 564.825H75.6426" />
+<path opacity={path === "Research and Development Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M79.5 551H80C80.5523 551 81 551.448 81 552V563.825C81 564.378 80.5523 564.825 80 564.825H75.6426" />
 
 
-<path opacity={path === "Old Library" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M79.5 536H80C80.5523 536 81 536.448 81 537V563.825C81 564.378 80.5523 564.825 80 564.825H75.6426" />
+<path opacity={path === "Old Library" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M79.5 536H80C80.5523 536 81 536.448 81 537V563.825C81 564.378 80.5523 564.825 80 564.825H75.6426" />
 
-<path opacity={path === "COT Computer Lab 201" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M79.5 522H80C80.5523 522 81 522.448 81 523V563.825C81 564.378 80.5523 564.825 80 564.825H75.6426" />
-
-
-<path opacity={path === "Speech Lab" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M79.5 505H80C80.5523 505 81 505.448 81 506V563.825C81 564.378 80.5523 564.825 80 564.825H75.6426" />
+<path opacity={path === "COT Computer Lab 201" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M79.5 522H80C80.5523 522 81 522.448 81 523V563.825C81 564.378 80.5523 564.825 80 564.825H75.6426" />
 
 
-
-<path opacity={path === "SSG Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M79.5 589H80C80.5523 589 81 588.552 81 588V565.825C81 565.273 80.5523 564.825 80 564.825H75.6426" />
+<path opacity={path === "Speech Lab" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M79.5 505H80C80.5523 505 81 505.448 81 506V563.825C81 564.378 80.5523 564.825 80 564.825H75.6426" />
 
 
 
-<path opacity={path === "Working Hand Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M80 601C80.5523 601 81 600.552 81 600V565.825C81 565.273 80.5523 564.825 80 564.825H75.6426" />
+<path opacity={path === "SSG Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M79.5 589H80C80.5523 589 81 588.552 81 588V565.825C81 565.273 80.5523 564.825 80 564.825H75.6426" />
 
 
-<path opacity={path === "Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M165.956 505.497V506.043C165.956 506.595 166.404 507.043 166.956 507.043L186.46 507.043C187.012 507.043 187.46 506.595 187.46 506.043V504.985" />
+
+<path opacity={path === "Working Hand Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M80 601C80.5523 601 81 600.552 81 600V565.825C81 565.273 80.5523 564.825 80 564.825H75.6426" />
 
 
-<path opacity={path === "COT Comp Lab 204" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M148.014 505.6V506.043C148.014 506.595 148.462 507.043 149.014 507.043L186.46 507.043C187.012 507.043 187.46 506.595 187.46 506.043V504.985" />
-
-<path opacity={path === "COT Comp Lab 203" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M136.016 505.543V506.043C136.016 506.595 136.464 507.043 137.016 507.043L186.46 507.043C187.012 507.043 187.46 506.595 187.46 506.043V504.985" />
-
-<path opacity={path === "COT Comp Lab 202" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M124.473 505.6V506.043C124.473 506.595 124.92 507.043 125.473 507.043L186.46 507.043C187.012 507.043 187.46 506.595 187.46 506.043V504.985" />
-
-<path opacity={path === "COT Stock Room" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M119.412 507.043H186.46C187.012 507.043 187.46 506.595 187.46 506.043V504.985" />
+<path opacity={path === "Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M165.956 505.497V506.043C165.956 506.595 166.404 507.043 166.956 507.043L186.46 507.043C187.012 507.043 187.46 506.595 187.46 506.043V504.985" />
 
 
-<path opacity={path === "Tesda Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M207.994 505.57V506.058C207.994 506.611 207.547 507.058 206.994 507.058H188.46C187.908 507.058 187.46 506.611 187.46 506.058V505" />
+<path opacity={path === "COT Comp Lab 204" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M148.014 505.6V506.043C148.014 506.595 148.462 507.043 149.014 507.043L186.46 507.043C187.012 507.043 187.46 506.595 187.46 506.043V504.985" />
+
+<path opacity={path === "COT Comp Lab 203" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M136.016 505.543V506.043C136.016 506.595 136.464 507.043 137.016 507.043L186.46 507.043C187.012 507.043 187.46 506.595 187.46 506.043V504.985" />
+
+<path opacity={path === "COT Comp Lab 202" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M124.473 505.6V506.043C124.473 506.595 124.92 507.043 125.473 507.043L186.46 507.043C187.012 507.043 187.46 506.595 187.46 506.043V504.985" />
+
+<path opacity={path === "COT Stock Room" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M119.412 507.043H186.46C187.012 507.043 187.46 506.595 187.46 506.043V504.985" />
 
 
-<path opacity={path === "COT Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M220.487 505.57V506.043C220.487 506.595 220.039 507.043 219.487 507.043L188.46 507.043C187.908 507.043 187.46 506.595 187.46 506.043V505" />
+<path opacity={path === "Tesda Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M207.994 505.57V506.058C207.994 506.611 207.547 507.058 206.994 507.058H188.46C187.908 507.058 187.46 506.611 187.46 506.058V505" />
+
+
+<path opacity={path === "COT Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M220.487 505.57V506.043C220.487 506.595 220.039 507.043 219.487 507.043L188.46 507.043C187.908 507.043 187.46 506.595 187.46 506.043V505" />
 
 </svg>
 

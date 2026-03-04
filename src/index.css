@@ -95,7 +95,21 @@ stroke-dasharray: 6 3;
   stroke-dashoffset: 0;
   animation: footsteps 3.5s linear infinite;
 }
+#grow-path2 {
+stroke-dasharray: 6 3;
+/* 10px visible dash, 5px gap — repeat pattern */
+  stroke-dashoffset: 0;
+  animation: footsteps2 3.5s linear infinite;
+}
 
+@keyframes footsteps2 {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 30; /* move pattern forward smoothly */
+  }
+}
 @keyframes footsteps {
   from {
     stroke-dashoffset: 0;
