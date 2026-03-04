@@ -61,7 +61,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
   }
 
   const closeBtn = () => {
-    setBldClicked(true);
+    // setBldClicked(true);
     setRoomSearched(false);
     setPath("");
     setDisable(false);

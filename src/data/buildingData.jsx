@@ -119,7 +119,7 @@ const buildingData = {
       },
       { 
         code: " ", 
-        name: "Engineering Faculty",
+        name: "Engineering Faculty Office",
         description: " ",
         img: " "
       },
@@ -757,37 +757,43 @@ img: ""
         [
         {
         code:"",
-        name:"",
+        name:"Working Hand Office",
         description: " ",
         img:" "
         }, 
         {
         code:"",
-        name:"",
+        name:"SSG Office",
         description: " ",
         img:" "
         },
         {
         code:"",
-        name:"",
+        name:"GAD Office",
         description: " ",
         img:" "
         },
         {
         code:"",
-        name:"",
+        name:"Research and Development Office",
         description: " ",
         img:" "
         },
         {
         code:"",
-        name:"",
+        name:"Old Library",
         description: " ",
         img:" "
         },
         {
         code:"",
-        name:"",
+        name:"COT Computer Lab 201",
+        description: " ",
+        img:" "
+        },
+          {
+        code:"",
+        name:"Speech Lab",
         description: " ",
         img:" "
         }
@@ -883,7 +889,7 @@ img: ""
       }, 
       {
       code:"",
-      name:"Graduate School",
+      name:"Admin Graduate School",
       description: " ",
       img: ""
       },

@@ -31,7 +31,6 @@ const cardData = {
         totalFloors:3,
         img:"https://res.cloudinary.com/dkicidfrq/image/upload/v1766459307/COTFront_atpdzw.jpg"
     },
-    'Old Admin Building': 2,
     'New Admin Building': {
         totalFloors: 3,
         img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459288/AdminFront_lt10vg.jpg"

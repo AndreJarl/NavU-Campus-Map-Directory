@@ -866,10 +866,11 @@ const Floor1 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
             path === "Campus Director Office" || 
             path === "Dean's and Conference" || 
             path === "Engineering Faculty (Chairman's Office)"  ||
-            path === "Admin Staff Office" || path === "Graduate School"
+            path === "Admin Staff Office" || path === "Graduate School" || path === "Engineering Faculty Office" || path === "CME Research Center" || path === "TM-LAB-2A" || path === "CME Computer Laboratory 2" || path === "CME Computer Laboratory 1"
             ? "1" : "0"
           }stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.504 727.276L200.503 726.278C200.502 725.173 201.398 724.276 202.503 724.276H243.5C244.605 724.276 245.5 723.381 245.5 722.276V714.791C245.5 713.686 246.395 712.791 247.5 712.791H259.5"><path d="M200.502 727.273L200.501 726.271C200.5 725.167 199.605 724.273 198.501 724.273H141.5C140.395 724.273 139.5 723.377 139.5 722.273V657.759C139.5 656.654 138.605 655.759 137.5 655.759H95C93.8955 655.759 93 654.863 93 653.759V625.335C93 624.962 92.8956 624.597 92.6986 624.28L81.8014 606.749C81.6044 606.432 81.5 606.067 81.5 605.694V560.527C81.5 559.975 81.0523 559.527 80.5 559.527L63.4109 559.527C62.8587 559.527 62.411 559.975 62.411 560.527V563.372C62.411 563.924 62.8587 564.372 63.411 564.372H67.1088"/></path>
-        <path opacity={path === "HR Office" || path === "New Admin Records" || path === "Guidance Office" || path === "SAO Office"
+        
+        <path opacity={path === "HR Office" || path === "New Admin Records" || path === "Guidance Office" || path === "SAO Office" || path === "Dean's Education Office" || path === "ED-201" || path === "ED-202"
            ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M200.502 727.275L200.501 726.273C200.5 725.169 199.605 724.275 198.501 724.275H140C138.895 724.275 138 723.38 138 722.275V714.791C138 713.686 137.105 712.791 136 712.791H126"/>
        
        

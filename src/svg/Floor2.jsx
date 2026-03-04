@@ -205,25 +205,60 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M184 490.841H190V492.202H184V490.841Z" fill="#3BB2DE"/>
 <path d="M191 484.161H197V490.841H191V484.161Z" fill="#FF69EB"/>
 <path d="M191 490.841H197V492.202H191V490.841Z" fill="#CF56BF"/>
-<path d="M210.721 726.434V726.338C210.721 725.786 210.273 725.338 209.721 725.338H193.287C192.734 725.338 192.287 724.89 192.287 724.338V719.107C192.287 718.554 191.839 718.107 191.287 718.107H185.067" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M192.274 726.435V719.085C192.274 718.533 191.826 718.085 191.274 718.085H185.058" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M177 726.434V725.828C177 725.275 176.552 724.828 176 724.828H139.932C139.38 724.828 138.932 724.38 138.932 723.828V719.92C138.932 719.368 138.484 718.92 137.932 718.92H128.544" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M162.095 726.398L162.095 725.828C162.095 725.275 161.647 724.828 161.095 724.828H139.899C139.347 724.828 138.899 724.38 138.899 723.828V719.92C138.899 719.368 138.451 718.92 137.899 718.92H128.544" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M149.044 726.429L149.044 725.828C149.044 725.275 148.596 724.828 148.044 724.828H139.916C139.363 724.828 138.916 724.38 138.916 723.828V719.92C138.916 719.368 138.468 718.92 137.916 718.92L128.544 718.92" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M135 725.408H138.058C138.61 725.408 139.058 724.96 139.058 724.408V719.92C139.058 719.368 138.61 718.92 138.058 718.92H128.544" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M137.932 690.635L138.058 690.635C138.61 690.635 139.058 691.083 139.058 691.635V717.92C139.058 718.472 138.61 718.92 138.058 718.92H128.544" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M137.984 673.318H138.058C138.61 673.318 139.058 673.766 139.058 674.318V717.92C139.058 718.472 138.61 718.92 138.058 718.92H128.544" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M247.316 673.318H247.243C246.691 673.318 246.243 673.766 246.243 674.318V717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M138.028 654.894H138.058C138.61 654.894 139.058 655.342 139.058 655.894L139.058 717.92C139.058 718.473 138.61 718.92 138.058 718.92H128.544" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M133.67 711.512L133.67 717.92C133.67 718.473 133.222 718.92 132.67 718.92H128.544" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M247.273 654.894H247.243C246.691 654.894 246.243 655.342 246.243 655.894L246.243 717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M247.434 640.196H247.243C246.691 640.196 246.243 640.644 246.243 641.196L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M247.467 625.24H247.243C246.691 625.24 246.243 625.688 246.243 626.24L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M247.354 606.987H247.243C246.691 606.987 246.243 607.435 246.243 607.987V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M247.354 592.942H247.243C246.691 592.942 246.243 593.389 246.243 593.942L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M247.638 578.84H247.243C246.691 578.84 246.243 579.287 246.243 579.84L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M247.411 564.794H247.243C246.691 564.794 246.243 565.242 246.243 565.794L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M247.411 550.977H247.243C246.691 550.977 246.243 551.424 246.243 551.977L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
+
+{/* ADMIN OFFICE PATH */}
+<path opacity={path === "Admin Staff Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M210.721 726.434V726.338C210.721 725.786 210.273 725.338 209.721 725.338H193.287C192.734 725.338 192.287 724.89 192.287 724.338V719.107C192.287 718.554 191.839 718.107 191.287 718.107H185.067"/>
+
+
+<path opacity={path === "Admin Graduate School" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M192.274 726.435V719.085C192.274 718.533 191.826 718.085 191.274 718.085H185.058"/>
+
+<path opacity={path === "HR Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M177 726.434V725.828C177 725.275 176.552 724.828 176 724.828H139.932C139.38 724.828 138.932 724.38 138.932 723.828V719.92C138.932 719.368 138.484 718.92 137.932 718.92H128.544"/>
+
+
+<path opacity={path === "New Admin Records" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M162.095 726.398L162.095 725.828C162.095 725.275 161.647 724.828 161.095 724.828H139.899C139.347 724.828 138.899 724.38 138.899 723.828V719.92C138.899 719.368 138.451 718.92 137.899 718.92H128.544"/>
+
+
+<path opacity={path === "Guidance Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M149.044 726.429L149.044 725.828C149.044 725.275 148.596 724.828 148.044 724.828H139.916C139.363 724.828 138.916 724.38 138.916 723.828V719.92C138.916 719.368 138.468 718.92 137.916 718.92L128.544 718.92"/>
+
+
+<path opacity={path === "SAO Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M135 725.408H138.058C138.61 725.408 139.058 724.96 139.058 724.408V719.92C139.058 719.368 138.61 718.92 138.058 718.92H128.544"/>
+
+<path opacity={path === "Dean's Education Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M137.932 690.635L138.058 690.635C138.61 690.635 139.058 691.083 139.058 691.635V717.92C139.058 718.472 138.61 718.92 138.058 718.92H128.544"/>
+
+
+<path  opacity={path === "ED-201" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M137.984 673.318H138.058C138.61 673.318 139.058 673.766 139.058 674.318V717.92C139.058 718.472 138.61 718.92 138.058 718.92H128.544"/>
+
+{/* Engineering Faculty (Chairman's Office) path */}
+<path opacity={path === "Engineering Faculty (Chairman's Office)" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.316 673.318H247.243C246.691 673.318 246.243 673.766 246.243 674.318V717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
+
+
+<path opacity={path === "ED-202" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M138.028 654.894H138.058C138.61 654.894 139.058 655.342 139.058 655.894L139.058 717.92C139.058 718.473 138.61 718.92 138.058 718.92H128.544"/>
+<path d="M133.67 711.512L133.67 717.92C133.67 718.473 133.222 718.92 132.67 718.92H128.544" stroke="#FF0000" stroke-opacity="0.5" stroke-width="0" stroke-linecap="round"/>
+
+
+<path opacity={path === "Engineering Faculty Office" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.273 654.894H247.243C246.691 654.894 246.243 655.342 246.243 655.894L246.243 717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
+
+
+<path opacity={path === "Graduate School" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.434 640.196H247.243C246.691 640.196 246.243 640.644 246.243 641.196L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+
+
+<path  opacity={path === "CME Research Center" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.467 625.24H247.243C246.691 625.24 246.243 625.688 246.243 626.24L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+
+<path opacity={path === "TM-LAB-2A" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.354 606.987H247.243C246.691 606.987 246.243 607.435 246.243 607.987V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+
+
+<path opacity={path === "CME Research Center" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.354 592.942H247.243C246.691 592.942 246.243 593.389 246.243 593.942L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+
+
+<path opacity={path === "CME Computer Laboratory 2" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.638 578.84H247.243C246.691 578.84 246.243 579.287 246.243 579.84L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+
+
+<path opacity={path === "CME Computer Laboratory 2" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.411 564.794H247.243C246.691 564.794 246.243 565.242 246.243 565.794L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+
+
+<path opacity={path === "CME Computer Laboratory 1" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.411 550.977H247.243C246.691 550.977 246.243 551.424 246.243 551.977L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+
+
 <path d="M190.5 508.333C192.456 508.334 194.041 509.92 194.041 511.875C194.041 513.06 193.477 514.036 192.776 514.791C192.074 515.548 191.25 516.066 190.776 516.329C190.602 516.425 190.398 516.425 190.224 516.329C189.75 516.066 188.927 515.548 188.225 514.791C187.523 514.036 186.958 513.061 186.958 511.875C186.958 509.919 188.544 508.333 190.5 508.333Z" fill="#FBFF00" stroke="#6E7000" stroke-width="0.5"/>
 <path d="M190.5 513.25C191.259 513.25 191.875 512.634 191.875 511.875C191.875 511.116 191.259 510.5 190.5 510.5C189.741 510.5 189.125 511.116 189.125 511.875C189.125 512.634 189.741 513.25 190.5 513.25Z" fill="white" stroke="#6E7000" stroke-width="0.5"/>
 <path d="M194.722 516.479C195.15 516.726 195.375 517.007 195.375 517.292C195.375 517.577 195.15 517.857 194.722 518.104C194.294 518.351 193.679 518.556 192.938 518.699C192.196 518.842 191.356 518.917 190.5 518.917C189.644 518.917 188.804 518.842 188.063 518.699C187.321 518.556 186.706 518.351 186.278 518.104C185.85 517.857 185.625 517.577 185.625 517.292C185.625 517.007 185.85 516.726 186.278 516.479" stroke="#FBFF01" stroke-width="0.5" stroke-linecap="round"/>
@@ -267,14 +302,173 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M84.9985 605.491H77.2985" stroke="#535353"/>
 <path d="M85 605.99V486" stroke="#535353"/>
 <path d="M225.5 510.5L225.5 504" stroke="#535353"/>
-<path d="M78 495V511H47V501L51.5 494L57 486H62.5V495H78Z" fill="#FF8000"/>
-<rect x="78" y="543" width="13" height="31" transform="rotate(90 78 543)" fill="#FF8000"/>
-<rect x="78" y="529" width="13" height="31" transform="rotate(90 78 529)" fill="#FF8000"/>
-<rect x="78" y="512" width="16" height="31" transform="rotate(90 78 512)" fill="#FF8000"/>
-<path d="M78 568V581H47V557H59V568H78Z" fill="#FFCC00"/>
-<rect x="78" y="582" width="13" height="31" transform="rotate(90 78 582)" fill="#FFCC00"/>
-<path d="M78 596V604.452H47L47 596H78Z" fill="#FFCC00"/>
-<path d="M47 604.452H78V606H47L47 604.452Z" fill="#D6B018"/>
+
+<g onClick={() => bldClicked("Speech Lab")} style={{ cursor: "pointer" }}>
+  <path 
+    d="M78 495V511H47V501L51.5 494L57 486H62.5V495H78Z" 
+    fill="#FF8000"
+  />
+
+  <text 
+    x="62.5" 
+    y="503" 
+    textAnchor="middle" 
+    dominantBaseline="middle"
+    fontFamily="Inter, sans-serif"
+    fontWeight="600"
+    fontSize="2" 
+    fill="black"
+    style={{ pointerEvents: 'none', userSelect: 'none' }}
+  >
+    SPEECH LAB
+  </text>
+</g>
+
+
+<g onClick={() => bldClicked("Research and Development Office")} style={{ cursor: "pointer" }}>
+  <rect 
+    x="78" 
+    y="543" 
+    width="13" 
+    height="31" 
+    transform="rotate(90 78 543)" 
+    fill="#FF8000"
+  />
+
+  <text 
+    x="62.5" 
+    y="549.5" 
+    textAnchor="middle" 
+    dominantBaseline="middle"
+    fontFamily="Inter, sans-serif"
+    fontWeight="600"
+    fontSize="2" 
+    fill="black"
+    style={{ pointerEvents: 'none', userSelect: 'none' }}
+  >
+    RESEARH & DEVELOPMENT
+  </text>
+</g>
+
+  <g onClick={() => bldClicked("Old Library")} style={{ cursor: "pointer" }}>
+    <rect 
+      x="78" 
+      y="529" 
+      width="13" 
+      height="31" 
+      transform="rotate(90 78 529)" 
+      fill="#FF8000"
+    />
+
+    <text 
+      x="62.5" 
+      y="535.5" 
+      textAnchor="middle" 
+      dominantBaseline="middle"
+      fontFamily="Inter, sans-serif"
+      fontWeight="600"
+      fontSize="2" 
+      fill="black"
+      style={{ pointerEvents: 'none', userSelect: 'none' }}
+    >
+      OLD LIBRARY
+    </text>
+  </g>
+
+<g onClick={() => bldClicked("COT Computer Lab 201")} style={{ cursor: "pointer" }}>
+  <rect 
+    x="78" 
+    y="512" 
+    width="16" 
+    height="31" 
+    transform="rotate(90 78 512)" 
+    fill="#FF8000"
+  />
+
+  <text 
+    x="62.5" 
+    y="520" 
+    textAnchor="middle" 
+    dominantBaseline="middle"
+    fontFamily="Inter, sans-serif"
+    fontWeight="600"
+    fontSize="2" 
+    fill="black"
+    style={{ pointerEvents: 'none', userSelect: 'none' }}
+  >
+    COMP LAB 201
+  </text>
+</g>
+
+<g onClick={() => bldClicked("GAD Office")} style={{ cursor: "pointer" }}>
+  <path 
+    d="M78 568V581H47V557H59V568H78Z" 
+    fill="#FFCC00"
+  />
+
+  <text 
+    x="62.5" 
+    y="575" 
+    textAnchor="middle" 
+    dominantBaseline="middle"
+    fontFamily="Inter, sans-serif"
+    fontWeight="600"
+    fontSize="2" 
+    fill="black"
+    style={{ pointerEvents: 'none', userSelect: 'none' }}
+  >
+    GAD OFFICE
+  </text>
+</g>
+
+
+
+<g onClick={() => bldClicked("SSG Office")} style={{ cursor: "pointer" }}>
+  <rect 
+    x="78" 
+    y="582" 
+    width="13" 
+    height="31" 
+    transform="rotate(90 78 582)" 
+    fill="#FFCC00"
+  />
+
+  <text 
+    x="62.5" 
+    y="588.5" 
+    textAnchor="middle" 
+    dominantBaseline="middle"
+    fontFamily="Inter, sans-serif"
+    fontWeight="600"
+    fontSize="2" 
+    fill="black"
+    style={{ pointerEvents: 'none', userSelect: 'none' }}
+  >
+    SSG OFFICE
+  </text>
+</g>
+
+
+
+
+<g onClick={() => bldClicked("Working Hand Office")} style={{ cursor: "pointer" }}>
+  <path d="M78 596V604.452H47L47 596H78Z" fill="#FFCC00"/>
+  <path d="M47 604.452H78V606H47L47 604.452Z" fill="#D6B018"/>
+  <text 
+    x="62.5" 
+    y="601" 
+    textAnchor="middle" 
+    dominantBaseline="middle"
+    fontFamily="Inter, sans-serif"
+    fontWeight="600"
+    fontSize="2" 
+    fill="black"
+    style={{ pointerEvents: 'none', userSelect: 'none' }}
+  >
+    WORKING HAND OFFICE
+  </text>
+</g>
+
 
 <g onClick={() => bldClicked("ED-201")} style={{ cursor: "pointer" }}>
   <rect x="136" y="664" width="17" height="21" transform="rotate(90 136 664)" fill="#00C3FF"/>
@@ -298,7 +492,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 <g onClick={() => bldClicked("Dean's Education Office")} style={{ cursor: "pointer" }}>
   <rect x="136" y="682" width="16" height="21" transform="rotate(90 136 682)" fill="#00C3FF"/>
-  <text x="125.5" y="690" textAnchor="middle" dominantBaseline="middle"fontFamily="Inter, sans-serif"fontWeight="600"fontSize="2" fill="black"style={{ pointerEvents: 'none', userSelect: 'none' }}>DEAN'S OFFICE</text>
+  <text x="125.5" y="690" textAnchor="middle" dominantBaseline="middle"fontFamily="Inter, sans-serif"fontWeight="600" fontSize="2" fill="black"style={{ pointerEvents: 'none', userSelect: 'none' }}>DEAN'S OFFICE</text>
 </g>
 
 
@@ -429,7 +623,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 
 {/* GRADUATE SCHOOL */}
-<g onClick={() => bldClicked("Graduate School")} style={{ cursor: "pointer" }}>
+<g onClick={() => bldClicked("Admin Graduate School")} style={{ cursor: "pointer" }}>
   <path d="M185 728H202V749.022H185V728Z" fill="#FF6453"/>
   <path d="M185 749.022H202V751H185V749.022Z" fill="#CE4B46"/>
   <text x="193.5" y="738.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">GRADUATE</text>
@@ -613,7 +807,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 {/* DEANS AND CONFERENCE PATH */}
 <path opacity={path === "Dean's and Conference" ? "1" : 0} stroke="red" id="grow-path" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.369 690.635L247.243 690.635C246.691 690.635 246.243 691.083 246.243 691.635V717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757" />
 
-<path d="M252.211 711.597L252.211 717.92C252.211 718.473 252.659 718.92 253.211 718.92L256.757 718.92" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M252.211 711.597L252.211 717.92C252.211 718.473 252.659 718.92 253.211 718.92L256.757 718.92" stroke="#FF0000" stroke-opacity="0" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M79.5 575H80C80.5523 575 81 574.552 81 574V565.825C81 565.273 80.5523 564.825 80 564.825H75.6426" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M79.5 551H80C80.5523 551 81 551.448 81 552V563.825C81 564.378 80.5523 564.825 80 564.825H75.6426" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M79.5 536H80C80.5523 536 81 536.448 81 537V563.825C81 564.378 80.5523 564.825 80 564.825H75.6426" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
