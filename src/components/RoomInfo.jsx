@@ -9,7 +9,7 @@ import GenerateQR from "./GenerateQR";
 import PanoramaViewer from '../components/PanoramaViewer';
 import { useZoomContext } from "../context/ZoomContext";
 import { useFloorQuery } from "../context/FloorContext";
-import { useTransition } from "../context/TransitionContext";
+import { useFloorTransition } from "../context/TransitionContext";
 
 function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) {
   const { query } = useQuery();
@@ -18,7 +18,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
   const { setCurrentScene } = useScene();
   const { zoomToBuilding } = useZoomContext();
   const {setCurrentFloor} =  useFloorQuery();
-  const {trigger} = useTransition();
+  const {trigger} = useFloorTransition();
   // Component States
   
   const [showQRPopup, setShowQRPopup] = useState(false);
@@ -177,7 +177,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
         <div className="flex-1 overflow-y-auto px-6 mt-24 custom-scrollbar pb-6">
           <div className="mb-6 mt-3">
             <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Description</h3>
-            <p className="text-gray-300 leading-relaxed text-xs font-light italic">"{room?.description || "No description available."}"</p>
+            <p className="text-gray-300 leading-relaxed text-[10px] font-light italic">"{room?.description || "No description available."}"</p>
           </div>
 
           <div className="flex flex-col gap-3">
@@ -235,7 +235,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
         <div className="fixed inset-0 bg-black/90 backdrop-blur-md flex justify-center items-center z-[10000] p-4" onClick={() => setShowQRPopup(false)}>
           <div className="bg-[#1B2533] border border-white/10 rounded-[2rem] p-8 text-center text-white max-w-sm w-full relative" onClick={e => e.stopPropagation()}>
             <button onClick={() => setShowQRPopup(false)} className="absolute top-4 right-4 p-2 bg-white/5 rounded-full"><AiOutlineClose size={18} /></button>
-            <h2 className="text-xl font-bold mb-6">Location QR</h2>
+            <h2 className="text-xl font-bold mb-6">Scan QR to continue navigation on smartphone</h2>
             <div className="bg-white p-4 rounded-3xl inline-block mb-6"><GenerateQR text={window.location.href} /></div>
             <div className="text-sm font-semibold bg-white/5 py-3 rounded-xl border border-white/5">{room?.name}</div>
           </div>

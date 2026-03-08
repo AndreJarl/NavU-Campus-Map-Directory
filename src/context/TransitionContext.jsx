@@ -1,4 +1,4 @@
-import { useState, useContext, createContext } from "react";
+import { useState, useContext, createContext, useCallback } from "react";
 import { useFloorQuery } from '../context/FloorContext';
 const TransitionContext = createContext(null);
 
@@ -6,10 +6,10 @@ export function TransitionProvider({ children }) {
   const [show, setShow] = useState(false);
   const {currentFloor} = useFloorQuery();
 
-  const trigger = () => {
+  const trigger = useCallback(() => {
     setShow(true);
     setTimeout(() => setShow(false), 3000);
-  };
+}, []);
 
   return (
     <TransitionContext.Provider value={{ trigger }}>
@@ -71,6 +71,6 @@ export function TransitionProvider({ children }) {
   );
 }
 
-export function useTransition() {
+export function useFloorTransition() {
   return useContext(TransitionContext);
 }

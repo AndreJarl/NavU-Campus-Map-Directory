@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { ChevronUp } from 'lucide-react';
 import { useFloorQuery } from '../context/FloorContext';
-import { useTransition } from '../context/TransitionContext';
+import { useFloorTransition } from '../context/TransitionContext';
 
 function Floors() {
   const [isOpen, setIsOpen] = useState(false);
   const { currentFloor, setCurrentFloor } = useFloorQuery();
-  const {trigger} = useTransition();
+  const {trigger} = useFloorTransition();
 
   const floors = ['Floor 1', 'Floor 2', 'Floor 3', 'Floor 4'];
 

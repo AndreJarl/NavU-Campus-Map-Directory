@@ -3,11 +3,11 @@ import { Building2 } from 'lucide-react';
 import buildingData from "../data/buildingData";
 import { useState } from "react";
 import Keyboard from './Keyboard';
-import { useTransition } from "../context/TransitionContext";
+import { useFloorTransition } from "../context/TransitionContext";
 
 function SearchBar({ searchTerm, suggestions, keyboardClicked,      // Receive from parent
   setKeyboardClicked, handleSearch, handleSuggestionClicked,zoomToBuilding   }) {
-  const {trigger} = useTransition();
+  const {trigger} = useFloorTransition();
 
    const handleClick = (suggestion) => {
       handleSuggestionClicked(suggestion);

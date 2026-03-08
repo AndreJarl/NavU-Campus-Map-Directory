@@ -3,14 +3,14 @@ import { usePath } from '../context/PathContext';
 import { useCategory } from '../context/CategoryContext';
 import { useScene } from '../context/SceneContext';
 import { useFloorQuery } from '../context/FloorContext';
-import { useTransition } from '../context/TransitionContext';
+import { useFloorTransition } from '../context/TransitionContext';
 
 const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref) => {
   const { setPath, path } = usePath();
   const { category } = useCategory();
   const { setCurrentScene } = useScene();
-  const {setCurrentFloor} = useFloorQuery();
-  const {trigger} = useTransition();
+  const {currentFloor, setCurrentFloor} = useFloorQuery();
+  const {trigger} = useFloorTransition();
  
   const allFalse = useMemo(
     () => Object.values(category).every(val => !val),
@@ -102,6 +102,166 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M196.199 493.001V504.001H196.999V493.001H196.199Z" fill="#535353"/>
 <path d="M184 493V504H184.8V493H184Z" fill="#535353"/>
 
+
+<g  className="floating-element" onClick={() => handleFloor(3)}  xmlns="http://www.w3.org/2000/svg" filter="url(#filter0_d_2041_14)">
+  <circle cx="281" cy="716" r="6" fill="#FF3030"/>
+  <text onClick={() => handleFloor(3)}
+    x="281" 
+    y="714" 
+    fill="white" 
+    font-size="2" 
+    font-family="Arial, sans-serif" 
+    text-anchor="middle" 
+    dominant-baseline="central">
+    Click here 
+  </text>
+   <text onClick={() => handleFloor(3)}
+    x="281" 
+    y="716" 
+    fill="white" 
+    font-size="2" 
+    font-family="Arial, sans-serif" 
+    text-anchor="middle" 
+    dominant-baseline="central">
+    to go 
+  </text>
+   <text onClick={() => handleFloor(3)}
+    x="281" 
+    y="718" 
+    fill="white" 
+    font-size="2" 
+    font-family="Arial, sans-serif" 
+    text-anchor="middle" 
+    dominant-baseline="central">
+    {`Floor ${currentFloor + 1}  `}
+  </text>
+  </g>
+
+
+<g  className="floating-element"
+  onClick={() => handleFloor(currentFloor - 1)} 
+  style={{ cursor: 'pointer' }}
+  filter="url(#filter1_d_2041_14)"
+>
+  <circle cx="270" cy="729" r="6" fill="#FF3030" />
+  <text
+    x="270"
+    y="727"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+    Click here
+  </text>
+  <text
+    x="270"
+    y="729"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+    to go
+  </text>
+   <text
+    x="270"
+    y="731"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+    {`Floor ${currentFloor -1}`}
+  </text>
+</g>
+
+   <g onClick={()=>handleFloor(currentFloor-1)} cursor={"pointer"} className="floating-element" xmlns="http://www.w3.org/2000/svg" filter="url(#filter2_d_2041_14)">
+  <circle cx="116" cy="731" r="6" fill="#FF3030" />
+  <text
+    x="116"
+    y="729"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+   Click here
+  </text>
+    <text
+    x="116"
+    y="731"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+   to go
+  </text>
+      <text
+    x="116"
+    y="733"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+   {`Floor ${currentFloor - 1}`}
+  </text>
+</g>
+
+<g onClick={()=>handleFloor(currentFloor+1)} cursor={"pointer"} className="floating-element" filter="url(#filter1_d_2041_14)">  
+      <circle cx="106" cy="716" r="6" fill="#FF3030" />
+      <text onClick={()=>handleFloor(2)} cursor={"pointer"}
+        x="106"
+        y="714"
+        fill="white"
+        fontSize="2"
+        fontFamily="Arial, sans-serif"
+        textAnchor="middle"
+        dominantBaseline="central"
+        style={{ pointerEvents: 'none' }}
+      >
+        Click here 
+      </text>
+      <text onClick={()=>handleFloor(2)} cursor={"pointer"}
+        x="106"
+        y="716"
+        fill="white"
+        fontSize="2"
+        fontFamily="Arial, sans-serif"
+        textAnchor="middle"
+        dominantBaseline="central"
+        style={{ pointerEvents: 'none' }}
+      >
+       to go 
+      </text>
+        <text onClick={()=>handleFloor(2)} cursor={"pointer"}
+        x="106"
+        y="718"
+        fill="white"
+        fontSize="2"
+        fontFamily="Arial, sans-serif"
+        textAnchor="middle"
+        dominantBaseline="central"
+        style={{ pointerEvents: 'none' }}
+      >
+       {`Floor ${currentFloor+1}`}
+      </text>
+    </g>
+
 <g onClick={()=>handleFloor(3)} cursor={"pointer"}>
 <path d="M184.57 493.881H196.43V493.001H184.57V493.881Z" fill="#535353"/>
 <path d="M261.996 710.35H261.006V715.89H261.996V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
@@ -110,6 +270,167 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M264.996 710.35H264.006V715.89H264.996V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M265.996 710.35H265.006V715.89H265.996V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M266.996 710.35H266.006V715.89H266.996V710.35Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+</g>
+
+<g onClick={()=>handleFloor(1)} className="floating-element" xmlns="http://www.w3.org/2000/svg" filter="url(#filter0_d_2054_243)">
+  <circle cx="94" cy="570" r="6" fill="#FF3030"/>
+  <text onClick={()=>handleFloor(1)}
+    x="94"
+    y="568"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+   Click here
+  </text>
+   <text onClick={()=>handleFloor(1)}
+    x="94"
+    y="570"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+   to go
+  </text>
+     <text onClick={()=>handleFloor(1)}
+    x="94"
+    y="572"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+   Floor 1
+  </text>
+</g>
+
+
+<g onClick={()=>handleFloor(3)} className="floating-element" xmlns="http://www.w3.org/2000/svg" filter="url(#filter1_d_2054_243)">
+  <circle cx="94" cy="552" r="6" fill="#FF3030" />
+  <text onClick={()=>handleFloor(3)}
+    x="94"
+    y="550"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+   Click here
+  </text>
+   <text onClick={()=>handleFloor(3)}
+    x="94"
+    y="552"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+    to go
+  </text>
+   <text onClick={()=>handleFloor(3)}
+    x="94"
+    y="554"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+    Floor 3
+  </text>
+</g>
+
+<g onClick={()=>handleFloor(1)} className="floating-element" xmlns="http://www.w3.org/2000/svg" filter="url(#filter2_d_2054_243)">
+  <circle cx="179" cy="476" r="6" fill="#FF3030" />
+  <text
+    x="179"
+    y="474"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+   Click here
+  </text>
+    <text
+    x="179"
+    y="476"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+    to go
+  </text>
+    <text
+    x="179"
+    y="478"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+    Floor 1
+  </text>
+</g>
+
+<g onClick={()=>handleFloor(3)} className="floating-element" xmlns="http://www.w3.org/2000/svg" filter="url(#filter3_d_2054_243)">
+  <circle cx="200" cy="476" r="6" fill="#FF3030"/>
+  <text
+    x="200"
+    y="474"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+   Click here
+  </text>
+  <text
+    x="200"
+    y="476"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+   to go
+  </text>
+  <text
+    x="200"
+    y="478"
+    fill="white"
+    fontSize="2"
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+  Floor 3
+  </text>
 </g>
 
 <path d="M270.996 710.349H267.006V722.037H270.996V710.349Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
@@ -160,11 +481,10 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M117.999 716.634H126.999V715.894H117.999V716.634Z" fill="#535353"/>
 <path d="M114 722.043H127V721.303H114V722.043Z" fill="#535353"/>
 <path d="M114.8 721.302V710.344H114V721.302H114.8Z" fill="#535353"/>
-<path d="M70.0537 556.964H71.1604V561.907H70.0537V556.964Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+
+
 <path d="M68.937 556.964H70.0437V561.907H68.937V556.964Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
-<path d="M67.8202 556.964H68.9269V561.907H67.8202V556.964Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M66.7035 556.964H67.8102V561.907H66.7035V556.964Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
-<path d="M65.5867 556.964H66.6935V561.907H65.5867V556.964Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M64.47 556.964H65.5767V561.907H64.47V556.964Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M60.003 556.964H64.46V567.395H60.003V556.964Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M64.47 562.452H65.5767V567.395H64.47V562.452Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
@@ -174,8 +494,15 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M68.937 562.452H70.0437V567.395H68.937V562.452Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M70.0537 562.452H71.1604V567.395H70.0537V562.452Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M71.1705 556.964H72.2772V562.464H71.1705V556.964Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+
+<g onClick={()=>handleFloor(3)} cursor={"pointer"}>
+<path d="M65.5867 556.964H66.6935V561.907H65.5867V556.964Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+<path d="M67.8202 556.964H68.9269V561.907H67.8202V556.964Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+<path d="M70.0537 556.964H71.1604V561.907H70.0537V556.964Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M72.2872 556.964H73.3939V562.464H72.2872V556.964Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
-<path d="M73.4038 556.964H74.5106V562.464H73.4038V556.964Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+<path  d="M73.4038 556.964H74.5106V562.464H73.4038V556.964Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
+</g>
+
 <path d="M71.1689 562.452L68.9395 567.395H74.5107V562.452H71.1689Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
 <path d="M64.4649 562.579H74.5155V561.779H64.4649V562.579Z" fill="#535353"/>
 <path d="M59.998 567.4H74.5156V566.6H59.998V567.4Z" fill="#535353"/>
@@ -277,7 +604,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path opacity={path === "TM-LAB-1A" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.354 592.942H247.243C246.691 592.942 246.243 593.389 246.243 593.942L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 
-<path opacity={path === "CME Computer Laboratory 2" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.638 578.84H247.243C246.691 578.84 246.243 579.287 246.243 579.84L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "EN-CME 201" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.638 578.84H247.243C246.691 578.84 246.243 579.287 246.243 579.84L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 
 <path opacity={path === "CME Computer Laboratory 2" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.411 564.794H247.243C246.691 564.794 246.243 565.242 246.243 565.794L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>

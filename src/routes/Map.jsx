@@ -74,43 +74,56 @@ function Map() {
               /////////////////////////////////////// for search bar functions /////////////////////////////////////////////////////
     
     
-     const handleSearch = (e) =>{
-    
-       const value = (e && e.target) ? e.target.value : e;
-          setSearchTerm(value);
-    
-        if(!value){
-            setSuggestions([]);
-            return;
+  const fuzzyMatch = (str, query) => {
+    str = str.toLowerCase();
+    query = query.toLowerCase();
+    let i = 0;
+    for (let j = 0; j < str.length && i < query.length; j++) {
+        if (str[j] === query[i]) i++;
+    }
+    return i === query.length;
+};
+
+const handleSearch = (e) => {
+    const value = (e && e.target) ? e.target.value : e;
+    setSearchTerm(value);
+
+    if (!value) {
+        setSuggestions([]);
+        return;
+    }
+
+    const result = [];
+
+    for (const [buildingName, building] of Object.entries(buildingData)) {
+        if (fuzzyMatch(buildingName, value)) {  // ✅ building name
+            result.push({
+                building: buildingName,
+                floor: null,
+                room: null,
+            });
         }
-    
-        const result = [];
-      
-        for(const [buildingName, building] of Object.entries(buildingData)){
-                    // 🔹 1. Check building name itself
-                if (buildingName.toLowerCase().includes(value.toLowerCase())) {
-                result.push({
-                    building: buildingName,
-                    floor: null,
-                    room: null,
-                });
+
+        if (!building.rooms) continue;
+
+        for (const [floor, rooms] of Object.entries(building.rooms)) {
+            rooms.forEach((room) => {
+                if (
+                    fuzzyMatch(room.code, value) ||   // ✅ room code
+                    fuzzyMatch(room.name, value)       // ✅ room name
+                ) {
+                    result.push({
+                        building: buildingName,
+                        floor,
+                        room
+                    });
                 }
-              if (!building.rooms) continue; // Skip buildings without "rooms"
-            for(const [floor, rooms] of Object.entries(building.rooms)){
-                rooms.forEach((room)=>{
-                     if(room.code.toLowerCase().includes(value.toLowerCase()) || room.name.toLowerCase().includes(value.toLowerCase())){
-                         result.push({
-                             building:buildingName,
-                             floor,
-                             room
-                         });
-                     }
-                });
-            }
+            });
         }
-           setSuggestions(result);
-           
-     }
+    }
+
+    setSuggestions(result);
+};
     
     const handleSuggestionClicked = (suggestion) => {
   console.log(`suggestion:`);

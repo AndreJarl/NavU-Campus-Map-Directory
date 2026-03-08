@@ -6,6 +6,7 @@ import buildingData from "../data/buildingData";
 import { usePath } from "../context/PathContext";
 import { useScene } from "../context/SceneContext";
 import { useFloorQuery } from "../context/FloorContext";
+import { useFloorTransition } from "../context/TransitionContext";
 
 function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomSearched }) {
   const buildingDatas = cardData[query.building];
@@ -13,7 +14,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
   const { setPath } = usePath();
   const { setCurrentScene } = useScene();
   const {setCurrentFloor} = useFloorQuery();
-  const {trigger} = useTransition();
+  const {trigger} = useFloorTransition();
 
   const [cardHeight, setCardHeight] = useState(40);
   const [isDragging, setIsDragging] = useState(false);

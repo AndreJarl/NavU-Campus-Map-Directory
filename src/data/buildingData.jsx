@@ -133,13 +133,19 @@ const buildingData = {
     3: [
       { 
         code: " ", 
-        name: " ",
+        name: "EN-303",
         description: " ",
         img: " "
       },
       { 
         code: " ", 
-        name: " ",
+        name: "EN-302",
+        description: " ",
+        img: " "
+      },
+        { 
+        code: " ", 
+        name: "EN-301",
         description: " ",
         img: " "
       }
@@ -175,7 +181,8 @@ const buildingData = {
       description: " ",
       img: " "
     }
-  ], 2: [
+  ],
+   2: [
     { 
       code: " ", 
       name: "CME Research Center",
@@ -214,6 +221,56 @@ const buildingData = {
     },
     
   ],
+  3:[
+        { 
+        code: " ", 
+        name: "EN-CME308",
+        description: " ",
+        img: " "
+      },
+       { 
+        code: " ", 
+        name: "EN-CME307",
+        description: " ",
+        img: " "
+      },
+      { 
+        code: " ", 
+        name: "EN-CME306",
+        description: " ",
+        img: " "
+      },
+      { 
+        code: " ", 
+        name: "EN-CME305",
+        description: " ",
+        img: " "
+      },
+       { 
+        code: " ", 
+        name: "EN-CME304",
+        description: " ",
+        img: " "
+      },
+       { 
+        code: " ", 
+        name: "EN-CME303",
+        description: " ",
+        img: " "
+      },
+       { 
+        code: " ", 
+        name: "EN-CME302",
+        description: " ",
+        img: " "
+      },
+       { 
+        code: " ", 
+        name: "EN-CME301",
+        description: " ",
+        img: " "
+      },
+  ]
 }
   },
 
@@ -317,13 +374,25 @@ rooms: {
   3: [
     { 
       code: " ", 
-      name: " ",
+      name: "ED-303",
       description: " ",
       img: " "
     },
     { 
       code: " ", 
-      name: " ",
+      name: "ED-302",
+      description: " ",
+      img: " "
+    },
+    { 
+      code: " ", 
+      name: "ED-301",
+      description: " ",
+      img: " "
+    },
+     { 
+      code: " ", 
+      name: "ED-201",
       description: " ",
       img: " "
     }
@@ -571,14 +640,7 @@ img: ""
             img: ""
                         
             },
-            {
-            code:"",
-            name: "GAD Office",
-            description: "The Office where programs and activities promoting equality, inclusivity, and student welfare are planned and managed.",
-            img: GADoffice
-
-
-            },
+         
           {
             code:"",
             name: "COTMaleCR",
@@ -767,12 +829,14 @@ img: ""
         description: " ",
         img:" "
         },
-        {
-        code:"",
-        name:"GAD Office",
-        description: " ",
-        img:" "
-        },
+         {
+            code:"",
+            name: "GAD Office",
+            description: "The Office where programs and activities promoting equality, inclusivity, and student welfare are planned and managed.",
+            img: GADoffice
+
+
+          },
         {
         code:"",
         name:"Research and Development Office",
@@ -921,7 +985,13 @@ img: ""
       3:[
       {
       code:"",
-      name:"",
+      name:"Library",
+      description: " ",
+      img: ""
+      },
+      {
+      code:"",
+      name:"AVR Room",
       description: " ",
       img: ""
       }
