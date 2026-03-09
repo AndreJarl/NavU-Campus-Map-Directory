@@ -22,8 +22,8 @@ function Panorama({ scene, onChangeScene, clicked, reloadTrigger }) {
     hotSpotDiv.style.cursor = 'pointer';
     hotSpotDiv.innerHTML = `
       <div style="
-        transform: scale(3.7) translateX(-9px) rotateX(60deg) rotate(${rotation}deg);
-        width: 70px; height: 70px;
+        transform: scale(3.7) translateX(-14px) rotateX(60deg) rotate(${rotation}deg);
+        width: 50px; height: 50px;
         transform-origin: center center;
         perspective: 800px;
         opacity: 0.7;
@@ -100,7 +100,7 @@ function Panorama({ scene, onChangeScene, clicked, reloadTrigger }) {
       scenesConfig[key] = {
         type: 'equirectangular',
         panorama: val.image,
-        hfov: 120,
+        hfov: 200,
         yaw: val.yaw || 0,   
         pitch: val.pitch || 0,
         hotSpots: val.hotspots.map(h => {

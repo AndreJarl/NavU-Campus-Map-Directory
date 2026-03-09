@@ -1,474 +1,532 @@
 {
   "Main Gate": {
-    "image": "/360/sample.jpg",
+    "image": "/360/ADMIN/1FLR/Lobby.webp",
     "hotspots": [
       {
-        "pitch": -20.5,
-        "yaw": 20,
+        "pitch": -10.5,
+        "yaw": -30,
         "type": "arrow",
-        "target": "Security Office",
-        "arrowType": "forward"
-      },
-    
-      {
-        "pitch": 10,
-        "yaw":25,
-        "type": "info",
-        "label": "CTU Entrance"
-      }
-    ]
-  },
-  "Security Office": {
-    "image": "https://res.cloudinary.com/dkicidfrq/image/upload/v1766461632/CTUFront2_u4oiqb.jpg  ",
-    "hotspots": [
-      {
-        "pitch": -20.5,
-        "yaw": 50,
-        "type": "arrow",
-        "target": "Water Refill/Laundry Shop",
-        "arrowType": "forward"
-      },
-      {
-        "pitch": -60.5,
-        "yaw": 50,
-        "type": "arrow",
-        "target": "Main Gate",
-        "arrowType": "backward",
-        "rotation": 180
-      },
-          {
-        "pitch": 10,
-        "yaw":120,
-        "type": "info",
-        "label": "Security Office"
-      }
-    ]
-  },
-    "Water Refill/Laundry Shop": {
-    "image": "https://res.cloudinary.com/dkicidfrq/image/upload/v1766461733/Oval_Path_g7f7rd.jpg",
-    "hotspots": [
-      {
-        "pitch": -20.5,
-        "yaw": 30,
-        "type": "arrow",
-        "target": "ERRC Path",
-        "arrowType": "forward"
+        "target": "Registrar",
+        "rotation" : -10
       },
         {
-        "pitch": -20.5,
-        "yaw": 130,
+        "pitch": -10.5,
+        "yaw": 30,
         "type": "arrow",
-        "target": "Electrical Engineering Laboratory",
-        "arrowType": "forward",
-        "rotation" : 190
+        "target": "Cashier",
+        "rotation" : 10
       },
       {
-        "pitch": -60.5,
-        "yaw": 30,
+        "pitch": 10,
+        "yaw":16,
+        "type": "info",
+        "label": "You are here"
+      },
+       {
+        "pitch": 11,
+        "yaw":55,
+        "type": "info",
+        "label": "Cashier"
+      },
+         {
+        "pitch": 8,
+        "yaw":-70,
+        "type": "info",
+        "label": "Registrar"
+      }
+    ]
+  },
+  "Registrar": {
+    "image": "/360/ADMIN/1FLR/Registrar1.webp",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "MIS Office",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -160.5,
+        "yaw": 10,
+        "type": "arrow",
+        "target": "Main Gate",
+        "rotation": 35
+      },
+          {
+        "pitch": 40,
+        "yaw":-100,
+        "type": "info",
+        "label": "Registrar"
+      }
+    ]
+  },
+ "MIS Office": {
+    "image": "/360/ADMIN/1FLR/MIS-OFFICE.webp",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Accounting Office",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Registrar",
+        "rotation": 0
+      },
+          {
+        "pitch": 40,
+        "yaw":-60,
+        "type": "info",
+        "label": "MIS Office"
+      }
+    ]
+  },
+"Accounting Office": {
+    "image": "/360/ADMIN/1FLR/ACCOUNTING&BUDGETOFFICE.webp",
+    "yaw": -50,
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 90,
+        "type": "arrow",
+        "target": "EDUC-fmaleCR1",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "MIS Office",
+        "rotation": 0
+      },
+          {
+        "pitch": 40,
+        "yaw":-80,
+        "type": "info",
+        "label": "Accounting & Budget Office"
+      },
+         {
+        "pitch": 10,
+        "yaw":70,
+        "type": "info",
+        "label": "Female CR"
+      }
+    ]
+  },
+ "EDUC-fmaleCR1": {
+    "image": "/360/EDUC/1FLR/EDUC-fmaleCR1.webp",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Clinic",
+        "arrowType": "forward"
+      },
+         {
+        "pitch": -20.5,
+        "yaw": -85,
+        "type": "arrow",
+        "target": "SECONFLOOR",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -160.5,
+        "yaw": 10,
+        "type": "arrow",
+        "target": "Accounting Office",
+        "rotation": -35
+      },
+          {
+        "pitch": 20,
+        "yaw":120,
+        "type": "info",
+        "label": "Cashier"
+      }
+    ]
+  },
+  
+"Education Laboratory 1": {
+    "image": "/360/EDUC/1FLR/ED-102A.webp",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Education Laboratory 2",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -160.5,
+        "yaw": 10,
+        "type": "arrow",
+        "target": "EDUC-fmaleCR1",
+        "rotation": -35
+      },
+          {
+        "pitch": 20,
+        "yaw":-90,
+        "type": "info",
+        "label": "Education Laboratory 1"
+      }
+    ]
+  },
+
+  "Education Laboratory 2": {
+    "image": "/360/EDUC/1FLR/ED-101B.webp",
+    "hotspots": [
+      {
+        "pitch": -160.5,
+        "yaw": 10,
+        "type": "arrow",
+        "target": "Education Laboratory 1"
+      },
+          {
+        "pitch": 20,
+        "yaw":-50,
+        "type": "info",
+        "label": "Education Laboratory 2"
+      }
+    ]
+  },
+  "Cashier": {
+    "image": "/360/ADMIN/1FLR/Cashier.webp",
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "Clinic",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -160.5,
+        "yaw": 10,
+        "type": "arrow",
+        "target": "Main Gate",
+        "rotation": -35
+      },
+          {
+        "pitch": 20,
+        "yaw":120,
+        "type": "info",
+        "label": "Cashier"
+      }
+    ]
+  },
+  "Clinic": {
+    "image": "/360/ADMIN/1FLR/Clinic.webp",
+    "hotspots": [
+      {
+        "pitch": -30.5,
+        "yaw": -80,
+        "type": "arrow",
+        "target": "COE-FEMALECR",
+        "rotation": -10
+      },
+      {
+        "pitch": -160.5,
+        "yaw": 5,
         "type": "arrow",
         "target": "Security Office",
         "arrowType": "backward",
         "rotation": 180
       },
           {
-        "pitch": 10,
-        "yaw":150,
+        "pitch": 40,
+        "yaw": 340,
         "type": "info",
-        "label": "Security Office"
-      },
-       {
-        "pitch": 10,
-        "yaw": 300,
-        "type": "info",
-        "label": "Water Refilling Station"
-      },
-          {
-        "pitch": 10,
-        "yaw": 320,
-        "type": "info",
-        "label": "Laundry Station"
+        "label": "University Clinic"
       }
     ]
   }, 
-   "ERRC Path": {
-    "image": "https://res.cloudinary.com/dkicidfrq/image/upload/v1766461734/PATH2_Oval_sdofgk.jpg",
+  "COE-FEMALECR": {
+    "image": "/360/ENG-CME/1FLR/COE_FMaleCR1.webp",
     "hotspots": [
       {
         "pitch": -20.5,
-        "yaw": 20,
+        "yaw": -5,
         "type": "arrow",
-        "target": "ERRC Building",
+        "target": "Electrical Engineering Laboratory",
         "arrowType": "forward"
       },
-      {
-        "pitch": -60.5,
-        "yaw": 20,
-        "type": "arrow",
-        "target": "Water Refill/Laundry Shop",
-        "arrowType": "backward",
-        "rotation": 180
-      }
-    ]
-  },
-   "ERRC Building": {
-    "image": "https://res.cloudinary.com/dkicidfrq/image/upload/v1766461735/PATH1_Oval_og0kzp.jpg",
-    "hotspots": [
-      {
+           {
         "pitch": -20.5,
-        "yaw": 20,
+        "yaw": 70,
         "type": "arrow",
-        "target": "ERRC Path",
-        "arrowType": "forward"
+        "target": "Dean's and Conference   ",
+        "rotation": 20
       },
       {
-        "pitch": -60.5,
-        "yaw": 20,
+        "pitch": -165.5,
+        "yaw": -5,
         "type": "arrow",
-        "target": "ERRC Path",
-        "arrowType": "backward",
-        "rotation": 180
+        "target": "Clinic",
+        "rotation": 40
       },
-        {
-        "pitch": 10,
-        "yaw": 300,
+       {
+        "pitch": 20,
+        "yaw": 400,
         "type": "info",
-        "label": "ERRC Building"
+        "label": "Female CR"
       }
     ]
   },
-  
-
-
-
-  
 
 
   "Electrical Engineering Laboratory": {
-    "image": "/360/eng/en102b.webp",
+    "image": "/360/ENG-CME/1FLR/ENGLAB1.webp",
     "yaw": 0,
     "hotspots": [
       {
         "pitch": -20.5,
         "yaw": 10,
         "type": "arrow",
-        "target": "Engineering Laboratory",
+        "target": "pathTOComplab1",
         "arrowType": "forward"
       },
       {
         "pitch": -160.5,
-        "yaw": 10,
+        "yaw": 5,
         "type": "arrow",
         "target": "Water Refill/Laundry Shop",
         "arrowType": "backward"
       },
         {
         "pitch": 25,
-        "yaw": 30,
+        "yaw": 160,
         "type": "info",
         "label": "Electrical Engineering Laboratory"
+      },
+        {
+        "pitch": 15,
+        "yaw": 10,
+        "type": "info",
+        "label": "Engineering Laboratory"
       }
     ]
   },
-  "Engineering Laboratory": {
-    "image": "/360/eng/en102a.webp",
-    "yaw": 180,
+
+  "pathTOComplab1": {
+    "image": "/360/ENG-CME/1FLR/pathtoCOMPLAB1.webp",
+    "yaw": 0,
     "hotspots": [
       {
         "pitch": -20.5,
-        "yaw": 10,
+        "yaw": 0,
         "type": "arrow",
         "target": "Electrical Engineering Laboratory",
         "arrowType": "forward"
       },
       {
         "pitch": -160.5,
-        "yaw": 10,
+        "yaw": 5,
         "type": "arrow",
-        "target": "CME/COE",
+        "target": "Electrical Engineering Laboratory",
         "arrowType": "backward",
         "rotation": 180
       },
         {
         "pitch": -160.5,
-        "yaw": -130,
+        "yaw": -100,
         "type": "arrow",
         "target": "COE360",
-        "rotation": 50
-      },
-        {
-        "pitch": 10,
-        "yaw": 200,
-        "type": "info",
-        "label": "Engineering Laboratory"
-      },
-       {
-        "pitch": 10,
-        "yaw": 350,
-        "type": "info",
-        "label": "Electrical Engineering Laboratory"
+        "rotation": 20
       }
     ]
   },
-  "COE360": {
-    "image": "/360/eng/eng360.webp",
+
+  "Computer Laboratory 1": {
+    "image": "/360/ENG-CME/1FLR/EN-COMLAB1A-B.webp",
     "yaw": 0,
     "hotspots": [
       {
         "pitch": -20.5,
-        "yaw": 10,
+        "yaw": 5,
         "type": "arrow",
-        "target": "Electrical Engineering Laboratory",
+        "target": "Computer Laboratory 2",
         "arrowType": "forward"
       },  
     
        {
-        "pitch": 40,
-        "yaw": 360,
+        "pitch": 30,
+        "yaw": 380,
         "type": "info",
-        "label": "College of Engineering Building"
-      }
-    ]
-  },
-  "CME/COE": {
-    "image": "/360/eng/coecme.webp",
-    "yaw": 180,
-    "hotspots": [
-      {
-        "pitch": -20.5,
-        "yaw": 10,
-        "type": "arrow",
-        "target": "Engineering Laboratory",
-        "arrowType": "forward"
+        "label": "Computer Laboratory 1"
       },
-      {
+         {
         "pitch": -160.5,
-        "yaw": 20,
-        "type": "arrow",
-        "target": "Computer Laboratory 1",
-        "arrowType": "backward",
-        "rotation": 180
-      },
-        {
-        "pitch": 10,
-        "yaw": 190,
-        "type": "info",
-        "label": "Computer Lab 1"
-      },
-       {
-        "pitch": 20,
-        "yaw": 350,
-        "type": "info",
-        "label": "Engineering Laboratory"
-      }
-    ]
-  },
-  "Computer Laboratory 1": {
-    "image": "/360/eng/encomlab1.webp",
-    "yaw": 180,
-    "hotspots": [
-      {
-        "pitch": -15.5,
         "yaw": 5,
         "type": "arrow",
-        "target": "CME/COE",
-        "arrowType": "forward"
-      },
-      {
-        "pitch": -160.5,
-        "yaw": 10,
-        "type": "arrow",
-        "target": "Computer Laboratory 2",
+        "target": "pathTOComplab1",
         "arrowType": "backward",
         "rotation": 180
-      },
-        {
-        "pitch": 35,
-        "yaw": 300,
-        "type": "info",
-        "label": "Computer Lab 1"
       }
     ]
   },
   "Computer Laboratory 2": {
-    "image": "/360/eng/encomlab2.webp",
-    "yaw": 180,
+    "image": "/360/ENG-CME/1FLR/EN-COMLAB2A-B.webp",
     "hotspots": [
       {
         "pitch": -15.5,
-        "yaw": 5,
+        "yaw": 0,
         "type": "arrow",
-        "target": "Engineering Laboratory",
+        "target": "Electronic Laboratory",
         "arrowType": "forward"
       },
       {
         "pitch": -160.5,
-        "yaw": 10,
+        "yaw": -10,
         "type": "arrow",
-        "target": "Electronic Laboratory",
+        "target": "Computer Laboratory 2",
         "arrowType": "backward",
         "rotation": 180
       },
-        {
-        "pitch": 28,
-        "yaw": 300,
+       {
+        "pitch": 20,
+        "yaw": 380,
         "type": "info",
         "label": "Computer Lab 2"
-      },
-        {
-        "pitch": 10,
-        "yaw": 195,
-        "type": "info",
-        "label": "Electronics Lab "
-      },
-       {
-        "pitch": 10,
-        "yaw": 350,
-        "type": "info",
-        "label": "Computer Lab 1"
       }
     ]
   },
   "Electronic Laboratory": {
-    "image": "/360/eng/electronicslab.webp",
-    "yaw": 180,
+    "image": "/360/ENG-CME/1FLR/ELEC_LAB.webp",
     "hotspots": [
       {
         "pitch": -15.5,
-        "yaw": 5,
+        "yaw": 0,
         "type": "arrow",
-        "target": "Computer Laboratory 2",
+        "target": "COE Room 1",
         "arrowType": "forward"
       },
       {
         "pitch": -160.5,
         "yaw": 10,
         "type": "arrow",
-        "target": "COE102",
+        "target": "Computer Laboratory 2",
         "arrowType": "backward",
         "rotation": 180
       },
         {
-        "pitch": 28,
-        "yaw": 300,
+        "pitch": 20,
+        "yaw": 380,
         "type": "info",
         "label": "Electronics Lab"
-      },
-        {
-        "pitch": 10,
-        "yaw": 190,
-        "type": "info",
-        "label": "COE102"
       }
     ]
   },
-  "COE102": {
-    "image": "/360/eng/coe102.webp",
-    "yaw": 180,
+  "COE Room 1": {
+    "image": "/360/ENG-CME/1FLR/EN-103.webp",
     "hotspots": [
       {
         "pitch": -15.5,
-        "yaw": 5,
+        "yaw": 0,
         "type": "arrow",
-        "target": "Electronic Laboratory",
+        "target": "COE Room 2",
         "arrowType": "forward"
       },
       {
         "pitch": -160.5,
-        "yaw": 10,
+        "yaw": 0,
         "type": "arrow",
-        "target": "COE101",
+        "target": "Electronic Laboratory",
         "arrowType": "backward",
         "rotation": 180
       },
         {
-        "pitch": 28,
-        "yaw": 300,
+        "pitch": 20,
+        "yaw": 380,
         "type": "info",
-        "label": "C0E102"
-      },
-        {
-        "pitch": 15,
-        "yaw": 195,
-        "type": "info",
-        "label": "C0E101"
+        "label": "COE103"
       }
     
       
     ]
   },
-  "COE101": {
-    "image": "/360/eng/coe101.webp",
-    "yaw": 180,
+  "COE Room 2": {
+    "image": "/360/ENG-CME/1FLR/EN-101.webp",
     "hotspots": [
       {
         "pitch": -15.5,
-        "yaw": 5,
+        "yaw": 0,
         "type": "arrow",
-        "target": "Electronic Laboratory",
+        "target": "Stairs&FemaleCr",
         "arrowType": "forward"
       },
       {
         "pitch": -155.5,
-        "yaw": -70,
+        "yaw": -10,
         "type": "arrow",
-        "target": "COE101",
+        "target": "COE Room 1",
         "rotation": 0
       },
-           {
-        "pitch": -160.5,
-        "yaw": 20,
-        "type": "arrow",
-        "target": "COE101",
-        "rotation": 70
-      },
         {
-        "pitch": 28,
-        "yaw": 330,
+        "pitch": 20,
+        "yaw": 380,
         "type": "info",
-        "label": "C0E102"
-      },
-        {
-        "pitch": 5,
-        "yaw": -240,
-        "type": "info",
-        "label": "Study Area"
+        "label": "EN-101"
       }
-
     
       
     ]
   },
 
 
-
-
-  "EducCr": {
-    "image": "/360/educ/educcr1.jpg",
+  "Stairs&FemaleCr": {
+    "image": "/360/ENG-CME/1FLR/Stairs&FemaleCR1.webp",
     "yaw": 0,
     "hotspots": [
       {
         "pitch": -15.5,
-        "yaw": 5,
+        "yaw": 0,
         "type": "arrow",
-        "target": "Education Laboratory 1",
+        "target": "Fablab",
+        "arrowType": "forward"
+      },
+          {
+        "pitch": -15.5,
+        "yaw": 90,
+        "type": "arrow",
+        "target": "CME Computer Laboratory 1",
         "arrowType": "forward"
       },
 
            {
         "pitch": -160.5,
-        "yaw": 20,
+        "yaw": 5,
         "type": "arrow",
-        "target": "Education Laboratory"
+        "target": "COE Room 2"
+      },
+       {
+        "pitch": -160.5,
+        "yaw": 70,
+        "type": "arrow",
+        "target": "Study Area",
+        "rotation": 30
       },
         {
-        "pitch": 20,
-        "yaw": 310,
+        "pitch": 5,
+        "yaw": 130,
         "type": "info",
         "label": "Female CR"
+      },
+        {
+        "pitch": 5,
+        "yaw": 280,
+        "type": "info",
+        "label": "Study Area"
       }
     ]
   },
-  "Education Laboratory 1": {
+
+
+  "Education Laborato": {
     "image": "/360/educ/ed-102b.jpg",
     "yaw": 0,
     "hotspots": [
@@ -494,7 +552,7 @@
       }
     ]
   },
-  "Education Laboratory 2": {
+  "Education Laborator": {
     "image": "/360/educ/educphysics.jpg",
     "yaw": 0,
     "hotspots": [

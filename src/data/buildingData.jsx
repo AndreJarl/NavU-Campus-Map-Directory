@@ -90,7 +90,7 @@ const buildingData = {
 
       },
       {        
-        code: " ", 
+        code: "EN-101", 
         name: "COE Room 1",
         description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
         img: " "
@@ -98,7 +98,7 @@ const buildingData = {
 
       },
       {
-        code: " ", 
+        code: "EN-103", 
         name: "COE Room 2",
         description: "A learning area where students attend lectures, participate in discussions, and work on academic activities guided by their teachers. ",
         img: " "
@@ -154,34 +154,8 @@ const buildingData = {
 },
 
 'CME/COE Building': {
-      totalFloors: 4,
+      totalFloors: 3,
       rooms:{
-      1: [
-    { 
-      code: " ", 
-      name: " ",
-      description: " ",
-      img: " "
-    },
-    { 
-      code: " ", 
-      name: " ",
-      description: " ",
-      img: " "
-    },
-    { 
-      code: " ", 
-      name: " ",
-      description: " ",
-      img: " "
-    },
-    { 
-      code: " ", 
-      name: " ",
-      description: " ",
-      img: " "
-    }
-  ],
    2: [
     { 
       code: " ", 
