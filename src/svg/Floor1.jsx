@@ -112,48 +112,25 @@ return (
         d="M236.062 672.043h6v18h-6z"
       />
 
-      <g onClick={()=>handleFloor(2)} cursor={"pointer"} className="floating-element"
-        xmlns="http://www.w3.org/2000/svg"
-        filter="url(#filter0_d_2041_14)"
-      >
-        <circle   cx="281" cy="716" r="6" fill="#FF3030" />
-        <text 
-          x="281"
-          y="714"
-          fill="white"
-          font-size="2"
-          font-family="Arial, sans-serif"
-          text-anchor="middle"
-          dominant-baseline="central"
-        >
-          Click here
-        </text>
-        <text 
-          x="281"
-          y="716"
-          fill="white"
-          font-size="2"
-          font-family="Arial, sans-serif"
-          text-anchor="middle"
-          dominant-baseline="central"
-        >
-          to go
-        </text>
-        <text onClick={()=>handleFloor(2)} cursor={"pointer"}
-          x="281"
-          y="718"
-          fill="white"
-          font-size="2"
-          font-family="Arial, sans-serif"
-          text-anchor="middle"
-          dominant-baseline="central"
-        >
-          Floor 2
-        </text>
-      </g>
+    <g onClick={() => handleFloor(2)} cursor={"pointer"} className="floating-element">
+      <polygon
+        points="281,712 284,717 278,717"
+        fill="#FF3030"
+        strokeLinejoin="round"
+      />
+        <text x="281" y="719.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 2</text>
+    </g>
 
+   <g onClick={() => handleFloor(2)} cursor={"pointer"} className="floating-element">
+  <polygon
+    points="106,712 109,717 103,717"
+    fill="#FF3030"
+    strokeLinejoin="round"
+  />
+  <text x="106" y="719.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 2</text>
+   </g>
     
-    <g onClick={()=>handleFloor(2)} cursor={"pointer"} className="floating-element" filter="url(#filter1_d_2041_14)">  
+    {/* <g onClick={()=>handleFloor(2)} cursor={"pointer"} className="floating-element" filter="url(#filter1_d_2041_14)">  
       <circle cx="106" cy="716" r="6" fill="#FF3030" />
       <text 
         x="106"
@@ -191,90 +168,25 @@ return (
       >
        Floor 2
       </text>
+    </g> */}
+
+    <g onClick={() => handleFloor(2)} cursor={"pointer"} className="floating-element" xmlns="http://www.w3.org/2000/svg">
+      <polygon
+        points="96,558 99,563 93,563"
+        fill="#FF3030"
+        strokeLinejoin="round"
+      />
+      <text x="96" y="565.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 2</text>
     </g>
 
-<g onClick={()=>handleFloor(2)} cursor={"pointer"} className="floating-element" xmlns="http://www.w3.org/2000/svg" filter="url(#filter2_d_2041_14)">
-  <circle cx="96" cy="562" r="6" fill="#FF3030"/>
-  <text
-    x="96"
-    y="560"
-    fill="white"
-    fontSize="2"
-    fontFamily="Arial, sans-serif"
-    textAnchor="middle"
-    dominantBaseline="central"
-    style={{ pointerEvents: 'none' }}
-  >
-   Click here
-  </text>
-    <text
-    x="96"
-    y="562"
-    fill="white"
-    fontSize="2"
-    fontFamily="Arial, sans-serif"
-    textAnchor="middle"
-    dominantBaseline="central"
-    style={{ pointerEvents: 'none' }}
-  >
-    to go
-  </text>
-    <text
-    x="96"
-    y="564"
-    fill="white"
-    fontSize="2"
-    fontFamily="Arial, sans-serif"
-    textAnchor="middle"
-    dominantBaseline="central"
-    style={{ pointerEvents: 'none' }}
-  >
-    Floor 2
-  </text>
-</g>
-
-<g  onClick={()=>handleFloor(2)} cursor={"pointer"} className="floating-element" xmlns="http://www.w3.org/2000/svg" filter="url(#filter5_d_2041_14)">
-  {/* Increased cy from 512 to 522 to move it down */}
-  <circle cx="177" cy="517" r="6" fill="#FF3030"/>
-  
-  {/* Match the y coordinate here too */}
-  <text
-    x="177"
-    y="515"
-    fill="white"
-    fontSize="2"
-    fontFamily="Arial, sans-serif"
-    textAnchor="middle"
-    dominantBaseline="central"
-    style={{ pointerEvents: 'none' }}
-  >
-    Click here
-  </text>
-  <text
-    x="177"
-    y="517"
-    fill="white"
-    fontSize="2"
-    fontFamily="Arial, sans-serif"
-    textAnchor="middle"
-    dominantBaseline="central"
-    style={{ pointerEvents: 'none' }}
-  >
-    to go
-  </text>
-  <text
-    x="177"
-    y="519"
-    fill="white"
-    fontSize="2"
-    fontFamily="Arial, sans-serif"
-    textAnchor="middle"
-    dominantBaseline="central"
-    style={{ pointerEvents: 'none' }}
-  >
-    Floor 2
-  </text>
-</g>
+    <g onClick={() => handleFloor(2)} cursor={"pointer"} className="floating-element" xmlns="http://www.w3.org/2000/svg">
+      <polygon
+        points="177,513 180,518 174,518"
+        fill="#FF3030"
+        strokeLinejoin="round"
+      />
+      <text x="177" y="520.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 2</text>
+    </g>
 
       <path fill="#d9d9d9" d="M240.062 614.043h2v14h-2z" />
       <path fill="#d9d9d9" d="M143.062 614.043h2v14h-2z" />

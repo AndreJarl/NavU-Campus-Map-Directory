@@ -46,165 +46,42 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
       id meet"
     >
 
- <g  className="floating-element" onClick={() => setCurrentFloor(currentFloor + 1)}  xmlns="http://www.w3.org/2000/svg" filter="url(#filter0_d_2041_14)">
-  <circle cx="281" cy="716" r="6" fill="#FF3030"/>
-  <text onClick={() => setCurrentFloor(currentFloor + 1)}
-    x="281" 
-    y="714" 
-    fill="white" 
-    font-size="2" 
-    font-family="Arial, sans-serif" 
-    text-anchor="middle" 
-    dominant-baseline="central">
-    Click here 
-  </text>
-   <text onClick={() => setCurrentFloor(currentFloor + 1)}
-    x="281" 
-    y="716" 
-    fill="white" 
-    font-size="2" 
-    font-family="Arial, sans-serif" 
-    text-anchor="middle" 
-    dominant-baseline="central">
-    to go 
-  </text>
-   <text onClick={() => setCurrentFloor(currentFloor + 1)}
-    x="281" 
-    y="718" 
-    fill="white" 
-    font-size="2" 
-    font-family="Arial, sans-serif" 
-    text-anchor="middle" 
-    dominant-baseline="central">
-    {`Floor ${currentFloor + 1}  `}
-  </text>
-  </g>
-
-
-<g  className="floating-element"
-  onClick={() => setCurrentFloor(currentFloor - 1)} 
-  cursor={"pointer"}
-  filter="url(#filter1_d_2041_14)"
->
-  <circle cx="270" cy="729" r="6" fill="#FF3030" />
-  <text    onClick={() => setCurrentFloor(currentFloor - 1)} 
-
-    x="270"
-    y="727"
-    fill="white"
-    fontSize="2"
-    fontFamily="Arial, sans-serif"
-    textAnchor="middle"
-    dominantBaseline="central"
-    style={{ pointerEvents: 'none' }}
-  >
-    Click here
-  </text>
-  <text   onClick={() => setCurrentFloor(currentFloor - 1)} 
-    x="270"
-    y="729"
-    fill="white"
-    fontSize="2"
-    fontFamily="Arial, sans-serif"
-    textAnchor="middle"
-    dominantBaseline="central"
-    style={{ pointerEvents: 'none' }}
-  >
-    to go
-  </text>
-   <text   onClick={() => setCurrentFloor(currentFloor - 1)}
-    x="270"
-    y="731"
-    fill="white"
-    fontSize="2"
-    fontFamily="Arial, sans-serif"
-    textAnchor="middle"
-    dominantBaseline="central"
-    style={{ pointerEvents: 'none' }}
-  >
-    {`Floor ${currentFloor -1}`}
-  </text>
+<g className="floating-element" onClick={() => handleFloor(currentFloor + 1)} cursor={"pointer"} xmlns="http://www.w3.org/2000/svg">
+  <polygon
+    points="281,712 284,717 278,717"
+    fill="#FF3030"
+    strokeLinejoin="round"
+  />
+  <text x="281" y="719.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor + 1}`}</text>
 </g>
 
-   <g onClick={()=>setCurrentFloor(currentFloor-1)} cursor={"pointer"} className="floating-element" xmlns="http://www.w3.org/2000/svg" filter="url(#filter2_d_2041_14)">
-  <circle cx="116" cy="731" r="6" fill="#FF3030" />
-  <text onClick={()=>setCurrentFloor(currentFloor-1)}
-    x="116"
-    y="729"
-    fill="white"
-    fontSize="2"
-    fontFamily="Arial, sans-serif"
-    textAnchor="middle"
-    dominantBaseline="central"
-    style={{ pointerEvents: 'none' }}
-  >
-   Click here
-  </text>
-    <text onClick={()=>setCurrentFloor(currentFloor-1)}
-    x="116"
-    y="731"
-    fill="white"
-    fontSize="2"
-    fontFamily="Arial, sans-serif"
-    textAnchor="middle"
-    dominantBaseline="central"
-    style={{ pointerEvents: 'none' }}
-  >
-   to go
-  </text>
-      <text onClick={()=>setCurrentFloor(currentFloor-1)}
-    x="116"
-    y="733"
-    fill="white"
-    fontSize="2"
-    fontFamily="Arial, sans-serif"
-    textAnchor="middle"
-    dominantBaseline="central"
-    style={{ pointerEvents: 'none' }}
-  >
-   {`Floor ${currentFloor - 1}`}
-  </text>
+
+<g className="floating-element" onClick={() => handleFloor(currentFloor - 1)} cursor={"pointer"}>
+  <polygon
+    points="270,733 273,728 267,728"
+    fill="#FF3030"
+    strokeLinejoin="round"
+  />
+  <text x="270" y="725.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor - 1}`}</text>
 </g>
 
-<g onClick={()=>setCurrentFloor(currentFloor+1)} cursor={"pointer"} className="floating-element" filter="url(#filter1_d_2041_14)">  
-      <circle cx="106" cy="716" r="6" fill="#FF3030" />
-      <text onClick={()=>setCurrentFloor(2)} cursor={"pointer"}
-        x="106"
-        y="714"
-        fill="white"
-        fontSize="2"
-        fontFamily="Arial, sans-serif"
-        textAnchor="middle"
-        dominantBaseline="central"
-        style={{ pointerEvents: 'none' }}
-      >
-        Click here 
-      </text>
-      <text onClick={()=>setCurrentFloor(2)} cursor={"pointer"}
-        x="106"
-        y="716"
-        fill="white"
-        fontSize="2"
-        fontFamily="Arial, sans-serif"
-        textAnchor="middle"
-        dominantBaseline="central"
-        style={{ pointerEvents: 'none' }}
-      >
-       to go 
-      </text>
-        <text onClick={()=>setCurrentFloor(2)} cursor={"pointer"}
-        x="106"
-        y="718"
-        fill="white"
-        fontSize="2"
-        fontFamily="Arial, sans-serif"
-        textAnchor="middle"
-        dominantBaseline="central"
-        style={{ pointerEvents: 'none' }}
-      >
-       {`Floor ${currentFloor+1}`}
-      </text>
-    </g>
+<g onClick={() => handleFloor(currentFloor - 1)} cursor={"pointer"} className="floating-element" xmlns="http://www.w3.org/2000/svg">
+  <polygon
+    points="116,735 119,730 113,730"
+    fill="#FF3030"
+    strokeLinejoin="round"
+  />
+  <text x="116" y="727.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor - 1}`}</text>
+</g>
+
+<g onClick={() => handleFloor(currentFloor + 1)} cursor={"pointer"} className="floating-element">
+  <polygon
+    points="106,712 109,717 103,717"
+    fill="#FF3030"
+    strokeLinejoin="round"
+  />
+  <text x="106" y="719.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor + 1}`}</text>
+</g>
 
 
 <path d="M503 0H0V815H503V0Z"/>
@@ -317,7 +194,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 <path opacity={path === "Library" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"  d="M204.04 726.814V725.885C204.04 725.333 204.488 724.885 205.04 724.885H245.247C245.799 724.885 246.247 724.438 246.247 723.885V719.92C246.247 719.368 246.695 718.92 247.247 718.92L256.757 718.92" />
 
-<path opacity={path === "" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M204.025 726.82V725.828C204.025 725.275 203.577 724.828 203.025 724.828H139.916C139.363 724.828 138.916 724.38 138.916 723.828V719.92C138.916 719.368 138.468 718.92 137.916 718.92L128.544 718.92"/>
+{/* <path opacity={path === "" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M204.025 726.82V725.828C204.025 725.275 203.577 724.828 203.025 724.828H139.916C139.363 724.828 138.916 724.38 138.916 723.828V719.92C138.916 719.368 138.468 718.92 137.916 718.92L128.544 718.92"/> */}
 
 <path opacity={path === "AVR Room" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M135 725.408H138.058C138.61 725.408 139.058 724.96 139.058 724.408V719.92C139.058 719.368 138.61 718.92 138.058 718.92H128.544"/>
 
