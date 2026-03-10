@@ -39,6 +39,22 @@ const handleFloor = useCallback((num) => {
     trigger();
 }, [currentFloor, trigger, setCurrentFloor]);
 
+ const showPath = (path) => {
+      const rooms = ["Library", "EN-303", "EN-302", "EN-301", "EN-CME308", "EN-CME307", "EN-CME306", "EN-CME305", "EN-CME304", 
+                     "EN-CME303", "EN-CME302", "EN-CME301", "ED-303", "ED-302","ED-301", "ED-201", "Campus Director Office", "Dean's and Conference", 
+                    "Engineering Faculty (Chairman's Office)", "Engineering Faculty Office", "CME Research Center", "TM-LAB-2A", "CME Computer Laboratory 2","CME Computer Laboratory 1",
+                    "TM-LAB-1A", "EN-CME 201", "Graduate School"];
+      return rooms.includes(path) ? 1 : 0;
+    };
+
+     const showPath2 = (path) => {
+      const rooms = ["HR Office", "Guidance Office", "Dean's Education Office", "New Admin Records", "SAO Office", "ED-201" , "ED-202", "AVR Room", "ED-303", "ED-302","ED-301", "ED-201"];
+      return rooms.includes(path) ? 1 : 0;
+    };
+
+  
+  
+
 return (
   <>
     <svg
@@ -5879,22 +5895,7 @@ return (
       />
 
       <path
-        opacity={
-          path === "Campus Director Office" ||
-          path === "Dean's and Conference" ||
-          path === "Engineering Faculty (Chairman's Office)" ||
-          path === "Admin Staff Office" ||
-          path === "Graduate School" ||
-          path === "Engineering Faculty Office" ||
-          path === "CME Research Center" ||
-          path === "TM-LAB-2A" ||
-          path === "CME Computer Laboratory 2" ||
-          path === "CME Computer Laboratory 1" ||
-          path === "TM-LAB-1A" ||
-          path === "EN-CME 201"
-            ? "1"
-            : "0"
-        }
+        opacity={showPath(path)}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"
@@ -5906,17 +5907,7 @@ return (
       </path>
 
       <path
-        opacity={
-          path === "HR Office" ||
-          path === "New Admin Records" ||
-          path === "Guidance Office" ||
-          path === "SAO Office" ||
-          path === "Dean's Education Office" ||
-          path === "ED-201" ||
-          path === "ED-202"
-            ? "1"
-            : 0
-        }
+        opacity={showPath2(path)}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"

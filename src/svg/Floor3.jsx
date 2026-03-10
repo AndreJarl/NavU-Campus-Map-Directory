@@ -454,7 +454,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     transform="rotate(90 136 634)" 
     fill="#00C3FF"
   />
-  <text
+  {/* <text
     x="125.5"
     y="639.5"
     fill="black"
@@ -466,7 +466,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     style={{ pointerEvents: 'none' }}
   >
     ED-201
-     </text>
+     </text> */}
 </g>
 
 <rect x="136" y="614" width="19" height="21" transform="rotate(90 136 614)" fill="#00C3FF"/>

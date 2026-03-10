@@ -34,6 +34,18 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
            setCurrentFloor(num);
            trigger();
     },[trigger]);
+
+    const showPath = (path) => {
+      const rooms = ["Library", "EN-303", "EN-302", "EN-301", "EN-CME308", "EN-CME307", "EN-CME306", "EN-CME305",
+                     "EN-CME304", "EN-CME303", "EN-CME302", "EN-CME301"];
+      return rooms.includes(path) ? 1 : 0;
+    };
+
+      const showPath2 = (path) => {
+      const rooms = ["AVR Room", "ED-303", "ED-302", "ED-301", "ED-201"];
+      return rooms.includes(path) ? 1 : 0;
+    };
+  
   
   return (
     <>
@@ -101,6 +113,12 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M190.1 497.4V504H190.9V497.4H190.1Z" fill="#535353"/>
 <path d="M196.199 493.001V504.001H196.999V493.001H196.199Z" fill="#535353"/>
 <path d="M184 493V504H184.8V493H184Z" fill="#535353"/>
+
+
+<path opacity={showPath2(path)} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"  d="M127 713C127 713 133.5 713 134 713C134.5 713 135 719 134 719C133 719 127 719 127 719"/>
+
+{/* path to 3rd floor */}
+<path opacity={showPath(path)} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M258.674 712.834C258.674 712.834 252 712.834 250.674 712.834C249.348 712.834 250 718.777 250.674 718.834C251.348 718.892 258.674 718.834 258.674 718.834"/>
 
 
 <g  className="floating-element" onClick={() => handleFloor(3)}  xmlns="http://www.w3.org/2000/svg" filter="url(#filter0_d_2041_14)">
@@ -313,7 +331,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 </g>
 
 
-<g onClick={()=>handleFloor(3)} className="floating-element" xmlns="http://www.w3.org/2000/svg" filter="url(#filter1_d_2054_243)">
+{/* <g onClick={()=>handleFloor(3)} className="floating-element" xmlns="http://www.w3.org/2000/svg" filter="url(#filter1_d_2054_243)">
   <circle cx="94" cy="552" r="6" fill="#FF3030" />
   <text onClick={()=>handleFloor(3)}
     x="94"
@@ -351,7 +369,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
   >
     Floor 3
   </text>
-</g>
+</g> */}
 
 <g onClick={()=>handleFloor(1)} className="floating-element" xmlns="http://www.w3.org/2000/svg" filter="url(#filter2_d_2054_243)">
   <circle cx="179" cy="476" r="6" fill="#FF3030" />
