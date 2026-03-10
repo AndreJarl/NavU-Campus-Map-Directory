@@ -221,7 +221,7 @@
         "pitch": -20.5,
         "yaw": 5,
         "type": "arrow",
-        "target": "Clinic",
+        "target": "University Clinic",
         "arrowType": "forward"
       },
       {
@@ -239,7 +239,7 @@
       }
     ]
   },
-  "Clinic": {
+  "University Clinic": {
     "image": "/360/ADMIN/1FLR/Clinic.webp",
     "hotspots": [
       {
@@ -253,7 +253,7 @@
         "pitch": -160.5,
         "yaw": 5,
         "type": "arrow",
-        "target": "Security Office",
+        "target": "Cashier",
         "arrowType": "backward",
         "rotation": 180
       },
@@ -286,7 +286,7 @@
         "pitch": -165.5,
         "yaw": -5,
         "type": "arrow",
-        "target": "Clinic",
+        "target": "University Clinic",
         "rotation": 40
       },
        {
@@ -442,7 +442,7 @@
         "pitch": -160.5,
         "yaw": 5,
         "type": "arrow",
-        "target": "Water Refill/Laundry Shop",
+        "target": "COE-FEMALECR",
         "arrowType": "backward"
       },
         {

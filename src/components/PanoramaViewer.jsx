@@ -15,7 +15,7 @@ function PanoramaViewer({clicked, setClicked}) {
     <div 
       className={`
         ${clicked ? 'fixed' : 'hidden'} 
-        inset-0 bg-black/80 backdrop-blur-xs z-[9998] transition-opacity duration-300
+        inset-0 bg-black/80 backdrop-blur-sm z-[9998] transition-opacity duration-300
       `}
       onClick={() => setClicked(false)} // Close when clicking outside
     />
@@ -27,7 +27,7 @@ function PanoramaViewer({clicked, setClicked}) {
         ${clicked ? 'fixed' : 'hidden'} 
         top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
         w-full max-w-6xl h-[85vh] 
-        rounded-[2rem] bg-black z-[9999] overflow-hidden
+        rounded-[2rem]  z-[9999] overflow-hidden
         shadow-2xl 
       `}
     >
