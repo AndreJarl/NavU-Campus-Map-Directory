@@ -622,7 +622,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path opacity={path === "TM-LAB-1A" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.354 592.942H247.243C246.691 592.942 246.243 593.389 246.243 593.942L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 
-<path opacity={path === "EN-CME 201" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.638 578.84H247.243C246.691 578.84 246.243 579.287 246.243 579.84L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "EN-201" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.638 578.84H247.243C246.691 578.84 246.243 579.287 246.243 579.84L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 
 <path opacity={path === "CME Computer Laboratory 2" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.411 564.794H247.243C246.691 564.794 246.243 565.242 246.243 565.794L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
@@ -856,14 +856,14 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 </g>
 
 
-<g onClick={() => bldClicked("ED-201")} style={{ cursor: "pointer" }}>
+<g onClick={() => bldClicked("ED-202A-B")} style={{ cursor: "pointer" }}>
   <rect x="136" y="664" width="17" height="21" transform="rotate(90 136 664)" fill="#00C3FF"/>
-  <text x="125.5" y="672.5" textAnchor="middle" dominantBaseline="middle"fontFamily="Inter, sans-serif"fontWeight="600"fontSize="2" fill="black"style={{ pointerEvents: 'none', userSelect: 'none' }}>ED-201</text>
+  <text x="125.5" y="672.5" textAnchor="middle" dominantBaseline="middle"fontFamily="Inter, sans-serif"fontWeight="600"fontSize="2" fill="black"style={{ pointerEvents: 'none', userSelect: 'none' }}>ED-202A-B</text>
 </g>
 
-<g onClick={() => bldClicked("ED-202")} style={{ cursor: "pointer" }}>
+<g onClick={() => bldClicked("ED-201A-B")} style={{ cursor: "pointer" }}>
   <rect x="136" y="646" width="17" height="21" transform="rotate(90 136 646)" fill="#00C3FF"/>
-  <text x="125.5" y="654.5" textAnchor="middle" dominantBaseline="middle"fontFamily="Inter, sans-serif"fontWeight="600"fontSize="2" fill="black"style={{ pointerEvents: 'none', userSelect: 'none' }}>ED-202 </text>
+  <text x="125.5" y="654.5" textAnchor="middle" dominantBaseline="middle"fontFamily="Inter, sans-serif"fontWeight="600"fontSize="2" fill="black"style={{ pointerEvents: 'none', userSelect: 'none' }}>ED-201A-B </text>
 </g>
 
 {/* EDUC ONGOING BLD */}
@@ -897,9 +897,9 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
   <text x="259.5" y="566.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">COMPUTER LAB 2</text>
 </g>
 
-<g onClick={() => bldClicked("EN-CME 201")} style={{ cursor: "pointer" }}>
+<g onClick={() => bldClicked("EN-201")} style={{ cursor: "pointer" }}>
   <rect x="270" y="572" width="13" height="21" transform="rotate(90 270 572)" fill="#AAFF00"/>
-  <text x="259.5" y="579.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CME 201</text>
+  <text x="259.5" y="579.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">EN-201</text>
 </g>
 
 

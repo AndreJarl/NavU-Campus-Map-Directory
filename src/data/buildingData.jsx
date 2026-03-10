@@ -112,13 +112,13 @@ const buildingData = {
         img: " "
       },
       { 
-        code: " ", 
+        code: "EN-202A-COEFACULTY", 
         name: "Engineering Faculty (Chairman's Office)",
         description: " ",
         img: " "
       },
       { 
-        code: " ", 
+        code: "EN-201A-B", 
         name: "Engineering Faculty Office",
         description: " ",
         img: " "
@@ -133,19 +133,19 @@ const buildingData = {
     3: [
       { 
         code: " ", 
-        name: "EN-303",
+        name: "EN-303A-B",
         description: " ",
         img: " "
       },
       { 
         code: " ", 
-        name: "EN-302",
+        name: "EN-302A-B",
         description: " ",
         img: " "
       },
         { 
         code: " ", 
-        name: "EN-301",
+        name: "EN-301A-B",
         description: " ",
         img: " "
       }
@@ -158,7 +158,7 @@ const buildingData = {
       rooms:{
    2: [
     { 
-      code: " ", 
+      code: "HMLAB1-2", 
       name: "CME Research Center",
       description: " ",
       img: " "
@@ -177,18 +177,18 @@ const buildingData = {
     },
      { 
       code: " ", 
-      name: "EN-CME 201",
+      name: "EN-CME201A-B",
       description: " ",
       img: " "
     },
      { 
-      code: "CME Complab 2", 
+      code: "CME COMLAB 2A", 
       name: "CME Computer Laboratory 2",
       description: " ",
       img: " "
     },
     { 
-      code: "CME Complab 1", 
+      code: "CME COMLAB 1A", 
       name: "CME Computer Laboratory 1",
       description: " ",
       img: " "
@@ -198,49 +198,49 @@ const buildingData = {
   3:[
         { 
         code: " ", 
-        name: "EN-CME308",
+        name: "EN-CME308A-B",
         description: " ",
         img: " "
       },
        { 
         code: " ", 
-        name: "EN-CME307",
+        name: "EN-CME307A-B",
         description: " ",
         img: " "
       },
       { 
         code: " ", 
-        name: "EN-CME306",
+        name: "EN-CME306A-B",
         description: " ",
         img: " "
       },
       { 
         code: " ", 
-        name: "EN-CME305",
+        name: "EN-CME305A-B",
         description: " ",
         img: " "
       },
        { 
         code: " ", 
-        name: "EN-CME304",
+        name: "EN-CME304A-B",
         description: " ",
         img: " "
       },
        { 
         code: " ", 
-        name: "EN-CME303",
+        name: "EN-CME303A-B",
         description: " ",
         img: " "
       },
        { 
         code: " ", 
-        name: "EN-CME302",
+        name: "EN-CME302A-B",
         description: " ",
         img: " "
       },
        { 
         code: " ", 
-        name: "EN-CME301",
+        name: "EN-CME301A-B",
         description: " ",
         img: " "
       },
@@ -334,13 +334,13 @@ rooms: {
     },
     { 
       code: "", 
-      name: "ED-202",
+      name: "ED-202A-B",
       description: " ",
       img: " "
     },
     { 
       code: "", 
-      name: "ED-201",
+      name: "ED-201A-B",
       description: " ",
       img: " "
     }

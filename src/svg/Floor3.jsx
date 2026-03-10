@@ -321,40 +321,40 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 <path opacity={path === "AVR Room" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M135 725.408H138.058C138.61 725.408 139.058 724.96 139.058 724.408V719.92C139.058 719.368 138.61 718.92 138.058 718.92H128.544"/>
 
-<path opacity={path === "ED-303" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"  d="M137.932 690.635L138.058 690.635C138.61 690.635 139.058 691.083 139.058 691.635V717.92C139.058 718.472 138.61 718.92 138.058 718.92H128.544" />
+<path opacity={path === "ED-303A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"  d="M137.932 690.635L138.058 690.635C138.61 690.635 139.058 691.083 139.058 691.635V717.92C139.058 718.472 138.61 718.92 138.058 718.92H128.544" />
 
-<path opacity={path === "ED-302" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"   d="M137.984 673.318H138.058C138.61 673.318 139.058 673.766 139.058 674.318V717.92C139.058 718.472 138.61 718.92 138.058 718.92H128.544"/>
+<path opacity={path === "ED-302A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"   d="M137.984 673.318H138.058C138.61 673.318 139.058 673.766 139.058 674.318V717.92C139.058 718.472 138.61 718.92 138.058 718.92H128.544"/>
 
-<path opacity={path === "EN-302" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.316 673.318H247.243C246.691 673.318 246.243 673.766 246.243 674.318V717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "EN-302A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.316 673.318H247.243C246.691 673.318 246.243 673.766 246.243 674.318V717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
 
-<path opacity={path === "ED-301" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"   d="M138.028 654.894H138.058C138.61 654.894 139.058 655.342 139.058 655.894L139.058 717.92C139.058 718.473 138.61 718.92 138.058 718.92H128.544"/>
+<path opacity={path === "ED-301A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"   d="M138.028 654.894H138.058C138.61 654.894 139.058 655.342 139.058 655.894L139.058 717.92C139.058 718.473 138.61 718.92 138.058 718.92H128.544"/>
 
 <path  opacity={path === "Female Cr" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M133.67 711.512L133.67 717.92C133.67 718.473 133.222 718.92 132.67 718.92H128.544" />
 
-<path opacity={path === "EN-301" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.272 654.894H247.243C246.691 654.894 246.243 655.342 246.243 655.894L246.243 717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "EN-301A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.272 654.894H247.243C246.691 654.894 246.243 655.342 246.243 655.894L246.243 717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
 
-<path opacity={path === "EN-CME308" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 640H247.243C246.691 640 246.243 640.448 246.243 641V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "EN-CME308A-BA-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 640H247.243C246.691 640 246.243 640.448 246.243 641V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
-<path opacity={path === "EN-CME307" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 626H247.243C246.691 626 246.243 626.448 246.243 627V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "EN-CME307A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 626H247.243C246.691 626 246.243 626.448 246.243 627V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
-<path opacity={path === "EN-CME306" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 614H247.243C246.691 614 246.243 614.448 246.243 615V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "EN-CME306A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 614H247.243C246.691 614 246.243 614.448 246.243 615V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
-<path opacity={path === "EN-CME305" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 601H247.243C246.691 601 246.243 601.448 246.243 602V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "EN-CME305A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 601H247.243C246.691 601 246.243 601.448 246.243 602V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
-<path opacity={path === "EN-CME304" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 588H247.243C246.691 588 246.243 588.448 246.243 589V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757" />
+<path opacity={path === "EN-CME304A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 588H247.243C246.691 588 246.243 588.448 246.243 589V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757" />
 
-<path opacity={path === "EN-CME303" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 575.5H247.243C246.691 575.5 246.243 575.948 246.243 576.5V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "EN-CME303A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 575.5H247.243C246.691 575.5 246.243 575.948 246.243 576.5V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
-<path opacity={path === "EN-CME302" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 564H247.243C246.691 564 246.243 564.448 246.243 565L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "EN-CME302A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 564H247.243C246.691 564 246.243 564.448 246.243 565L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
-<path  opacity={path === "EN-CME301" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.411 550.977H247.243C246.691 550.977 246.243 551.424 246.243 551.977L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757" />
+<path  opacity={path === "EN-CME301A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.411 550.977H247.243C246.691 550.977 246.243 551.424 246.243 551.977L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757" />
 
 <g className="floating-element" onClick={() => bldClicked("College of Engineering")}>
 <path d="M229.5 674.25C231.475 674.25 233.041 675.724 233.041 677.5C233.041 678.59 232.475 679.49 231.765 680.19C231.056 680.889 230.227 681.365 229.76 681.602C229.595 681.685 229.406 681.685 229.241 681.602C228.774 681.365 227.944 680.889 227.235 680.19C226.525 679.49 225.958 678.59 225.958 677.5C225.958 675.724 227.525 674.25 229.5 674.25Z" fill="#FF0000" stroke="#560000" stroke-width="0.5"/>
 <path d="M229.5 676.25C230.279 676.25 230.875 676.828 230.875 677.5C230.875 678.172 230.279 678.75 229.5 678.75C228.721 678.75 228.125 678.172 228.125 677.5C228.125 676.828 228.721 676.25 229.5 676.25Z" fill="white" stroke="#560000" stroke-width="0.5"/>
 <path d="M233.722 681.75C234.15 681.978 234.375 682.237 234.375 682.5C234.375 682.764 234.15 683.022 233.722 683.25C233.294 683.478 232.679 683.668 231.938 683.799C231.196 683.931 230.356 684 229.5 684C228.644 684 227.804 683.931 227.063 683.799C226.321 683.668 225.706 683.478 225.278 683.25C224.85 683.022 224.625 682.764 224.625 682.5C224.625 682.237 224.85 681.978 225.278 681.75" stroke="#560000" stroke-width="0.5" stroke-linecap="round"/>
-</g>
 <path d="M228.195 671.763H227.662C227.655 671.708 227.641 671.659 227.619 671.615C227.597 671.571 227.568 671.533 227.531 671.502C227.495 671.471 227.452 671.447 227.402 671.43C227.353 671.413 227.299 671.405 227.239 671.405C227.134 671.405 227.042 671.431 226.966 671.483C226.89 671.534 226.831 671.609 226.79 671.707C226.749 671.805 226.729 671.924 226.729 672.063C226.729 672.208 226.75 672.33 226.791 672.428C226.833 672.525 226.891 672.598 226.967 672.648C227.043 672.697 227.133 672.722 227.236 672.722C227.295 672.722 227.347 672.714 227.395 672.699C227.443 672.684 227.486 672.663 227.522 672.634C227.559 672.605 227.589 672.57 227.612 672.529C227.637 672.487 227.653 672.44 227.662 672.387L228.195 672.39C228.186 672.487 228.158 672.582 228.111 672.676C228.065 672.77 228.001 672.855 227.92 672.933C227.839 673.009 227.741 673.07 227.624 673.116C227.508 673.161 227.375 673.184 227.226 673.184C227.028 673.184 226.851 673.141 226.695 673.054C226.54 672.967 226.417 672.839 226.326 672.673C226.236 672.506 226.191 672.303 226.191 672.063C226.191 671.823 226.237 671.62 226.329 671.453C226.42 671.286 226.544 671.159 226.7 671.072C226.857 670.986 227.032 670.942 227.226 670.942C227.358 670.942 227.48 670.961 227.592 670.998C227.704 671.034 227.803 671.087 227.888 671.158C227.974 671.227 228.043 671.313 228.096 671.414C228.149 671.516 228.182 671.632 228.195 671.763ZM230.556 672.063C230.556 672.303 230.51 672.507 230.418 672.674C230.325 672.841 230.2 672.967 230.043 673.054C229.886 673.141 229.71 673.184 229.514 673.184C229.318 673.184 229.142 673.14 228.985 673.053C228.828 672.966 228.703 672.839 228.611 672.673C228.519 672.506 228.473 672.303 228.473 672.063C228.473 671.823 228.519 671.62 228.611 671.453C228.703 671.286 228.828 671.159 228.985 671.072C229.142 670.986 229.318 670.942 229.514 670.942C229.71 670.942 229.886 670.986 230.043 671.072C230.2 671.159 230.325 671.286 230.418 671.453C230.51 671.62 230.556 671.823 230.556 672.063ZM230.017 672.063C230.017 671.921 229.997 671.801 229.956 671.703C229.917 671.605 229.859 671.531 229.784 671.48C229.709 671.43 229.619 671.405 229.514 671.405C229.41 671.405 229.32 671.43 229.245 671.48C229.169 671.531 229.112 671.605 229.071 671.703C229.031 671.801 229.011 671.921 229.011 672.063C229.011 672.205 229.031 672.325 229.071 672.423C229.112 672.521 229.169 672.596 229.245 672.646C229.32 672.696 229.41 672.722 229.514 672.722C229.619 672.722 229.709 672.696 229.784 672.646C229.859 672.596 229.917 672.521 229.956 672.423C229.997 672.325 230.017 672.205 230.017 672.063ZM230.864 673.154V670.972H232.385V671.401H231.391V671.848H232.308V672.277H231.391V672.726H232.385V673.154H230.864Z" fill="#560000"/>
+</g>
 
 <g className="floating-element" onClick={() => bldClicked("Education Building")}>
 <path d="M155.5 674.334C157.456 674.334 159.041 675.92 159.041 677.876C159.041 679.061 158.477 680.036 157.776 680.792C157.074 681.548 156.25 682.066 155.776 682.329C155.602 682.425 155.398 682.425 155.224 682.329C154.75 682.066 153.927 681.548 153.225 680.792C152.523 680.036 151.958 679.061 151.958 677.876C151.958 675.92 153.544 674.334 155.5 674.334Z" fill="#005EFF" stroke="#003187" stroke-width="0.5"/>
@@ -595,7 +595,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 
 
-<g onClick={()=>bldClicked("EN-301")} cursor={"pointer"} filter="url(#filter1_d_2041_14)">
+<g onClick={()=>bldClicked("EN-301A-B")} cursor={"pointer"} filter="url(#filter1_d_2041_14)">
   {/* The rotated rectangle */}
   <rect 
     x="270" 
@@ -618,11 +618,11 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     dominantBaseline="central"
     style={{ pointerEvents: 'none' }}
   >
-   EN-301
+   EN-301A-B
   </text>
 </g>
 
-<g onClick={()=>bldClicked("EN-302")} cursor={"pointer"} filter="url(#filter1_d_2041_14)">
+<g onClick={()=>bldClicked("EN-302A-B")} cursor={"pointer"} filter="url(#filter1_d_2041_14)">
   {/* The rotated rectangle */}
   <rect 
     x="270" 
@@ -645,11 +645,11 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     dominantBaseline="central"
     style={{ pointerEvents: 'none' }}
   >
-    EN-302
+    EN-302A-B
   </text>
 </g>
 
-<g onClick={()=>bldClicked("EN-303")} cursor={"pointer"} filter="url(#filter1_d_2041_14)">
+<g onClick={()=>bldClicked("EN-303A-B")} cursor={"pointer"} filter="url(#filter1_d_2041_14)">
   {/* The rotated rectangle */}
   <rect 
     x="270" 
@@ -672,11 +672,11 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     dominantBaseline="central"
     style={{ pointerEvents: 'none' }}
   >
-    EN-303
+    EN-303A-B
   </text>
 </g>
 
-<g onClick={()=>bldClicked("EN-301")} filter="url(#filter1_d_2041_14)">
+<g onClick={()=>bldClicked("EN-301AB")} filter="url(#filter1_d_2041_14)">
   <rect 
     x="249" 
     y="544" 
@@ -695,10 +695,10 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     dominantBaseline="central"
     style={{ pointerEvents: 'none' }}
   >
-    EN-CME301
+    EN-CME301A-B
   </text>
 </g>
-<g  onClick={()=>bldClicked("EN-302")} filter="url(#filter1_d_2041_14)">
+<g  onClick={()=>bldClicked("EN-302A-B")} filter="url(#filter1_d_2041_14)">
   <rect 
     x="270" 
     y="557" 
@@ -718,11 +718,11 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     dominantBaseline="central"
     style={{ pointerEvents: 'none' }}
   >
-    EN-CME302
+    EN-CME302A-B
   </text>
 </g>
 
-<g onClick={() => bldClicked("EN-CME303")} filter="url(#filter1_d_2041_14)">
+<g onClick={() => bldClicked("EN-CME303A-B")} filter="url(#filter1_d_2041_14)">
   <rect 
     x="270" 
     y="570" 
@@ -742,10 +742,10 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     dominantBaseline="central"
     style={{ pointerEvents: 'none' }}
   >
-   EN-CME303
+   EN-CME303A-B
   </text>
 </g>
-<g onClick={() => bldClicked("EN-CME304")} filter="url(#filter1_d_2041_14)">
+<g onClick={() => bldClicked("EN-CME304A-B")} filter="url(#filter1_d_2041_14)">
   <rect 
     x="270" 
     y="582" 
@@ -765,11 +765,11 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     dominantBaseline="central"
     style={{ pointerEvents: 'none' }}
   >
-    EN-CME304
+    EN-CME304A-B
   </text>
 </g>
 
-<g onClick={() => bldClicked("EN-CME305")} filter="url(#filter1_d_2041_14)">
+<g onClick={() => bldClicked("EN-CME305A-B")} filter="url(#filter1_d_2041_14)">
   <rect 
     x="270" 
     y="595" 
@@ -789,11 +789,11 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     dominantBaseline="central"
     style={{ pointerEvents: 'none' }}
   >
-    EN-CME305
+    EN-CME305A-B
   </text>
 </g>
 
-<g onClick={() => bldClicked("EN-CME306")} filter="url(#filter1_d_2041_14)">
+<g onClick={() => bldClicked("EN-CME306A-B")} filter="url(#filter1_d_2041_14)">
   <rect 
     x="270" 
     y="608" 
@@ -813,11 +813,11 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     dominantBaseline="central"
     style={{ pointerEvents: 'none' }}
   >
-    EN-CME306
+    EN-CME306A-B
   </text>
 </g>
 
-<g onClick={() => bldClicked("EN-CME307")} filter="url(#filter1_d_2041_14)">
+<g onClick={() => bldClicked("EN-CME307A-B")} filter="url(#filter1_d_2041_14)">
   <rect 
     x="270" 
     y="620" 
@@ -837,10 +837,10 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     dominantBaseline="central"
     style={{ pointerEvents: 'none' }}
   >
-    EN-CME307
+    EN-CME307A-B
   </text>
 </g>
-<g onClick={() => bldClicked("EN-CME308")}  filter="url(#filter1_d_2041_14)">
+<g onClick={() => bldClicked("EN-CME308A-B")}  filter="url(#filter1_d_2041_14)">
   <rect 
     
     x="270" 
@@ -862,7 +862,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     dominantBaseline="central"
     style={{ pointerEvents: 'none' }}
   >
-   EN-CME308
+   EN-CME308A-B
   </text>
 </g>
 
