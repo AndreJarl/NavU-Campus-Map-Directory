@@ -40,15 +40,15 @@ const handleFloor = useCallback((num) => {
 }, [currentFloor, trigger, setCurrentFloor]);
 
  const showPath = (path) => {
-      const rooms = ["Library", "EN-303", "EN-302", "EN-301", "EN-CME308", "EN-CME307", "EN-CME306", "EN-CME305", "EN-CME304", 
-                     "EN-CME303", "EN-CME302", "EN-CME301", "ED-303", "ED-302","ED-301", "ED-201", "Campus Director Office", "Dean's and Conference", 
+      const rooms = ["Library", "EN-303A-B", "EN-302A-B", "EN-301A-B", "EN-CME308A-B", "EN-CME307A-B", "EN-CME306A-B", "EN-CME305A-B", "EN-CME304A-B", 
+                     "EN-CME303A-B", "EN-CME302A-B", "EN-CME301A-B", "ED-201", "Campus Director Office", "Dean's and Conference", 
                     "Engineering Faculty (Chairman's Office)", "Engineering Faculty Office", "CME Research Center", "TM-LAB-2A", "CME Computer Laboratory 2","CME Computer Laboratory 1",
                     "TM-LAB-1A", "EN-CME 201", "Graduate School"];
       return rooms.includes(path) ? 1 : 0;
     };
 
      const showPath2 = (path) => {
-      const rooms = ["HR Office", "Guidance Office", "Dean's Education Office", "New Admin Records", "SAO Office", "ED-201" , "ED-202", "AVR Room", "ED-303", "ED-302","ED-301", "ED-201"];
+      const rooms = ["HR Office", "Guidance Office", "ED-301A-B", "Dean's Education Office", "New Admin Records", "SAO Office", "ED-201A-B" , "ED-202A-B", "AVR Room", "ED-303A-B", "ED-302A-B","ED-30A-B1", "ED-201A-B"];
       return rooms.includes(path) ? 1 : 0;
     };
 

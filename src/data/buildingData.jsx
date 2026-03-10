@@ -348,25 +348,25 @@ rooms: {
   3: [
     { 
       code: " ", 
-      name: "ED-303",
+      name: "ED-303A-B",
       description: " ",
       img: " "
     },
     { 
       code: " ", 
-      name: "ED-302",
+      name: "ED-302A-B",
       description: " ",
       img: " "
     },
     { 
       code: " ", 
-      name: "ED-301",
+      name: "ED-301A-B",
       description: " ",
       img: " "
     },
      { 
       code: " ", 
-      name: "ED-201",
+      name: "ED-201A-B",
       description: " ",
       img: " "
     }

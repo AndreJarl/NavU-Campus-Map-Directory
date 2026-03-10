@@ -317,7 +317,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 <path opacity={path === "Library" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"  d="M204.04 726.814V725.885C204.04 725.333 204.488 724.885 205.04 724.885H245.247C245.799 724.885 246.247 724.438 246.247 723.885V719.92C246.247 719.368 246.695 718.92 247.247 718.92L256.757 718.92" />
 
-<path opacity={path === "Library" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M204.025 726.82V725.828C204.025 725.275 203.577 724.828 203.025 724.828H139.916C139.363 724.828 138.916 724.38 138.916 723.828V719.92C138.916 719.368 138.468 718.92 137.916 718.92L128.544 718.92"/>
+<path opacity={path === "" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M204.025 726.82V725.828C204.025 725.275 203.577 724.828 203.025 724.828H139.916C139.363 724.828 138.916 724.38 138.916 723.828V719.92C138.916 719.368 138.468 718.92 137.916 718.92L128.544 718.92"/>
 
 <path opacity={path === "AVR Room" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M135 725.408H138.058C138.61 725.408 139.058 724.96 139.058 724.408V719.92C139.058 719.368 138.61 718.92 138.058 718.92H128.544"/>
 
@@ -327,13 +327,13 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 <path opacity={path === "EN-302A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.316 673.318H247.243C246.691 673.318 246.243 673.766 246.243 674.318V717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
 
-<path opacity={path === "ED-301A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"   d="M138.028 654.894H138.058C138.61 654.894 139.058 655.342 139.058 655.894L139.058 717.92C139.058 718.473 138.61 718.92 138.058 718.92H128.544"/>
+<path opacity={path === "ED-302A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"   d="M138.028 654.894H138.058C138.61 654.894 139.058 655.342 139.058 655.894L139.058 717.92C139.058 718.473 138.61 718.92 138.058 718.92H128.544"/>
 
 <path  opacity={path === "Female Cr" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M133.67 711.512L133.67 717.92C133.67 718.473 133.222 718.92 132.67 718.92H128.544" />
 
 <path opacity={path === "EN-301A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.272 654.894H247.243C246.691 654.894 246.243 655.342 246.243 655.894L246.243 717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
 
-<path opacity={path === "EN-CME308A-BA-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 640H247.243C246.691 640 246.243 640.448 246.243 641V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "EN-CME308A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 640H247.243C246.691 640 246.243 640.448 246.243 641V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 <path opacity={path === "EN-CME307A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.5 626H247.243C246.691 626 246.243 626.448 246.243 627V717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
@@ -397,7 +397,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M241.877 636.843V528.043" stroke="#535353" stroke-width="0.8"/>
 <path d="M143.104 636.82L143.105 528" stroke="#535353" stroke-width="0.8"/>
 
-<g onClick={()=>bldClicked("ED-302")} filter="url(#filter1_d_2041_14)">
+<g onClick={()=>bldClicked("ED-302A-B")} filter="url(#filter1_d_2041_14)">
   <rect 
     x="136" 
     y="664" 
@@ -417,11 +417,11 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     dominantBaseline="central"
     style={{ pointerEvents: 'none' }}
   >
-    ED-302
+    ED-302A-B
   </text>
 </g>
 
-<g onClick={()=>bldClicked("ED-301")} filter="url(#filter1_d_2041_14)">
+<g onClick={()=>bldClicked("ED-301A-B")} filter="url(#filter1_d_2041_14)">
   <rect 
     x="136" 
     y="646" 
@@ -441,7 +441,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     dominantBaseline="central"
     style={{ pointerEvents: 'none' }}
   >
-   ED-301
+   ED-301A-B
   </text>
 </g>
 
@@ -475,7 +475,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <rect x="136" y="562" width="16" height="21" transform="rotate(90 136 562)" fill="#00C3FF"/>
 <rect x="136" y="544" width="17" height="21" transform="rotate(90 136 544)" fill="#00C3FF"/>
 
-<g onClick={()=>bldClicked("ED-303")} filter="url(#filter1_d_2041_14)">
+<g onClick={()=>bldClicked("ED-303A-B")} filter="url(#filter1_d_2041_14)">
   <rect 
     x="136" 
     y="682" 
@@ -495,7 +495,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     dominantBaseline="central"
     style={{ pointerEvents: 'none' }}
   >
-   ED-303
+   ED-303A-B
   </text>
 </g>
 
@@ -591,7 +591,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 <rect x="272" y="528" width="15" height="9" transform="rotate(90 272 528)" fill="#FF69EB"/>
 
-<path opacity={path === "EN-303" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.369 690.635L247.243 690.635C246.691 690.635 246.243 691.083 246.243 691.635V717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "EN-303A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.369 690.635L247.243 690.635C246.691 690.635 246.243 691.083 246.243 691.635V717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
 
 
 
@@ -676,7 +676,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
   </text>
 </g>
 
-<g onClick={()=>bldClicked("EN-301AB")} filter="url(#filter1_d_2041_14)">
+<g onClick={()=>bldClicked("EN-CME301A-B")} filter="url(#filter1_d_2041_14)">
   <rect 
     x="249" 
     y="544" 
@@ -698,7 +698,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     EN-CME301A-B
   </text>
 </g>
-<g  onClick={()=>bldClicked("EN-302A-B")} filter="url(#filter1_d_2041_14)">
+<g  onClick={()=>bldClicked("EN-CME302A-B")} filter="url(#filter1_d_2041_14)">
   <rect 
     x="270" 
     y="557" 
