@@ -52,7 +52,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     fill="#FF3030"
     strokeLinejoin="round"
   />
-  <text x="281" y="719.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor + 1}`}</text>
+  <text x="281" y="719.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor + 1}`}</text>
 </g>
 
 
@@ -62,7 +62,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     fill="#FF3030"
     strokeLinejoin="round"
   />
-  <text x="270" y="725.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor - 1}`}</text>
+  <text x="270" y="725.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor - 1}`}</text>
 </g>
 
 <g onClick={() => handleFloor(currentFloor - 1)} cursor={"pointer"} className="floating-element" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +71,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     fill="#FF3030"
     strokeLinejoin="round"
   />
-  <text x="116" y="727.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor - 1}`}</text>
+  <text x="116" y="727.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor - 1}`}</text>
 </g>
 
 <g onClick={() => handleFloor(currentFloor + 1)} cursor={"pointer"} className="floating-element">
@@ -80,7 +80,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     fill="#FF3030"
     strokeLinejoin="round"
   />
-  <text x="106" y="719.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor + 1}`}</text>
+  <text x="106" y="719.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor + 1}`}</text>
 </g>
 
 
@@ -179,7 +179,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="124"
     y="703.47"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
     fontWeight={600}
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -287,7 +287,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="125.5"
     y="672.5"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
     fontWeight={600}
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -311,7 +311,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="125.5"
     y="654.5"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
     fontWeight={600}
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -335,7 +335,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="125.5"
     y="639.5"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
     fontWeight={600}
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -366,7 +366,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     y="690"
     fill="black"
     fontWeight={600}
-    fontSize="2"
+    fontSize="2.5"
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
     dominantBaseline="central"
@@ -390,7 +390,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     y="704"
     fill="black"
     fontWeight={600}
-    fontSize="2"
+    fontSize="2.5"
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
     dominantBaseline="central"
@@ -411,7 +411,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="197"
     y="739"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
      fontWeight="600"
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -441,7 +441,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="134"
     y="736"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
      fontWeight="600"
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -454,7 +454,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="134"
     y="739"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
      fontWeight="600"
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -488,7 +488,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="259.5"
     y="654.5"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
     fontWeight={600}
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -516,7 +516,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     y="672.5"
     fill="black"
     fontWeight={600}
-    fontSize="2"
+    fontSize="2.5"
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
     dominantBaseline="central"
@@ -542,7 +542,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="259.5"
     y="690"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
     fontWeight={600}
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -565,7 +565,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="259.5"
     y="550"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
     fontWeight={600}
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -588,7 +588,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="259.5"
     y="563"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
     fontWeight={600}
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -612,7 +612,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="259.5"
     y="575.5"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
     fontWeight={600}
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -635,7 +635,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="259.5"
     y="588"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
     fontWeight={600}
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -659,7 +659,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="259.5"
     y="601"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
     fontWeight={600}
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -683,7 +683,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="259.5"
     y="613.5"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
     fontWeight={600}
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -707,7 +707,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="259.5"
     y="626"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
     fontWeight={600}
     fontFamily="Arial, sans-serif"
     textAnchor="middle"
@@ -732,7 +732,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     x="259.5"
     y="639"
     fill="black"
-    fontSize="2"
+    fontSize="2.5"
     fontWeight={600}
     fontFamily="Arial, sans-serif"
     textAnchor="middle"

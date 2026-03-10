@@ -65,7 +65,7 @@ return (
       viewBox={svgViewBox}
       preserveAspectRatio="xMidYMid meet"
     >
-      <path fill="#fff" d="M0 0h503v815H0z" />
+      <path fill="fff" d="M0 0h503v815H0z" />
       <path
         stroke="#818181"
         stroke-linecap="round"
@@ -127,7 +127,7 @@ return (
     fill="#FF3030"
     strokeLinejoin="round"
   />
-  <text x="106" y="719.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 2</text>
+  <text x="106" y="719.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 2</text>
    </g>
     
     {/* <g onClick={()=>handleFloor(2)} cursor={"pointer"} className="floating-element" filter="url(#filter1_d_2041_14)">  
@@ -176,7 +176,7 @@ return (
         fill="#FF3030"
         strokeLinejoin="round"
       />
-      <text x="96" y="565.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 2</text>
+      <text x="96" y="565.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 2</text>
     </g>
 
     <g onClick={() => handleFloor(2)} cursor={"pointer"} className="floating-element" xmlns="http://www.w3.org/2000/svg">
@@ -185,7 +185,7 @@ return (
         fill="#FF3030"
         strokeLinejoin="round"
       />
-      <text x="177" y="520.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 2</text>
+      <text x="177" y="520.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 2</text>
     </g>
 
       <path fill="#d9d9d9" d="M240.062 614.043h2v14h-2z" />

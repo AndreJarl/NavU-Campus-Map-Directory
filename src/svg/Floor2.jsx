@@ -58,8 +58,8 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
       preserveAspectRatio="xMidYMid meet"
     >
      
-<path d="M503 0H0V815H503V0Z"/>
-<path d="M96.8718 349V379.659M96.8718 379.659V634.951M96.8718 379.659H283.567M96.8718 802V634.951M96.8718 634.951L54.4644 618.59C45.4059 615.096 37.8265 608.589 33 600.164M283.567 379.659H418M283.567 379.659V513.465" stroke="#818181" stroke-width="10" stroke-linecap="round"/>
+<path d="M503 0H0V815H503V0Z" />
+<path  d="M96.8718 349V379.659M96.8718 379.659V634.951M96.8718 379.659H283.567M96.8718 802V634.951M96.8718 634.951L54.4644 618.59C45.4059 615.096 37.8265 608.589 33 600.164M283.567 379.659H418M283.567 379.659V513.465" stroke="#818181" stroke-width="10" stroke-linecap="round"/>
 <path d="M102 517H363" stroke="#818181" stroke-width="6" stroke-linecap="round"/>
 <path d="M85 485.603H78V606H85V485.603Z" fill="#D9D9D9"/>
 <path d="M85 485.603H62.9746V499H85V485.603Z" fill="#D9D9D9"/>
@@ -127,7 +127,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     fill="#FF3030"
     strokeLinejoin="round"
   />
-  <text x="281" y="719.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor + 1}`}</text>
+  <text x="281" y="719.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor + 1}`}</text>
 </g>
 
 
@@ -137,7 +137,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     fill="#FF3030"
     strokeLinejoin="round"
   />
-  <text x="270" y="725.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor - 1}`}</text>
+  <text x="270" y="725.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor - 1}`}</text>
 </g>
 
 <g onClick={() => handleFloor(currentFloor - 1)} cursor={"pointer"} className="floating-element" xmlns="http://www.w3.org/2000/svg">
@@ -146,7 +146,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     fill="#FF3030"
     strokeLinejoin="round"
   />
-  <text x="116" y="727.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor - 1}`}</text>
+  <text x="116" y="727.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor - 1}`}</text>
 </g>
 
 <g onClick={() => handleFloor(currentFloor + 1)} cursor={"pointer"} className="floating-element">
@@ -155,7 +155,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     fill="#FF3030"
     strokeLinejoin="round"
   />
-  <text x="106" y="719.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor + 1}`}</text>
+  <text x="106" y="719.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">{`Floor ${currentFloor + 1}`}</text>
 </g>
 
 <g onClick={()=>handleFloor(3)} cursor={"pointer"}>
@@ -175,7 +175,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     strokeLinejoin="round"
   />
   
-  <text x="94" y="566.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 1</text>
+  <text x="94" y="566.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 1</text>
 </g>
 
 
@@ -226,7 +226,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     strokeLinejoin="round"
   />
  
-  <text x="179" y="472.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 1</text>
+  <text x="179" y="472.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 1</text>
 </g>
 
 <g onClick={() => handleFloor(3)} cursor={"pointer"} className="floating-element" xmlns="http://www.w3.org/2000/svg">
@@ -236,7 +236,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     strokeLinejoin="round"
   />
   
-  <text x="200" y="479.5" fill="#FF3030" fontSize="1.8" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 3</text>
+  <text x="200" y="479.5" fill="#FF3030" fontSize="2" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="central" fontWeight="bold">Floor 3</text>
 </g>
 
 <path d="M270.996 710.349H267.006V722.037H270.996V710.349Z" fill="#E6E6E6" stroke="black" stroke-width="0.01"/>
