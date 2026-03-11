@@ -459,6 +459,39 @@
       }
     ]
   },
+  "Engineering Laboratory": {
+    "image": "/360/ENG-CME/1FLR/ENGLAB1.webp",
+    "yaw": 0,
+    "hotspots": [
+      {
+        "pitch": -20.5,
+        "yaw": 10,
+        "type": "arrow",
+        "target": "pathTOComplab1",
+        "arrowType": "forward"
+      },
+      {
+        "pitch": -160.5,
+        "yaw": 5,
+        "type": "arrow",
+        "target": "COE-FEMALECR",
+        "arrowType": "backward"
+      },
+        {
+        "pitch": 25,
+        "yaw": 160,
+        "type": "info",
+        "label": "Electrical Engineering Laboratory"
+      },
+        {
+        "pitch": 15,
+        "yaw": 10,
+        "type": "info",
+        "label": "Engineering Laboratory"
+      }
+    ]
+  },
+
 
   "pathTOComplab1": {
     "image": "/360/ENG-CME/1FLR/pathtoCOMPLAB1.webp",
@@ -1672,7 +1705,7 @@
         "pitch": -30.5,
         "yaw": -5,
         "type": "arrow",
-        "target": "EN-CME40A-B",
+        "target": "COT Office",
         "rotation": 0
       },
 
@@ -1690,7 +1723,330 @@
         "label": "COT Faculty & Records"
       }
     ]
+  },
+  
+  "COT Office": {
+    "image": "/360/OLD-ADMIN/1FLR/COT-office.webp",
+    "hotspots": [
+      {
+        "pitch": -30.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "OldStair",
+        "rotation": 0
+      },
+
+           {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "EN-CME40A-B",
+        "rotation": 0
+      },
+           {
+        "pitch": 20,
+        "yaw": 340,
+        "type": "info",
+        "label": "COT Office"
+      }
+    ]
+  },
+    "OldStair": {
+    "image": "/360/OLD-ADMIN/1FLR/oldstair1.webp",
+    "hotspots": [
+      {
+        "pitch": -30.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "",
+        "rotation": 0
+      },
+      {
+        "pitch": -30.5,
+        "yaw": -100,
+        "type": "arrow",
+        "target": "oldstair1",
+        "rotation": 0
+      },
+           {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "EN-CME40A-B",
+        "rotation": 0
+      }
+    ]
+  },
+      "Supply Office": {
+    "image": "/360/OLD-ADMIN/1FLR/SUPPLYOFfice.webp",
+    "hotspots": [
+      {
+        "pitch": -30.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "Extension & Production Office",
+        "rotation": 0
+      },
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "EN-CME40A-B",
+        "rotation": 0
+      },
+         {
+        "pitch": 30,
+        "yaw": 290,
+        "type": "info",
+        "label": "Supply Office"
+      },
+         {
+        "pitch": 10,
+        "yaw": 340,
+        "type": "info",
+        "label": "Extension & Production Office"
+      }
+    ]
+  },
+       "Extension & Production Office": {
+    "image": "/360/OLD-ADMIN/1FLR/EXTENSION&PRODUCTIONAREA.webp",
+    "hotspots": [
+      {
+        "pitch": -30.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "Production Office",
+        "rotation": 0
+      },
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Supply Office",
+        "rotation": 0
+      },
+             {
+        "pitch": 10,
+        "yaw": 290,
+        "type": "info",
+        "label": "Extension & Production Office"
+      }
+    ]
+  },
+    "Production Office": {
+    "image": "/360/OLD-ADMIN/1FLR/PRODUCTIONOFFICE.webp",
+    "hotspots": [
+      {
+        "pitch": -30.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "Production Area",
+        "rotation": 0
+      },
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Extension & Production Office",
+        "rotation": 0
+      },
+             {
+        "pitch": 20,
+        "yaw": 310,
+        "type": "info",
+        "label": "Production Office"
+      }
+    ]
+  },
+      "Production Area": {
+    "image": "/360/OLD-ADMIN/1FLR/PRODUCTIONAREA.webp",
+    "hotspots": [
+      {
+        "pitch": -30.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "stair2",
+        "rotation": 0
+      },
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Production Office",
+        "rotation": 0
+      },
+             {
+        "pitch": 20,
+        "yaw": 310,
+        "type": "info",
+        "label": "Production Area"
+      }
+    ]
+  },
+       "stair2": {
+    "image": "/360/OLD-ADMIN/2FLR/OLDADMIN2FSTAIRS.webp",
+    "hotspots": [
+      {
+        "pitch": -30.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "Speech Lab",
+        "rotation": 0
+      },
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Production Office",
+        "rotation": 0
+      }
+    ]
+  },
+       "Speech Lab": {
+    "image": "/360/OLD-ADMIN/2FLR/SPEECHLAB.webp",
+    "hotspots": [
+      {
+        "pitch": -30.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "COT Computer Lab 201",
+        "rotation": 0
+      },
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "stair2",
+        "rotation": 0
+      },
+           {
+        "pitch": 20,
+        "yaw": 50,
+        "type": "info",
+        "label": "Speech Lab"
+      }
+    ]
+  },
+      "COT Computer Lab 201": {
+    "image": "/360/OLD-ADMIN/2FLR/COMLAB201.webp",
+    "hotspots": [
+      {
+        "pitch": -30.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "Old Library",
+        "rotation": 0
+      },
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Speech Lab",
+        "rotation": 0
+      },
+           {
+        "pitch": 20,
+        "yaw": 50,
+        "type": "info",
+        "label": "COT Computer Lab 201"
+      }
+    ]
+  },
+    "Old Library": {
+    "image": "/360/OLD-ADMIN/2FLR/OLDLIBRARY.webp",
+    "hotspots": [
+      {
+        "pitch": -30.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "Research and Development Office",
+        "rotation": 0
+      },
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "COT Computer Lab 201",
+        "rotation": 0
+      },
+           {
+        "pitch": 20,
+        "yaw": 50,
+        "type": "info",
+        "label": "Old Library"
+      }
+    ]
+  },
+ "Research and Development Office": {
+    "image": "/360/OLD-ADMIN/2FLR/OLDLIBRARY.webp",
+    "hotspots": [
+      {
+        "pitch": -30.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "Research and Development Office",
+        "rotation": 0
+      },
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "COT Computer Lab 201",
+        "rotation": 0
+      },
+           {
+        "pitch": 20,
+        "yaw": 50,
+        "type": "info",
+        "label": "Old Library"
+      }
+    ]
+  },
+
+   "SSG Office": {
+    "image": "/360/OLD-ADMIN/2FLR/SSG.webp",
+    "hotspots": [
+      {
+        "pitch": -30.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "Working Hand Office",
+        "rotation": 0
+      },
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "",
+        "rotation": 0
+      },
+           {
+        "pitch": 20,
+        "yaw": 70,
+        "type": "info",
+        "label": "SSG Office"
+      }
+    ]
+  },
+     "Working Hand Office": {
+    "image": "/360/OLD-ADMIN/2FLR/TWHOFFICE.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "SSG Office",
+        "rotation": 0
+      },
+           {
+        "pitch": 30,
+        "yaw": 70,
+        "type": "info",
+        "label": "Working Hand Office"
+      }
+    ]
   }
+
 
 
   
