@@ -20,12 +20,14 @@ import Floors from '../components/Floors';
 import SurveyForm from '../components/SurveyForm'
 import { Navigation } from 'lucide-react';
 import { useZoomContext } from "../context/ZoomContext";
+import { usePath } from '../context/PathContext';
 
 function Map() {
 
       const {query, setQuery} = useQuery();
       const {setCategory} = useCategory();
       const {setCurrentScene} = useScene();
+      const {setPath} = usePath();
 
           const [searchTerm, setSearchTerm]= useState("");
           const [suggestions, setSuggestions] = useState([]);
@@ -55,21 +57,44 @@ function Map() {
       }, [query, location]);
 
       const [survey, setSurvey] = useState(false);
-      const [isNavigating, setNavigating] = useState(false);
+      // Derived State: True if user has selected a specific room OR a building
+      const isNavigating = !!(query.room?.name || query.room?.code || query.building);
 
-            useEffect(() => {
-          let timer;
-          // ONLY start timer if survey is closed AND user started navigating
-          if (!survey && isNavigating) {
-            timer = setTimeout(() => {
-              setSurvey(true);
-              setNavigating(false); // <--- Crucial: Stop the "navigation" state once survey triggers
-            }, 60000);
+      useEffect(() => {
+        let timer;
+
+        // Start timer only if survey is hidden AND navigation is active
+        if (!survey && isNavigating) {
+          console.log("Navigation detected. Starting 60s survey timer...");
+          
+          timer = setTimeout(() => {
+            setSurvey(true);
+
+            // Reset the query to "stop" navigation and clear the UI
+            setQuery({
+              building: "",
+              floor: "",
+              room: { name: "", code: "", img: "", description: "", floor: "" }
+            });
+            //reset panorama
+            setClicked(false);
+            //reset path
+            setPath("");
+
+            // Close any open UI panels
+            setRoomSearched(false);
+            setBldClicked(false);
+          }, 60000);
+        }
+
+        // Cleanup: If the user manually closes the result or changes navigation, reset timer
+        return () => {
+          if (timer) {
+            clearTimeout(timer);
+            console.log("Timer cleared.");
           }
-
-          return () => clearTimeout(timer);
-        }, [survey, isNavigating]);
-
+        };
+      }, [survey, isNavigating, setQuery]);
       
               /////////////////////////////////////// for search bar functions /////////////////////////////////////////////////////
     
@@ -247,8 +272,6 @@ if (suggestion.floor) {
 
             <DraggableZoomableSVG OpenCard={OpenCard}
             onDragStart={() =>setKeyboardClicked(false)}
-            setNavigating={setNavigating}
-            isNavigating={isNavigating}
             />   
 
       

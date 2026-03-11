@@ -53,7 +53,7 @@ export default function FlashcardSurvey({ survey, setSurvey }) {
   if (!survey) return null;
 
   return (
-    <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/40 backdrop-blur-md">
+    <div className="fixed inset-0 z-[999999] flex items-center justify-center bg-black/40 backdrop-blur-md">
       <AnimatePresence mode="wait">
         {loading ? (
           <motion.div

@@ -181,7 +181,7 @@ const buildingData = {
         img: " "
       },
          { 
-        code: " ", 
+        code: "Engineering Grad School", 
         name: "Graduate School",
         description: " ",
         img: " "

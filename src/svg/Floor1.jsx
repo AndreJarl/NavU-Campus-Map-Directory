@@ -48,7 +48,7 @@ const handleFloor = useCallback((num) => {
     };
 
      const showPath2 = (path) => {
-      const rooms = ["HR Office", "Guidance Office", "ED-301A-B", "Dean's Education Office", "New Admin Records", "SAO Office", "ED-201A-B" , "ED-202A-B", "AVR Room", "ED-303A-B", "ED-302A-B","ED-30A-B1", "ED-201A-B"];
+      const rooms = ["HR Office", "Guidance Office", "ED-301A-B", "Dean's Education Office", "New Admin Records", "SAO Office", "ED-201A-B" , "ED-202A-B", "AVR Room", "ED-303A-B", "ED-302A-B","ED-30A-B1", "ED-201A-B", "Admin Graduate School"];
       return rooms.includes(path) ? 1 : 0;
     };
 
