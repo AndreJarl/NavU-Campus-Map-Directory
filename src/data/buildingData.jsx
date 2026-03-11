@@ -21,6 +21,25 @@ import room41 from "../assets/rooms/COT-GrndFlr/Room41.webp"
 import GADoffice from "../assets/rooms/COT-GrndFlr/GADOffice.webp"
 import NSTPoffice from "../assets/rooms/COT-GrndFlr/NSTPOffice.webp"
 import COTCompLab from "../assets/rooms/COT-GrndFlr/COTComlab.webp"
+import lab202 from "../assets/rooms/COT-2ndflr/ComLab202.webp"
+import lab203 from "../assets/rooms/COT-2ndflr/ComLab203.jpg"
+import lab204 from "../assets/rooms/COT-2ndflr/ComLab204.jpg"
+import alumni from "../assets/rooms/COT-2ndflr/AlumniAffairsOfficeandCOTComLabOffice.jpg"
+import tesda from "../assets/rooms/COT-2ndflr/tesda.jpg"
+import cotoffice from "../assets/rooms/COT-2ndflr/InternshipOffice.jpg"
+import cotstock from "../assets/rooms/COT-2ndflr/cotstock.jpg"
+import oldlib from "../assets/rooms/oldadmin/OldLibrary(Graduate SchoolLibrary).webp"
+import ssgoffice from "../assets/rooms/oldadmin/SSGOffice.webp"
+import workinghand from "../assets/rooms/oldadmin/TheWorkingHandOffice.webp"
+import researchdev from "../assets/rooms/oldadmin/ResearchandDevelopmentOffice.webp"
+import productionarea from "../assets/rooms/oldadmin/ProductionArea.webp"
+import productionoffice from "../assets/rooms/oldadmin/ProductionOffice.webp"
+import extension from "../assets/rooms/oldadmin/Extension&ProductionOffice.webp"
+import cotfaculty from "../assets/rooms/oldadmin/COT-Faculty.webp"
+import speech from "../assets/rooms/oldadmin/SpeechLabRoom.webp"
+
+
+
 import cashier from "../assets/rooms/Adminbldg/1stFloor/cashier.webp"
 import bac from "../assets/rooms/Adminbldg/1stFloor/bac.webp"
 import complab1 from "../assets/rooms/COE/complab1.webp"
@@ -34,9 +53,11 @@ import laundryshop from "../assets/rooms/Bldgs/Laundry.jpg"
 import floatingarea from "../assets/rooms/Bldgs/FloatingArea.jpg"
 import HMLab from "../assets/rooms/Bldgs/HMKitchenLaboratory.jpg"
 import PEhall from "../assets/rooms/Bldgs/PEHall.jpg"
-// import womensdorm from "../assets/rooms/Dormitories/Women'sDormitory.jpg"
-// import mensdorm from "../assets/rooms/Dormitories/MensDormitory.jpg"
+import womensdorm from "../assets/WomensDormitory.jpg"
+import mensdorm from "../assets/MensDormitory.jpg"
 import Fablab from "../assets/rooms/FABLAB/FABLAB.jpg"
+import Fablab1 from "../assets/rooms/FABLAB/FABLABEntrance.webp"
+
 import fitness from "../assets/rooms/Bldgs/FitnessGym.jpg"
 // import bistro from "../assets/rooms/bistro&canteen/Bistro.jpg"
 // import Canteen from "../assets/rooms/bistro&canteen/Canteen.jpg"
@@ -47,8 +68,38 @@ import Edtechlab1 from "../assets/rooms/EducationLabs/EdTechLab1.jpg"
 import Edtechlab2 from "../assets/rooms/EducationLabs/EdTechLab2.jpg"
 import chemlab from "../assets/rooms/EducationLabs/ChemistryLab.jpg"
 import room12 from "../assets/rooms/Educrooms/Room12.jpg" 
-
 import clinic from "../assets/rooms/Adminbldg/1stFloor/Clinic.webp"
+import ed301 from "../assets/rooms/ceas/ED-301B.webp"
+import ed302 from "../assets/rooms/ceas/ED-302B.webp"
+import ed303 from "../assets/rooms/ceas/ED-303A.webp"
+
+
+import en102a from "../assets/rooms/COE/EN-102A.webp"
+import  coedeans from  "../assets/rooms/COE/COE-Dean'sOffice.webp"
+import faculty from "../assets/rooms/COE/Faculty.webp"
+import faculty1 from "../assets/rooms/COE/EN-201B.webp"
+import en301 from "../assets/rooms/COE/EN-301A.webp"
+import en302 from "../assets/rooms/COE/EN-302A.webp"
+import en303 from "../assets/rooms/COE/EN-303A.webp"
+import melab2 from "../assets/rooms/COE/MELAB2.webp"
+import melab1 from "../assets/rooms/COE/MELaboratory1.webp"
+
+
+import cmecomlab1 from "../assets/rooms/cme/CME-COMLAB1A.webp"
+import cmecomlab2 from "../assets/rooms/cme/CME-COMLAB2A.webp"
+import cmeresearchcenter from "../assets/rooms/cme/CME-ResearchCenter.webp"
+import encme301 from "../assets/rooms/cme/EN-CME301A.webp"
+import encme302 from "../assets/rooms/cme/EN-CME302A.webp"
+import encme303 from "../assets/rooms/cme/EN-CME303A.webp"
+import encme304 from "../assets/rooms/cme/EN-CME304A.webp"
+import encme305 from "../assets/rooms/cme/EN-CME305A.webp"
+import encme306 from "../assets/rooms/cme/EN-CME306A.webp"
+import encme307 from "../assets/rooms/cme/EN-CME307A.webp"
+import encme308 from "../assets/rooms/cme/EN-CME308A.webp"
+
+
+import library from "../assets/rooms/Adminbldg/Library.webp"
+import avr from "../assets/rooms/Adminbldg/AVR.webp"
 
 const buildingData = {
 
@@ -60,7 +111,7 @@ const buildingData = {
         code: "EN-102A", 
         name: "Electrical Engineering Laboratory",
         description: "A specialized room equipped with electrical tools, testing instruments, and training panels where students conduct experiments and practical activities related to circuits, wiring, and power systems.",
-        img:"https://res.cloudinary.com/dkicidfrq/image/upload/v1766459347/CELAB01_lqvy4s.webp"
+        img: en102a
       },
       { 
         code: " ", 
@@ -109,17 +160,23 @@ const buildingData = {
         code: " ", 
         name: "Dean's and Conference",
         description: " ",
-        img: " "
+        img: coedeans
       },
       { 
-        code: "EN-202A-COEFACULTY", 
+        code: "EN-202A", 
         name: "Engineering Faculty (Chairman's Office)",
         description: " ",
-        img: " "
+        img: faculty
       },
       { 
-        code: "EN-201A-B", 
+        code: "EN-201B", 
         name: "Engineering Faculty Office",
+        description: " ",
+        img: faculty1
+      },
+      { 
+        code: "", 
+        name: "EN-201",
         description: " ",
         img: " "
       },
@@ -135,19 +192,19 @@ const buildingData = {
         code: " ", 
         name: "EN-303A-B",
         description: " ",
-        img: " "
+        img: en303
       },
       { 
         code: " ", 
         name: "EN-302A-B",
         description: " ",
-        img: " "
+        img: en302
       },
         { 
         code: " ", 
         name: "EN-301A-B",
         description: " ",
-        img: " "
+        img: en301
       }
     ],
   }
@@ -161,7 +218,7 @@ const buildingData = {
       code: "HMLAB1-2", 
       name: "CME Research Center",
       description: " ",
-      img: " "
+      img: cmeresearchcenter
     },
     { 
       code: "", 
@@ -185,64 +242,64 @@ const buildingData = {
       code: "CME COMLAB 2A", 
       name: "CME Computer Laboratory 2",
       description: " ",
-      img: " "
+      img: cmecomlab2
     },
     { 
       code: "CME COMLAB 1A", 
       name: "CME Computer Laboratory 1",
       description: " ",
-      img: " "
+      img: cmecomlab1
     },
     
   ],
   3:[
         { 
-        code: " ", 
+        code: "CME308A-B", 
         name: "EN-CME308A-B",
         description: " ",
-        img: " "
+        img: encme308
       },
        { 
-        code: " ", 
+        code: "CME307A-B", 
         name: "EN-CME307A-B",
         description: " ",
-        img: " "
+        img: encme307
       },
       { 
-        code: " ", 
+        code: "CME306A-B", 
         name: "EN-CME306A-B",
         description: " ",
-        img: " "
+        img: encme306
       },
       { 
-        code: " ", 
+        code: "CME305A-B", 
         name: "EN-CME305A-B",
         description: " ",
-        img: " "
+        img: encme305
       },
        { 
-        code: " ", 
+        code: "CME304A-B", 
         name: "EN-CME304A-B",
         description: " ",
-        img: " "
+        img: encme304
       },
        { 
-        code: " ", 
+        code: "CME303A-B", 
         name: "EN-CME303A-B",
         description: " ",
-        img: " "
+        img: encme303
       },
        { 
-        code: " ", 
+        code: "CME302A-B", 
         name: "EN-CME302A-B",
         description: " ",
-        img: " "
+        img: encme302
       },
        { 
-        code: " ", 
+        code: "CME301A-B", 
         name: "EN-CME301A-B",
         description: " ",
-        img: " "
+        img: encme301
       },
   ]
 }
@@ -350,19 +407,19 @@ rooms: {
       code: " ", 
       name: "ED-303A-B",
       description: " ",
-      img: " "
+      img: ed303
     },
     { 
       code: " ", 
       name: "ED-302A-B",
       description: " ",
-      img: " "
+      img: ed302
     },
     { 
       code: " ", 
       name: "ED-301A-B",
       description: " ",
-      img: " "
+      img: ed301
     },
      { 
       code: " ", 
@@ -646,45 +703,45 @@ img: ""
             code: " ", 
             name: "Tesda Office",
             description: " ",
-            img: " "
+            img: tesda 
           },
           { 
             code: " ", 
-            name: "Office",
+            name: "Alumni Affairs Office & COT Com Lab Office",
             description: " ",
-            img: " "
+            img: alumni
           },
           {       
             code: " ", 
             name: "COT Comp Lab 204",
             description: " ",
-            img: " "
+            img: lab204
           }, 
           {
           code: " ", 
             name: "COT Comp Lab 203",
             description: " ",
-            img: " "
+            img: lab203
 
           }, 
           {
             code: " ", 
             name: "COT Comp Lab 202",
             description: " ",
-            img: " "
+            img: lab202
             },
             {
             code: " ", 
             name: "COT Stock Room",
             description: " ",
-            img: " "
+            img: cotstock
 
             },
             {
             code: " ", 
-            name: " ",
+            name: "COT Office",
             description: " ",
-            img: " "
+            img: cotoffice
             }
 
         ]
@@ -706,13 +763,13 @@ img: ""
         code:"",
         name:"COT Faculty",
         description: "A workspace for instructors under the College of Technology where they prepare lessons, meet students, and handle academic-related tasks. ",
-        img:" "
+        img: cotfaculty
         },
         {
         code:"",
-        name:"COT Office",
+        name:"COT Office Deans",
         description: "The main office of the College of Technology where administrative tasks, student concerns, and faculty matters are managed. ",
-        img:" "
+        img: "" //cotofficedeans
         },
         {
         code:"",
@@ -760,7 +817,7 @@ img: ""
         code:"",
         name:"Extension & Production Office",
         description: "An office that manages community extension projects and school production activities, supporting both student learning and community development. ",
-        img: ""
+        img: extension
         },
         {
         code:"",
@@ -772,13 +829,13 @@ img: ""
         code:"",
         name:"Production Office",
         description: "A workspace where school production activities are planned, organized, and managed to support academic and institutional projects. ",
-        img: ""
+        img: productionoffice
         },
         {
         code:"",
         name:"Production Area",
         description: "A designated workspace where practical production tasks, projects, and hands-on activities are carried out using school equipment and materials. ",
-        img: ""
+        img: productionarea
         },
         {
         code:"",
@@ -795,13 +852,13 @@ img: ""
         code:"",
         name:"Working Hand Office",
         description: " ",
-        img:" "
+        img: workinghand
         }, 
         {
         code:"",
         name:"SSG Office",
         description: " ",
-        img:" "
+        img: ssgoffice
         },
          {
             code:"",
@@ -814,14 +871,14 @@ img: ""
         {
         code:"",
         name:"Research and Development Office",
-        description: " ",
-        img:" "
+        description: "  ",
+        img: researchdev
         },
         {
         code:"",
         name:"Old Library",
         description: " ",
-        img:" "
+        img: oldlib
         },
         {
         code:"",
@@ -833,7 +890,7 @@ img: ""
         code:"",
         name:"Speech Lab",
         description: " ",
-        img:" "
+        img: speech
         }
 
         ]  }
@@ -961,13 +1018,13 @@ img: ""
       code:"",
       name:"Library",
       description: " ",
-      img: ""
+      img: library
       },
       {
       code:"",
       name:"AVR Room",
       description: " ",
-      img: ""
+      img: avr
       }
 
 
@@ -1096,7 +1153,7 @@ img: ""
                     code:"",
                     name:"Fablab Office",
                     description: "A fabrication laboratory equipped with tools and machines like 3D printers, laser cutters, and CNC machines where students create prototypes and innovative projects.",
-                    img: " "
+                    img: Fablab1
                   },
                   {
                     code:"",
@@ -1127,7 +1184,7 @@ img: ""
                     code:"",
                     name:"Study Area",
                     description: "A quiet space where students can read, research, and complete assignments individually or in small groups. ",
-                    img: ""
+                    img: studyarea
                   },
                   {
                     code:"",
@@ -1137,7 +1194,7 @@ img: ""
                   },
                   {
                     code:"",
-                    name:"Cultural Center ",
+                    name:"Cultural Center",
                     description: "A venue for promoting arts, traditions, and cultural activities, hosting performances, exhibits, and community events. ",
                     img: ""
                   },
@@ -1149,19 +1206,19 @@ img: ""
                   },
                   {
                     code:"",
-                    name:"HM Laboratory ",
+                    name:"HM Laboratory",
                     description: "A practical room where students learn and practice household management skills such as cooking, cleaning, and basic home organization. ",
                     img: HMLab
                   },
                   {
                     code:"",
-                    name:"Men's Dorm ",
+                    name:"Men's Dorm",
                     description: "A residential building where male students live, providing beds, study areas, and basic amenities for daily living. ",
-                    img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459767/MensDormitory_rti8ld.jpg"
+                    img: mensdorm
                   },
                   {
                     code:"",
-                    name:"Furniture Workshop ",
+                    name:"Furniture Workshop",
                     description: "A practical workspace equipped with woodworking tools and materials where students design, build, and finish furniture pieces. ",
                     img: ""
                   },
@@ -1192,13 +1249,13 @@ img: ""
                   },
                   {
                     code:"",
-                    name:"Sports & Athletics Office ",
+                    name:"Sports & Athletics Office",
                     description: "The office responsible for managing the school’s sports programs, athletic events, team coordination, and student-athlete support services. ",
                     img:""
                   },
                   {
                     code:"",
-                    name:"Socio-Cultural Office ",
+                    name:"Socio-Cultural Office",
                     description: "The office that plans and manages cultural, social, and community-building activities on campus, supporting student organizations and promoting cultural awareness and engagement. ",
                     img:""
                   },
@@ -1206,13 +1263,13 @@ img: ""
                     code:"",
                     name:"Mechanical Engineering Laboratory 1",
                     description: "A laboratory equipped for foundational mechanical engineering experiments and hands-on activities, where students explore basic principles in mechanics, materials, and machine operations. ",
-                    img:""
+                    img: melab1
                   },
                   {
                     code:"",
                     name:"Mechanical Engineering Laboratory 2",
                     description: "An advanced laboratory for mechanical engineering students, equipped for experiments and practical work in areas such as thermodynamics, fluid mechanics, and machine design. ",
-                    img:""
+                    img: melab2
                   },
                   {
                     code:"",
@@ -1228,13 +1285,13 @@ img: ""
                   },
                   {
                     code:"",
-                    name:"Electrical Shop ",
+                    name:"Electrical Shop",
                     description: "A workshop where students learn and practice electrical wiring, circuits, and related hands-on skills, using tools and equipment for training in electrical systems and maintenance.",
                     img:""
                   },
                   {
                     code:"",
-                    name:"Sanitation Staff Office ",
+                    name:"Sanitation Staff Office",
                     description: "The office where the sanitation team coordinates cleaning, waste management, and hygiene maintenance across the campus to ensure a safe and clean environment.",
                     img:""
                   },
@@ -1269,12 +1326,6 @@ img: ""
                     description: "Kitchen Laboratory",
                     img:""
                   },
-                    {
-                    code:"",
-                    name:"Men's Dorm",
-                    description: "Mens Dorm",
-                    img:""
-                  },
                    {
                     code:"",
                     name:"Electrical Shop",
@@ -1303,7 +1354,7 @@ img: ""
                     code:"",
                     name:"Women's Dorm",
                     description: "A secure and comfortable residential facility for female students. Includes shared bedrooms, restrooms, common areas, and basic amenities. Provides a safe and supportive environment for study, rest, and daily living. ",
-                    img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459769/Women_sDormitory_gudsea.jpg"
+                    img: womensdorm
                   }
                 ]
               }

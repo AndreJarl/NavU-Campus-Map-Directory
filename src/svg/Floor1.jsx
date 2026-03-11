@@ -43,7 +43,7 @@ const handleFloor = useCallback((num) => {
       const rooms = ["Library", "EN-303A-B", "EN-302A-B", "EN-301A-B", "EN-CME308A-B", "EN-CME307A-B", "EN-CME306A-B", "EN-CME305A-B", "EN-CME304A-B", 
                      "EN-CME303A-B", "EN-CME302A-B", "EN-CME301A-B", "ED-201", "Campus Director Office", "Dean's and Conference", 
                     "Engineering Faculty (Chairman's Office)", "Engineering Faculty Office", "CME Research Center", "TM-LAB-2A", "CME Computer Laboratory 2","CME Computer Laboratory 1",
-                    "TM-LAB-1A", "EN-CME 201", "Graduate School"];
+                    "TM-LAB-1A", "EN-CME 201", "Graduate School", "EN-201"];
       return rooms.includes(path) ? 1 : 0;
     };
 
@@ -1978,7 +1978,7 @@ return (
 
       {/* COT Dean's office bldg */}
       <path
-        onClick={() => bldClicked("COT Dean's Office")}
+        onClick={() => bldClicked("COT Office")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#fc0" : category["Faculty"] ? "#fc0" : "#B0B0B0"}
         stroke={
@@ -2102,7 +2102,7 @@ return (
 
       {/* COT Office Main bldg */}
       <path
-        onClick={() => bldClicked("COT Office")}
+        onClick={() => bldClicked("COT Office Deans")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#fc0" : category["Faculty"] ? "#fc0" : "#B0B0B0"}
         stroke={
@@ -5770,7 +5770,7 @@ return (
         opacity={
           path === "COT Office" ||
           path === "Tesda Office" ||
-          path === "Office" ||
+          path === "Alumni Affairs Office & COT Com Lab Office" ||
           path === "COT Comp Lab 204" ||
           path === "COT Comp Lab 203" ||
           path === "COT Comp Lab 202" ||
@@ -6498,7 +6498,7 @@ return (
 
       {/* COT Office path */}
       <path
-        opacity={path === "COT Office" ? "1" : 0}
+        opacity={path === "COT Office Deans" ? "1" : 0}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"

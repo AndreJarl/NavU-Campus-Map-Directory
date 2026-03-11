@@ -37,7 +37,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
     const showPath = (path) => {
       const rooms = ["Library", "EN-303A-B", "EN-302A-B", "EN-301A-B", "EN-CME308A-B", "EN-CME307A-B", "EN-CME306A-B", "EN-CME305A-B",
-                     "EN-CME304A-B", "EN-CME303A-B", "EN-CME302A-B", "EN-CME301A-B"];
+                     "EN-CME304A-B", "EN-CME303A-B", "EN-CME302A-B", "EN-CME301A-B",];
       return rooms.includes(path) ? 1 : 0;
     };
 
@@ -830,7 +830,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
   </text>
 </g>
 
-<g onClick={() => bldClicked("Office")}style={{ cursor: "default" }}>
+<g onClick={() => bldClicked("Alumni Affairs Office & COT Com Lab Office")}style={{ cursor: "default" }}>
   <path d="M155 484.161L178 484.161V501.796H155V484.161Z" fill="#FFCC00"/>
   <path d="M155 501.796H178V504H155V501.796Z" fill="#D6B018"/>
 
@@ -845,7 +845,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     fill="black"
     style={{ pointerEvents: 'none', userSelect: 'none' }}
   >
-    OFFICE
+    COMLAB OFFICE
   </text>
 </g>
 
@@ -1006,7 +1006,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path opacity={path === "Working Hand Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M80 601C80.5523 601 81 600.552 81 600V565.825C81 565.273 80.5523 564.825 80 564.825H75.6426" />
 
 
-<path opacity={path === "Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M165.956 505.497V506.043C165.956 506.595 166.404 507.043 166.956 507.043L186.46 507.043C187.012 507.043 187.46 506.595 187.46 506.043V504.985" />
+<path opacity={path === "Alumni Affairs Office & COT Com Lab Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M165.956 505.497V506.043C165.956 506.595 166.404 507.043 166.956 507.043L186.46 507.043C187.012 507.043 187.46 506.595 187.46 506.043V504.985" />
 
 
 <path opacity={path === "COT Comp Lab 204" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M148.014 505.6V506.043C148.014 506.595 148.462 507.043 149.014 507.043L186.46 507.043C187.012 507.043 187.46 506.595 187.46 506.043V504.985" />

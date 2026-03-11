@@ -176,7 +176,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
 
         <div className="flex-1 overflow-y-auto px-6 mt-24 custom-scrollbar pb-6">
           <div className="mb-6 mt-3">
-            <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Description</h3>
+            <h3 className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3">Description</h3>
             <p className="text-gray-300 leading-relaxed text-[11px] font-light">{room?.description || "No description available."}</p>
           </div>
 
@@ -196,7 +196,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
         <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setShowOverlay(false)} />
           
-          <div className="relative bg-black w-full max-w-6xl h-[85vh] rounded-[2.5rem] shadow-2xl overflow-hidden border border-white/5">
+          <div className="relative bg-black w-full max-w-5xl h-[85vh] rounded-[2.5rem] shadow-2xl overflow-hidden border border-white/5">
             <button onClick={() => setShowOverlay(false)} className="absolute right-6 top-6 z-[301] p-3 bg-black/40 text-white rounded-full backdrop-blur-md">
               <AiOutlineClose size={22} />
             </button>
@@ -206,6 +206,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
             <div className="absolute bottom-10 left-10 z-20 text-white">
               <h2 className="text-3xl md:text-5xl font-bold mb-2">{room?.name}</h2>
               <span className="bg-red-600 px-4 py-1 rounded-full text-sm font-bold uppercase">Floor {floor}</span>
+              <span className="bg-gray-600 px-4 py-1 rounded-full ml-4 text-sm font-bold uppercase">{room?.code || ""}</span>
             </div>
 
             {/* OVERLAY IMAGE RENDER LOGIC */}
@@ -215,7 +216,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
                  <span className="mt-4 text-sm font-medium uppercase tracking-[0.3em]">Room Preview Unavailable</span>
               </div>
             ) : (
-              <img className="w-full h-full object-cover" src={room?.img} alt="" onError={() => setImageError(true)} />
+              <img className="w-full" src={room?.img} alt="" onError={() => setImageError(true)} />
             )}
 
             <button
