@@ -45,6 +45,18 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
       const rooms = ["AVR Room", "ED-303A-B", "ED-302A-B", "ED-301A-B"];
       return rooms.includes(path) ? 1 : 0;
     };
+
+    const admin = (room) =>{
+      const rooms = ["Admin Staff Office","Admin Graduate School", "HR Office", "New Admin Records","Guidance Office","SAO Office"];
+      return rooms.includes(room) ? 1 : 0;
+    }
+
+    const lab =(room) => {
+       const rooms = [];
+       return rooms.includes(room) ? 1 : 0;
+    }
+
+    const getColor = (allFalse, category, key, active, inactive) => allFalse || category[key] ? active : inactive;
   
   
   return (
@@ -354,13 +366,13 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 {/* MALE CR EDUC */}
 <g style={{ cursor: "default" }}>
-  <path d="M112 699H136V707.938H112V699Z" fill="#73DAFF"/>
-  <path d="M112 707.938H136V710H112V707.938Z" fill="#3BB2DE"/>
+  <path d="M112 699H136V707.938H112V699Z" fill={getColor(allFalse, category, "Restroom", "#73DAFF", "#B0B0B0")}/>
+  <path d="M112 707.938H136V710H112V707.938Z"  fill={getColor(allFalse, category, "Restroom", "#3BB2DE", "#B0B0B0")}/>
   <text  x="124"  y="704.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">MALE CR</text>
 </g>
 
 
-<path d="M112 707.938H136V710H112V707.938Z" fill="#3BB2DE"/>
+<path d="M112 707.938H136V710H112V707.938Z" fill={getColor(allFalse, category, "Restroom", "#3BB2DE", "#B0B0B0")}/>
 <path d="M184 484.161H190V490.841H184V484.161Z" fill="#73DAFF"/>
 <path d="M184 490.841H190V492.202H184V490.841Z" fill="#3BB2DE"/>
 <path d="M191 484.161H197V490.841H191V484.161Z" fill="#FF69EB"/>
@@ -480,7 +492,9 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <g onClick={() => bldClicked("Speech Lab")} style={{ cursor: "pointer" }}>
   <path 
     d="M78 495V511H47V501L51.5 494L57 486H62.5V495H78Z" 
-    fill="#FF8000"
+    // fill="#FF8000"
+   fill={getColor(allFalse, category, "Laboratory", "#FF8000", "#B0B0B0")}
+
   />
 
   <text 
@@ -506,7 +520,8 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="13" 
     height="31" 
     transform="rotate(90 78 543)" 
-    fill="#FF8000"
+    fill={getColor(allFalse, category, "Faculty", "#FF8000", "#B0B0B0")}
+
   />
 
   <text 
@@ -531,7 +546,8 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
       width="13" 
       height="31" 
       transform="rotate(90 78 529)" 
-      fill="#FF8000"
+      fill={getColor(allFalse, category, "", "#FF8000", "#B0B0B0")}
+
     />
 
     <text 
@@ -556,7 +572,9 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="16" 
     height="31" 
     transform="rotate(90 78 512)" 
-    fill="#FF8000"
+    fill={getColor(allFalse, category, "Laboratory", "#FF8000", "#B0B0B0")}
+
+    
   />
 
   <text 
@@ -577,7 +595,8 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <g onClick={() => bldClicked("GAD Office")} style={{ cursor: "pointer" }}>
   <path 
     d="M78 568V581H47V557H59V568H78Z" 
-    fill="#FFCC00"
+    fill={getColor(allFalse, category, "Faculty", "#FFCC00", "#B0B0B0")}
+
   />
 
   <text 
@@ -603,8 +622,9 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     y="582" 
     width="13" 
     height="31" 
-    transform="rotate(90 78 582)" 
-    fill="#FFCC00"
+    transform="rotate(90 78 582)"   
+    fill={getColor(allFalse, category, "Faculty", "#FFCC00", "#B0B0B0")}
+
   />
 
   <text 
@@ -626,8 +646,9 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 
 <g onClick={() => bldClicked("Working Hand Office")} style={{ cursor: "pointer" }}>
-  <path d="M78 596V604.452H47L47 596H78Z" fill="#FFCC00"/>
-  <path d="M47 604.452H78V606H47L47 604.452Z" fill="#D6B018"/>
+  <path d="M78 596V604.452H47L47 596H78Z"  fill={getColor(allFalse, category, "Faculty", "#FFCC00", "#B0B0B0")}
+/>
+  <path d="M47 604.452H78V606H47L47 604.452Z"  fill={getColor(allFalse, category, "Faculty", "#D6B018", "#B0B0B0")}/>
   <text 
     x="62.5" 
     y="601" 
@@ -645,12 +666,13 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 
 <g onClick={() => bldClicked("ED-202A-B")} style={{ cursor: "pointer" }}>
-  <rect x="136" y="664" width="17" height="21" transform="rotate(90 136 664)" fill="#00C3FF"/>
+  <rect x="136" y="664" width="17" height="21" transform="rotate(90 136 664)" fill={getColor(allFalse, category, "", "#00C3FF", "#B0B0B0")}
+/>
   <text x="125.5" y="672.5" textAnchor="middle" dominantBaseline="middle"fontFamily="Inter, sans-serif"fontWeight="600"fontSize="2" fill="black"style={{ pointerEvents: 'none', userSelect: 'none' }}>ED-202A-B</text>
 </g>
 
 <g onClick={() => bldClicked("ED-201A-B")} style={{ cursor: "pointer" }}>
-  <rect x="136" y="646" width="17" height="21" transform="rotate(90 136 646)" fill="#00C3FF"/>
+  <rect x="136" y="646" width="17" height="21" transform="rotate(90 136 646)"fill={getColor(allFalse, category, "", "#00C3FF", "#B0B0B0")}/>
   <text x="125.5" y="654.5" textAnchor="middle" dominantBaseline="middle"fontFamily="Inter, sans-serif"fontWeight="600"fontSize="2" fill="black"style={{ pointerEvents: 'none', userSelect: 'none' }}>ED-201A-B </text>
 </g>
 
@@ -665,7 +687,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 
 <g onClick={() => bldClicked("Dean's Education Office")} style={{ cursor: "pointer" }}>
-  <rect x="136" y="682" width="16" height="21" transform="rotate(90 136 682)" fill="#00C3FF"/>
+  <rect x="136" y="682" width="16" height="21" transform="rotate(90 136 682)"   fill={getColor(allFalse, category, "Faculty", "#00C3FF", "#B0B0B0")}/>
   <text x="125.5" y="690" textAnchor="middle" dominantBaseline="middle"fontFamily="Inter, sans-serif"fontWeight="600" fontSize="2" fill="black"style={{ pointerEvents: 'none', userSelect: 'none' }}>DEAN'S OFFICE</text>
 </g>
 
@@ -673,59 +695,61 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <rect width="15" height="9" transform="matrix(0 1 1 0 113 528)" fill="#73DAFF"/>
 
 <g onClick={() => bldClicked("CME Computer Laboratory 1")} style={{ cursor: "pointer" }}>
-  <rect x="249" y="544" width="21" height="13" fill="#AAFF00"/>
+  <rect x="249" y="544" width="21" height="13" fill={getColor(allFalse, category, "Laboratory", "#AAFF00", "#B0B0B0")}
+/>
   <text x="259.5" y="550.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" >CME</text>
   <text x="259.5" y="552.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">COMPUTER LAB 1</text>
 </g>
 
 
 <g onClick={() => bldClicked("CME Computer Laboratory 2")} style={{ cursor: "pointer" }}>
-  <rect x="270" y="558" width="13" height="21" transform="rotate(90 270 558)" fill="#AAFF00"/>
+  <rect x="270" y="558" width="13" height="21" transform="rotate(90 270 558)" fill={getColor(allFalse, category, "Laboratory", "#AAFF00", "#B0B0B0")}/>
   <text x="259.5" y="563.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CME</text>
   <text x="259.5" y="566.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">COMPUTER LAB 2</text>
 </g>
 
 <g onClick={() => bldClicked("EN-201")} style={{ cursor: "pointer" }}>
-  <rect x="270" y="572" width="13" height="21" transform="rotate(90 270 572)" fill="#AAFF00"/>
+  <rect x="270" y="572" width="13" height="21" transform="rotate(90 270 572)" fill={getColor(allFalse, category, "", "#AAFF00", "#B0B0B0")}/>
   <text x="259.5" y="579.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">EN-201</text>
 </g>
 
 
 <g onClick={() => bldClicked("TM-LAB-1A")} style={{ cursor: "pointer" }}>
-  <rect x="270" y="586" width="13" height="21" transform="rotate(90 270 586)" fill="#AAFF00"/>
+  <rect x="270" y="586" width="13" height="21" transform="rotate(90 270 586)" fill={getColor(allFalse, category, "Laboratory", "#AAFF00", "#B0B0B0")}
+/>
   <text x="259.5" y="593.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black"> TM-LAB-1A </text>
 </g>
 
 
 <g onClick={() => bldClicked("TM-LAB-2A")} style={{ cursor: "pointer" }}>
-  <rect  x="270"  y="600"  width="13"  height="21"  transform="rotate(90 270 600)"  fill="#AAFF00"/>
+  <rect  x="270"  y="600"  width="13"  height="21"  transform="rotate(90 270 600)"  fill={getColor(allFalse, category, "Laboratory", "#AAFF00", "#B0B0B0")}/>
   <text x="259.5" y="607.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">TM-LAB-2A</text>
 </g>
 
 
 <g onClick={() => bldClicked("Graduate School")} style={{ cursor: "pointer" }}>
-  <rect x="270"  y="634" width="11" height="21" transform="rotate(90 270 634)" fill="#FF3030"/>
+  <rect x="270"  y="634" width="11" height="21" transform="rotate(90 270 634)"  fill={getColor(allFalse, category, "Laboratory", "#FF3030", "#B0B0B0")}/>
   <text  x="259.5"  y="638.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" > GRADUATE</text>
   <text  x="259.5"  y="641.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" > SCHOOL</text>
 </g>
 
 
 <g onClick={() => bldClicked("Engineering Faculty Office")} style={{ cursor: "pointer" }}>
-  <rect x="270" y="646" width="17" height="21" transform="rotate(90 270 646)" fill="#FF3030"/>
+  <rect x="270" y="646" width="17" height="21" transform="rotate(90 270 646)" fill={getColor(allFalse, category, "Faculty", "#FF3030", "#B0B0B0")}/>
   <text x="259.5" y="652.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ENGINEERING</text>
   <text x="259.5" y="655.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FACULTY</text>
   <text x="259.5" y="658.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
 </g>
 
 <g onClick={() => bldClicked("Engineering Faculty (Chairman's Office)")} style={{ cursor: "pointer" }}>
-  <rect x="270" y="664" width="17" height="21" transform="rotate(90 270 664)" fill="#FF3030"/>
+  <rect x="270" y="664" width="17" height="21" transform="rotate(90 270 664)" fill={getColor(allFalse, category, "Faculty", "#FF3030", "#B0B0B0")}/>
   <text x="259.5" y="670.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" >ENGINEERING</text>
   <text x="259.5" y="673.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" >FACULTY</text>
   <text x="259.5" y="676.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" >CHAIRMAN OFFICE</text>
 </g>
 {/* deans and conference bld */}
 <g onClick={() => bldClicked("Dean's and Conference")} style={{ cursor: "pointer" }}>
-  <rect x="270" y="682" width="16" height="21" transform="rotate(90 270 682)" fill="#FF3030"/>
+  <rect x="270" y="682" width="16" height="21" transform="rotate(90 270 682)" fill={getColor(allFalse, category, "Faculty", "#FF3030", "#B0B0B0")}/>
   <text  x="259.5" y="689" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">DEANS</text>
   <text  x="259.5" y="692" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">& CONFERENCE</text>
 </g>
@@ -733,7 +757,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 {/* CME Research Center BLD */}
 <g onClick={() => bldClicked("CME Research Center")} style={{ cursor: "pointer" }}>
-  <rect x="270" y="614" width="19"  height="21"  transform="rotate(90 270 614)"  fill="#AAFF00"/>
+  <rect x="270" y="614" width="19"  height="21"  transform="rotate(90 270 614)" fill={getColor(allFalse, category, "Laboratory", "#AAFF00", "#B0B0B0")}/>
   <text   x="259.5"  y="620.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black"> CME</text>
   <text  x="259.5" y="623.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">RESEARCH</text>
   <text x="259.5" y="626.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CENTER</text>
@@ -741,22 +765,23 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 
 <g style={{ cursor: "default" }}>
-  <path d="M249 699H273V707.938H249V699Z" fill="#73DAFF"/>
-  <path d="M249 707.938H273V710H249V707.938Z" fill="#3BB2DE"/>
+  <path d="M249 699H273V707.938H249V699Z" fill={getColor(allFalse, category, "Restroom", "#73DAFF", "#B0B0B0")}/>
+  <path d="M249 707.938H273V710H249V707.938Z"  fill={getColor(allFalse, category, "Restroom", "#3BB2DE", "#B0B0B0")}/>
   <text x="261" y="704.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">MALE CR</text>
 </g>
 
 {/* ADMIN OFFICE */}
 <g onClick={() => bldClicked("Admin Staff Office")} style={{ cursor: "pointer" }}>
-  <path d="M203 728H245V749.022H203V728Z" fill="#FF6453"/>
-  <path d="M203 749.022H245V751H203V749.022Z" fill="#CE4B46"/>
+  <path d="M203 728H245V749.022H203V728Z"  fill={getColor(allFalse, category, "Admin", "#FF6453", "#B0B0B0")}/>
+  <path d="M203 749.022H245V751H203V749.022Z"  fill={getColor(allFalse, category, "Admin", "#CE4B46", "#B0B0B0")}/>
   <text x="224" y="739.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">ADMIN OFFICE</text>
 </g>
 
 {/* Campus Director Office BLD */}
 <g onClick={() => bldClicked("Campus Director Office")} style={{ cursor: "pointer" }}>
-  <path d="M246 728L252 728V723H260V749.066H246V728Z" fill="#FF6453"/>
-  <path d="M246 749.066H260V751H246V749.066Z" fill="#CE4B46"/>
+  <path d="M246 728L252 728V723H260V749.066H246V728Z" fill={getColor(allFalse, category, "Admin", "#ff3030", "#B0B0B0")}
+/>
+  <path d="M246 749.066H260V751H246V749.066Z" fill={getColor(allFalse, category, "Admin", "#CE4B46", "#B0B0B0")}/>
   <text x="253" y="737" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CAMPUS</text>
   <text x="253" y="740" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">DIRECTOR</text>
   <text x="253" y="743" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
@@ -764,23 +789,23 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 {/* SAO OFFICE BLD */}
 <g onClick={() => bldClicked("SAO Office")} style={{ cursor: "pointer" }}>
-  <path d="M126 723H134V728H142V749.085H126V723Z" fill="#FF6453"/>
-  <path d="M126 749.085H142V751H126V749.085Z" fill="#CE4B46"/>
+  <path d="M126 723H134V728H142V749.085H126V723Z" fill={getColor(allFalse, category, "Admin", "#FF6453", "#B0B0B0")}/>
+  <path d="M126 749.085H142V751H126V749.085Z" fill={getColor(allFalse, category, "Admin", "#CE4B46", "#B0B0B0")}/>
   <text x="134" y="739" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">SAO</text>
   <text  x="134" y="742" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
 </g>
 
 {/* RECORDS BLD */}
 <g onClick={() => bldClicked("New Admin Records")} style={{ cursor: "pointer" }}>
-  <path d="M155 728H169V749.022H155V728Z" fill="#FF6453"/>
-  <path d="M155 749.022H169V751H155V749.022Z" fill="#CE4B46"/>
+  <path d="M155 728H169V749.022H155V728Z" fill={getColor(allFalse, category, "Admin", "#FF6453", "#B0B0B0")}/>
+  <path d="M155 749.022H169V751H155V749.022Z" fill={getColor(allFalse, category, "Admin", "#CE4B46", "#B0B0B0")}/>
   <text x="162" y="739.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">RECORDS</text>
 </g>
 
 {/* GUIDANCE OFFICE BLD */}
 <g onClick={() => bldClicked("Guidance Office")} style={{ cursor: "pointer" }}>
-  <path d="M143 728H154V749.022H143V728Z" fill="#FF6453"/>
-  <path d="M143 749.022H154V751H143V749.022Z" fill="#CE4B46"/>
+  <path d="M143 728H154V749.022H143V728Z"fill={getColor(allFalse, category, "Admin", "#FF6453", "#B0B0B0")}/>
+  <path d="M143 749.022H154V751H143V749.022Z" fill={getColor(allFalse, category, "Admin", "#CE4B46", "#B0B0B0")}/>
   <text x="148.5"  y="738.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">GUIDANCE</text>
   <text x="148.5"  y="741.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">OFFICE</text>
 </g>
@@ -788,8 +813,8 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 {/* HR OFFICE BLD */}
 <g onClick={() => bldClicked("HR Office")} style={{ cursor: "pointer" }}>
-  <path d="M170 728H184V749.022H170V728Z" fill="#FF6453"/>
-  <path d="M170 749.022H184V751H170V749.022Z" fill="#CE4B46"/>
+  <path d="M170 728H184V749.022H170V728Z"  fill={getColor(allFalse, category, "Admin", "#FF6453", "#B0B0B0")}/>
+  <path d="M170 749.022H184V751H170V749.022Z" fill={getColor(allFalse, category, "Admin", "#CE4B46", "#B0B0B0")}/>
   <text x="177" y="738.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" >HR  </text>
   <text x="177" y="741.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black"> OFFICE</text>
 </g>
@@ -798,8 +823,8 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 {/* GRADUATE SCHOOL */}
 <g onClick={() => bldClicked("Admin Graduate School")} style={{ cursor: "pointer" }}>
-  <path d="M185 728H202V749.022H185V728Z" fill="#FF6453"/>
-  <path d="M185 749.022H202V751H185V749.022Z" fill="#CE4B46"/>
+  <path d="M185 728H202V749.022H185V728Z" fill={getColor(allFalse, category, "Admin", "#FF6453", "#B0B0B0")}/>
+  <path d="M185 749.022H202V751H185V749.022Z" fill={getColor(allFalse, category, "Admin", "#CE4B46", "#B0B0B0")}/>
   <text x="193.5" y="738.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">GRADUATE</text>
   <text x="193.5" y="741.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">SCHOOL</text>
 </g>
@@ -812,8 +837,8 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="15" 
     height="9" 
     transform="rotate(90 272 528)" 
-    fill="#73DAFF"
-  />
+    fill={getColor(allFalse, category, "Restroom", "#73DAFF", "#B0B0B0")}/>
+  
 
   <text 
     x="267.5" 
@@ -831,8 +856,10 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 </g>
 
 <g onClick={() => bldClicked("Alumni Affairs Office & COT Com Lab Office")}style={{ cursor: "default" }}>
-  <path d="M155 484.161L178 484.161V501.796H155V484.161Z" fill="#FFCC00"/>
-  <path d="M155 501.796H178V504H155V501.796Z" fill="#D6B018"/>
+  <path d="M155 484.161L178 484.161V501.796H155V484.161Z" fill={getColor(allFalse, category, "Faculty", "#FFCC00", "#B0B0B0")}
+/>
+  <path d="M155 501.796H178V504H155V501.796Z"  fill={getColor(allFalse, category, "Faculty", "#D6B018", "#B0B0B0")}
+/>
 
   <text 
     x="166.5" 
@@ -851,8 +878,8 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 
 <g onClick={() => bldClicked("Tesda Office")} style={{ cursor: "default" }}>
-  <path d="M203 484.196H214V502H203V484.196Z" fill="#FFCC00"/>
-  <path d="M203 502H214V504H203V502Z" fill="#D6B018"/>
+  <path d="M203 484.196H214V502H203V484.196Z" fill={getColor(allFalse, category, "Faculty", "#FFCC00", "#B0B0B0")}/>
+  <path d="M203 502H214V504H203V502Z"  fill={getColor(allFalse, category, "Faculty", "#D6B018", "#B0B0B0")}/>
 
   <text 
     x="208.5" 
@@ -883,8 +910,8 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 </g>
 
 <g onClick={() => bldClicked("COT Office")} style={{ cursor: "default" }}>
-  <path d="M215 484.196L226 484.196V501.8H215V484.196Z" fill="#FFCC00"/>
-  <path d="M215 501.8H226V504H215V501.8Z" fill="#D6B018"/>
+  <path d="M215 484.196L226 484.196V501.8H215V484.196Z"  fill={getColor(allFalse, category, "Faculty", "#FFCC00", "#B0B0B0")}/>
+  <path d="M215 501.8H226V504H215V501.8Z"    fill={getColor(allFalse, category, "Faculty", "#D6B018", "#B0B0B0")}/>
 
   <text 
     x="220.5" 
@@ -915,8 +942,10 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 </g>
 
 <g onClick={() => bldClicked("COT Comp Lab 204")} style={{ cursor: "pointer" }}>
-  <path d="M143 484.161L154 484.161V501.796H143V484.161Z" fill="#FFCC00"/>
-  <path d="M143 501.796H154V504H143V501.796Z" fill="#D6B018"/>
+  <path d="M143 484.161L154 484.161V501.796H143V484.161Z"  fill={getColor(allFalse, category, "Laboratory", "#FFCC00", "#B0B0B0")}
+/>
+  <path d="M143 501.796H154V504H143V501.796Z"  fill={getColor(allFalse, category, "Laboratory", "#D6B018", "#B0B0B0")}
+/>
 
   <text 
     x="148.5" 
@@ -934,8 +963,8 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 </g>
 
 <g onClick={() => bldClicked("COT Comp Lab 203")} style={{ cursor: "pointer" }}>
-  <path d="M131 484.161L142 484.161V501.796H131V484.161Z" fill="#FFCC00"/>
-  <path d="M131 501.796H142V504H131V501.796Z" fill="#D6B018"/>
+  <path d="M131 484.161L142 484.161V501.796H131V484.161Z"   fill={getColor(allFalse, category, "Laboratory", "#FFCC00", "#B0B0B0")}/>
+  <path d="M131 501.796H142V504H131V501.796Z"   fill={getColor(allFalse, category, "Laboratory", "#D6B018", "#B0B0B0")}/>
 
   <text 
     x="136.5" 
@@ -953,8 +982,10 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 </g>
 
 <g onClick={() => bldClicked("COT Comp Lab 202")} style={{ cursor: "pointer" }}>
-  <path d="M119 484.161L130 484.161V501.796H119V484.161Z" fill="#FFCC00"/>
-  <path d="M119 501.796H130V504H119V501.796Z" fill="#D6B018"/>
+  <path d="M119 484.161L130 484.161V501.796H119V484.161Z" fill={getColor(allFalse, category, "Laboratory", "#FFCC00", "#B0B0B0")}
+/>
+  <path d="M119 501.796H130V504H119V501.796Z"  fill={getColor(allFalse, category, "Laboratory", "#D6B018", "#B0B0B0")}
+/>
 
   <text 
     x="124.5" 
@@ -972,8 +1003,8 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 </g>
 
 <g onClick={() => bldClicked("COT Stock Room")} style={{ cursor: "pointer" }}>
-  <path d="M108 484.161H118V506.84H108V484.161Z" fill="#FFCC00"/>
-  <path d="M108 506.84H118V509H108V506.84Z" fill="#D6B018"/>
+  <path d="M108 484.161H118V506.84H108V484.161Z" fill={getColor(allFalse, category, "", "#FFCC00", "#B0B0B0")}/>
+  <path d="M108 506.84H118V509H108V506.84Z" fill={getColor(allFalse, category, "", "#D6B018", "#B0B0B0")}/>
   <text  x="113"  y="493.5"  textAnchor="middle"  dominantBaseline="middle" fontFamily="Inter, sans-serif" fontWeight="600" fontSize="2"  fill="black" style={{ pointerEvents: 'none', userSelect: 'none' }}>STOCK</text>
   <text  x="113"  y="497.5"  textAnchor="middle"  dominantBaseline="middle" fontFamily="Inter, sans-serif" fontWeight="600" fontSize="2"  fill="black" style={{ pointerEvents: 'none', userSelect: 'none' }}>ROOM</text>
 </g>

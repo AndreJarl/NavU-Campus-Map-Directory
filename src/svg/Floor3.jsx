@@ -34,6 +34,9 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
              setCurrentFloor(num);
              trigger();
       },[trigger]);
+
+
+          const getColor = (allFalse, category, key, active, inactive) => allFalse || category[key] ? active : inactive;
   return (
     <>
   <svg
@@ -174,7 +177,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M123.792 528.801V540.201H122.992V528.801H123.792Z" fill="#535353"/>
 
 <g filter="url(#filter1_d_2041_14)">
-  <path d="M112 699H136V707.938H112V699Z" fill="#FF69EB"/>
+  <path d="M112 699H136V707.938H112V699Z" fill={getColor(allFalse, category, "Restroom", "#FF69EB", "#B0B0B0")}/>
   <text
     x="124"
     y="703.47"
@@ -190,7 +193,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
   </text>
 </g>
 
-<path d="M112 707.938H136V710H112V707.938Z" fill="#CF56BF"/>
+<path d="M112 707.938H136V710H112V707.938Z" fill={getColor(allFalse, category, "Restroom", "#CF56BF", "#B0B0B0")}/>
 
 <path opacity={path === "Library" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"  d="M204.04 726.814V725.885C204.04 725.333 204.488 724.885 205.04 724.885H245.247C245.799 724.885 246.247 724.438 246.247 723.885V719.92C246.247 719.368 246.695 718.92 247.247 718.92L256.757 718.92" />
 
@@ -281,7 +284,8 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="17" 
     height="21" 
     transform="rotate(90 136 664)" 
-    fill="#00C3FF"
+    fill={getColor(allFalse, category, "", "#00C3FF", "#B0B0B0")}
+
   />
   <text
     x="125.5"
@@ -305,7 +309,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="17" 
     height="21" 
     transform="rotate(90 136 646)" 
-    fill="#00C3FF"
+    fill={getColor(allFalse, category, "", "#00C3FF", "#B0B0B0")}
   />
   <text
     x="125.5"
@@ -359,7 +363,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="16" 
     height="21" 
     transform="rotate(90 136 682)" 
-    fill="#00C3FF"
+    fill={getColor(allFalse, category, "", "#00C3FF", "#B0B0B0")}
   />
   <text
     x="125.5"
@@ -380,9 +384,9 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 <g filter="url(#filter1_d_2041_14)">
   {/* Main Building Body */}
-  <path d="M249 699H273V707.938H249V699Z" fill="#FF69EB" />
+  <path d="M249 699H273V707.938H249V699Z" fill={getColor(allFalse, category, "Restroom", "#FF69EB", "#B0B0B0")}/>
   {/* Building Detail */}
-  <path d="M249 707.938H273V710H249V707.938Z" fill="#CF56BF" />
+  <path d="M249 707.938H273V710H249V707.938Z" fill={getColor(allFalse, category, "Restroom", "#CF56BF", "#B0B0B0")}/>
 
   {/* Centered Text */}
   <text
@@ -404,7 +408,8 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
   <path 
     onClick={() => bldClicked("Library")} 
     d="M143 728H252V723H260V749.066H143V728Z" 
-    fill="#FF6453" 
+    fill={getColor(allFalse, category, "Admin", "#FF6453", "#B0B0B0")}
+
     style={{ cursor: 'pointer' }}
   />
   <text
@@ -423,18 +428,20 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 </g>
 
 
-<path d="M143 749.066H260V751H143V749.066Z" fill="#CE4B46"/>
+<path d="M143 749.066H260V751H143V749.066Z" fill={getColor(allFalse, category, "Admin", "#CE4B46", "#B0B0B0")}/>
 
 <g filter="url(#filter1_d_2041_14)">
   {/* Main Building Body */}
   <path 
     d="M126 723H134V728H142V749.085H126V723Z" 
-    fill="#FF6453" 
+    
+    fill={getColor(allFalse, category, "Admin", "#FF6453", "#B0B0B0")}
+
     onClick={() => bldClicked("AVR Room")} 
     style={{ cursor: 'pointer' }} 
   />
   {/* Building Bottom Detail */}
-  <path d="M126 749.085H142V751H126V749.085Z" fill="#CE4B46" />
+  <path d="M126 749.085H142V751H126V749.085Z"  fill={getColor(allFalse, category, "Admin", "#CE4B46", "#B0B0B0")} />
 
   {/* Centered Text */}
   <text
@@ -480,7 +487,8 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="17" 
     height="21" 
     transform="rotate(90 270 646)" 
-    fill="#FF3030"
+    fill={getColor(allFalse, category, "", "#FF3030", "#B0B0B0")}
+
   />
 
   {/* Centered Text */}
@@ -507,7 +515,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="17" 
     height="21" 
     transform="rotate(90 270 664)" 
-    fill="#FF3030"
+    fill={getColor(allFalse, category, "", "#FF3030", "#B0B0B0")}
   />
 
   {/* Centered Text */}
@@ -534,7 +542,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="16" 
     height="21" 
     transform="rotate(90 270 682)" 
-    fill="#FF3030"
+    fill={getColor(allFalse, category, "", "#FF3030", "#B0B0B0")}
   />
 
   {/* Centered Text */}
@@ -559,7 +567,8 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     y="544" 
     width="21" 
     height="12" 
-    fill="#AAFF00" 
+    fill={getColor(allFalse, category, "", "#AAFF00", "#B0B0B0")}
+
   />
   <text
     x="259.5"
@@ -582,7 +591,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="12" 
     height="21" 
     transform="rotate(90 270 557)" 
-    fill="#AAFF00"
+    fill={getColor(allFalse, category, "", "#AAFF00", "#B0B0B0")}
   />
   <text
     x="259.5"
@@ -606,7 +615,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="11" 
     height="21" 
     transform="rotate(90 270 570)" 
-    fill="#AAFF00"
+    fill={getColor(allFalse, category, "", "#AAFF00", "#B0B0B0")}
   />
   <text
     x="259.5"
@@ -629,7 +638,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="12" 
     height="21" 
     transform="rotate(90 270 582)" 
-    fill="#AAFF00"
+    fill={getColor(allFalse, category, "", "#AAFF00", "#B0B0B0")}
   />
   <text
     x="259.5"
@@ -653,7 +662,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="12" 
     height="21" 
     transform="rotate(90 270 595)" 
-    fill="#AAFF00"
+    fill={getColor(allFalse, category, "", "#AAFF00", "#B0B0B0")}
   />
   <text
     x="259.5"
@@ -677,7 +686,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="11" 
     height="21" 
     transform="rotate(90 270 608)" 
-    fill="#AAFF00"
+    fill={getColor(allFalse, category, "", "#AAFF00", "#B0B0B0")}
   />
   <text
     x="259.5"
@@ -701,7 +710,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="12" 
     height="21" 
     transform="rotate(90 270 620)" 
-    fill="#AAFF00"
+    fill={getColor(allFalse, category, "", "#AAFF00", "#B0B0B0")}
   />
   <text
     x="259.5"
@@ -725,7 +734,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     width="12" 
     height="21" 
     transform="rotate(90 270 633)" 
-    fill="#AAFF00"
+    fill={getColor(allFalse, category, "", "#AAFF00", "#B0B0B0")}
     style={{ cursor: 'pointer' }}
   />
   <text

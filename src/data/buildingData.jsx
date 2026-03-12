@@ -37,6 +37,7 @@ import productionoffice from "../assets/rooms/oldadmin/ProductionOffice.webp"
 import extension from "../assets/rooms/oldadmin/Extension&ProductionOffice.webp"
 import cotfaculty from "../assets/rooms/oldadmin/COT-Faculty.webp"
 import speech from "../assets/rooms/oldadmin/SpeechLabRoom.webp"
+import gad from "../assets/rooms/oldadmin/GAD.webp"
 
 
 
