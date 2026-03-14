@@ -160,19 +160,19 @@ const buildingData = {
       { 
         code: " ", 
         name: "Dean's and Conference",
-        description: " ",
+        description: "The administrative headquarters of the College of Engineering. This office handles official approvals and houses conference rooms for academic and faculty meetings.",
         img: coedeans
       },
       { 
         code: "EN-202A", 
         name: "Engineering Faculty (Chairman's Office)",
-        description: " ",
+        description: "The department's academic headquarters housing the Chairman’s Office and faculty workstations for consultations and departmental concerns.",
         img: faculty
       },
       { 
         code: "EN-201B", 
         name: "Engineering Faculty Office",
-        description: " ",
+        description: "A workspace for faculty members and a consultation area for students to meet with their instructors.",
         img: faculty1
       },
       { 
@@ -184,7 +184,7 @@ const buildingData = {
          { 
         code: "Engineering Grad School", 
         name: "Graduate School",
-        description: " ",
+        description: "The center for advanced engineering studies, providing resources and administrative support for Master’s and Doctoral students.",
         img: " "
       }
     ],
@@ -192,19 +192,19 @@ const buildingData = {
       { 
         code: " ", 
         name: "EN-303A-B",
-        description: " ",
+        description: "Standard lecture and seminar rooms used for engineering courses and departmental examinations.",
         img: en303
       },
       { 
         code: " ", 
         name: "EN-302A-B",
-        description: " ",
+        description: "General-purpose lecture rooms designed for engineering instruction, technical seminars, and group activities.",
         img: en302
       },
         { 
         code: " ", 
         name: "EN-301A-B",
-        description: " ",
+        description: "Multipurpose lecture rooms used for academic instruction, departmental exams, and student seminars.",
         img: en301
       }
     ],
@@ -218,91 +218,91 @@ const buildingData = {
     { 
       code: "HMLAB1-2", 
       name: "CME Research Center",
-      description: " ",
+      description: "A facility dedicated to academic research, data analysis, and collaborative projects for management and economics students.",
       img: cmeresearchcenter
     },
     { 
       code: "", 
       name: "TM-LAB-2A",
-      description: " ",
+      description: "A specialized laboratory for Tourism Management students to conduct practical simulations and industry-related training.",
       img: " "
     },
     { 
       code: " ", 
       name: "TM-LAB-1A",
-      description: " ",
+      description: "A dedicated facility for tourism students to practice travel management, reservation systems, and other industry-specific operations.",
       img: " "
     },
      { 
       code: " ", 
       name: "EN-CME201A-B",
-      description: " ",
+      description: "A shared academic space utilized by both the College of Engineering and the College of Management and Economics for lectures and combined sessions.",
       img: " "
     },
      { 
       code: "CME COMLAB 2A", 
       name: "CME Computer Laboratory 2",
-      description: " ",
+      description: "A digital learning facility equipped with specialized software for business simulations, data analysis, and technical training in management and economics.",
       img: cmecomlab2
     },
     { 
       code: "CME COMLAB 1A", 
       name: "CME Computer Laboratory 1",
-      description: " ",
+      description: "A primary computing facility for students to develop technical skills in business software, data processing, and digital management tools.",
       img: cmecomlab1
     },
     
   ],
   3:[
-        { 
-        code: "CME308A-B", 
-        name: "EN-CME308A-B",
-        description: " ",
-        img: encme308
-      },
-       { 
-        code: "CME307A-B", 
-        name: "EN-CME307A-B",
-        description: " ",
-        img: encme307
-      },
-      { 
-        code: "CME306A-B", 
-        name: "EN-CME306A-B",
-        description: " ",
-        img: encme306
-      },
-      { 
-        code: "CME305A-B", 
-        name: "EN-CME305A-B",
-        description: " ",
-        img: encme305
-      },
-       { 
-        code: "CME304A-B", 
-        name: "EN-CME304A-B",
-        description: " ",
-        img: encme304
-      },
-       { 
-        code: "CME303A-B", 
-        name: "EN-CME303A-B",
-        description: " ",
-        img: encme303
-      },
-       { 
-        code: "CME302A-B", 
-        name: "EN-CME302A-B",
-        description: " ",
-        img: encme302
-      },
-       { 
-        code: "CME301A-B", 
-        name: "EN-CME301A-B",
-        description: " ",
-        img: encme301
-      },
-  ]
+  { 
+    code: "CME308A-B", 
+    name: "EN-CME308A-B",
+    description: "A spacious lecture room designed for shared use by Engineering and CME students for core subjects and seminars.",
+    img: encme308
+  },
+  { 
+    code: "CME307A-B", 
+    name: "EN-CME307A-B",
+    description: "Standard classroom facility for combined lectures, departmental exams, and interdisciplinary engineering-management courses.",
+    img: encme307
+  },
+  { 
+    code: "CME306A-B", 
+    name: "EN-CME306A-B",
+    description: "Multi-purpose instructional space used for scheduled classes, group discussions, and academic presentations.",
+    img: encme306
+  },
+  { 
+    code: "CME305A-B", 
+    name: "EN-CME305A-B",
+    description: "A dedicated lecture hall utilized by both departments for theoretical instruction and technical workshops.",
+    img: encme305
+  },
+  { 
+    code: "CME304A-B", 
+    name: "EN-CME304A-B",
+    description: "Standard academic room equipped for large-group lectures and various departmental activities.",
+    img: encme304
+  },
+  { 
+    code: "CME303A-B", 
+    name: "EN-CME303A-B",
+    description: "A versatile classroom space used for core curriculum teaching and student-led academic sessions.",
+    img: encme303
+  },
+  { 
+    code: "CME302A-B", 
+    name: "EN-CME302A-B",
+    description: "Instructional room designed to accommodate high-capacity classes and collaborative learning for EN and CME programs.",
+    img: encme302
+  },
+  { 
+    code: "CME301A-B", 
+    name: "EN-CME301A-B",
+    description: "Primary lecture area for interdisciplinary subjects, offering a professional environment for student learning.",
+    img: encme301
+  }
+]
 }
   },
 
@@ -387,47 +387,47 @@ rooms: {
     { 
       code: " ", 
       name: "Dean's Education Office",
-      description: " ",
+      description: "The central office for the College of Education, assisting students with teaching internship requirements, credit evaluations, and official approvals.",
       img: ""
     },
     { 
       code: "", 
       name: "ED-202A-B",
-      description: " ",
+      description: "Specialized instructional rooms designed for teaching demonstrations and collaborative group activities for future educators.",
       img: " "
     },
     { 
       code: "", 
       name: "ED-201A-B",
-      description: " ",
+      description: "Versatile lecture spaces used for professional education courses and classroom management simulations.",
       img: " "
     }
   ],
   3: [
-    { 
-      code: " ", 
-      name: "ED-303A-B",
-      description: " ",
-      img: ed303
-    },
-    { 
-      code: " ", 
-      name: "ED-302A-B",
-      description: " ",
-      img: ed302
-    },
-    { 
-      code: " ", 
-      name: "ED-301A-B",
-      description: " ",
-      img: ed301
-    },
-     { 
-      code: " ", 
-      name: "ED-201A-B",
-      description: " ",
-      img: " "
-    }
+   { 
+    code: "", 
+    name: "ED-303A-B",
+    description: "Standard lecture rooms used for professional education courses and student-led academic seminars.",
+    img: ed303
+  },
+  { 
+    code: "", 
+    name: "ED-302A-B",
+    description: "A versatile academic space designed for teaching demonstrations and core education subject discussions.",
+    img: ed302
+  },
+  { 
+    code: "", 
+    name: "ED-301A-B",
+    description: "Spacious classrooms utilized for instructional workshops and departmental examinations for future educators.",
+    img: ed301
+  },
+  { 
+    code: "", 
+    name: "ED-201A-B",
+    description: "General-purpose rooms for education majors, often used for collaborative group work and classroom management practice.",
+    img: ""
+  }
   ],
 }
     
@@ -974,43 +974,43 @@ img: ""
       {
       code:"",
       name:"Campus Director Office",
-      description: " ",
+      description:"The highest administrative office on campus, responsible for overall campus management, executive decisions, and institutional leadership.",
       img: ""
       },
       {
       code:"",
       name:"Admin Staff Office",
-      description: " ",
+      description: "The support hub for campus operations, assisting with general administrative inquiries and university-wide logistics.",
       img: ""
       }, 
       {
       code:"",
       name:"Admin Graduate School",
-      description: " ",
+      description: "A dedicated administrative office focused on the processing of records and support services for postgraduate students.",
       img: ""
       },
         {
       code:"",
       name:"HR Office",
-      description: " ",
+      description: "The Human Resources department, managing personnel records, employment concerns, and faculty/staff welfare.",
       img: ""
       },
           {
       code:"",
       name:"New Admin Records",
-      description: " ",
+      description: "A central archive for student and institutional records, responsible for the safe keeping and processing of official university documents.",
       img: ""
       },
             {
       code:"",
       name:"Guidance Office",
-      description: " ",
+      description: "Provides student support services, including career counseling, mental health resources, and personal development guidance.",
       img: ""
       },
           {
       code:"",
       name:"SAO Office",
-      description: " ",
+      description: "The Student Affairs Office (SAO) manages student organizations, campus activities, and discipline, serving as the main link between students and the administration.",
       img: ""
       },
       ],
@@ -1018,13 +1018,13 @@ img: ""
       {
       code:"",
       name:"Library",
-      description: " ",
+      description: "The university's primary resource center, offering a quiet environment for study, research, and access to a wide collection of academic books and digital archives.",
       img: library
       },
       {
       code:"",
       name:"AVR Room",
-      description: " ",
+      description: "The Audio-Visual Room is a multimedia facility used for film screenings, academic presentations, seminars, and departmental orientations.",
       img: avr
       }
 

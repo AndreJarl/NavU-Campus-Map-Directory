@@ -327,7 +327,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 </g>
 
 <g onClick={()=>bldClicked("ED-201")} filter="url(#filter1_d_2041_14)">
-  <rect 
+  <rect opacity={.5}
     x="136" 
     y="634" 
     width="11" 
@@ -350,11 +350,11 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
      </text> */}
 </g>
 
-<rect x="136" y="614" width="19" height="21" transform="rotate(90 136 614)" fill="#00C3FF"/>
-<rect x="136" y="597" width="16" height="21" transform="rotate(90 136 597)" fill="#00C3FF"/>
-<rect x="136" y="579" width="17" height="21" transform="rotate(90 136 579)" fill="#00C3FF"/>
-<rect x="136" y="562" width="16" height="21" transform="rotate(90 136 562)" fill="#00C3FF"/>
-<rect x="136" y="544" width="17" height="21" transform="rotate(90 136 544)" fill="#00C3FF"/>
+<rect opacity={.5} x="136" y="614" width="19" height="21" transform="rotate(90 136 614)" fill="#00C3FF"/>
+<rect opacity={.5} x="136" y="597" width="16" height="21" transform="rotate(90 136 597)" fill="#00C3FF"/>
+<rect opacity={.5} x="136" y="579" width="17" height="21" transform="rotate(90 136 579)" fill="#00C3FF"/>
+<rect opacity={.5} x="136" y="562" width="16" height="21" transform="rotate(90 136 562)" fill="#00C3FF"/>
+<rect opacity={.5} x="136" y="544" width="17" height="21" transform="rotate(90 136 544)" fill="#00C3FF"/>
 
 <g onClick={()=>bldClicked("ED-303A-B")} filter="url(#filter1_d_2041_14)">
   <rect 
