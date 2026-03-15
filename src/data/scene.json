@@ -701,7 +701,7 @@
         "pitch": -15.5,
         "yaw": 90,
         "type": "arrow",
-        "target": "CME Computer Laboratory 1",
+        "target": "CME Faculty Office (Deans)",
         "arrowType": "forward"
       },
 
@@ -732,7 +732,7 @@
       }
     ]
   },
-  "CME Computer Laboratory 1": {
+  "CME Faculty Office (Deans)": {
     "image": "/360/ENG-CME/2FLR/CME-COMLAB1A-B.webp",
     "yaw": 0,
     "hotspots": [
@@ -740,7 +740,7 @@
         "pitch": -15.5,
         "yaw": 0,
         "type": "arrow",
-        "target": "CME Computer Laboratory 2",
+        "target": "CME Faculty Office",
         "arrowType": "forward"
       },
 
@@ -754,11 +754,11 @@
         "pitch": 30,
         "yaw": 260,
         "type": "info",
-        "label": "CME Computer Laboratory 1"
+        "label": "CME Faculty Office (Deans)"
       }
     ]
   },
-   "CME Computer Laboratory 2": {
+   "CME Faculty Office": {
     "image": "/360/ENG-CME/2FLR/CME-COMLAB2A-B.webp",
     "yaw": 0,
     "hotspots": [
@@ -774,13 +774,13 @@
         "pitch": -160.5,
         "yaw": 5,
         "type": "arrow",
-        "target": "CME Computer Laboratory 1"
+        "target": "CME Faculty Office (Deans)"
       },
         {
         "pitch": 30,
         "yaw": 260,
         "type": "info",
-        "label": "CME Computer Laboratory 2"
+        "label": "CME Faculty Office"
       }
     ]
   },
@@ -800,7 +800,7 @@
         "pitch": -160.5,
         "yaw": 5,
         "type": "arrow",
-        "target": "CME Computer Laboratory 2"
+        "target": "CME Faculty Office"
       },
         {
         "pitch": 30,
@@ -826,7 +826,7 @@
         "pitch": -160.5,
         "yaw": 5,
         "type": "arrow",
-        "target": "CME Computer Laboratory 1"
+        "target": "TM-LAB-1A"
       },
         {
         "pitch": 30,

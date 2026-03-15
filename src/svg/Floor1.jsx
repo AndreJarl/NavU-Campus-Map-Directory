@@ -3952,7 +3952,7 @@ return (
 
       {/* GAD Office bldg */}
       <path
-        onClick={() => bldClicked("GAD Office")}
+        onClick={() => bldClicked("w")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#fc0" : category[""] ? "#fc0" : "#B0B0B0"}
         stroke={allFalse ? "#CCA817" : category[""] ? "#CCA817" : "#B0B0B0"}
@@ -3970,7 +3970,7 @@ return (
         font-size="1.8"
         fill="black"
       >
-        GAD
+        {/* GAD */}
       </text>
       <text
         onClick={() => bldClicked("GAD Office")}
@@ -3983,7 +3983,7 @@ return (
         font-size="1.8"
         fill="black"
       >
-        OFFICE
+        {/* OFFICE */}
       </text>
       <path
         onClick={() => bldClicked("GAD Office")}
@@ -5851,7 +5851,7 @@ return (
 
       {/* GAD Office path */}
       <path
-        opacity={path === "GAD Office" ? "1" : 0}
+        opacity={path === "W" ? "1" : 0}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"

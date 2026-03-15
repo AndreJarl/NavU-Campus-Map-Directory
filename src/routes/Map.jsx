@@ -176,7 +176,7 @@ if (suggestion.floor) {
      if(suggestion.room){
          setRoomSearched(true);
           setBldClicked(false);  
-           setCurrentScene(suggestion.room);
+           setCurrentScene(suggestion.room.name);
         }
 
       // Set the appropriate state based on suggestion type

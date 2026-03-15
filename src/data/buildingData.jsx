@@ -241,13 +241,13 @@ const buildingData = {
     },
      { 
       code: "CME COMLAB 2A", 
-      name: "CME Computer Laboratory 2",
+      name: "CME Faculty Office",
       description: "A digital learning facility equipped with specialized software for business simulations, data analysis, and technical training in management and economics.",
       img: cmecomlab2
     },
     { 
       code: "CME COMLAB 1A", 
-      name: "CME Computer Laboratory 1",
+      name: "CME Faculty Office (Deans)",
       description: "A primary computing facility for students to develop technical skills in business software, data processing, and digital management tools.",
       img: cmecomlab1
     },

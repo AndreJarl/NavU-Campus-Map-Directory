@@ -694,18 +694,18 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 <rect width="15" height="9" transform="matrix(0 1 1 0 113 528)" fill="#73DAFF"/>
 
-<g onClick={() => bldClicked("CME Computer Laboratory 1")} style={{ cursor: "pointer" }}>
+<g onClick={() => bldClicked("CME Faculty Office (Deans)")} style={{ cursor: "pointer" }}>
   <rect x="249" y="544" width="21" height="13" fill={getColor(allFalse, category, "Laboratory", "#AAFF00", "#B0B0B0")}
 />
-  <text x="259.5" y="550.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" >CME</text>
-  <text x="259.5" y="552.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">COMPUTER LAB 1</text>
+  <text x="259.5" y="550.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black" >CME (DEANS)</text>
+  <text x="259.5" y="552.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FACULTY OFFICE</text>
 </g>
 
 
-<g onClick={() => bldClicked("CME Computer Laboratory 2")} style={{ cursor: "pointer" }}>
+<g onClick={() => bldClicked("CME Faculty Office")} style={{ cursor: "pointer" }}>
   <rect x="270" y="558" width="13" height="21" transform="rotate(90 270 558)" fill={getColor(allFalse, category, "Laboratory", "#AAFF00", "#B0B0B0")}/>
   <text x="259.5" y="563.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CME</text>
-  <text x="259.5" y="566.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">COMPUTER LAB 2</text>
+  <text x="259.5" y="566.5" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">FACULTY OFFICE</text>
 </g>
 
 <g onClick={() => bldClicked("EN-201")} style={{ cursor: "pointer" }}>
