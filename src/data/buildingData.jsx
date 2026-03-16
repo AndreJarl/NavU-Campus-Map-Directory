@@ -18,6 +18,7 @@ import room38 from "../assets/rooms/COT-GrndFlr/Room38.webp"
 import room39 from "../assets/rooms/COT-GrndFlr/Room39.webp"
 import room40 from "../assets/rooms/COT-GrndFlr/Room40.webp"
 import room41 from "../assets/rooms/COT-GrndFlr/Room41.webp"
+import room46 from "../assets/rooms/COT-GrndFlr/Room46.webp"
 import GADoffice from "../assets/rooms/COT-GrndFlr/GADOffice.webp"
 import NSTPoffice from "../assets/rooms/COT-GrndFlr/NSTPOffice.webp"
 import COTCompLab from "../assets/rooms/COT-GrndFlr/COTComlab.webp"
@@ -663,7 +664,7 @@ img: ""
               code:"Room 46",
               name: "Room 46",
             description: "A specialized workspace equipped with tools, materials, and equipment for hands-on Technical-Livelihood Education activities. ",
-            img: ""
+            img: room46
             },
             {
             code:"",
@@ -1122,9 +1123,15 @@ img: ""
                   },
                   {
                     code:"",
-                    name:"Canteen",
+                    name:"University Canteen",
                     description: "A spacious dining area offering a variety of affordable meals and snacks. Includes seating for students and staff, clean food counters, hand-washing stations, and proper ventilation. Suitable for meals, breaks, and informal gatherings. ",
                     img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459532/Canteen_rh8ncu.jpg"
+                  },
+                    { 
+                    code: " ", 
+                    name: "Ergonomic Laboratory",
+                    description: "A laboratory designed for conducting chemistry experiments and practical lessons. Equipped with lab benches, sinks, basic glassware, and safety equipment. Suitable for hands-on learning in chemical concepts and experiments. ",
+                    img: chemlab
                   },
                   {
                     code:"",

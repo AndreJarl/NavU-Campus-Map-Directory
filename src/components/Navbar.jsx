@@ -60,12 +60,12 @@ function Navbar({ keyboardClicked, setKeyboardClicked }) {
                     />
                 </div>
                 
-                <button 
+                {/* <button 
                     onClick={() => setArrowClicked(!arrowClicked)}
                     className="ml-2 p-1.5 hover:bg-white/10 rounded-full"
                 >
                     {arrowClicked ? <ChevronUp className="text-white/60" size={20} /> : <ChevronDown className="text-white/60" size={20} />}
-                </button>
+                </button> */}
             </div>
 
             {/* --- Dropdown --- */}
@@ -90,46 +90,48 @@ function Navbar({ keyboardClicked, setKeyboardClicked }) {
             )}
 
             {/* --- Scene Drawer (No Delay) --- */}
-            <div className={` inset-y-0 right-0 z-30 flex items-center ${arrowClicked ? 'fixed' : 'hidden'}`}>
-                <div className="flex items-center h-full">
-                    <div 
-                        onClick={() => setArrowClicked(false)}
-                        className='bg-[#222222] border-y border-l border-white/10 py-10 px-1 cursor-pointer rounded-l-xl text-white/20 hover:text-white'
-                    >
-                        <ChevronRight size={18} />
-                    </div>
-                    
-                    <div className='w-[340px] h-screen bg-[#1c1c1c] border-l border-white/10 p-6 flex flex-col gap-6 overflow-y-auto pt-24 shadow-2xl'>
-                        <p className="text-white/40 text-[11px] font-bold uppercase tracking-widest px-2">Quick Navigation</p>
-                        
-                        <div className="space-y-4">
-                            {[
-                                { id: "oval_entrance", img: oval, dev: false },
-                                { id: "Engineering", img: eng, dev: true },
-                                { id: "ERRC Building", img: fountain, dev: false },
-                                { id: "Park", img: park, dev: true }
-                            ].map((scene, idx) => (
-                                <div 
-                                    key={idx}
-                                    onClick={() => !scene.dev && (setCurrentScene(scene.id), setArrowClicked(false))}
-                                    className="group relative h-28 rounded-xl overflow-hidden cursor-pointer border border-white/5 hover:border-white/30"
-                                >
-                                    <img 
-                                        className={`w-full h-full object-cover opacity-60 ${scene.dev ? 'grayscale opacity-20' : ''}`} 
-                                        src={scene.img} 
-                                        alt={scene.id} 
-                                    />
-                                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center hover:bg-transparent">
-                                        <span className={`text-xs font-bold tracking-wider uppercase ${scene.dev ? 'text-white/20' : 'text-white'}`}>
-                                            {scene.dev ? "Under Construction" : formatSceneId(scene.id)}
-                                        </span>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+       {/* <div className="fixed inset-y-0 right-0 z-30 flex items-center"
+            style={{ transform: arrowClicked ? 'translateX(0)' : 'translateX(100%)' }}>
+        
+        <div className="flex items-center h-full">
+            <div 
+            onClick={() => setArrowClicked(false)}
+            className='bg-[#222222] border-y border-l border-white/10 py-10 px-1 cursor-pointer rounded-l-xl text-white/20 hover:text-white'
+            >
+            <ChevronRight size={18} />
+            </div>
+            
+            <div className='w-[340px] h-screen bg-[#1c1c1c] border-l border-white/10 p-6 flex flex-col gap-6 overflow-y-auto pt-24 shadow-2xl'>
+            <p className="text-white/40 text-[11px] font-bold uppercase tracking-widest px-2">Quick Navigation</p>
+            
+            <div className="space-y-4">
+                {[
+                { id: "oval_entrance", img: oval, dev: true },
+                { id: "Engineering", img: eng, dev: true },
+                { id: "ERRC Building", img: fountain, dev: true },
+                { id: "Park", img: park, dev: true }
+                ].map((scene, idx) => (
+                <div 
+                    key={idx}
+                    onClick={() => !scene.dev && (setCurrentScene(scene.id), setArrowClicked(false))}
+                    className="group relative h-28 rounded-xl overflow-hidden cursor-pointer border border-white/5 hover:border-white/30"
+                >
+                    <img 
+                    className={`w-full h-full object-cover transition-opacity ${scene.dev ? 'grayscale opacity-20' : 'opacity-60'}`} 
+                    src={scene.img} 
+                    alt={scene.id} 
+                    />
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center hover:bg-transparent">
+                    <span className={`text-xs font-bold tracking-wider uppercase ${scene.dev ? 'text-white/20' : 'text-white'}`}>
+                        {scene.dev ? "Under Construction" : formatSceneId(scene.id)}
+                    </span>
                     </div>
                 </div>
+                ))}
             </div>
+            </div>
+        </div>
+        </div> */}
 
             {keyboardClicked && <Keyboard query={query} setQuery={setQuery} />}
         </>

@@ -2172,7 +2172,7 @@
         "pitch": -150.5,
         "yaw": 0,
         "type": "arrow",
-        "target": "",
+        "target": "Fablab Production Area",
         "rotation": 0
       },
            {
@@ -2182,7 +2182,200 @@
         "label": "Student Activity Center"
       }
     ]
+  },
+
+"EDTECH Laboratory 1": {
+    "image": "/360/FACILITY/EDTECHLAB1.webp",
+    "hotspots": [
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "EDTECH Laboratory 2",
+        "rotation": 0
+      },
+           {
+        "pitch": 30,
+        "yaw": 70,
+        "type": "info",
+        "label": "EDTECH Laboratory 1"
+      }
+    ]
+  },
+  "EDTECH Laboratory 2": {
+    "image": "/360/FACILITY/EDTECHLAB2.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "EDTECH Laboratory 1",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "General Chemistry Laboratory",
+        "rotation": 0
+      },
+           {
+        "pitch": 30,
+        "yaw": 70,
+        "type": "info",
+        "label": "EDTECH Laboratory 1"
+      }
+    ]
+  },
+    "General Chemistry Laboratory": {
+    "image": "/360/FACILITY/EDUC-CHEMLAB.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "EDTECH Laboratory 2",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Room 12",
+        "rotation": 0
+      },
+           {
+        "pitch": 30,
+        "yaw": 70,
+        "type": "info",
+        "label": "Chemistry Laboratory"
+      }
+    ]
+  },
+  "Room 12": {
+    "image": "/360/FACILITY/ROOM12.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "General Chemistry Laboratory",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Ergonomic Laboratory",
+        "rotation": 0
+      },
+           {
+        "pitch": 30,
+        "yaw": 70,
+        "type": "info",
+        "label": "Drawing Room"
+      }
+    ]
+  },
+    "Ergonomic Laboratory": {
+    "image": "/360/FACILITY/ERGONOMICLAB.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Room 12",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Room 26",
+        "rotation": 0
+      },
+           {
+        "pitch": 30,
+        "yaw": 70,
+        "type": "info",
+        "label": "Ergonomic Laboratory"
+      }
+    ]
+  },
+  "Room 26": {
+    "image": "/360/FACILITY/COT-ROOM26.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Room 12",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Fablab Production Area",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 110,
+        "type": "arrow",
+        "target": "Ergonomic Laboratory",
+        "rotation": 0
+      },
+           {
+        "pitch": 20,
+        "yaw": 50,
+        "type": "info",
+        "label": "Study Area"
+      },
+       {
+        "pitch": 20,
+        "yaw": -80,
+        "type": "info",
+        "label": "Room 26"
+      }
+    ]
+  },
+
+  "Fablab Production Area": {
+    "image": "/360/FACILITY/CTU-FABLAB.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Room 26",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Student Activity Center",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 110,
+        "type": "arrow",
+        "target": "Ergonomic Laboratory",
+        "rotation": 0
+      },
+       {
+        "pitch": 20,
+        "yaw": -80,
+        "type": "info",
+        "label": "Fablab"
+      }
+    ]
   }
+
+
+
 
 
 

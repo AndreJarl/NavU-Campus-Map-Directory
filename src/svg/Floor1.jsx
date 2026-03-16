@@ -267,7 +267,7 @@ return (
 
       {/* New CEAS Room 4 bldg */}
       <rect
-        onClick={() => bldClicked("CEAS Room 4")}
+        onClick={() => bldClicked("CEAS")}
         cursor={"pointer"}
         xmlns="http://www.w3.org/2000/svg"
         x="136"
@@ -278,9 +278,10 @@ return (
         fill={allFalse ? "#00c3ff" : category[""] ? "#00c3ff" : "#B0B0B0"}
         stroke={allFalse ? "#4391A9" : category[""] ? "#4391A9" : "#B0B0B0"}
         stroke-width={0.4}
+        opacity={.5}
       />
       <text
-        onClick={() => bldClicked("CEAS Room 4")}
+        onClick={() => bldClicked("CEAS")}
         cursor={"pointer"}
         x="125.5"
         y="570.9"
@@ -290,7 +291,7 @@ return (
         font-size="2.2"
         fill="black"
       >
-        ROOM 4
+       
       </text>
 
       <path fill="#d9d9d9" d="M267.666 522.974h3.64453v3H267.666z" />
@@ -1443,15 +1444,16 @@ return (
 
       {/* New CEAS Room 5 bldg */}
       <path
-        onClick={() => bldClicked("CEAS Room 5")}
+        onClick={() => bldClicked("CEAS")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#00c3ff" : category[""] ? "#00c3ff" : "#B0B0B0"}
         stroke={allFalse ? "#4391A9" : category[""] ? "#4391A9" : "#B0B0B0"}
         stroke-width={0.4}
         d="M115 544h21v17h-21z"
+        opacity={.5}
       />
       <text
-        onClick={() => bldClicked("CEAS Room 5")}
+        onClick={() => bldClicked("CEAS")}
         style={{ cursor: "pointer" }}
         x="125.5"
         y="553.9"
@@ -1461,7 +1463,7 @@ return (
         font-size="2.2"
         fill="black"
       >
-        ROOM 5
+       
       </text>
 
       {/* Dorm near Sewing Lab bldg */}
@@ -1490,15 +1492,16 @@ return (
 
       {/* New CEAS Room 3 bldg */}
       <path
-        onClick={() => bldClicked("CEAS Room 3")}
+        onClick={() => bldClicked("CEAS")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#00c3ff" : category[""] ? "#00c3ff" : "#B0B0B0"}
         stroke={allFalse ? "#4391A9" : category[""] ? "#4391A9" : "#B0B0B0"}
         stroke-width={0.4}
         d="M136 579v17h-21v-17z"
+        opacity={.5}
       />
       <text
-        onClick={() => bldClicked("CEAS Room 3")}
+        onClick={() => bldClicked("CEAS")}
         style={{ cursor: "pointer" }}
         x="125.5"
         y="588.5"
@@ -1508,7 +1511,7 @@ return (
         font-size="2.2"
         fill="black"
       >
-        ROOM 3
+        
       </text>
 
       {/* Quadrangle bldg */}
@@ -1583,15 +1586,16 @@ return (
 
       {/* New CEAS Room 2 bldg */}
       <path
-        onClick={() => bldClicked("CEAS Room 2")}
+        onClick={() => bldClicked("CEAS")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#00c3ff" : category[""] ? "#00c3ff" : "#B0B0B0"}
         stroke={allFalse ? "#4391A9" : category[""] ? "#4391A9" : "#B0B0B0"}
         stroke-width={0.4}
         d="M136 597v16h-21v-16z"
+        opacity={.5}
       />
       <text
-        onClick={() => bldClicked("CEAS Room 2")}
+        onClick={() => bldClicked("CEAS")}
         style={{ cursor: "pointer" }}
         x="125.5"
         y="605.9"
@@ -1601,7 +1605,7 @@ return (
         font-size="2.2"
         fill="black"
       >
-        ROOM 2
+        
       </text>
 
       {/* Production Area Stock Room 2 bldg */}
@@ -2469,15 +2473,16 @@ return (
 
       {/* New CEAS Room 1 bldg */}
       <path
-        onClick={() => bldClicked("CEAS Room 1")}
+        onClick={() => bldClicked("CEAS")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#00c3ff" : category[""] ? "#00c3ff" : "#B0B0B0"}
         stroke={allFalse ? "#4391A9" : category[""] ? "#4391A9" : "#B0B0B0"}
         stroke-width={0.4}
         d="M136 614v30.564h-21V614z"
+        opacity={.5}
       />
       <text
-        onClick={() => bldClicked("CEAS Room 1")}
+        onClick={() => bldClicked("CEAS")}
         style={{ cursor: "pointer" }}
         x="125.5"
         y="629.9"
@@ -2487,15 +2492,16 @@ return (
         font-size="2.2"
         fill="black"
       >
-        ROOM 1
+        
       </text>
       <path
-        onClick={() => bldClicked("CEAS Room 1")}
+        onClick={() => bldClicked("CEAS")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#0094cf" : category[""] ? "#0094cf" : "#B0B0B0"}
         stroke={allFalse ? "#4391A9" : category[""] ? "#4391A9" : "#B0B0B0"}
         stroke-width={0.4}
         d="M115 643.357h21V646h-21z"
+        opacity={.5}
       />
 
       {/* CIVIL ENGINEERING LABBBBBBBBB */}
@@ -3115,7 +3121,7 @@ return (
 
       {/* University Canteen bldg */}
       <path
-        onClick={() => bldClicked("Canteen")}
+        onClick={() => bldClicked("University Canteen")}
         style={{ cursor: "pointer" }}
         fill={
           allFalse ? "#ff4c85" : category["Food"] ? "#ff4c85" : "#B0B0B0"
@@ -6160,7 +6166,7 @@ return (
 
       {/* Ergonomic Lab path */}
       <path
-        opacity={path === "Ergonomic Lab" ? "1" : 0}
+        opacity={path === "Ergonomic Laboratory" ? "1" : 0}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"
