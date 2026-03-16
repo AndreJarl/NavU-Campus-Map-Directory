@@ -1,5 +1,5 @@
 {
-  "Main Gate": {
+  "Kiosk Location": {
     "image": "/360/ADMIN/1FLR/Lobby.webp",
     "hotspots": [
       {
@@ -50,7 +50,7 @@
         "pitch": -160.5,
         "yaw": 10,
         "type": "arrow",
-        "target": "Main Gate",
+        "target": "Kiosk Location",
         "rotation": 35
       },
           {
@@ -228,7 +228,7 @@
         "pitch": -160.5,
         "yaw": 10,
         "type": "arrow",
-        "target": "Main Gate",
+        "target": "Kiosk Location",
         "rotation": -35
       },
           {

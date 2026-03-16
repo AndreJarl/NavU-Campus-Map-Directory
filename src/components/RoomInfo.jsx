@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import button360 from "../assets/Logo/360.png"
 // Added ImageOff for the error state
 import { CornerUpRight, ScanQrCode, Navigation, ImageOff } from "lucide-react"; 
 import { useQuery } from "../context/QueryContext";
@@ -221,9 +222,11 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
 
             <button
               onClick={() => setClicked(!clicked)}
-              className="absolute lg:bottom-10 bottom-32 right-10 z-[60] w-14 h-14 bg-red-600 rounded-2xl flex items-center justify-center border-2 border-red-400/40 shadow-xl active:scale-90 transition-all group"
+              className="absolute lg:bottom-10 bottom-32 right-10 z-[60]  w-14 h-14 bg-red-600 rounded-full flex items-center justify-center border-2
+               border-red-400/40 shadow-xl   hover:bg-red-500 hover:shadow-[0_0_35px_#ef4444] 
+                      hover:scale-110  duration-300 active:scale-95 group transition-all group"
             >
-              <Navigation size={28} className="text-white group-hover:rotate-[360deg] transition-transform duration-700" />
+              <img width={40} src={button360} alt="" srcset="" />
             </button>
             
             <PanoramaViewer clicked={clicked} setClicked={setClicked} />

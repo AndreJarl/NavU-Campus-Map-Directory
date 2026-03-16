@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import SearchBar from '../components/SearchBar';
 import buildingData from '../data/buildingData';
 import RoomInfo from '../components/RoomInfo';
+import button360 from '../assets/Logo/360.png'
 import BldOverview from '../components/BldOverview';
 import Categories from '../components/Categories';
 import { useFloorQuery } from '../context/FloorContext';
@@ -56,7 +57,7 @@ function Map() {
           console.log("Query updated:", query);
       }, [query, location]);
 
-      const [survey, setSurvey] = useState(false);
+      const [survey, setSurvey] = useState(true);
       // Derived State: True if user has selected a specific room OR a building
       const isNavigating = !!(query.room?.name || query.room?.code || query.building);
 
@@ -277,20 +278,21 @@ if (suggestion.floor) {
       
       
               <button
-            onClick={() => setClicked(!clicked)} className="absolute lg:bottom-4  right-6 z-10 w-12 h-12 lg:w-14 lg:h-14 
-                      bg-red-600 rounded-2xl flex items-center justify-center 
-                      border-2 border-red-400/40 shadow-[0_0_20px_#dc2626]
+            onClick={() => setClicked(!clicked)} className="absolute lg:bottom-4  right-[26px] z-10 w-12 h-12 lg:w-12 lg:h-12 
+                      bg-red-600 rounded-full flex items-center justify-center 
+                      border-2 border-red-400/40 shadow-[0_0_15px_#dc2626]
                       hover:bg-red-500 hover:shadow-[0_0_35px_#ef4444] 
                       hover:scale-110 transition-all duration-300 active:scale-95 group"
             title="Street View"
           >
-            <Navigation 
+            <img width={31} src={button360} alt="" srcset="" />
+            {/* <Navigation 
               size={28} 
               className="text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]
                         transition-all duration-700 ease-in-out
                         group-hover:rotate-[360deg] group-hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)]" 
               strokeWidth={2.5}
-            />
+            /> */}
           </button>
               
                   <PanoramaViewer clicked={clicked} setClicked={setClicked} />
@@ -339,7 +341,7 @@ if (suggestion.floor) {
 
       <Floors/>
   
-      {/* <SurveyForm survey={survey} setSurvey={setSurvey}/> */}
+      <SurveyForm survey={survey} setSurvey={setSurvey}/>
 
     </div>
   )

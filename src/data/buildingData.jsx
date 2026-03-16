@@ -116,7 +116,7 @@ const buildingData = {
         img: en102a
       },
       { 
-        code: " ", 
+        code: "EN-101A", 
         name: "Engineering Laboratory",
         description: "A workspace designed for hands-on experiments and projects across different engineering fields, equipped with tools, machines, and equipment for practical learning and testing.",
         img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459346/CELAB02_fetvlj.webp"
