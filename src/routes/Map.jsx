@@ -57,7 +57,7 @@ function Map() {
           console.log("Query updated:", query);
       }, [query, location]);
 
-      const [survey, setSurvey] = useState(true);
+      const [survey, setSurvey] = useState(false);
       // Derived State: True if user has selected a specific room OR a building
       const isNavigating = !!(query.room?.name || query.room?.code || query.building);
 
@@ -72,19 +72,19 @@ function Map() {
             setSurvey(true);
 
             // Reset the query to "stop" navigation and clear the UI
-            setQuery({
-              building: "",
-              floor: "",
-              room: { name: "", code: "", img: "", description: "", floor: "" }
-            });
+            // setQuery({
+            //   building: "",
+            //   floor: "",
+            //   room: { name: "", code: "", img: "", description: "", floor: "" }
+            // });
             //reset panorama
-            setClicked(false);
+            // setClicked(false);
             //reset path
-            setPath("");
+            // setPath("");
 
             // Close any open UI panels
-            setRoomSearched(false);
-            setBldClicked(false);
+            // setRoomSearched(false);
+            // setBldClicked(false);
           }, 60000);
         }
 
