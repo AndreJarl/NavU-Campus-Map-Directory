@@ -698,51 +698,51 @@ img: ""
           { 
             code: " ", 
             name: "College of Technology Office",
-            description: " ",
+            description: "The dedicated office for TESDA-related programs, certifications, and vocational training assessments.",
             img: " "
           },
           { 
             code: " ", 
             name: "Tesda Office",
-            description: " ",
+            description: "The dedicated office for TESDA-related programs, certifications, and vocational training assessments.",
             img: tesda 
           },
           { 
             code: " ", 
             name: "Alumni Affairs Office & COT Com Lab Office",
-            description: " ",
+            description: "Dual-purpose facility managing alumni relations and overseeing the operations and scheduling of the computer laboratories.",
             img: alumni
           },
           {       
             code: " ", 
             name: "COT Comp Lab 204",
-            description: " ",
+            description: "Advanced computer laboratory equipped for high-level programming, network simulations, and technical workshops.",
             img: lab204
           }, 
           {
           code: " ", 
             name: "COT Comp Lab 203",
-            description: " ",
+            description: "Standard computer laboratory used for general IT instruction, software applications training, and hands-on examinations.",
             img: lab203
 
           }, 
           {
             code: " ", 
             name: "COT Comp Lab 202",
-            description: " ",
+            description: "Specialized lab environment designed for introductory computer science courses and collaborative student projects.",
             img: lab202
             },
             {
             code: " ", 
             name: "COT Stock Room",
-            description: " ",
+            description: "Secure storage area for computer hardware, peripheral components, and technical maintenance supplies.",
             img: cotstock
 
             },
             {
             code: " ", 
             name: "COT Office",
-            description: " ",
+            description: "Secondary administrative space dedicated to faculty consultation and departmental support services.",
             img: cotoffice
             }
 
@@ -848,18 +848,17 @@ img: ""
 
 
         ],
-        2:
-        [
+        2: [
         {
         code:"",
         name:"Working Hand Office",
-        description: " ",
+        description: "The official headquarters for campus journalists and editorial staff, dedicated to news gathering, investigative reporting, and the publication of the school paper.",
         img: workinghand
         }, 
         {
         code:"",
         name:"SSG Office",
-        description: " ",
+        description: "The headquarters of the Supreme Student Government, serving as the central hub for student leadership, representation, and campus event planning.",
         img: ssgoffice
         },
          {
@@ -873,29 +872,30 @@ img: ""
         {
         code:"",
         name:"Research and Development Office",
-        description: "  ",
+        description: "Dedicated to fostering innovation and academic inquiry, this office supports faculty and student research projects and institutional development.",
         img: researchdev
         },
         {
         code:"",
         name:"Old Library",
-        description: " ",
+        description: "A quiet study space and repository for archival collections, legacy documents, and supplemental reference materials.",
         img: oldlib
         },
         {
         code:"",
         name:"COT Computer Lab 201",
-        description: " ",
+        description: "A high-capacity computing facility utilized for technical instruction, software development labs, and digital literacy courses.",
         img:" "
         },
           {
         code:"",
         name:"Speech Lab",
-        description: " ",
+        description: "A specialized laboratory equipped with audio-visual tools designed to enhance communication skills, phonetics, and public speaking proficiency.",
         img: speech
         }
 
-        ]  }
+        ]  
+      }
   },
   
   'New Admin Building': {
@@ -1049,10 +1049,10 @@ img: ""
       ],
       2:[
         {
-    code:"",
-    name:" ",
-    description: " ",
-    img: ""
+      code:"",
+      name:" ",
+      description: " ",
+      img: ""
         }
       ]
     }
