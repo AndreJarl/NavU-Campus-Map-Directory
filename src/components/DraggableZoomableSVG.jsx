@@ -16,7 +16,9 @@ const DraggableZoomableSVG = ({onDragStart, OpenCard}) => {
   const containerRef = useRef(null);
   const [viewBox, setViewBox] = useState(
       currentFloor === 1 ? { x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } :
-      currentFloor === 2 ? {x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } : currentFloor === 3 ? {x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } :{}
+      currentFloor === 2 ? {x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } : 
+      currentFloor === 3 ? {x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } :
+      currentFloor === 4 ? {x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } :{}
   );
   
  const currentFloorCoordinates = buildingCoordinates[currentFloor];
@@ -26,7 +28,8 @@ const { registerZoom } = useZoomContext();
   ? { x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 }
   : currentFloor === 2 
   ? {x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } 
-  : currentFloor === 3 ? {x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } : {};
+  : currentFloor === 3 ? {x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } 
+  : currentFloor === 4 ? {x:45.81961764330944, y:581.7792625282988, width: 1440, height: 1024 } : {};
 
 
   // Set your desired zoom limits
@@ -538,7 +541,7 @@ const handleReset = useCallback(() => {
   className={`absolute inset-0 transition-opacity duration-300 ${
     currentFloor === 2 
       ? 'opacity-100 pointer-events-auto' 
-      : currentFloor === 1 
+      : (currentFloor === 1 || currentFloor === 4)
         ? 'opacity-0 pointer-events-none' 
         : 'opacity-20 pointer-events-none'
   }`}

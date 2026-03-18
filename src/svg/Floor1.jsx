@@ -1074,7 +1074,7 @@ return (
 
       {/* COE Room 2 bldg */}
       <path
-        onClick={() => bldClicked("COE Room 2")}
+        onClick={() => bldClicked("EN-103")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#ff3030" : category[""] ? "#ff3030" : "#B0B0B0"}
         stroke={allFalse ? "#C32525" : category[""] ? "#C32525" : "#B0B0B0"}
@@ -1092,12 +1092,12 @@ return (
         font-size="2"
         fill="black"
       >
-        ROOM 2
+        EN-103
       </text>
 
       {/* COE Room 1 bldg */}
       <path
-        onClick={() => bldClicked("COE Room 1")}
+        onClick={() => bldClicked("EN-101")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#ff3030" : category[""] ? "#ff3030" : "#B0B0B0"}
         stroke={allFalse ? "#C32525" : category[""] ? "#C32525" : "#B0B0B0"}
@@ -1115,7 +1115,7 @@ return (
         font-size="2"
         fill="black"
       >
-        ROOM 1
+        EN-101
       </text>
 
       {/* Electrical Laboratory / EL bldg */}
@@ -2506,7 +2506,7 @@ return (
 
       {/* CIVIL ENGINEERING LABBBBBBBBB */}
       <path
-        onClick={() => bldClicked("Engineering Laboratory")}
+        onClick={() => bldClicked("Materials Testing and Surveying Laboratory")}
         style={{ cursor: "pointer" }}
         fill={
           allFalse
@@ -2526,35 +2526,48 @@ return (
         d="M270 664v17h-21v-17z"
       />
       <text
-        onClick={() => bldClicked("Engineering Laboratory")}
+        onClick={() => bldClicked("Materials Testing and Surveying Laboratory")}
         style={{ cursor: "pointer" }}
         x="259.5"
-        y="672.1"
+        y="670.1"
         text-anchor="middle"
         font-weight="600"
         font-family="Inter, sans-serif"
         font-size="2"
         fill="black"
       >
-        ENGINEERING
+        MATERIALS 
       </text>
       <text
-        onClick={() => bldClicked("Engineering Laboratory")}
+        onClick={() => bldClicked("Materials Testing and Surveying Laboratory")}
         style={{ cursor: "pointer" }}
         x="259.5"
-        y="674.9"
+        y="672.9"
         text-anchor="middle"
         font-weight="600"
         font-family="Inter, sans-serif"
         font-size="2"
         fill="black"
       >
-        LABORATORY
+         TESTING AND 
+      </text>
+        <text
+        onClick={() => bldClicked("Materials Testing and Surveying Laboratory")}
+        style={{ cursor: "pointer" }}
+        x="259.5"
+        y="675.9"
+        text-anchor="middle"
+        font-weight="600"
+        font-family="Inter, sans-serif"
+        font-size="2"
+        fill="black"
+      >
+        SURVEYING LAB
       </text>
 
       {/* electrical eng lab */}
       <path
-        onClick={() => bldClicked("Electrical Engineering Laboratory")}
+        onClick={() => bldClicked("Electrical Circuits and Machine Laboratory")}
         style={{ cursor: "pointer" }}
         fill={
           allFalse
@@ -2574,7 +2587,7 @@ return (
         d="M270 682v16h-21v-16z"
       />
       <text
-        onClick={() => bldClicked("Electrical Engineering Laboratory")}
+        onClick={() => bldClicked("Electrical Circuits and Machine Laboratory")}
         style={{ cursor: "pointer" }}
         x="259.5"
         y="688.5"
@@ -2587,7 +2600,7 @@ return (
         ELECTRICAL
       </text>
       <text
-        onClick={() => bldClicked("Electrical Engineering Laboratory")}
+        onClick={() => bldClicked("Electrical Circuits and Machine Laboratory")}
         style={{ cursor: "pointer" }}
         x="259.5"
         y="690.9"
@@ -2597,10 +2610,10 @@ return (
         font-size="2"
         fill="black"
       >
-        ENGINEERING
+         CIRCUITS AND
       </text>
       <text
-        onClick={() => bldClicked("Electrical Engineering Laboratory")}
+        onClick={() => bldClicked("Electrical Circuits and Machine Laboratory")}
         style={{ cursor: "pointer" }}
         x="259.5"
         y="693.3"
@@ -2610,7 +2623,7 @@ return (
         font-size="2"
         fill="black"
       >
-        LABORATORY
+        MACHINE LAB
       </text>
 
       {/* CEAS Lab 2 bldg */}
@@ -5647,6 +5660,8 @@ return (
         cy="728"
         r="7"
         fill={allFalse ? "#5aeeff" : category[""] ? "#5aeeff" : "#B0B0B0"}
+        onClick={() => bldClicked("Fountain")}
+        style={{ cursor: "pointer" }}
       />
 
       {/* Centrum Pool */}
@@ -6199,7 +6214,7 @@ return (
 
       {/* PATH TO CIVIL ENGINEERING LABBBB */}
       <path
-        opacity={path === "Engineering Laboratory" ? "1" : 0}
+        opacity={path === "Materials Testing and Surveying Laboratory" ? "1" : 0}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"
@@ -6254,7 +6269,7 @@ return (
 
       {/* PATH TO ELECTRICAL ENGINEERING LAB */}
       <path
-        opacity={path === "Electrical Engineering Laboratory" ? "1" : 0}
+        opacity={path === "Electrical Circuits and Machine Laboratory" ? "1" : 0}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"
@@ -7114,7 +7129,7 @@ return (
       />
 
       {/* BUSINESS HUB BLDG */}
-      <path
+      <path onClick={()=>bldClicked("Resource Generation Office")}
         fill={allFalse ? "#8cd200" : category[""] ? "#8cd200" : "#B0B0B0"}
         stroke={allFalse ? "#609400" : category[""] ? "#609400" : "#B0B0B0"}
         stroke-width={0.4}
@@ -7593,6 +7608,8 @@ return (
         stroke={allFalse ? "#609400" : category[""] ? "#609400" : "#B0B0B0"}
         stroke-width={0.4}
         d="M351 759h109v27.4194H351z"
+        onClick={() => bldClicked("Paglaum Farm")}
+        style={{ cursor: "pointer" }}
       />
       <text
         x="405.5"

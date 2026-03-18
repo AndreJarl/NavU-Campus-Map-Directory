@@ -3,8 +3,8 @@ export const buildingCoordinates ={
      1:{
       //ENGINEERING BUILDING
       "College of Engineering Building": {x: 223.71365113209748, y: 687.793026800932, zoom: 8},
-      "Engineering Laboratory": {x: 244.73321225505086 , y:678.6167036382503 , zoom:8},
-      "Electrical Engineering Laboratory": {x:246.0069552718857 , y:694.4697406752874 , zoom:8},
+      "Materials Testing and Surveying Laboratory":{x:246.0069552718857 , y:694.4697406752874 , zoom:8},
+      "Electrical Circuits and Machine Laboratory": {x:246.0069552718857 , y:694.4697406752874 , zoom:8},
       "Computer Laboratory 1": {x: 232.1409605225778 , y:594.2001507856056 , zoom:8},
       "Computer Laboratory 2": {x: 232.1409605225778 , y:594.2001507856056 , zoom:8},
       "Electronic Laboratory": {x: 232.1409605225778 , y:594.2001507856056 , zoom:8},
@@ -181,5 +181,8 @@ export const buildingCoordinates ={
         "EN-CME303A-B": {x: 236.47418523642406 , y:592.8527105527319 , zoom:8},
         "EN-CME302A-B": {x: 236.47418523642406 , y:592.8527105527319 , zoom:8},
         "EN-CME301A-B": {x: 236.47418523642406 , y:592.8527105527319 , zoom:8},
+    },
+    4:{
+      
     }
 }

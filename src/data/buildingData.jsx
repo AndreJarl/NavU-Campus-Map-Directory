@@ -19,9 +19,10 @@ import room39 from "../assets/rooms/COT-GrndFlr/Room39.webp"
 import room40 from "../assets/rooms/COT-GrndFlr/Room40.webp"
 import room41 from "../assets/rooms/COT-GrndFlr/Room41.webp"
 import room46 from "../assets/rooms/COT-GrndFlr/Room46.webp"
-import GADoffice from "../assets/rooms/COT-GrndFlr/GADOffice.webp"
+import GADoffice from "../assets/rooms/oldadmin/GAD.webp"
 import NSTPoffice from "../assets/rooms/COT-GrndFlr/NSTPOffice.webp"
 import COTCompLab from "../assets/rooms/COT-GrndFlr/COTComlab.webp"
+import lab201 from "../assets/rooms/COT-2ndflr/ComLab201.jpg"
 import lab202 from "../assets/rooms/COT-2ndflr/ComLab202.webp"
 import lab203 from "../assets/rooms/COT-2ndflr/ComLab203.jpg"
 import lab204 from "../assets/rooms/COT-2ndflr/ComLab204.jpg"
@@ -40,8 +41,20 @@ import cotfaculty from "../assets/rooms/oldadmin/COT-Faculty.webp"
 import speech from "../assets/rooms/oldadmin/SpeechLabRoom.webp"
 import gad from "../assets/rooms/oldadmin/GAD.webp"
 
+import elec from "../assets/rooms/Bldgs/Electronics'Lab.jpg"
+
+//ERRC
+import errc1 from "../assets/rooms/Bldgs/errc1.webp"
+import errc2 from "../assets/rooms/Bldgs/errc2.webp"
+import fountain from "../assets/rooms/Bldgs/ERRC.jpg"
+
+import centrum from "../assets/rooms/Bldgs/centrum.webp"
+import paglaumfarm from "../assets/rooms/Bldgs/paglaumfarm.webp"
+import powerhouse from "../assets/rooms/Bldgs/powerhouse.webp"
 
 
+import mis from "../assets/rooms/Adminbldg/1stFloor/mis.webp"
+import accounting from "../assets/rooms/Adminbldg/1stFloor/accounting.webp"
 import cashier from "../assets/rooms/Adminbldg/1stFloor/cashier.webp"
 import bac from "../assets/rooms/Adminbldg/1stFloor/bac.webp"
 import complab1 from "../assets/rooms/COE/complab1.webp"
@@ -74,7 +87,11 @@ import clinic from "../assets/rooms/Adminbldg/1stFloor/Clinic.webp"
 import ed301 from "../assets/rooms/ceas/ED-301B.webp"
 import ed302 from "../assets/rooms/ceas/ED-302B.webp"
 import ed303 from "../assets/rooms/ceas/ED-303A.webp"
-
+import educlab1 from "../assets/rooms/ceas/educlab1.webp"
+import educlab2 from "../assets/rooms/ceas/educlab2.webp"
+import deanseduc from "../assets/rooms/ceas/deans.webp"
+import ed202 from "../assets/rooms/ceas/ed202.webp"
+import ed201 from "../assets/rooms/ceas/ed201.webp"
 
 import en102a from "../assets/rooms/COE/EN-102A.webp"
 import  coedeans from  "../assets/rooms/COE/COE-Dean'sOffice.webp"
@@ -85,7 +102,7 @@ import en302 from "../assets/rooms/COE/EN-302A.webp"
 import en303 from "../assets/rooms/COE/EN-303A.webp"
 import melab2 from "../assets/rooms/COE/MELAB2.webp"
 import melab1 from "../assets/rooms/COE/MELaboratory1.webp"
-
+import encme201 from "../assets/rooms/cme/en201.webp"
 
 import cmecomlab1 from "../assets/rooms/cme/CME-COMLAB1A.webp"
 import cmecomlab2 from "../assets/rooms/cme/CME-COMLAB2A.webp"
@@ -103,6 +120,21 @@ import encme308 from "../assets/rooms/cme/EN-CME308A.webp"
 import library from "../assets/rooms/Adminbldg/Library.webp"
 import avr from "../assets/rooms/Adminbldg/AVR.webp"
 
+import sao from "../assets/rooms/Adminbldg/sao.webp"
+import guidance from "../assets/rooms/Adminbldg/guidance.webp"
+import newrecords from "../assets/rooms/Adminbldg/records.webp"
+import hr from "../assets/rooms/Adminbldg/hr.webp"
+import admin from "../assets/rooms/Adminbldg/admin.webp"
+import admingraduate from "../assets/rooms/Adminbldg/admingraduate.webp"
+import campus from "../assets/rooms/Adminbldg/campus.webp"
+
+
+import canpenter from "../assets/rooms/Bldgs/CarpentryShop.jpg"
+import maintain from "../assets/rooms/Bldgs/MaintenanceOffice.jpg"
+import officemaintain from "../assets/rooms/Bldgs/OfficeoftheElectricalMaintenance.jpg"
+import sewing from "../assets/rooms/Bldgs/SewingLab.jpg"
+import resource from "../assets/rooms/Bldgs/resource.webp"
+
 const buildingData = {
 
  'College of Engineering Building': {
@@ -111,24 +143,24 @@ const buildingData = {
     1: [
       { 
         code: "EN-102A", 
-        name: "Electrical Engineering Laboratory",
+        name: "Electrical Circuits and Machine Laboratory",
         description: "A specialized room equipped with electrical tools, testing instruments, and training panels where students conduct experiments and practical activities related to circuits, wiring, and power systems.",
         img: en102a
       },
       { 
         code: "EN-101A", 
-        name: "Engineering Laboratory",
+        name: "Materials Testing and Surveying Laboratory",
         description: "A workspace designed for hands-on experiments and projects across different engineering fields, equipped with tools, machines, and equipment for practical learning and testing.",
         img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459346/CELAB02_fetvlj.webp"
       },
       { 
-        code: " ", 
+        code: "EN-COMLAB1", 
         name: "Computer Laboratory 1",
         description: "A room equipped with desktop computers and internet access where students practice programming, research, and other computer-related activities.",
         img:complab1
       },
       { 
-        code: " ", 
+        code: "EN-COMLAB2", 
         name: "Computer Laboratory 2",
         description: " A well-equipped room with computers and internet access used for programming, research, and computer-based lessons.",
         img: complab2
@@ -176,12 +208,7 @@ const buildingData = {
         description: "A workspace for faculty members and a consultation area for students to meet with their instructors.",
         img: faculty1
       },
-      { 
-        code: "", 
-        name: "EN-201",
-        description: " ",
-        img: " "
-      },
+  
          { 
         code: "Engineering Grad School", 
         name: "Graduate School",
@@ -238,7 +265,7 @@ const buildingData = {
       code: " ", 
       name: "EN-CME201A-B",
       description: "A shared academic space utilized by both the College of Engineering and the College of Management and Economics for lectures and combined sessions.",
-      img: " "
+      img: encme201
     },
      { 
       code: "CME COMLAB 2A", 
@@ -312,16 +339,16 @@ const buildingData = {
 rooms: {
   1: [
     { 
-      code: " ", 
+      code: "Hydronics and Soil Mechanics Laboratory", 
       name: "Education Laboratory 1",
-      description: "A learning space designed for education students to practice teaching methods, classroom management, and lesson demonstrations.",
-      img: " "
+      description: "A shared learning space designed for education and engineering students to practice teaching methods, classroom management, and lesson demonstrations.",
+      img: educlab1
     },
     { 
-      code: " ", 
+      code: "Physics Lab", 
       name: "Education Laboratory 2",
       description: "A learning space designed for education students to practice teaching methods, classroom management, and lesson demonstrations.",
-      img: " "
+      img: educlab2
     },
     { 
       code: " ", 
@@ -389,19 +416,19 @@ rooms: {
       code: " ", 
       name: "Dean's Education Office",
       description: "The central office for the College of Education, assisting students with teaching internship requirements, credit evaluations, and official approvals.",
-      img: ""
+      img: deanseduc
     },
     { 
       code: "", 
       name: "ED-202A-B",
       description: "Specialized instructional rooms designed for teaching demonstrations and collaborative group activities for future educators.",
-      img: " "
+      img: ed202
     },
     { 
       code: "", 
       name: "ED-201A-B",
       description: "Versatile lecture spaces used for professional education courses and classroom management simulations.",
-      img: " "
+      img: ed201
     }
   ],
   3: [
@@ -423,145 +450,145 @@ rooms: {
     description: "Spacious classrooms utilized for instructional workshops and departmental examinations for future educators.",
     img: ed301
   },
-  { 
-    code: "", 
-    name: "ED-201A-B",
-    description: "General-purpose rooms for education majors, often used for collaborative group work and classroom management practice.",
-    img: ""
-  }
+  // { 
+  //   code: "", 
+  //   name: "ED-201A-B",
+  //   description: "General-purpose rooms for education majors, often used for collaborative group work and classroom management practice.",
+  //   img: ""
+  // }
   ],
 }
     
   },
   
   
-  'Graduate School Building': {
-    totalFloors: 4,
-    rooms:{
-  1:[
-  {
-    code:"",
-    name:" ",
-    description: " ",
-    img: ""
-    },
-  {
-    code:"",
-    name:" ",
-  description: " ",
-  img: ""
-  },
-  {
-  code:"",
-    name:" ",
-  description: " ",
-  img: ""
-  },
-  {
-  code:"",
-  name:" ",
-  description: " ",
-  img: ""
-  },
-  {
-    code:"",
-    name:" ",
-  description: " ",
-  img: ""
-  }
-  ],
-  2:[
-    {
-    code:"",
-    name:" ",
-    description: " ",
-    img: ""
+//   'Graduate School Building': {
+//     totalFloors: 4,
+//     rooms:{
+//   1:[
+//   {
+//     code:"",
+//     name:" ",
+//     description: " ",
+//     img: ""
+//     },
+//   {
+//     code:"",
+//     name:" ",
+//   description: " ",
+//   img: ""
+//   },
+//   {
+//   code:"",
+//     name:" ",
+//   description: " ",
+//   img: ""
+//   },
+//   {
+//   code:"",
+//   name:" ",
+//   description: " ",
+//   img: ""
+//   },
+//   {
+//     code:"",
+//     name:" ",
+//   description: " ",
+//   img: ""
+//   }
+//   ],
+//   2:[
+//     {
+//     code:"",
+//     name:" ",
+//     description: " ",
+//     img: ""
 
-    },
-    {
-  code:"",
-    name:" ",
-  description: " ",
-  img: ""
-    },
-    {
-    code:"",
-  name:" ",
-  description: " ",
-  img: ""
-  },
-    {
-    code:"",
-    name:" ",
-    description: " ",
-    img: ""
-  }
-  ],
-  3:
-  [
-    {
-      code:"",
-      name:" ",
-      description: " ",
-      img: ""
-},
-    {
-      code:"",
-      name:" ",
-      description: " ",
-      img: ""
-},
-    {
-code:"",
-name:" ",
-description: " ",
-img: ""
-    },
-    {
-code:"",
-name:" ",
-description: " ",
-img: ""
-    },
-      {
-  code:"",
-  name:" ",
-  description: " ",
-  img: ""
-  }
-  ],
-  4:[
-  {
-    code:"",
-name:" ",
-description: " ",
-img: ""
-},
-  {
-    code:"",
-name:" ",
-description: " ",
-img: ""
-  },
-  {
-    code:"",
-name:" ",
-description: " ",
-img: ""
-  },
-  {
-    code:"",
-name:" ",
-description: " ",
-img: ""
-}
+//     },
+//     {
+//   code:"",
+//     name:" ",
+//   description: " ",
+//   img: ""
+//     },
+//     {
+//     code:"",
+//   name:" ",
+//   description: " ",
+//   img: ""
+//   },
+//     {
+//     code:"",
+//     name:" ",
+//     description: " ",
+//     img: ""
+//   }
+//   ],
+//   3:
+//   [
+//     {
+//       code:"",
+//       name:" ",
+//       description: " ",
+//       img: ""
+// },
+//     {
+//       code:"",
+//       name:" ",
+//       description: " ",
+//       img: ""
+// },
+//     {
+// code:"",
+// name:" ",
+// description: " ",
+// img: ""
+//     },
+//     {
+// code:"",
+// name:" ",
+// description: " ",
+// img: ""
+//     },
+//       {
+//   code:"",
+//   name:" ",
+//   description: " ",
+//   img: ""
+//   }
+//   ],
+//   4:[
+//   {
+//     code:"",
+// name:" ",
+// description: " ",
+// img: ""
+// },
+//   {
+//     code:"",
+// name:" ",
+// description: " ",
+// img: ""
+//   },
+//   {
+//     code:"",
+// name:" ",
+// description: " ",
+// img: ""
+//   },
+//   {
+//     code:"",
+// name:" ",
+// description: " ",
+// img: ""
+// }
 
-],
+// ],
 
 
 
-    }
-  },
+//     }
+//   },
   
 
 
@@ -885,7 +912,7 @@ img: ""
         code:"",
         name:"COT Computer Lab 201",
         description: "A high-capacity computing facility utilized for technical instruction, software development labs, and digital literacy courses.",
-        img:" "
+        img: lab201
         },
           {
         code:"",
@@ -906,13 +933,13 @@ img: ""
           code:"",
           name:"Accounting Office",
           description: "The office responsible for managing the school’s financial transactions, including payments, fees, and other accounting records. ",
-          img: ""
+          img: accounting
         },
         {
           code:"",
           name:"MIS Office",
           description: "The office that handles the school’s data management, computer systems, and network services. ",
-          img: ""
+          img: mis
         },
         {
           code:"",
@@ -942,7 +969,7 @@ img: ""
           code:"",
           name:"Power House",
           description: "A facility that supplies and manages electricity for the school, ensuring a stable and continuous power supply for all campus operations. ",
-          img: ""
+          img: powerhouse
         },
         {
           code:"",
@@ -976,43 +1003,43 @@ img: ""
       code:"",
       name:"Campus Director Office",
       description:"The highest administrative office on campus, responsible for overall campus management, executive decisions, and institutional leadership.",
-      img: ""
+      img: campus
       },
       {
       code:"",
       name:"Admin Staff Office",
       description: "The support hub for campus operations, assisting with general administrative inquiries and university-wide logistics.",
-      img: ""
+      img: admin
       }, 
       {
       code:"",
       name:"Admin Graduate School",
       description: "A dedicated administrative office focused on the processing of records and support services for postgraduate students.",
-      img: ""
+      img: admingraduate
       },
         {
       code:"",
       name:"HR Office",
       description: "The Human Resources department, managing personnel records, employment concerns, and faculty/staff welfare.",
-      img: ""
+      img: hr
       },
           {
       code:"",
       name:"New Admin Records",
       description: "A central archive for student and institutional records, responsible for the safe keeping and processing of official university documents.",
-      img: ""
+      img: newrecords
       },
             {
       code:"",
       name:"Guidance Office",
       description: "Provides student support services, including career counseling, mental health resources, and personal development guidance.",
-      img: ""
+      img: guidance
       },
           {
       code:"",
       name:"SAO Office",
       description: "The Student Affairs Office (SAO) manages student organizations, campus activities, and discipline, serving as the main link between students and the administration.",
-      img: ""
+      img: sao
       },
       ],
       3:[
@@ -1044,7 +1071,7 @@ img: ""
       code:"",
       name:"Centrum",
       description: "A central hub within the campus that houses various university facilities and services, designed to support student activities, academic functions, and administrative needs. ",
-      img: ""
+      img: centrum
         }
       ],
       2:[
@@ -1072,27 +1099,27 @@ img: ""
     },
     { 
       code: " ", 
-      name: "",
+      name: "Fountain",
       description: " ",
-      img: " "
+      img: fountain
     }, 
           { 
       code: " ", 
       name: "ERRC Classroom 1",
       description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-      img: " "
+      img: errc2
     }, 
     { 
       code: " ", 
       name: "ERRC Classroom 2",
       description: "A learning area where students attend lectures, participate in discussions, and work on academic activities guided by their teachers.",
-      img: " "
+      img: errc2
     }, 
     { 
       code: " ", 
       name: "ERRC Office",
       description: "A workspace where school staff and administrators handle records, documents, and other administrative tasks.",
-      img: " "
+      img: errc1
     }, 
       { 
       code: " ", 
@@ -1149,7 +1176,7 @@ img: ""
                     code:"",
                     name:"Sewing Laboratory",
                     description: "A workspace equipped with sewing machines, fabrics, and tools where students practice garment making and textile projects. ",
-                    img: ""
+                    img: sewing
                   },
                   {
                     code:"",
@@ -1253,7 +1280,7 @@ img: ""
                     code:"",
                     name:"Carpentry Shop",
                     description: "A designated workshop where students develop woodworking skills and complete hands-on projects using tools, equipment, and carpentry techniques. ",
-                    img:""
+                    img: canpenter
                   },
                   {
                     code:"",
@@ -1265,7 +1292,7 @@ img: ""
                     code:"",
                     name:"Socio-Cultural Office",
                     description: "The office that plans and manages cultural, social, and community-building activities on campus, supporting student organizations and promoting cultural awareness and engagement. ",
-                    img:""
+                    img: PEhall
                   },
                   {
                     code:"",
@@ -1283,7 +1310,7 @@ img: ""
                     code:"",
                     name:"Maintenance Office",
                     description: "The office responsible for managing and coordinating the upkeep, repair, and maintenance of campus buildings, facilities, and equipment.",
-                    img:room39
+                    img: maintain
                   },
                   {
                     code:"",
@@ -1295,7 +1322,7 @@ img: ""
                     code:"",
                     name:"Electrical Shop",
                     description: "A workshop where students learn and practice electrical wiring, circuits, and related hands-on skills, using tools and equipment for training in electrical systems and maintenance.",
-                    img:""
+                    img: elec
                   },
                   {
                     code:"",
@@ -1326,19 +1353,13 @@ img: ""
                     code:"",
                     name:"Office of the Electrical Maintenance",
                     description: "Electrical Maintenance Office.",
-                    img:""
+                    img: officemaintain
                   },
                     {
                     code:"",
                     name:"Kitchen Laboratory",
                     description: "Kitchen Laboratory",
-                    img:""
-                  },
-                   {
-                    code:"",
-                    name:"Electrical Shop",
-                    description: "Electrical Shop",
-                    img:""
+                    img: HMLab
                   },
                     {
                     code:"",
@@ -1350,7 +1371,7 @@ img: ""
                     code:"",
                     name:"Sports & Athletics Office",
                     description: "Sports & Athletics Office",
-                    img:""
+                    img: PEhall
                   },
                   {
                     code:"",
@@ -1358,12 +1379,24 @@ img: ""
                     description: "Socio-cultural Office",
                     img:""
                   },
-                    {
+                  {
                     code:"",
                     name:"Women's Dorm",
                     description: "A secure and comfortable residential facility for female students. Includes shared bedrooms, restrooms, common areas, and basic amenities. Provides a safe and supportive environment for study, rest, and daily living. ",
                     img: womensdorm
-                  }
+                  },
+                  {
+                    code: "",
+                    name: "Paglaum Farm",
+                    description:"Farm",
+                    img: paglaumfarm
+                  },
+                     {
+                    code: "",
+                    name: "Resource Generation Office",
+                    description:"",
+                    img: resource
+                  },
                 ]
               }
     },

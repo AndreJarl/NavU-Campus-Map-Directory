@@ -341,7 +341,7 @@ if (suggestion.floor) {
 
       <Floors/>
   
-      <SurveyForm survey={survey} setSurvey={setSurvey}/>
+      {/* <SurveyForm survey={survey} setSurvey={setSurvey}/> */}
 
     </div>
   )
