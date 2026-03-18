@@ -89,11 +89,22 @@ const Floor4 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M122.992 540.2H132.992V541H122.992V540.2Z" fill="#535353"/>
 <path d="M122.991 528H143.503V528.8H122.991V528Z" fill="#535353"/>
 <path d="M123.792 528.801V540.201H122.992V528.801H123.792Z" fill="#535353"/>
-<path d="M247.5 638H247.243C246.691 638 246.243 637.552 246.243 637V538.394C246.243 537.842 246.691 537.394 247.243 537.394H256.757" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M247.5 617H247.243C246.691 617 246.243 616.552 246.243 616V538.394C246.243 537.842 246.691 537.394 247.243 537.394H256.757" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M247.5 596H247.243C246.691 596 246.243 595.552 246.243 595V538.394C246.243 537.842 246.691 537.394 247.243 537.394H256.757" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M247.5 575.5H247.243C246.691 575.5 246.243 575.052 246.243 574.5V538.394C246.243 537.842 246.691 537.394 247.243 537.394H256.757" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M247.5 554H247.243C246.691 554 246.243 553.552 246.243 553V538.394C246.243 537.842 246.691 537.394 247.243 537.394H256.757" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
+
+{/*PHYSICS LAB PATH  */}
+<path opacity={path === "Physics Laboratory" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"  d="M247.5 638H247.243C246.691 638 246.243 637.552 246.243 637V538.394C246.243 537.842 246.691 537.394 247.243 537.394H256.757"/>
+
+{/* PHYSICS LEC PATH */}
+<path opacity={path === "Physics Lecture" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"  d="M247.5 617H247.243C246.691 617 246.243 616.552 246.243 616V538.394C246.243 537.842 246.691 537.394 247.243 537.394H256.757" />
+
+{/* CHEMISTRY LAB PATH */}
+<path opacity={path === "Chemistry Laboratory" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" d="M247.5 596H247.243C246.691 596 246.243 595.552 246.243 595V538.394C246.243 537.842 246.691 537.394 247.243 537.394H256.757" />
+
+{/* CHEMISTRY  LEC PATH */}
+<path opacity={path === "Chemistry Lecture" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5"   d="M247.5 575.5H247.243C246.691 575.5 246.243 575.052 246.243 574.5V538.394C246.243 537.842 246.691 537.394 247.243 537.394H256.757"/>
+
+{/* EN-CME-401 PATH */}
+<path opacity={path === "EN-CME-401" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5"  d="M247.5 554H247.243C246.691 554 246.243 553.552 246.243 553V538.394C246.243 537.842 246.691 537.394 247.243 537.394H256.757"/>
+
 <path d="M234.5 565.334C236.456 565.334 238.041 566.92 238.041 568.876C238.041 570.061 237.477 571.036 236.776 571.792C236.074 572.548 235.25 573.067 234.776 573.329C234.602 573.425 234.398 573.425 234.224 573.329C233.75 573.067 232.927 572.548 232.225 571.792C231.523 571.036 230.958 570.061 230.958 568.876C230.958 566.92 232.544 565.334 234.5 565.334Z" fill="#11FF00" stroke="#087C00" stroke-width="0.5"/>
 <path d="M234.5 570.25C235.259 570.25 235.875 569.634 235.875 568.875C235.875 568.116 235.259 567.5 234.5 567.5C233.741 567.5 233.125 568.116 233.125 568.875C233.125 569.634 233.741 570.25 234.5 570.25Z" fill="white" stroke="#087C00" stroke-width="0.5"/>
 <path d="M238.722 573.479C239.15 573.726 239.375 574.006 239.375 574.291C239.375 574.577 239.15 574.857 238.722 575.104C238.294 575.351 237.679 575.556 236.938 575.699C236.196 575.841 235.356 575.916 234.5 575.916C233.644 575.916 232.804 575.841 232.063 575.699C231.321 575.556 230.706 575.351 230.278 575.104C229.85 574.857 229.625 574.577 229.625 574.291C229.625 574.006 229.85 573.726 230.278 573.479" stroke="#087C00" stroke-width="0.5" stroke-linecap="round"/>
@@ -120,26 +131,163 @@ const Floor4 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M143.471 648.499H134.971" stroke="#535353"/>
 <path d="M241.877 636.843V528.043" stroke="#535353" stroke-width="0.8"/>
 <path d="M143.104 636.82L143.105 528" stroke="#535353" stroke-width="0.8"/>
+
+<g opacity={0.5}>
 <rect x="136" y="628" width="21" height="21" transform="rotate(90 136 628)" fill="#00C3FF"/>
 <rect x="136" y="607" width="20" height="21" transform="rotate(90 136 607)" fill="#00C3FF"/>
 <rect x="136" y="586" width="20" height="21" transform="rotate(90 136 586)" fill="#00C3FF"/>
 <rect x="136" y="565" width="20" height="21" transform="rotate(90 136 565)" fill="#00C3FF"/>
 <rect x="136" y="544" width="20" height="21" transform="rotate(90 136 544)" fill="#00C3FF"/>
 <rect width="15" height="9" transform="matrix(0 1 1 0 113 528)" fill="#73DAFF"/>
-<rect x="272" y="528" width="15" height="9" transform="rotate(90 272 528)" fill="#73DAFF"/>
-<rect x="270" y="544" width="20" height="21" transform="rotate(90 270 544)" fill="#AAFF00"/>
-<rect x="270" y="565" width="20" height="21" transform="rotate(90 270 565)" fill="#AAFF00"/>
-<rect x="270" y="586" width="20" height="21" transform="rotate(90 270 586)" fill="#AAFF00"/>
-<rect x="270" y="607" width="20" height="21" transform="rotate(90 270 607)" fill="#AAFF00"/>
+</g>
 
+<g onClick={() => bldClicked("TEXT-ID")} filter="url(#filter1_d_2041_14)">
+  <rect 
+    x="272" 
+    y="528" 
+    width="15" 
+    height="9" 
+    transform="rotate(90 272 528)" 
+    fill={getColor(allFalse, category, "", "#73DAFF", "#B0B0B0")}
+  />
+  <text
+    x="267.5"
+    y="535.5"
+    fill="black"
+    fontSize="2"
+    fontWeight={600}
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+    MALE CR
+  </text>
+</g>
+
+
+{/* ENCME401 */}
+<g onClick={() => bldClicked("EN-CME-401")} filter="url(#filter1_d_2041_14)">
+  <rect 
+    x="270" 
+    y="544" 
+    width="20" 
+    height="21" 
+    transform="rotate(90 270 544)" 
+    fill={getColor(allFalse, category, "", "#AAFF00", "#B0B0B0")}
+  />
+  <text
+    x="259.5"
+    y="554"
+    fill="black"
+    fontSize="2"
+    fontWeight="600"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+    EN-CME-401
+  </text>
+</g>
+{/* CHEM LEC */}
+<g onClick={() => bldClicked("Chemistry Lecture")} filter="url(#filter1_d_2041_14)">
+  <rect 
+    x="270" 
+    y="565" 
+    width="20" 
+    height="21" 
+    transform="rotate(90 270 565)" 
+    fill={getColor(allFalse, category, "", "#AAFF00", "#B0B0B0")}
+  />
+  <text
+    x="259.5"
+    y="575"
+    fill="black"
+    fontSize="2"
+    fontWeight="600"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+    CHEMISTRY LEC
+  </text>
+</g>
+{/* CHEM LAB */}
+<g onClick={() => bldClicked("Chemistry Laboratory")} filter="url(#filter1_d_2041_14)">
+  <rect 
+    x="270" 
+    y="586" 
+    width="20" 
+    height="21" 
+    transform="rotate(90 270 586)" 
+    fill={getColor(allFalse, category, "", "#AAFF00", "#B0B0B0")}
+  />
+  <text
+    x="259.5"
+    y="596"
+    fill="black"
+    fontSize="2"
+    fontWeight="600"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+    CHEMISTRY LAB
+  </text>
+</g>
+{/* PHYSICS LEC */}
+<g onClick={() => bldClicked("Physics Lecture")} filter="url(#filter1_d_2041_14)">
+  <rect 
+    x="270" 
+    y="607" 
+    width="20" 
+    height="21" 
+    transform="rotate(90 270 607)" 
+    fill={getColor(allFalse, category, "", "#AAFF00", "#B0B0B0")}
+  />
+  <text
+    x="259.5"
+    y="617"
+    fill="black"
+    fontSize="2"
+    fontWeight="600"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+    PHYSICS LEC
+  </text>
+</g>
 {/* Physics Lab */}
-<rect x="270" y="628" width="21" height="21" transform="rotate(90 270 628)" fill="#AAFF00"/>
+<g onClick={() => bldClicked("Physics Laboratory")} filter="url(#filter1_d_2041_14)">
+  <rect 
+    x="270" 
+    y="628" 
+    width="21" 
+    height="21" 
+    transform="rotate(90 270 628)" 
+    fill={getColor(allFalse, category, "", "#AAFF00", "#B0B0B0")}
+  />
+  <text
+    x="259.5"
+    y="638.5"
+    fill="black"
+    fontSize="2"
+    fontWeight="600"
+    textAnchor="middle"
+    dominantBaseline="central"
+    style={{ pointerEvents: 'none' }}
+  >
+    PHYSICS LAB
+  </text>
+</g>
 
-<path d="M138.243 637.947H138.5C139.052 637.947 139.5 637.5 139.5 636.947V538.342C139.5 537.789 139.052 537.342 138.5 537.342H128.986" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
+
+{/* <path d="M138.243 637.947H138.5C139.052 637.947 139.5 637.5 139.5 636.947V538.342C139.5 537.789 139.052 537.342 138.5 537.342H128.986" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M138.243 616.947H138.5C139.052 616.947 139.5 616.5 139.5 615.947V538.342C139.5 537.789 139.052 537.342 138.5 537.342H128.986" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M138.243 595.947H138.5C139.053 595.947 139.5 595.5 139.5 594.947V538.342C139.5 537.789 139.053 537.342 138.5 537.342H128.986" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M138.243 575.447H138.5C139.053 575.447 139.5 575 139.5 574.447V538.342C139.5 537.789 139.053 537.342 138.5 537.342H128.986" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M138.243 553.947H138.5C139.053 553.947 139.5 553.5 139.5 552.947V538.342C139.5 537.789 139.053 537.342 138.5 537.342H128.986" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M138.243 553.947H138.5C139.053 553.947 139.5 553.5 139.5 552.947V538.342C139.5 537.789 139.053 537.342 138.5 537.342H128.986" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/> */}
 
 <defs>
 <clipPath id="clip0_2144_2">

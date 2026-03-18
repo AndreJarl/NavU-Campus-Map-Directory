@@ -40,6 +40,7 @@ import extension from "../assets/rooms/oldadmin/Extension&ProductionOffice.webp"
 import cotfaculty from "../assets/rooms/oldadmin/COT-Faculty.webp"
 import speech from "../assets/rooms/oldadmin/SpeechLabRoom.webp"
 import gad from "../assets/rooms/oldadmin/GAD.webp"
+import tgo from "../assets/rooms/COT-GrndFlr/TGOOffice.webp"
 
 import elec from "../assets/rooms/Bldgs/Electronics'Lab.jpg"
 
@@ -115,6 +116,13 @@ import encme305 from "../assets/rooms/cme/EN-CME305A.webp"
 import encme306 from "../assets/rooms/cme/EN-CME306A.webp"
 import encme307 from "../assets/rooms/cme/EN-CME307A.webp"
 import encme308 from "../assets/rooms/cme/EN-CME308A.webp"
+import encme401 from "../assets/rooms/cme/EN-CME401A.webp"
+import physics from "../assets/rooms/cme/PhysicsLab.webp"
+import physicslec from "../assets/rooms/cme/PhysicsLec.webp"
+import chemlec from "../assets/rooms/cme/ChemLec.webp"
+import chemlab4 from "../assets/rooms/cme/chemlab.webp"
+
+
 
 
 import library from "../assets/rooms/Adminbldg/Library.webp"
@@ -330,6 +338,39 @@ const buildingData = {
     description: "Primary lecture area for interdisciplinary subjects, offering a professional environment for student learning.",
     img: encme301
   }
+],
+4:[
+    { 
+    code: "", 
+    name: "EN-CME-401",
+    description: "A spacious lecture room designed for shared use by Engineering and CME students for core subjects and seminars.",
+    img: encme401
+  },
+    { 
+    code: "", 
+    name: "Physics Laboratory",
+    description: "A spacious lecture room designed for shared use by Engineering and CME students for core subjects and seminars.",
+    img: physics
+  },
+
+      { 
+    code: "", 
+    name: "Physics Lecture",
+    description: "A spacious lecture room designed for shared use by Engineering and CME students for core subjects and seminars.",
+    img: physicslec
+  },
+      { 
+    code: "", 
+    name: "Chemistry Laboratory",
+    description: "A spacious lecture room designed for shared use by Engineering and CME students for core subjects and seminars.",
+    img: chemlab4
+  },
+    { 
+    code: "", 
+    name: "Chemistry Lecture",
+    description: "A spacious lecture room designed for shared use by Engineering and CME students for core subjects and seminars.",
+    img: chemlec
+  },
 ]
 }
   },
@@ -718,6 +759,12 @@ rooms: {
             name: "NSTP Office",
             description: "The National Service Training Program Office where activities and records related to NSTP components, such as CWTS and ROTC, are managed and coordinated. ",
             img: NSTPoffice
+            },
+               {
+            code: "",
+            name: "TGO Office",
+            description: "Office",
+            img: tgo
     }
     
         ],

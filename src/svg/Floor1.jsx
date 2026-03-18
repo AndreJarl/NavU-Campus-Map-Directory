@@ -43,7 +43,7 @@ const handleFloor = useCallback((num) => {
       const rooms = ["Library", "EN-303A-B", "EN-302A-B", "EN-301A-B", "EN-CME308A-B", "EN-CME307A-B", "EN-CME306A-B", "EN-CME305A-B", "EN-CME304A-B", 
                      "EN-CME303A-B", "EN-CME302A-B", "EN-CME301A-B", "ED-201", "Campus Director Office", "Dean's and Conference", 
                     "Engineering Faculty (Chairman's Office)", "Engineering Faculty Office", "CME Research Center", "TM-LAB-2A", "CME Computer Laboratory 2","CME Computer Laboratory 1",
-                    "TM-LAB-1A", "EN-CME 201", "Graduate School", "EN-201"];
+                    "TM-LAB-1A", "EN-CME 201", "Graduate School", "EN-201", "Physics Lecture", "Physics Laboratory", "Chemistry Lecture", "Chemistry Laboratory", "EN-CME-401"];
       return rooms.includes(path) ? 1 : 0;
     };
 
@@ -479,12 +479,27 @@ return (
         stroke-width=".01"
         d="M190.247 500.695v-1.08999h-5.99v1.08999z"
       />
-      <path
-        fill="#e6e6e6"
-        stroke="#000"
-        stroke-width=".01"
+     <g onClick={() => bldClicked("TGO Office")} filter="url(#filter1_d_2041_14)">
+      <path 
+        fill= "#e6e6e6"
+        stroke="#000" 
+        strokeWidth=".01" 
         d="m190.247 500.704-5.99-2.196v5.487h5.99z"
       />
+      <text
+        x="187.25"
+        y="501.07"
+        fill="black"
+        fontSize="2"
+        fontWeight="600"
+        fontFamily="Arial, sans-serif"
+        textAnchor="middle"
+        dominantBaseline="central"
+        style={{ pointerEvents: 'none' }}
+      >
+      TGO
+      </text>
+    </g>
       <path fill="#535353" d="M190.1 504v-6.59994h.8V504z" />
       <path fill="#535353" d="M196.199 504.001v-10.9999h.8v10.9999z" />
       <path fill="#535353" d="M184 504v-10.9999h.8V504z" />
@@ -5795,7 +5810,8 @@ return (
           path === "COT Comp Lab 204" ||
           path === "COT Comp Lab 203" ||
           path === "COT Comp Lab 202" ||
-          path === "COT Stock Room"
+          path === "COT Stock Room" ||
+          path === "TGO Office"
             ? "1"
             : 0
         }

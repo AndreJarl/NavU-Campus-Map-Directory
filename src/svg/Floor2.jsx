@@ -37,7 +37,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
     const showPath = (path) => {
       const rooms = ["Library", "EN-303A-B", "EN-302A-B", "EN-301A-B", "EN-CME308A-B", "EN-CME307A-B", "EN-CME306A-B", "EN-CME305A-B",
-                     "EN-CME304A-B", "EN-CME303A-B", "EN-CME302A-B", "EN-CME301A-B",];
+                     "EN-CME304A-B", "EN-CME303A-B", "EN-CME302A-B", "EN-CME301A-B", "Physics Lecture", "Physics Laboratory", "Chemistry Lecture", "Chemistry Laboratory", "EN-CME-401"];
       return rooms.includes(path) ? 1 : 0;
     };
 
