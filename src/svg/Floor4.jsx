@@ -132,6 +132,7 @@ const Floor4 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <rect x="270" y="586" width="20" height="21" transform="rotate(90 270 586)" fill="#AAFF00"/>
 <rect x="270" y="607" width="20" height="21" transform="rotate(90 270 607)" fill="#AAFF00"/>
 
+{/* Physics Lab */}
 <rect x="270" y="628" width="21" height="21" transform="rotate(90 270 628)" fill="#AAFF00"/>
 
 <path d="M138.243 637.947H138.5C139.052 637.947 139.5 637.5 139.5 636.947V538.342C139.5 537.789 139.052 537.342 138.5 537.342H128.986" stroke="#FF0000" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>

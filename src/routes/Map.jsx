@@ -1,421 +1,375 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useCallback } from "react";
 
-
-import SearchBar from '../components/SearchBar';
-import buildingData from '../data/buildingData';
-import RoomInfo from '../components/RoomInfo';
-import button360 from '../assets/Logo/360.png'
-import BldOverview from '../components/BldOverview';
-import Categories from '../components/Categories';
-import { useFloorQuery } from '../context/FloorContext';
-import { useQuery } from '../context/QueryContext';
-import DraggableZoomableSVG from '../components/DraggableZoomableSVG';
-import Panorama from '../components/Panorama';
-import PanoramaViewer from '../components/PanoramaViewer';
-import { useCategory } from '../context/CategoryContext';
-import { useScene } from '../context/SceneContext';
-import person from "../assets/person.webp"
+import SearchBar from "../components/SearchBar";
+import buildingData from "../data/buildingData";
+import RoomInfo from "../components/RoomInfo";
+import button360 from "../assets/Logo/360.png";
+import BldOverview from "../components/BldOverview";
+import Categories from "../components/Categories";
+import { useFloorQuery } from "../context/FloorContext";
+import { useQuery } from "../context/QueryContext";
+import DraggableZoomableSVG from "../components/DraggableZoomableSVG";
+import PanoramaViewer from "../components/PanoramaViewer";
+import { useCategory } from "../context/CategoryContext";
+import { useScene } from "../context/SceneContext";
 import { useLocation } from "react-router-dom";
-import Keyboard from '../components/Keyboard';
-import Floors from '../components/Floors';
-import SurveyForm from '../components/SurveyForm'
-import { Navigation } from 'lucide-react';
+import Floors from "../components/Floors";
 import { useZoomContext } from "../context/ZoomContext";
-import { usePath } from '../context/PathContext';
+import { usePath } from "../context/PathContext";
 
 function Map() {
+  const { query, setQuery } = useQuery();
+  const { setCategory } = useCategory();
+  const { setCurrentScene } = useScene();
+  const { setPath } = usePath();
+  const { currentFloor, setCurrentFloor } = useFloorQuery();
+  const { zoomToBuilding } = useZoomContext();
+  const location = useLocation();
 
-      const {query, setQuery} = useQuery();
-      const {setCategory} = useCategory();
-      const {setCurrentScene} = useScene();
-      const {setPath} = usePath();
+  const [searchTerm, setSearchTerm] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+  const [disable, setDisable] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
-          const [searchTerm, setSearchTerm]= useState("");
-          const [suggestions, setSuggestions] = useState([]);
-          const [showMenu, setShowMenu] = useState(false);
-          const [disable, setDisable] = useState(false);
+  const [roomSearched, setRoomSearched] = useState(false);
+  const [bldCliked, setBldClicked] = useState(false);
 
-          const [showPopup, setShowPopup] = useState(false);
-          const {currentFloor, setCurrentFloor} = useFloorQuery();
+  const [clicked, setClicked] = useState(false);
+  const [keyboardClicked, setKeyboardClicked] = useState(false);
+  const [survey, setSurvey] = useState(false);
 
-          const [roomClicked, setRoomClicked] = useState(false);
-          const [roomSearched, setRoomSearched] = useState(false);
-          const [bldCliked, setBldClicked] = useState(false);
-    
-          const [clicked, setClicked] = useState(false);
-          const [keyboardClicked, setKeyboardClicked] = useState(false); // Move state here
-          const location = useLocation();
-           const { zoomToBuilding } = useZoomContext(); // ✅
+  const isNavigating = !!(query.room?.name || query.room?.code || query.building);
 
-     useEffect(() => {
-      const params = new URLSearchParams(location.search);
+  const fuzzyMatch = useCallback((str, queryText) => {
+    const source = (str || "").toLowerCase();
+    const target = (queryText || "").toLowerCase();
 
-      const building = params.get("building");
-      const floor = params.get("floor");
-      const name = params.get("name");
-      const code = params.get("code");
+    let i = 0;
+    for (let j = 0; j < source.length && i < target.length; j++) {
+      if (source[j] === target[i]) i++;
+    }
+    return i === target.length;
+  }, []);
 
-      if (!building && !name && !code) return;
+  const searchIndex = useMemo(() => {
+    const result = [];
 
-      let selected = null;
+    for (const [buildingName, building] of Object.entries(buildingData)) {
+      result.push({
+        building: buildingName,
+        floor: null,
+        room: null,
+        buildingNameLower: buildingName.toLowerCase(),
+        roomNameLower: "",
+        roomCodeLower: "",
+      });
 
-      for (const [buildingName, buildingDataItem] of Object.entries(buildingData)) {
-        if (building && buildingName !== building) continue;
-        if (!buildingDataItem.rooms) continue;
+      if (!building.rooms) continue;
 
-        for (const [floorKey, rooms] of Object.entries(buildingDataItem.rooms)) {
-          if (floor && String(floorKey) !== String(floor)) continue;
+      for (const [floor, rooms] of Object.entries(building.rooms)) {
+        for (const room of rooms) {
+          result.push({
+            building: buildingName,
+            floor,
+            room,
+            buildingNameLower: buildingName.toLowerCase(),
+            roomNameLower: (room?.name || "").toLowerCase(),
+            roomCodeLower: (room?.code || "").toLowerCase(),
+          });
+        }
+      }
+    }
 
-          for (const room of rooms) {
-            const codeMatch = code && room.code === code;
-            const nameMatch = name && room.name === name;
+    return result;
+  }, []);
 
-            if (codeMatch || nameMatch) {
-              selected = {
-                building: buildingName,
-                floor: floorKey,
-                room,
-              };
-              break;
-            }
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+
+    const building = params.get("building");
+    const floor = params.get("floor");
+    const name = params.get("name");
+    const code = params.get("code");
+    const path = params.get("path");
+
+    if (!building && !name && !code) return;
+
+    let selected = null;
+
+    for (const [buildingName, buildingDataItem] of Object.entries(buildingData)) {
+      if (building && buildingName !== building) continue;
+      if (!buildingDataItem.rooms) continue;
+
+      for (const [floorKey, rooms] of Object.entries(buildingDataItem.rooms)) {
+        if (floor && String(floorKey) !== String(floor)) continue;
+
+        for (const room of rooms) {
+          const codeMatch = code && room.code === code;
+          const nameMatch = name && room.name === name;
+
+          if (codeMatch || nameMatch) {
+            selected = {
+              building: buildingName,
+              floor: floorKey,
+              room,
+            };
+            break;
           }
-
-          if (selected) break;
         }
 
         if (selected) break;
       }
 
-      if (!selected && building) {
-        selected = {
-          building,
-          floor: floor || null,
-          room: null,
-        };
-      }
-
-      if (selected) {
-        setQuery((prev) => ({
-          ...prev,
-          building: selected.building || "",
-          floor: selected.floor || "",
-          room: selected.room
-            ? {
-                name: selected.room.name || "",
-                code: selected.room.code || "",
-                img: selected.room.img || "",
-                description: selected.room.description || "",
-              }
-            : { name: "", code: "", img: "", description: "" },
-        }));
-
-        if (selected.floor) {
-          setCurrentFloor(Number(selected.floor));
-        }
-
-        if (selected.room) {
-          setRoomSearched(true);
-          setBldClicked(false);
-          setDisable(true);
-          setCurrentScene(selected.room.name);
-        } else {
-          setBldClicked(true);
-          setRoomSearched(false);
-          setDisable(true);
-          setCurrentScene(selected.building);
-        }
-      }
-}, [location.search, setQuery, setCurrentFloor, setCurrentScene]);
-
-
-      const [survey, setSurvey] = useState(false);
-      // Derived State: True if user has selected a specific room OR a building
-      const isNavigating = !!(query.room?.name || query.room?.code || query.building);
-
-      useEffect(() => {
-        let timer;
-
-        // Start timer only if survey is hidden AND navigation is active
-        if (!survey && isNavigating) {
-          console.log("Navigation detected. Starting 60s survey timer...");
-          
-          timer = setTimeout(() => {
-            setSurvey(true);
-
-            // Reset the query to "stop" navigation and clear the UI
-            // setQuery({
-            //   building: "",
-            //   floor: "",
-            //   room: { name: "", code: "", img: "", description: "", floor: "" }
-            // });
-            //reset panorama
-            // setClicked(false);
-            //reset path
-            // setPath("");
-
-            // Close any open UI panels
-            // setRoomSearched(false);
-            // setBldClicked(false);
-          }, 60000);
-        }
-
-        // Cleanup: If the user manually closes the result or changes navigation, reset timer
-        return () => {
-          if (timer) {
-            clearTimeout(timer);
-            console.log("Timer cleared.");
-          }
-        };
-      }, [survey, isNavigating, setQuery]);
-      
-              /////////////////////////////////////// for search bar functions /////////////////////////////////////////////////////
-    
-    
-  const fuzzyMatch = (str, query) => {
-    str = str.toLowerCase();
-    query = query.toLowerCase();
-    let i = 0;
-    for (let j = 0; j < str.length && i < query.length; j++) {
-        if (str[j] === query[i]) i++;
+      if (selected) break;
     }
-    return i === query.length;
-};
 
-const handleSearch = (e) => {
-    const value = (e && e.target) ? e.target.value : e;
-    setSearchTerm(value);
+    if (!selected && building) {
+      selected = {
+        building,
+        floor: floor || null,
+        room: null,
+      };
+    }
 
-    if (!value) {
+    if (!selected) return;
+
+    setQuery((prev) => ({
+      ...prev,
+      building: selected.building || "",
+      floor: selected.floor || "",
+      room: selected.room
+        ? {
+            name: selected.room.name || "",
+            code: selected.room.code || "",
+            img: selected.room.img || "",
+            description: selected.room.description || "",
+          }
+        : { name: "", code: "", img: "", description: "" },
+    }));
+
+    if (path) {
+      setPath(path);
+    }
+
+    if (selected.floor) {
+      setCurrentFloor(Number(selected.floor));
+    }
+
+    if (selected.room) {
+      setRoomSearched(true);
+      setBldClicked(false);
+      setDisable(true);
+      setCurrentScene(selected.room.name);
+    } else {
+      setBldClicked(true);
+      setRoomSearched(false);
+      setDisable(true);
+      setCurrentScene(selected.building);
+    }
+  }, [location.search, setQuery, setCurrentFloor, setCurrentScene, setPath]);
+
+  useEffect(() => {
+    let timer;
+
+    if (!survey && isNavigating) {
+      timer = setTimeout(() => {
+        setSurvey(true);
+      }, 60000);
+    }
+
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
+  }, [survey, isNavigating]);
+
+  const handleSearch = useCallback(
+    (e) => {
+      const value = e?.target ? e.target.value : e;
+      setSearchTerm(value);
+
+      if (!value) {
         setSuggestions([]);
         return;
-    }
+      }
 
-    const result = [];
+      const lowered = value.toLowerCase();
 
-    for (const [buildingName, building] of Object.entries(buildingData)) {
-        if (fuzzyMatch(buildingName, value)) {  // ✅ building name
-            result.push({
-                building: buildingName,
-                floor: null,
-                room: null,
-            });
+      const result = searchIndex.filter((item) => {
+        if (!item.room) {
+          return fuzzyMatch(item.buildingNameLower, lowered);
+        }
+
+        return (
+          fuzzyMatch(item.roomCodeLower, lowered) ||
+          fuzzyMatch(item.roomNameLower, lowered)
+        );
+      });
+
+      setSuggestions(result);
+    },
+    [searchIndex, fuzzyMatch]
+  );
+
+  const handleSuggestionClicked = useCallback(
+    (suggestion) => {
+      if (suggestion.floor) {
+        setCurrentFloor(Number(suggestion.floor));
+      }
+
+      setQuery((prev) => ({
+        ...prev,
+        building: suggestion.building || prev.building,
+        floor: suggestion.floor || prev.floor,
+        room: {
+          name: suggestion.room?.name || prev.room?.name,
+          code: suggestion.room?.code || prev.room?.code,
+          img: suggestion.room?.img || prev.room?.img,
+          description: suggestion.room?.description || prev.room?.description,
+        },
+      }));
+
+      if (suggestion.room) {
+        setRoomSearched(true);
+        setBldClicked(false);
+        setCurrentScene(suggestion.room.name);
+      } else {
+        setCurrentScene(suggestion.building);
+        setBldClicked(true);
+        setRoomSearched(false);
+      }
+
+      setSearchTerm("");
+      setSuggestions([]);
+      setDisable(true);
+    },
+    [setCurrentFloor, setQuery, setCurrentScene]
+  );
+
+  const handleOpenPopup = useCallback(
+    (buildingName) => {
+      setQuery((prev) => ({
+        ...prev,
+        building: buildingName,
+      }));
+      setShowPopup(true);
+      setDisable(true);
+    },
+    [setQuery]
+  );
+
+  const OpenCard = useCallback(
+    (clickedName) => {
+      setCategory("");
+      let selected = null;
+
+      for (const [buildingName, building] of Object.entries(buildingData)) {
+        if (buildingName === clickedName) {
+          selected = { building: buildingName, floor: null, room: null };
+          break;
         }
 
         if (!building.rooms) continue;
 
         for (const [floor, rooms] of Object.entries(building.rooms)) {
-            rooms.forEach((room) => {
-                if (
-                    fuzzyMatch(room.code, value) ||   // ✅ room code
-                    fuzzyMatch(room.name, value)       // ✅ room name
-                ) {
-                    result.push({
-                        building: buildingName,
-                        floor,
-                        room
-                    });
-                }
-            });
-        }
-    }
-
-    setSuggestions(result);
-};
-    
-    const handleSuggestionClicked = (suggestion) => {
-  console.log(`suggestion:`);
-   console.log(suggestion);
-   
-if (suggestion.floor) {
-    setCurrentFloor(Number(suggestion.floor));
-  }
-  setQuery(prev => ({
-    ...prev,
-    building: suggestion.building || prev.building,
-    floor: suggestion.floor || prev.floor,
-    room: {
-      name: suggestion.room?.name || prev.room?.name,
-      code: suggestion.room?.code || prev.room?.code,
-      img: suggestion.room?.img || prev.room?.img,
-      description: suggestion.room?.description || prev.room?.description,
-    }
-
-  }));
-
-  // Reset all view states first
-
- 
-     if(suggestion.room){
-         setRoomSearched(true);
-          setBldClicked(false);  
-           setCurrentScene(suggestion.room.name);
-        }
-
-      // Set the appropriate state based on suggestion type
-      if (!suggestion.room) {
-        // Building-level search - show building overview
-         setCurrentScene(suggestion.building);
-        setBldClicked(true);  // This is what controls BldOverview rendering
-        setRoomSearched(false);
-         
-      }
-  
-  setSearchTerm("");  
-  setSuggestions([]);
-  setDisable(true);
-  console.log("query");
-   console.log(query);
-
-}
-    
-     const handleOpenPopup = (buildingName) =>{
-          if(isDragging == false){
-              setQuery(prev => ({
-          ...prev,
-          building: buildingName   // only update building
-        }));
-             setShowInfoPanel(false);
-             setShowPopup(true);
-            setDisable(true);
-            
-          }
-     }
-    
-          // Example: When user clicks a building or room card
-      const OpenCard = (clickedName) => {
-        setCategory("");
-        let selected = null;
-
-        // Loop through buildings
-        for (const [buildingName, building] of Object.entries(buildingData)) {
-          // 🏢 If user clicked a building name
-          if (buildingName === clickedName) {
-            selected = { building: buildingName, floor: null, room: null };
-            break;
-          }
-
-          // Skip buildings without rooms
-          if (!building.rooms) continue;
-
-          // 🏬 Search rooms for a match
-          for (const [floor, rooms] of Object.entries(building.rooms)) {
-            for (const room of rooms) {
-              if (room.name === clickedName || room.code === clickedName) {
-                selected = { building: buildingName, floor, room };
-                break;
-              }
+          for (const room of rooms) {
+            if (room.name === clickedName || room.code === clickedName) {
+              selected = { building: buildingName, floor, room };
+              break;
             }
-            if (selected) break;
           }
           if (selected) break;
         }
+        if (selected) break;
+      }
 
-        // If a building or room was found, update query
-        if (selected) {
-          setQuery((prev) => ({
-            ...prev,
-            building: selected.building || prev.building,
-            floor: selected.floor || prev.floor,
-            room: {
-              name: selected.room?.name || prev.room?.name,
-              code: selected.room?.code || prev.room?.code,
-              img: selected.room?.img || prev.room?.img,
-              description: selected.room?.description || prev.room?.description,
-            },
-          }));
-        }
-        
-        if(selected.room){
-            setRoomSearched(true);
-            setBldClicked(false);
-        }
-        if(!selected.room){
-            setBldClicked(true);
-            setRoomSearched(false);
-        }
-        console.log(query);
-      };
+      if (selected) {
+        setQuery((prev) => ({
+          ...prev,
+          building: selected.building || prev.building,
+          floor: selected.floor || prev.floor,
+          room: {
+            name: selected.room?.name || prev.room?.name,
+            code: selected.room?.code || prev.room?.code,
+            img: selected.room?.img || prev.room?.img,
+            description: selected.room?.description || prev.room?.description,
+          },
+        }));
+      }
 
+      if (selected?.room) {
+        setRoomSearched(true);
+        setBldClicked(false);
+      } else {
+        setBldClicked(true);
+        setRoomSearched(false);
+      }
+    },
+    [setCategory, setQuery]
+  );
 
+  const handleSvgDragStart = useCallback(() => {
+    setKeyboardClicked(false);
+  }, []);
 
   return (
+    <div className="h-[100%]">
+      <DraggableZoomableSVG OpenCard={OpenCard} onDragStart={handleSvgDragStart} />
 
-    <div  className='h-[100%]'>
+      <button
+        onClick={() => setClicked((prev) => !prev)}
+        className="absolute lg:bottom-4 right-[26px] z-10 w-12 h-12 lg:w-12 lg:h-12 
+                   bg-red-600 rounded-full flex items-center justify-center 
+                   border-2 border-red-400/40 shadow-[0_0_15px_#dc2626]
+                   hover:bg-red-500 hover:shadow-[0_0_35px_#ef4444] 
+                   hover:scale-110 transition-all duration-300 active:scale-95 group"
+        title="Street View"
+      >
+        <img width={31} src={button360} alt="" />
+      </button>
 
-            <DraggableZoomableSVG OpenCard={OpenCard}
-            onDragStart={() =>setKeyboardClicked(false)}
-            />   
+      {clicked && <PanoramaViewer clicked={clicked} setClicked={setClicked} />}
 
-      
-      
-              <button
-            onClick={() => setClicked(!clicked)} className="absolute lg:bottom-4  right-[26px] z-10 w-12 h-12 lg:w-12 lg:h-12 
-                      bg-red-600 rounded-full flex items-center justify-center 
-                      border-2 border-red-400/40 shadow-[0_0_15px_#dc2626]
-                      hover:bg-red-500 hover:shadow-[0_0_35px_#ef4444] 
-                      hover:scale-110 transition-all duration-300 active:scale-95 group"
-            title="Street View"
-          >
-            <img width={31} src={button360} alt="" srcset="" />
-            {/* <Navigation 
-              size={28} 
-              className="text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]
-                        transition-all duration-700 ease-in-out
-                        group-hover:rotate-[360deg] group-hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)]" 
-              strokeWidth={2.5}
-            /> */}
-          </button>
-              
-                  <PanoramaViewer clicked={clicked} setClicked={setClicked} />
-        
-             
-             <Categories />
-           
-           
-                        <SearchBar searchTerm={searchTerm} suggestions={suggestions} handleSearch={handleSearch} 
-                        keyboardClicked={keyboardClicked}
-                        setKeyboardClicked={setKeyboardClicked}
-                        handleSuggestionClicked={handleSuggestionClicked} 
-                         zoomToBuilding={zoomToBuilding}
-                        />
+      <Categories />
 
+      <SearchBar
+        searchTerm={searchTerm}
+        suggestions={suggestions}
+        handleSearch={handleSearch}
+        keyboardClicked={keyboardClicked}
+        setKeyboardClicked={setKeyboardClicked}
+        handleSuggestionClicked={handleSuggestionClicked}
+        zoomToBuilding={zoomToBuilding}
+      />
 
-            { roomSearched  && (
-            <>
-                <RoomInfo
-                    setShowPopup={setShowPopup}
-                    showPopup={showPopup}
-                    roomSearched={roomSearched}
-                    setRoomSearched={setRoomSearched}
-                    disable={disable}
-                    setDisable={setDisable}
-                    bldCliked={bldCliked}
-                    setBldClicked={setBldClicked}
-                /> 
-            </>
-                )}
+      {roomSearched && (
+        <RoomInfo
+          setShowPopup={setShowPopup}
+          showPopup={showPopup}
+          roomSearched={roomSearched}
+          setRoomSearched={setRoomSearched}
+          disable={disable}
+          setDisable={setDisable}
+          bldCliked={bldCliked}
+          setBldClicked={setBldClicked}
+        />
+      )}
 
-           {bldCliked &&(
-                <>
-                <BldOverview query={query}
-                setQuery={setQuery}
-                setBldClicked={setBldClicked}
-                handleOpenPopup={handleOpenPopup}
-                setRoomSearched={setRoomSearched}
-                roomSearched={roomSearched}
-                />
-                </>
-           )
-}
+      {bldCliked && (
+        <BldOverview
+          query={query}
+          setQuery={setQuery}
+          setBldClicked={setBldClicked}
+          handleOpenPopup={handleOpenPopup}
+          setRoomSearched={setRoomSearched}
+          roomSearched={roomSearched}
+        />
+      )}
 
+      <Floors />
 
-
-      <Floors/>
-  
       {/* <SurveyForm survey={survey} setSurvey={setSurvey}/> */}
-
     </div>
-  )
+  );
 }
 
-export default Map
+export default Map;
