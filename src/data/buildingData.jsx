@@ -142,6 +142,12 @@ import maintain from "../assets/rooms/Bldgs/MaintenanceOffice.jpg"
 import officemaintain from "../assets/rooms/Bldgs/OfficeoftheElectricalMaintenance.jpg"
 import sewing from "../assets/rooms/Bldgs/SewingLab.jpg"
 import resource from "../assets/rooms/Bldgs/resource.webp"
+import shower from "../assets/rooms/Bldgs/shower.webp"
+import grand1 from  "../assets/rooms/Bldgs/grand1.webp"
+import grand2 from  "../assets/rooms/Bldgs/grand2.webp"
+import grand3 from  "../assets/rooms/Bldgs/grand3.webp"
+import grand4 from  "../assets/rooms/Bldgs/grand4.webp"
+import grand5 from  "../assets/rooms/Bldgs/grand5.webp"
 
 const buildingData = {
 
@@ -1447,6 +1453,60 @@ rooms: {
                 ]
               }
     },
+
+    'Granstand' :{
+      totalFloors: 1,
+      1:[
+        {
+          code: "",
+          name: "Men's Shower",
+          description: "A dedicated facility equipped with showers and changing areas for students and athletes to use after physical activities or sports events.",
+          img: shower
+        },
+        {
+          code: "",
+          name: "Grandstand 1 Norsu",
+          description: "The primary tiered seating area overlooking the campus field, serving as a COT room and providing a vantage point for sports and university gatherings.",
+          img: grand1
+        },
+        {
+          code: "",
+          name: "Grandstand 2 Norsu",
+          description: "A secondary section of the grandstand seating complex, utilized as a COT room and for spectator accommodation during outdoor campus events.",
+          img: grand2
+        },
+        {
+          code: "",
+          name: "Grandstand 3 Norsu",
+          description: "A mid-section grandstand area that functions as a COT room, offering sheltered seating for students and guests during field activities.",
+          img: grand3
+        },
+        {
+          code: "",
+          name: "Grandstand 4 Norsu",
+          description: "A designated tiered seating section of the university grandstand, currently configured as a COT room for specific department or campus use.",
+          img: grand4
+        },
+        {
+          code: "",
+          name: "Grandstand 5 Norsu",
+          description: "The outer section of the grandstand complex, providing COT room space and elevated seating for viewing athletic meets and ceremonies.",
+          img: grand5
+        },
+        {
+          code: "",
+          name: "DRRM Training Room",
+          description: "The Disaster Risk Reduction and Management training hub, used for safety workshops, emergency response drills, and campus resilience planning.",
+          img: ddrm
+        },
+        {
+          code: "",
+          name: "ROTC Office",
+          description: "The administrative and operational headquarters for the Reserve Officers' Training Corps, managing student cadet records and military science training.",
+          img: rotc
+        }
+        ]
+            }
 
 };
 

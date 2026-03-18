@@ -11,7 +11,7 @@ function Floors() {
   const floors = ['Floor 1', 'Floor 2', 'Floor 3', 'Floor 4'];
 
   return (
-    <div className="absolute bottom-24 lg:bottom-5 right-28 z-[40] w-36">
+    <div className="absolute bottom-32 lg:bottom-5 lg:right-28 right-5  z-[40] w-36">
       
       {/* Dropdown Menu */}
       {isOpen && (
