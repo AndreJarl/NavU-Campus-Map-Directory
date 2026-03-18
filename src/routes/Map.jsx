@@ -47,15 +47,86 @@ function Map() {
           const location = useLocation();
            const { zoomToBuilding } = useZoomContext(); // ✅
 
-        useEffect(() => {
-          const params = new URLSearchParams(location.search);
-          const name = params.get("name");
-           // Only open if nothing is currently open
-            if (name && !query.room?.name && !query.building) {
-              OpenCard(name);
+     useEffect(() => {
+      const params = new URLSearchParams(location.search);
+
+      const building = params.get("building");
+      const floor = params.get("floor");
+      const name = params.get("name");
+      const code = params.get("code");
+
+      if (!building && !name && !code) return;
+
+      let selected = null;
+
+      for (const [buildingName, buildingDataItem] of Object.entries(buildingData)) {
+        if (building && buildingName !== building) continue;
+        if (!buildingDataItem.rooms) continue;
+
+        for (const [floorKey, rooms] of Object.entries(buildingDataItem.rooms)) {
+          if (floor && String(floorKey) !== String(floor)) continue;
+
+          for (const room of rooms) {
+            const codeMatch = code && room.code === code;
+            const nameMatch = name && room.name === name;
+
+            if (codeMatch || nameMatch) {
+              selected = {
+                building: buildingName,
+                floor: floorKey,
+                room,
+              };
+              break;
             }
-          console.log("Query updated:", query);
-      }, [query, location]);
+          }
+
+          if (selected) break;
+        }
+
+        if (selected) break;
+      }
+
+      if (!selected && building) {
+        selected = {
+          building,
+          floor: floor || null,
+          room: null,
+        };
+      }
+
+      if (selected) {
+        setQuery((prev) => ({
+          ...prev,
+          building: selected.building || "",
+          floor: selected.floor || "",
+          room: selected.room
+            ? {
+                name: selected.room.name || "",
+                code: selected.room.code || "",
+                img: selected.room.img || "",
+                description: selected.room.description || "",
+              }
+            : { name: "", code: "", img: "", description: "" },
+        }));
+
+        if (selected.floor) {
+          setCurrentFloor(Number(selected.floor));
+        }
+
+        if (selected.room) {
+          setRoomSearched(true);
+          setBldClicked(false);
+          setDisable(true);
+          setCurrentScene(selected.room.name);
+        } else {
+          setBldClicked(true);
+          setRoomSearched(false);
+          setDisable(true);
+          setCurrentScene(selected.building);
+        }
+      }
+}, [location.search, setQuery, setCurrentFloor, setCurrentScene]);
+
 
       const [survey, setSurvey] = useState(false);
       // Derived State: True if user has selected a specific room OR a building
