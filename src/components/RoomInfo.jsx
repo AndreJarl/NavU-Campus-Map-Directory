@@ -14,7 +14,7 @@ import { useFloorTransition } from "../context/TransitionContext";
 function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) {
   const { query } = useQuery();
   const { room, floor, building } = query;
-  const { setPath } = usePath();
+  const { path, setPath } = usePath();
   const { setCurrentScene } = useScene();
   const { zoomToBuilding } = useZoomContext();
   const { setCurrentFloor } = useFloorQuery();
@@ -39,9 +39,10 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
     if (floor) url.searchParams.set("floor", floor);
     if (room?.name) url.searchParams.set("name", room.name);
     if (room?.code) url.searchParams.set("code", room.code);
+    if (path) url.searchParams.set("path", path);
 
     return url.toString();
-  }, [building, floor, room?.name, room?.code]);
+  }, [building, floor, room?.name, room?.code, path]);
 
   useEffect(() => {
     setImageError(false);
@@ -53,32 +54,23 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
 
     const url = new URL(window.location.href);
 
-    if (building) {
-      url.searchParams.set("building", building);
-    } else {
-      url.searchParams.delete("building");
-    }
+    if (building) url.searchParams.set("building", building);
+    else url.searchParams.delete("building");
 
-    if (floor) {
-      url.searchParams.set("floor", floor);
-    } else {
-      url.searchParams.delete("floor");
-    }
+    if (floor) url.searchParams.set("floor", floor);
+    else url.searchParams.delete("floor");
 
-    if (room?.name) {
-      url.searchParams.set("name", room.name);
-    } else {
-      url.searchParams.delete("name");
-    }
+    if (room?.name) url.searchParams.set("name", room.name);
+    else url.searchParams.delete("name");
 
-    if (room?.code) {
-      url.searchParams.set("code", room.code);
-    } else {
-      url.searchParams.delete("code");
-    }
+    if (room?.code) url.searchParams.set("code", room.code);
+    else url.searchParams.delete("code");
+
+    if (path) url.searchParams.set("path", path);
+    else url.searchParams.delete("path");
 
     window.history.replaceState({}, "", url);
-  }, [building, floor, room?.name, room?.code]);
+  }, [building, floor, room?.name, room?.code, path]);
 
   useEffect(() => {
     if (isDragging || showOverlay || clicked) {
@@ -116,6 +108,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
     url.searchParams.delete("floor");
     url.searchParams.delete("name");
     url.searchParams.delete("code");
+    url.searchParams.delete("path");
     window.history.replaceState({}, "", url);
   };
 
@@ -264,57 +257,75 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
         </div>
       </div>
 
-      {showOverlay && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
-          <div
-            className="absolute inset-0 bg-black/80 backdrop-blur-sm"
-            onClick={() => setShowOverlay(false)}
-          />
+ {showOverlay && (
+  <div className="fixed inset-0 z-[200] flex items-center justify-center p-2 sm:p-4">
+    <div
+      className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+      onClick={() => setShowOverlay(false)}
+    />
 
-          <div className="relative bg-black w-full max-w-5xl h-[85vh] rounded-[2.5rem] shadow-2xl overflow-hidden border border-white/5">
-            <button
-              onClick={() => setShowOverlay(false)}
-              className="absolute right-6 top-6 z-[301] p-3 bg-black/40 text-white rounded-full backdrop-blur-md"
-            >
-              <AiOutlineClose size={22} />
-            </button>
+    <div
+      className="relative bg-black w-full max-w-5xl
+                 h-[70vh] lg:h-[85vh]
+                 rounded-[1.5rem] lg:rounded-[2.5rem]
+                 shadow-2xl overflow-hidden border border-white/5"
+    >
+      <button
+        onClick={() => setShowOverlay(false)}
+        className="absolute right-3 top-3 lg:right-6 lg:top-6 z-[301]
+                   p-2.5 lg:p-3 bg-black/40 text-white rounded-full backdrop-blur-md"
+      >
+        <AiOutlineClose size={20} className="lg:w-[22px] lg:h-[22px]" />
+      </button>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 pointer-events-none" />
 
-            <div className="absolute bottom-10 left-10 z-20 text-white">
-              <h2 className="text-3xl md:text-5xl font-bold mb-2">{room?.name}</h2>
-              <span className="bg-red-600 px-4 py-1 rounded-full text-sm font-bold uppercase">
-                Floor {floor}
-              </span>
-              <span className="bg-gray-600 px-4 py-1 rounded-full ml-4 text-sm font-bold uppercase">
-                {room?.code || ""}
-              </span>
-            </div>
+      <div className="absolute bottom-6 left-4 right-4 lg:bottom-10 lg:left-10 lg:right-auto z-20 text-white">
+        <h2 className="text-xl sm:text-2xl md:text-5xl font-bold mb-2 leading-tight pr-12 lg:pr-0">
+          {room?.name}
+        </h2>
 
-            {imageError ? (
-              <div className="w-full h-full flex flex-col items-center justify-center bg-zinc-900 text-zinc-700">
-                <ImageOff size={80} strokeWidth={1} />
-                <span className="mt-4 text-sm font-medium uppercase tracking-[0.3em]">
-                  Room Preview Unavailable
-                </span>
-              </div>
-            ) : (
-              <img className="w-full" src={room?.img} alt="" onError={() => setImageError(true)} />
-            )}
-
-            <button
-              onClick={() => setClicked(!clicked)}
-              className="absolute lg:bottom-10 bottom-32 right-10 z-[60] w-14 h-14 bg-red-600 rounded-full flex items-center justify-center border-2
-               border-red-400/40 shadow-xl hover:bg-red-500 hover:shadow-[0_0_35px_#ef4444]
-               hover:scale-110 duration-300 active:scale-95 group transition-all group"
-            >
-              <img width={40} src={button360} alt="" />
-            </button>
-
-            <PanoramaViewer clicked={clicked} setClicked={setClicked} />
-          </div>
+        <div className="flex flex-wrap items-center gap-2 lg:gap-4">
+          <span className="bg-red-600 px-3 py-1 lg:px-4 rounded-full text-xs lg:text-sm font-bold uppercase">
+            Floor {floor}
+          </span>
+          <span className="bg-gray-600 px-3 py-1 lg:px-4 rounded-full text-xs lg:text-sm font-bold uppercase">
+            {room?.code || ""}
+          </span>
         </div>
+      </div>
+
+      {imageError ? (
+        <div className="w-full h-full flex flex-col items-center justify-center bg-zinc-900 text-zinc-700 px-6 text-center">
+          <ImageOff size={56} strokeWidth={1} className="lg:w-[80px] lg:h-[80px]" />
+          <span className="mt-4 text-xs lg:text-sm font-medium uppercase tracking-[0.2em] lg:tracking-[0.3em]">
+            Room Preview Unavailable
+          </span>
+        </div>
+      ) : (
+        <img
+          className="w-full h-full object-cover"
+          src={room?.img}
+          alt={room?.name}
+          onError={() => setImageError(true)}
+        />
       )}
+
+      <button
+        onClick={() => setClicked(!clicked)}
+        className="absolute bottom-24 right-4 lg:bottom-10 lg:right-10 z-[60]
+                   w-12 h-12 lg:w-14 lg:h-14
+                   bg-red-600 rounded-full flex items-center justify-center border-2
+                   border-red-400/40 shadow-xl hover:bg-red-500 hover:shadow-[0_0_35px_#ef4444]
+                   hover:scale-110 duration-300 active:scale-95 group transition-all"
+      >
+        <img width={32} className="lg:w-10" src={button360} alt="" />
+      </button>
+
+      <PanoramaViewer clicked={clicked} setClicked={setClicked} />
+    </div>
+  </div>
+)}
 
       {showQRPopup && (
         <div
