@@ -1089,7 +1089,7 @@ return (
 
       {/* COE Room 2 bldg */}
       <path
-        onClick={() => bldClicked("EN-103")}
+        onClick={() => bldClicked("EN-102")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#ff3030" : category[""] ? "#ff3030" : "#B0B0B0"}
         stroke={allFalse ? "#C32525" : category[""] ? "#C32525" : "#B0B0B0"}
@@ -1107,7 +1107,7 @@ return (
         font-size="2"
         fill="black"
       >
-        EN-103
+        EN-102
       </text>
 
       {/* COE Room 1 bldg */}

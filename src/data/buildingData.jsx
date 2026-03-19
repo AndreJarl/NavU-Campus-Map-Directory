@@ -200,7 +200,7 @@ const buildingData = {
 
       },
       {
-        code: "EN-103", 
+        code: "EN-102", 
         name: "COE Room 2",
         description: "A learning area where students attend lectures, participate in discussions, and work on academic activities guided by their teachers. ",
         img: coe2
