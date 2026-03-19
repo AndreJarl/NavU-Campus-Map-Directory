@@ -338,6 +338,18 @@ useEffect(() => {
         <img width={31} src={button360} alt="" />
       </button>
 
+          <button
+        onClick={() => setSurvey(true)}
+        className="absolute lg:bottom-4 left-[10px] z-10 w-12 h-12 lg:w-12 lg:h-12 
+                   bg-red-600 rounded-full flex items-center justify-center 
+                   border-2 border-red-400/40 shadow-[0_0_15px_#dc2626]
+                   hover:bg-red-500 hover:shadow-[0_0_35px_#ef4444] text-[10px]
+                   hover:scale-110 transition-all duration-300 active:scale-95 group"
+        title="Street View"
+      >
+       survey
+      </button>
+
       {clicked && <PanoramaViewer clicked={clicked} setClicked={setClicked} />}
 
       <Categories />
