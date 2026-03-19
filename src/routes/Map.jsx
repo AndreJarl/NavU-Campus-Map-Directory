@@ -177,11 +177,11 @@ useEffect(() => {
       setCurrentScene(selected.building);
     }
   }, [location.search, setQuery, setCurrentFloor, setCurrentScene, setPath]);
-
-  useEffect(() => {
+ 
+ useEffect(() => {
     let timer;
 
-    if (!survey && isNavigating) {
+    if (!survey && (roomSearched || bldCliked)) { // ← use these instead
       timer = setTimeout(() => {
         setSurvey(true);
       }, 60000);
@@ -190,7 +190,8 @@ useEffect(() => {
     return () => {
       if (timer) clearTimeout(timer);
     };
-  }, [survey, isNavigating]);
+  }, [survey, roomSearched, bldCliked]);
+
 
   const handleSearch = useCallback(
     (e) => {
