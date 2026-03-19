@@ -104,6 +104,9 @@ import en303 from "../assets/rooms/COE/EN-303A.webp"
 import melab2 from "../assets/rooms/COE/MELAB2.webp"
 import melab1 from "../assets/rooms/COE/MELaboratory1.webp"
 import encme201 from "../assets/rooms/cme/en201.webp"
+import coe1 from "../assets/rooms/COE/coe1.webp"
+import coe2 from "../assets/rooms/BLDGS/coe2.webp"
+import tennis from "../assets/rooms/BLDGS/tennis.webp"
 
 import cmecomlab1 from "../assets/rooms/cme/CME-COMLAB1A.webp"
 import cmecomlab2 from "../assets/rooms/cme/CME-COMLAB2A.webp"
@@ -192,7 +195,7 @@ const buildingData = {
         code: "EN-101", 
         name: "COE Room 1",
         description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-        img: " "
+        img: coe1
 
 
       },
@@ -200,7 +203,7 @@ const buildingData = {
         code: "EN-103", 
         name: "COE Room 2",
         description: "A learning area where students attend lectures, participate in discussions, and work on academic activities guided by their teachers. ",
-        img: " "
+        img: coe2
          }
     ],
     2: [
@@ -1245,9 +1248,9 @@ rooms: {
                   },
                   {
                     code:"",
-                    name:"Tennis Court ",
+                    name:"Tennis Court",
                     description: "An outdoor sports area with marked courts and nets where students and staff can play tennis and practice related skills. ",
-                    img: "" 
+                    img: tennis
                   },
                   {
                     code:"",
@@ -1413,12 +1416,6 @@ rooms: {
                     name:"Kitchen Laboratory",
                     description: "Kitchen Laboratory",
                     img: HMLab
-                  },
-                    {
-                    code:"",
-                    name:"Tennis Court",
-                    description: "Tennis Court",
-                    img:""
                   },
                     {
                     code:"",
