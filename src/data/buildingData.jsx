@@ -1309,12 +1309,6 @@ rooms: {
                   },
                   {
                     code:"",
-                    name:"Furniture Workshop",
-                    description: "A practical workspace equipped with woodworking tools and materials where students design, build, and finish furniture pieces. ",
-                    img: ""
-                  },
-                  {
-                    code:"",
                     name:"Security Office",
                     description:"The area where campus security personnel monitor safety, assist students, and ensure the school’s rules and regulations are followed.",
                     img: " "
