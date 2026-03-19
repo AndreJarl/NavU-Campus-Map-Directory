@@ -36,7 +36,7 @@ const questions = [
   {
     id: 3,
     field: "usedBefore",
-    text: "3. Have you used the NavU kiosk before?",
+    text: "3. Have you used the NavU kiosk prior to this survey? (Choose No if first time)",
     type: "choice",
     options: ["Yes", "No"],
   },

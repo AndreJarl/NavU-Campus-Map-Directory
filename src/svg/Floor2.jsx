@@ -535,7 +535,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
     fill="black"
     style={{ pointerEvents: 'none', userSelect: 'none' }}
   >
-    RESEARH & DEVELOPMENT
+    RESEARCH & DEVELOPMENT
   </text>
 </g>
 
