@@ -1089,7 +1089,7 @@ return (
 
       {/* COE Room 2 bldg */}
       <path
-        onClick={() => bldClicked("EN-102")}
+        onClick={() => bldClicked("EN-101")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#ff3030" : category[""] ? "#ff3030" : "#B0B0B0"}
         stroke={allFalse ? "#C32525" : category[""] ? "#C32525" : "#B0B0B0"}
@@ -1097,7 +1097,7 @@ return (
         d="M249 544h21v17h-21z"
       />
       <text
-        onClick={() => bldClicked("COE Room 2")}
+       onClick={() => bldClicked("EN-101")}
         style={{ cursor: "pointer" }}
         x="259.5"
         y="553.5"
@@ -1107,12 +1107,12 @@ return (
         font-size="2"
         fill="black"
       >
-        EN-102
+        EN-101
       </text>
 
       {/* COE Room 1 bldg */}
       <path
-        onClick={() => bldClicked("EN-101")}
+        onClick={() => bldClicked("EN-102")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#ff3030" : category[""] ? "#ff3030" : "#B0B0B0"}
         stroke={allFalse ? "#C32525" : category[""] ? "#C32525" : "#B0B0B0"}
@@ -1120,7 +1120,7 @@ return (
         d="M270 562v16h-21v-16z"
       />
       <text
-        onClick={() => bldClicked("COE Room 1")}
+        onClick={() => bldClicked("EN-102")}
         style={{ cursor: "pointer" }}
         x="259.5"
         y="571"
@@ -1130,7 +1130,7 @@ return (
         font-size="2"
         fill="black"
       >
-        EN-101
+        EN-102
       </text>
 
       {/* Electrical Laboratory / EL bldg */}

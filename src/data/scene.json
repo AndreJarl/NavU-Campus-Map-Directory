@@ -609,7 +609,7 @@
         "pitch": -15.5,
         "yaw": 0,
         "type": "arrow",
-        "target": "COE Room 1",
+        "target": "EN-101",
         "arrowType": "forward"
       },
       {
@@ -628,14 +628,14 @@
       }
     ]
   },
-  "COE Room 1": {
+  "EN-101": {
     "image": "/360/ENG-CME/1FLR/EN-103.webp",
     "hotspots": [
       {
         "pitch": -15.5,
         "yaw": 0,
         "type": "arrow",
-        "target": "COE Room 2",
+        "target": "EN-102",
         "arrowType": "forward"
       },
       {
@@ -656,7 +656,7 @@
       
     ]
   },
-  "COE Room 2": {
+  "EN-102": {
     "image": "/360/ENG-CME/1FLR/EN-101.webp",
     "hotspots": [
       {
@@ -670,7 +670,7 @@
         "pitch": -155.5,
         "yaw": -10,
         "type": "arrow",
-        "target": "COE Room 1",
+        "target": "EN-101",
         "rotation": 0
       },
         {
@@ -710,7 +710,7 @@
         "pitch": -160.5,
         "yaw": 5,
         "type": "arrow",
-        "target": "COE Room 2"
+        "target": "EN-102"
       },
        {
         "pitch": -160.5,

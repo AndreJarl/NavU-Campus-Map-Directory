@@ -193,17 +193,17 @@ const buildingData = {
       },
       {        
         code: "EN-101", 
-        name: "COE Room 1",
+        name: "EN-101",
         description: "A standard learning space with chairs, tables, and a board where teachers conduct lessons and students engage in discussions and activities.",
-        img: coe1
+        img: coe2
 
 
       },
       {
         code: "EN-102", 
-        name: "COE Room 2",
+        name: "EN-102",
         description: "A learning area where students attend lectures, participate in discussions, and work on academic activities guided by their teachers. ",
-        img: coe2
+        img: coe1
          }
     ],
     2: [
