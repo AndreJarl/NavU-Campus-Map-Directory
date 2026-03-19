@@ -272,7 +272,7 @@
         "pitch": -20.5,
         "yaw": -5,
         "type": "arrow",
-        "target": "Electrical Engineering Laboratory",
+        "target": "Electrical Circuits and Machine Laboratory",
         "arrowType": "forward"
       },
            {
@@ -452,7 +452,7 @@
   },
 
 
-  "Electrical Engineering Laboratory": {
+  "Electrical Circuits and Machine Laboratory": {
     "image": "/360/ENG-CME/1FLR/ENGLAB1.webp",
     "yaw": 0,
     "hotspots": [
@@ -474,17 +474,18 @@
         "pitch": 25,
         "yaw": 160,
         "type": "info",
-        "label": "Electrical Engineering Laboratory"
+        "label": "Electrical Circuits and Machine Laboratory"
       },
         {
         "pitch": 15,
         "yaw": 10,
         "type": "info",
-        "label": "Engineering Laboratory"
+        "label": "Materials Testing and Surveying Laboratory"
+
       }
     ]
   },
-  "Engineering Laboratory": {
+  "Materials Testing and Surveying Laboratory": {
     "image": "/360/ENG-CME/1FLR/ENGLAB1.webp",
     "yaw": 0,
     "hotspots": [
@@ -506,13 +507,13 @@
         "pitch": 25,
         "yaw": 160,
         "type": "info",
-        "label": "Electrical Engineering Laboratory"
+        "label": "Materials Testing and Surveying Laboratory"
       },
         {
         "pitch": 15,
         "yaw": 10,
         "type": "info",
-        "label": "Engineering Laboratory"
+        "label": "Materials Testing and Surveying Laboratory"
       }
     ]
   },
@@ -533,7 +534,7 @@
         "pitch": -160.5,
         "yaw": 5,
         "type": "arrow",
-        "target": "Electrical Engineering Laboratory",
+        "target": "Materials Testing and Surveying Laboratory",
         "arrowType": "backward",
         "rotation": 180
       },

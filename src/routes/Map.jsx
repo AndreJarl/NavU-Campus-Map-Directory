@@ -16,6 +16,8 @@ import { useLocation } from "react-router-dom";
 import Floors from "../components/Floors";
 import { useZoomContext } from "../context/ZoomContext";
 import { usePath } from "../context/PathContext";
+import SurveyForm from "../components/SurveyForm";
+
 
 function Map() {
   const { query, setQuery } = useQuery();
@@ -50,6 +52,14 @@ function Map() {
     }
     return i === target.length;
   }, []);
+
+  useEffect(() => {
+  console.log("survey:", survey);
+}, [survey]);
+
+useEffect(() => {
+  console.log("isNavigating:", isNavigating);
+}, [isNavigating]);
 
   const searchIndex = useMemo(() => {
     const result = [];
