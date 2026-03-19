@@ -124,7 +124,8 @@ import physics from "../assets/rooms/cme/PhysicsLab.webp"
 import physicslec from "../assets/rooms/cme/PhysicsLec.webp"
 import chemlec from "../assets/rooms/cme/ChemLec.webp"
 import chemlab4 from "../assets/rooms/cme/chemlab.webp"
-
+import tmlab1 from "../assets/rooms/cme/tmlab1.webp"
+import tmlab2 from "../assets/rooms/cme/tmlab2.webp"
 
 
 
@@ -270,13 +271,13 @@ const buildingData = {
       code: "", 
       name: "TM-LAB-2A",
       description: "A specialized laboratory for Tourism Management students to conduct practical simulations and industry-related training.",
-      img: " "
+      img: tmlab2
     },
     { 
       code: " ", 
       name: "TM-LAB-1A",
       description: "A dedicated facility for tourism students to practice travel management, reservation systems, and other industry-specific operations.",
-      img: " "
+      img: tmlab1
     },
      { 
       code: " ", 

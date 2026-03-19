@@ -18,7 +18,6 @@ import { useZoomContext } from "../context/ZoomContext";
 import { usePath } from "../context/PathContext";
 import SurveyForm from "../components/SurveyForm";
 
-
 function Map() {
   const { query, setQuery } = useQuery();
   const { setCategory } = useCategory();
@@ -40,7 +39,11 @@ function Map() {
   const [keyboardClicked, setKeyboardClicked] = useState(false);
   const [survey, setSurvey] = useState(false);
 
-  const isNavigating = !!(query.room?.name || query.room?.code || query.building);
+  const isNavigating = !!(
+    query.room?.name ||
+    query.room?.code ||
+    query.building
+  );
 
   const fuzzyMatch = useCallback((str, queryText) => {
     const source = (str || "").toLowerCase();
@@ -54,12 +57,12 @@ function Map() {
   }, []);
 
   useEffect(() => {
-  console.log("survey:", survey);
-}, [survey]);
+    console.log("survey:", survey);
+  }, [survey]);
 
-useEffect(() => {
-  console.log("isNavigating:", isNavigating);
-}, [isNavigating]);
+  useEffect(() => {
+    console.log("isNavigating:", isNavigating);
+  }, [isNavigating]);
 
   const searchIndex = useMemo(() => {
     const result = [];
@@ -103,11 +106,10 @@ useEffect(() => {
     const path = params.get("path");
     const surveyParam = params.get("survey");
 
-    // Auto-open survey if ?survey=true is in the URL
     if (surveyParam === "true") {
       setSurvey(true);
-      return; // No need to process room/building params
     }
+
     if (!building && !name && !code) return;
 
     let selected = null;
@@ -183,11 +185,13 @@ useEffect(() => {
       setCurrentScene(selected.building);
     }
   }, [location.search, setQuery, setCurrentFloor, setCurrentScene, setPath]);
- 
- useEffect(() => {
+
+  
+  useEffect(() => {
     let timer;
 
-    if (!survey && (roomSearched || bldCliked)) { // ← use these instead
+    if (!survey && (roomSearched || bldCliked)) {
+      // ← use these instead
       timer = setTimeout(() => {
         setSurvey(true);
       }, 60000);
@@ -197,7 +201,6 @@ useEffect(() => {
       if (timer) clearTimeout(timer);
     };
   }, [survey, roomSearched, bldCliked]);
-
 
   const handleSearch = useCallback(
     (e) => {
@@ -224,7 +227,7 @@ useEffect(() => {
 
       setSuggestions(result);
     },
-    [searchIndex, fuzzyMatch]
+    [searchIndex, fuzzyMatch],
   );
 
   const handleSuggestionClicked = useCallback(
@@ -259,7 +262,7 @@ useEffect(() => {
       setSuggestions([]);
       setDisable(true);
     },
-    [setCurrentFloor, setQuery, setCurrentScene]
+    [setCurrentFloor, setQuery, setCurrentScene],
   );
 
   const handleOpenPopup = useCallback(
@@ -271,7 +274,7 @@ useEffect(() => {
       setShowPopup(true);
       setDisable(true);
     },
-    [setQuery]
+    [setQuery],
   );
 
   const OpenCard = useCallback(
@@ -321,7 +324,7 @@ useEffect(() => {
         setRoomSearched(false);
       }
     },
-    [setCategory, setQuery]
+    [setCategory, setQuery],
   );
 
   const handleSvgDragStart = useCallback(() => {
@@ -330,7 +333,10 @@ useEffect(() => {
 
   return (
     <div className="h-[100%]">
-      <DraggableZoomableSVG OpenCard={OpenCard} onDragStart={handleSvgDragStart} />
+      <DraggableZoomableSVG
+        OpenCard={OpenCard}
+        onDragStart={handleSvgDragStart}
+      />
 
       <button
         onClick={() => setClicked((prev) => !prev)}
@@ -344,7 +350,7 @@ useEffect(() => {
         <img width={31} src={button360} alt="" />
       </button>
 
-          <button
+      <button
         onClick={() => setSurvey(true)}
         className="absolute lg:bottom-4 left-[10px] z-10 w-12 h-12 lg:w-12 lg:h-12 
                    bg-red-600 rounded-full flex items-center justify-center 
@@ -353,7 +359,7 @@ useEffect(() => {
                    hover:scale-110 transition-all duration-300 active:scale-95 group"
         title="Street View"
       >
-       survey
+        survey
       </button>
 
       {clicked && <PanoramaViewer clicked={clicked} setClicked={setClicked} />}
@@ -396,7 +402,7 @@ useEffect(() => {
 
       <Floors />
 
-      <SurveyForm survey={survey} setSurvey={setSurvey}/>
+      <SurveyForm survey={survey} setSurvey={setSurvey} />
     </div>
   );
 }

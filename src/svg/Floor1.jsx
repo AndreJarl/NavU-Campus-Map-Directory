@@ -7526,7 +7526,9 @@ return (
       {/* KIOSK */}
 
       <g
-        onClick={() => zooomBuildingbyName("KIOSK")}
+        onClick={() => {zooomBuildingbyName("KIOSK")
+          bldClicked("New Admin Building")
+        }}
         style={{ cursor: "pointer", pointerEvents: "all" }}
         className="floating-element"
       >

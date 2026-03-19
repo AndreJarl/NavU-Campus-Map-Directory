@@ -2373,7 +2373,249 @@
         "label": "Fablab"
       }
     ]
+  },
+
+    "Room 34": {
+    "image": "/360/COT/1FLR/COT-ROOM34.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Room 26",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Room 35",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": 80,
+        "type": "info",
+        "label": "Room 34"
+      }
+    ]
+  },
+   "Room 35": {
+    "image": "/360/COT/1FLR/COT-ROOM35.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Room 34",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Room 36",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": 50,
+        "type": "info",
+        "label": "Room 35"
+      }
+    ]
+  },
+
+  "Room 36": {
+    "image": "/360/COT/1FLR/COT-ROOM36.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Room 35",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Room 37",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": 50,
+        "type": "info",
+        "label": "Room 36"
+      }
+    ]
+  },
+
+  "Room 37": {
+    "image": "/360/COT/1FLR/COT-ROOM37.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Room 36",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Floating Classroom",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": 50,
+        "type": "info",
+        "label": "Room 37"
+      }
+    ]
+  },
+
+    "Automation Laboratory": {
+    "image": "/360/COT/1FLR/COT-ROOM27.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Room 36",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Motor Control / Electrical & Instrumentation Laboratory",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": -70,
+        "type": "info",
+        "label": "Automation Laboratory"
+      }
+    ]
+  },
+   "Motor Control / Electrical & Instrumentation Laboratory": {
+    "image": "/360/COT/1FLR/COT-ROOM41.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Automation Laboratory",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Drafting Laboratory",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": -60,
+        "type": "info",
+        "label": "Motor Control / Electrical & Instrumentation Laboratory"
+      }
+    ]
+  },
+
+     "Drafting Laboratory": {
+    "image": "/360/COT/1FLR/COT-ROOM40.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Motor Control / Electrical & Instrumentation Laboratory",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Automation Laboratory 3 / Electronic Laboratory",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": -60,
+        "type": "info",
+        "label": "Drafting Laboratory"
+      }
+    ]
+  },
+    "Automation Laboratory 3 / Electronic Laboratory": {
+    "image": "/360/COT/1FLR/COT-ROOM39.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Drafting Laboratory",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Drafting Laboratory",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": -60,
+        "type": "info",
+        "label": "Automation Laboratory 3 / Electronic Laboratory"
+      }
+    ]
+  },
+
+      "Industrial Motor Control / Electrical Laboratory": {
+    "image": "/360/COT/1FLR/COT-ROOM38.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Drafting Laboratory",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Drafting Laboratory",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": -60,
+        "type": "info",
+        "label": "Automation Laboratory 3 / Electronic Laboratory"
+      }
+    ]
   }
+
+
 
 
 
