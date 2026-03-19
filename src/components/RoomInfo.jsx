@@ -32,7 +32,8 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
   const [isDragging, setIsDragging] = useState(false);
   const [dragState, setDragState] = useState({ startY: 0, startHeight: 0 });
 
-  const qrValue = useMemo(() => {
+  /////
+const qrValue = useMemo(() => {
     const url = new URL(window.location.origin + window.location.pathname);
 
     if (building) url.searchParams.set("building", building);
@@ -40,6 +41,7 @@ function RoomInfo({ roomSearched, setRoomSearched, setDisable, setBldClicked }) 
     if (room?.name) url.searchParams.set("name", room.name);
     if (room?.code) url.searchParams.set("code", room.code);
     if (path) url.searchParams.set("path", path);
+    url.searchParams.set("survey", "true"); // 👈 add this
 
     return url.toString();
   }, [building, floor, room?.name, room?.code, path]);

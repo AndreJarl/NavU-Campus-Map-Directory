@@ -101,7 +101,13 @@ useEffect(() => {
     const name = params.get("name");
     const code = params.get("code");
     const path = params.get("path");
+    const surveyParam = params.get("survey");
 
+    // Auto-open survey if ?survey=true is in the URL
+    if (surveyParam === "true") {
+      setSurvey(true);
+      return; // No need to process room/building params
+    }
     if (!building && !name && !code) return;
 
     let selected = null;
