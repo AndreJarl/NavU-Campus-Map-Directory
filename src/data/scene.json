@@ -1470,7 +1470,7 @@
         "pitch": -15.5,
         "yaw": 0,
         "type": "arrow",
-        "target": "SAO Office",
+        "target": "Guidance Office",
         "arrowType": "forward"
       },
 
@@ -1485,6 +1485,31 @@
         "yaw": 300,
         "type": "info",
         "label": "New Admin Records"
+      }
+    ]
+  },
+    "Guidance Office": {
+    "image": "/360/ADMIN/2FLR/GUIDANCE.webp",
+    "hotspots": [
+      {
+        "pitch": -15.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "SAO Office",
+        "arrowType": "forward"
+      },
+
+           {
+        "pitch": -160.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "New Admin Records"
+      },
+        {
+        "pitch": 30,
+        "yaw": 300,
+        "type": "info",
+        "label": "Guidance Records"
       }
     ]
   },
@@ -1503,7 +1528,7 @@
         "pitch": -160.5,
         "yaw": 0,
         "type": "arrow",
-        "target": "New Admin Records"
+        "target": "Guidance Office"
       },
         {
         "pitch": 30,
@@ -2910,7 +2935,124 @@
         "label": "COT Office"
       }
     ]
+  },
+  "EN-CME-401": {
+    "image": "/360/ENG-CME/4FLR/EN-CME40A-B.webp",
+    "hotspots": [
+        {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Chemistry Lecture",
+        "rotation": 0
+      },
+       {
+        "pitch": 30,
+        "yaw": -90,
+        "type": "info",
+        "label": "EN-CME-401"
+      }
+    ]
+  },
+    "Chemistry Lecture": {
+    "image": "/360/ENG-CME/4FLR/EN-CHEMLEC.webp",
+    "hotspots": [
+          {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "EN-CME-401",
+        "rotation": 0
+      },
+        {
+          
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Chemistry Laboratory",
+        "rotation": 0
+      },
+       {
+        "pitch": 30,
+        "yaw": -90,
+        "type": "info",
+        "label": "Chemistry Lecture"
+      }
+    ]
+  },
+      "Chemistry Laboratory": {
+    "image": "/360/ENG-CME/4FLR/EN-CHEMLAB.webp",
+    "hotspots": [
+          {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Chemistry Lecture",
+        "rotation": 0
+      },
+        {
+          
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Physics Lecture",
+        "rotation": 0
+      },
+       {
+        "pitch": 30,
+        "yaw": -90,
+        "type": "info",
+        "label": "Chemistry Laboratory"
+      }
+    ]
+  },
+  "Physics Lecture": {
+    "image": "/360/ENG-CME/4FLR/EN-PHYSICSLEC.webp",
+    "hotspots": [
+          {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Chemistry Laboratory",
+        "rotation": 0
+      },
+        {
+          
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Physics Laboratory",
+        "rotation": 0
+      },
+       {
+        "pitch": 30,
+        "yaw": -90,
+        "type": "info",
+        "label": "Physics Lecture"
+      }
+    ]
+  },
+    "Physics Laboratory": {
+    "image": "/360/ENG-CME/4FLR/EN-PHYSICSLAB.webp",
+    "hotspots": [
+          {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Physics Lecture",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 30,
+        "yaw": -90,
+        "type": "info",
+        "label": "Physics Laboratory"
+      }
+    ]
   }
+
+
 
 
 
