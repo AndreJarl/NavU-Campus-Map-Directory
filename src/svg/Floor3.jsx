@@ -207,7 +207,7 @@ const Floor3 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 <path opacity={path === "EN-302A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.316 673.318H247.243C246.691 673.318 246.243 673.766 246.243 674.318V717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
 
-<path opacity={path === "ED-302A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"   d="M138.028 654.894H138.058C138.61 654.894 139.058 655.342 139.058 655.894L139.058 717.92C139.058 718.473 138.61 718.92 138.058 718.92H128.544"/>
+<path opacity={path === "ED-301A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5"   d="M138.028 654.894H138.058C138.61 654.894 139.058 655.342 139.058 655.894L139.058 717.92C139.058 718.473 138.61 718.92 138.058 718.92H128.544"/>
 
 <path  opacity={path === "Female Cr" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M133.67 711.512L133.67 717.92C133.67 718.473 133.222 718.92 132.67 718.92H128.544" />
 

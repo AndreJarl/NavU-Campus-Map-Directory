@@ -191,6 +191,8 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 </g>
 
 
+<path  opacity={path === "Admin Staff Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M223.005 726.584L223.004 725.9C223.004 725.348 223.451 724.9 224.004 724.899L248.861 724.884C249.413 724.884 249.86 724.436 249.86 723.884L249.857 719.691C249.857 719.139 250.305 718.691 250.857 718.69L257.186 718.686"/>
+
 {/* <g onClick={()=>handleFloor(3)} className="floating-element" xmlns="http://www.w3.org/2000/svg" filter="url(#filter1_d_2054_243)">
   <circle cx="94" cy="552" r="6" fill="#FF3030" />
   <text onClick={()=>handleFloor(3)}
@@ -379,10 +381,11 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path d="M191 490.841H197V492.202H191V490.841Z" fill="#CF56BF"/>
 
 {/* ADMIN OFFICE PATH */}
-<path opacity={path === "Admin Staff Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M210.721 726.434V726.338C210.721 725.786 210.273 725.338 209.721 725.338H193.287C192.734 725.338 192.287 724.89 192.287 724.338V719.107C192.287 718.554 191.839 718.107 191.287 718.107H185.067"/>
+{/* <path opacity={path === "Admin Staff Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M210.721 726.434V726.338C210.721 725.786 210.273 725.338 209.721 725.338H193.287C192.734 725.338 192.287 724.89 192.287 724.338V719.107C192.287 718.554 191.839 718.107 191.287 718.107H185.067"/> */}
 
 
-<path opacity={path === "Admin Graduate School" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M192.274 726.435V719.085C192.274 718.533 191.826 718.085 191.274 718.085H185.058"/>
+{/* <path opacity={path === "Admin Graduate School" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M192.274 726.435V719.085C192.274 718.533 191.826 718.085 191.274 718.085H185.058"/> */}
+<path opacity={path === "Admin Graduate School" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M194 726V725.503C194 724.951 193.552 724.503 193 724.503H143.935C143.383 724.503 142.935 724.056 142.935 723.503V720C142.935 719.448 142.487 719 141.935 719H129"/>
 
 <path opacity={path === "HR Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M177 726.434V725.828C177 725.275 176.552 724.828 176 724.828H139.932C139.38 724.828 138.932 724.38 138.932 723.828V719.92C138.932 719.368 138.484 718.92 137.932 718.92H128.544"/>
 
@@ -407,6 +410,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path opacity={path === "ED-201A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M138.028 654.894H138.058C138.61 654.894 139.058 655.342 139.058 655.894L139.058 717.92C139.058 718.473 138.61 718.92 138.058 718.92H128.544"/>
 <path d="M133.67 711.512L133.67 717.92C133.67 718.473 133.222 718.92 132.67 718.92H128.544" stroke="#FF0000" stroke-opacity="0.5" stroke-width="0" stroke-linecap="round"/>
 
+<path opacity={path === "Campus Director Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M250 726L250 719.686C250 719.134 250.448 718.686 251 718.686L257.186 718.686" />
 
 <path opacity={path === "Engineering Faculty Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.273 654.894H247.243C246.691 654.894 246.243 655.342 246.243 655.894L246.243 717.92C246.243 718.473 246.691 718.92 247.243 718.92H256.757"/>
 
@@ -779,7 +783,7 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 
 {/* Campus Director Office BLD */}
 <g onClick={() => bldClicked("Campus Director Office")} style={{ cursor: "pointer" }}>
-  <path d="M246 728L252 728V723H260V749.066H246V728Z" fill={getColor(allFalse, category, "Admin", "#ff3030", "#B0B0B0")}
+  <path d="M246 728L252 728V723H260V749.066H246V728Z" fill={getColor(allFalse, category, "Admin", "#FF6453", "#B0B0B0")}
 />
   <path d="M246 749.066H260V751H246V749.066Z" fill={getColor(allFalse, category, "Admin", "#CE4B46", "#B0B0B0")}/>
   <text x="253" y="737" text-anchor="middle" font-weight="600" font-family="Inter, sans-serif" font-size="2" fill="black">CAMPUS</text>

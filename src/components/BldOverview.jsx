@@ -45,7 +45,7 @@ function BldOverview({ query, setQuery, setBldClicked, handleOpenPopup, setRoomS
   const CloseCard = () => {
     setBldClicked(false);
     setPath("");
-    setCurrentScene("Main Gate");
+    setCurrentScene("Kiosk Location");
   };
 
   const handleDragStart = (e) => {

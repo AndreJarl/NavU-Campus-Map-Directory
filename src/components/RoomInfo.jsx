@@ -103,7 +103,7 @@ const qrValue = useMemo(() => {
     setRoomSearched(false);
     setPath("");
     setDisable(false);
-    setCurrentScene("Main Gate");
+    setCurrentScene("Kiosk Location");
 
     const url = new URL(window.location.href);
     url.searchParams.delete("building");

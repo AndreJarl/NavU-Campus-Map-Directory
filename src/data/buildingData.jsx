@@ -42,6 +42,8 @@ import speech from "../assets/rooms/oldadmin/SpeechLabRoom.webp"
 import gad from "../assets/rooms/oldadmin/GAD.webp"
 import tgo from "../assets/rooms/COT-GrndFlr/TGOOffice.webp"
 
+import fstlp from "../assets/rooms/oldadmin/FSTLPOffice.webp"
+
 import elec from "../assets/rooms/Bldgs/Electronics'Lab.jpg"
 
 //ERRC
@@ -147,6 +149,8 @@ import officemaintain from "../assets/rooms/Bldgs/OfficeoftheElectricalMaintenan
 import sewing from "../assets/rooms/Bldgs/SewingLab.jpg"
 import resource from "../assets/rooms/Bldgs/resource.webp"
 import shower from "../assets/rooms/Bldgs/shower.webp"
+import kadasig from "../assets/Kadasig.jpg"
+
 // import grand1 from  "../assets/rooms/Bldgs/grand1.webp"
 // import grand2 from  "../assets/rooms/Bldgs/grand2.webp"
 // import grand3 from  "../assets/rooms/Bldgs/grand3.webp"
@@ -883,9 +887,9 @@ rooms: {
         },
         {
         code:"",
-        name:"COT Dean's Office",
+        name:"FSTLP Office",
         description: "The main office of the College of Technology Dean where administrative decisions, faculty coordination, and student consultations are conducted. ",
-        img: ""
+        img: fstlp
         },
         {
         code:"",
@@ -1257,7 +1261,7 @@ rooms: {
                     code:"",
                     name:"Kadasig Gym",
                     description: "A gymnasium where students participate in sports, physical education classes, and school events, equipped with courts and seating areas. ",
-                    img: ""
+                    img: kadasig
                   },
                   {
                     code:"",
@@ -1337,7 +1341,7 @@ rooms: {
                     code:"",
                     name:"Sports & Athletics Office",
                     description: "The office responsible for managing the school’s sports programs, athletic events, team coordination, and student-athlete support services. ",
-                    img:""
+                    img: PEhall
                   },
                   {
                     code:"",

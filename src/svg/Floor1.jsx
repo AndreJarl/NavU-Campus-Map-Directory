@@ -43,7 +43,7 @@ const handleFloor = useCallback((num) => {
       const rooms = ["Library", "EN-303A-B", "EN-302A-B", "EN-301A-B", "EN-CME308A-B", "EN-CME307A-B", "EN-CME306A-B", "EN-CME305A-B", "EN-CME304A-B", 
                      "EN-CME303A-B", "EN-CME302A-B", "EN-CME301A-B", "ED-201", "Campus Director Office", "Dean's and Conference", 
                     "Engineering Faculty (Chairman's Office)", "Engineering Faculty Office", "CME Research Center", "TM-LAB-2A", "CME Computer Laboratory 2","CME Computer Laboratory 1",
-                    "TM-LAB-1A", "EN-CME 201", "Graduate School", "EN-201", "Physics Lecture", "Physics Laboratory", "Chemistry Lecture", "Chemistry Laboratory", "EN-CME-401"];
+                    "TM-LAB-1A", "EN-CME 201","Admin Staff Office", "Graduate School", "EN-201", "Physics Lecture", "Physics Laboratory", "Chemistry Lecture", "Chemistry Laboratory", "EN-CME-401"];
       return rooms.includes(path) ? 1 : 0;
     };
 
@@ -2121,7 +2121,7 @@ return (
 
       {/* COT Office Main bldg */}
       <path
-        onClick={() => bldClicked("COT Office Deans")}
+        onClick={() => bldClicked("FSTLP Office")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#fc0" : category["Faculty"] ? "#fc0" : "#B0B0B0"}
         stroke={
@@ -2131,7 +2131,7 @@ return (
         d="M78 568v17H60v-17z"
       />
       <text
-        onClick={() => bldClicked("COT Office")}
+        onClick={() => bldClicked("FSTLP Office")}
         style={{ cursor: "pointer" }}
         x="69"
         y="576.25"
@@ -2141,10 +2141,10 @@ return (
         font-size="2"
         fill="black"
       >
-        COT
+        FSTLP 
       </text>
       <text
-        onClick={() => bldClicked("COT Office")}
+        onClick={() => bldClicked("FSTLP Office")}
         style={{ cursor: "pointer" }}
         x="69"
         y="578.75"
@@ -5725,7 +5725,7 @@ return (
 
       {/* COE Room 1 path */}
       <path
-        opacity={path === "COE Room 1" ? "1" : 0}
+        opacity={path === "EN-102" ? "1" : 0}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"
@@ -5736,7 +5736,7 @@ return (
 
       {/* COE Room 2 path */}
       <path
-        opacity={path === "COE Room 2" ? "1" : 0}
+        opacity={path === "EN-101" ? "1" : 0}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"
@@ -6513,7 +6513,7 @@ return (
 
       {/* Sewing Lab path */}
       <path
-        opacity={path === "Sewing Lab" ? "1" : 0}
+        opacity={path === "Sewing Laboratory" ? "1" : 0}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"
@@ -6524,7 +6524,7 @@ return (
 
       {/* Near Old Admin Dorm path */}
       <path
-        opacity={path === "Near Old Admin Dorm" ? "1" : 0}
+        opacity={path === "Women's Dorm" ? "1" : 0}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"
@@ -6535,7 +6535,7 @@ return (
 
       {/* COT Office path */}
       <path
-        opacity={path === "COT Office Deans" ? "1" : 0}
+        opacity={path === "FSTLP Office" ? "1" : 0}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"
@@ -6546,7 +6546,7 @@ return (
 
       {/* COT Storage Room path */}
       <path
-        opacity={path === "Storage Room" ? "1" : 0}
+        opacity={path === "Old Admin Storage Room" ? "1" : 0}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"
@@ -6557,7 +6557,7 @@ return (
 
       {/* COT Supply Office path */}
       <path
-        opacity={path === "COT Supply Office" ? "1" : 0}
+        opacity={path === "Supply Office" ? "1" : 0}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"
