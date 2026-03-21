@@ -41,6 +41,7 @@ import cotfaculty from "../assets/rooms/oldadmin/COT-Faculty.webp"
 import speech from "../assets/rooms/oldadmin/SpeechLabRoom.webp"
 import gad from "../assets/rooms/oldadmin/GAD.webp"
 import tgo from "../assets/rooms/COT-GrndFlr/TGOOffice.webp"
+import storeroom from "../assets/rooms/oldadmin/StoreRoom.webp"
 
 import fstlp from "../assets/rooms/oldadmin/FSTLPOffice.webp"
 
@@ -748,13 +749,13 @@ rooms: {
             description: "A specialized workspace equipped with tools, materials, and equipment for hands-on Technical-Livelihood Education activities. ",
             img: room46
             },
-            {
-            code:"",
-            name: "Storage Room",
-            description: "A designated area used to store school equipment, tools, and other materials in an organized and secure manner.",
-            img: ""
+            // {
+            // code:"",
+            // name: "Storage Room",
+            // description: "A designated area used to store school equipment, tools, and other materials in an organized and secure manner.",
+            // img: ""
                         
-            },
+            // },
          
           {
             code:"",
@@ -869,9 +870,9 @@ rooms: {
         },
         {
         code:"",
-        name:"Old Admin Storage Room",
+        name:"Old Admin Store Room",
         description: "A space designated for keeping school supplies, tools, and equipment organized and safely stored. ",
-        img:" "
+        img: storeroom
         },
         {
         code:"",

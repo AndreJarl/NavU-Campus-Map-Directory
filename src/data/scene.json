@@ -1731,7 +1731,7 @@
         "pitch": -30.5,
         "yaw": -5,
         "type": "arrow",
-        "target": "COT Office",
+        "target": "FSTPL Office",
         "rotation": 0
       },
 
@@ -1751,32 +1751,7 @@
     ]
   },
   
-  "COT Office": {
-    "image": "/360/OLD-ADMIN/1FLR/COT-office.webp",
-    "hotspots": [
-      {
-        "pitch": -30.5,
-        "yaw": -5,
-        "type": "arrow",
-        "target": "OldStair",
-        "rotation": 0
-      },
 
-           {
-        "pitch": -150.5,
-        "yaw": 0,
-        "type": "arrow",
-        "target": "EN-CME40A-B",
-        "rotation": 0
-      },
-           {
-        "pitch": 20,
-        "yaw": 340,
-        "type": "info",
-        "label": "COT Office"
-      }
-    ]
-  },
     "OldStair": {
     "image": "/360/OLD-ADMIN/1FLR/oldstair1.webp",
     "hotspots": [
@@ -2077,11 +2052,18 @@
     "image": "/360/FACILITY/FITNESSGYM.webp",
     "hotspots": [
       {
-        "pitch": -150.5,
-        "yaw": 0,
+        "pitch": -170.5,
+        "yaw": 10,
         "type": "arrow",
-        "target": "",
-        "rotation": 0
+        "target": "Cultural",
+        "rotation": 70
+      },
+          {
+        "pitch": 190.5,
+        "yaw": -40,
+        "type": "arrow",
+        "target": "Floating Classroom",
+        "rotation": -70
       },
            {
         "pitch": 20,
@@ -2136,7 +2118,32 @@
         "pitch": -150.5,
         "yaw": 0,
         "type": "arrow",
-        "target": "",
+        "target": "Cultural",
+        "rotation": 0
+      },
+           {
+        "pitch": 20,
+        "yaw": 50,
+        "type": "info",
+        "label": "Tennis Court"
+      }
+    ]
+  },
+    "Cultural": {
+    "image": "/360/FACILITY/cultural.jpg",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Fitness Gym",
+        "rotation": 0
+      },
+       {
+        "pitch": -30.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "Tennis Court",
         "rotation": 0
       },
            {
@@ -2155,6 +2162,13 @@
         "yaw": 0,
         "type": "arrow",
         "target": "",
+        "rotation": 0
+      },
+          {
+        "pitch": -30.5,
+        "yaw": -5,
+        "type": "arrow",
+        "target": "Floating Classroom",
         "rotation": 0
       },
            {
@@ -2275,6 +2289,37 @@
         "yaw": 70,
         "type": "info",
         "label": "Drawing Room"
+      },
+           {
+        "pitch": 10,
+        "yaw": -50,
+        "type": "info",
+        "label": "Bistro"
+      }
+    ]
+  },
+    "Bistro": {
+    "image": "/360/FACILITY/BISTRO.webp",
+    "hotspots": [
+      {
+        "pitch": -160.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Room 12",
+        "rotation": 0
+      },
+
+           {
+        "pitch": 30,
+        "yaw": 70,
+        "type": "info",
+        "label": "Drawing Room"
+      },
+           {
+        "pitch": 10,
+        "yaw": 20,
+        "type": "info",
+        "label": "Bistro"
       }
     ]
   },
@@ -2301,6 +2346,7 @@
         "type": "info",
         "label": "Ergonomic Laboratory"
       }
+  
     ]
   },
   "Room 26": {
@@ -2482,6 +2528,8 @@
     ]
   },
 
+
+
     "Automation Laboratory": {
     "image": "/360/COT/1FLR/COT-ROOM27.webp",
     "hotspots": [
@@ -2575,7 +2623,7 @@
         "pitch": -30,
         "yaw": 0,
         "type": "arrow",
-        "target": "Drafting Laboratory",
+        "target": "Industrial Motor Control / Electrical Laboratory",
         "rotation": 0
       },
 
@@ -2595,7 +2643,7 @@
         "pitch": -150.5,
         "yaw": 0,
         "type": "arrow",
-        "target": "Drafting Laboratory",
+        "target": "Automation Laboratory 3 / Electronic Laboratory",
         "rotation": 0
       },
        {
@@ -2610,10 +2658,266 @@
         "pitch": 20,
         "yaw": -60,
         "type": "info",
-        "label": "Automation Laboratory 3 / Electronic Laboratory"
+        "label": "Industrial Motor Control / Electrical Laboratory"
+      }
+    ]
+  },
+
+        "Floating Classroom": {
+    "image": "/360/FACILITY/floating.jpg",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "University Canteen",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Fitness Gym",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": -60,
+        "type": "info",
+        "label": "Floating Classroom"
+      }
+    ]
+  },
+
+    "COT Stock Room": {
+    "image": "/360/COT/2FLR/COT-STOCKROOM.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "COT Comp Lab 202",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": 0,
+        "type": "info",
+        "label": "Stock Room"
+      }
+    ]
+  },
+  "COT Comp Lab 202": {
+    "image": "/360/COT/2FLR/COT-COMLAB202.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "COT Comp Lab 203",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "COT Stock Room",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 30,
+        "yaw": 40,
+        "type": "info",
+        "label": "Comlab 202"
+      }
+    ]
+  },
+  "COT Comp Lab 203": {
+    "image": "/360/COT/2FLR/COT-COMLAB203.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "COT Comp Lab 204",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "COT Comp Lab 202",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 30,
+        "yaw": 40,
+        "type": "info",
+        "label": "Comlab 203"
+      }
+    ]
+  },
+   "COT Comp Lab 204": {
+    "image": "/360/COT/2FLR/COT-COMLAB204.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Alumni Affairs Office & COT Com Lab Office",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "COT Comp Lab 203",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 30,
+        "yaw": 40,
+        "type": "info",
+        "label": "Comlab 204"
+      }
+    ]
+  },
+
+  "Alumni Affairs Office & COT Com Lab Office": {
+    "image": "/360/COT/2FLR/ALUMNIOFFICE&COTCOMLABOFFICE.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "COT Path 2",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "COT Comp Lab 204",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 30,
+        "yaw": 40,
+        "type": "info",
+        "label": "Alumni Affairs Office & COT Com Lab Office"
+      }
+    ]
+  },
+    "COT Path 2": {
+    "image": "/360/COT/2FLR/COT-path2F.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Tesda Office",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Alumni Affairs Office & COT Com Lab Office",
+        "rotation": 0
+      },
+         {
+        "pitch": -30,
+        "yaw": 80,
+        "type": "arrow",
+        "target": "COT Stairs",
+        "rotation": 50
+      }
+    ]
+  },
+      "COT Stairs": {
+    "image": "/360/COT/2FLR/COT-2FSTAIRS.webp",
+    "hotspots": [
+      {
+        "pitch": -170.5,
+        "yaw": 90,
+        "type": "arrow",
+        "target": "",
+        "rotation": 80
+         },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Alumni Affairs Office & COT Com Lab Office",
+        "rotation": 0
+      },
+         {
+        "pitch": -30,
+        "yaw": 80,
+        "type": "arrow",
+        "target": "COT Path 2",
+        "rotation": 50
+      }
+    ]
+  },
+
+   "Tesda Office": {
+    "image": "/360/COT/2FLR/TESDA.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "COT Path 2",
+        "rotation": 0
+      },
+       {
+        "pitch": -30,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "COT Office",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 30,
+        "yaw": -50,
+        "type": "info",
+        "label": "Tesda Office"
+      }
+    ]
+  },
+  "COT Office": {
+    "image": "/360/COT/2FLR/COTOFFICE.webp",
+    "hotspots": [
+      {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Tesda Office",
+        "rotation": 0
+      },
+       {
+        "pitch": 30,
+        "yaw": -50,
+        "type": "info",
+        "label": "COT Office"
       }
     ]
   }
+
+
+
+
+
+
+
 
 
 

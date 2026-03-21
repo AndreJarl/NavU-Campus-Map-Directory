@@ -1913,7 +1913,7 @@ return (
 
       {/* Old Admin Storage Room bldg */}
       <path
-        onClick={() => bldClicked("Old Admin Storage Room")}
+        onClick={() => bldClicked("Old Admin Store Room")}
         style={{ cursor: "pointer" }}
         fill={
           allFalse
@@ -1933,7 +1933,7 @@ return (
         d="M78 543v13H47v-26h13.9843v13z"
       />
       <text
-        onClick={() => bldClicked("Old Admin Storage Room")}
+        onClick={() => bldClicked("Old Admin Store Room")}
         style={{ cursor: "pointer" }}
         x="62.5"
         y="549.1"
@@ -1943,10 +1943,10 @@ return (
         font-size="2"
         fill="black"
       >
-        STORAGE
+        STORE
       </text>
       <text
-        onClick={() => bldClicked("Old Admin Storage Room")}
+        onClick={() => bldClicked("Old Admin Store Room")}
         style={{ cursor: "pointer" }}
         x="62.5"
         y="551.55"
@@ -6546,7 +6546,7 @@ return (
 
       {/* COT Storage Room path */}
       <path
-        opacity={path === "Old Admin Storage Room" ? "1" : 0}
+        opacity={path === "Old Admin Store Room" ? "1" : 0}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"
