@@ -2106,7 +2106,7 @@
         "pitch": -150.5,
         "yaw": 0,
         "type": "arrow",
-        "target": "",
+        "target": "Tennis Court",
         "rotation": 0
       },
            {
@@ -2169,6 +2169,13 @@
         "yaw": -5,
         "type": "arrow",
         "target": "Tennis Court",
+        "rotation": 0
+      },
+          {
+        "pitch": -20.5,
+        "yaw": 110,
+        "type": "arrow",
+        "target": "Mechanical Engineering Laboratory 2",
         "rotation": 0
       },
            {
@@ -3050,7 +3057,167 @@
         "label": "Physics Laboratory"
       }
     ]
+  },
+
+  "Mechanical Engineering Laboratory 1": {
+    "image": "/360/FACILITY/MECH_ENGLAB1.webp",
+    "hotspots": [
+          {
+        "pitch": -150.5,
+        "yaw": 90,
+        "type": "arrow",
+        "target": "Fablab Production Area",
+        "rotation": 0
+      },
+               {
+        "pitch": -150.5,
+        "yaw": -90,
+        "type": "arrow",
+        "target": "Mechanical Engineering Laboratory 2",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": 10,
+        "type": "info",
+        "label": "Mechanical Engineering Lab"
+      }
+    ]
+  },
+
+    "Mechanical Engineering Laboratory 2": {
+    "image": "/360/FACILITY/MECH_ENGLAB2.webp",
+    "hotspots": [
+          {
+        "pitch": -150.5,
+        "yaw": 90,
+        "type": "arrow",
+        "target": "Mechanical Engineering Laboratory 1",
+        "rotation": 0
+      },
+               {
+        "pitch": -150.5,
+        "yaw": -90,
+        "type": "arrow",
+        "target": "Cultural",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": 10,
+        "type": "info",
+        "label": "Mechanical Engineering Lab"
+      }
+    ]
+  },
+
+  "Maintenance Office": {
+    "image": "/360/FACILITY/MAINTENANCEOFFICE.webp",
+    "hotspots": [
+          {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Fablab Production Area",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": 50,
+        "type": "info",
+        "label": "Maintenance Office"
+      }
+    ]
+  },
+    "Kitchen Laboratory": {
+    "image": "/360/FACILITY/KITCHENLAB.webp",
+    "hotspots": [
+          {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Fablab Production Area",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": 50,
+        "type": "info",
+        "label": "Kitchen Laboratory"
+      }
+    ]
+  },
+   "Office of the Electrical Maintenance": {
+    "image": "/360/FACILITY/KITCHENLAB.webp",
+    "hotspots": [
+          {
+        "pitch": -150.5,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "Fablab Production Area",
+        "rotation": 0
+      },
+
+       {
+        "pitch": 20,
+        "yaw": 50,
+        "type": "info",
+        "label": "Kitchen Laboratory"
+      },
+       {
+        "pitch": 10,
+        "yaw": 0,
+        "type": "info",
+        "label": "Office of the Electrical Maintenance"
+      }
+    ]
+    
+  },
+
+  "ERRC Office": {
+    "image": "/360/FACILITY/FOUNTAIN.webp",
+    "hotspots": [
+       {
+        "pitch": 10,
+        "yaw": 0,
+        "type": "info",
+        "label": "ERRC Office"
+      }
+    ]
+    
+  },
+
+    "Sewing Laboratory": {
+    "image": "/360/FACILITY/SEWINGLAB_WOMEN'SDORM.webp",
+    "hotspots": [
+       {
+        "pitch": 10,
+        "yaw": -30,
+        "type": "info",
+        "label": "Sewing Lab"
+      }
+    ]
+    
+  },
+  
+    "Women's Dorm": {
+    "image": "/360/FACILITY/SEWINGLAB_WOMEN'SDORM.webp",
+    "hotspots": [
+       {
+        "pitch": 10,
+        "yaw": 0,
+        "type": "info",
+        "label": "Women's Dorm"
+      }
+    ]
+    
   }
+
+
 
 
 
