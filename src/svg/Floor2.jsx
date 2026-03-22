@@ -429,10 +429,10 @@ const Floor2 = memo(forwardRef(({ viewBox, zooomBuildingbyName, OpenCard }, ref)
 <path opacity={path === "EN-CME201A-B" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.638 578.84H247.243C246.691 578.84 246.243 579.287 246.243 579.84L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 
-<path opacity={path === "CME Computer Laboratory 2" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.411 564.794H247.243C246.691 564.794 246.243 565.242 246.243 565.794L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "CME Faculty Office" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.411 564.794H247.243C246.691 564.794 246.243 565.242 246.243 565.794L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 
-<path opacity={path === "CME Computer Laboratory 1" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.411 550.977H247.243C246.691 550.977 246.243 551.424 246.243 551.977L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
+<path opacity={path === "CME Faculty Office (Deans)" ? "1" : 0} stroke="red" id="grow-path2" stroke-linecap="round" stroke-opacity=".5" stroke-width="1.5" d="M247.411 550.977H247.243C246.691 550.977 246.243 551.424 246.243 551.977L246.243 717.92C246.243 718.472 246.691 718.92 247.243 718.92H256.757"/>
 
 <g className="floating-element" onClick={() => bldClicked("College of Technology/COT Building")} style={{ cursor: "pointer" }}>
 
