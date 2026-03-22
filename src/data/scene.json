@@ -2193,7 +2193,7 @@
         "pitch": -150.5,
         "yaw": 0,
         "type": "arrow",
-        "target": "",
+        "target": "Room 46",
         "rotation": 0
       },
           {
@@ -3191,6 +3191,32 @@
     
   },
 
+    "ERRC Classroom 1": {
+    "image": "/360/FACILITY/FOUNTAIN.webp",
+    "hotspots": [
+       {
+        "pitch": 10,
+        "yaw": -30,
+        "type": "info",
+        "label": "ERRC Classroom"
+      }
+    ]
+    
+  },
+    "ERRC Classroom 2": {
+    "image": "/360/FACILITY/FOUNTAIN.webp",
+    "hotspots": [
+       {
+        "pitch": 10,
+        "yaw": 10,
+        "type": "info",
+        "label": "ERRC Classroom"
+      }
+    ]
+    
+  },
+
+
     "Sewing Laboratory": {
     "image": "/360/FACILITY/SEWINGLAB_WOMEN'SDORM.webp",
     "hotspots": [
@@ -3215,7 +3241,43 @@
       }
     ]
     
+  },
+
+     "Automation Laboratory / Room 27": {
+    "image": "/360/COT/1FLR/COT-ROOM27FRONT.webp",
+    "hotspots": [
+       {
+        "pitch": 10,
+        "yaw": -40,
+        "type": "info",
+        "label": "Room 27"
+      }
+    ]
+    
+  },
+
+       "Room 46": {
+    "image": "/360/FACILITY/ROOM46.webp",
+    "hotspots": [
+       {
+        "pitch": 10,
+        "yaw": 10,
+        "type": "info",
+        "label": "Room 46"
+      },
+       {
+          
+        "pitch": -20,
+        "yaw": 0,
+        "type": "arrow",
+        "target": "University Canteen",
+        "rotation": 0
+      }
+    ]
+    
   }
+
+
 
 
 

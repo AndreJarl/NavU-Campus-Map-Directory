@@ -2387,7 +2387,7 @@ return (
 
       {/* COT Record bldg */}
       <path
-        onClick={() => bldClicked("Records")}
+        onClick={() => bldClicked("COT Records")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#fc0" : category[""] ? "#fc0" : "#B0B0B0"}
         stroke={allFalse ? "#CCA817" : category[""] ? "#CCA817" : "#B0B0B0"}
@@ -2395,7 +2395,7 @@ return (
         d="M78 598v6.452H47V598z"
       />
       <text
-        onClick={() => bldClicked("Records")}
+        onClick={() => bldClicked("COT Records")}
         style={{ cursor: "pointer" }}
         x="62.5"
         y="601.85"
@@ -2408,7 +2408,7 @@ return (
         RECORDS
       </text>
       <path
-        onClick={() => bldClicked("Records")}
+        onClick={() => bldClicked("COT Records")}
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#d6b018" : category[""] ? "#d6b018" : "#B0B0B0"}
         stroke={allFalse ? "#CCA817" : category[""] ? "#CCA817" : "#B0B0B0"}
@@ -3784,7 +3784,7 @@ return (
 
       {/* COT Room 27 / Automation Laboratory bldg */}
       <path
-        onClick={() => bldClicked("Automation Laboratory")}
+        onClick={() => bldClicked("Automation Laboratory / Room 27")}
         style={{ cursor: "pointer" }}
         fill={
           allFalse ? "#fc0" : category["Laboratory"] ? "#fc0" : "#B0B0B0"
@@ -3800,7 +3800,7 @@ return (
         d="M155 477h23v25.034h-23z"
       />
       <text
-        onClick={() => bldClicked("Automation Laboratory")}
+        onClick={() => bldClicked("Automation Laboratory / Room 27")}
         style={{ cursor: "pointer" }}
         x="166.5"
         y="488.517"
@@ -3813,7 +3813,7 @@ return (
         ROOM 27
       </text>
       <text
-        onClick={() => bldClicked("Automation Laboratory")}
+        onClick={() => bldClicked("Automation Laboratory / Room 27")}
         style={{ cursor: "pointer" }}
         x="166.5"
         y="490.517"
@@ -3826,7 +3826,7 @@ return (
         AUTOMATION
       </text>
       <text
-        onClick={() => bldClicked("Automation Laboratory")}
+        onClick={() => bldClicked("Automation Laboratory / Room 27")}
         style={{ cursor: "pointer" }}
         x="166.5"
         y="492.517"
@@ -3839,7 +3839,7 @@ return (
         LABORATORY
       </text>
       <path
-        onClick={() => bldClicked("Automation Laboratory")}
+        onClick={() => bldClicked("Automation Laboratory / Room 27")}
         style={{ cursor: "pointer" }}
         fill={
           allFalse
@@ -5877,7 +5877,7 @@ return (
       />
       {/* Automation Laboratory path */}
       <path
-        opacity={path === "Automation Laboratory" ? "1" : 0}
+        opacity={path === "Automation Laboratory / Room 27" ? "1" : 0}
         stroke="red"
         id="grow-path"
         stroke-linecap="round"
@@ -6502,7 +6502,7 @@ return (
 
       {/* COT Records path */}
       <path
-        opacity={path === "Records" ? "1" : 0}
+        opacity={path === "COT Records" ? "1" : 0}
         d="M200.083 726.91L200.082 725.908C200.081 724.804 199.186 723.91 198.082 723.91L141.081 723.91C139.976 723.91 139.081 723.014 139.081 721.91L139.081 657.396C139.081 656.291 138.185 655.396 137.081 655.396L94.5807 655.396C93.4761 655.396 92.5807 654.501 92.5807 653.396L92.5807 624.973C92.5807 624.599 92.4763 624.234 92.2793 623.917L81.3821 606.387C81.1851 606.07 81.0807 605.704 81.0807 605.331L81.0807 602.636C81.0807 601.808 80.4091 601.136 79.5807 601.136"
         stroke="#FF0000"
         stroke-opacity="0.5"

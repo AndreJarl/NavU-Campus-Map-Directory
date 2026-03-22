@@ -201,7 +201,7 @@ const qrValue = useMemo(() => {
               <span className="bg-red-900/40 text-red-400 text-[10px] font-bold px-3 py-1 rounded-full border border-red-500/30 uppercase">
                 Floor {floor}
               </span>
-              <span className="text-white/60 text-xs">{room?.code}</span>
+              <span className="text-white/60 text-xs">{room?.code || " "}</span>
             </div>
           </div>
 

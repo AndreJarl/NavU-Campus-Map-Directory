@@ -42,6 +42,9 @@ import speech from "../assets/rooms/oldadmin/SpeechLabRoom.webp"
 import gad from "../assets/rooms/oldadmin/GAD.webp"
 import tgo from "../assets/rooms/COT-GrndFlr/TGOOffice.webp"
 import storeroom from "../assets/rooms/oldadmin/StoreRoom.webp"
+import cotrecords from "../assets/rooms/oldadmin/cotrecords.jpg"
+import supply from "../assets/rooms/oldadmin/supply.jpg"
+
 
 import fstlp from "../assets/rooms/oldadmin/FSTLPOffice.webp"
 
@@ -523,31 +526,31 @@ rooms: {
 //     rooms:{
 //   1:[
 //   {
-//     code:"",
+//     code:" ",
 //     name:" ",
 //     description: " ",
 //     img: ""
 //     },
 //   {
-//     code:"",
+//     code:" ",
 //     name:" ",
 //   description: " ",
 //   img: ""
 //   },
 //   {
-//   code:"",
+//   code:" ",
 //     name:" ",
 //   description: " ",
 //   img: ""
 //   },
 //   {
-//   code:"",
+//   code:" ",
 //   name:" ",
 //   description: " ",
 //   img: ""
 //   },
 //   {
-//     code:"",
+//     code:" ",
 //     name:" ",
 //   description: " ",
 //   img: ""
@@ -555,26 +558,26 @@ rooms: {
 //   ],
 //   2:[
 //     {
-//     code:"",
+//     code:" ",
 //     name:" ",
 //     description: " ",
 //     img: ""
 
 //     },
 //     {
-//   code:"",
+//   code:" ",
 //     name:" ",
 //   description: " ",
 //   img: ""
 //     },
 //     {
-//     code:"",
+//     code:" ",
 //   name:" ",
 //   description: " ",
 //   img: ""
 //   },
 //     {
-//     code:"",
+//     code:" ",
 //     name:" ",
 //     description: " ",
 //     img: ""
@@ -583,31 +586,31 @@ rooms: {
 //   3:
 //   [
 //     {
-//       code:"",
+//       code:" ",
 //       name:" ",
 //       description: " ",
 //       img: ""
 // },
 //     {
-//       code:"",
+//       code:" ",
 //       name:" ",
 //       description: " ",
 //       img: ""
 // },
 //     {
-// code:"",
+// code:" ",
 // name:" ",
 // description: " ",
 // img: ""
 //     },
 //     {
-// code:"",
+// code:" ",
 // name:" ",
 // description: " ",
 // img: ""
 //     },
 //       {
-//   code:"",
+//   code:" ",
 //   name:" ",
 //   description: " ",
 //   img: ""
@@ -615,25 +618,25 @@ rooms: {
 //   ],
 //   4:[
 //   {
-//     code:"",
+//     code:" ",
 // name:" ",
 // description: " ",
 // img: ""
 // },
 //   {
-//     code:"",
+//     code:" ",
 // name:" ",
 // description: " ",
 // img: ""
 //   },
 //   {
-//     code:"",
+//     code:" ",
 // name:" ",
 // description: " ",
 // img: ""
 //   },
 //   {
-//     code:"",
+//     code:" ",
 // name:" ",
 // description: " ",
 // img: ""
@@ -660,7 +663,7 @@ rooms: {
           },
           { 
             code: "Room 27", 
-            name: "Automation Laboratory",
+            name: "Automation Laboratory / Room 27",
             description: "A specialized room equipped with controllers, sensors, and training kits where students learn and practice automation and control system applications. ",
             img: room27
           },
@@ -697,7 +700,7 @@ rooms: {
             code: " ", 
             name: "Sanitation Staff Office",
             description: "A workspace for the sanitation personnel where cleaning materials are stored and daily maintenance tasks are organized.",
-            img:""
+            img:" "
             },
             {
             code:"Room 38",
@@ -750,7 +753,7 @@ rooms: {
             img: room46
             },
             // {
-            // code:"",
+            // code:" ",
             // name: "Storage Room",
             // description: "A designated area used to store school equipment, tools, and other materials in an organized and secure manner.",
             // img: ""
@@ -758,13 +761,13 @@ rooms: {
             // },
          
           {
-            code:"",
+            code:" ",
             name: "COTMaleCR",
             description: "A clean and accessible male comfort room located in the College of Technology area. Equipped with urinals, toilet cubicles, sinks, and proper ventilation. ",
             img: COTMaleCr
             },
             {
-            code:"",
+            code:" ",
             name: "COTFemaleCR",
             description: "A clean and accessible female comfort room located in the College of Technology area. Equipped with urinals, toilet cubicles, sinks, and proper ventilation. ",
             img: COTFemaleCr
@@ -845,91 +848,91 @@ rooms: {
     rooms:{
         1:[
         {
-        code:"",
-        name:"Records",
+        code:" ",
+        name:"COT Records",
         description: "The office where student files, academic documents, and other important school records are securely kept and managed. ",
-        img:" "
+        img: cotrecords
         },
         {
-        code:"",
+        code:" ",
         name:"COT Faculty",
         description: "A workspace for instructors under the College of Technology where they prepare lessons, meet students, and handle academic-related tasks. ",
         img: cotfaculty
         },
         {
-        code:"",
+        code:" ",
         name:"COT Office Deans",
         description: "The main office of the College of Technology where administrative tasks, student concerns, and faculty matters are managed. ",
         img: "" //cotofficedeans
         },
         {
-        code:"",
+        code:" ",
         name:"COT Stock Room 1",
         description: "A room used for storing tools, materials, and equipment needed for classes, projects, or laboratory activities. ",
         img:" "
         },
         {
-        code:"",
+        code:" ",
         name:"Old Admin Store Room",
         description: "A space designated for keeping school supplies, tools, and equipment organized and safely stored. ",
         img: storeroom
         },
         {
-        code:"",
+        code:" ",
         name:" COT Office 1",
         description: "A workspace where staff and faculty handle administrative duties, paperwork, and student-related concerns. ",
         img:" "
         }, 
         {
-        code:"",
+        code:" ",
         name:"COT Office 2",
         description: "A workspace where staff and faculty handle administrative duties, paperwork, and student-related concerns. ",
         img: ""
         },
         {
-        code:"",
+        code:" ",
         name:"FSTLP Office",
         description: "The main office of the College of Technology Dean where administrative decisions, faculty coordination, and student consultations are conducted. ",
         img: fstlp
         },
         {
-        code:"",
+        code:" ",
         name:"COT Stock Room 2",
         description: "A room used for storing tools, materials, and equipment needed for classes, projects, or laboratory activities. ",
         img: ""
         },
         {
-        code:"",
+        code:" ",
         name:"Supply Office",
         description: "The area where school supplies, materials, and equipment are managed, issued, and recorded for campus use. ",
-        img: ""
+        img: supply
         },
         {
-        code:"",
+        code:" ",
         name:"Extension & Production Office",
         description: "An office that manages community extension projects and school production activities, supporting both student learning and community development. ",
         img: extension
         },
         {
-        code:"",
+        code:" ",
         name:"COT Stock Room 3 ",
         description: "A room used for storing tools, materials, and equipment needed for classes, projects, or laboratory activities. ",
         img: ""
         },
         {
-        code:"",
+        code:" ",
         name:"Production Office",
         description: "A workspace where school production activities are planned, organized, and managed to support academic and institutional projects. ",
         img: productionoffice
         },
         {
-        code:"",
+        code:" ",
         name:"Production Area",
         description: "A designated workspace where practical production tasks, projects, and hands-on activities are carried out using school equipment and materials. ",
         img: productionarea
         },
         {
-        code:"",
+        code:" ",
         name:"Stock Room 3",
         description: "A room used for storing tools, materials, and equipment needed for classes, projects, or laboratory activities. ",
         img: ""
@@ -939,19 +942,19 @@ rooms: {
         ],
         2: [
         {
-        code:"",
+        code:" ",
         name:"Working Hand Office",
         description: "The official headquarters for campus journalists and editorial staff, dedicated to news gathering, investigative reporting, and the publication of the school paper.",
         img: workinghand
         }, 
         {
-        code:"",
+        code:" ",
         name:"SSG Office",
         description: "The headquarters of the Supreme Student Government, serving as the central hub for student leadership, representation, and campus event planning.",
         img: ssgoffice
         },
          {
-            code:"",
+            code:" ",
             name: "GAD Office",
             description: "The Office where programs and activities promoting equality, inclusivity, and student welfare are planned and managed.",
             img: GADoffice
@@ -959,25 +962,25 @@ rooms: {
 
           },
         {
-        code:"",
+        code:" ",
         name:"Research and Development Office",
         description: "Dedicated to fostering innovation and academic inquiry, this office supports faculty and student research projects and institutional development.",
         img: researchdev
         },
         {
-        code:"",
+        code:" ",
         name:"Old Library",
         description: "A quiet study space and repository for archival collections, legacy documents, and supplemental reference materials.",
         img: oldlib
         },
         {
-        code:"",
+        code:" ",
         name:"COT Computer Lab 201",
         description: "A high-capacity computing facility utilized for technical instruction, software development labs, and digital literacy courses.",
         img: lab201
         },
           {
-        code:"",
+        code:" ",
         name:"Speech Lab",
         description: "A specialized laboratory equipped with audio-visual tools designed to enhance communication skills, phonetics, and public speaking proficiency.",
         img: speech
@@ -992,67 +995,67 @@ rooms: {
     rooms:{
     1:[ 
         {
-          code:"",
+          code:" ",
           name:"Accounting Office",
           description: "The office responsible for managing the school’s financial transactions, including payments, fees, and other accounting records. ",
           img: accounting
         },
         {
-          code:"",
+          code:" ",
           name:"MIS Office",
           description: "The office that handles the school’s data management, computer systems, and network services. ",
           img: mis
         },
         {
-          code:"",
+          code:" ",
           name:"Registrar",
           description: "The office that manages student records, enrollment, grades, and official school documents. ",
           img: registrar
         }, 
         {
-          code:"",
+          code:" ",
           name:"Cashier",
           description: "The office where students and staff process payments, fees, and other financial transactions. ",
           img: cashier
         },
         {
-          code:"",
+          code:" ",
           name:"BAC Office",
           description: "The office where procurement processes, bidding, and acquisition of school goods and services are managed. ",
           img: bac
         },
         {
-          code:"",
+          code:" ",
           name:"University Clinic",
           description: "A healthcare facility on campus where students and staff receive medical attention, consultations, and basic health services. ",
           img: clinic
         }, 
         {
-          code:"",
+          code:" ",
           name:"Power House",
           description: "A facility that supplies and manages electricity for the school, ensuring a stable and continuous power supply for all campus operations. ",
           img: powerhouse
         },
         {
-          code:"",
+          code:" ",
           name:" ",
           description: " ",
           img: ""
         }, 
         {
-          code:"",
+          code:" ",
           name:" ",
           description: " ",
           img: ""
         },
         {
-          code:"",
+          code:" ",
           name:" ",
           description: " ",
           img: ""
         },
         {
-          code:"",
+          code:" ",
           name:" ",
           description: " ",
           img: ""
@@ -1062,43 +1065,43 @@ rooms: {
 
       2:[
       {
-      code:"",
+      code:" ",
       name:"Campus Director Office",
       description:"The highest administrative office on campus, responsible for overall campus management, executive decisions, and institutional leadership.",
       img: campus
       },
       {
-      code:"",
+      code:" ",
       name:"Admin Staff Office",
       description: "The support hub for campus operations, assisting with general administrative inquiries and university-wide logistics.",
       img: admin
       }, 
       {
-      code:"",
+      code:" ",
       name:"Admin Graduate School",
       description: "A dedicated administrative office focused on the processing of records and support services for postgraduate students.",
       img: admingraduate
       },
         {
-      code:"",
+      code:" ",
       name:"HR Office",
       description: "The Human Resources department, managing personnel records, employment concerns, and faculty/staff welfare.",
       img: hr
       },
           {
-      code:"",
+      code:" ",
       name:"New Admin Records",
       description: "A central archive for student and institutional records, responsible for the safe keeping and processing of official university documents.",
       img: newrecords
       },
             {
-      code:"",
+      code:" ",
       name:"Guidance Office",
       description: "Provides student support services, including career counseling, mental health resources, and personal development guidance.",
       img: guidance
       },
           {
-      code:"",
+      code:" ",
       name:"SAO Office",
       description: "The Student Affairs Office (SAO) manages student organizations, campus activities, and discipline, serving as the main link between students and the administration.",
       img: sao
@@ -1106,13 +1109,13 @@ rooms: {
       ],
       3:[
       {
-      code:"",
+      code:" ",
       name:"Library",
       description: "The university's primary resource center, offering a quiet environment for study, research, and access to a wide collection of academic books and digital archives.",
       img: library
       },
       {
-      code:"",
+      code:" ",
       name:"AVR Room",
       description: "The Audio-Visual Room is a multimedia facility used for film screenings, academic presentations, seminars, and departmental orientations.",
       img: avr
@@ -1130,7 +1133,7 @@ rooms: {
     rooms:{
       1:[
         {
-      code:"",
+      code:" ",
       name:"Centrum",
       description: "A central hub within the campus that houses various university facilities and services, designed to support student activities, academic functions, and administrative needs. ",
       img: centrum
@@ -1138,7 +1141,7 @@ rooms: {
       ],
       2:[
         {
-      code:"",
+      code:" ",
       name:" ",
       description: " ",
       img: ""
@@ -1153,12 +1156,6 @@ rooms: {
     totalFloors:1,
     rooms: {
   1: [
-    { 
-      code: " ", 
-      name: "ERRC Storage Room",
-      description: "A space used to keep school equipment, supplies, and materials organized and safely stored.",
-      img: " "
-    },
     { 
       code: " ", 
       name: "Fountain",
@@ -1183,12 +1180,7 @@ rooms: {
       description: "A workspace where school staff and administrators handle records, documents, and other administrative tasks.",
       img: errc1
     }, 
-      { 
-      code: " ", 
-      name: "ERRC Conference Room",
-      description: "A meeting area equipped with tables and chairs where staff, faculty, and students hold discussions, presentations, and meetings.",
-      img: " "
-    }, 
+
 
 
   
@@ -1205,13 +1197,13 @@ rooms: {
           rooms:{
               1:[
                   {
-                    code:"",
+                    code:" ",
                     name:"Bistro",
                     description: "A small dining area on campus where students and staff can buy and enjoy meals, snacks, and beverages. ",
                     img: 'https://res.cloudinary.com/dkicidfrq/image/upload/v1766459529/Bistro_ah4jbo.jpg'
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"University Canteen",
                     description: "A spacious dining area offering a variety of affordable meals and snacks. Includes seating for students and staff, clean food counters, hand-washing stations, and proper ventilation. Suitable for meals, breaks, and informal gatherings. ",
                     img: "https://res.cloudinary.com/dkicidfrq/image/upload/v1766459532/Canteen_rh8ncu.jpg"
@@ -1223,214 +1215,214 @@ rooms: {
                     img: chemlab
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Student Activity Center",
                     description: "A space where students gather for events, meetings, recreational activities, and extracurricular programs. ",
                     img: sac
                   }, 
                   {
-                    code:"",
+                    code:" ",
                     name:"Fitness Gym",
                     description: "A facility equipped with exercise machines and workout areas where students and staff can engage in physical fitness and training activities. ",
                     img: fitness
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Sewing Laboratory",
                     description: "A workspace equipped with sewing machines, fabrics, and tools where students practice garment making and textile projects. ",
                     img: sewing
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Fablab Production Area",
                     description: "A fabrication laboratory equipped with tools and machines like 3D printers, laser cutters, and CNC machines where students create prototypes and innovative projects.",
                     img: Fablab
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Fablab Office",
                     description: "A fabrication laboratory equipped with tools and machines like 3D printers, laser cutters, and CNC machines where students create prototypes and innovative projects.",
                     img: Fablab1
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Tennis Court",
                     description: "An outdoor sports area with marked courts and nets where students and staff can play tennis and practice related skills. ",
                     img: tennis
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Kadasig Gym",
                     description: "A gymnasium where students participate in sports, physical education classes, and school events, equipped with courts and seating areas. ",
                     img: kadasig
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Oval",
                     description: "A large outdoor field within the CTU campus used for athletics, physical education classes, training, and university events. It commonly features a running track and a spacious central area for sports and recreational activities. ",
                     img: ""
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Grandstand",
                     description: "A seating structure near sports fields where students and spectators can watch athletic events and other outdoor activities. ",
                     img: ""
 
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Study Area",
                     description: "A quiet space where students can read, research, and complete assignments individually or in small groups. ",
                     img: studyarea
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Academic Science Building ",
                     description: "A facility housing classrooms and laboratories where students conduct lessons and experiments in various science subjects. ",
                     img: ""
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Cultural Center",
                     description: "A venue for promoting arts, traditions, and cultural activities, hosting performances, exhibits, and community events. ",
                     img: ""
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Floating Classroom",
                     description: "A unique learning space where students engage in lessons and activities. ",
                     img: floatingarea
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"HM Laboratory",
                     description: "A practical room where students learn and practice household management skills such as cooking, cleaning, and basic home organization. ",
                     img: HMLab
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Men's Dorm",
                     description: "A residential building where male students live, providing beds, study areas, and basic amenities for daily living. ",
                     img: mensdorm
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Security Office",
                     description:"The area where campus security personnel monitor safety, assist students, and ensure the school’s rules and regulations are followed.",
                     img: " "
 
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"PE Hall",
                     description: "A large indoor space for physical education activities and sports. Equipped with open flooring, basic sports equipment, and seating for spectators. Suitable for exercise, training, and indoor sports events. ",
                     img: PEhall
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Laundry Shop",
                     description: "A facility for washing and drying clothes. Equipped with washing machines, drying racks, and workstations. Provides convenient laundry services for students and staff.  ",
                     img: laundryshop
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Carpentry Shop",
                     description: "A designated workshop where students develop woodworking skills and complete hands-on projects using tools, equipment, and carpentry techniques. ",
                     img: canpenter
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Sports & Athletics Office",
                     description: "The office responsible for managing the school’s sports programs, athletic events, team coordination, and student-athlete support services. ",
                     img: PEhall
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Socio-Cultural Office",
                     description: "The office that plans and manages cultural, social, and community-building activities on campus, supporting student organizations and promoting cultural awareness and engagement. ",
                     img: PEhall
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Mechanical Engineering Laboratory 1",
                     description: "A laboratory equipped for foundational mechanical engineering experiments and hands-on activities, where students explore basic principles in mechanics, materials, and machine operations. ",
                     img: melab1
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Mechanical Engineering Laboratory 2",
                     description: "An advanced laboratory for mechanical engineering students, equipped for experiments and practical work in areas such as thermodynamics, fluid mechanics, and machine design. ",
                     img: melab2
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Maintenance Office",
                     description: "The office responsible for managing and coordinating the upkeep, repair, and maintenance of campus buildings, facilities, and equipment.",
                     img: maintain
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Faculty CR",
                     description: "A designated comfort room reserved for faculty members, providing private and convenient restroom facilities within the campus. ",
                     img:""
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Electrical Shop",
                     description: "A workshop where students learn and practice electrical wiring, circuits, and related hands-on skills, using tools and equipment for training in electrical systems and maintenance.",
                     img: elec
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Sanitation Staff Office",
                     description: "The office where the sanitation team coordinates cleaning, waste management, and hygiene maintenance across the campus to ensure a safe and clean environment.",
                     img:""
                   },
         
                   {
-                    code:"",
+                    code:" ",
                     name:"Canteen Mens CR ",
                     description: "A restroom facility designated for male users located near or within the school canteen, providing convenient access for students and staff. ",
                     img:""
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Canteen Womens CR ",
                     description: "A restroom facility designated for female users located near or within the school canteen, offering convenient access for students and staff. ",
                     img:""
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Woodcarving Area",
                     description: "An area for woodcarving.",
                     img:""
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Office of the Electrical Maintenance",
                     description: "Electrical Maintenance Office.",
                     img: officemaintain
                   },
                     {
-                    code:"",
+                    code:" ",
                     name:"Kitchen Laboratory",
                     description: "Kitchen Laboratory",
                     img: HMLab
                   },
                     {
-                    code:"",
+                    code:" ",
                     name:"Sports & Athletics Office",
                     description: "Sports & Athletics Office",
                     img: PEhall
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Socio-Cultural Office",
                     description: "Socio-cultural Office",
                     img:""
                   },
                   {
-                    code:"",
+                    code:" ",
                     name:"Women's Dorm",
                     description: "A secure and comfortable residential facility for female students. Includes shared bedrooms, restrooms, common areas, and basic amenities. Provides a safe and supportive environment for study, rest, and daily living. ",
                     img: womensdorm
