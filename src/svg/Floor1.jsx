@@ -3399,19 +3399,18 @@ return (
       />
 
       {/* Grandstand bldg */}
-      <path
-        onClick={() => bldClicked("Grandstand")}
+      {/* <path
         style={{ cursor: "pointer" }}
         fill={allFalse ? "#00c3ff" : category[""] ? "#00c3ff" : "#B0B0B0"}
         stroke={allFalse ? "#4391A9" : category[""] ? "#4391A9" : "#B0B0B0"}
         stroke-width={0.4}
         d="m91.6124 179.949 2.7928-2.568 5.3134 5.778 5.3934-4.959-5.3137-5.779 2.8887-2.656 5.314 5.778 5.393-4.959-5.314-5.778 2.89-2.657 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657 5.313 5.779 5.394-4.96-5.314-5.778 2.889-2.657 5.314 5.779 5.393-4.959-5.314-5.779 2.889-2.656 5.314 5.778 5.393-4.959-5.313-5.779 2.889-2.656 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657 5.313 5.778 5.393-4.959-5.313-5.778 2.889-2.657L182.54 107l5.393-4.959-5.313-5.7781 2.889-2.6567 5.314 5.7782 5.393-4.9591-5.314-5.7783 2.889-2.6567 22.41 24.3707-102.179 93.958z"
-      />
+      /> */}
       <text
         onClick={() => bldClicked("Grandstand")}
         style={{ cursor: "pointer" }}
         x="148.281"
-        y="153.475"
+        y="169"
         text-anchor="middle"
         font-weight="600"
         font-family="Inter, sans-serif"
@@ -3421,12 +3420,12 @@ return (
       >
         GRANDSTAND
       </text>
-      <path
+      {/* <path
         fill={allFalse ? "#0094cf" : category[""] ? "#0094cf" : "#B0B0B0"}
         stroke={allFalse ? "#4391A9" : category[""] ? "#4391A9" : "#B0B0B0"}
         stroke-width={0.4}
         d="m114.017 204.314 102.179-93.959 2.125 2.312-102.178 93.958z"
-      />
+      /> */}
 
       {/* COT Room 38 / Industrial Motor Control /Electrical Laboratory bldg */}
       <path
@@ -7672,7 +7671,351 @@ return (
         stroke-width={0.4}
         d="M80 417h7v2h-7z"
       />
-    </svg>
+
+
+<g onClick={() => bldClicked("Men's Shower")}  style={{ cursor: 'pointer' }}>
+  <path  d="M126.707 181.949L135.386 174.033L126.235 164L117.556 171.916L126.707 181.949Z"  fill="#FFCC00"stroke={allFalse ? "#CCA817" : category[""] ? "#CCA817" : "#B0B0B0"} strokeWidth="0.1" 
+  />
+  <text x="126.47" y="172.97" fill="black" fontSize="2" fontWeight="600" textAnchor="middle" dominantBaseline="central" style={{ pointerEvents: 'none' }}
+  >
+    Men's Shower
+  </text>
+</g> 
+
+{/*mens show path 1*/}
+
+     <path opacity={path === "Men's Shower" ? "1" : 0}
+        stroke="red"
+        id="grow-path"
+        stroke-linecap="round"
+        stroke-opacity=".5"
+        stroke-width="1.5"
+        d="M200.502 727.283L200.501 726.28C200.5 725.177 199.605 724.282 198.501 724.282H141.5C140.395 724.282 139.5 723.387 139.5 722.282V541.289C139.5 540.184 140.395 539.289 141.5 539.289H147C148.105 539.289 149 538.393 149 537.289V516.789C149 515.684 148.105 514.789 147 514.789H102C100.895 514.789 100 513.893 100 512.789V344.658C100 344.415 99.9558 344.175 99.8696 343.948L66.356 255.728C66.1319 255.138 64.5789 252.477 64.9173 251.945C84.8378 229.427 134.13 182 133.63 181.5C133.13 181 132 179.5 132 179.5"
+        />
+
+  
+<g onClick={() => bldClicked("Men's Shower")} style={{ cursor: 'pointer' }}>
+  <path 
+    d="M136.73 172.835L145.34 164.982L136.235 155L127.626 162.853L136.73 172.835Z" 
+    fill="#FFCC00"
+    stroke={allFalse ? "#CCA817" : category[""] ? "#CCA817" : "#B0B0B0"} 
+    strokeWidth="0.1" 
+  />
+  <text 
+    x="136.48" 
+    y="163.92" 
+    fill="black" 
+    fontSize="2" 
+    fontWeight="600" 
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+    Men's Shower
+  </text>
+</g>
+
+{/*mens show path 2*/}
+
+<path opacity={path === "Men's Shower" ? "1" : 0}
+        stroke="red"
+        id="grow-path"
+        stroke-linecap="round"
+        stroke-opacity=".5"
+        stroke-width="1.5" d="M200.502 727.283L200.501 726.28C200.5 725.177 199.605 724.282 198.501 724.282H141.5C140.395 724.282 139.5 723.387 139.5 722.282V541.289C139.5 540.184 140.395 539.289 141.5 539.289H147C148.105 539.289 149 538.393 149 537.289V516.789C149 515.684 148.105 514.789 147 514.789H102C100.895 514.789 100 513.893 100 512.789V344.658C100 344.415 99.9558 344.175 99.8696 343.948L66.356 255.728C66.1319 255.138 64.5789 252.477 64.9173 251.945C84.8378 229.427 145.5 172 145 171.5C144.5 171 143.5 169.5 143.5 169.5"/>
+
+
+<g onClick={() => bldClicked("Granstand 1 Nurso")} style={{ cursor: 'pointer' }}>
+  <path 
+    d="M146.602 164.015L155.161 156.207L146.072 146.243L137.513 154.05L146.602 164.015Z" 
+    fill="#FFCC00"
+    stroke={allFalse ? "#CCA817" : category[""] ? "#CCA817" : "#B0B0B0"} 
+    strokeWidth="0.1" 
+  />
+  <text 
+    x="146.34" 
+    y="154.13" 
+    fill="black" 
+    fontSize="1.8" 
+    fontWeight="600" 
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+    Granstand 1
+  </text>
+    <text 
+    x="146.34" 
+    y="156.13" 
+    fill="black" 
+    fontSize="1.8" 
+    fontWeight="600" 
+    fontFamily="Arial, sans-serif"
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+    Nurso
+  </text>
+</g>
+{/* granstand 1 path */}
+
+<path  opacity={path === "Granstand 1 Nurso" ? "1" : 0}
+        stroke="red"
+        id="grow-path"
+        stroke-linecap="round"
+        stroke-opacity=".5"
+        stroke-width="1.5" 
+        d="M200.502 727.283L200.501 726.28C200.5 725.177 199.605 724.282 198.501 724.282H141.5C140.395 724.282 139.5 723.387 139.5 722.282V541.289C139.5 540.184 140.395 539.289 141.5 539.289H147C148.105 539.289 149 538.393 149 537.289V516.789C149 515.684 148.105 514.789 147 514.789H102C100.895 514.789 100 513.893 100 512.789V344.658C100 344.415 99.9558 344.175 99.8696 343.948L66.356 255.728C66.1319 255.138 64.5789 252.477 64.9173 251.945C84.8378 229.427 155 164 154.5 163.5C154 163 152.5 161 152.5 161"/>
+
+
+<g onClick={() => bldClicked("Grandstand 2 Nurso")} style={{ cursor: 'pointer' }}>
+  <path 
+    d="M156.624 154.765L164.378 147.693L154.858 137.256L147.105 144.328L156.624 154.765Z" 
+    fill="#FFCC00"
+    stroke={allFalse ? "#CCA817" : category[""] ? "#CCA817" : "#B0B0B0"} 
+    strokeWidth="0.1" 
+  />
+  <text 
+    x="155.74" 
+    y="146.01" 
+    fill="black" 
+    fontSize="1.8" 
+    fontWeight="600" 
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+    Granstand 2 
+  </text>
+    <text 
+    x="155.74" 
+    y="148.01" 
+    fill="black" 
+    fontSize="1.8" 
+    fontWeight="600" 
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+    Nurso
+  </text>
+</g>
+
+<path   opacity={path === "Granstand 2 Nurso" ? "1" : 0}
+        stroke="red"
+        id="grow-path"
+        stroke-linecap="round"
+        stroke-opacity=".5"
+        stroke-width="1.5"  d="M200.502 727.283L200.501 726.28C200.5 725.177 199.605 724.282 198.501 724.282H141.5C140.395 724.282 139.5 723.387 139.5 722.282V541.289C139.5 540.184 140.395 539.289 141.5 539.289H147C148.105 539.289 149 538.393 149 537.289V516.789C149 515.684 148.105 514.789 147 514.789H102C100.895 514.789 100 513.893 100 512.789V344.658C100 344.415 99.9558 344.175 99.8696 343.948L66.356 255.728C66.1319 255.138 64.5789 252.477 64.9173 251.945C84.8378 229.427 164.5 155 164 154.5C163.5 154 162 152.5 162 152.5"/>
+
+
+<g onClick={() => bldClicked("Granstand 3 Nurso")} style={{ cursor: 'pointer' }}>
+  <path 
+    d="M166.152 146.466L174.3 139.034L164.582 128.38L156.434 135.812L166.152 146.466Z" 
+    fill="#FFCC00"
+    stroke={allFalse ? "#CCA817" : category[""] ? "#CCA817" : "#B0B0B0"} 
+    strokeWidth="0.1" 
+  />
+  <text 
+    x="165.37" 
+    y="136.42" 
+    fill="black" 
+    fontSize="1.8" 
+    fontWeight="600" 
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+   Granstand 3
+  </text>
+   <text 
+    x="165.37" 
+    y="138.42" 
+    fill="black" 
+    fontSize="1.8" 
+    fontWeight="600" 
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+     Nurso
+  </text>
+  
+</g>
+
+<path opacity={path === "Granstand 3 Nurso" ? "1" : 0}
+        stroke="red"
+        id="grow-path"
+        stroke-linecap="round"
+        stroke-opacity=".5"
+        stroke-width="1.5"   d="M200.502 727.283L200.501 726.28C200.5 725.177 199.605 724.282 198.501 724.282H141.5C140.395 724.282 139.5 723.387 139.5 722.282V541.289C139.5 540.184 140.395 539.289 141.5 539.289H147C148.105 539.289 149 538.393 149 537.289V516.789C149 515.684 148.105 514.789 147 514.789H102C100.895 514.789 100 513.893 100 512.789V344.658C100 344.415 99.9558 344.175 99.8696 343.948L66.356 255.728C66.1319 255.138 64.5789 252.477 64.9173 251.945C84.8378 229.427 174.5 146.5 174 146C173.5 145.5 171.5 143.5 171.5 143.5"/>
+
+<g onClick={() => bldClicked("Granstand 4 Nurso")} style={{ cursor: 'pointer' }}>
+  <path 
+    d="M175.893 137.446L183.128 130.846L173.235 120L166 126.6L175.893 137.446Z" 
+    fill="#FFCC00"
+    stroke={allFalse ? "#CCA817" : category[""] ? "#CCA817" : "#B0B0B0"} 
+    strokeWidth="0.1" 
+  />
+  <text 
+    x="174.56" 
+    y="128.72" 
+    fill="black" 
+    fontSize="1.8" 
+    fontWeight="600" 
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+    Granstand 4
+  </text>
+
+    <text 
+    x="174.56" 
+    y="130.72" 
+    fill="black" 
+    fontSize="1.8" 
+    fontWeight="600" 
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+   Nurso
+  </text>
+
+</g>
+
+<path opacity={path === "Granstand 4 Nurso" ? "1" : 0}
+        stroke="red"
+        id="grow-path"
+        stroke-linecap="round"
+        stroke-opacity=".5"
+        stroke-width="1.5"  d="M200.502 727.283L200.501 726.28C200.5 725.177 199.605 724.282 198.501 724.282H141.5C140.395 724.282 139.5 723.387 139.5 722.282V541.289C139.5 540.184 140.395 539.289 141.5 539.289H147C148.105 539.289 149 538.393 149 537.289V516.789C149 515.684 148.105 514.789 147 514.789H102C100.895 514.789 100 513.893 100 512.789V344.658C100 344.415 99.9558 344.175 99.8696 343.948L66.356 255.728C66.1319 255.138 64.5789 252.477 64.9173 251.945C84.8378 229.427 183.5 137.5 183 137C182.5 136.5 180.5 134.5 180.5 134.5"/>
+
+<g onClick={() => bldClicked("Granstand 5 Nurso")} style={{ cursor: 'pointer' }}>
+  <path 
+    d="M184.941 129.498L192.177 122.899L182.235 112L175 118.6L184.941 129.498Z" 
+    fill="#FFCC00"
+    stroke={allFalse ? "#CCA817" : category[""] ? "#CCA817" : "#B0B0B0"} 
+    strokeWidth="0.1" 
+  />
+  <text 
+    x="183.59" 
+    y="120.75" 
+    fill="black" 
+    fontSize="1.8" 
+    fontWeight="600" 
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+    Granstand 5
+  </text>
+   <text 
+    x="183.59" 
+    y="122.75" 
+    fill="black" 
+    fontSize="1.8" 
+    fontWeight="600" 
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+    Nurso
+  </text>
+</g>
+
+<path opacity={path === "Grandstand 5 Nurso" ? "1" : 0}
+        stroke="red"
+        id="grow-path"
+        stroke-linecap="round"
+        stroke-opacity=".5"
+        stroke-width="1.5" d="M200.502 727.283L200.501 726.28C200.5 725.177 199.605 724.282 198.501 724.282H141.5C140.395 724.282 139.5 723.387 139.5 722.282V541.289C139.5 540.184 140.395 539.289 141.5 539.289H147C148.105 539.289 149 538.393 149 537.289V516.789C149 515.684 148.105 514.789 147 514.789H102C100.895 514.789 100 513.893 100 512.789V344.658C100 344.415 99.9558 344.175 99.8696 343.948L66.356 255.728C66.1319 255.138 64.5789 252.477 64.9173 251.945C84.8378 229.427 192.5 129.5 192 129C191.5 128.5 190 127 190 127"/>
+
+<g onClick={() => bldClicked("DRRM Traing Room")} style={{ cursor: 'pointer' }}>
+  <path 
+    d="M193.765 121.305L201 114.705L191.235 104L184 110.6L193.765 121.305Z" 
+    fill="#FFCC00"
+    stroke={allFalse ? "#CCA817" : category[""] ? "#CCA817" : "#B0B0B0"} 
+    strokeWidth="0.1" 
+  />
+  <text 
+    x="192.5" 
+    y="112.65" 
+    fill="black" 
+    fontSize="1.8" 
+    fontWeight="600" 
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+    DRRM Training
+  </text>
+    <text 
+    x="192.5" 
+    y="114.65" 
+    fill="black" 
+    fontSize="1.8" 
+    fontWeight="600" 
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+    Room
+  </text>
+</g>
+
+<path opacity={path === "DRRM Training Room" ? "1" : 0}
+        stroke="red"
+        id="grow-path"
+        stroke-linecap="round"
+        stroke-opacity=".5"
+        stroke-width="1.5" d="M200.502 727.283L200.501 726.28C200.5 725.177 199.605 724.282 198.501 724.282H141.5C140.395 724.282 139.5 723.387 139.5 722.282V541.289C139.5 540.184 140.395 539.289 141.5 539.289H147C148.105 539.289 149 538.393 149 537.289V516.789C149 515.684 148.105 514.789 147 514.789H102C100.895 514.789 100 513.893 100 512.789V344.658C100 344.415 99.9558 344.175 99.8696 343.948L66.356 255.728C66.1319 255.138 64.5789 252.477 64.9173 251.945C84.8378 229.427 201 121 200.5 120.5C200 120 198.5 118.5 198.5 118.5"/>
+
+
+<g onClick={() => bldClicked("ROTC Office")} style={{ cursor: 'pointer' }}>
+  <path 
+    d="M202.765 113.305L210 106.705L200.235 96L193 102.6L202.765 113.305Z" 
+    fill="#FFCC00"
+    stroke={allFalse ? "#CCA817" : category[""] ? "#CCA817" : "#B0B0B0"} 
+    strokeWidth="0.1" 
+  />
+  <text 
+    x="201.5" 
+    y="103.65" 
+    fill="black" 
+    fontSize="2" 
+    fontWeight="600" 
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+    ROTC
+  </text>
+   <text 
+    x="201.5" 
+    y="105.65" 
+    fill="black" 
+    fontSize="2" 
+    fontWeight="600" 
+    textAnchor="middle" 
+    dominantBaseline="central" 
+    style={{ pointerEvents: 'none' }}
+  >
+    Office
+  </text>
+</g>
+
+<path opacity={path === "ROTC Office" ? "1" : 0}
+        stroke="red"
+        id="grow-path"
+        stroke-linecap="round"
+        stroke-opacity=".5"
+        stroke-width="1.5" d="M200.502 727.283L200.501 726.28C200.5 725.177 199.605 724.282 198.501 724.282H141.5C140.395 724.282 139.5 723.387 139.5 722.282V541.289C139.5 540.184 140.395 539.289 141.5 539.289H147C148.105 539.289 149 538.393 149 537.289V516.789C149 515.684 148.105 514.789 147 514.789H102C100.895 514.789 100 513.893 100 512.789V344.658C100 344.415 99.9558 344.175 99.8696 343.948L66.356 255.728C66.1319 255.138 64.5789 252.477 64.9173 251.945C84.8378 229.427 210 113 209.5 112.5C209 112 207.5 110.5 207.5 110.5"/>
+
+   </svg>
   </>
 );
 }),
