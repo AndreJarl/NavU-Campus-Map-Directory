@@ -139,7 +139,7 @@ import chemlec from "../assets/rooms/cme/ChemLec.webp"
 import chemlab4 from "../assets/rooms/cme/chemlab.webp"
 import tmlab1 from "../assets/rooms/cme/tmlab1.webp"
 import tmlab2 from "../assets/rooms/cme/tmlab2.webp"
-
+import ergo from "../assets/rooms/Bldgs/ergo.webp"
 
 
 import library from "../assets/rooms/Adminbldg/Library.webp"
@@ -1219,7 +1219,7 @@ rooms: {
                     code: " ", 
                     name: "Ergonomic Laboratory",
                     description: "A laboratory designed for conducting chemistry experiments and practical lessons. Equipped with lab benches, sinks, basic glassware, and safety equipment. Suitable for hands-on learning in chemical concepts and experiments. ",
-                    img: chemlab
+                    img: ergo
                   },
                   {
                     code:" ",
