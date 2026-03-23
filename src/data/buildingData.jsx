@@ -246,7 +246,7 @@ const buildingData = {
         code: "Engineering Grad School", 
         name: "Graduate School",
         description: "The center for advanced engineering studies, providing resources and administrative support for Master’s and Doctoral students.",
-        img: " "
+        img: cmeresearchcenter
       }
     ],
     3: [
