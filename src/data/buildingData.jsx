@@ -65,7 +65,7 @@ import fountain from "../assets/rooms/Bldgs/ERRC.jpg"
 import centrum from "../assets/rooms/Bldgs/centrum.webp"
 import paglaumfarm from "../assets/rooms/Bldgs/paglaumfarm.webp"
 import powerhouse from "../assets/rooms/Bldgs/powerhouse.webp"
-
+import oval from "../assets/rooms/Bldgs/oval.jpg"
 
 import mis from "../assets/rooms/Adminbldg/1stFloor/mis.webp"
 import accounting from "../assets/rooms/Adminbldg/1stFloor/accounting.webp"
@@ -1267,7 +1267,7 @@ rooms: {
                     code:" ",
                     name:"Oval",
                     description: "A large outdoor field within the CTU campus used for athletics, physical education classes, training, and university events. It commonly features a running track and a spacious central area for sports and recreational activities. ",
-                    img: ""
+                    img: oval
                   },
                   {
                     code:" ",
