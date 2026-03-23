@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { db, collection, addDoc } from "../config/firebase.js";
 import { motion, AnimatePresence } from "framer-motion";
-import { Delete } from "lucide-react";
+import { Delete, ChevronLeft } from "lucide-react";
 import surveyImg from "../assets/survey.webp";
 
 const likertOptions = [
@@ -180,7 +180,6 @@ function SurveyKeyboard({ value, setValue, onClose }) {
         <div className="w-full max-w-4xl p-3 backdrop-blur-xl bg-black/85 rounded-[2rem] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
           <div className="bg-white/40 w-16 h-1.5 rounded-full mb-4 mx-auto" />
 
-
           {rows.map((row, i) => (
             <div key={i} className="flex justify-center gap-2 mb-2">
               {row.map((key) => {
@@ -254,6 +253,38 @@ export default function FlashcardSurvey({ survey, setSurvey }) {
     setStage("questions");
   };
 
+  const goBack = () => {
+    setShowKeyboard(false);
+    setActiveField(null);
+
+    if (current === 0) {
+      setStage("intro");
+      return;
+    }
+
+    const prevIndex = current - 1;
+    const prevQuestion = questions[prevIndex];
+    const prevAnswer = answers[prevQuestion.field] ?? "";
+
+    // Restore previous answer into the appropriate input state
+    if (prevQuestion.type === "text") {
+      setTextInput(typeof prevAnswer === "string" ? prevAnswer : "");
+      setOtherInput("");
+    } else if (
+      prevQuestion.hasOther &&
+      typeof prevAnswer === "string" &&
+      prevAnswer.startsWith("Other: ")
+    ) {
+      setOtherInput(prevAnswer.replace("Other: ", ""));
+      setTextInput("");
+    } else {
+      setOtherInput("");
+      setTextInput("");
+    }
+
+    setCurrent(prevIndex);
+  };
+
   const goToNext = async (value) => {
     const q = questions[current];
     const newAnswers = { ...answers, [q.field]: value };
@@ -325,8 +356,8 @@ export default function FlashcardSurvey({ survey, setSurvey }) {
 
   return (
     <div className="fixed inset-0 z-[999999] bg-black/45 backdrop-blur-sm">
-      <div className="fixed inset-0 flex items-center justify-center px-4">     
-     <AnimatePresence mode="wait">
+      <div className="fixed inset-0 flex items-center justify-center px-4">
+        <AnimatePresence mode="wait">
           {stage === "intro" && (
             <motion.div
               key="intro"
@@ -334,7 +365,7 @@ export default function FlashcardSurvey({ survey, setSurvey }) {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.98 }}
               transition={{ duration: 0.28 }}
-             className="w-full max-w-4xl rounded-3xl border border-gray-200 bg-white shadow-2xl text-gray-900 overflow-hidden mx-auto"
+              className="w-full max-w-4xl rounded-3xl border border-gray-200 bg-white shadow-2xl text-gray-900 overflow-hidden mx-auto"
             >
               <div className="px-8 py-6 md:px-10 md:py-8">
                 <div className="grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr] gap-8 items-center">
@@ -404,13 +435,24 @@ export default function FlashcardSurvey({ survey, setSurvey }) {
             >
               <div className="px-8 py-6 md:px-10 md:py-7 max-h-[calc(100vh-300px)] overflow-y-auto">
                 <div className="flex items-center justify-between gap-3 mb-4">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.2em] text-red-500 font-semibold">
-                      Quick Survey
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      Question {current + 1} of {questions.length}
-                    </p>
+                  <div className="flex items-center gap-3">
+                    {/* Back button */}
+                    <button
+                      onClick={goBack}
+                      className="flex items-center gap-1.5 rounded-xl border border-gray-200 bg-gray-50 hover:bg-gray-100 active:scale-[0.97] transition-all duration-200 px-3 py-2 text-gray-600 font-medium text-sm"
+                    >
+                      <ChevronLeft size={16} />
+                      Back
+                    </button>
+
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.2em] text-red-500 font-semibold">
+                        Quick Survey
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        Question {current + 1} of {questions.length}
+                      </p>
+                    </div>
                   </div>
 
                   <div className="w-28 h-2 rounded-full bg-gray-200 overflow-hidden">
@@ -452,8 +494,8 @@ export default function FlashcardSurvey({ survey, setSurvey }) {
                           className="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-red-400"
                         />
                         <p className="text-xs text-gray-400">
-                          To use “Other”, type your answer first then tap the
-                          “Other” button.
+                          To use "Other", type your answer first then tap the
+                          "Other" button.
                         </p>
                       </div>
                     )}
