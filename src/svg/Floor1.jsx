@@ -3903,7 +3903,7 @@ return (
       />
 
       {/* Stage bldg */}
-      <path
+      {/* <path
         onClick={() => bldClicked("Stage")}
         style={{ cursor: "pointer" }}
         fill={
@@ -3914,8 +3914,8 @@ return (
         }
         stroke-width={0.4}
         d="M156 562h19v20.648h-19z"
-      />
-      <text
+      /> */}
+      {/* <text
         onClick={() => bldClicked("Stage")}
         style={{ cursor: "pointer" }}
         x="165.5"
@@ -3939,7 +3939,7 @@ return (
         }
         stroke-width={0.4}
         d="M156 582.386h19V585h-19z"
-      />
+      /> */}
 
       {/* NSTP Office bldg */}
       <path
